@@ -3,6 +3,7 @@ import logging
 import time
 from pathlib import Path
 
+from patchwhisperer import config
 from patchwhisperer.analysis import context as ctx
 from patchwhisperer.analysis.llm import SYSTEM_PROMPT, render_prompt
 from patchwhisperer.analysis.schemas import (
@@ -44,6 +45,9 @@ def patch_id_of(patch: Patch) -> str:
     return f"{patch.date:%Y-%m-%d}-{patch.gid}"
 
 
+STAGE_SECONDS: dict[int, float] = {}
+
+
 def _run_stage(
     llm,
     kb: KBStore,
@@ -51,7 +55,6 @@ def _run_stage(
     n: int,
     name: str,
     schema,
-    max_tokens=16000,
     **values,
 ):
     prompt = render_prompt(name, **values)
@@ -61,10 +64,12 @@ def _run_stage(
         SYSTEM_PROMPT,
         prompt,
         schema,
-        max_tokens=max_tokens,
+        max_tokens=config.STAGE_MAX_TOKENS[n],
         raw_path=pdir / f"stage{n}.raw.txt",
     )
-    log.info("stage %d (%s) done in %.1fs", n, name, time.time() - t0)
+    elapsed = time.time() - t0
+    STAGE_SECONDS[n] = elapsed
+    log.info("stage %d (%s) done in %.1fs", n, name, elapsed)
     (pdir / f"stage{n}.prompt.md").write_text(prompt)
     (pdir / f"stage{n}.json").write_text(result.model_dump_json(indent=1))
     return result
@@ -79,6 +84,7 @@ def run_analysis(
     *,
     update_kb: bool = True,
 ) -> AnalysisBundle:
+    STAGE_SECONDS.clear()
     patch_id = patch_id_of(patch)
     meta_md = kb.load_meta() if kb.meta_path.exists() else "(empty)"
     common = {"patch_title": patch.title, "patch_date": f"{patch.date:%Y-%m-%d}"}
@@ -219,7 +225,7 @@ def run_analysis(
         synthesis=synthesis,
         pool=pool_verdicts,
         kb_update=kb_update,
-        usage=dict(llm.usage),
+        usage={**llm.usage, "stage_seconds": dict(STAGE_SECONDS)},
     )
     pdir = kb.patch_dir(patch_id)
     (pdir / "analysis.json").write_text(bundle.model_dump_json(indent=1))

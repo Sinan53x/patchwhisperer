@@ -77,11 +77,13 @@ class LLMClient:
         retries: int = 2,
         raw_path: Path | None = None,
     ) -> BaseModel:
+        stage_label = user.splitlines()[0] if user else "?"
         messages = [
             {"role": "system", "content": system},
             {"role": "user", "content": user},
         ]
         last_err: Exception | None = None
+        truncated_retried = False
         for attempt in range(retries + 1):
             resp = self._call(messages, temperature, max_tokens)
             if resp.usage:
@@ -92,6 +94,19 @@ class LLMClient:
                     resp.usage.prompt_tokens,
                     resp.usage.completion_tokens,
                 )
+            if resp.choices[0].finish_reason == "length":
+                if truncated_retried:
+                    raise RuntimeError(
+                        f"output truncated at {max_tokens} tokens ({stage_label})"
+                    )
+                truncated_retried = True
+                max_tokens = min(max_tokens * 2, 60000)
+                log.warning(
+                    "%s: output truncated, retrying with max_tokens=%d",
+                    stage_label,
+                    max_tokens,
+                )
+                continue
             text = resp.choices[0].message.content or ""
             try:
                 return schema.model_validate_json(extract_json(text))

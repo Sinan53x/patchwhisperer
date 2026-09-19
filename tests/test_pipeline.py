@@ -104,3 +104,27 @@ def test_hotfix_path(kb, fake_llm, entity_index):
     pdir = kb.patch_dir(bundle.patch_id)
     assert (pdir / "stage4.json").exists()
     assert "(hotfix: stage skipped)" in (pdir / "stage4.prompt.md").read_text()
+
+
+def test_schema_nonempty_validators():
+    import pytest as _pytest
+    from pydantic import ValidationError
+
+    from patchwhisperer.analysis.schemas import (
+        DistilledSource,
+        HeroAnalysis,
+        SeedKB,
+        Synthesis,
+    )
+
+    with _pytest.raises(ValidationError):
+        DistilledSource()  # empty hero_claims
+    with _pytest.raises(ValidationError):
+        SeedKB()  # <30 heroes
+    with _pytest.raises(ValidationError):
+        HeroAnalysis()  # <30 heroes
+    with _pytest.raises(ValidationError):
+        Synthesis()  # empty headline
+    with _pytest.raises(ValidationError):
+        KBUpdate()  # all empty
+    KBUpdate(meta_md="x")  # ok

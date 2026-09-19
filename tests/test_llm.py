@@ -49,7 +49,10 @@ def test_validation_retry(monkeypatch):
                         type(
                             "C",
                             (),
-                            {"message": type("Msg", (), {"content": content})},
+                            {
+                                "message": type("Msg", (), {"content": content}),
+                                "finish_reason": "stop",
+                            },
                         )
                     ],
                 },
@@ -80,7 +83,14 @@ def test_validation_failure_raises(monkeypatch):
                 {
                     "usage": None,
                     "choices": [
-                        type("C", (), {"message": type("Msg", (), {"content": "bad"})})
+                        type(
+                            "C",
+                            (),
+                            {
+                                "message": type("Msg", (), {"content": "bad"}),
+                                "finish_reason": "stop",
+                            },
+                        )
                     ],
                 },
             )()
@@ -96,3 +106,54 @@ def test_validation_failure_raises(monkeypatch):
     )()
     with pytest.raises(RuntimeError):
         llm.complete_json("sys", "user", M, retries=1)
+
+
+def _resp(content, finish_reason="stop"):
+    choice = type(
+        "C",
+        (),
+        {
+            "message": type("Msg", (), {"content": content}),
+            "finish_reason": finish_reason,
+        },
+    )()
+    return type(
+        "R",
+        (),
+        {"usage": None, "choices": [choice]},
+    )()
+
+
+def _stub_client(monkeypatch, responses):
+    seen_tokens = []
+
+    class FakeCompletions:
+        def create(self, **kw):
+            seen_tokens.append(kw["max_tokens"])
+            return responses[min(len(seen_tokens) - 1, len(responses) - 1)]
+
+    def fake_init(self, **kw):
+        self.model = "fake"
+        self.usage = {"prompt_tokens": 0, "completion_tokens": 0}
+
+    monkeypatch.setattr(LLMClient, "__init__", fake_init)
+    llm = LLMClient()
+    llm.client = type(
+        "C", (), {"chat": type("Ch", (), {"completions": FakeCompletions()})}
+    )()
+    return llm, seen_tokens
+
+
+def test_truncation_retries_with_double_tokens(monkeypatch):
+    llm, seen = _stub_client(monkeypatch, [_resp('{"x":', "length"), _resp('{"x": 9}')])
+    out = llm.complete_json("sys", "user", M, max_tokens=100)
+    assert out.x == 9
+    assert seen == [100, 200]
+
+
+def test_double_truncation_raises(monkeypatch):
+    llm, _ = _stub_client(
+        monkeypatch, [_resp('{"x":', "length"), _resp('{"x":', "length")]
+    )
+    with pytest.raises(RuntimeError, match="truncated"):
+        llm.complete_json("sys", "user", M, max_tokens=100)

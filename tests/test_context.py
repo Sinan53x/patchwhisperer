@@ -42,3 +42,16 @@ def test_items_kb_unknown(tmp_path):
 def test_change_counts(entity_index):
     patch = parse_patch(load_post("09-16-2026"), entity_index)
     assert ctx.change_counts(patch) == "General 17, Items 36, Heroes 69, total 122"
+
+
+def test_heroes_kb_omits_empty_fields(tmp_path):
+    from patchwhisperer.kb.schema import HeroState
+    from patchwhisperer.kb.store import KBStore
+
+    kb = KBStore(tmp_path)
+    kb.save_heroes({"Wraith": HeroState(name="Wraith", tier="A")})
+    out = ctx.heroes_kb(kb)
+    assert "notes" not in out
+    assert "enabled_by" not in out
+    assert "tier: A" in out
+    assert "name: Wraith" in out

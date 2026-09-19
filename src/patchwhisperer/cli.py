@@ -152,6 +152,8 @@ def analyze(
     if out:
         out.write_text(md)
     typer.echo("---")
+    for n, secs in sorted(bundle.usage.get("stage_seconds", {}).items()):
+        typer.echo(f"stage {n}: {secs:.1f}s")
     typer.echo(_usage_line(bundle.usage))
     if bundle.kb_update and not dry_run:
         changed = apply_kb_update(kb, bundle.kb_update)
@@ -292,6 +294,9 @@ def seed(patches: int = typer.Option(6, "--patches")) -> None:
     kb.save_items(items)
     tiers = Counter(h.tier for h in heroes.values())
     typer.echo(f"seeded {len(heroes)} heroes, {len(items)} items")
+    if not heroes or not items:
+        typer.echo("error: seed produced empty KB sections", err=True)
+        raise typer.Exit(1)
     typer.echo(f"tiers: {dict(tiers)}")
     typer.echo(_usage_line(llm.usage))
 

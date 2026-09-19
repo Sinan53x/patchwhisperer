@@ -1,6 +1,6 @@
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 
 Magnitude = Literal["minor", "moderate", "major"]
 UpDown = Literal["up", "down", "neutral"]
@@ -71,7 +71,7 @@ class HeroEntry(BaseModel):
 
 
 class HeroAnalysis(BaseModel):
-    heroes: list[HeroEntry] = []
+    heroes: list[HeroEntry] = Field(min_length=30)
 
     def movers(self) -> list[HeroEntry]:
         return [h for h in self.heroes if h.direction != "neutral"]
@@ -99,7 +99,7 @@ class NonObviousCall(BaseModel):
 class Synthesis(BaseModel):
     patch_size: Literal["major", "significant", "minor", "hotfix"] = "minor"
     size_why: str = ""
-    headline: str = ""
+    headline: str = Field(min_length=1)
     meta_thesis: MetaThesis = Field(default_factory=MetaThesis)
     winners: list[Mover] = []
     losers: list[Mover] = []
@@ -128,6 +128,12 @@ class KBUpdate(BaseModel):
     item_updates: dict[str, dict] = {}
     change_log: list[str] = []
 
+    @model_validator(mode="after")
+    def _non_empty(self):
+        if not (self.meta_md or self.hero_updates or self.item_updates):
+            raise ValueError("KBUpdate must change at least one artifact")
+        return self
+
 
 class HeroClaim(BaseModel):
     hero: str = ""
@@ -155,7 +161,7 @@ class PatchCalls(BaseModel):
 
 class DistilledSource(BaseModel):
     meta_thesis: str = ""
-    hero_claims: list[HeroClaim] = []
+    hero_claims: list[HeroClaim] = Field(min_length=1)
     item_claims: list[ItemClaim] = []
     reasoning_patterns: list[str] = []
     patch_calls: PatchCalls = Field(default_factory=PatchCalls)
@@ -163,7 +169,7 @@ class DistilledSource(BaseModel):
 
 class SeedKB(BaseModel):
     meta_md: str = ""
-    heroes: dict[str, dict] = {}
+    heroes: dict[str, dict] = Field(min_length=30)
     items: dict[str, dict] = {}
 
 

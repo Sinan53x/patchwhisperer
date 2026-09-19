@@ -46,10 +46,14 @@ def hero_changes(patch: Patch) -> list[Change]:
     ]
 
 
+def _non_empty(model: dict) -> dict:
+    return {k: v for k, v in model.items() if v not in (None, "", [], {})}
+
+
 def heroes_kb(kb: KBStore) -> str:
     heroes = kb.load_heroes()
     return yaml.safe_dump(
-        {k: v.model_dump() for k, v in heroes.items()}, sort_keys=False
+        {k: _non_empty(v.model_dump()) for k, v in heroes.items()}, sort_keys=False
     )
 
 
