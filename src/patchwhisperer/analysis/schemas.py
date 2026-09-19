@@ -173,6 +173,35 @@ class SeedKB(BaseModel):
     items: dict[str, dict] = {}
 
 
+class EnrichBuild(BaseModel):
+    name: str = ""
+    damage: Literal["gun", "spirit", "hybrid"] = "hybrid"
+    core_items: list[str] = []
+    popularity: Literal["primary", "secondary", "niche"] = "secondary"
+    notes: str = ""
+
+
+class EnrichMatchups(BaseModel):
+    beats: list[str] = []
+    loses_to: list[str] = []
+
+
+class HeroEnrichment(BaseModel):
+    role: str = ""
+    archetypes: list[str] = []
+    tier: Tier | Literal["?"] = "?"
+    trend: Literal["rising", "stable", "falling"] = "stable"
+    why: str = ""
+    builds: list[EnrichBuild] = []
+    core_items: list[str] = []
+    matchups: EnrichMatchups | None = None
+    matchup_notes: str = ""
+    enabled_by: list[str] = []
+    countered_by: list[str] = []
+    notes: str = ""
+    confidence: float = 0.0
+
+
 class AnalysisBundle(BaseModel):
     patch_id: str
     patch_title: str

@@ -24,4 +24,5 @@ STAGE_MAX_TOKENS = {
     6: 16000,
     "distill": 12000,
     "seed": 40000,
+    "enrich": 8000,
 }

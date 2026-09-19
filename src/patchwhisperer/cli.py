@@ -314,6 +314,129 @@ def snapshot() -> None:
 
 
 @app.command()
+def enrich(
+    hero: str = typer.Option("", "--hero"),
+    days: int = typer.Option(30, "--days"),
+    all_heroes: bool = typer.Option(False, "--all"),
+) -> None:
+    """Enrich KB hero entries with item-usage and matchup data."""
+    import yaml as _yaml
+
+    from patchwhisperer.analysis.context import _non_empty, tier_list
+    from patchwhisperer.analysis.enrich import merge_enrichment
+    from patchwhisperer.analysis.schemas import HeroEnrichment
+
+    kb = KBStore(KB_ROOT)
+    index = EntityIndex.load()
+    api = DeadlockAPI()
+    llm = LLMClient()
+    heroes = kb.load_heroes()
+    meta_md = kb.load_meta() if kb.meta_path.exists() else ""
+    corrections = kb.load_corrections()
+    tiers = tier_list(kb)
+    snap = api.snapshot(days=14)
+
+    # creator claims per hero, newest first
+    claims: dict[str, list[str]] = {}
+    for f in sorted((KB_ROOT / "sources").glob("*.json"), reverse=True):
+        d = json.loads(f.read_text())
+        parts = f.stem.rsplit("-", 2)
+        date, author = parts[1] if len(parts) > 2 else "?", parts[0]
+        for c in d.get("hero_claims", []):
+            line = (
+                f"{date} {author}: tier {c.get('tier')}, "
+                f"direction {c.get('direction')} — {c.get('why')}; "
+                f"items: {', '.join(c.get('items') or [])}"
+            )
+            claims.setdefault(c.get("hero", ""), []).append(line)
+
+    counters = api.hero_counters(days=days)
+    latest = fetch_patch_posts(count=1)
+    latest_title = latest[0].title if latest else "unknown"
+
+    targets = (
+        list(heroes)
+        if all_heroes
+        else ([index.resolve(hero)[2]] if hero and index.resolve(hero) else [])
+    )
+    if not targets:
+        typer.echo("specify --hero NAME or --all", err=True)
+        raise typer.Exit(1)
+
+    for name in targets:
+        h = heroes[name]
+        hero_id = next(x["id"] for x in index.heroes if x["name"] == name)
+        usage = api.hero_item_usage(hero_id, index, days=days)
+        usage_txt = "\n".join(
+            f"{u.item} | {u.share * 100:.0f}% | {u.win_rate * 100:.1f}% | "
+            f"{u.avg_buy_min:.1f} | {u.slot or '?'} T{u.tier or '?'}"
+            for u in usage
+        )
+        c = counters.get(hero_id)
+        beats = (
+            ", ".join(f"{n} ({wr * 100:.0f}% over {m})" for n, wr, m in c.beats)
+            if c
+            else "(none)"
+        )
+        loses = (
+            ", ".join(f"{n} ({wr * 100:.0f}% over {m})" for n, wr, m in c.loses_to)
+            if c
+            else "(none)"
+        )
+        hsnap = snap.get(name, {})
+        snap_txt = (
+            f"WR {hsnap.get('win_rate', 0) * 100:.1f}% | "
+            f"PR {hsnap.get('pick_rate', 0) * 100:.1f}% | "
+            f"matches {hsnap.get('matches', 0)}"
+        )
+        prompt = render_prompt(
+            "enrich_hero",
+            hero=name,
+            as_of_date=f"{datetime.now(tz=UTC):%Y-%m-%d}",
+            latest_patch_title=latest_title,
+            hero_entry=_yaml.safe_dump(_non_empty(h.model_dump()), sort_keys=False),
+            abilities=", ".join(index.abilities.get(hero_id, [])),
+            days=str(days),
+            item_usage=usage_txt or "(no data)",
+            beats=beats,
+            loses_to=loses,
+            hero_snapshot=snap_txt,
+            creator_claims="\n".join(claims.get(name, [])) or "(none)",
+            tier_list=tiers,
+            corrections=corrections or "(none)",
+            meta_md=meta_md,
+        )
+        result: HeroEnrichment = llm.complete_json(
+            SYSTEM_PROMPT,
+            prompt,
+            HeroEnrichment,
+            max_tokens=config.STAGE_MAX_TOKENS["enrich"],
+        )
+        before = h.tier
+        merge_enrichment(h, result)
+        heroes[name] = h
+        kb.save_heroes(heroes)
+        loses_short = ", ".join(h.matchups.loses_to[:3])
+        typer.echo(
+            f"{name}: {before} -> {h.tier} ({h.trend}) | builds: "
+            f"{', '.join(f'{b.name}/{b.popularity}' for b in h.builds)} | "
+            f"loses to: {loses_short}"
+        )
+
+    # deterministic rebuild of items.bought_by from hero builds
+    items = kb.load_items()
+    for h in heroes.values():
+        for b in h.builds:
+            for item_name in b.core_items:
+                item = items.get(item_name, ItemState(name=item_name))
+                if h.name not in item.bought_by:
+                    item.bought_by = sorted(set(item.bought_by) | {h.name})
+                    items[item_name] = item
+    kb.save_items(items)
+    typer.echo(_usage_line(llm.usage))
+
+
+@app.command()
 def bot() -> None:
     """Start the Discord bot and the patch poller."""
     from patchwhisperer.bot.discord_bot import run

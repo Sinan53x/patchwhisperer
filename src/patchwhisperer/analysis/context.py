@@ -127,3 +127,10 @@ def hero_names_affected_by_items(kb: KBStore, changed_items: list[str]) -> list[
         if touched & set(changed_items):
             names.append(name)
     return names
+
+
+def tier_list(kb: KBStore) -> str:
+    heroes = kb.load_heroes()
+    return "\n".join(
+        f"{h.name}: {h.tier} ({h.trend}) — {h.role}" for h in heroes.values()
+    )

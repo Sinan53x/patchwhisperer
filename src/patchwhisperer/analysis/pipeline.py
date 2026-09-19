@@ -3,6 +3,8 @@ import logging
 import time
 from pathlib import Path
 
+from pydantic import ValidationError
+
 from patchwhisperer import config
 from patchwhisperer.analysis import context as ctx
 from patchwhisperer.analysis.llm import SYSTEM_PROMPT, render_prompt
@@ -15,7 +17,7 @@ from patchwhisperer.analysis.schemas import (
     Synthesis,
     SystemsAnalysis,
 )
-from patchwhisperer.kb.schema import ItemState
+from patchwhisperer.kb.schema import Build, ItemState, Matchups
 from patchwhisperer.kb.store import KBStore
 from patchwhisperer.parse.models import Patch
 
@@ -35,6 +37,10 @@ _HERO_FIELDS = {
     "countered_by",
     "last_changed_patch",
     "notes",
+    "builds",
+    "matchups",
+    "matchup_notes",
+    "confidence",
 }
 _ITEM_FIELDS = {"role", "bought_by", "slot", "tier", "notes"}
 _TIERS = {"S", "A", "B", "C", "D", "?"}
@@ -159,6 +165,7 @@ def run_analysis(
             hero_changes=ctx.format_changes(h_changes),
             heroes_kb=ctx.heroes_kb(kb),
             snapshot=snap_txt,
+            corrections=kb.load_corrections(),
         )
         s3m = ctx.stage3_movers_json(heroes)
 
@@ -255,6 +262,18 @@ def apply_kb_update(kb: KBStore, update: KBUpdate) -> list[Path]:
                 if key == "trend" and value not in _TRENDS:
                     log.warning("hero %s: dropping invalid trend %r", name, value)
                     continue
+                if key == "builds":
+                    try:
+                        value = [Build(**b) for b in value]
+                    except (TypeError, ValidationError) as e:
+                        log.warning("hero %s: dropping invalid builds: %s", name, e)
+                        continue
+                if key == "matchups":
+                    try:
+                        value = Matchups(**value)
+                    except (TypeError, ValidationError) as e:
+                        log.warning("hero %s: dropping invalid matchups: %s", name, e)
+                        continue
                 setattr(hero, key, value)
         kb.save_heroes(heroes)
         changed.append(kb.heroes_path)

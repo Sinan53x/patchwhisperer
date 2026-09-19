@@ -49,6 +49,10 @@ class KBStore:
     def load_meta(self) -> str:
         return self.meta_path.read_text()
 
+    def load_corrections(self) -> str:
+        p = self.root / "corrections.md"
+        return p.read_text() if p.exists() else ""
+
     def save_meta(self, text: str) -> None:
         self.meta_path.write_text(text)
 

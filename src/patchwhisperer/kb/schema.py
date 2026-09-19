@@ -1,9 +1,22 @@
 from typing import Literal
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 Tier = Literal["S", "A", "B", "C", "D", "?"]
 Trend = Literal["rising", "stable", "falling", "?"]
+
+
+class Build(BaseModel):
+    name: str
+    damage: Literal["gun", "spirit", "hybrid"]
+    core_items: list[str] = []
+    popularity: Literal["primary", "secondary", "niche"]
+    notes: str = ""
+
+
+class Matchups(BaseModel):
+    beats: list[str] = []
+    loses_to: list[str] = []
 
 
 class HeroState(BaseModel):
@@ -19,6 +32,10 @@ class HeroState(BaseModel):
     countered_by: list[str] = []
     last_changed_patch: str | None = None
     notes: str = ""
+    builds: list[Build] = []
+    matchups: Matchups = Field(default_factory=Matchups)
+    matchup_notes: str = ""
+    confidence: float | None = None
 
 
 class ItemState(BaseModel):

@@ -1,8 +1,26 @@
+import json
 import time
+from pathlib import Path
 
 import httpx
+from pydantic import BaseModel
 
 BASE = "https://api.deadlock-api.com"
+CACHE_DIR = Path.home() / ".cache" / "patchwhisperer"
+
+
+class ItemUsage(BaseModel):
+    item: str
+    share: float
+    win_rate: float
+    avg_buy_min: float
+    slot: str | None = None
+    tier: int | None = None
+
+
+class Counters(BaseModel):
+    beats: list[tuple[str, float, int]] = []
+    loses_to: list[tuple[str, float, int]] = []
 
 
 class DeadlockAPI:
@@ -65,3 +83,80 @@ class DeadlockAPI:
         if isinstance(data, list):
             return sorted(data, key=lambda b: b.get("matches", 0), reverse=True)
         return [data]
+
+    # -- analytics with daily disk cache ---------------------------------
+
+    def _get_cached(self, cache_key: str, path: str, **params):
+        cache_file = CACHE_DIR / f"{cache_key}-{time.strftime('%Y%m%d')}.json"
+        if cache_file.exists():
+            return json.loads(cache_file.read_text())
+        data = self._get(path, **params)
+        CACHE_DIR.mkdir(parents=True, exist_ok=True)
+        cache_file.write_text(json.dumps(data))
+        return data
+
+    def hero_item_usage(
+        self,
+        hero_id: int,
+        index,
+        *,
+        days: int = 30,
+        min_badge: int = 100,
+        top: int = 15,
+    ) -> list[ItemUsage]:
+        rows = self._get_cached(
+            f"item-stats-{hero_id}-{days}d",
+            "/v1/analytics/item-stats",
+            hero_id=hero_id,
+            min_unix_timestamp=int(time.time()) - days * 86400,
+            min_average_badge=min_badge,
+        )
+        hero_rows = self.hero_stats(
+            min_unix=int(time.time()) - days * 86400, min_average_badge=min_badge
+        )
+        hero_matches = next(
+            (s["matches"] for s in hero_rows if s["hero_id"] == hero_id), 0
+        )
+        item_by_id = {it["id"]: it for it in index.items}
+        out = []
+        for r in rows:
+            it = item_by_id.get(r["item_id"])
+            if it is None or not hero_matches:
+                continue
+            out.append(
+                ItemUsage(
+                    item=it["name"],
+                    share=r["matches"] / hero_matches,
+                    win_rate=r["wins"] / r["matches"] if r["matches"] else 0.0,
+                    avg_buy_min=(r.get("avg_buy_time_s") or 0) / 60,
+                    slot=it.get("item_slot_type"),
+                    tier=it.get("item_tier"),
+                )
+            )
+        out.sort(key=lambda u: -u.share)
+        return out[:top]
+
+    def hero_counters(
+        self, *, days: int = 30, min_badge: int = 100, min_matches: int = 150
+    ) -> dict[int, Counters]:
+        rows = self._get_cached(
+            f"counter-stats-{days}d",
+            "/v1/analytics/hero-counter-stats",
+            min_unix_timestamp=int(time.time()) - days * 86400,
+            min_average_badge=min_badge,
+        )
+        name_by_id = {h["id"]: h["name"] for h in self.heroes()}
+        by_hero: dict[int, list[tuple[str, float, int]]] = {}
+        for r in rows:
+            n = r.get("matches_played") or r.get("matches") or 0
+            if n < min_matches:
+                continue
+            wr = r["wins"] / n if n else 0.0
+            enemy = name_by_id.get(r["enemy_hero_id"])
+            if enemy:
+                by_hero.setdefault(r["hero_id"], []).append((enemy, wr, n))
+        out = {}
+        for hid, pairs in by_hero.items():
+            pairs.sort(key=lambda p: -p[1])
+            out[hid] = Counters(beats=pairs[:5], loses_to=pairs[-5:][::-1])
+        return out
