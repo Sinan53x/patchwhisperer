@@ -1,4 +1,6 @@
+import asyncio
 import json
+import os
 from collections import Counter
 from datetime import UTC, datetime
 from pathlib import Path
@@ -304,6 +306,59 @@ def snapshot() -> None:
             f"{name:<20} WR {s['win_rate'] * 100:5.2f}%  "
             f"PR {s['pick_rate'] * 100:5.2f}%  matches {s['matches']}"
         )
+
+
+@app.command()
+def bot() -> None:
+    """Start the Discord bot and the patch poller."""
+    from patchwhisperer.bot.discord_bot import run
+
+    run()
+
+
+@app.command(name="run-job")
+def run_job(
+    gid: str,
+    force: bool = typer.Option(False, "--force"),
+) -> None:
+    """Run analyze_and_post once without the gateway (posts to Discord)."""
+    import discord
+
+    from patchwhisperer.bot import jobs, state
+
+    state.init_db()
+    channel_id = int(os.environ.get("DISCORD_CHANNEL_ID", "0"))
+    if not channel_id:
+        typer.echo("DISCORD_CHANNEL_ID not set", err=True)
+        raise typer.Exit(1)
+
+    intents = discord.Intents.default()
+    client = discord.Client(intents=intents)
+    result = {}
+
+    @client.event
+    async def on_ready():
+        channel = client.get_channel(channel_id) or await client.fetch_channel(
+            channel_id
+        )
+        loop = asyncio.get_running_loop()
+        try:
+            result["r"] = await asyncio.to_thread(
+                jobs.analyze_and_post,
+                gid,
+                force=force,
+                channel=channel,
+                loop=loop,
+            )
+        finally:
+            await client.close()
+
+    token = os.environ.get("DISCORD_TOKEN")
+    if not token:
+        typer.echo("DISCORD_TOKEN not set", err=True)
+        raise typer.Exit(1)
+    client.run(token)
+    typer.echo(result.get("r"))
 
 
 def main() -> None:
