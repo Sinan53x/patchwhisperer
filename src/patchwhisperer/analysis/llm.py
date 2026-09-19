@@ -44,7 +44,9 @@ class LLMClient:
         model: str = LLM_MODEL,
     ) -> None:
         self.model = model
-        self.client = openai.OpenAI(base_url=base_url, api_key=api_key)
+        self.client = openai.OpenAI(
+            base_url=base_url, api_key=api_key, timeout=300, max_retries=3
+        )
         self.usage: dict[str, int] = {"prompt_tokens": 0, "completion_tokens": 0}
 
     def _call(self, messages: list[dict], temperature: float, max_tokens: int):
@@ -73,6 +75,7 @@ class LLMClient:
         temperature: float = 0.2,
         max_tokens: int = 8000,
         retries: int = 2,
+        raw_path: Path | None = None,
     ) -> BaseModel:
         messages = [
             {"role": "system", "content": system},
@@ -95,6 +98,8 @@ class LLMClient:
             except (ValidationError, json.JSONDecodeError) as e:
                 last_err = e
                 log.warning("stage validation failed (attempt %d): %s", attempt + 1, e)
+                if raw_path:
+                    raw_path.write_text(text)
                 messages = messages + [
                     {"role": "assistant", "content": text},
                     {

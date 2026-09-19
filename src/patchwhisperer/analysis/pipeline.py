@@ -1,5 +1,6 @@
 import json
 import logging
+import time
 from pathlib import Path
 
 from patchwhisperer.analysis import context as ctx
@@ -43,10 +44,27 @@ def patch_id_of(patch: Patch) -> str:
     return f"{patch.date:%Y-%m-%d}-{patch.gid}"
 
 
-def _run_stage(llm, kb: KBStore, patch_id: str, n: int, name: str, schema, **values):
+def _run_stage(
+    llm,
+    kb: KBStore,
+    patch_id: str,
+    n: int,
+    name: str,
+    schema,
+    max_tokens=16000,
+    **values,
+):
     prompt = render_prompt(name, **values)
-    result = llm.complete_json(SYSTEM_PROMPT, prompt, schema)
     pdir = kb.patch_dir(patch_id)
+    t0 = time.time()
+    result = llm.complete_json(
+        SYSTEM_PROMPT,
+        prompt,
+        schema,
+        max_tokens=max_tokens,
+        raw_path=pdir / f"stage{n}.raw.txt",
+    )
+    log.info("stage %d (%s) done in %.1fs", n, name, time.time() - t0)
     (pdir / f"stage{n}.prompt.md").write_text(prompt)
     (pdir / f"stage{n}.json").write_text(result.model_dump_json(indent=1))
     return result

@@ -260,7 +260,7 @@ def seed(patches: int = typer.Option(6, "--patches")) -> None:
         item_names=", ".join(sorted(i["name"] for i in index.items)),
     )
     llm = LLMClient()
-    result: SeedKB = llm.complete_json(SYSTEM_PROMPT, prompt, SeedKB, max_tokens=16000)
+    result: SeedKB = llm.complete_json(SYSTEM_PROMPT, prompt, SeedKB, max_tokens=40000)
 
     existing = kb.load_heroes()
     heroes: dict[str, HeroState] = {}
@@ -362,4 +362,7 @@ def run_job(
 
 
 def main() -> None:
+    import logging
+
+    logging.basicConfig(level=logging.INFO)
     app()
