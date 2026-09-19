@@ -66,10 +66,11 @@ def test_apply_kb_update(kb):
 
 
 def test_invalid_tier_dropped(kb, caplog):
+    before = kb.load_heroes()["Wraith"].tier
     update = KBUpdate(hero_updates={"Wraith": {"tier": "SS", "bogus": 1}})
     with caplog.at_level("WARNING"):
         apply_kb_update(kb, update)
-    assert kb.load_heroes()["Wraith"].tier == "?"
+    assert kb.load_heroes()["Wraith"].tier == before
     assert "invalid tier" in caplog.text
 
 
