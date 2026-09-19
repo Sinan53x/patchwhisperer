@@ -1,0 +1,31 @@
+[project]
+name = "patchwhisperer"
+version = "0.1.0"
+description = "Creator-level Deadlock patch analysis delivered to Discord"
+readme = "README.md"
+authors = [
+    { name = "Sinan53x", email = "sinan.turna@yahoo.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "pydantic>=2",
+    "python-dotenv>=1.2.3",
+    "pyyaml>=6.0.3",
+    "rapidfuzz>=3.14.6",
+    "typer>=0.27.2",
+]
+
+[project.scripts]
+pw = "patchwhisperer.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "respx>=0.23.1",
+    "ruff>=0.16.8",
+]

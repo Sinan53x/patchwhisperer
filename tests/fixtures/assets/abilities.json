@@ -1,0 +1,269 @@
+{
+ "1": [
+  "Melee",
+  "Concussive Combustion",
+  "Flame Dash",
+  "Napalm",
+  "Afterburn"
+ ],
+ "2": [
+  "Melee",
+  "Lightning Ball",
+  "Static Charge",
+  "Power Surge",
+  "Storm Cloud"
+ ],
+ "3": [
+  "Melee",
+  "Stake",
+  "Flight",
+  "Crow Familiar",
+  "Assassinate"
+ ],
+ "4": [
+  "Melee",
+  "Essence Bomb",
+  "Malice",
+  "Life Drain",
+  "Soul Exchange"
+ ],
+ "6": [
+  "Melee",
+  "Shoulder Charge",
+  "Infernal Resilience",
+  "Seismic Impact",
+  "Siphon Life"
+ ],
+ "7": [
+  "Melee",
+  "Telekinesis",
+  "Project Mind",
+  "Full Auto",
+  "Card Trick"
+ ],
+ "8": [
+  "Melee",
+  "Medicinal Specter",
+  "Mini Turret",
+  "Spectral Wall",
+  "Heavy Barrage"
+ ],
+ "10": [
+  "Melee",
+  "Pulse Grenade",
+  "Time Wall",
+  "Kinetic Carbine",
+  "Paradoxical Swap"
+ ],
+ "11": [
+  "Melee",
+  "Kinetic Pulse",
+  "Quantum Entanglement",
+  "Rejuvenating Aurora",
+  "Singularity"
+ ],
+ "12": [
+  "Melee",
+  "Arctic Beam",
+  "Ice Path",
+  "Frost Grenade",
+  "Frozen Shelter"
+ ],
+ "13": [
+  "Melee",
+  "Sleep Dagger",
+  "Smoke Bomb",
+  "Fixation",
+  "Bullet Dance"
+ ],
+ "14": [
+  "Melee",
+  "Powder Keg",
+  "Bounce Pad",
+  "Spirit Lasso",
+  "Crackshot"
+ ],
+ "15": [
+  "Melee",
+  "Exploding Uppercut",
+  "Sticky Bomb",
+  "Hyper Beam",
+  "Grapple Arm"
+ ],
+ "16": [
+  "Melee",
+  "Ava",
+  "Gloom Bombs",
+  "Return to Shadows",
+  "Leaping Slash"
+ ],
+ "17": [
+  "Melee",
+  "Charged Shot",
+  "Rain of Arrows",
+  "Spirit Snare",
+  "Guided Owl"
+ ],
+ "18": [
+  "Melee",
+  "Scorn",
+  "Burrow",
+  "Sand Blast",
+  "Combo"
+ ],
+ "19": [
+  "Melee",
+  "Serrated Knives",
+  "Slice and Dice",
+  "Bloodletting",
+  "Killing Blow"
+ ],
+ "20": [
+  "Melee",
+  "Kudzu Connection",
+  "Entangling Thorns",
+  "Stone Form",
+  "Air Drop"
+ ],
+ "25": [
+  "Melee",
+  "Binding Word",
+  "Willpower",
+  "Alchemical Flask",
+  "Last Stand"
+ ],
+ "27": [
+  "Melee",
+  "Power Slash",
+  "Flying Slash",
+  "Crimson Slash",
+  "Shadow Transformation"
+ ],
+ "31": [
+  "Melee",
+  "Grapple",
+  "Ground Strike",
+  "Death Slam",
+  "Flog"
+ ],
+ "35": [
+  "Melee",
+  "Splatter",
+  "The Cube",
+  "Goo Ball",
+  "Puddle Punch"
+ ],
+ "50": [
+  "Melee",
+  "Flying Cloak",
+  "Enchanter's Satchel",
+  "Barrage",
+  "Affliction"
+ ],
+ "52": [
+  "Melee",
+  "Dust Devil",
+  "Djinn's Mark",
+  "Fire Scarabs",
+  "Traveler"
+ ],
+ "58": [
+  "Melee",
+  "Slither",
+  "Lethal Venom",
+  "Screwjab Dagger",
+  "Petrifying Bola"
+ ],
+ "60": [
+  "Melee",
+  "Vexing Bolt",
+  "Spectral Assistant",
+  "Audience Participation",
+  "Rabbit Hex"
+ ],
+ "63": [
+  "Melee",
+  "Sanguine Retreat",
+  "Love Bites",
+  "Nox Nostra",
+  "Rake"
+ ],
+ "64": [
+  "Melee",
+  "Rend",
+  "Stalker's Mark",
+  "Bloodscent",
+  "Eternal Night"
+ ],
+ "65": [
+  "Melee",
+  "Gutshot",
+  "Ira Domini",
+  "Consecrating Grenade",
+  "Hex-Lined Snap Trap"
+ ],
+ "66": [
+  "Melee",
+  "Jumpstart",
+  "Aura of Suffering",
+  "Shocking Reanimation",
+  "Pain Battery"
+ ],
+ "67": [
+  "Melee",
+  "Bookwyrm",
+  "Captivating Read",
+  "Plot Armor",
+  "Rallying Charge"
+ ],
+ "69": [
+  "Melee",
+  "Doorway",
+  "Luggage Cart",
+  "Call Bell",
+  "Hotel Guest"
+ ],
+ "72": [
+  "ability_punkgoat_slide",
+  "Melee",
+  "Blasted",
+  "Chain Gang",
+  "Rising Ram",
+  "Bashdown"
+ ],
+ "76": [
+  "Melee",
+  "Grasping Hands",
+  "Jar of Dead",
+  "Borrowed Decree",
+  "Essence Theft"
+ ],
+ "77": [
+  "Melee",
+  "Disengaging Sigil",
+  "Riposte",
+  "Flawless Advance",
+  "Itani Lo Sahn"
+ ],
+ "79": [
+  "Melee",
+  "Pillow Toss",
+  "Naptime",
+  "Lil Helpers",
+  "Tag Along"
+ ],
+ "80": [
+  "Melee",
+  "Slam Fire",
+  "Boot Kick",
+  "Entangling Bola",
+  "Lycan Curse"
+ ],
+ "81": [
+  "Melee",
+  "Light Eater",
+  "Dazzling Trick",
+  "Shining Wonder",
+  "Radiant Daggers"
+ ]
+}
