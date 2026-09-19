@@ -3,6 +3,7 @@ import logging
 from dataclasses import dataclass
 from pathlib import Path
 
+from patchwhisperer.analysis.llm import LLMClient
 from patchwhisperer.analysis.pipeline import apply_kb_update, patch_id_of, run_analysis
 from patchwhisperer.analysis.render import render_discord
 from patchwhisperer.bot import state
@@ -82,13 +83,15 @@ def analyze_and_post(
     commit_fn=git_commit_kb,
 ) -> PostResult | None:
     """Fetch, analyze, and post a patch to Discord. Returns None if skipped."""
-    existing = state.seen_get(str(gid), db)
-    if existing and existing["kind"] in ("analyzed", "hotfix") and not force:
-        return None
-
     post = fetch_post(gid) if gid != "latest" else fetch_patch_posts(count=1)[0]
     if post is None:
         raise RuntimeError(f"post {gid} not found")
+
+    existing = state.seen_get(post.gid, db)
+    if existing and existing["kind"] in ("analyzed", "hotfix") and not force:
+        return None
+
+    llm = llm or LLMClient()
     index = index or EntityIndex.load()
     patch = parse_patch(post, index)
     patch_id = patch_id_of(patch)

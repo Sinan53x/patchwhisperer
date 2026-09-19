@@ -122,12 +122,6 @@ def make_bot() -> PatchWhispererBot:
         interaction: discord.Interaction, patch: str = "latest", force: bool = False
     ):
         await interaction.response.defer(ephemeral=True)
-        seen = state.seen_get(patch)
-        if seen and seen["kind"] in ("analyzed", "hotfix") and not force:
-            await interaction.followup.send(
-                f"{seen['title']} already processed; use force=True to re-run."
-            )
-            return
         try:
             result = await asyncio.to_thread(
                 jobs.analyze_and_post,
@@ -137,7 +131,9 @@ def make_bot() -> PatchWhispererBot:
                 loop=asyncio.get_running_loop(),
             )
             if result is None:
-                await interaction.followup.send("Already processed (use force=True).")
+                await interaction.followup.send(
+                    "Already processed (use force=True to re-run)."
+                )
             else:
                 await interaction.followup.send(
                     f"Posted {result.kind}: {result.patch_id}"

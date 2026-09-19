@@ -151,6 +151,43 @@ def test_hotfix_no_thread(env, tmp_path, entity_index):
     assert state.seen_get("hf1", env["db"])["kind"] == "hotfix"
 
 
+def test_default_llm_constructed(env, tmp_path, monkeypatch):
+    channel = FakeChannel()
+    constructed = []
+    monkeypatch.setattr(jobs, "LLMClient", lambda: constructed.append(1) or env["llm"])
+    analyze_and_post(
+        env["post"].gid,
+        pool=[],
+        channel=channel,
+        llm=None,
+        kb=env["kb"],
+        index=env["index"],
+        api=env["api"],
+        db=env["db"],
+        repo_root=tmp_path,
+        commit_fn=MagicMock(),
+    )
+    assert len(constructed) == 1
+
+
+def test_latest_dedupes_on_resolved_gid(env, tmp_path, monkeypatch):
+    monkeypatch.setattr(jobs, "fetch_patch_posts", lambda count: [env["post"]])
+    channel = FakeChannel()
+    kwargs = {
+        "pool": [],
+        "channel": channel,
+        "llm": env["llm"],
+        "kb": env["kb"],
+        "index": env["index"],
+        "api": env["api"],
+        "db": env["db"],
+        "repo_root": tmp_path,
+        "commit_fn": MagicMock(),
+    }
+    assert analyze_and_post("latest", **kwargs).kind == "analyzed"
+    assert analyze_and_post("latest", **kwargs) is None
+
+
 def test_failure_attempts_and_skip(env, tmp_path, monkeypatch):
     channel = FakeChannel()
 

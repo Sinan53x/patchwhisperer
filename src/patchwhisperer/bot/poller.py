@@ -1,4 +1,5 @@
 import asyncio
+import inspect
 import logging
 import os
 
@@ -24,7 +25,10 @@ async def poll_once(job, db=None, *, first_run_mark_only: bool = False) -> None:
         return
     for p in reversed(posts):  # oldest first
         if state.seen_get(p.gid, db) is None:
-            await asyncio.to_thread(job, p.gid)
+            if inspect.iscoroutinefunction(job):
+                await job(p.gid)
+            else:
+                await asyncio.to_thread(job, p.gid)
 
 
 async def healthcheck() -> None:
