@@ -1,0 +1,6 @@
+{
+ "verdicts": [
+  {"hero": "Wraith", "verdict": "watch", "one_liner": "Weaker sustain, lost a core slot; adapt the build.", "direct": "Card Trick heal and resist reduction reduced.", "indirect": "Veil Walker removed from her build path; Shadow Weave improved.", "build_adjustments": ["Swap Veil Walker for Shadow Weave"], "confidence": 0.7},
+  {"hero": "Warden", "verdict": "keep", "one_liner": "Minor scaling cuts, still fine.", "direct": "Bullet damage per boon reduced.", "indirect": "No meaningful indirect effects.", "build_adjustments": [], "confidence": 0.6}
+ ]
+}

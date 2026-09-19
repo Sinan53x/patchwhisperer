@@ -1,0 +1,11 @@
+{
+ "patch_size": "significant",
+ "size_why": "Comeback economy rework plus a broad invis-item reshuffle and targeted nerfs.",
+ "headline": "Comebacks get weaker and Veil Walker dies; tempo picks rise.",
+ "meta_thesis": {"previous": "Scaling and comeback mechanics kept games open.", "new": "Early leads convert more reliably as comeback souls move into tick gold.", "relationship": "shift", "why": "Comeback soul redistribution and bounty increases favor snowballing."},
+ "winners": [{"hero": "Silver", "why": "Sprint and targeting changes plus Shadow Weave buffs.", "indirect": true}],
+ "losers": [{"hero": "Wraith", "why": "Card Trick nerfs plus losing Veil Walker.", "indirect": true}],
+ "non_obvious_calls": [{"claim": "The 'general' slow reduction is really a Wraith/Haze nerf.", "why": "Both lean on slow-based stickiness.", "confidence": 0.55}],
+ "uncertainties": ["How much tick gold compensates losing teams."],
+ "what_to_watch": ["Wraith win rate in the first week."]
+}

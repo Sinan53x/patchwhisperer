@@ -18,6 +18,7 @@ class Transcript(BaseModel):
     title: str
     author: str
     text: str
+    upload_date: str | None = None
 
 
 def _yt_dlp() -> str:
@@ -82,4 +83,5 @@ def fetch_transcript(url: str) -> Transcript:
         title=info.get("title", ""),
         author=info.get("uploader", ""),
         text=text,
+        upload_date=info.get("upload_date"),
     )

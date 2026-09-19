@@ -1,0 +1,7 @@
+{
+ "items": [
+  {"item": "Shadow Weave", "direction": "buff", "magnitude": "moderate", "summary": "Cheaper path via Sprint Boots plus a shorter cooldown makes invis ganks more available.", "affected_heroes": [{"hero": "Wraith", "relationship": "situational", "effect": "up", "why": "Shadow Weave is a common Wraith pickup."}], "build_shift": "Now builds from Sprint Boots."},
+  {"item": "Veil Walker", "direction": "nerf", "magnitude": "major", "summary": "Lost its build path and stats; gun carries lose a core defensive slot.", "affected_heroes": [{"hero": "Wraith", "relationship": "core", "effect": "down", "why": "Core slot removed."}], "build_shift": "No longer builds from Sprint Boots."}
+ ],
+ "notable_item_stories": ["Invis items were reshuffled: Shadow Weave up, Veil Walker gutted."]
+}

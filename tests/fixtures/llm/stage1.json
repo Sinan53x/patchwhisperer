@@ -1,0 +1,10 @@
+{
+ "systems_changed": [
+  {"system": "comeback economy", "change_summary": "Comeback souls redistributed to tick gold for the lowest players.", "driving_changes": ["A portion of the comeback souls earned by players above enemy teams average net worth is instead distributed via the tick gold system"], "magnitude": "major", "effect_on_play": "Less burst comeback swing; losing teams stabilize slower."}
+ ],
+ "tempo_shift": {"direction": "toward_tempo", "confidence": 0.6, "why": "Weaker comeback mechanics reward early leads."},
+ "archetype_effects": [
+  {"archetype": "lane bully", "direction": "up", "magnitude": "moderate", "why": "Early leads convert harder with weaker comeback souls."}
+ ],
+ "intent_read": "Valve is softening comeback mechanics and global slows."
+}

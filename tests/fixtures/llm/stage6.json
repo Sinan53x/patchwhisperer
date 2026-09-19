@@ -1,0 +1,6 @@
+{
+ "meta_md": "# Meta state\nLast patch: Minor Update - 09-16-2026 (2026-09-16)\n\n## Thesis\nEarly leads convert more reliably now.\n\n## Economy and systems\n- Comeback souls partly moved to tick gold.\n\n## Archetype standing\n- lane bully: up.\n\n## Watchlist\n- Wraith without Veil Walker.\n\n## Recent history\n- Minor Update - 09-16-2026: Comebacks weaker, Veil Walker gone.\n",
+ "hero_updates": {"Wraith": {"tier": "B", "trend": "falling", "why": "Card Trick sustain cut and Veil Walker removed.", "last_changed_patch": "Minor Update - 09-16-2026", "notes": "09-16: nerfed"}},
+ "item_updates": {"Veil Walker": {"role": "invis defensive", "bought_by": [], "notes": "Removed from Sprint Boots path on 09-16."}},
+ "change_log": ["Wraith: tier ? -> B (Card Trick nerfs + Veil Walker loss)", "Veil Walker: updated path and buyers"]
+}

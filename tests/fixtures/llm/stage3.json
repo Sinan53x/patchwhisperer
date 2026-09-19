@@ -1,0 +1,7 @@
+{
+ "heroes": [
+  {"hero": "Wraith", "in_notes": true, "direction": "down", "magnitude": "moderate", "confidence": 0.7, "direct_reasons": ["Card Trick heal and resist reduction cut."], "indirect_reasons": ["Veil Walker nerf removes a core slot."], "build_changes": ["Drop Veil Walker; try Shadow Weave."], "tier_before": "?", "tier_after": "B", "one_liner": "Card Trick got shaved and Veil Walker is gone."},
+  {"hero": "Warden", "in_notes": true, "direction": "down", "magnitude": "minor", "confidence": 0.6, "direct_reasons": ["Bullet damage per boon and fire-rate scaling reduced."], "indirect_reasons": [], "build_changes": [], "tier_before": "?", "tier_after": "B", "one_liner": "Small scaling cuts; still playable."},
+  {"hero": "Abrams", "in_notes": true, "direction": "neutral", "magnitude": "minor", "confidence": 0.5, "direct_reasons": [], "indirect_reasons": [], "build_changes": [], "tier_before": "?", "tier_after": "B", "one_liner": "Mixed T3 tuning."}
+ ]
+}
