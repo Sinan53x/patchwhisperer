@@ -1,5 +1,8 @@
+import logging
 import subprocess
 from pathlib import Path
+
+log = logging.getLogger(__name__)
 
 
 def git_commit_kb(repo_root: Path, paths: list[Path], message: str) -> str | None:
@@ -36,6 +39,12 @@ def git_commit_kb(repo_root: Path, paths: list[Path], message: str) -> str | Non
         capture_output=True,
         text=True,
     )
+    try:
+        subprocess.run(
+            ["git", "push"], cwd=repo_root, check=True, capture_output=True, timeout=60
+        )
+    except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as e:
+        log.warning("kb commit not pushed: %s", e)
     return out.stdout.strip()
 
 

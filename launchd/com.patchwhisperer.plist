@@ -18,9 +18,9 @@
     <key>RunAtLoad</key>
     <true/>
     <key>StandardOutPath</key>
-    <string>/Users/sinanturna/Library/Logs/patchwhisperer/stdout.log</string>
+    <string>__LOGS__/stdout.log</string>
     <key>StandardErrorPath</key>
-    <string>/Users/sinanturna/Library/Logs/patchwhisperer/stderr.log</string>
+    <string>__LOGS__/stderr.log</string>
     <key>EnvironmentVariables</key>
     <dict>
         <key>PATH</key>

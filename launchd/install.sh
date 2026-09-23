@@ -8,7 +8,8 @@ DEST="$HOME/Library/LaunchAgents/$LABEL.plist"
 LOGS="$HOME/Library/Logs/patchwhisperer"
 
 mkdir -p "$LOGS" "$HOME/Library/LaunchAgents"
-sed "s|__REPO__|$REPO|g" "$REPO/launchd/$LABEL.plist" > "$DEST"
+sed -e "s|__REPO__|$REPO|g" -e "s|__LOGS__|$LOGS|g" \
+    "$REPO/launchd/$LABEL.plist" > "$DEST"
 
 launchctl bootout "gui/$(id -u)/$LABEL" 2>/dev/null || true
 launchctl bootstrap "gui/$(id -u)" "$DEST"
