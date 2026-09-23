@@ -6,7 +6,7 @@
     <string>com.patchwhisperer</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/opt/homebrew/bin/uv</string>
+        <string>__UV__</string>
         <string>run</string>
         <string>pw</string>
         <string>bot</string>
