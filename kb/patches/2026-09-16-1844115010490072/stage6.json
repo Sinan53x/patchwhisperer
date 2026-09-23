@@ -1,0 +1,577 @@
+{
+ "meta_md": "# Meta state\nLast patch: Minor Update - 09-16-2026 (2026-09-16)\n\n## Thesis\nComeback is dead. With the flat behind-net-worth bounty removed and objective bounties raised, a team that wins lane holds the lead unless it throws hard; tempo beats scaling. Games are decided by early lane bullies and mobile bruisers turning a lead into objectives and picks before late-scaler steroid builds come online. Flyers, on-hit proc carries, and pure-farm econ buys lost their windows.\n\n## Economy and systems\n- Comeback bounty removed; 70% of the rerouted value goes to the two poorest players via tick gold. Fed teams now keep leads.\n- Guardian bounty +10%, Walker +5%; objective share 30->25%. Respawn at 20m 35->38s.\n- Unstable Rift resist is now 10% +1%/min (cap 40% at 30m), not flat 35% — early rifts are real fights.\n- Slows cut ~20% globally but now apply 35% air drag; slow-as-CC and anti-air both stronger.\n- Stuns/parry pause reload instead of resetting; dashes and light melee no longer break gun cycle (Silver/Abrams smoothing).\n- Tunnel breakables spawn/respawn at 3m->5m, delaying early solo farm.\n\n## Archetype standing\n- Early tempo / lane bullies: up — winning lane is the win condition.\n- Mobile assassins and bruisers (Yamato, Shiv, Holliday): up; picks convert.\n- Tanks/frontline (Abrams, Mo & Krill, Billy): stable-to-up; Fortitude/Decay buffed.\n- Late scalers (Warden, Wraith, Celeste, Pocket): down; no safety net.\n- Flyers/poke (Celeste, Grey Talon, Vindicta): down via air-drag slows.\n- Supports (Ivy, Paige): stable-to-up; lanes matter but healing items keep getting trimmed.\n- On-hit proc carries (Warden): down; Mercurial+Overflow deleted and Plated Armor now blocks on-hit spirit.\n\n## Watchlist\n- Silver: grounded Bola interrupt + stats + gun-cycle boost; biggest winner, but her 46.7% WR is pre-patch.\n- Apollo: absent from notes, best snowballer — confirm his WR.\n- Warden: does a pure silence-cage build survive the four-item execution?\n- Celeste: seven nerfs + air drag; confirm she drops out of A.\n- Items: Golden Goose Egg and Veil Walker pick rates — are the deletions real?\n\n## Recent history\n- Minor Update - 09-16-2026: comeback souls removed; tempo wins games; Warden/Celeste/Wraith/Viscous gutted, Silver/Paige up.\n- Minor Update - 08-22-2026: Celeste and healing-item tuning.\n- Minor Update - 08-12-2026: McGinnis/Apollo changes.\n- Minor Update - 07-30-2026: Ranked Mode added.\n- Minor Update - 07-28-2026: item and hero tuning.",
+ "hero_updates": {
+  "Seven": {
+   "tier": "B",
+   "trend": "stable",
+   "why": "Draft-dependent gun carry: Hollow Point's shred buff sharpens his early lead, but tunnel breakables now spawn later (3m->5m) and tempo invaders punish his slow start.",
+   "core_items": [
+    "Hollow Point",
+    "Burst Fire",
+    "Titanic Magazine",
+    "Fortitude"
+   ],
+   "last_changed_patch": "Minor Update - 08-12-2026",
+   "notes": "09-16 (indirect): Hollow Point shred +1% is his only tailwind; tunnel farm delayed."
+  },
+  "Vindicta": {
+   "tier": "A",
+   "trend": "rising",
+   "why": "Tempo early-gun carry who profits from picks mattering more post-20m and from Hollow Point's shred buff; only her airborne poke is clipped by the new air-drag slows.",
+   "core_items": [
+    "Hollow Point",
+    "High-Velocity Rounds",
+    "Long Range"
+   ],
+   "last_changed_patch": "Minor Update - 08-12-2026",
+   "notes": "09-16 (indirect): Hollow Point 9->10% shred strengthens her lane pick."
+  },
+  "Lady Geist": {
+   "tier": "A",
+   "trend": "rising",
+   "why": "Tanky spirit bruiser with direct buffs (Life Drain T3 heal scaling +0.45, Essence Bomb T3 +4%) who rises as scaler peers fall; still low WR but wins fights on her ult.",
+   "core_items": [
+    "Boundless Spirit",
+    "Fortitude",
+    "Decay",
+    "Mystic Reverb"
+   ],
+   "last_changed_patch": "Minor Update - 09-16-2026",
+   "notes": "09-16: Life Drain T3 spirit scaling 0.3->0.45, Essence Bomb T3 26->30%."
+  },
+  "Abrams": {
+   "tier": "B",
+   "trend": "rising",
+   "why": "Tank initiator helped by the gun-cycle change (weave shots between punches) plus Fortitude/Decay buffs, but the anti-heal meta and a shorter ult window keep him B.",
+   "core_items": [
+    "Witchmail",
+    "Decay",
+    "Ethereal Shift",
+    "Fortitude"
+   ],
+   "last_changed_patch": "Minor Update - 09-16-2026",
+   "notes": "09-16: Infernal Resilience T3 heal 8->9%; Seismic Impact T3 Unstoppable 6->5s."
+  },
+  "Wraith": {
+   "tier": "C",
+   "trend": "falling",
+   "why": "Gun carry who lost her safety net: Card Trick heal and resist-shred cut, Slowing Hex CD up, and Plated Armor now eats Full Auto's on-hit spirit damage. Gun build over CC.",
+   "core_items": [
+    "Capacitor",
+    "Slowing Hex",
+    "Lucky Shot"
+   ],
+   "build_variants": [
+    "gun build"
+   ],
+   "last_changed_patch": "Minor Update - 09-16-2026",
+   "notes": "09-16: Card Trick heal 75->60 and spirit scaling 0.75->0.5, Diamond resist-shred -8->-7%; Full Auto spirit 0.03->0.045."
+  },
+  "Paradox": {
+   "tier": "B",
+   "trend": "falling",
+   "why": "Pick initiator whose Carbine quick-scope poke was trimmed (min multiplier 25->10%, no T3 scaling) and Slowing Hex CD up; still wins on the Echo Shard bomb.",
+   "core_items": [
+    "Echo Shard",
+    "Slowing Hex",
+    "Superior Cooldown"
+   ],
+   "build_variants": [
+    "bomb build",
+    "pick build"
+   ],
+   "last_changed_patch": "Minor Update - 09-16-2026",
+   "notes": "09-16: Kinetic Carbine min multiplier 25->10% and no longer scaled by T3; Slowing Hex cd 27->29s."
+  },
+  "Dynamo": {
+   "tier": "A",
+   "trend": "rising",
+   "why": "Ult-initiator with an AoE-CC ult that now cycles faster via Diviner's Kevlar's +10% ult CDR; the tempo meta rewards converting a won lane into picks.",
+   "core_items": [
+    "Refresher",
+    "Superior Cooldown",
+    "Diviner's Kevlar"
+   ],
+   "last_changed_patch": "Minor Update - 07-28-2026",
+   "notes": "09-16 (indirect): Diviner's Kevlar gains +10% ultimate CDR."
+  },
+  "Haze": {
+   "tier": "A",
+   "trend": "rising",
+   "why": "Gun carry whose Fixation buff (headshot stacks 2->3, higher T3 scaling) plus the gun-cycle change make gun Haze the build; only Plated Armor's fix counters her on-hit.",
+   "core_items": [
+    "Lucky Shot",
+    "Ricochet",
+    "Echo Shard",
+    "Tesla Bullets"
+   ],
+   "build_variants": [
+    "gun build"
+   ],
+   "last_changed_patch": "Minor Update - 09-16-2026",
+   "notes": "09-16: Fixation headshot stacks 2->3 and T3 weapon scaling 0.0003->0.00035."
+  },
+  "Holliday": {
+   "tier": "A",
+   "trend": "rising",
+   "why": "Mobile assassin pushed to a gun-hybrid (health/boon 41->43, Crackshot T2 shred, longer lasso) and favored by pick-heavy tempo, but Veil Walker's strip removed a core enabler.",
+   "core_items": [
+    "Recharging Rush",
+    "Rapid Recharge"
+   ],
+   "build_variants": [
+    "pick build",
+    "gun-spirit hybrid"
+   ],
+   "last_changed_patch": "Minor Update - 09-16-2026",
+   "notes": "09-16: health/boon 41->43, Crackshot T2 -6% bullet resist 5s, Bounce Pad lasso +1->+1.25s; Veil Walker now a worse slot."
+  },
+  "Calico": {
+   "tier": "B",
+   "trend": "stable",
+   "why": "Above-average skirmisher whose early underground farm is pushed back by the 3m->5m breakable timing; still ~50% WR on a high pick rate.",
+   "core_items": [
+    "Rapid Recharge",
+    "Echo Shard",
+    "Superior Stamina"
+   ],
+   "last_changed_patch": "Minor Update - 07-28-2026",
+   "notes": "09-16 (indirect): later breakables delay her early farm."
+  },
+  "Grey Talon": {
+   "tier": "C",
+   "trend": "falling",
+   "why": "Poke/siege carry the tempo meta punishes; new air-drag slows clip his airborne poke and Hollow Point shred can't fix a sub-48% conversion. Low confidence.",
+   "core_items": [
+    "Sharpshooter",
+    "Mystic Shot",
+    "Hollow Point"
+   ],
+   "last_changed_patch": null,
+   "notes": "09-16 (indirect): air-drag slows hurt airborne poke; no direct compensation."
+  },
+  "Mo & Krill": {
+   "tier": "B",
+   "trend": "rising",
+   "why": "Underplayed frontline tank that quietly wins: Fortitude regen and Decay duration buffs suit his minute-one brawls and the tempo meta.",
+   "core_items": [
+    "Scourge",
+    "Decay",
+    "Fortitude"
+   ],
+   "last_changed_patch": "Minor Update - 07-28-2026",
+   "notes": "09-16 (indirect): Fortitude regen and Decay duration buffed."
+  },
+  "Shiv": {
+   "tier": "A",
+   "trend": "rising",
+   "why": "Anti-tank bruiser whose current-HP knives and alt-fire buffs shred exactly the inflated HP pools this patch funnels into fights; the Tankbuster trim is small.",
+   "core_items": [
+    "Decay",
+    "Fortitude",
+    "Witchmail",
+    "Tankbuster"
+   ],
+   "last_changed_patch": "Minor Update - 09-16-2026",
+   "notes": "09-16: alt-fire +4% base and per-boon 0.2->0.24; Serrated Knives full-rage 3.5% current HP on impact."
+  },
+  "Ivy": {
+   "tier": "A",
+   "trend": "falling",
+   "why": "Support queen with only small Stone Form nerfs; still the best team-sustain and map control at high WR, though healing items keep getting trimmed around her.",
+   "core_items": [
+    "Healing Tempo",
+    "Healing Nova",
+    "Echo Shard",
+    "Capacitor"
+   ],
+   "last_changed_patch": "Minor Update - 09-16-2026",
+   "notes": "09-16: Stone Form radius 6->5.75m, T1 heal 7->6%."
+  },
+  "Warden": {
+   "tier": "C",
+   "trend": "falling",
+   "why": "Gun carry whose proc build (Mercurial + Spiritual Overflow) is deleted and who lost Veil Walker; bullet/boon and fire-rate scaling cut plus a 30% flask trim. Only a pure silence-cage utility build survives.",
+   "core_items": [
+    "Fortitude"
+   ],
+   "build_variants": [
+    "cage build"
+   ],
+   "last_changed_patch": "Minor Update - 09-16-2026",
+   "notes": "09-16: bullet/boon 0.28->0.25, fire-rate spirit 0.25->0.21, flask range/speed -30%, Willpower T3 spirit 2.7->2.1 and debuff resist 40->30%; Mercurial + Overflow + Veil Walker all hit."
+  },
+  "Yamato": {
+   "tier": "S",
+   "trend": "rising",
+   "why": "Mobile burst assassin buffed again (Crimson Slash T3 heal scaling +0.4, Flying Slash light-melee 1.0->1.2) atop a tempo meta that loves her Refresher/Unstoppable burst windows.",
+   "core_items": [
+    "Refresher",
+    "Tankbuster",
+    "Spirit Snatch",
+    "Mystic Reverb"
+   ],
+   "last_changed_patch": "Minor Update - 09-16-2026",
+   "notes": "09-16: Crimson Slash T3 +0.4 heal spirit scaling; Flying Slash light-melee 1.0->1.2."
+  },
+  "Viscous": {
+   "tier": "C",
+   "trend": "falling",
+   "why": "Tank/enabler whose Cube cast range 26->20m guts his signature rescue and Puddle Punch cooldown 21->24s cuts dueling; only the Goo Ball T3 scaling helps.",
+   "core_items": [
+    "Decay",
+    "Echo Shard",
+    "Fortitude"
+   ],
+   "last_changed_patch": "Minor Update - 09-16-2026",
+   "notes": "09-16: Cube range 26->20m, Puddle Punch 21->24s, alt-fire growth -10%, Splatter T1 +2->+1.5m; Goo Ball T3 +0.2 spirit."
+  },
+  "Pocket": {
+   "tier": "B",
+   "trend": "falling",
+   "why": "Spirit cloak assassin still wants long fights the tempo meta denies; Fortitude's regen is his only item-side help and his WR stays low.",
+   "core_items": [
+    "Boundless Spirit",
+    "Echo Shard",
+    "Fortitude"
+   ],
+   "last_changed_patch": "Minor Update - 07-28-2026",
+   "notes": "09-16 (indirect): tempo shift further punishes his long-fight scaling."
+  },
+  "Vyper": {
+   "tier": "A",
+   "trend": "stable",
+   "why": "Top-WR coin-flip gun carry: Slither T3 barrier and ult cooldown trimmed, Hollow Point buffed; still 1v6s into low-CC drafts and is useless into CC-heavy comps.",
+   "core_items": [
+    "Hollow Point",
+    "Burst Fire",
+    "Fortitude"
+   ],
+   "last_changed_patch": "Minor Update - 09-16-2026",
+   "notes": "09-16: Slither T3 barrier 5->4s, Petrifying Bola cd 105->115s."
+  },
+  "Mina": {
+   "tier": "C",
+   "trend": "falling",
+   "why": "Mobile spirit assassin given no compensation for the tempo shift; her kit no longer converts and she needs a rework.",
+   "core_items": [
+    "Superior Stamina",
+    "Echo Shard",
+    "Mystic Reverb"
+   ],
+   "last_changed_patch": "Minor Update - 07-28-2026",
+   "notes": "09-16 (indirect): no changes to a falling assassin."
+  },
+  "Drifter": {
+   "tier": "A",
+   "trend": "stable",
+   "why": "Blind-pickable melee bruiser with built-in anti-heal; Toxic Bullets scaling and Fortitude regen are tailwinds in a brawl-friendly patch.",
+   "core_items": [
+    "Decay",
+    "Toxic Bullets",
+    "Fortitude"
+   ],
+   "last_changed_patch": null,
+   "notes": "09-16 (indirect): Toxic Bullets scaling + Fortitude regen buffed."
+  },
+  "Venator": {
+   "tier": "A",
+   "trend": "rising",
+   "why": "Gun carry whose ult now works with Ricochet/Split Shot (real late damage), but a mid-40s WR says the no-weak-point kit still doesn't convert in tempo.",
+   "core_items": [
+    "Monster Rounds",
+    "Weakening Headshot",
+    "Fortitude",
+    "Hollow Point"
+   ],
+   "build_variants": [
+    "no-item stat build",
+    "ricochet/split-shot ult build"
+   ],
+   "last_changed_patch": "Minor Update - 09-16-2026",
+   "notes": "09-16: Ira Domini now works with Ricochet (all shots bounce) and Split Shot (3 bolts); Weakening Headshot -13->-12%."
+  },
+  "Paige": {
+   "tier": "S",
+   "trend": "rising",
+   "why": "Lane-winning support and the patch's clearest winner: heavy-melee spirit scaling 0.3->0.45, Captivating Read CD/range buffs, and the flyers she feared were nerfed. Slowing Hex is now a real anti-air slow.",
+   "core_items": [
+    "Knockdown",
+    "Healing Tempo",
+    "Fortitude",
+    "Slowing Hex"
+   ],
+   "last_changed_patch": "Minor Update - 09-16-2026",
+   "notes": "09-16: heavy-melee spirit 0.3->0.45, Captivating Read T1 -11->-14s and T3 +1->+2m, Rallying Charge collision fixed."
+  },
+  "Billy": {
+   "tier": "S",
+   "trend": "stable",
+   "why": "Best frontline: Lifestrike heal+slow buff doubles as anti-air lockdown, and Decay/Fortitude buffs feed his minute-one brawls and AoE front-line.",
+   "core_items": [
+    "Scourge",
+    "Echo Shard",
+    "Lifestrike",
+    "Witchmail"
+   ],
+   "last_changed_patch": "Minor Update - 08-12-2026",
+   "notes": "09-16 (indirect): Lifestrike heal 100+1.5->120+1.75 and 30->35%; 48% slow now drags flyers."
+  },
+  "Graves": {
+   "tier": "C",
+   "trend": "rising",
+   "why": "Worst-scaling gun carry; health/boon 33->35 and Toxic Bullets/Fortitude buffs help, but her awful base stats still leave her permanently behind until late.",
+   "core_items": [
+    "Toxic Bullets",
+    "Ricochet",
+    "Echo Shard"
+   ],
+   "last_changed_patch": "Minor Update - 09-16-2026",
+   "notes": "09-16: health/boon 33->35."
+  },
+  "Apollo": {
+   "tier": "S",
+   "trend": "rising",
+   "why": "Absent from notes but the archetype winner: a top early snowballer (ganks, instant clears, escape, flat damage/heal) whose tempo playstyle the economy patch rewards; only his Restorative Locket slot takes a trim.",
+   "core_items": [
+    "Dispel Magic",
+    "Restorative Locket",
+    "Fortitude"
+   ],
+   "last_changed_patch": "Minor Update - 08-12-2026",
+   "notes": "09-16 (indirect): tempo economy favors his lane-bully snowball; Restorative Locket trimmed."
+  },
+  "Silver": {
+   "tier": "S",
+   "trend": "rising",
+   "why": "Biggest winner: Weighted Bola now a grounded anti-flyer interrupt (Phantom-Strike rules), health/boon 28->31, sprint 1.5->2.5, and the gun-cycle change boosts her high-cycle gun.",
+   "core_items": [
+    "Hollow Point",
+    "Fortitude",
+    "Diviner's Kevlar",
+    "Berserker"
+   ],
+   "last_changed_patch": "Minor Update - 09-16-2026",
+   "notes": "09-16: Weighted Bola grounds/interrupts flyers, health/boon 28->31, sprint 1.5->2.5, Boot Kick/Entangling Bola now only hit heroes/objectives."
+  },
+  "Celeste": {
+   "tier": "B",
+   "trend": "falling",
+   "why": "Spirit burst carry hit seven ways (stamina, Light Eater, Dazzling Trick, Shining Wonder, Radiant Daggers) plus the air-drag slow punishing her flying kit; drops out of A.",
+   "core_items": [
+    "Echo Shard",
+    "Boundless Spirit",
+    "Fortitude"
+   ],
+   "last_changed_patch": "Minor Update - 09-16-2026",
+   "notes": "09-16: stamina cd 5->5.3, Light Eater 20->18% and T3 +25->+22, Dazzling Trick 34->38s, Shining Wonder 16.5->15.5m and T3 bounces +8->+6, Radiant Daggers T2 +80->+70."
+  }
+ },
+ "item_updates": {
+  "Weakening Headshot": {
+   "role": "shred weapon item",
+   "bought_by": [
+    "Venator"
+   ],
+   "notes": "09-16: bullet resist reduction -13->-12%, a nudge. Still core on Venator, whose whole identity is 'no weak point'."
+  },
+  "Hollow Point": {
+   "role": "early weapon shred item",
+   "bought_by": [
+    "Seven",
+    "Vindicta",
+    "Vyper",
+    "Venator",
+    "Silver",
+    "Grey Talon"
+   ],
+   "notes": "09-16: bullet resist reduction 9->10%. The cheap T2 first-gun slot of the tempo meta."
+  },
+  "Toxic Bullets": {
+   "role": "anti-heal DoT weapon item",
+   "bought_by": [
+    "Infernus",
+    "Drifter",
+    "Graves"
+   ],
+   "notes": "09-16: spirit scaling 0.005->0.006%. Core burn/anti-heal slot and one of the few real answers to inflated HP."
+  },
+  "Shadow Weave": {
+   "role": "invis weapon item",
+   "bought_by": [],
+   "notes": "09-16: now builds from Sprint Boots, sprint 1.5->2, cooldown 45->37s. Cheaper gun-reposition tool that inherits the component Veil Walker lost."
+  },
+  "Cultist Sacrifice": {
+   "role": "econ spirit item",
+   "bought_by": [],
+   "notes": "09-16: bounty 180->170%; soul-printing is a tempo tax now that comeback souls are gone."
+  },
+  "Ballistic Enchantment": {
+   "role": "utility spirit item",
+   "bought_by": [],
+   "notes": "09-16: duration 14->20s; still fringe, no clear user base."
+  },
+  "Spiritual Overflow": {
+   "role": "spirit proc/steroid item",
+   "bought_by": [],
+   "notes": "09-16: buildup 35% slower, spirit power 40->30, fire rate 30->25% (on top of 07-28); the Mercurial proc-carry build is dead."
+  },
+  "Restorative Locket": {
+   "role": "sustain utility item",
+   "bought_by": [
+    "Apollo"
+   ],
+   "notes": "09-16: heal per boon 0.5->0.45, stack range 35->32m; 08-22 spirit resist 10->8%. Still the stamina/utility buy."
+  },
+  "Trophy Collector": {
+   "role": "econ item",
+   "bought_by": [],
+   "notes": "09-16: souls/min 18->16; part of the soul-economy trim."
+  },
+  "Veil Walker": {
+   "role": "invisibility utility item",
+   "bought_by": [
+    "Holliday"
+   ],
+   "notes": "09-16: no longer builds from Sprint Boots (lost +2 sprint/regen), movespeed removed when invis drops, spirit power 10->6. Now a pick-hero-only buy."
+  },
+  "Fortitude": {
+   "role": "sustain vitality item",
+   "bought_by": [
+    "Infernus",
+    "Seven",
+    "Abrams",
+    "Mo & Krill",
+    "Shiv",
+    "Warden",
+    "Victor",
+    "Paige",
+    "The Doorman",
+    "Billy",
+    "Apollo",
+    "Rem",
+    "Silver",
+    "Venator",
+    "Celeste",
+    "Dynamo",
+    "Kelvin",
+    "Vindicta",
+    "Vyper"
+   ],
+   "notes": "09-16: max-health regen 2->2.25%. The default survivability slot on almost every bruiser."
+  },
+  "Lifestrike": {
+   "role": "melee heal/CC weapon item",
+   "bought_by": [
+    "Billy"
+   ],
+   "notes": "09-16: melee-heal 100+1.5->120+1.75 and 30->35%; with slows now affecting air drag its 48% slow is real anti-air lockdown."
+  },
+  "Leech": {
+   "role": "lifesteal item",
+   "bought_by": [],
+   "notes": "09-16: bullet+spirit lifesteal 25->28%; still weak — tempo fights end too fast to drain back."
+  },
+  "Plated Armor": {
+   "role": "on-hit defense item",
+   "bought_by": [],
+   "notes": "09-16 fix: now blocks on-hit spirit damage (Mercurial Magnum, Vindicta Flight, Wraith Full Auto, Tesla/Capacitor). The defensive answer to mixed-damage on-hit carries."
+  },
+  "Diviner's Kevlar": {
+   "role": "ultimate/defense item",
+   "bought_by": [
+    "Dynamo",
+    "Silver"
+   ],
+   "notes": "09-16: now grants +10% Ultimate Ability CDR; tilts from generic defense to an ult-uptime enabler for initiation heroes. 07-28: spirit power +35->+40."
+  },
+  "Golden Goose Egg": {
+   "role": "econ item",
+   "bought_by": [],
+   "notes": "09-16: damage penalty -10->-15%, souls/min 90->80, stored souls now count toward net worth — effectively unbuyable; deletes the bank-and-hide pattern."
+  },
+  "Slowing Hex": {
+   "role": "CC active",
+   "bought_by": [
+    "Wraith",
+    "Paradox",
+    "Paige"
+   ],
+   "notes": "09-16: cooldown 27->29s; slower engage but now a real anti-air slow given the air-drag change."
+  },
+  "Radiant Regeneration": {
+   "role": "healing spirit item",
+   "bought_by": [
+    "Kelvin"
+   ],
+   "notes": "08-22 heal on cast 70->65; 09-16 per-boon scaling 2->1.7 — cumulative nerf to healing supports."
+  },
+  "Tankbuster": {
+   "role": "anti-tank weapon item",
+   "bought_by": [
+    "Shiv",
+    "Yamato"
+   ],
+   "notes": "07-28 no longer procs off items; 09-16 current-health bonus 8->7.5% — cumulative trim to the anti-tank slot."
+  },
+  "Decay": {
+   "role": "anti-heal spirit item",
+   "bought_by": [
+    "Infernus",
+    "Lady Geist",
+    "Abrams",
+    "Mo & Krill",
+    "Shiv",
+    "Viscous",
+    "Drifter",
+    "Rem",
+    "Billy"
+   ],
+   "notes": "09-16: DPS -25% but duration +20% — trades burst healing-cut for sustained suppression over longer fights. Still the go-to anti-heal slot."
+  },
+  "Mercurial Magnum": {
+   "role": "spirit on-hit item",
+   "bought_by": [],
+   "notes": "09-16: base bullet damage scaling 0.49->0.38 and base damage 25->20% — no longer a damage engine; the Mercurial+Overflow proc build has no reliable core."
+  },
+  "Focus Lens": {
+   "role": "spirit amp item",
+   "bought_by": [],
+   "notes": "09-16: damage 30->35%, cast range 20->25m; still cleansable, so niche."
+  }
+ },
+ "change_log": [
+  "Meta: thesis rewritten — comeback removal makes tempo the sole win condition",
+  "Meta: economy/systems section updated to present-tense current numbers",
+  "Meta: archetype standing and watchlist rebuilt around air-drag slows and item deletions",
+  "Meta: recent history rolled forward to 09-16, dropped 07-09",
+  "Warden: tier B -> C (Mercurial 0.49->0.38, Overflow triple-cut, Veil Walker stripped, Plated Armor counter)",
+  "Wraith: tier B -> C (Card Trick heal/shred cuts, Slowing Hex CD up, Plated Armor blocks Full Auto)",
+  "Viscous: tier B -> C (Cube range 26->20m, Puddle Punch 21->24s)",
+  "Celeste: tier A -> B (seven nerfs + air-drag slows on flying kit)",
+  "Silver: why/notes updated (grounded Bola, health/sprint buffs, gun-cycle change)",
+  "Paige: why/notes updated (heavy-melee 0.3->0.45, Captivating Read buffs)",
+  "Yamato: notes updated (Crimson Slash T3, Flying Slash 1.0->1.2)",
+  "Shiv: notes updated (current-HP knives, alt-fire buffs)",
+  "Haze: build_variants narrowed to gun build; notes updated (Fixation buffs)",
+  "Holliday: core_items dropped Veil Walker; build_variants updated (gun hybrid)",
+  "Paradox: build_variants set to bomb/pick; notes updated (Carbine trim)",
+  "Venator: build_variants added ricochet/split-shot ult build",
+  "Abrams: notes updated (Resilience T3, Seismic Impact Unstoppable nerf)",
+  "Lady Geist: notes updated (Life Drain/Essence Bomb T3 buffs)",
+  "Ivy: notes updated (Stone Form nerfs)",
+  "Vyper: notes updated (Slither T3, Bola CD)",
+  "Graves: notes updated (health/boon 33->35)",
+  "Seven/Vindicta/Dynamo/Calico/Grey Talon/Mo & Krill/Pocket/Mina/Drifter/Billy/Apollo: why/notes updated as indirect movers",
+  "Hollow Point: bought_by/notes updated (shred 9->10%)",
+  "Shadow Weave: notes updated (Sprint Boots path, sprint 2, cd 37s)",
+  "Veil Walker: bought_by trimmed to Holliday; notes updated (component and movespeed lost)",
+  "Spiritual Overflow / Mercurial Magnum: bought_by cleared; build no longer supported",
+  "Plated Armor: notes updated (now blocks on-hit spirit damage)",
+  "Diviner's Kevlar: bought_by/notes updated (+10% ult CDR)",
+  "Golden Goose Egg: notes updated (stored souls count toward net worth)",
+  "Lifestrike: notes updated (heal + anti-air slow)",
+  "Fortitude / Decay / Tankbuster / Toxic Bullets / Slowing Hex / Restorative Locket / Radiant Regeneration: notes updated for 09-16 values",
+  "Cultist Sacrifice / Trophy Collector / Leech / Ballistic Enchantment / Focus Lens / Weakening Headshot: notes refreshed"
+ ]
+}

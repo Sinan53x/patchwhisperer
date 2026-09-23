@@ -1,0 +1,440 @@
+{
+ "meta_thesis": "Vegas reads the meta as tank-dominated and agency-inflated: the bottom half of the roster is balanced, the top half is overtuned, and his prescription is that the power level should go down, not up. Fights are gated by 5k-HP tanks that late spirit burst can no longer kill, so percent-max-HP healing (Rem), non-dispellable anti-heal/true damage (Venator) and mobile tank spirit-shred (Shiv) define picks, while support enablers (Rem, Viscous, Paige) multiply the best carries. Laning matters a little more than before, so strong laners/enablers rise, and the fastest pub farmers (Seven, Victor) win by converting creep speed into early walkers and a snowball.",
+ "hero_claims": [
+  {
+   "hero": "Abrams",
+   "tier": "S",
+   "direction": "stable",
+   "why": "S+ that 1v6s past 25 minutes once he hits max APs; top-five at any elo if he doesn't overfight. With a Rem behind him he becomes effectively unkillable (50k-healing duos), so he is one of the two or three best heroes to build around.",
+   "items": [
+    "Witch Mail",
+    "E-shift"
+   ],
+   "confidence": 0.9
+  },
+  {
+   "hero": "Apollo",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Situationally strong but below average — 'a character that exists'; neither OP nor unplayable.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Bebop",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Playable and balanced, but no longer scary: you don't run from a Bebop anymore, you just don't treat it as a free kill either.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Billy",
+   "tier": "S",
+   "direction": "stable",
+   "why": "OP — with Rem, one of the two best heroes in the game; getting Billy+Rem (or Billy+Abrams+Rem) decides games. A 6k-HP body that demands anti-tank damage to kill.",
+   "items": [],
+   "confidence": 0.9
+  },
+  {
+   "hero": "The Doorman",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Legitimately broken and 'always has been'; a DPS build is uncounterable with top-tier utility and crazy damage. Its low win rate is dragged down by noobs playing the kidnap build. (The early 'Dorman in F' line reads as a troll bit.)",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Holliday",
+   "tier": "A",
+   "direction": "rising",
+   "why": "Consistent and not OP; the buffs made her playable and she is clearly better than Apollo. He notes he predicted last list she'd be overbuffed toward broken — flagging his own A may underrate her.",
+   "items": [],
+   "confidence": 0.65
+  },
+  {
+   "hero": "Celeste",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Good but one of the most inconsistent heroes; only really works with a good pilot, otherwise players are non-impactful.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Drifter",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Top of B and solid — a skill hero that is better from behind than Haze, which is why he prefers it on average.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Dynamo",
+   "tier": "B",
+   "direction": "falling",
+   "why": "Not bad, but giga-nerfed himself and his items, so he's no longer a 1v6. Still valuable as the hero you want your worst player on, because one game-winning ult is enough.",
+   "items": [],
+   "confidence": 0.4
+  },
+  {
+   "hero": "Graves",
+   "tier": "D",
+   "direction": "falling",
+   "why": "Worst-in-class — 'genuinely disgusting'. It was inflated by the old Urn, and with the Urn gone plus about three nerfs it collapsed; only playable behind a hard carry.",
+   "items": [
+    "old Urn"
+   ],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Grey Talon",
+   "tier": "S",
+   "direction": "falling",
+   "why": "S, down from S+ after the nerf; still a meta-defining top-eight with new mobility, high damage, and a cross-map execute that deletes a 6k-HP Billy at 1,800 HP.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Haze",
+   "tier": "B",
+   "direction": "falling",
+   "why": "Situationally good noob-stomper, not actually strong. Pre-Curse takes skill, post-Curse is a free one-shot with no real counterplay, and the rework made the kit unfun to play and to face.",
+   "items": [
+    "Curse",
+    "Sleep Dagger",
+    "Indomitable"
+   ],
+   "confidence": 0.75
+  },
+  {
+   "hero": "Infernus",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Consistent and balanced, nothing wrong with him — but outclassed by Venator because his damage is dispellable and his HP cap (~3.5k) is roughly half Venator's.",
+   "items": [
+    "Dispel Magic (against him)"
+   ],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Calico",
+   "tier": "A",
+   "direction": "rising",
+   "why": "Fine-to-good, Haze-like but better. A stronger early game means a good pilot is ahead almost every game, and she generates off-map gold as a position 3/4 without stealing carry farm.",
+   "items": [],
+   "confidence": 0.75
+  },
+  {
+   "hero": "Ivy",
+   "tier": "A",
+   "direction": "stable",
+   "why": "The most balanced she's ever been; one targeted nerf from perfect — remove the HMC cancel on Stone Form, slow Stone Form, or raise the old cooldown, and drop her from 4 stamina to 3.",
+   "items": [
+    "Echo Shard",
+    "Stone Form",
+    "HMC"
+   ],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Kelvin",
+   "tier": "A",
+   "direction": "falling",
+   "why": "Bottom-A — 'there's no point' picking him when Rem and Viscous, the only two good supports, are strictly better picks.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Lady Geist",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Consistent: the classic 0-6 lane into AFK farming a strong side-lane, with one of the best ults in the game and huge tankiness. She can't be B.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Lash",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Good but not OP, top of A; pretty balanced.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "McGinnis",
+   "tier": "C",
+   "direction": "stable",
+   "why": "Annoying but not OP and ultimately 'not very good' — terrible mobility in a movement-driven game plus RNG.",
+   "items": [],
+   "confidence": 0.4
+  },
+  {
+   "hero": "Mina",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Playable and not OP; similar profile to Celeste.",
+   "items": [],
+   "confidence": 0.75
+  },
+  {
+   "hero": "Mirage",
+   "tier": "A",
+   "direction": "rising",
+   "why": "Really good — the Echo Shard Tornado and Scarab buffs were 'giga'. Denies early solo-walker snowballing and has strong map/positioning micro for players who know the routine.",
+   "items": [
+    "Echo Shard"
+   ],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Mo & Krill",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Fine and balanced; nobody plays it, but it does its job without being OP.",
+   "items": [],
+   "confidence": 0.75
+  },
+  {
+   "hero": "Paige",
+   "tier": "A",
+   "direction": "rising",
+   "why": "Good and probably better than Kelvin. The laning-matters-more meta suits her historically strong lane phase, and she's the second-best enabler of OP heroes (Billy, Abrams) by getting them ahead early.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Paradox",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Consistently strong in every patch; solid.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Pocket",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Broken for mains. The 45.9% E4+ win rate is misleading: 250+ games played adds ~8% win rate, so low-mastery players dilute the stat — with 500 games, he's 'OP as shit'.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Rem",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Broken — with Billy, one of the two best heroes in the game. Percent-max-HP heal makes every tanky hero (Shiv, Abrams) vastly stronger, so Tank+Rem+Viscous equals a won game.",
+   "items": [
+    "Divine Barrier"
+   ],
+   "confidence": 0.9
+  },
+  {
+   "hero": "Seven",
+   "tier": "A",
+   "direction": "falling",
+   "why": "Still consistent but no longer broken after the gun nerfs; slightly better than Infernus. Best solo-queue win-rate hero — fastest clear speed and the highest average souls per game at every rank.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Shiv",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Very strong and meta-defining: a mobile tank with infinite spirit shred in a tank/spirit meta, and a skill-diff hero that scales especially hard alongside a Rem.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Silver",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Still OP — arguably the best kit in the game: two full ability sets, both strong, with 'free items' baked in (inhibitor, shred, slowing hex, heals). Her ult grants 15s per kill vs Yamato's 2s.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Sinclair",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Situationally good and purely RNG until draft exists — S with a lucky enemy draft, otherwise not. He'll be 'giga-nerfed' once draft arrives.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Venator",
+   "tier": "S",
+   "direction": "stable",
+   "why": "One of the best: a tanky AD with built-in anti-heal and effectively true, non-dispellable damage (unlike Infernus), a ~5.5k HP cap, and a late grenade pivot that shreds through Metal Skin. The best AD answer to the tank meta.",
+   "items": [
+    "Metal Skin",
+    "grenade build"
+   ],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Victor",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Bottom of S — the tank equivalent of Seven: farms fast, then converts the gold lead into an early solo walker to snowball pub games; best-in-class for solo carrying as a tank.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Vindicta",
+   "tier": "D",
+   "direction": "falling",
+   "why": "One of the worst heroes — the number-one 'victim'. The easiest hero in the game to counter, and tanks hard-counter flyers; solo-queue Vindicta is unplayable.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Viscous",
+   "tier": "S",
+   "direction": "stable",
+   "why": "OP as a support enabler — Tank+Rem+Viscous wins games. Its lowest-skill build (cube support) is the strongest; its high-skill builds are unplayable.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Vyper",
+   "tier": "A",
+   "direction": "stable",
+   "why": "OP in a vacuum but not consistent or meta-defining; would be S if draft existed, but is miserable against top heroes (Billy, Holliday, Doorman).",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Wraith",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Balanced.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Warden",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Pretty balanced.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Yamato",
+   "tier": null,
+   "direction": "stable",
+   "why": "He says he'll rank Yamato this time but the transcript ends before any placement; she only appears as the contrast for Silver's ult (2s per kill vs 15s).",
+   "items": [],
+   "confidence": 0.3
+  },
+  {
+   "hero": "Revenant (name unclear — likely caption error, not on the provided roster)",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Named as the carry that shines more than Wraith/Warden/Mirage/Vyper on average. Identity is ambiguous from the captions, so this is low confidence.",
+   "items": [],
+   "confidence": 0.2
+  }
+ ],
+ "item_claims": [
+  {
+   "item": "Echo Shard",
+   "standing": "strong",
+   "bought_by": [
+    "Mirage",
+    "Ivy"
+   ],
+   "why": "Core to the Echo Shard Tornado (Mirage) and Stone Form (Ivy) builds that make those heroes strong/annoying."
+  },
+  {
+   "item": "Curse",
+   "standing": "strong",
+   "bought_by": [
+    "Haze"
+   ],
+   "why": "After ~20 minutes it flips Haze into a free-kill, no-skill one-shot, which is why the hero is hated rather than weak."
+  },
+  {
+   "item": "Indomitable",
+   "standing": "niche",
+   "bought_by": [
+    "anti-Haze and anti-Ivy picks"
+   ],
+   "why": "Intended counterplay, but it fails vs Haze because you sleep-dagger the Indom then Curse; it only partly answers Ivy's Echo Shard loop."
+  },
+  {
+   "item": "Witch Mail",
+   "standing": "strong",
+   "bought_by": [
+    "Abrams"
+   ],
+   "why": "Late-game survivability that helps Abrams reach his unkillable past-30-minutes state."
+  },
+  {
+   "item": "Divine Barrier",
+   "standing": "niche",
+   "bought_by": [
+    "Rem",
+    "supports"
+   ],
+   "why": "Cleanses dispellable damage (Infernus) but does nothing against Venator's non-dispellable damage."
+  },
+  {
+   "item": "Dispel Magic",
+   "standing": "niche",
+   "bought_by": [
+    "Abrams",
+    "tanky heroes"
+   ],
+   "why": "Same dispel/cleanse role — it answers Infernus but not Venator."
+  },
+  {
+   "item": "Metal Skin",
+   "standing": "weak",
+   "bought_by": [
+    "AD carries"
+   ],
+   "why": "Loses value because Venator pivots to a grenade build late that shreds straight through it."
+  }
+ ],
+ "reasoning_patterns": [
+  "Reinterprets aggregate win rate as noisy data: Pocket looks like a 45.9% hero in E4+, but because 250+ games played adds ~8% win rate, he reads the low number as low-mastery dilution rather than weakness — the hero is broken for mains.",
+  "Blames a system change, not a stat, for a hero's fall: Graves was 'inflated by the old Urn', so removing the objective plus repeated nerfs explains the collapse better than any single number.",
+  "Derives picks from late-game damage math: because 5k-HP tanks survive late spirit burst, percent-max-HP healing (Rem) and non-dispellable anti-heal/true damage (Venator) become the defining value.",
+  "Tests counterplay by walking the interaction: Indomitable is meant to answer Haze, but you just sleep-dagger the Indom and then Curse — so the 'counter' is fake.",
+  "Compares two similar carries on mechanic details: Venator over Infernus because Venator's damage isn't dispellable and his HP cap (~5.5k) nearly doubles Infernus' (~3.5k), and he pivots to a grenade build that ignores Metal Skin."
+ ],
+ "patch_calls": {
+  "size": null,
+  "headline": null,
+  "winners": [
+   "Billy",
+   "Rem",
+   "Abrams",
+   "Shiv",
+   "Silver",
+   "Venator",
+   "Victor",
+   "Mirage",
+   "Holliday",
+   "Paige",
+   "Viscous",
+   "Grey Talon",
+   "Pocket"
+  ],
+  "losers": [
+   "Graves",
+   "Vindicta",
+   "Seven",
+   "Dynamo",
+   "Haze"
+  ],
+  "non_obvious_calls": [
+   "Graves' collapse is driven by the removal of the old Urn objective plus ~3 nerfs, not by a single number change.",
+   "Pocket's weak 45.9% E4+ win rate masks his strength for high-game-count mains (250+ games → ~+8% win rate).",
+   "Sinclair is a draft-lottery hero who will be 'giga-nerfed' the moment draft is added.",
+   "Ivy is one targeted nerf from balanced: remove the HMC cancel on Stone Form, slow Stone Form, or raise the old cooldown (and cut 4 stamina to 3).",
+   "Doorman's low win rate is a noob-build artifact (kidnap build), not a sign the hero is weak — a DPS build is uncounterable."
+  ]
+ }
+}

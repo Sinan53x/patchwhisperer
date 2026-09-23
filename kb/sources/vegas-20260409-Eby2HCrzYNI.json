@@ -1,0 +1,493 @@
+{
+ "meta_thesis": "There is a large gap between ~8-9 dominant heroes (Mirage, Lady Geist, Venator, Apollo, Mina, Celeste, Haze, Seven, Dynamo, Silver) and everyone else, which he reads as power creep: those heroes do too much with no downside while the rest are 'strong in their own right' but outshined. Late-game gun/scaling carries are the most broken category because average game length is ~10 minutes longer than a year ago, comeback gold and long death timers let losing carries recover, and spirit heroes have no late-game item equivalent to Silencer/Crippling Headshot/Inhibitor. Fights are decided by inflated HP pools (~6,000 HP, double health bars, 50/50 res, hybrid damage) where Toxic Bullets is often the only kill vector, so laning phase barely matters. He argues ~80% of the cast belongs in A/B and anything above A is 'cancer'.",
+ "hero_claims": [
+  {
+   "hero": "Abrams",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Never bad at any point even from behind: tanky, has a stun, and a strong 'one build'. Echo Shard on charge lets him perma-CC while healing.",
+   "items": [
+    "Echo Shard"
+   ],
+   "confidence": 0.9
+  },
+  {
+   "hero": "Apollo",
+   "tier": "S",
+   "direction": "rising",
+   "why": "Meta-defining spirit hero, insanely strong early but falls off, so top of S not S+. Overtuned and arguably hotfix-worthy; he wants the parry-dash distance cut and parry limited to spells, not bullets.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Bebop",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Should not be C: gun build sits ~48% WR at all ranks, hook has real value, and it is skill-dependent/counterable rather than bad.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Billy",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Roughly Abrams-tier, consistently strong but balanced for once. The 'must melee' idea is a noob trap; his ult as an AoE slowing hex helps into Mina/Apollo.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Calico",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Decent, bottom of A at best; playable but not OP and not comparable to Apollo in the same role.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Celeste",
+   "tier": "S",
+   "direction": "falling",
+   "why": "Meta-defining spirit hero with elite mobility and strength all game, but 'not S+ anymore' — overtuned rather than broken.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "The Doorman",
+   "tier": null,
+   "direction": null,
+   "why": "Placed in a 'cringe' category: insanely cringe but only situationally strong (kidnap/under-tower build); low-elo players overrate him. He would be good with a draft system.",
+   "items": [],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Drifter",
+   "tier": "A",
+   "direction": "falling",
+   "why": "Top A, the strongest hero you can get without CC, but lacks mobility and CC so never S+. He is a Toxic Bullets bot: if the item is nerfed without compensation he becomes bad.",
+   "items": [
+    "Toxic Bullets"
+   ],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Dynamo",
+   "tier": "S",
+   "direction": "rising",
+   "why": "His 2 is the most OP spell in the game: an ~8s-cooldown AoE debuff remover/dispel that also refunds a charge and stamina. In a Toxic Bullets/DOT meta he AOE-cleanses the whole team, and Black Hole is one of few tools that can close out games since the base rework.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Graves",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Decent/solid, not strong. Noob-bait: wall-bouncing zombies or a single Ricochet trivializes her, and she no longer carries regardless of gold.",
+   "items": [
+    "Ricochet"
+   ],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Grey Talon",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Completely fine, not bad — he rejects the 'GT is bad' take.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Haze",
+   "tier": "S",
+   "direction": "rising",
+   "why": "Hotfix-worthy broken, but only because of one max-rank ult point granting one additional ult target. Outside that she is the game's truest glass-cannon carry — squishy, no cheap escape, real risk. Best solo-climb pick in low elo with Ricochet.",
+   "items": [
+    "Ricochet"
+   ],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Holliday",
+   "tier": "B",
+   "direction": "falling",
+   "why": "Worst hero of the patch: nerfed lane (1 regen, low base HP/damage) into a meta of tempo spirit heroes, falls off at ~16 min yet has among the worst first 6 minutes. Wants 2 regen in lane and a late game barrel scaling buff (~1.6 to 2).",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Infernus",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Balanced, top of decent: counterable, sub-par base HP scaling means he is burstable and can be shut down even when ahead. Newer carries with 6,000 HP and clearer counter-building are the problem, not him.",
+   "items": [],
+   "confidence": 0.75
+  },
+  {
+   "hero": "Ivy",
+   "tier": "A",
+   "direction": "rising",
+   "why": "Definition of decent, ~52% WR at all ranks, but he calls her underrated: Stone Form is the most generous I-frame window in the game and is not slow-hexable (no counterplay), she has 4 stamina, and the base ult duration is a 21s outlier that used to be ~12.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Kelvin",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Good but not OP despite low-elo complaints: his ult is awful until max level and he dies through the dome early. Would be OP if nobody bought anti-heal, but he is 50-70% anti-healed in practice.",
+   "items": [
+    "Healbane",
+    "Toxic Decay",
+    "Silencer",
+    "Inhibitor"
+   ],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Lady Geist",
+   "tier": "S",
+   "direction": "rising",
+   "why": "Thanos-level broken and uncounterable: top-two scaler with OP lane and base HP/gun damage, the Soul Exchange plus silence-for-25m ult grants spirit, fire rate and spirit armor with no perk investment. Builds 'slop' and is OP anyway.",
+   "items": [],
+   "confidence": 0.9
+  },
+  {
+   "hero": "Lash",
+   "tier": null,
+   "direction": "stable",
+   "why": "Like Pocket, would be broken without Curse/Counter Spell existing; he does not elaborate.",
+   "items": [
+    "Curse",
+    "Counter Spell"
+   ],
+   "confidence": 0.4
+  },
+  {
+   "hero": "McGinnis",
+   "tier": null,
+   "direction": null,
+   "why": "Placed in the 'cringe but situationally strong' category with The Doorman: sometimes F-tier, sometimes S-tier; turret stacking at Mid Boss can be near-uncounterable depending on draft.",
+   "items": [],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Mina",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Always been OP and meta-defining; a DLC hero that does too much damage and is too movementy/uncounterable.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Mirage",
+   "tier": "S",
+   "direction": "rising",
+   "why": "Most broken/out-of-touch hero of the patch and near hotfix: max Scarabs plus a 30s-CD ult that lines up with Divine Kevlar gives ~100% uptime on a cross-map TP with ~1,500 shield, 35 spirit, 20 fire rate and 3 move speed. 'Three days away from a nuclear weapon.'",
+   "items": [
+    "Divine Kevlar"
+   ],
+   "confidence": 0.9
+  },
+  {
+   "hero": "Mo & Krill",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Bottom of A; solid kit, low skill floor with high impact. Tanks are never truly bad.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Paige",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Good, slightly better than Ivy, but 'support slop' — supports physically can't match carry agency right now.",
+   "items": [],
+   "confidence": 0.65
+  },
+  {
+   "hero": "Paradox",
+   "tier": "C",
+   "direction": "falling",
+   "why": "Not great despite his dislike for the hero; high-rank Paradoxes are building 'fake' bomb damage-farm builds, a sign the hero is cooked.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Pocket",
+   "tier": "B",
+   "direction": "falling",
+   "why": "Bottom of strong / top of decent. Would be broken without Counter Spell, and is a 'gen one' spirit burst hero power-crept by newer spirit burst DLC kits with better stats and kits.",
+   "items": [
+    "Counter Spell"
+   ],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Rem",
+   "tier": "C",
+   "direction": "falling",
+   "why": "Giga larp: most troll/smurf-hostile hero, so wait its win rate is skewed. When Rem is your top-gold player the team usually loses — it soaks map gold and lowers team win rate.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Seven",
+   "tier": "S",
+   "direction": "rising",
+   "why": "Most slept-on broken hero: 55.7% WR at highest elo, 55.4% all ranks. Best-in-game gun DPS plus CC and range, scales extremely well, and best low-elo solo-carry with Ricochet. Not the same as Victor because he has a gun and CC.",
+   "items": [
+    "Ricochet"
+   ],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Shiv",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Good, middle of the pack but not top 10; should get no more buffs. His movement is OP and his kit is cancerous — wants a minor rework.",
+   "items": [],
+   "confidence": 0.75
+  },
+  {
+   "hero": "Silver",
+   "tier": "A",
+   "direction": "rising",
+   "why": "Another DLC hero: very good, very tanky, does a lot of damage. Simple and OP.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Sinclair",
+   "tier": null,
+   "direction": null,
+   "why": "Possible S but not rankable until draft exists: efficient only with a favorable draft, cannot late-game carry, too skill/variable dependent. He refuses to value him as a real hero until draft.",
+   "items": [],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Venator",
+   "tier": "S",
+   "direction": "rising",
+   "why": "Consistently strong and near the top with no single glaringly OP ability; easiest hero in the game by far — a first-time player dropped 30 kills and laughed.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Victor",
+   "tier": "D",
+   "direction": "falling",
+   "why": "Terrible/unpickable: over-nerfed because low elo complains. 'Late-game spirit scaler' is an oxymoron since spirit doesn't scale; he has no CC, bad HP per boon, no gun damage, and is the most counterable hero if you have movement and itemize.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Vindicta",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Top of decent: good but not OP, has many counters and doesn't scale as hard as other carries.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Viper",
+   "tier": "A",
+   "direction": "rising",
+   "why": "Hot take: really good, under-loved, high win rate; damage output is crazy.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Viscous",
+   "tier": "C",
+   "direction": "falling",
+   "why": "Only good because Cube is OP; every other spell is weak and the splatter build dies to flying heroes. No individual scaling or late-game carry — you would never pick him to climb.",
+   "items": [],
+   "confidence": 0.75
+  },
+  {
+   "hero": "Warden",
+   "tier": "A",
+   "direction": "rising",
+   "why": "Actually really good — rated above his expected slot.",
+   "items": [],
+   "confidence": 0.65
+  },
+  {
+   "hero": "Wraith",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Very good; 'annoying but you can still win' — the benchmark for the A-tier the game should aspire to.",
+   "items": [],
+   "confidence": 0.75
+  },
+  {
+   "hero": "Yamato",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Strong ('good as fuck') but he hates the rework: a point-click, across-the-map 2 that now procs Stalker and melee effects with too much damage. Every Yamato opens 2-2 and point-clicks on ~18s cooldown; wants the 2 reworked.",
+   "items": [
+    "Stalker"
+   ],
+   "confidence": 0.8
+  }
+ ],
+ "item_claims": [
+  {
+   "item": "Toxic Bullets",
+   "standing": "strong",
+   "bought_by": [
+    "Drifter",
+    "gun carries"
+   ],
+   "why": "Literally the best item in the game and the only real kill vector against ~6,000 HP targets; nerfing it to the ground would make the meta worse, which is probably why it survives."
+  },
+  {
+   "item": "Silencer",
+   "standing": "strong",
+   "bought_by": [
+    "gun/late-game carries"
+   ],
+   "why": "One of the three late-game gun 6Ks that make scaling carries OP and has no spirit equivalent."
+  },
+  {
+   "item": "Crippling Headshot",
+   "standing": "strong",
+   "bought_by": [
+    "gun/late-game carries"
+   ],
+   "why": "Part of the gun-item trio driving the most broken category in the game."
+  },
+  {
+   "item": "Inhibitor",
+   "standing": "strong",
+   "bought_by": [
+    "gun/late-game carries",
+    "anti-heal buyers"
+   ],
+   "why": "Broken as a green item that gives 25% weapon damage and 150 health while applying a 30% damage penalty and 40% healing reduction; he suspects the 25% AD is a bug."
+  },
+  {
+   "item": "Green item (Silencer/Crippling/Inhibitor frame)",
+   "standing": "strong",
+   "bought_by": [
+    "late-game gun carries"
+   ],
+   "why": "A 'green item' that should reduce your own damage instead grants 25% AD — he thinks it is bugged."
+  },
+  {
+   "item": "Curse",
+   "standing": "strong",
+   "bought_by": [
+    "counter-itemizing players"
+   ],
+   "why": "The anti-counter-spell answer; its existence is what keeps Lash/Pocket from being broken."
+  },
+  {
+   "item": "Counter Spell",
+   "standing": "strong",
+   "bought_by": [
+    "anyone vs burst"
+   ],
+   "why": "Its existence caps Lash and Pocket at 'very good' rather than S++."
+  },
+  {
+   "item": "Divine Kevlar",
+   "standing": "strong",
+   "bought_by": [
+    "Mirage",
+    "scaling carries"
+   ],
+   "why": "30s CD perfectly lines up with Mirage's ult, granting near-100% uptime on his bonus stats."
+  },
+  {
+   "item": "Ricochet",
+   "standing": "strong",
+   "bought_by": [
+    "Haze",
+    "Seven",
+    "low-elo climbers"
+   ],
+   "why": "Enables the Haze/Seven AFK-farm solo-carry plan; a single Ricochet also hard-counters Graves."
+  },
+  {
+   "item": "Healbane",
+   "standing": "strong",
+   "bought_by": [
+    "everyone vs healing"
+   ],
+   "why": "Part of the mandatory anti-heal stack that keeps Kelvin in check (with Toxic Decay and Silencer)."
+  },
+  {
+   "item": "Toxic Decay",
+   "standing": "strong",
+   "bought_by": [
+    "vs healing/DOT builds"
+   ],
+   "why": "Contributes to the 50-70% anti-heal that Kelvin's kit is reduced by in real games."
+  },
+  {
+   "item": "Echo Shard",
+   "standing": "strong",
+   "bought_by": [
+    "Abrams"
+   ],
+   "why": "Lets Abrams double-charge into permanent CC while healing."
+  },
+  {
+   "item": "Stalker",
+   "standing": "strong",
+   "bought_by": [
+    "Yamato"
+   ],
+   "why": "Yamato's reworked 2 now procs Stalker and melee effects, part of why he calls it slop."
+  },
+  {
+   "item": "Spirit-tier 6K items (Focus Lens, Magic Carpet, Scourge)",
+   "standing": "weak",
+   "bought_by": [
+    "spirit heroes"
+   ],
+   "why": "Dog-tier compared to gun 6Ks: no team-wide win-the-game buffs and bad stats, leaving spirit heroes without a late-game item path."
+  }
+ ],
+ "reasoning_patterns": [
+  "Isolates a single point of power to explain a whole hero: Haze is fine except one max-rank ult node granting one extra ult target, and that one change flipped her ult build from terrible to giga broken.",
+  "Reads item against item slot economy: a 30s-CD ult lining up exactly with Divine Kevlar's 30s CD is what makes Mirage's uptime permanent — the nerf target is the item/cooldown alignment, not the numbers.",
+  "Treats base regen as the most broken base stat via unit math (1 regen = 60 HP/minute, so win trades by that margin), concluding Holliday loses every lane trade and needs 2 regen.",
+  "Distinguishes archetype-not-hero problems: 'late-game spirit scaler' is an oxymoron because spirit doesn't scale, so Victor has no role — and contrasts Seven because Seven has a gun and CC.",
+  "Frames win-rate data against pick context: Rem's 52%-ish number is discounted because it is the most troll/smurfed hero, and he wants a 'top-gold Rem' filtered win rate to prove it lowers the team's odds.",
+  "Attributes nerfs to developer reaction to low-elo complaints rather than strength — Victor is 'over-nerfed' and made unpickable by noob whining."
+ ],
+ "patch_calls": {
+  "size": "significant",
+  "headline": "Power creep: ~8-9 overtuned heroes outshine a cast that is otherwise fine, and late-game gun scaling with comeback mechanics is the most broken thing in the game.",
+  "winners": [
+   "Mirage",
+   "Lady Geist",
+   "Venator",
+   "Seven",
+   "Haze",
+   "Apollo",
+   "Mina",
+   "Celeste",
+   "Dynamo",
+   "Silver"
+  ],
+  "losers": [
+   "Victor",
+   "Holliday",
+   "Paradox",
+   "Viscous",
+   "Pocket",
+   "Rem"
+  ],
+  "non_obvious_calls": [
+   "Haze is 'extremely balanced' except for one max-rank ult node granting one extra target — a single point of power carries her to hotfix-worthy.",
+   "Ivy is underrated: the real problem is that Stone Form is not slow-hexable and her ult base duration is 21s where it used to be ~12, not her win rate.",
+   "Bebop does not belong in C: gun build's ~48% WR and hook value make him a solid B.",
+   "Kelvin would be OP if players bought anti-heal; in practice he is 50-70% anti-healed, so low-elo complaints are misattributed.",
+   "Toxic Bullets is so central to killing inflated HP pools that nerfing it without adding another kill vector would make the meta worse — likely why the devs leave it alone.",
+   "Comeback gold and comeback death timers should be removed, and late-game items nerfed, to fix the meta rather than buffing the weak heroes.",
+   "The 21s Ivy ult duration, the 8s AoE Dynamo dispel, and the 30s Mirage ult/Divine Kevlar alignment are the concrete outliers he wants reviewed."
+  ]
+ }
+}

@@ -1,0 +1,542 @@
+{
+ "meta_thesis": "Deadlock is now a stat-check game: base stats and boons decide fights more than items, so scouting builds no longer matters. The strongest heroes are overloaded 'DLC' kits (Mirage, Silver, Billy, The Doorman, Viscous, Venator, Shiv) with no real weak point, and the only counterplay to them is CC/debuff spam, which strips the game's free-flowing skill expression. High elo rewards blind-pickable, counterplay-free tempo heroes; balanced heroes with clear weaknesses (Wraith, Infernus, Victor, Abrams) go unplayed. With no draft, picking most heroes is a coin flip on the random matchup.",
+ "hero_claims": [
+  {
+   "hero": "Abrams",
+   "tier": "B",
+   "direction": "falling",
+   "why": "Weaker than he was because the whole lobby stacks anti-heal (Venator, Viscous, Rem, Drifter); now slightly below the average tank but still good, and he's the balanced baseline other tanks should match.",
+   "items": [
+    "Decay"
+   ],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Apollo",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Pretty balanced, needs finesse, mid-to-bottom of B; not so OP you pick him every game, and buffing him would be problematic.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Bebop",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Pretty balanced and solid, not OP; glad he isn't buffed.",
+   "items": [],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Billy",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Broken: too much CC, damage, frontline and movement for a tank, and a top Scrooge abuser; late game with Scrooge he's 'Thanos' even after the ~4-5% Scrooge nerf.",
+   "items": [
+    "Scrooge",
+    "Echo Shard"
+   ],
+   "confidence": 0.9
+  },
+  {
+   "hero": "Calico",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Not sold on her but above average; bottom of A, no immediate nerf needed.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Celeste",
+   "tier": "B",
+   "direction": "rising",
+   "why": "Not bad and the buffs are impactful (ult does heavy damage, great at Mid Boss); balanced but can't be buffed more because her base kit is overloaded with uncounterable movement.",
+   "items": [],
+   "confidence": 0.65
+  },
+  {
+   "hero": "The Doorman",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Still absurdly broken, does game-breaking things; in high elo with coordination plus built-in damage he is unplayable against and needs tweaks.",
+   "items": [],
+   "confidence": 0.9
+  },
+  {
+   "hero": "Drifter",
+   "tier": "A",
+   "direction": "falling",
+   "why": "Was S last patch, now A; still one of the best solo-queue heroes because he's blind-pickable and has built-in anti-heal.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Dynamo",
+   "tier": "B",
+   "direction": "rising",
+   "why": "Good and finally being picked; balanced ult with clear counterplay, only feels lame with Refresher.",
+   "items": [
+    "Refresher"
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Graves",
+   "tier": "D",
+   "direction": "stable",
+   "why": "Effectively the worst hero: base stats are awful so she's permanently behind until ~25 min in a real game; thrives only in low elo/Street Brawl and gets banned by teammates in tournament play.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Grey Talon",
+   "tier": "A",
+   "direction": "falling",
+   "why": "Low A/top B; still good but one of the few heroes who actually feels nerfs, since snowballing relies on early stacks.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Haze",
+   "tier": "S",
+   "direction": "rising",
+   "why": "Broken: her best builds are uninteractive, especially the double-Echo-Shard sleep build; wants CC-slop builds fixed.",
+   "items": [
+    "Echo Shard"
+   ],
+   "confidence": 0.9
+  },
+  {
+   "hero": "Holliday",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Really good and downplayed; best movement in the game, a pick hero, strong with Veil Walker. Bounce-pad charges (and Recharging Rush giving a charge of two spells) let her escape bad positioning; move strength off bounce pad into her damage.",
+   "items": [
+    "Veil Walker",
+    "Recharging Rush",
+    "Rapid Recharge"
+   ],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Infernus",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Balanced staple: low HP is by design; the fix is lowering the OP heroes' stats to his level, not buffing him.",
+   "items": [],
+   "confidence": 0.75
+  },
+  {
+   "hero": "Ivy",
+   "tier": "A",
+   "direction": "rising",
+   "why": "Underrated support; the T2 buffs are really impactful and her buffs to Drifter/Venator are now noticeable, plus her ult gives Mirage-like map control.",
+   "items": [
+    "Healing Tempo",
+    "Healing Nova",
+    "Capacitor"
+   ],
+   "confidence": 0.75
+  },
+  {
+   "hero": "Kelvin",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Never bad; low early impact but crazy late scaling with max APs. Should shift power from late game to early game.",
+   "items": [],
+   "confidence": 0.65
+  },
+  {
+   "hero": "Lady Geist",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Just really good, a classic strong pick.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Lash",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Really good and always happy to have: good lane/mid/late, does too much damage for his mobility and CC, and can build anything (hybrid). Wants his 10% base spirit resist removed.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "McGinnis",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Strong but inconsistent: pure coin flip on draft, useless vs mobile/AoE comps that jump walls and delete turrets, borderline uncounterable into the right comp. Never felt like she belongs.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Mina",
+   "tier": "C",
+   "direction": "falling",
+   "why": "Bottom of B/top C, dropped by the strong heroes; one small buff would make her broken again because her kit is overloaded and needs a rework.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Mirage",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Should be removed: every ability is broken (damage-reduction 1, two tornadoes that make him untargetable and knock up, Scrooge + Echo Shard stacking, split-push barrier). No fun game exists with him in the lobby.",
+   "items": [
+    "Echo Shard",
+    "Scrooge"
+   ],
+   "confidence": 0.95
+  },
+  {
+   "hero": "Mo & Krill",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Balanced but underplayed; the easiest hero in the game yet not game-breaking strong. Scrooge on him is a 13s AoE with health/armor/debuff resist.",
+   "items": [
+    "Scrooge"
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Paige",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Best-designed of the new heroes: a support with clear ups/downs and decent damage, slightly weaker than Rem/Viscous. Only issue is the CC-slop items around her, especially Knockdown.",
+   "items": [
+    "Knockdown",
+    "Slowing Hex",
+    "Curse"
+   ],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Paradox",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Strong high-value pick hero: good damage, good HP, buys Slowing Hex every game, and Echo Shard bomb is huge late. Turns stalemates with one pick.",
+   "items": [
+    "Echo Shard",
+    "Slowing Hex"
+   ],
+   "confidence": 0.75
+  },
+  {
+   "hero": "Pocket",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Objectively breaks the game with Affliction; more oppressive than Dynamo and the best sidelaner (clears waves for free, changes game pace). Effectively a tank via mobility.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Rem",
+   "tier": "S",
+   "direction": "stable",
+   "why": "OP: enables the tank meta too much and needs a rework; will always slot Decay for anti-heal.",
+   "items": [
+    "Decay"
+   ],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Seven",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Fine/balanced but draft-dependent: S-tier with tank space-makers who let him farm, falls off if enemy tempo heroes invade his jungle; stronger the lower the elo.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Shiv",
+   "tier": "S",
+   "direction": "stable",
+   "why": "OP: too mobile, too tanky, too much damage; a tank that's also the anti-tank hero. Only counter is CC spam, and his rework got reverted in a day.",
+   "items": [],
+   "confidence": 0.9
+  },
+  {
+   "hero": "Silver",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Broken and unfun, same bucket as Mirage: too much built in, no counterplay, only beatable by another Silver/Pocket-level hero. Was #1 for 3 months.",
+   "items": [],
+   "confidence": 0.9
+  },
+  {
+   "hero": "Sinclair",
+   "tier": "C",
+   "direction": "stable",
+   "why": "Nothing much to say: inconsistent because there's no draft; Echo Shard bunny is unfun and should be dispellable.",
+   "items": [
+    "Echo Shard"
+   ],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Venator",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Broken: no weak point in any phase, huge HP and base stats; with Monster Rounds/Weakening Headshot/Fortitude he's 'Thanos' with no items and never has to buy movement.",
+   "items": [
+    "Monster Rounds",
+    "Weakening Headshot",
+    "Fortitude"
+   ],
+   "confidence": 0.9
+  },
+  {
+   "hero": "Victor",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Balanced, the power level other heroes should be brought down to; only ruined by Refresher/Echo Shard, otherwise inconsistent but fine.",
+   "items": [
+    "Refresher",
+    "Echo Shard"
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Vindicta",
+   "tier": "B",
+   "direction": "falling",
+   "why": "Really good but highly matchup-dependent and swingy; mentions it can be a lot weaker. Low confidence on placement.",
+   "items": [],
+   "confidence": 0.45
+  },
+  {
+   "hero": "Viscous",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Broken because the Cube is too strong for its cooldown; always slots Decay. The ball and the 3 are either useless or OP; wants power moved off Cube into them.",
+   "items": [
+    "Decay",
+    "Echo Shard"
+   ],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Vyper",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Balanced but pure coin flip: if the enemy lacks CC/knockups she can 1v6, into Billy/Mirage/Lash/Silver/Venator/Doorman she's useless. Same league as Venator minus the consistency.",
+   "items": [],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Warden",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Good in the category he plays, though overshadowed; calls him 'vanilla Venator' — the reskin origin.",
+   "items": [],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Wraith",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Balanced, well-designed, one of the coolest designs; clear strengths/weaknesses, good solo queue. Only gripe is she has a CC spell and her 1 slows. Pointless to play her when Venator/Geist/Mirage are better.",
+   "items": [
+    "Capacitor",
+    "Slowing Hex"
+   ],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Yamato",
+   "tier": "A",
+   "direction": "rising",
+   "why": "Brought up to 'modern power level' with a failed rework: boundless spirit in lane, infinite grapples with decaying charge delay, point-click spirit snatch proc, and Refresher giving ~20s unstoppable. Wants grapple charges removed.",
+   "items": [
+    "Refresher",
+    "Spirit Snatch"
+   ],
+   "confidence": 0.8
+  }
+ ],
+ "item_claims": [
+  {
+   "item": "Scrooge",
+   "standing": "strong",
+   "bought_by": [
+    "Billy",
+    "Mirage",
+    "Mo & Krill"
+   ],
+   "why": "Best item in the game despite the tiny 2.6->2.5 nerf; max-health AoE plus 40% spirit armor, debuff resist and HP debuff resist, and it scales so it's actually stronger than pre-nerf at high spirit."
+  },
+  {
+   "item": "Echo Shard",
+   "standing": "strong",
+   "bought_by": [
+    "Haze",
+    "Mirage",
+    "Viscous",
+    "Paradox",
+    "Sinclair"
+   ],
+   "why": "Drives the most annoying uninteractive builds (double sleep Haze, double tornado Mirage, double Cube Viscous, bomb Paradox); creator says it should just be removed and doubled abilities should be dispellable."
+  },
+  {
+   "item": "Decay",
+   "standing": "strong",
+   "bought_by": [
+    "Rem",
+    "Viscous",
+    "Drifter",
+    "Venator"
+   ],
+   "why": "Go-to anti-heal slot that a lot of strong heroes always buy, which is why tanks like Abrams are getting melted."
+  },
+  {
+   "item": "Slowing Hex",
+   "standing": "strong",
+   "bought_by": [
+    "Paradox",
+    "Wraith"
+   ],
+   "why": "Buys every game on Paradox; part of the CC/debuff-slop meta where debuff items cost no real damage anymore."
+  },
+  {
+   "item": "Knockdown",
+   "standing": "strong",
+   "bought_by": [
+    "Paige"
+   ],
+   "why": "The one problem with Paige's kit is the CC-slop around her, Knockdown being the offender."
+  },
+  {
+   "item": "Curse",
+   "standing": "strong",
+   "bought_by": [
+    "Paige"
+   ],
+   "why": "Named as part of the CC/debuff spam that makes otherwise healthy heroes feel oppressive."
+  },
+  {
+   "item": "Refresher",
+   "standing": "strong",
+   "bought_by": [
+    "Dynamo",
+    "Victor",
+    "Yamato"
+   ],
+   "why": "The thing that makes Dynamo and Victor feel lame and gives Yamato ~20s unstoppable; a bottleneck item that ruins otherwise balanced heroes."
+  },
+  {
+   "item": "Veil Walker",
+   "standing": "strong",
+   "bought_by": [
+    "Holliday"
+   ],
+   "why": "Still a very strong build for Holliday because she's a pick hero and the item enables that role."
+  },
+  {
+   "item": "Recharging Rush",
+   "standing": "strong",
+   "bought_by": [
+    "Holliday"
+   ],
+   "why": "Gives Holliday a charge of two separate spells with one buy; creator argues it should be an imbue and that bounce pads shouldn't have charges at all."
+  },
+  {
+   "item": "Rapid Recharge",
+   "standing": "niche",
+   "bought_by": [
+    "Holliday"
+   ],
+   "why": "Enables the 'nine spells' Holliday cheese; creator says she doesn't even need it since bounce pads should have no charges."
+  },
+  {
+   "item": "Monster Rounds",
+   "standing": "strong",
+   "bought_by": [
+    "Venator"
+   ],
+   "why": "Part of the no-item Venator 'Thanos' package that makes his base stats broken in lane."
+  },
+  {
+   "item": "Weakening Headshot",
+   "standing": "strong",
+   "bought_by": [
+    "Venator"
+   ],
+   "why": "Same Venator stat-check package; buys it and still out-damages everyone."
+  },
+  {
+   "item": "Fortitude",
+   "standing": "strong",
+   "bought_by": [
+    "Venator"
+   ],
+   "why": "Third piece of the Venator no-item Thanos build."
+  },
+  {
+   "item": "Healing Tempo",
+   "standing": "strong",
+   "bought_by": [
+    "Ivy"
+   ],
+   "why": "Core of the underrated support Ivy build; supports her valuable team-sustain and map control."
+  },
+  {
+   "item": "Healing Nova",
+   "standing": "strong",
+   "bought_by": [
+    "Ivy"
+   ],
+   "why": "Part of the Ivy support package that makes her buffs noticeable on Drifter/Venator."
+  },
+  {
+   "item": "Capacitor",
+   "standing": "strong",
+   "bought_by": [
+    "Ivy",
+    "Wraith"
+   ],
+   "why": "Support item for Ivy's kit; also cited on Wraith as the extra CC you can just buy, proving everyone has CC."
+  }
+ ],
+ "reasoning_patterns": [
+  "Frames a small item nerf as a non-change by computing the scaling breakpoint: Scrooge 2.6->2.5 is 'the same as pre-nerf at 112 spirit and better at 180', so the nerf isn't really a nerf — and the tiny size signals Valve thinks the game is already balanced (a red flag).",
+  "Reads a general-sounding system complaint as a specific hero/build indictment: 'the game is all stat-checking' becomes 'Venator buys nothing and is Thanos', i.e. base stats, not items, decide who wins lane.",
+  "Connects a mechanic to a build enabling it: Holliday's bounce-pad charges aren't the problem, Recharging Rush giving a charge of two spells plus infinite pads is — so the fix is removing charges, not numbers.",
+  "Explains a hero's power budget as a consequence of community behavior: because players can't parry puddle punch, it was gutted, which forces the Cube to stay OP — 'the character is annoying, it is what it is'.",
+  "Ties tier movement to indirect pressure rather than the hero's own notes: Drifter was S because he's blind-pickable and has built-in anti-heal, so widespread anti-heal stacking is what keeps him A while burying Abrams."
+ ],
+ "patch_calls": {
+  "size": "hotfix",
+  "headline": "A patch that barely touched the real problems: the Scrooge nerf (2.6->2.5) is cosmetic because the item scales, so the best item in the game and the heroes abusing it (Billy, Mirage, Mo & Krill) are unchanged.",
+  "winners": [
+   "Billy",
+   "Mirage",
+   "Mo & Krill",
+   "The Doorman",
+   "Venator",
+   "Rem",
+   "Viscous",
+   "Haze",
+   "Pocket",
+   "Shiv",
+   "Silver"
+  ],
+  "losers": [
+   "Abrams",
+   "Graves",
+   "Grey Talon",
+   "Mina",
+   "Drifter",
+   "Vindicta"
+  ],
+  "non_obvious_calls": [
+   "The Scrooge 'nerf' is functionally a buff at high spirit (same as pre-nerf at 112 spirit, better at 180), so its biggest abusers get a slap on the wrist rather than a fix.",
+   "Celeste's buffs are genuinely impactful (ult damage, Mid Boss) but she's still capped because buffing an overloaded base kit would make the game unfun — a buff that can't move her tier.",
+   "Ivy's T2 buffs are quietly one of the strongest changes, materially boosting Drifter/Venator duo lanes and giving Mirage-like map control.",
+   "Abrams is falling not from his own numbers but from the anti-heal meta (Venator's built-in anti-heal, Rem/Viscous always buying Decay).",
+   "Holliday's real strength isn't the barrels but Recharging Rush double-dipping bounce-pad charges; the creator recommends making it an imbue.",
+   "Drifter was S last patch and is only A now despite no direct change — the falling anti-heal/scaling meta and better blind picks push him down.",
+   "With no draft, balanced heroes (Wraith, Infernus, Victor, Abrams) are strictly worse than equally strong counterplay-free 'DLC' heroes, so they go unplayed — the balance problem is systemic, not hero-specific."
+  ]
+ }
+}

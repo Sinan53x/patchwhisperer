@@ -1,0 +1,29 @@
+{
+ "verdicts": [
+  {
+   "hero": "Wraith",
+   "verdict": "watch",
+   "one_liner": "Card Trick gutted and Plated Armor counters Full Auto; pivot to the gun build or fall behind.",
+   "direct": "Card Trick heal 75->60 and spirit scaling 0.75->0.5 plus resist-shred -8%->-7% cut her sustain and debuff; Full Auto spirit 0.03->0.045 is only a small compensation.",
+   "indirect": "Plated Armor now eats Full Auto's on-hit spirit damage — a direct counter — while Slowing Hex CD 27->29s trims CC uptime and the removed comeback bounty strips her late-scaler safety net.",
+   "build_adjustments": [
+    "Stop maxing Card Trick; move those points into Full Auto.",
+    "Keep the gun build (Capacitor, Lucky Shot); the CC build lost its heal and shred.",
+    "Expect Plated Armor on tanks — don't build around Full Auto's on-hit spirit vs them."
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Warden",
+   "verdict": "bench",
+   "one_liner": "Four-item pile-on kills the proc carry; only the silence-cage utility build survives.",
+   "direct": "Bullet damage/boon 0.28->0.25, fire-rate spirit scaling 0.25->0.21, Alchemical Flask range/speed -30%, Willpower T3 and debuff resist all cut — a major kit nerf.",
+   "indirect": "Mercurial Magnum 0.49->0.38, Spiritual Overflow's triple nerf, Veil Walker losing Sprint Boots, and Plated Armor blocking Mercurial on-hit together delete his proc-carry build from every side.",
+   "build_adjustments": [
+    "Drop Mercurial Magnum and Spiritual Overflow; the on-hit carry core is gone.",
+    "If you stay, run the silence-cage utility build with Fortitude/survivability, not damage."
+   ],
+   "confidence": 0.7
+  }
+ ]
+}

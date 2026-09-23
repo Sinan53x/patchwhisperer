@@ -1,0 +1,410 @@
+{
+ "items": [
+  {
+   "item": "Weakening Headshot",
+   "direction": "nerf",
+   "magnitude": "minor",
+   "summary": "A -13%->-12% shred trim is cosmetic on its own, but it lands on Venator whose whole identity is 'no weak point' — removing a point of resist-shred slightly narrows his already-struggling tempo conversion (45.7% WR).",
+   "affected_heroes": [
+    {
+     "hero": "Venator",
+     "relationship": "core",
+     "effect": "down",
+     "why": "His core resist-shred item got a point weaker, piling onto a WR that already hasn't matched his reputation."
+    }
+   ],
+   "build_shift": ""
+  },
+  {
+   "item": "Hollow Point",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "9->10% resist-shred is a small number but it's on the cheap T2 early-gun item, exactly where the tempo patch wants damage online. Reinforces the win-lane-harder path rather than the super-scaling one.",
+   "affected_heroes": [
+    {
+     "hero": "Vindicta",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Tempo early-gun carry whose T2 shred got stronger in the meta that already favors her."
+    },
+    {
+     "hero": "Seven",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Loves the early shred but still draft-dependent and pace-sensitive."
+    },
+    {
+     "hero": "Vyper",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Top-WR gun carry gets a small boost to her lane-dominant opening."
+    },
+    {
+     "hero": "Silver",
+     "relationship": "core",
+     "effect": "up",
+     "why": "The patch's biggest winner also buys the buffed early-gun shred."
+    },
+    {
+     "hero": "Venator",
+     "relationship": "core",
+     "effect": "neutral",
+     "why": "Compensates the small Weakening Headshot nerf but doesn't fix his conversion problem."
+    },
+    {
+     "hero": "Grey Talon",
+     "relationship": "core",
+     "effect": "neutral",
+     "why": "C-tier poke carry that still can't convert the early lead the item wants to create."
+    }
+   ],
+   "build_shift": "Solidifies cheap T2 weapon shred as the default first-gun slot in the tempo meta."
+  },
+  {
+   "item": "Toxic Bullets",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "Spirit scaling 0.005->0.006% is a nudge, but anti-heal DoT gains value as the patch funnels fights into inflated-HP bruisers and tanks; it's one of the few clean answers to big health pools.",
+   "affected_heroes": [
+    {
+     "hero": "Infernus",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Burn carry whose scaling gets a hair better; still out-paced by the tempo meta."
+    },
+    {
+     "hero": "Drifter",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Blind-pickable bruiser with built-in anti-heal stacks another anti-heal DoT."
+    },
+    {
+     "hero": "Graves",
+     "relationship": "core",
+     "effect": "neutral",
+     "why": "Gets the buff but her core problem is base stats, not this item."
+    }
+   ],
+   "build_shift": ""
+  },
+  {
+   "item": "Shadow Weave",
+   "direction": "buff",
+   "magnitude": "moderate",
+   "summary": "Now builds from Sprint Boots, sprint 1.5->2 and cooldown 45->37s — cheaper, faster, more uptime invis. Despite creators still calling it poor, the path change lowers the entry cost for gun carries who want a repositioning tool in a pick-heavy meta.",
+   "affected_heroes": [],
+   "build_shift": "Gains the Sprint Boots component while Veil Walker loses it — the two invis items now diverge on the same tier-3 Vitality path, and this is the cheaper of the two."
+  },
+  {
+   "item": "Cultist Sacrifice",
+   "direction": "nerf",
+   "magnitude": "minor",
+   "summary": "180->170% bounty is a small number but it stacks with the whole patch's anti-greed direction: econ items are worse when comeback souls are gone and tempo wins games, so a soul-printing buy is now a tempo tax.",
+   "affected_heroes": [],
+   "build_shift": ""
+  },
+  {
+   "item": "Ballistic Enchantment",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "14->20s duration is a real uptime gain on a niche spirit utility item, but with no clear user base in the KB this stays a fringe pickup. Low confidence on who it helps.",
+   "affected_heroes": [],
+   "build_shift": ""
+  },
+  {
+   "item": "Spiritual Overflow",
+   "direction": "nerf",
+   "magnitude": "major",
+   "summary": "35% slower buildup plus spirit power 40->30 and fire rate 30->25% is a triple gut on top of July's cuts — this is the proc-carry steroid that powered the Warden Mercurial build, and it no longer pays off inside a fight's window.",
+   "affected_heroes": [
+    {
+     "hero": "Warden",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Loses his primary damage steroid on top of Mercurial Magnum and Plated Armor hits — a three-item pile-on."
+    }
+   ],
+   "build_shift": "With slower buildup, the item wants longer fights the tempo meta no longer provides; effectively removed from the spirit-carry proc build."
+  },
+  {
+   "item": "Restorative Locket",
+   "direction": "nerf",
+   "magnitude": "minor",
+   "summary": "Heal per boon 0.5->0.45 and stack range 35->32m trims both throughput and uptime; on a tempo support it's a soft power cut stacked on 08-22's resist nerf.",
+   "affected_heroes": [
+    {
+     "hero": "Apollo",
+     "relationship": "core",
+     "effect": "down",
+     "why": "The patch's archetype winner takes a small item-side offset to his lane-bully sustain."
+    }
+   ],
+   "build_shift": ""
+  },
+  {
+   "item": "Trophy Collector",
+   "direction": "nerf",
+   "magnitude": "minor",
+   "summary": "Souls/min 18->16 is another piece of the item-side economy tightening — pure-farm econ buys lose value in the same patch that delayed tunnel breakables and cut comeback souls.",
+   "affected_heroes": [],
+   "build_shift": ""
+  },
+  {
+   "item": "Veil Walker",
+   "direction": "nerf",
+   "magnitude": "major",
+   "summary": "Losing the Sprint Boots component kills +2 sprint/regen, movespeed now drops when invis ends, and spirit power 10->6 — the escape-and-reposition package is gutted. It goes from auto-buy to a pick-hero-only tool.",
+   "affected_heroes": [
+    {
+     "hero": "Holliday",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Loses a core enabler just as the tempo meta otherwise favors her pick play."
+    },
+    {
+     "hero": "Warden",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Compounds his Mercurial/Overflow losses — now stripped on item and hero side."
+    }
+   ],
+   "build_shift": "No longer on the Sprint Boots path, so it competes for a Vitality slot without the mobility subsidy; Shadow Weave now inherits that component."
+  },
+  {
+   "item": "Fortitude",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "2->2.25% max-health regen is a rounding-level buff, but it's on the default survivability slot for nearly every bruiser and tank, and the patch's slower respawn/longer-fight direction makes sustained regen more valuable than burst.",
+   "affected_heroes": [
+    {
+     "hero": "Abrams",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Bruiser already helped by the gun-cycle change; slight extra regen keeps him brawling."
+    },
+    {
+     "hero": "Mo & Krill",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Tank that lives in minute-one brawls the patch rewards."
+    },
+    {
+     "hero": "Lycan-style bruisers (Seven, Infernus, Shiv, Silver)",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Near-universal slot — anyone on Fortitude gets a tiny durability tax cut in longer fights."
+    }
+   ],
+   "build_shift": ""
+  },
+  {
+   "item": "Lifestrike",
+   "direction": "buff",
+   "magnitude": "moderate",
+   "summary": "Melee heal 100+1.5->120+1.75 and 30->35% is a real sustain gain, but the bigger story is synergy: with slows now affecting air drag, its 48% slow becomes a genuine anti-air lockdown, so it reads as a CC item as much as a heal.",
+   "affected_heroes": [
+    {
+     "hero": "Billy",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Effectively a Billy item — the heal buff plus new anti-air slow feeds his already-dominant S-tier frontline."
+    }
+   ],
+   "build_shift": "Upgrades from a melee-sustain slot to a CC/anti-air option in the same patch slows gained air-drag effect."
+  },
+  {
+   "item": "Leech",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "25->28% bullet+spirit lifesteal raises ceiling but the KB still calls it weak, and in a tempo meta that ends fights fast there's little window to lifesteal back — the buff doesn't address why nobody buys it.",
+   "affected_heroes": [],
+   "build_shift": ""
+  },
+  {
+   "item": "Plated Armor",
+   "direction": "buff",
+   "magnitude": "moderate",
+   "summary": "The fix is a real balance shift, not cosmetic: it now blocks on-hit spirit damage from Mercurial Magnum, Vindicta's Flight, Wraith's Full Auto and Tesla Bullets/Capacitor — turning a defensive slot into a hard counter to mixed-damage on-hit carries.",
+   "affected_heroes": [
+    {
+     "hero": "Warden",
+     "relationship": "situational",
+     "effect": "down",
+     "why": "Mercurial Magnum on-hit spirit damage is now actually blocked — third hit to his build this patch."
+    },
+    {
+     "hero": "Wraith",
+     "relationship": "situational",
+     "effect": "down",
+     "why": "Full Auto spirit damage now gets eaten, worsening her already-falling trajectory."
+    },
+    {
+     "hero": "Vindicta",
+     "relationship": "situational",
+     "effect": "down",
+     "why": "Flight on-hit is now counterable by a defensive pick, trimming the tempo winner's tools."
+    }
+   ],
+   "build_shift": "Becomes the defensive answer to on-hit/mixed-damage builds, competing with generic resist slots for tank-side buyers."
+  },
+  {
+   "item": "Diviner's Kevlar",
+   "direction": "rework",
+   "magnitude": "moderate",
+   "summary": "Adding +10% ultimate CDR pushes it from a generic defense item into a coordination/initiation enabler — it now wants heroes whose win condition is a big ult on a clock.",
+   "affected_heroes": [
+    {
+     "hero": "Dynamo",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Ult-initiator whose whole value is the AoE-CC ult; CDR makes his threat cycle faster."
+    },
+    {
+     "hero": "Silver",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Tank-carry that already buys it, now with better ult uptime on top of her other buffs."
+    }
+   ],
+   "build_shift": "Slot stays Vitality, but the item's identity tilts from survivability toward ult-uptime — direct competition with pure CDR items."
+  },
+  {
+   "item": "Golden Goose Egg",
+   "direction": "nerf",
+   "magnitude": "major",
+   "summary": "Damage penalty -10->-15%, souls/min 90->80, and stored souls now count toward net worth — the last clause is the killer: it interacts directly with the patch's comeback change and removes the item's whole point of hiding net worth from bounty math.",
+   "affected_heroes": [],
+   "build_shift": "Effectively unbuyable — the patch's worst item, and the clause tying stored souls to net worth is a targeted deletion of the 'lose lane, bank souls, ignore come back' pattern."
+  },
+  {
+   "item": "Slowing Hex",
+   "direction": "nerf",
+   "magnitude": "minor",
+   "summary": "27->29s cooldown trims the pick-engage frequency on near-every-game pick heroes, but the global slow change cuts the other way: its slow now drags flyers out of the air, adding a new anti-air use that partially offsets the CD tax.",
+   "affected_heroes": [
+    {
+     "hero": "Paradox",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Loses some uptime on her cheap pick-enabler on top of her Carbine trim."
+    },
+    {
+     "hero": "Wraith",
+     "relationship": "core",
+     "effect": "down",
+     "why": "CC-build staple gets shorter engage windows during an already-falling patch."
+    },
+    {
+     "hero": "Paige",
+     "relationship": "core",
+     "effect": "neutral",
+     "why": "Loses a little CD but gains the new anti-air slow on the flyers she was buffed to punish."
+    }
+   ],
+   "build_shift": ""
+  },
+  {
+   "item": "Radiant Regeneration",
+   "direction": "nerf",
+   "magnitude": "minor",
+   "summary": "Per-boon scaling 2->1.7 caps out less late; it's the second cut in two patches to a healing-support item, softly taxing sustain supports without removing the slot.",
+   "affected_heroes": [
+    {
+     "hero": "Kelvin",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Healer whose item path is being progressively trimmed on top of 08-22's nerf."
+    }
+   ],
+   "build_shift": ""
+  },
+  {
+   "item": "Tankbuster",
+   "direction": "nerf",
+   "magnitude": "minor",
+   "summary": "8->7.5% current-health bonus is a nudge, but stacked on 07-28 (no longer procs off items) it's a cumulative trim to the anti-tank slot just as the patch funnels big HP pools into fights.",
+   "affected_heroes": [
+    {
+     "hero": "Shiv",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Anti-tank bruiser loses a hair of his shred, though his current-HP knives carry the identity."
+    },
+    {
+     "hero": "Yamato",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Small trim on a slot she relies on for the burst that the tempo meta rewards."
+    }
+   ],
+   "build_shift": ""
+  },
+  {
+   "item": "Decay",
+   "direction": "neutral",
+   "magnitude": "minor",
+   "summary": "DPS -25% but duration +20% trades burst healing-cut for sustained anti-heal — worse at clipping a single big burst-heal window, better at keeping tanks suppressed over a long brawl, which fits the patch's longer fights.",
+   "affected_heroes": [
+    {
+     "hero": "Abrams",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Anti-heal identity on a tank who lives in sustained brawls the duration buff suits."
+    },
+    {
+     "hero": "Billy",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Frontline brawler who wants sustained suppression over long fights."
+    },
+    {
+     "hero": "Mo & Krill",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Tank-friendly slot on a hero that brawls from minute one."
+    },
+    {
+     "hero": "Infernus",
+     "relationship": "core",
+     "effect": "neutral",
+     "why": "Anti-heal user whose burn carries; shape of the item shift is roughly a wash for him."
+    },
+    {
+     "hero": "Lady Geist",
+     "relationship": "core",
+     "effect": "neutral",
+     "why": "Rising scaler who buys it mostly as a defensive anti-heal tool."
+    }
+   ],
+   "build_shift": "Still the go-to anti-heal slot; the DPS/duration swap slightly favors sustained-fight buyers over pick-window users."
+  },
+  {
+   "item": "Mercurial Magnum",
+   "direction": "nerf",
+   "magnitude": "major",
+   "summary": "Base bullet scaling 0.49->0.38 and base damage 25->20% is a heavy cut — combined with the Spiritual Overflow nerf and Plated Armor fix, the Mercurial on-hit carry build it anchored is dead in one patch.",
+   "affected_heroes": [
+    {
+     "hero": "Warden",
+     "relationship": "core",
+     "effect": "down",
+     "why": "His signature carry item is gutted, and his two supporting items were hit in the same patch."
+    }
+   ],
+   "build_shift": "No longer a damage engine; the on-hit proc build has no reliable core."
+  },
+  {
+   "item": "Focus Lens",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "30->35% damage and cast range 20->25m make it a stronger spirit-amp option, but it's still cleansable, so the buff mostly helps clean engages rather than dominating. Low-confidence read — no KB user listed.",
+   "affected_heroes": [],
+   "build_shift": "Better range makes it a more viable opener for burst casters on cleansable targets."
+  }
+ ],
+ "notable_item_stories": [
+  "Three econ items (Cultist Sacrifice, Trophy Collector, Golden Goose Egg) get trimmed at once — the item-side echo of the patch's anti-comeback economy, with Golden Goose Egg's net-worth clause specifically deleting the bank-and-hide pattern.",
+  "The Mercurial Magnum + Spiritual Overflow nerfs plus Plated Armor's on-hit fix form one coordinated stack that removes Warden's carry build in a single patch.",
+  "Invisibility items diverge around Sprint Boots: Shadow Weave gains the component plus a buff while Veil Walker loses it and gets stripped, so expect cheap gun-invis to rise and the pick-hero invis to fall."
+ ]
+}

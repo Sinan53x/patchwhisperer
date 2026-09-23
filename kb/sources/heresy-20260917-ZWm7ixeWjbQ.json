@@ -1,0 +1,370 @@
+{
+ "meta_thesis": "This is a tempo meta patch: Valve gutted comeback souls and the Unstable Rift's early-game generosity, so winning lane and snowballing now actually converts into winning the game. Scaling carries (Wraith, Celeste, gun Haze builds, Warden builds) lose their safety net, while early-game tempo/snowball heroes (Paige, Apollo, Vindicta, Yamato, Silver, Holiday) rise. The biggest movers are system changes — economy, rift, parry, reload, slows, melee cycle time — not the hero number tweaks.",
+ "hero_claims": [
+  {
+   "hero": "Apollo",
+   "tier": null,
+   "direction": "rising",
+   "why": "No direct changes, but he is one of the best early-game snowballers (ganks, wins lane, kills jungle instantly, escapes death, high flat damage/healing) and tempo now matters. The creator calls him 'super buffed this patch' despite being absent from the notes.",
+   "items": [],
+   "confidence": 0.9
+  },
+  {
+   "hero": "Abrams",
+   "tier": null,
+   "direction": "rising",
+   "why": "Only tweaked, same character, but the dash/light-melee no longer interrupting gun cycle time lets him weave dashes and punches between shots for a more fluid lane.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Celeste",
+   "tier": null,
+   "direction": "falling",
+   "why": "Nerfed seven different ways with no buffs, but the bigger hits are indirect: egg nerf, her item nerfs, scaling nerfs punishing early-game losers, and slows now affecting air drag hurting her flying.",
+   "items": [
+    "Golden Goose Egg"
+   ],
+   "confidence": 0.9
+  },
+  {
+   "hero": "Graves",
+   "tier": null,
+   "direction": "stable",
+   "why": "Described as the same character; no meaningful opinion beyond that.",
+   "items": [],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Haze",
+   "tier": null,
+   "direction": "rising",
+   "why": "Gun Haze is better now with an appreciable damage increase since her damage comes from Fixation stacks, so headshots matter more; viability unclear but promising.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Holliday",
+   "tier": null,
+   "direction": "rising",
+   "why": "Being made more of a gun hybrid and lasso buffed; with tempo up and post-20-minute picks more valuable (respawn timer change), she should re-emerge with hybrid gun-spirit builds.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Ivy",
+   "tier": null,
+   "direction": "falling",
+   "why": "Slight nerfs, which the creator approves of because the character is overpowered.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Kelvin",
+   "tier": null,
+   "direction": "rising",
+   "why": "Frozen Shelter now has innate spirit power, so it may be usable late game without maxing it; creator wants to test builds that don't max the ability.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Lady Geist",
+   "tier": null,
+   "direction": "rising",
+   "why": "Slight direct buffs, but mostly rises because the characters she competes with were nerfed.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Lash",
+   "tier": null,
+   "direction": "rising",
+   "why": "Gun Lash killed in favor of stomp Lash, which the creator calls great and healthy — ground-strike Lash is back.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Paige",
+   "tier": null,
+   "direction": "rising",
+   "why": "Triple-dip buffed: direct buffs, tempo being more important (she is a strong tempo character), and flying/flyers being nerfed so fewer Celeste/Vindicta-style threats. Creator calls her one of the biggest winners and a monster.",
+   "items": [],
+   "confidence": 0.9
+  },
+  {
+   "hero": "Paradox",
+   "tier": null,
+   "direction": "stable",
+   "why": "Slight nerf to carbine quick-scoping annoyance; same character more or less.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Rem",
+   "tier": null,
+   "direction": "stable",
+   "why": "Bug fixes and breakable-spawn timing shifted later; creator says this is not the enormous nerf people think (more a Calico hit).",
+   "items": [
+    "Golden Goose Egg"
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Shiv",
+   "tier": null,
+   "direction": "rising",
+   "why": "Knives no longer ricochet but do more current-HP damage, giving him more anti-tank killing ability — a healthy change; alt-fire now actually damages people again after past over-nerf.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Silver",
+   "tier": null,
+   "direction": "rising",
+   "why": "Weighted Bola acting as Phantom Strike is massive; cycle-time change improves lane and mid-game fights, plus better scaling and sprint speed. Creator expects her to merge into the meta alongside Yamato.",
+   "items": [],
+   "confidence": 0.9
+  },
+  {
+   "hero": "Vindicta",
+   "tier": null,
+   "direction": "rising",
+   "why": "Ultimate now works with ricochet and split shot simultaneously — a buff — but the main buff is tempo mattering and super-scaling being nerfed, since she is a high-tempo early gun carry.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Phinn",
+   "tier": null,
+   "direction": "falling",
+   "why": "Nerfed across the board; every ability did too much damage. Still picked for the same identity reasons but no longer randomly tops damage while building half support items.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Vyper",
+   "tier": null,
+   "direction": "falling",
+   "why": "Slight nerf, same character.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Warden",
+   "tier": null,
+   "direction": "falling",
+   "why": "Nerfed across the board (bullet damage per boon, flask range/speed, Willpower debuff resistance), amplified by item nerfs and carry/scaling nerfs. Not gutted — silence cage keeps him viable — but should settle to a balanced win rate rather than 55%.",
+   "items": [
+    "Veil Walker",
+    "Mercurial (Merk Mac)",
+    "Spiritual Overflow"
+   ],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Wraith",
+   "tier": null,
+   "direction": "falling",
+   "why": "Nerfed as a scaler (healing, armor shred, slow) and her items dipped, plus Plated Armor becoming a great anti-Wraith item; less oppressive mainly from tempo buffs and scaling nerfs, not a gutting.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Yamato",
+   "tier": null,
+   "direction": "rising",
+   "why": "Buffed again and benefits from the tempo change; creator expects a huge uptick in play as players start practicing her again.",
+   "items": [],
+   "confidence": 0.8
+  }
+ ],
+ "item_claims": [
+  {
+   "item": "Hollow Point",
+   "standing": "strong",
+   "bought_by": [],
+   "why": "Received another buff; creator calls it good and perhaps slightly under-bought."
+  },
+  {
+   "item": "Toxic Bullets",
+   "standing": "strong",
+   "bought_by": [],
+   "why": "Spirit version is a bit better now per the shred-item changes."
+  },
+  {
+   "item": "Shadow Weave",
+   "standing": "weak",
+   "bought_by": [],
+   "why": "Buffed but the creator still calls it probably an awful item."
+  },
+  {
+   "item": "Cult of Sacrifice",
+   "standing": "weak",
+   "bought_by": [],
+   "why": "Soul generation reduced as part of Valve trimming soul economy ahead of the tempo meta."
+  },
+  {
+   "item": "Tropic Collector",
+   "standing": "weak",
+   "bought_by": [],
+   "why": "Soul generation reduced so it does not compound with the tempo buffs."
+  },
+  {
+   "item": "Golden Goose Egg",
+   "standing": "weak",
+   "bought_by": [],
+   "why": "Killed: less souls, a damage penalty, and stored souls now count toward net worth; creator says it is unbuyably bad and the worst item in the game."
+  },
+  {
+   "item": "Lustrous Enchantment",
+   "standing": "strong",
+   "bought_by": [
+    "Benedictor (Bebop?)"
+   ],
+   "why": "Duration increase makes it far more likely to fully stack off enemy players; now more viable, particularly on Benedictor."
+  },
+  {
+   "item": "Spiritual Overflow",
+   "standing": "niche",
+   "bought_by": [
+    "Merc Mac builders"
+   ],
+   "why": "Still viable but much worse; contributes to killing the Mercurial + Spiritual Overflow build that has been meta."
+  },
+  {
+   "item": "Restorative Locket",
+   "standing": "strong",
+   "bought_by": [],
+   "why": "Still viable; heal reduction is fine because buyers mostly want the extra stamina shot."
+  },
+  {
+   "item": "Veil Walker",
+   "standing": "strong",
+   "bought_by": [
+    "Warden",
+    "hard-CC pick characters"
+   ],
+   "why": "Nerfed but still viable with strong healing and movement speed on invis; no longer an auto-buy on everyone, but good on characters that should buy it."
+  },
+  {
+   "item": "Fortitude",
+   "standing": "strong",
+   "bought_by": [],
+   "why": "Slight buff, essentially the same item."
+  },
+  {
+   "item": "Life Strike",
+   "standing": "strong",
+   "bought_by": [
+    "Billy"
+   ],
+   "why": "Increased melee-hit heal helps early, but combined with the air-drag slow change its 48% slow makes it a very good CC item, especially when spammed by Billy."
+  },
+  {
+   "item": "Leech",
+   "standing": "weak",
+   "bought_by": [],
+   "why": "Still generally terrible, though a little better now."
+  },
+  {
+   "item": "Plated Armor",
+   "standing": "strong",
+   "bought_by": [
+    "anti-mixed-damage picks"
+   ],
+   "why": "Bug fix lets it actually block on-hit damage as described; now finally an anti-Vindicta, anti-Wraith, anti-Vyper item for mixed gun/spirit damage."
+  },
+  {
+   "item": "Fine Kevlar",
+   "standing": "niche",
+   "bought_by": [
+    "Dynamo",
+    "Paige"
+   ],
+   "why": "Net change, nice on some characters like Dynamo or Paige."
+  },
+  {
+   "item": "Soul Hex",
+   "standing": "strong",
+   "bought_by": [],
+   "why": "Cooldown nerfed but it is better than before because it now affects air drag."
+  },
+  {
+   "item": "Radiant Regeneration",
+   "standing": "strong",
+   "bought_by": [],
+   "why": "Healing tuned down a bit, which is fine."
+  },
+  {
+   "item": "Tankbuster",
+   "standing": "strong",
+   "bought_by": [],
+   "why": "Damage tuned down but good; still bought for the same reasons."
+  },
+  {
+   "item": "Decay",
+   "standing": "strong",
+   "bought_by": [],
+   "why": "More anti-heal and less damage, a good change that also scales better late when healing ramps."
+  },
+  {
+   "item": "Mercurial (Merk Mac)",
+   "standing": "weak",
+   "bought_by": [
+    "high-base-DPS characters"
+   ],
+   "why": "Damage severely tuned down; will no longer be bought on many characters and was always bad on low-DPS heroes like Haze."
+  },
+  {
+   "item": "Focus Lens",
+   "standing": "niche",
+   "bought_by": [],
+   "why": "Damage and cast range up, but still a bad item because it is so cleansable; viable only in niche situations."
+  }
+ ],
+ "reasoning_patterns": [
+  "Reads a system change's effect through win-conversion: the early Unstable Rift comeback nerf means a lane-winning team can now contest the rift, which both denies comeback souls and turns early leads into wins — so 'tempo' is buffed indirectly.",
+  "Frames an economy redistribution as a player-behavior fix: routing excess comeback souls to the two lowest-econ players is read as killing the AFK-farming carry who out-farmed the winning team, an explicitly high-ELO problem.",
+  "Argues a hero absent from the notes is the biggest winner: Apollo has no patch lines, but tempo mattering makes his early-game kit 'super buffed' — absence from notes is not absence of change.",
+  "Separates direct vs indirect nerfs: Celeste and Wraith are 'less nerfed by their own lines than by' scaling nerfs, item nerfs, and slows now affecting air drag.",
+  "Reads an item's hidden synergy: the air-drag slow change turns Life Strike's big slow into real CC, and Plated Armor's bug fix turns it into an anti-mixed-damage counter item.",
+  "Labels a double-dip nerf: Golden Goose Egg is hit by the tempo shift and by direct nerfs, and counting stored souls toward net worth makes it unbuyable."
+ ],
+ "patch_calls": {
+  "size": "significant",
+  "headline": "Comeback souls and the Unstable Rift gutted to restore tempo — the most significant balance patch in a year, bigger than the AP reworks.",
+  "winners": [
+   "Paige",
+   "Apollo",
+   "Silver",
+   "Yamato",
+   "Vindicta",
+   "Holliday",
+   "Haze",
+   "Lady Geist",
+   "Lash",
+   "Kelvin",
+   "Shiv"
+  ],
+  "losers": [
+   "Celeste",
+   "Warden",
+   "Wraith",
+   "Phinn",
+   "Golden Goose Egg buyers",
+   "Merc Mac + Spiritual Overflow builds",
+   "AFK-farming carries"
+  ],
+  "non_obvious_calls": [
+   "Apollo is not in the notes but is one of the best characters now because he is a top snowballer; notes absence hides his buff.",
+   "Comeback souls above enemy team average net worth are redistributed to the two lowest-econ players via tick gold, directly nerfing the farming carry in high ELO.",
+   "Respawn timers increased only after 20 minutes, raising the value of picks and making Mid Boss easier to take between 20-30 minutes.",
+   "Stuns now pause reload instead of cancelling it (Seven's static charge no longer resets your reload), and parry now pauses reload and cancels dash momentum.",
+   "Slows now affect air drag, making movement-speed-slow a genuinely important stat and hurting flyers like Celeste and Vindicta.",
+   "Dashes and light melees no longer interrupt gun cycle time, giving Abrams and Silver smoother lane weaving.",
+   "Breakables spawning later is a bigger nerf to Calico than to Rem, contrary to the common read.",
+   "Permanent objectives' bounty increased, making them better relative to Rift and urn.",
+   "Rem's breakable timing and bug fixes are not the huge Rem nerf people assume."
+  ]
+ }
+}

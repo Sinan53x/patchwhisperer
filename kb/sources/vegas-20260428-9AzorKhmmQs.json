@@ -1,0 +1,520 @@
+{
+ "meta_thesis": "Vegas reads the patch as an HP-inflation, gun-damage meta: everyone has too much HP and spirit armor, so spirit nukers can no longer one-combo and almost every 'bad spirit hero' is better played as gun. Fights are won by mobile bruisers with no tradeoff (Shiv, Silver, Mina, Vyper, Infernus) that fly around and one-shot, while immobile or burst-reliant heroes (Graves, Calico, Paradox, Grey Talon) just die. Lane matters less; map pressure, invades, mid-boss secure and carry-support (Ivy, Kelvin) win games, and the gun/spirit/green balance is broken by the damage-penalty stat.",
+ "hero_claims": [
+  {
+   "hero": "Abrams",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Tanky with lots of CC so he'll never drop below B; strongest hero that doesn't need nerfs.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Apollo",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Best lane in the game; his two is one of the best spells and near-unkillable when he has restorative locket + dispel magic up every 8s; a core meta spirit support.",
+   "items": [
+    "Restorative Locket",
+    "Dispel Magic"
+   ],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Bebop",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Gun Bebop very strong with lots of CC/stuns/lockdown; explicitly says don't build spirit.",
+   "items": [
+    "gun build"
+   ],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Billy",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Consistently strong tank but not meta-defining; overshadowed by Silver in the same role and only shines when Silver isn't in the lobby.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Calico",
+   "tier": "D",
+   "direction": "falling",
+   "why": "No stuns, no map pressure, no kill potential; can't one-combo anymore because everyone gained HP, spirit armor and mobility. Worst spirit assassin.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Celeste",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Low info; not bad and doesn't need buffs, but outshone by Shiv and Mina in the same frontline-engage archetype; one meta shift from S. Pure guesswork on tier.",
+   "items": [],
+   "confidence": 0.45
+  },
+  {
+   "hero": "The Doorman",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Broken, roughly Apollo strength; play offensively as a carry with the Bell build, not the defensive Walker build people default to.",
+   "items": [
+    "Bell build",
+    "Atomize"
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Drifter",
+   "tier": "B",
+   "direction": "falling",
+   "why": "Good and playable with real damage, needs adjustments not nerfs; the rework moving spirit onto his one killed the melee identity players liked.",
+   "items": [
+    "melee on one"
+   ],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Dynamo",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Genuinely S: his one counters Viper/Infernus, two is cleanse AOE, and he forces the enemy carry to buy Unstoppable or gets black-holed; the equalizer in an M1 meta.",
+   "items": [
+    "Unstoppable"
+   ],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Graves",
+   "tier": "D",
+   "direction": "falling",
+   "why": "Dog-tier: no movement, two stamina, low HP, dies to everything; his core on-hit items (toxic bullets, echo shard) were gutted and his one is countered by a single light melee.",
+   "items": [
+    "Toxic Bullets",
+    "Echo Shard",
+    "Silencer",
+    "Ricochet",
+    "Inhibitor"
+   ],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Grey Talon",
+   "tier": "C",
+   "direction": "falling",
+   "why": "Weaker but kit is healthy and stat-dependent; bad E6 win rate is a symptom of others being broken, so he doesn't need buffs, others need nerfs. His fly feels dated vs newer flyers.",
+   "items": [],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Haze",
+   "tier": "C",
+   "direction": "falling",
+   "why": "Top of C; win rate bad since rework and biggest nerf was losing slide-in-ult; everyone has dispel and 4k HP so she falls off and gets one-shot.",
+   "items": [
+    "Dispel Magic"
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Holliday",
+   "tier": "C",
+   "direction": "stable",
+   "why": "Better than Calico/Graves by a solid margin; gun Holliday does big damage and would be strong if HP were lower, but can't kill 2.5k-HP targets at 10 min.",
+   "items": [
+    "gun build"
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Infernus",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Broken; does everything, impossible to catch, strong farm/split/teamfight/1v1; only Vyper or Mirage come close in a side lane.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Ivy",
+   "tier": "A",
+   "direction": "rising",
+   "why": "Very good support; HP inflation made her three (heal + long stun) great, max three + Echo Shard heals 1000s, great mid-boss secure and side-lane punish, and lane no longer mattering suits her bad lane.",
+   "items": [
+    "Echo Shard"
+   ],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Kelvin",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Very good and not S; best carry-support who giga-neutralizes spirit heroes (Apollo, Grey Talon, Vindicta) by full-healing everyone so nobody is punishable.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Lady Geist",
+   "tier": "A",
+   "direction": "falling",
+   "why": "Good but third-best in her role behind Venator and Infernus; explicitly do not buff, because if those get nerfed she becomes broken again. No AoE silence needed.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Lash",
+   "tier": "A",
+   "direction": "rising",
+   "why": "Good and borderline OP with mobile teamfight impact; gun Lash (recharging rush into headhunter) is the correct build over spirit.",
+   "items": [
+    "Recharging Rush",
+    "Headhunter"
+   ],
+   "confidence": 0.7
+  },
+  {
+   "hero": "McGinnis",
+   "tier": "C",
+   "direction": "falling",
+   "why": "Not very good and never fluid in a meta; suggests another rework. Cyclical like Graves: instantly cried about when OP, then bad for months.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Mina",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Objectively broken: OP early/mid/late, insane mobility, most damage in the game, not squishy (3k HP), free silence and damage on ult with zero investment.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Mirage",
+   "tier": "S",
+   "direction": "stable",
+   "why": "S-tier, lobby impact hard to beat; but the built-in Inhibitor on his one is extremely OP because the damage-penalty stat breaks the game's gun/spirit/green balance, and the rework is disliked.",
+   "items": [
+    "Inhibitor"
+   ],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Mo & Krill",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Most balanced he's ever been; a long-time hater now calls him balanced and necessary in the M1 meta. No buffs or nerfs needed.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Paige",
+   "tier": "C",
+   "direction": "stable",
+   "why": "Not bad; huge delta between modes (61% Street Brawl vs ~44% regular) and one of the few non-tanks that actually dies. Good counter to Dynamo ult.",
+   "items": [],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Paradox",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Character is fine and the meta doesn't benefit her; swap combo does nothing now because carries have ~3.5k HP instead of 2k. Explicitly do not buff, or she becomes unfun with HP nerfs.",
+   "items": [
+    "Fortitude",
+    "Superior Stamina",
+    "Restorative Locket"
+   ],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Pocket",
+   "tier": "B",
+   "direction": "falling",
+   "why": "Fine individually but power-crept: many heroes do everything he does better and with more consistency. Vegas claims Pocket is one of the easiest heroes, not hard.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Rem",
+   "tier": "B",
+   "direction": "falling",
+   "why": "Does everything Ivy does but worse, with half the health pool and a longer-cooldown ult; wastes gold that would be better on an Ivy. Better than Paige only.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Seven",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Strong and highest win rate in the game; farms too fast and stat-checks with CC and true damage in pubs, though believed bad at the absolute top level. Ranks him humbly because it's an M1.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Shiv",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Broken: tanks everything, does infinite damage at all stages, has the best movement of any tank, and the right-click shotgun plus new escape tool is uncounterable. 'Apollo with more HP'.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Silver",
+   "tier": "S",
+   "direction": "stable",
+   "why": "No downsides: HP, CC, damage, strong at all stages, no cooldowns; 'Yamato but AD' so you can't counter her with spirit armor. First pick/first ban in competitive.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Sinclair",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Very strong but niche and player-dependent; hardest hero to play with cringe aspects. Only zero-variance build is Echo Shard Bunny.",
+   "items": [
+    "Echo Shard",
+    "Bunny"
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Venator",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Bar-none the strongest hero in the game with too much damage, CC and scaling; makes other DPS heroes unselectable and is too easy to play. Win rates don't matter to Vegas.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Victor",
+   "tier": "B",
+   "direction": "rising",
+   "why": "Not bad and actually has impact now; took many HP-per-boon nerfs when he was most hated, so his max HP is low versus Shiv/Silver, and he's the only tank that's burstable.",
+   "items": [],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Vindicta",
+   "tier": "B",
+   "direction": "falling",
+   "why": "Power-crept: every new hero counters her, she has a thousand counters while others have none, can't farm, and losing kill gold stops her accelerating to buy counter items.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Viscous",
+   "tier": "C",
+   "direction": "falling",
+   "why": "Cube is OP in coordinated play but solo queue he's miserable and high-elo win rate is dog; early spirit nuke falls off vs 5k HP and 70% armor, forcing him to support.",
+   "items": [
+    "cube"
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Vyper",
+   "tier": "S",
+   "direction": "rising",
+   "why": "Very broken and OP, has a high win rate; slightly behind Venator and Mina as best in class but takes more skill and has more counterplay than they do.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Warden",
+   "tier": "B",
+   "direction": "falling",
+   "why": "Still OP in a vacuum but overshadowed by broken role peers, so reads as dog meat in this meta; too tanky and too much damage for his debuffs, and only weak because of environment.",
+   "items": [
+    "gun build",
+    "max three cage"
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Wraith",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Worst M1 hero yet still really good; individual strength fine, just outclassed by Venator/Infernus/Mirage in her role, and no draft means she isn't always countered.",
+   "items": [],
+   "confidence": 0.65
+  },
+  {
+   "hero": "Yamato",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Strong and annoying; her two being 40m point-click is the complaint. Counterable with counter spell and dispel magic, so not S.",
+   "items": [
+    "Counter Spell",
+    "Dispel Magic"
+   ],
+   "confidence": 0.6
+  }
+ ],
+ "item_claims": [
+  {
+   "item": "Toxic Bullets",
+   "standing": "weak",
+   "bought_by": [
+    "Graves"
+   ],
+   "why": "Was ~35% of Graves' damage every game and got gutted, removing her core identity."
+  },
+  {
+   "item": "Echo Shard",
+   "standing": "strong",
+   "bought_by": [
+    "Ivy",
+    "Sinclair"
+   ],
+   "why": "On Ivy it doubles the Stone Form heal/stun; it's the only zero-variance Sinclair build, and it got nerfed which hurt Graves' summoner build."
+  },
+  {
+   "item": "Restorative Locket",
+   "standing": "strong",
+   "bought_by": [
+    "Apollo",
+    "Paradox"
+   ],
+   "why": "Key to Apollo's unkillable sustain and part of the stack that gives Paradox 4k HP."
+  },
+  {
+   "item": "Dispel Magic",
+   "standing": "strong",
+   "bought_by": [
+    "Apollo",
+    "Haze",
+    "Yamato counters"
+   ],
+   "why": "Near-mandatory sustain/cleanse that makes Apollo and Haze very hard to kill and answers an ahead Yamato."
+  },
+  {
+   "item": "Inhibitor",
+   "standing": "strong",
+   "bought_by": [
+    "Mirage"
+   ],
+   "why": "The damage-penalty stat is the best stat in the game and breaks the gun/spirit/green balance; built into Mirage's one."
+  },
+  {
+   "item": "Unstoppable",
+   "standing": "niche",
+   "bought_by": [
+    "carries facing Dynamo"
+   ],
+   "why": "Bought specifically to answer Dynamo's black hole, showing how much he forces itemization from the enemy carry."
+  },
+  {
+   "item": "Fortitude",
+   "standing": "strong",
+   "bought_by": [
+    "Paradox"
+   ],
+   "why": "One of three items that push Paradox to 4k HP, which Vegas hates as emblematic of the survivability problem."
+  },
+  {
+   "item": "Superior Stamina",
+   "standing": "strong",
+   "bought_by": [
+    "Paradox"
+   ],
+   "why": "Part of the three-item stack giving Paradox tons of mobility and effective HP."
+  },
+  {
+   "item": "Counter Spell",
+   "standing": "niche",
+   "bought_by": [
+    "Yamato opponents"
+   ],
+   "why": "The actual counterplay to Yamato's slash and a reason she isn't S-tier."
+  },
+  {
+   "item": "Silencer",
+   "standing": "niche",
+   "bought_by": [
+    "Graves"
+   ],
+   "why": "One of the on-hit items Graves historically leaned on; part of her 'just shoot' identity that Vegas says is lame."
+  },
+  {
+   "item": "Ricochet",
+   "standing": "niche",
+   "bought_by": [
+    "Graves"
+   ],
+   "why": "Listed among the shot-based items that defined Graves' builds and left nothing when on-hit options were nerfed."
+  },
+  {
+   "item": "Recharging Rush",
+   "standing": "strong",
+   "bought_by": [
+    "Lash"
+   ],
+   "why": "Core entry into gun Lash that then builds Headhunter, the better build over spirit."
+  },
+  {
+   "item": "Headhunter",
+   "standing": "strong",
+   "bought_by": [
+    "Lash"
+   ],
+   "why": "Gun Lash's siphon/headhunter build is good and confirms gun over spirit on the hero."
+  },
+  {
+   "item": "Magic Carpet",
+   "standing": "weak",
+   "bought_by": [],
+   "why": "Cited as the weak 6k spirit option versus far stronger gun items (compared unfavorably to Inhibitor)."
+  },
+  {
+   "item": "Atomize",
+   "standing": "niche",
+   "bought_by": [
+    "The Doorman"
+   ],
+   "why": "Suggests building The Doorman as an offensive carry with it rather than defensively."
+  }
+ ],
+ "reasoning_patterns": [
+  "Reads blanket HP/spirit-armor inflation as the hidden driver behind many hero verdicts: because everyone gained HP and armor, one-combo spirit assassins (Calico, Pocket) lost their identity while sustained gun builds got better.",
+  "Frames the meta as a role-relative ranking: Lady Geist and Warden are 'actually broken' in a vacuum but read as bad only because better heroes fill the exact same slot, so their tier is a function of rivals, not their own kit.",
+  "Infers intent from item nerfs: the toxic bullets and echo shard nerfs plus the loss of kill gold are what actually deleted Graves and Vindicta, not any single kit change.",
+  "Uses 'who would you rather pick' comparisons to define role dominance: you never pick Calico over Amira or Apollo, never Geist over Venator, which turns a mild kit into a D-tier verdict.",
+  "Treats mobility as a stat-triangle violation: a hero that is tanky, high-damage AND mobile (Shiv, Silver) has no downside, so any added escape tool (Shiv ult, shotgun) is a systemic problem rather than a numbers tweak."
+ ],
+ "patch_calls": {
+  "size": "significant",
+  "headline": "HP inflation plus gutted spirit/on-hit items created a gun-bruiser meta where mobile no-downside heroes dominate and old burst heroes die.",
+  "winners": [
+   "Shiv",
+   "Silver",
+   "Mina",
+   "Venator",
+   "Vyper",
+   "Infernus",
+   "Dynamo",
+   "Ivy",
+   "Kelvin",
+   "Mirage"
+  ],
+  "losers": [
+   "Graves",
+   "Calico",
+   "Vindicta",
+   "Haze",
+   "Paradox",
+   "Grey Talon",
+   "Pocket",
+   "Rem",
+   "Viscous",
+   "McGinnis",
+   "Warden"
+  ],
+  "non_obvious_calls": [
+   "Grey Talon, Haze, Warden, Geist and Paradox should NOT be buffed: they're healthy kits suppressed by over-tuned role peers, so nerfing others revives them and buffing them plus HP nerfs would break the game.",
+   "Losing the ability to slide during Haze's ult was a bigger nerf than any of her cone/number changes.",
+   "The damage-penalty stat on Mirage's one and Inhibitor quietly breaks the game's gun/spirit/green balance and only gun heroes can access it.",
+   "Seven has the highest win rate but is genuinely bad at the very top level — a pub-farming stat-check, so rank him humbly.",
+   "The toxic bullets and echo shard nerfs are the real reason Graves and Vindicta fell off, not their kits."
+  ]
+ }
+}

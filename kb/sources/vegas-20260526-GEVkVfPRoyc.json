@@ -1,0 +1,521 @@
+{
+ "meta_thesis": "The game is decided at minute 15-20, and the urn (earn) fight determines hero strength more than anything else — this is the biggest 6v6 urn team-fight meta of all time. Because winning hard early hands the enemy a comeback urn (50% armor in a 60-meter radius), early-game comps that stomp lane actually lose; competitive teams that won early lost almost every game. So the tier list is effectively an urn-fight tier list: AoE, CC, and front-line HP value dominate, single-target and pure-lane heroes fall.",
+ "hero_claims": [
+  {
+   "hero": "Abrams",
+   "tier": "B",
+   "direction": "rising",
+   "why": "Good but mediocre on the urn with better frontliners available; would move to A if the urn gets nerfed.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Apollo",
+   "tier": "C",
+   "direction": "falling",
+   "why": "One of the best pre-10-minute heroes, but that no longer matters because stomping early gives the enemy the comeback urn. Only real value is Reposte cancelling Seven/McGinnis/Lash.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Bebop",
+   "tier": "C",
+   "direction": "falling",
+   "why": "Below average this patch; beam build is too easily counterable versus other ults, and he floats near 45% win rate.",
+   "items": [
+    "beam build"
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Billy",
+   "tier": "S",
+   "direction": "rising",
+   "why": "Best frontliner this patch. Buffs plus the global health reduction and buffed Spirit Snatch let one slam gain ~900 HP on the urn, stacking to 5-6k HP with 40 armor — an elite Heroic Aura holder.",
+   "items": [
+    "Spirit Snatch",
+    "Heroic Aura"
+   ],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Calico",
+   "tier": "D",
+   "direction": "falling",
+   "why": "Garbage: lowest utility of any hero in mid-boss/urn fights, no CC, doesn't kill through the health pool. Would likely be decent if the urn meta were changed.",
+   "items": [],
+   "confidence": 0.75
+  },
+  {
+   "hero": "Celeste",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Bottom of S/A. One of the best urn runners and urn fighters with AoE damage/amp, a bouncing ball, four abilities, mobility, and giga-late scaling.",
+   "items": [],
+   "confidence": 0.75
+  },
+  {
+   "hero": "The Doorman",
+   "tier": "A",
+   "direction": "falling",
+   "why": "Still very, very good and worth playing, but no longer Z-tier / top-five this patch.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Drifter",
+   "tier": "C",
+   "direction": "stable",
+   "why": "Not great but better than Calico, with real individual-duel strength; melee changes plus the Spirit Snatch buff make his damage solid.",
+   "items": [
+    "Spirit Snatch"
+   ],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Dynamo",
+   "tier": null,
+   "direction": "falling",
+   "why": "Framed as OP but is actually bait: Black Hole gets countered by McGinnis ult one-framing him, Lash ults him off, Dispel/Sinclair/Vyper outvalue him. Not picked once across competitive regions.",
+   "items": [
+    "Cheat Death",
+    "Unstoppable"
+   ],
+   "confidence": 0.65
+  },
+  {
+   "hero": "Grey Talon",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Simply a good hero this patch, per the creator.",
+   "items": [],
+   "confidence": 0.4
+  },
+  {
+   "hero": "Graves",
+   "tier": "A",
+   "direction": "falling",
+   "why": "Low-elo players call it S but in competitive it's roughly unpicked; worst early game in the game, and McGinnis does the same job far better (60% vs 52% win rate at E6). Bottom of A when balancing comp and pubs.",
+   "items": [],
+   "confidence": 0.65
+  },
+  {
+   "hero": "Haze",
+   "tier": "D",
+   "direction": "falling",
+   "why": "Garbage this patch — brings nothing valuable to urn fights; was OP one week ago, now the build gets swatted instantly.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Holliday",
+   "tier": "B",
+   "direction": "rising",
+   "why": "Actually decent, not bad at all, carried by the Magic Carpet buff.",
+   "items": [
+    "Magic Carpet"
+   ],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Infernus",
+   "tier": "C",
+   "direction": "stable",
+   "why": "Top of C — fine and playable but countered by every top-seven hero. A floor-is-lava hero that loses value as ELO rises (less time on the ground) and gets cleansed by the multiple Dispel Magics per team in high ELO.",
+   "items": [
+    "Dispel Magic"
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Ivy",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Solid, one of the better decent supports for this meta — a good circle hero in a circle meta.",
+   "items": [],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Kelvin",
+   "tier": "B",
+   "direction": "falling",
+   "why": "Really good right now because you can dome the urn, but the creator calls that a bug likely hotfixed within 48 hours; his tier drops if fixed.",
+   "items": [],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Lady Geist",
+   "tier": "D",
+   "direction": "falling",
+   "why": "Giga fell off: not a snipe-lane meta and the urn is bad for her, though she snaps back up the moment the urn bug is fixed.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Lash",
+   "tier": "S",
+   "direction": "rising",
+   "why": "Broken always, averaging A+ every patch and inflated — a bad one-trick still wins over 50%. Good early/mid/late, flies, high HP, strong teamfight and 1v1; Spirit build benefited from the slam and Mystic Shot buffs.",
+   "items": [
+    "Mystic Shot"
+   ],
+   "confidence": 0.8
+  },
+  {
+   "hero": "McGinnis",
+   "tier": "S",
+   "direction": "rising",
+   "why": "Actually broken: maxed ult at the first urn fight one-frames a full-HP Dynamo even through Unstoppable, takes no skill (controller top damage), and has no counterplay. The turrets aren't the problem — the ult is.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Mina",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Pretty mid, possibly underrated/balanced, but not enough games seen to be convinced.",
+   "items": [],
+   "confidence": 0.4
+  },
+  {
+   "hero": "Mirage",
+   "tier": null,
+   "direction": "falling",
+   "why": "The best hero in the game who lacks an OP urn fight, so the urn meta drags his placement down; if the urn mattered less he'd be giga-broken. Single-target in an AoE meta, yet went 2-13 in one comp run and still got picked 15 times.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Mo & Krill",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Not bad but hard to place; would climb if the urn became a king-of-the-hill that can't complete with enemies inside, letting him stack his one plus Scorn/Burrow.",
+   "items": [],
+   "confidence": 0.4
+  },
+  {
+   "hero": "Paige",
+   "tier": "D",
+   "direction": "falling",
+   "why": "Valued very low and completely unplayed in tourney and high ELO; a victim hero that just explodes, strictly worse than Rem who has an escape/heal.",
+   "items": [],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Paradox",
+   "tier": "S",
+   "direction": "rising",
+   "why": "Z-tier turbo broken. Alchemical Fire + Echo Shard bomb does ~70k damage in grand finals, swaps people off the urn, dominates mid boss, stalls, and wins early/mid/late; the Mystic Shot buff is massive for her.",
+   "items": [
+    "Alchemical Fire",
+    "Echo Shard",
+    "Mystic Shot"
+   ],
+   "confidence": 0.75
+  },
+  {
+   "hero": "Pocket",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Broken: banned 38 of ~40 tourney games, and in the two he wasn't banned he was the best character in the lobby. Affliction is the core problem.",
+   "items": [],
+   "confidence": 0.75
+  },
+  {
+   "hero": "Rem",
+   "tier": "A",
+   "direction": "rising",
+   "why": "Really good value, arguably as strong as Doorman. Strong teamfight healing with the bouncing-burst buff, great ult for fights, three is good for pre-fight wave clear.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Seven",
+   "tier": "B",
+   "direction": "stable",
+   "why": "Should be and is good, but wants to see more; S+ in Phantom-and-below, less fun/unclear in Eternus. Apollo's Reposte can cancel him.",
+   "items": [],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Shiv",
+   "tier": "A",
+   "direction": "rising",
+   "why": "Still pretty broken with so much damage; the new Arctic Blast changes plus double dashes can randomly spawn ~8k damage on the urn.",
+   "items": [
+    "Arctic Blast"
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Silver",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Still way too good — the second-best tank — with huge early and whole-game value, the strongest hero at minutes 5/10/15. A DPS tank that dives backlines and wins duels; he isn't AoE but is the non-AoE hero you still want.",
+   "items": [],
+   "confidence": 0.75
+  },
+  {
+   "hero": "Sinclair",
+   "tier": "A",
+   "direction": "stable",
+   "why": "The ultimate potential man — great urn value and parry/bolt utility, but too inconsistent to be S without a draft (you can coin-flip into ~80% unfavorable matchups). Mid-A is a high placement.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Venator",
+   "tier": "A",
+   "direction": "rising",
+   "why": "Phenomenal — a huge fan of the grenade build. Ult max, grenades on mid boss, and grenades on a stacked urn give built-in anti-heal; one of the better M1 carries, ranked around/above Mirage.",
+   "items": [
+    "grenade build"
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Victor",
+   "tier": "A",
+   "direction": "stable",
+   "why": "Really good even after a nerf ('pretty LAR'). A gun hero with good early tempo; his death on the urn is a giga equalizer because he stuns for ages and amps allied AoE. Sleeper S-tier.",
+   "items": [
+    "Improved Reach"
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Vindicta",
+   "tier": "D",
+   "direction": "falling",
+   "why": "Garbage — a victim hero; playing her into Lash/Paradox every game is miserable. Slightly more urn utility than some but still junk.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Viscous",
+   "tier": "D",
+   "direction": "falling",
+   "why": "Garbage and got worse. Mid-lane is the worst terrain for him, ball/splatter do nothing, and the punch buff is effectively a nerf because Rebuttal has the highest buy rate of any patch, making him damage himself.",
+   "items": [
+    "Rebuttal"
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Vyper",
+   "tier": "S",
+   "direction": "rising",
+   "why": "Hella good — possibly S. Strong early and his ult is really valuable on the urn, held back only by the variance of being random-drafted into Lash/Billy.",
+   "items": [],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Warden",
+   "tier": "D",
+   "direction": "falling",
+   "why": "The big loser — called F-tier / possibly the worst hero in the game. The gun-damage direction (Yoshi) is bad, no AoE nuking, was already bad last patch.",
+   "items": [],
+   "confidence": 0.65
+  },
+  {
+   "hero": "Wraith",
+   "tier": "A",
+   "direction": "rising",
+   "why": "Chill and pretty good — the best carry at deleting AoE slop. Ricochet Wraith makes Graves unplayable and does giga late AoE damage. Probably high placement.",
+   "items": [
+    "Ricochet"
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Yamato",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Good regardless of doubters. Her 2 gives 40 free spirit plus spirit-per-boon, letting her skip purple items, yet her one hits 700 (1,300 with Tankbuster+Reverb) while she's invulnerable for urn fights; scaling went from ~1.8-1.9 to 2.1-2.6.",
+   "items": [
+    "Tankbuster",
+    "Reverb"
+   ],
+   "confidence": 0.7
+  }
+ ],
+ "item_claims": [
+  {
+   "item": "Spirit Snatch",
+   "standing": "strong",
+   "bought_by": [
+    "Billy",
+    "Drifter"
+   ],
+   "why": "The buff is central to Billy's urn HP gain (~900 per slam) and makes Drifter's damage feel solid."
+  },
+  {
+   "item": "Heroic Aura",
+   "standing": "strong",
+   "bought_by": [
+    "Billy"
+   ],
+   "why": "Billy is a very good Heroic Aura holder, reinforcing his front-line value."
+  },
+  {
+   "item": "Alchemical Fire",
+   "standing": "strong",
+   "bought_by": [
+    "Paradox"
+   ],
+   "why": "Core to the giga-broken Alchemical Fire + Echo Shard bomb build doing ~70k damage."
+  },
+  {
+   "item": "Echo Shard",
+   "standing": "strong",
+   "bought_by": [
+    "Paradox"
+   ],
+   "why": "Pairs with the bomb build for the turbo-broken Paradox damage."
+  },
+  {
+   "item": "Mystic Shot",
+   "standing": "strong",
+   "bought_by": [
+    "Lash",
+    "Paradox"
+   ],
+   "why": "The Mystic Shot buff is called really nice/massive for both Lash and Paradox."
+  },
+  {
+   "item": "Rebuttal",
+   "standing": "strong",
+   "bought_by": [
+    "everyone/good players"
+   ],
+   "why": "Highest buy rate of any patch in the game, which is why Viscous's punch buff backfires on him."
+  },
+  {
+   "item": "Ricochet",
+   "standing": "strong",
+   "bought_by": [
+    "Wraith"
+   ],
+   "why": "Ricochet Wraith makes Graves unplayable and deletes AoE slop in teamfights."
+  },
+  {
+   "item": "Tankbuster",
+   "standing": "strong",
+   "bought_by": [
+    "Yamato"
+   ],
+   "why": "Combined with Reverb pushes Yamato's one to ~1,300 damage."
+  },
+  {
+   "item": "Reverb",
+   "standing": "strong",
+   "bought_by": [
+    "Yamato"
+   ],
+   "why": "With Tankbuster, boosts Yamato's one damage to ~1,300."
+  },
+  {
+   "item": "Dispel Magic",
+   "standing": "strong",
+   "bought_by": [
+    "high-ELO/competitive teams"
+   ],
+   "why": "~5 per team per game in high ELO, cleansing Infernus burns/debuffs and gutting his value."
+  },
+  {
+   "item": "Arctic Blast",
+   "standing": "niche",
+   "bought_by": [
+    "Shiv"
+   ],
+   "why": "The new Arctic Blast changes let Shiv produce ~8k random urn damage with double dashes."
+  },
+  {
+   "item": "Cheat Death",
+   "standing": "niche",
+   "bought_by": [
+    "Dynamo"
+   ],
+   "why": "Part of the theoretical Dynamo survival kit that doesn't fix his urn-fight problems."
+  },
+  {
+   "item": "Unstoppable",
+   "standing": "niche",
+   "bought_by": [
+    "Dynamo"
+   ],
+   "why": "Doesn't save Dynamo from McGinnis ult one-framing him."
+  },
+  {
+   "item": "Improved Reach",
+   "standing": "niche",
+   "bought_by": [
+    "Victor"
+   ],
+   "why": "Victor's hybrid path: rush ~6.4k gun spike early, then pivot to Improved Reach and green items."
+  },
+  {
+   "item": "Magic Carpet",
+   "standing": "strong",
+   "bought_by": [
+    "Holliday"
+   ],
+   "why": "The Magic Carpet buff is why Holliday is actually good/rising."
+  },
+  {
+   "item": "Burst Fire",
+   "standing": "weak",
+   "bought_by": [],
+   "why": "Cited sarcastically — chat claims it fixes Infernus; the creator dismisses it as meaningless in practice."
+  }
+ ],
+ "reasoning_patterns": [
+  "Frames a global/system change as the real hero buff: the global health reduction plus Billy's Spirit Snatch buff is what makes one slam worth ~900 HP and Billy the best frontliner.",
+  "Reads the comeback urn (50% armor, 60m radius) as inverting the value of early-game comps — winning lane hard is a losing position, so a strong pre-10 hero like Apollo lands in C despite his numbers.",
+  "Tracks an item's buy rate as a balance lever: Rebuttal's record pick rate turns Viscous's punch buff into a self-damage nerf, i.e. a buff that is really a nerf.",
+  "Names a bug as temporary: Kelvin's ability to dome the urn is called a hotfix-in-48-hours bug and his placement is conditional on it being fixed, same for Lady Geist snapping back up.",
+  "Distinguishes pilot/ELO from kit strength: Seven and Graves swing wildly between low ELO (S+/OP) and Eternus (unpicked), so the tier is a comp read, not a raw power read.",
+  "Inferns intent from an omission: the biggest surprise is that Mirage received no nerf despite being giga-broken, showing the patch targeted the urn meta rather than raw single-target power."
+ ],
+ "patch_calls": {
+  "size": "significant",
+  "headline": "The urn is king: a comeback-urn system plus a global health reduction make urn teamfights the whole game, decided by minute 15-20.",
+  "winners": [
+   "Billy",
+   "Celeste",
+   "Lash",
+   "McGinnis",
+   "Paradox",
+   "Pocket",
+   "Silver",
+   "Yamato",
+   "Vyper",
+   "Venator",
+   "Wraith",
+   "Rem",
+   "Shiv",
+   "Victor"
+  ],
+  "losers": [
+   "Apollo",
+   "Calico",
+   "Drifter",
+   "Dynamo",
+   "Haze",
+   "Lady Geist",
+   "Warden",
+   "Vindicta",
+   "Viscous",
+   "Bebop",
+   "Mirage"
+  ],
+  "non_obvious_calls": [
+   "Mirage escaped nerfs entirely despite being the most broken hero — the patch targeted the urn, not raw power, leaving him giga-broken but placement-suppressed.",
+   "McGinnis's ult, not her turrets, is what's actually broken — maxed ult one-frames a full-HP Dynamo through Unstoppable.",
+   "Kelvin doming the urn is likely an unintended bug that will be hotfixed, meaning his (and Lady Geist's) tier is unstable within days.",
+   "Winning lane hard is a losing position because of the comeback urn, so early-game comps that stomp are punished in competitive.",
+   "Warden is called the worst hero in the game, worse than last patch, because the gun-damage direction gives him no AoE nuking.",
+   "Dynamo is a competitive no-pick (zero selections across regions) despite looking like the ideal urn hero — a signal that a 'broken' ult can be fully countered by better CC."
+  ]
+ }
+}
