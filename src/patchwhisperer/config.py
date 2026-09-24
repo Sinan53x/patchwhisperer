@@ -15,17 +15,19 @@ PRICE_OUTPUT_PER_M = 1.20
 DEFAULT_POOL = os.getenv("DEFAULT_POOL", "")
 
 # per-stage output token budgets
+# reasoning models spend a variable, often large share of max_tokens on hidden
+# reasoning before emitting JSON, so budgets include generous headroom for it
 STAGE_MAX_TOKENS = {
-    1: 4000,
-    2: 12000,
-    3: 40000,
-    4: 6000,
-    5: 8000,
-    6: 16000,
-    "6h": 12000,
-    "distill": 12000,
-    "seed": 40000,
-    "enrich": 8000,
+    1: 24000,
+    2: 32000,
+    3: 48000,
+    4: 24000,
+    5: 24000,
+    6: 32000,
+    "6h": 32000,
+    "distill": 32000,
+    "seed": 60000,
+    "enrich": 24000,
 }
 
 STAGE6_HERO_BATCH = 10

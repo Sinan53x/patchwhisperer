@@ -89,10 +89,12 @@ class LLMClient:
             if resp.usage:
                 self.usage["prompt_tokens"] += resp.usage.prompt_tokens or 0
                 self.usage["completion_tokens"] += resp.usage.completion_tokens or 0
+                details = getattr(resp.usage, "completion_tokens_details", None)
                 log.info(
-                    "llm usage: %s in / %s out",
+                    "llm usage: %s in / %s out (%s reasoning)",
                     resp.usage.prompt_tokens,
                     resp.usage.completion_tokens,
+                    getattr(details, "reasoning_tokens", None),
                 )
             if resp.choices[0].finish_reason == "length":
                 if raw_path:
