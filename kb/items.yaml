@@ -8,8 +8,8 @@ Toxic Bullets:
   - Mirage
   slot: Weapon
   tier: 2
-  notes: '09-16: spirit scaling 0.005->0.006%. Core burn/anti-heal slot and one of
-    the few real answers to inflated HP.'
+  notes: '09-16: spirit scaling 0.005->0.006%. With Decay''s DPS cut, now the better
+    sustained anti-heal/burn option for hybrid and spirit-hybrid carries.'
 Fortitude:
   name: Fortitude
   role: sustain vitality item
@@ -35,8 +35,8 @@ Fortitude:
   - Vyper
   slot: Vitality
   tier: 3
-  notes: '09-16: max-health regen 2->2.25%. The default survivability slot on almost
-    every bruiser.'
+  notes: '09-16: max-health regen 2->2.25%. The default survivability slot; quiet
+    sustain that matters more in a burst-heavy tempo patch.'
 Bullet Lifesteal:
   name: Bullet Lifesteal
   role: sustain weapon item
@@ -61,8 +61,8 @@ Decay:
   - Billy
   slot: Spirit
   tier: 3
-  notes: '09-16: DPS -25% but duration +20% — trades burst healing-cut for better
-    late scaling. Still the go-to anti-heal slot.'
+  notes: '09-16: DPS -25% but duration +20%. Still the default anti-heal slot, now
+    better in drawn-out fights than bursting a heal window down.'
 Hollow Point:
   name: Hollow Point
   role: early weapon shred item
@@ -75,8 +75,8 @@ Hollow Point:
   - Grey Talon
   slot: Weapon
   tier: 2
-  notes: '09-16: bullet resist reduction 9->10%. The cheap early-gun item of the tempo
-    meta.'
+  notes: '09-16: bullet resist reduction 9->10%. The default cheap early-gun shred
+    of the tempo meta; its edge over Weakening Headshot widened in a lane-wins economy.'
 Burst Fire:
   name: Burst Fire
   role: fire-rate weapon item
@@ -196,8 +196,8 @@ Slowing Hex:
   - Wraith
   slot: Spirit
   tier: 3
-  notes: '09-16: cooldown 27->29s. Still a near-every-game buy on pick heroes, now
-    also a real slow given air-drag change.'
+  notes: '09-16: cooldown 27->29s. Slightly worse uptime, but its slow now bites airborne
+    heroes, so it stays a near-every-game pick tool.'
 Lucky Shot:
   name: Lucky Shot
   role: on-hit weapon item
@@ -296,7 +296,8 @@ Diviner's Kevlar:
   - Silver
   slot: Vitality
   tier: 3
-  notes: '09-16: now grants +10% Ultimate Ability CDR; 07-28: spirit power +35->+40.'
+  notes: '09-16: now grants +10% Ultimate Ability CDR (07-28: spirit power +35->+40).
+    Adds an ult-uptime reason to buy beyond raw spirit defense.'
 Radiant Regeneration:
   name: Radiant Regeneration
   role: healing spirit item
@@ -307,8 +308,8 @@ Radiant Regeneration:
   - Shiv
   slot: Spirit
   tier: 3
-  notes: 08-22 heal on cast 70->65 and 09-16 per-boon scaling 2->1.7 — cumulative
-    nerf to healing supports.
+  notes: 08-22 heal on cast 70->65 plus 09-16 per-boon scaling 2->1.7 — a cumulative
+    nerf to healing supports; they can no longer absorb an early deficit.
 Healing Nova:
   name: Healing Nova
   role: team heal item
@@ -367,12 +368,11 @@ Veil Walker:
   - Holliday
   - The Doorman
   - Viscous
-  - Warden
   slot: Vitality
   tier: 3
   notes: '09-16 nerf: no longer builds from Sprint Boots (lost +2 sprint/regen), movespeed
-    removed when invis drops, spirit power 10->6 — no longer an auto-buy, now a pick-hero
-    item.'
+    removed when invis drops, spirit power 10->6. No longer an auto-buy; heroes who
+    bought it purely to disengage must find a new bail-out.'
 Recharging Rush:
   name: Recharging Rush
   role: ability charge item
@@ -484,8 +484,8 @@ Tankbuster:
   - Yamato
   slot: Weapon
   tier: 3
-  notes: '07-28: no longer procs off items; 09-16 current-health bonus 8->7.5% — cumulative
-    trim to the anti-tank slot.'
+  notes: 07-28 no longer procs off items; 09-16 current-health bonus 8->7.5% — cumulative
+    trim, still correct into the tank-heavy frontline.
 Healing Tempo:
   name: Healing Tempo
   role: support healing item
@@ -504,8 +504,8 @@ Mercurial Magnum:
   - Wraith
   slot: Spirit
   tier: 3
-  notes: '09-16: base bullet damage scaling 0.49->0.38 and base damage 25->20% — a
-    heavy nerf that helps kill the Mercurial + Spiritual Overflow build.'
+  notes: '09-16: base bullet damage 25->20%, scaling 0.49->0.38. The Mercurial + Spiritual
+    Overflow on-hit build is dead; buyers must pivot to pure gun or spirit lines.'
 Spiritual Overflow:
   name: Spiritual Overflow
   role: spirit proc/steroid item
@@ -514,8 +514,9 @@ Spiritual Overflow:
   - Warden
   slot: Spirit
   tier: 3
-  notes: '09-16: buildup 35% slower, spirit power 40->30, fire rate 30->25% (on top
-    of 07-28 changes); the Mercurial-carry build is dead.'
+  notes: '09-16: buildup 35% slower, spirit power 40->30, fire rate 30->25%. With
+    Mercurial Magnum''s nerf and Plated Armor''s fix, the on-hit spirit package is
+    dead.'
 Spirit Snatch:
   name: Spirit Snatch
   role: spirit steal item
@@ -574,7 +575,9 @@ Weakening Headshot:
   - Venator
   slot: Weapon
   tier: 3
-  notes: '09-16: bullet resist reduction -13%->-12%, a nudge down.'
+  notes: '09-16: bullet resist reduction -13%->-12%. Now only 2 points off Hollow
+    Point''s shred, so the cheaper Hollow Point is the default for the slot; the edge
+    this gave is smaller.'
 Knockdown:
   name: Knockdown
   role: CC active
@@ -590,8 +593,8 @@ Lifestrike:
   - Billy
   slot: Weapon
   tier: 3
-  notes: '09-16: melee-heal 100+1.5 -> 120+1.75 and 30->35%; with slows now affecting
-    air drag, its 48% slow makes it a strong CC item, especially spammed by Billy.'
+  notes: '09-16: melee-heal 100+1.5 -> 120+1.75 and 30->35%; with slows now biting
+    air drag, its 48% slow doubles as CC. Strong on melee bruisers, spammed by Billy.'
 Dispel Magic:
   name: Dispel Magic
   role: cleanse utility item
@@ -614,8 +617,8 @@ Restorative Locket:
   - Celeste
   slot: Vitality
   tier: 3
-  notes: '09-16: heal per boon 0.5->0.45, stack range 35->32m; 08-22 spirit resist
-    10->8%. Still viable for the stamina/utility.'
+  notes: '09-16: heal per boon 0.5->0.45, stack range 35->32m (08-22: spirit resist
+    10->8%). Sustain-supports lose throughput alongside the Radiant Regeneration cut.'
 Divine Barrier:
   name: Divine Barrier
   role: cleanse shield item
@@ -637,11 +640,14 @@ Berserker:
 Shadow Weave:
   name: Shadow Weave
   role: invis weapon item
-  bought_by: []
+  bought_by:
+  - Warden
+  - Wraith
   slot: Weapon
   tier: 3
-  notes: '09-16: now builds from Sprint Boots, sprint speed 1.5->2, cooldown 45->37s
-    — buffed, but creators still call it poor.'
+  notes: '09-16: now builds from Sprint Boots, sprint speed 1.5->2, cooldown 45->37s.
+    Inherits Veil Walker''s Sprint Boots path and disengage niche — a real invis-engage
+    option for gun carries and cage bruisers.'
 Cultist Sacrifice:
   name: Cultist Sacrifice
   role: econ spirit item
@@ -650,14 +656,16 @@ Cultist Sacrifice:
   - Seven
   slot: Spirit
   tier: 3
-  notes: '09-16: bounty 180->170%; soul-gen trimmed as part of the economy tightening.'
+  notes: '09-16: bounty 180->170%. A smaller soul lead in a patch that rewards banking
+    leads; it does not change who buys it.'
 Ballistic Enchantment:
   name: Ballistic Enchantment
   role: utility spirit item
   bought_by: []
   slot: Spirit
   tier: 3
-  notes: '09-16: duration 14->20s.'
+  notes: '09-16: duration 14->20s. Uptime is now the selling point; a plausible pick
+    for high-cast spirit builds that ignored the old short window.'
 Trophy Collector:
   name: Trophy Collector
   role: econ item
@@ -666,14 +674,16 @@ Trophy Collector:
   - Mo & Krill
   slot: Vitality
   tier: 2
-  notes: '09-16: souls/min 18->16; part of the soul-economy trim.'
+  notes: '09-16: souls/min 18->16. Still correct on early bruisers, but banks a smaller
+    lead into a patch that rewards banking leads.'
 Leech:
   name: Leech
   role: lifesteal item
   bought_by: []
   slot: Vitality
   tier: 4
-  notes: '09-16: bullet+spirit lifesteal 25->28%; still generally weak.'
+  notes: '09-16: bullet+spirit lifesteal 25->28%. Still loses to cheaper lifesteal
+    in the slot; a small nudge, not core.'
 Plated Armor:
   name: Plated Armor
   role: on-hit defense item
@@ -681,8 +691,8 @@ Plated Armor:
   slot: Vitality
   tier: 3
   notes: '09-16 bug fix: now actually blocks on-hit spirit damage from Mercurial Magnum,
-    Vindicta''s Flight, Wraith''s Full Auto, Tesla Bullets/Capacitor — a big indirect
-    nerf to those builds and an anti-mixed-damage counter.'
+    Vindicta''s Flight, Wraith''s Full Auto, Tesla Bullets/Capacitor. A live counter-item
+    against mixed-damage on-hit carries.'
 Golden Goose Egg:
   name: Golden Goose Egg
   role: econ item
@@ -690,14 +700,15 @@ Golden Goose Egg:
   slot: Vitality
   tier: 4
   notes: '09-16: damage penalty -10->-15%, souls/min 90->80, stored souls now count
-    toward net worth — effectively unbuyable; the patch''s worst item.'
+    toward net worth — effectively unbuyable.'
 Focus Lens:
   name: Focus Lens
   role: spirit amp item
   bought_by: []
   slot: Spirit
   tier: 3
-  notes: '09-16: damage 30->35%, cast range 20->25m; still cleansable, so niche.'
+  notes: '09-16: damage 30->35%, cast range 20->25m. A standoff spirit-amp for setup
+    casters; still cleansable, so situational.'
 Crushing Fists:
   name: Crushing Fists
   role: melee weapon item
