@@ -24,7 +24,8 @@ async def poll_once(job, db=None, *, first_run_mark_only: bool = False) -> None:
         log.info("first poll: marked %d existing posts as skipped", len(posts))
         return
     for p in reversed(posts):  # oldest first
-        if state.seen_get(p.gid, db) is None:
+        seen = state.seen_get(p.gid, db)
+        if seen is None or seen["kind"] == "pending":
             if inspect.iscoroutinefunction(job):
                 await job(p.gid)
             else:

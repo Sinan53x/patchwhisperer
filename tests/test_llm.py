@@ -151,9 +151,11 @@ def test_truncation_retries_with_double_tokens(monkeypatch):
     assert seen == [100, 200]
 
 
-def test_double_truncation_raises(monkeypatch):
+def test_double_truncation_raises(monkeypatch, tmp_path):
+    raw = tmp_path / "raw.txt"
     llm, _ = _stub_client(
-        monkeypatch, [_resp('{"x":', "length"), _resp('{"x":', "length")]
+        monkeypatch, [_resp('{"x":', "length"), _resp('{"x": 9', "length")]
     )
     with pytest.raises(RuntimeError, match="truncated"):
-        llm.complete_json("sys", "user", M, max_tokens=100)
+        llm.complete_json("sys", "user", M, max_tokens=100, raw_path=raw)
+    assert raw.read_text() == '{"x": 9'

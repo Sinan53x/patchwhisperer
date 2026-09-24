@@ -4,7 +4,12 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from patchwhisperer.analysis.llm import LLMClient
-from patchwhisperer.analysis.pipeline import apply_kb_update, patch_id_of, run_analysis
+from patchwhisperer.analysis.pipeline import (
+    apply_kb_update,
+    patch_id_of,
+    run_analysis,
+    run_kb_update,
+)
 from patchwhisperer.analysis.render import render_discord
 from patchwhisperer.bot import state
 from patchwhisperer.kb.git import git_commit_kb, kb_commit_message
@@ -27,6 +32,7 @@ class PostResult:
     kind: str  # analyzed | hotfix
     message_id: str | None = None
     thread_id: str | None = None
+    kb_updated: bool = False
 
 
 def _snapshot_for(date_ts: float, api: DeadlockAPI) -> dict:
@@ -81,6 +87,7 @@ def analyze_and_post(
     db=None,
     repo_root: Path = REPO_ROOT,
     commit_fn=git_commit_kb,
+    notify_failures: bool = True,
 ) -> PostResult | None:
     """Fetch, analyze, and post a patch to Discord. Returns None if skipped."""
     post = fetch_post(gid) if gid != "latest" else fetch_patch_posts(count=1)[0]
@@ -104,16 +111,7 @@ def analyze_and_post(
             pool = state.pool_all(db)
         kb = kb or KBStore(KB_ROOT)
 
-        bundle = run_analysis(patch, kb, snapshot, pool, llm, update_kb=not hotfix)
-
-        if bundle.kb_update and not hotfix:
-            changed = apply_kb_update(kb, bundle.kb_update)
-            if changed:
-                commit_fn(
-                    repo_root,
-                    changed,
-                    kb_commit_message(patch.title, bundle.kb_update.change_log),
-                )
+        bundle = run_analysis(patch, kb, snapshot, pool, llm, update_kb=False)
 
         if channel is not None:
             message_id, thread_id = _post_to_channel(
@@ -136,11 +134,35 @@ def analyze_and_post(
             "hotfix" if hotfix else "analyzed",
             db,
         )
+        kb_updated = False
+        if not hotfix:
+            try:
+                kb_update = run_kb_update(patch, kb, bundle, llm)
+                changed = apply_kb_update(kb, kb_update)
+                if changed:
+                    commit_fn(
+                        repo_root,
+                        changed,
+                        kb_commit_message(patch.title, kb_update.change_log),
+                    )
+                kb_updated = True
+            except Exception as e:
+                log.exception("kb update failed for %s", patch_id)
+                if channel is not None:
+                    _await(
+                        channel.send(
+                            f"Patch {post.title}: analysis posted, but the "
+                            f"knowledge-base update failed ({str(e)[:200]}). "
+                            "KB left unchanged."
+                        ),
+                        loop,
+                    )
         return PostResult(
             patch_id=patch_id,
             kind="hotfix" if hotfix else "analyzed",
             message_id=str(message_id) if message_id else None,
             thread_id=str(thread_id) if thread_id else None,
+            kb_updated=kb_updated,
         )
     except Exception as e:
         attempts = state.seen_bump_attempt(
@@ -151,17 +173,18 @@ def analyze_and_post(
             state.seen_mark(
                 post.gid, post.title, f"{post.date:%Y-%m-%d}", "skipped", db
             )
-            if channel is not None:
+            if channel is not None and notify_failures:
                 _await(
                     channel.send(
                         f"Patch {post.title}: giving up after {attempts} failed attempts."
                     ),
                     loop,
                 )
-        elif channel is not None:
+        elif channel is not None and notify_failures:
             _await(
                 channel.send(
-                    f"Patch {post.title}: analysis failed ({str(e)[:200]}). Will retry."
+                    f"Patch {post.title}: analysis failed ({str(e)[:200]}). "
+                    f"Will retry on next poll (attempt {attempts}/{MAX_ATTEMPTS})."
                 ),
                 loop,
             )

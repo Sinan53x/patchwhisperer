@@ -18,11 +18,14 @@ DEFAULT_POOL = os.getenv("DEFAULT_POOL", "")
 STAGE_MAX_TOKENS = {
     1: 4000,
     2: 12000,
-    3: 20000,
+    3: 40000,
     4: 6000,
-    5: 4000,
+    5: 8000,
     6: 16000,
+    "6h": 12000,
     "distill": 12000,
     "seed": 40000,
     "enrich": 8000,
 }
+
+STAGE6_HERO_BATCH = 10

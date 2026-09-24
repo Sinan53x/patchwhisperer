@@ -1,0 +1,14 @@
+{
+ "hero_updates": {
+  "Wraith": {
+   "tier": "B",
+   "trend": "falling",
+   "why": "Card Trick sustain cut and Veil Walker removed.",
+   "last_changed_patch": "Minor Update - 09-16-2026",
+   "notes": "09-16: nerfed"
+  }
+ },
+ "change_log": [
+  "Wraith: tier update (batch)"
+ ]
+}

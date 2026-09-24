@@ -135,6 +135,11 @@ class KBUpdate(BaseModel):
         return self
 
 
+class KBHeroUpdate(BaseModel):
+    hero_updates: dict[str, dict] = {}
+    change_log: list[str] = []
+
+
 class HeroClaim(BaseModel):
     hero: str = ""
     tier: Tier | None = None

@@ -129,6 +129,7 @@ def make_bot() -> PatchWhispererBot:
                 force=force,
                 channel=interaction.channel,
                 loop=asyncio.get_running_loop(),
+                notify_failures=False,
             )
             if result is None:
                 await interaction.followup.send(

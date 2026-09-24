@@ -32,6 +32,7 @@ def fake_llm():
         "stage4": "stage4_synthesis",
         "stage5": "stage5_pool",
         "stage6": "stage6_kb_update",
+        "stage6h": "stage6_kb_heroes",
     }
     for stem, prompt_name in names.items():
         canned[stage_marker(prompt_name)] = (llm_dir / f"{stem}.json").read_text()
@@ -48,6 +49,26 @@ def test_full_run(kb, fake_llm, entity_index):
         assert (pdir / f"stage{n}.json").exists()
         assert (pdir / f"stage{n}.prompt.md").exists()
     assert (pdir / "analysis.json").exists()
+
+
+def test_kb_update_hero_batches(kb, fake_llm, entity_index, monkeypatch):
+    from patchwhisperer import config
+
+    monkeypatch.setattr(config, "STAGE6_HERO_BATCH", 1)
+    patch = parse_patch(load_post("09-16-2026"), entity_index)
+    bundle = run_analysis(patch, kb, {}, [], fake_llm, update_kb=True)
+    hero_marker = stage_marker("stage6_kb_heroes")
+    # stage3 fixture has 2 movers -> 2 batch calls at batch size 1
+    assert fake_llm.calls.count(hero_marker) == 2
+    pdir = kb.patch_dir(bundle.patch_id)
+    assert (pdir / "stage6h1.json").exists()
+    assert (pdir / "stage6h2.json").exists()
+    assert (pdir / "stage6h1.prompt.md").exists()
+    upd = bundle.kb_update
+    assert "Wraith" in upd.hero_updates
+    assert upd.meta_md
+    assert upd.item_updates
+    assert "Wraith: tier update (batch)" in upd.change_log
 
 
 def test_apply_kb_update(kb):

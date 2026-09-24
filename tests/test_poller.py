@@ -41,6 +41,22 @@ def test_new_gid_triggers_job(tmp_path, monkeypatch):
     assert ran == ["3"]
 
 
+def test_pending_post_is_retried(tmp_path, monkeypatch):
+    db = tmp_path / "s.db"
+    state.init_db(db)
+    state.seen_mark("1", "t", "d", "analyzed", db)
+    state.seen_bump_attempt("2", "t", "d", db)  # kind "pending"
+    state.seen_mark("3", "t", "d", "skipped", db)
+    monkeypatch.setattr(
+        poller,
+        "fetch_patch_posts",
+        lambda count: [_post("1"), _post("2"), _post("3"), _post("4")],
+    )
+    ran = []
+    asyncio.run(poller.poll_once(lambda g: ran.append(g), db))
+    assert ran == ["4", "2"]
+
+
 def test_async_job_is_awaited(tmp_path, monkeypatch):
     db = tmp_path / "s.db"
     state.init_db(db)

@@ -95,6 +95,10 @@ class LLMClient:
                     resp.usage.completion_tokens,
                 )
             if resp.choices[0].finish_reason == "length":
+                if raw_path:
+                    raw_path.write_text(
+                        resp.choices[0].message.content or ""
+                    )
                 if truncated_retried:
                     raise RuntimeError(
                         f"output truncated at {max_tokens} tokens ({stage_label})"

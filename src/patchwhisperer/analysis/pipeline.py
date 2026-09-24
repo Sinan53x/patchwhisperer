@@ -12,6 +12,7 @@ from patchwhisperer.analysis.schemas import (
     AnalysisBundle,
     HeroAnalysis,
     ItemAnalysis,
+    KBHeroUpdate,
     KBUpdate,
     PoolVerdicts,
     Synthesis,
@@ -51,7 +52,7 @@ def patch_id_of(patch: Patch) -> str:
     return f"{patch.date:%Y-%m-%d}-{patch.gid}"
 
 
-STAGE_SECONDS: dict[int, float] = {}
+STAGE_SECONDS: dict[str, float] = {}
 
 
 def _run_stage(
@@ -61,8 +62,12 @@ def _run_stage(
     n: int,
     name: str,
     schema,
+    *,
+    tag: str | None = None,
+    budget_key=None,
     **values,
 ):
+    tag = tag or str(n)
     prompt = render_prompt(name, **values)
     pdir = kb.patch_dir(patch_id)
     t0 = time.time()
@@ -70,14 +75,14 @@ def _run_stage(
         SYSTEM_PROMPT,
         prompt,
         schema,
-        max_tokens=config.STAGE_MAX_TOKENS[n],
-        raw_path=pdir / f"stage{n}.raw.txt",
+        max_tokens=config.STAGE_MAX_TOKENS[budget_key if budget_key is not None else n],
+        raw_path=pdir / f"stage{tag}.raw.txt",
     )
     elapsed = time.time() - t0
-    STAGE_SECONDS[n] = elapsed
-    log.info("stage %d (%s) done in %.1fs", n, name, elapsed)
-    (pdir / f"stage{n}.prompt.md").write_text(prompt)
-    (pdir / f"stage{n}.json").write_text(result.model_dump_json(indent=1))
+    STAGE_SECONDS[tag] = elapsed
+    log.info("stage %s (%s) done in %.1fs", tag, name, elapsed)
+    (pdir / f"stage{tag}.prompt.md").write_text(prompt)
+    (pdir / f"stage{tag}.json").write_text(result.model_dump_json(indent=1))
     return result
 
 
@@ -205,24 +210,6 @@ def run_analysis(
             pool=", ".join(pool),
         )
 
-    kb_update = None
-    if update_kb and not patch.is_hotfix():
-        kb_update = _run_stage(
-            llm,
-            kb,
-            patch_id,
-            6,
-            "stage6_kb_update",
-            KBUpdate,
-            **common,
-            stage4_json=synthesis.model_dump_json(indent=1),
-            stage3_movers_json=s3m,
-            stage2_json=s2,
-            meta_md=meta_md,
-            heroes_kb_movers=ctx.heroes_kb_movers(kb, heroes),
-            items_kb=ctx.items_kb(kb, changed_items),
-        )
-
     bundle = AnalysisBundle(
         patch_id=patch_id,
         patch_title=patch.title,
@@ -231,12 +218,70 @@ def run_analysis(
         heroes=heroes,
         synthesis=synthesis,
         pool=pool_verdicts,
-        kb_update=kb_update,
+        kb_update=None,
         usage={**llm.usage, "stage_seconds": dict(STAGE_SECONDS)},
     )
+    if update_kb and not patch.is_hotfix():
+        bundle.kb_update = run_kb_update(patch, kb, bundle, llm)
+        bundle.usage = {**llm.usage, "stage_seconds": dict(STAGE_SECONDS)}
     pdir = kb.patch_dir(patch_id)
     (pdir / "analysis.json").write_text(bundle.model_dump_json(indent=1))
     return bundle
+
+
+def run_kb_update(patch: Patch, kb: KBStore, bundle: AnalysisBundle, llm) -> KBUpdate:
+    if patch.is_hotfix():
+        raise ValueError("hotfix patches have no KB update")
+    meta_md = kb.load_meta() if kb.meta_path.exists() else "(empty)"
+    common = {"patch_title": patch.title, "patch_date": f"{patch.date:%Y-%m-%d}"}
+    changed_items = sorted({c.entity_name for c in ctx.item_changes(patch)})
+    stage4_json = bundle.synthesis.model_dump_json(indent=1)
+    stage2_json = bundle.items.model_dump_json(indent=1)
+    meta_update = _run_stage(
+        llm,
+        kb,
+        bundle.patch_id,
+        6,
+        "stage6_kb_update",
+        KBUpdate,
+        **common,
+        stage4_json=stage4_json,
+        stage3_movers_json=ctx.stage3_movers_json(bundle.heroes),
+        stage2_json=stage2_json,
+        meta_md=meta_md,
+        items_kb=ctx.items_kb(kb, changed_items),
+    )
+    hero_updates: dict[str, dict] = {}
+    change_log = list(meta_update.change_log)
+    movers = [h for h in bundle.heroes.heroes if h.direction != "neutral"]
+    batch_size = config.STAGE6_HERO_BATCH
+    for i in range(0, len(movers), batch_size):
+        batch = movers[i : i + batch_size]
+        out = _run_stage(
+            llm,
+            kb,
+            bundle.patch_id,
+            6,
+            "stage6_kb_heroes",
+            KBHeroUpdate,
+            tag=f"6h{i // batch_size + 1}",
+            budget_key="6h",
+            **common,
+            stage4_json=stage4_json,
+            stage2_json=stage2_json,
+            stage3_json=json.dumps([h.model_dump() for h in batch], indent=1),
+            heroes_kb=ctx.heroes_kb_subset(
+                kb, [h.hero for h in batch]
+            ),
+        )
+        hero_updates.update(out.hero_updates)
+        change_log += out.change_log
+    return KBUpdate(
+        meta_md=meta_update.meta_md,
+        hero_updates=hero_updates,
+        item_updates=meta_update.item_updates,
+        change_log=change_log,
+    )
 
 
 def apply_kb_update(kb: KBStore, update: KBUpdate) -> list[Path]:
