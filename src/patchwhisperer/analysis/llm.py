@@ -150,6 +150,31 @@ class FakeLLMClient:
         raise KeyError(f"no canned response for prompt: {user[:80]}")
 
 
+class ReplayLLMClient:
+    """Test/demo double: like FakeLLMClient, but each marker maps to a queue
+    of payloads served in order (e.g. one per stage-6 hero batch)."""
+
+    def __init__(self, canned: dict[str, list[str | dict]]) -> None:
+        self.canned = {k: list(v) for k, v in canned.items()}
+        self.usage = {"prompt_tokens": 0, "completion_tokens": 0}
+        self.calls: list[str] = []
+
+    def complete_json(
+        self, system: str, user: str, schema: type[BaseModel], **kwargs
+    ) -> BaseModel:
+        for marker, payloads in self.canned.items():
+            if marker in user:
+                if not payloads:
+                    raise RuntimeError(
+                        f"replay exhausted: more calls than recorded for {marker!r}"
+                    )
+                self.calls.append(marker)
+                raw = payloads.pop(0)
+                raw = raw if isinstance(raw, str) else json.dumps(raw)
+                return schema.model_validate_json(raw)
+        raise KeyError(f"no canned response for prompt: {user[:80]}")
+
+
 def stage_marker(stage: str) -> str:
     """The '# Task:' first line of a prompt, used as the FakeLLMClient key."""
     return load_prompt(stage).splitlines()[0]

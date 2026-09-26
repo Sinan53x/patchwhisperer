@@ -12,7 +12,7 @@ from patchwhisperer.analysis.pipeline import (
 )
 from patchwhisperer.analysis.render import render_discord
 from patchwhisperer.bot import state
-from patchwhisperer.kb.git import git_commit_kb, kb_commit_message
+from patchwhisperer.kb.git import git_commit_kb, git_sync, kb_commit_message
 from patchwhisperer.kb.store import KBStore
 from patchwhisperer.parse.entities import EntityIndex
 from patchwhisperer.parse.patch_parser import parse_patch
@@ -87,6 +87,7 @@ def analyze_and_post(
     db=None,
     repo_root: Path = REPO_ROOT,
     commit_fn=git_commit_kb,
+    sync_fn=git_sync,
     notify_failures: bool = True,
 ) -> PostResult | None:
     """Fetch, analyze, and post a patch to Discord. Returns None if skipped."""
@@ -105,6 +106,7 @@ def analyze_and_post(
     hotfix = patch.is_hotfix()
 
     try:
+        sync_fn(repo_root)
         api = api or DeadlockAPI()
         snapshot = _snapshot_for(post.date.timestamp(), api)
         if pool is None:

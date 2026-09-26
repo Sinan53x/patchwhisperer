@@ -11,9 +11,19 @@ from pydantic import ValidationError
 
 from patchwhisperer import config
 from patchwhisperer.analysis import context as actx
-from patchwhisperer.analysis.llm import SYSTEM_PROMPT, LLMClient, render_prompt
-from patchwhisperer.analysis.pipeline import apply_kb_update, run_analysis
-from patchwhisperer.analysis.render import render_markdown
+from patchwhisperer.analysis.llm import (
+    SYSTEM_PROMPT,
+    LLMClient,
+    ReplayLLMClient,
+    render_prompt,
+    stage_marker,
+)
+from patchwhisperer.analysis.pipeline import (
+    apply_kb_update,
+    run_analysis,
+    run_kb_update,
+)
+from patchwhisperer.analysis.render import render_discord, render_markdown
 from patchwhisperer.analysis.schemas import DistilledSource, SeedKB
 from patchwhisperer.kb.schema import HeroState, ItemState
 from patchwhisperer.kb.store import KBStore
@@ -160,6 +170,134 @@ def analyze(
         typer.echo(f"kb updated: {[str(p) for p in changed]}")
     elif bundle.kb_update:
         typer.echo("(dry-run: kb update not applied)")
+
+
+def _demo_dir() -> Path:
+    for base in (Path("demo/2026-09-16"), Path(__file__).resolve().parents[2] / "demo" / "2026-09-16"):
+        if (base / "post.json").exists():
+            return base
+    typer.echo("demo/2026-09-16 not found", err=True)
+    raise typer.Exit(1)
+
+
+@app.command()
+def demo(
+    full: bool = typer.Option(False, "--full", help="Print all thread chunks."),
+    keep: bool = typer.Option(
+        False, "--keep", help="Keep the temporary KB dir and print its path."
+    ),
+) -> None:
+    """Replay the real 2026-09-16 pipeline run offline (no API key/network)."""
+    import shutil
+    import tempfile
+
+    from patchwhisperer.analysis import context as ctx
+    from patchwhisperer.sources.steam_news import SteamPost
+
+    src = _demo_dir()
+    tmp = Path(tempfile.mkdtemp(prefix="pw-demo-"))
+    kb_dir = tmp / "kb"
+    shutil.copytree(src / "kb", kb_dir)
+    kb = KBStore(kb_dir)
+
+    it = json.loads((src / "post.json").read_text())
+    post = SteamPost(
+        gid=str(it["gid"]),
+        title=it["title"],
+        date=datetime.fromtimestamp(it["date"], tz=UTC),
+        url=it["url"],
+        author=it["author"],
+        contents=it["contents"],
+    )
+    assets = src / "assets"
+    index = EntityIndex(
+        json.loads((assets / "heroes.json").read_text()),
+        json.loads((assets / "items.json").read_text()),
+        {
+            int(k): v
+            for k, v in json.loads((assets / "abilities.json").read_text()).items()
+        },
+    )
+    patch = parse_patch(post, index)
+    pool = [p.strip() for p in (src / "pool.txt").read_text().splitlines() if p.strip()]
+
+    canned: dict[str, list[str]] = {}
+    for stem, prompt_name in {
+        "stage1": "stage1_systems",
+        "stage2": "stage2_items",
+        "stage3": "stage3_heroes",
+        "stage4": "stage4_synthesis",
+        "stage5": "stage5_pool",
+        "stage6": "stage6_kb_update",
+    }.items():
+        canned[stage_marker(prompt_name)] = [(src / f"{stem}.json").read_text()]
+    canned[stage_marker("stage6_kb_heroes")] = [
+        (src / f"stage6h{i}.json").read_text() for i in range(1, 5)
+    ]
+    llm = ReplayLLMClient(canned)
+
+    typer.echo(f"# {patch.title}")
+    typer.echo(ctx.change_counts(patch))
+    typer.echo("")
+
+    bundle = run_analysis(patch, kb, {}, pool, llm, update_kb=False)
+    for n, secs in sorted(bundle.usage["stage_seconds"].items(), key=str):
+        typer.echo(f"stage {n} done ({secs:.1f}s)")
+
+    heroes = bundle.heroes
+    movers = [h for h in heroes.heroes if h.direction != "neutral"]
+    ups = [h.hero for h in movers if h.direction == "up"]
+    downs = [h.hero for h in movers if h.direction == "down"]
+    typer.echo("")
+    typer.echo(f"stage 3 movers: {len(movers)}/{len(heroes.heroes)} heroes")
+    typer.echo(f"  up: {', '.join(ups)}")
+    typer.echo(f"  down: {', '.join(downs)}")
+
+    rendered = render_discord(bundle)
+    typer.echo("")
+    typer.echo("## Discord TL;DR")
+    typer.echo("")
+    typer.echo(rendered.tldr)
+    typer.echo("")
+    typer.echo("## Discord thread")
+    typer.echo("")
+    chunks = rendered.thread if full else rendered.thread[:2]
+    for c in chunks:
+        typer.echo(c)
+        typer.echo("")
+    if not full and len(rendered.thread) > 2:
+        typer.echo(f"({len(rendered.thread) - 2} more chunks — rerun with --full)")
+
+    before = kb.load_heroes()
+    kb_update = run_kb_update(patch, kb, bundle, llm)
+    leftover = [m for m, q in llm.canned.items() if q]
+    if leftover:
+        typer.echo(f"error: unused replay payloads for {leftover}", err=True)
+        raise typer.Exit(1)
+    apply_kb_update(kb, kb_update)
+    after = kb.load_heroes()
+
+    typer.echo("## KB changes")
+    typer.echo("")
+    other = 0
+    for name, fields in kb_update.hero_updates.items():
+        interesting = {"tier", "trend"} & set(fields)
+        for f in interesting:
+            typer.echo(
+                f"  {name}: {f} {getattr(before[name], f)} -> {getattr(after[name], f)}"
+            )
+        other += len(set(fields) - {"tier", "trend"})
+    typer.echo(f"  (+{other} other field updates across {len(kb_update.hero_updates)} heroes)")
+    typer.echo("")
+    for line in kb_update.change_log:
+        typer.echo(f"  - {line}")
+
+    typer.echo("")
+    typer.echo("Replayed from the real 2026-09-24 run; no API calls made.")
+    if keep:
+        typer.echo(f"temp KB kept at: {kb_dir}")
+    else:
+        shutil.rmtree(tmp, ignore_errors=True)
 
 
 def _slug(text: str) -> str:

@@ -1,0 +1,100 @@
+{
+ "patch_size": "major",
+ "size_why": "The economy is structurally reworked (comeback souls gutted on three levers, rift resist no longer flat 35%), movement changes with a new air-drag slow clause, and dash/light-melee no longer pause gun cycle time — these change how games are won, not just hero numbers. The 36 item and 69 hero tweaks ride on top of that structural base.",
+ "headline": "The comeback valve is now fully closed: win lane and snowball with tempo, while the on-hit spirit carry archetype is killed three ways in one patch.",
+ "meta_thesis": {
+  "previous": "The 07-30 rework had started rewarding tempo, but comeback bounties and the flat rift resist still bailed out the team that lost lane.",
+  "new": "Winning lane now converts directly into the game: comeback souls are gone, early rift fights are real fights, and combat is smoothed toward aggressive high-APM dueling. Late scalers and flyers lose the safety nets that bought them time to spike.",
+  "relationship": "continuation",
+  "why": "The three-lever comeback gutting plus the scaling rift resist finishes the 07-30 direction, and the air-drag slow plus gun-cycle smoothing push dueling and map tempo further. No reversal — the same trend, now structural."
+ },
+ "winners": [
+  {
+   "hero": "Silver",
+   "why": "Health/boon 28->31, sprint 1.5->2.5, and Weighted Bola now grounds/interrupts flyers on top of gun-cycle smoothing and the tempo economy — the patch is literally built for her kit.",
+   "indirect": false
+  },
+  {
+   "hero": "Paige",
+   "why": "Heavy Melee spirit scaling 0.3->0.45 and Captivating Read buffs land in a lane-wins economy that already rewards her snowball-a-carry role.",
+   "indirect": false
+  },
+  {
+   "hero": "Apollo",
+   "why": "Absent from the notes, but the closed comeback valve and nerfed early rift resist let his invade/escape tempo convert to wins; only his secondary Locket line got trimmed.",
+   "indirect": true
+  },
+  {
+   "hero": "Holliday",
+   "why": "Crackshot T2 shred, more HP/boon, longer Lasso, and the 35->38s 20m respawn all raise the value of her picks — caveat is her stripped Veil Walker disengage.",
+   "indirect": false
+  },
+  {
+   "hero": "Calico",
+   "why": "Tempo/lane-wins economy plays directly to her early dive snowball, and her melee-spirit core items are untouched.",
+   "indirect": true
+  }
+ ],
+ "losers": [
+  {
+   "hero": "Warden",
+   "why": "Direct gun stat, Flask, and Willpower cuts plus both his T4 finishers (Mercurial Magnum, Spiritual Overflow) gutted — the patch's clearest casualty.",
+   "indirect": false
+  },
+  {
+   "hero": "Celeste",
+   "why": "Seven direct nerfs stack on Radiant Regeneration/Locket trims and the new air-drag slow that taxes her as a flyer and late scaler.",
+   "indirect": false
+  },
+  {
+   "hero": "Vyper",
+   "why": "Her 93%-share Magnum capstone cut and Plated Armor now blanks her spirit-amp/Tesla splice, forcing a full pivot to pure gun.",
+   "indirect": true
+  },
+  {
+   "hero": "Wraith",
+   "why": "Card Trick and shred nerfs plus the Magnum cut and Plated Armor blocking Full Auto's spirit damage hollow out her entire on-hit build.",
+   "indirect": false
+  },
+  {
+   "hero": "Vindicta",
+   "why": "Flyer tax: slows now bite air drag and Silver's Bola grounds/interrupts her Flight, with no item change helping a poke/siege carry in a tempo meta.",
+   "indirect": true
+  }
+ ],
+ "non_obvious_calls": [
+  {
+   "claim": "The on-hit spirit carry archetype is dead, not nerfed — Mercurial Magnum, Spiritual Overflow, and the Plated Armor fix kill Wraith, Warden and Vyper's primary build in one patch.",
+   "why": "Three independent changes hit the same package: base damage and scaling cuts remove the damage and the Armor fix blocks what's left.",
+   "confidence": 0.7
+  },
+  {
+   "claim": "Veil Walker and Shadow Weave swapped identities, so heroes like Bebop, Viscous and Holliday lost a bail-out even though their kits were untouched.",
+   "why": "Sprint Boots and movespeed-on-break migrated from Veil Walker to a buffed Shadow Weave, deleting the auto-buy disengage for a 77%-buy Bebop core.",
+   "confidence": 0.65
+  },
+  {
+   "claim": "The 'global slows -20%' line reads as a mobility buff but is really an anti-flyer nerf.",
+   "why": "The new 35% air-drag clause means any slow now drags airborne heroes, so Celeste, Vindicta, Grey Talon and Lash lose positioning safety while ground kiting improves.",
+   "confidence": 0.6
+  },
+  {
+   "claim": "The Plated Armor fix is a general-sounding change that targets a specific archetype: it blanks on-hit spirit damage from Full Auto, Flight, Mercurial and Tesla.",
+   "why": "Framed as an on-hit-prevention fix, it lands as a hard counter-item exactly when the on-hit carries were already being cut.",
+   "confidence": 0.6
+  }
+ ],
+ "uncertainties": [
+  "The win/pick snapshot is 14 days and mostly pre-patch, so the S-tier reads (Silver, Paige, Apollo, Lash) are baseline, not confirmed post-patch outcomes.",
+  "Whether the global slow reduction genuinely eases grounded escapes or the new air-drag clause dominates the net mobility picture is unclear.",
+  "Whether removing comeback souls buries farm-first scalers (Seven, Pocket, Mirage) or they simply re-route to kill-based tempo lines within a week.",
+  "Whether Plated Armor's fix meaningfully reduces Vyper/Wraith WR or buyers just pivot to pure-gun builds that dodge it."
+ ],
+ "what_to_watch": [
+  "Warden, Vyper and Wraith pick-and-win rates — if the on-hit archetype is dead, expect a sharp dip and rapid build migration.",
+  "Shadow Weave adoption on gun carries vs Veil Walker buy-rate collapse on Bebop/Holliday/Viscous.",
+  "Flyer WRs (Celeste, Vindicta, Grey Talon, Lash) as evidence the air-drag change bites.",
+  "Silver's WR against CC-heavy comps (Mo & Krill, Bebop) to see if her rise is capped.",
+  "Early Unstable Rift contest rates now that resist scales from ~10% instead of a flat 35%."
+ ]
+}

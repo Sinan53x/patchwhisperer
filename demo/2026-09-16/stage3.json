@@ -1,0 +1,662 @@
+{
+ "heroes": [
+  {
+   "hero": "Infernus",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Spiritual Overflow nerfed (spirit 40->30, fire rate 30->25%, slower buildup) hits his burn-gun build; Toxic Bullets spirit scaling 0.005->0.006 is a small offset.",
+    "Comeback gutting punishes his late-scaler half, while dashes/light melee no longer pausing the gun cycle is a free gun-weaving buff."
+   ],
+   "build_changes": [
+    "Lean Dashfernus; if gun, move off Spiritual Overflow toward Toxic Bullets/Swift Striker."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Gun build lost its capstone; Dashfernus and the Toxic Bullets buff carry him."
+  },
+  {
+   "hero": "Seven",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Cultist Sacrifice bounty 180->170% trims his farm-bankroll opener.",
+    "Gutted comeback souls hit the farm-first scaler hardest, and the Hollow Point buff is irrelevant to his spirit build."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Farm-scaler nerfed twice over: smaller Cultist payout, no comeback net."
+  },
+  {
+   "hero": "Vindicta",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Flyer tax: global slows now bite air drag and Silver's Weighted Bola grounds/interrupts flyers.",
+    "Poke/siege is flagged down in a tempo meta, with no item change helping her."
+   ],
+   "build_changes": [
+    "Slot Counterspell/anti-dive earlier; expect to be grounded more often."
+   ],
+   "tier_before": "A",
+   "tier_after": "B",
+   "one_liner": "Anti-air patch grounds the flyer; the S read was always generous."
+  },
+  {
+   "hero": "Lady Geist",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [
+    "Life Drain T3 spirit scaling +0.3->+0.45 and Essence Bomb T3 damage 26->30% buff her bomb/drain burst."
+   ],
+   "indirect_reasons": [
+    "Radiant Regeneration per-boon scaling 2->1.7 trims her 98%-buy sustain core.",
+    "Comeback gutting punishes her 0-6-then-farm pattern, capping the rise."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Bomb and drain got better, but her regen stack and comeback pattern took hits."
+  },
+  {
+   "hero": "Abrams",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Infernal Resilience T3 +8->+9% and Seismic Impact T3 Unstoppable 6s->5s roughly wash."
+   ],
+   "indirect_reasons": [
+    "Fortitude max-health regen 2->2.25% buffs his default survivability slot.",
+    "Dashes/light melee no longer break gun cycle helps his melee-gun weave; Decay anti-heal still caps Siphon."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Healthy frontline in a brawl patch; a touch more resilience, a touch less ult."
+  },
+  {
+   "hero": "Wraith",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "major",
+   "confidence": 0.7,
+   "direct_reasons": [
+    "Card Trick heal 75->60, heal spirit scaling 0.75->0.5, resist shred -8->-7% (T3 -5->-4%) and T3 Clubs slow +20->+15% all cut."
+   ],
+   "indirect_reasons": [
+    "Mercurial Magnum nerfed (bullet 25->20%, scaling 0.49->0.38) and Plated Armor now blocks Full Auto's spirit damage outright.",
+    "Spiritual Overflow nerf finishes the on-hit spirit package."
+   ],
+   "build_changes": [
+    "Abandon the Mercurial Magnum/on-hit-spirit core; rebuild toward pure gun or utility and respect Plated Armor buyers."
+   ],
+   "tier_before": "B",
+   "tier_after": "C",
+   "one_liner": "On-hit spirit Wraith gutted: Magnum cut and Plated Armor now blanks Full Auto."
+  },
+  {
+   "hero": "McGinnis",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Global slows -20% weakens her wall/Suppressor zoning.",
+    "Guardian bounty +10% rewards her lane siege, so the two roughly offset."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Turret siege still fine; her zoning slows got softer."
+  },
+  {
+   "hero": "Paradox",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Kinetic Carbine min-damage multiplier 25->10% and no longer scaled by T3 kills the cheap quick-scope poke."
+   ],
+   "indirect_reasons": [
+    "Slowing Hex cd 27->29s trims her pick setup, and the tempo meta keeps punishing a stationary sniper."
+   ],
+   "build_changes": [
+    "Commit to the max-range HVR/Sharpshooter sniper line; the min-damage carbine poke is gone."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Quick-scope carbine gutted; only the max-range sniper path survives."
+  },
+  {
+   "hero": "Dynamo",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Tempo/initiation meta rewards Singularity picks, and Diviner's Kevlar now adds +10% ultimate CDR for ult-reliant tanks.",
+    "Slowing Hex cd nerf is a minor tax."
+   ],
+   "build_changes": [
+    "Diviner's Kevlar is now a live buy purely for ult uptime."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Tempo initiator whose Kevlar now doubles as ult-CDR."
+  },
+  {
+   "hero": "Kelvin",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [
+    "Frozen Shelter base regen now scales with spirit power (0.2), so early spirit buys heal more."
+   ],
+   "indirect_reasons": [
+    "Broad healing-item trims (Radiant Regeneration, Restorative Locket) hit others more than his Extra Regen/Healing Booster core."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Dome now scales with spirit; cheap early sustain is worth more."
+  },
+  {
+   "hero": "Haze",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Fixation headshot stacks +2->+3 and T3 weapon scaling 0.0003->0.00035 lift her early-mid damage."
+   ],
+   "indirect_reasons": [
+    "Gun-cycle smoothing (dash/light melee no longer pause the gun) helps her M1 tempo.",
+    "T4 gun items stay weak and Plated Armor blocks on-hit spirit, capping her scaling."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Fixation buff is real; weak T4 gun items still cap her ceiling."
+  },
+  {
+   "hero": "Holliday",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Crackshot T2 adds -6% bullet res for 5s, health/boon 41->43, and Bounce Pad extends Lasso +1->+1.25s."
+   ],
+   "indirect_reasons": [
+    "Tempo plus the longer 20m respawn (35->38s) make Lasso picks worth more.",
+    "Veil Walker lost Sprint Boots/movespeed-on-break, stripping her core disengage."
+   ],
+   "build_changes": [
+    "Find a new disengage now that Veil Walker is stripped."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Tempo and longer lasso picks suit her, but her Veil Walker bail-out is gone."
+  },
+  {
+   "hero": "Bebop",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Veil Walker (77% core) lost Sprint Boots and movespeed-on-break, stripping his dive cover.",
+    "Slowing Hex cd 27->29s and global slows -20% both weaken his hook-lock chain."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Hook combo intact, but Veil Walker cover and his slows both got trimmed."
+  },
+  {
+   "hero": "Calico",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Tempo/lane-wins economy plays directly to her early snowball.",
+    "Her melee-spirit core items are untouched by the patch."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Tempo meta is tailor-made for her early dive snowball."
+  },
+  {
+   "hero": "Grey Talon",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Flyer: air-drag slows plus Silver's Weighted Bola grounding hurt his uptime.",
+    "Poke/siege archetype is down in a tempo meta with no item help."
+   ],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Anti-air tempo patch keeps the flyer poke carry stuck at C."
+  },
+  {
+   "hero": "Mo & Krill",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Trophy Collector souls/min 18->16 trims his early tempo opener.",
+    "The brawl meta and untouched tank items keep him competitive."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Early brawler in a brawl patch; just a smaller Trophy Collector trickle."
+  },
+  {
+   "hero": "Shiv",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [
+    "Alt fire base damage +4% and per-boon +0.2->+0.24, and Serrated Knives now deals 3.5% current-HP on impact at full rage."
+   ],
+   "indirect_reasons": [
+    "Radiant Regeneration (97% core) and Restorative Locket trims hit his regen stack, and Tankbuster 8->7.5% softens his anti-tank slot."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Knives and alt-fire buffed into the tank wave, but his regen items were trimmed."
+  },
+  {
+   "hero": "Ivy",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [
+    "Stone Form radius 6->5.75m and T1 max-health heal 7->6% are small trims."
+   ],
+   "indirect_reasons": [
+    "Healing-item trims and a tempo meta punishing her weak lane expose the A-tier support; her gun-first core is otherwise untouched."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Cosmetic Stone Form trims, but the tempo patch makes her weak lane hurt."
+  },
+  {
+   "hero": "Warden",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "major",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Bullet dmg/boon 0.28->0.25, fire-rate spirit scaling 0.25->0.21, Alchemical Flask range/speed -30%, Willpower T3 spirit scaling +2.7->+2.1 and debuff resist 40->30%."
+   ],
+   "indirect_reasons": [
+    "Mercurial Magnum and Spiritual Overflow, his two T4 finishers, were both nerfed.",
+    "Veil Walker lost Sprint Boots, weakening his cage-bruiser shell."
+   ],
+   "build_changes": [
+    "Skip the gutted Mercurial Magnum/Spiritual Overflow finishers; the gun line needs a new ceiling."
+   ],
+   "tier_before": "B",
+   "tier_after": "C",
+   "one_liner": "Patch's clearest casualty: gun stats, flask, cage and T4 items all cut."
+  },
+  {
+   "hero": "Yamato",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Crimson Slash T3 adds +0.4 heal spirit scaling and Flying Slash light-melee scaling rises 1.0->1.2."
+   ],
+   "indirect_reasons": [
+    "Tankbuster 8->7.5% trims her late anti-tank luxury; the tempo/Refresher-Unstoppable windows still suit her."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Light-melee and heal scaling up; mobile burst assassin stays A."
+  },
+  {
+   "hero": "Lash",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [
+    "Ground Strike T3 spirit scaling +0.03->+0.04 and per-meter damage 110->120% push him onto the stomp build; gun falloff 18-54->16-48m and Grapple T2 buff duration 10->6s hurt gun Lash."
+   ],
+   "indirect_reasons": [
+    "Silver's Weighted Bola grounds/interrupts his airborne engage and air-drag slows tax him.",
+    "Flog heal 50->40% plus healing-item trims cut his sustain."
+   ],
+   "build_changes": [
+    "Drop gun Lash; play the stomp/spirit build the Ground Strike buffs enable."
+   ],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Stomp build buffed and still the lobby default, but Silver grounds his engage."
+  },
+  {
+   "hero": "Viscous",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.55,
+   "direct_reasons": [
+    "Cube cast range 26->20m, Puddle Punch cd 21->24s, alt-fire damage growth -10% and Splatter T1 +2->+1.5m all trim his tools; Splatter cd 0.15->0.12 and Goo Ball T3 spirit scaling +0.2 are partial offsets."
+   ],
+   "indirect_reasons": [
+    "Veil Walker lost Sprint Boots, weakening his cooldown-Cube support shell, and the tempo meta punishes a scaling enabler."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "C",
+   "one_liner": "Cube range and Punch cooldown cut; tempo punishes the scaling enabler."
+  },
+  {
+   "hero": "Pocket",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Comeback gutting removes the safety net his Affliction late burst needs.",
+    "Cultist Sacrifice nerf trims his farm item, and the tempo meta closes games before he scales."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "C",
+   "one_liner": "Late Affliction carry with no comeback net in a tempo meta."
+  },
+  {
+   "hero": "Mirage",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Comeback gutting punishes his slow split-push scaling map play.",
+    "Toxic Bullets buff (his on-hit core) is a small offset, but the tempo meta ends games early."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "C",
+   "one_liner": "Split-push scaler punished hardest by the gutted comeback souls."
+  },
+  {
+   "hero": "Vyper",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "major",
+   "confidence": 0.65,
+   "direct_reasons": [
+    "Slither T3 barrier 5->4s and Petrifying Bola cd 105->115s are small on their own."
+   ],
+   "indirect_reasons": [
+    "Mercurial Magnum (93% capstone) nerfed and Plated Armor now blocks her spirit-amp/Tesla on-hit damage.",
+    "Spiritual Overflow nerf removes the on-hit package she splices in."
+   ],
+   "build_changes": [
+    "Pivot to pure gun (Close Quarters/Split Shot/Burst Fire); the Mercurial Magnum splice is now blocked."
+   ],
+   "tier_before": "A",
+   "tier_after": "B",
+   "one_liner": "Her Magnum capstone gutted and Plated Armor hard-counters the splice."
+  },
+  {
+   "hero": "Sinclair",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Tempo divers (Yamato, Lash, Drifter) that beat him got stronger.",
+    "No item change helps his duration/cooldown spirit build."
+   ],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Kit-steal coin-flip in a meta that favors the divers who beat him."
+  },
+  {
+   "hero": "Mina",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Tempo/tank meta eats her single-target burst and Yamato owns her mobile-assassin niche.",
+    "No item change lifts her spirit-burst build."
+   ],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Burst assassin crowded out by Yamato; tanks eat her rotation."
+  },
+  {
+   "hero": "Drifter",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Trophy Collector souls/min 18->16 and the Veil Walker nerf trim his secondary anti-heal build.",
+    "The tempo/early-bruiser meta and untouched melee core keep his floor high."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Early melee bruiser built for the tempo patch; only a small Trophy Collector trim."
+  },
+  {
+   "hero": "Venator",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Ira Domini now works with Ricochet (all shots bounce) and can split-shot into 3 bolts, raising his late ceiling."
+   ],
+   "indirect_reasons": [
+    "Weakening Headshot -13->-12% is a small relative loss against Hollow Point buyers.",
+    "Battle Vest and his vitality items are untouched."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Ult now chains Ricochet and triple-bolts; the better gun-carry slot over Haze."
+  },
+  {
+   "hero": "Victor",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Fair baseline tank, essentially untouched by the patch."
+  },
+  {
+   "hero": "Paige",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.65,
+   "direct_reasons": [
+    "Heavy Melee spirit scaling 0.3->0.45, Captivating Read T1 -11->-14s and T3 +1m->+2m buff her lane and CC."
+   ],
+   "indirect_reasons": [
+    "Tempo/lane-wins economy rewards her snowball-a-carry play, and anti-flyer shifts remove threats she feared.",
+    "Slowing Hex cd nerf is a minor tax."
+   ],
+   "build_changes": [],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Lane-winning support the new economy is built for; talents buffed."
+  },
+  {
+   "hero": "The Doorman",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Veil Walker nerf weakens his kidnap/escape shell.",
+    "The tempo meta beats his delayed setup, and his low-WR Vortex Web/Slowing Hex staples are unchanged."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Delayed setup initiator loses to the tempo the patch rewards."
+  },
+  {
+   "hero": "Billy",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Lifestrike melee heal buffed (120+1.75, 35% healing) and its slow now drags flyers, which he spams.",
+    "Fortitude regen buff and a lane-bully tempo meta suit him; rising anti-tank Shiv is the risk."
+   ],
+   "build_changes": [],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Lane-bully frontline with a buffed Lifestrike; Shiv rising is the only worry."
+  },
+  {
+   "hero": "Graves",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [
+    "Health per boon 33->35 is a small survivability buff."
+   ],
+   "indirect_reasons": [
+    "Comeback gutting deletes the safety net her ~25-min scaling game relied on.",
+    "Toxic Bullets buff slightly helps her on-hit line, but dive assassins got stronger."
+   ],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Small HP buff, but losing the comeback net hurts the game's worst early carry."
+  },
+  {
+   "hero": "Apollo",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Comeback gutting plus the early-Rift resist nerf make his win-lane/invade/escape tempo convert to wins; the spirit item pool is untouched.",
+    "Restorative Locket nerf only trims his secondary support line."
+   ],
+   "build_changes": [],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Archetype winner of the tempo patch; only his Locket support line got trimmed."
+  },
+  {
+   "hero": "Rem",
+   "in_notes": true,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [
+    "Only a Lil Helpers target-UI change and a breakable-spawn bug fix — no balance effect."
+   ],
+   "indirect_reasons": [
+    "Healing-item trims slightly weaken his heal niche, and Ivy outclasses his support slot."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No real change; a heal support in a patch that trims healing items."
+  },
+  {
+   "hero": "Silver",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "major",
+   "confidence": 0.65,
+   "direct_reasons": [
+    "Health/boon 28->31, sprint speed 1.5->2.5, and Weighted Bola now increases gravity and interrupts flying abilities (anti-air)."
+   ],
+   "indirect_reasons": [
+    "Gun-cycle smoothing (dashes/light melee no longer pause the gun) and the tempo meta suit her snowball, and Diviner's Kevlar now adds ult CDR.",
+    "CC-heavy counters (Mo & Krill, Bebop) stay strong, capping her."
+   ],
+   "build_changes": [],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Tempo gun-tank with a new anti-air bola; the patch is built for her."
+  },
+  {
+   "hero": "Celeste",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "major",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Seven direct nerfs: stamina cd 5->5.3, Light Eater lifesteal 20->18% (T3 +25->+22), Dazzling Trick cd 34->38s, Radiant Daggers T2 +80->+70, Shining Wonder radius 16.5->15.5m and T3 bounces +8->+6."
+   ],
+   "indirect_reasons": [
+    "Radiant Regeneration and Restorative Locket trims hit her sustain core, and as a flyer she eats air-drag slows and Silver's grounding bola.",
+    "Tempo punishes her late-scaling spirit-burst profile."
+   ],
+   "build_changes": [
+    "Witchmail's value rises as the anti-slow/CC answer now that slows bleed her air drag."
+   ],
+   "tier_before": "B",
+   "tier_after": "C",
+   "one_liner": "Seven nerfs plus item and flyer hits drop the late-scaling spirit burst carry."
+  }
+ ]
+}

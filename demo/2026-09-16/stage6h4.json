@@ -1,0 +1,22 @@
+{
+ "hero_updates": {
+  "Apollo": {
+   "why": "The tempo patch's clearest archetype winner despite no direct notes: gutted comeback souls and the scaling early-Rift resist turn his win-lane/invade/escape tempo into real wins, and his spirit core lost nothing — only his secondary Restorative Locket sustain line was trimmed. The 49.3% WR / 21.3% PR is a 14-day pre-patch baseline, so hold the S read loosely; Riposte (08-12) keeps his duel/escape tool free.",
+   "notes": "09-16: no direct changes — structural economy/Rift shifts favor his tempo; the Restorative Locket nerf dents only his support line.\nOld core_items (Fortitude) had zero usage; data says pure spirit, so reworked to Extra Spirit/Mystic Burst/Improved Spirit cores.\n'Super buffed this patch' (heresy 09-17) is creator inference, not measured — his 49.3% WR is a pre-patch baseline, so hold the size of the buff loosely."
+  },
+  "Silver": {
+   "why": "An S-tier gun tank built for this patch: gun cycle now survives dashes/light melee, health/boon rose 28->31 with sprint 1.5->2.5, and Weighted Bola grounds and interrupts flyers — a front-line DPS tank who wants fights started early, exactly what the lane-wins economy rewards. Her ceiling is stacked CC (Mo & Krill, Bebop) and she still drops her two qualified matchups (Lash, Drifter); the 46.7% WR is a pre-patch lagging number.",
+   "notes": "09-16: health/boon 28->31, sprint 1.5->2.5, and Weighted Bola now grounds/interrupts flyers — direct buffs; tier S held.\nMatchups: data lists Lash and Drifter under both beats and loses_to at 45%; treated as losing records (45% < 50%).\nLow-confidence: no post-patch WR exists (14-day snapshot is mostly pre-patch), so the S/rising call leans on creator consensus and the meta thesis; anti-flyer value of Weighted Bola is inferred."
+  },
+  "Celeste": {
+   "tier": "C",
+   "why": "Late-scaling flying spirit burst is the wrong profile for a lane-wins tempo meta: comeback souls are gone, early-Rift fights are real, and the new air-drag slow bleeds her mid-flight. Seven direct 09-16 nerfs stack on Radiant Regeneration and Restorative Locket trims, dropping her from B to C; the 54.6% WR / 26.4% PR is a pre-patch baseline, and she still bursts squishy melee threats (Yamato, Pocket) but folds to sustain and mobile initiators.",
+   "notes": "09-16: tier reassessed B -> C (was trending B) — the seven-nerf stack below plus the air-drag flyer tax; Witchmail remains her anti-slow answer.\n54.6% WR / 26.4% PR is a 14-day, mostly pre-patch snapshot — treat as a ceiling, not current strength.\n09-16: seven direct nerfs plus indirect item, scaling, and air-drag hits."
+  }
+ },
+ "change_log": [
+  "Apollo: why + notes refreshed — confirmed S (rising); no direct notes changes, only his Restorative Locket support line was trimmed by the item nerf, last_changed stays 08-12.",
+  "Silver: why + notes refreshed with concrete 09-16 buffs (health/boon 28->31, sprint 1.5->2.5, anti-air Weighted Bola); tier S / rising held.",
+  "Celeste: tier B -> C (seven direct nerfs + Radiant Regeneration/Restorative Locket trims + air-drag slow on a flying late scaler); why + notes updated."
+ ]
+}

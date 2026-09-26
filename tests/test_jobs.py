@@ -93,6 +93,7 @@ def env(tmp_path, kb, entity_index, monkeypatch):
 def test_analyze_and_post(env, tmp_path):
     channel = FakeChannel()
     commit = MagicMock(return_value="abc123")
+    sync = MagicMock(return_value=True)
     result = analyze_and_post(
         env["post"].gid,
         pool=["Wraith"],
@@ -104,6 +105,7 @@ def test_analyze_and_post(env, tmp_path):
         db=env["db"],
         repo_root=tmp_path,
         commit_fn=commit,
+        sync_fn=sync,
     )
     assert result.kind == "analyzed"
     # TL;DR sent first, then reactions, then thread
@@ -123,11 +125,13 @@ def test_analyze_and_post(env, tmp_path):
     paths = commit.call_args[0][1]
     assert env["kb"].patch_dir(result.patch_id) in paths
     assert env["kb"].heroes_path in paths
+    sync.assert_called_once_with(tmp_path)
 
 
 def test_hotfix_no_thread(env, tmp_path, entity_index):
     channel = FakeChannel()
     commit = MagicMock()
+    sync = MagicMock(return_value=True)
     small_post = SteamPost(
         gid="hf1",
         title="hotfix",
@@ -148,6 +152,7 @@ def test_hotfix_no_thread(env, tmp_path, entity_index):
         db=env["db"],
         repo_root=tmp_path,
         commit_fn=commit,
+        sync_fn=sync,
     )
     assert result.kind == "hotfix"
     assert channel.messages[0].thread is None
@@ -172,6 +177,7 @@ def test_default_llm_constructed(env, tmp_path, monkeypatch):
         db=env["db"],
         repo_root=tmp_path,
         commit_fn=MagicMock(),
+            sync_fn=MagicMock(),
     )
     assert len(constructed) == 1
 
@@ -189,6 +195,7 @@ def test_latest_dedupes_on_resolved_gid(env, tmp_path, monkeypatch):
         "db": env["db"],
         "repo_root": tmp_path,
         "commit_fn": MagicMock(),
+        "sync_fn": MagicMock(),
     }
     assert analyze_and_post("latest", **kwargs).kind == "analyzed"
     assert analyze_and_post("latest", **kwargs) is None
@@ -197,6 +204,7 @@ def test_latest_dedupes_on_resolved_gid(env, tmp_path, monkeypatch):
 def test_kb_update_failure_still_posts(env, tmp_path, monkeypatch):
     channel = FakeChannel()
     commit = MagicMock()
+    sync = MagicMock(return_value=True)
 
     def boom(*a, **kw):
         raise RuntimeError("output truncated")
@@ -213,6 +221,7 @@ def test_kb_update_failure_still_posts(env, tmp_path, monkeypatch):
         db=env["db"],
         repo_root=tmp_path,
         commit_fn=commit,
+        sync_fn=sync,
     )
     assert result.kind == "analyzed"
     assert result.kb_updated is False
@@ -249,6 +258,7 @@ def test_failure_attempts_and_skip(env, tmp_path, monkeypatch):
                 db=env["db"],
                 repo_root=tmp_path,
                 commit_fn=MagicMock(),
+            sync_fn=MagicMock(),
             )
     row = state.seen_get(env["post"].gid, env["db"])
     assert row["attempts"] == 3
@@ -260,6 +270,7 @@ def test_failure_attempts_and_skip(env, tmp_path, monkeypatch):
 def test_commit_failure_still_returns(env, tmp_path):
     channel = FakeChannel()
     commit = MagicMock(side_effect=RuntimeError("git exploded"))
+    sync = MagicMock(return_value=True)
     result = analyze_and_post(
         env["post"].gid,
         pool=[],
@@ -271,6 +282,7 @@ def test_commit_failure_still_returns(env, tmp_path):
         db=env["db"],
         repo_root=tmp_path,
         commit_fn=commit,
+        sync_fn=sync,
     )
     assert result.kind == "analyzed"
     assert result.kb_updated is True
@@ -297,6 +309,7 @@ def test_failure_notify_failures_false(env, tmp_path, monkeypatch):
             db=env["db"],
             repo_root=tmp_path,
             commit_fn=MagicMock(),
+            sync_fn=MagicMock(),
             notify_failures=False,
         )
     assert channel.sent == []

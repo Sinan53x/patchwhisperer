@@ -1,0 +1,140 @@
+{
+ "verdicts": [
+  {
+   "hero": "Venator",
+   "verdict": "keep",
+   "one_liner": "Ira Domini now chains Ricochet/Split Shot; still the better gun-carry slot than Haze.",
+   "direct": "Ira Domini now works with Ricochet and splits into 3 bolts, raising his late ceiling; his vitality items are untouched.",
+   "indirect": "Weakening Headshot shred trimmed -13->-12%, a small relative loss to Hollow Point buyers. The tempo meta still ends games before his tank items fully come online.",
+   "build_adjustments": [
+    "Keep Battle Vest as the first buy; Weakening Headshot into gun lanes is still correct."
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Haze",
+   "verdict": "keep",
+   "one_liner": "Fixation buff lifts her early-mid damage; weak T4 gun items still cap her ceiling.",
+   "direct": "Fixation headshot stacks 2->3 and higher T3 weapon scaling raise her early-mid damage.",
+   "indirect": "Gun-cycle smoothing helps her M1 tempo, but Plated Armor blocking on-hit spirit and weak T4 gun items cap her late game.",
+   "build_adjustments": [
+    "Play the cheap-attack-speed Fixation build; treat the Ricochet Tesla pivot as a fallback only."
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Wraith",
+   "verdict": "bench",
+   "one_liner": "On-hit spirit Wraith gutted: Magnum cut and Plated Armor now blanks Full Auto.",
+   "direct": "Card Trick heal 75->60, heal scaling 0.75->0.5, resist shred -8->-7% (T3 -5->-4%) and T3 Clubs slow cut.",
+   "indirect": "Mercurial Magnum cut (25->20%, 0.49->0.38), Plated Armor blocking Full Auto's spirit damage, and Spiritual Overflow's nerf delete her core build.",
+   "build_adjustments": [
+    "Drop the Mercurial Magnum/on-hit-spirit core.",
+    "If you must play her, rebuild pure sustain-gun or utility and respect Plated Armor buyers."
+   ],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Warden",
+   "verdict": "bench",
+   "one_liner": "Patch's clearest casualty: gun stats, flask, Willpower and both T4 finishers cut.",
+   "direct": "Bullet dmg/boon 0.28->0.25, fire-rate spirit scaling 0.25->0.21, flask range/speed -30%, and Willpower T3 spirit scaling and debuff resist cut.",
+   "indirect": "Mercurial Magnum and Spiritual Overflow are both gutted and Veil Walker lost Sprint Boots, removing his gun-curve ceiling.",
+   "build_adjustments": [
+    "Skip Mercurial Magnum and Spiritual Overflow; either spike earlier or leave him benched."
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Shiv",
+   "verdict": "keep",
+   "one_liner": "Knives current-HP and alt-fire buffed into the tank wave; only regen items trimmed.",
+   "direct": "Alt fire base damage +4% and per-boon +0.24; Serrated Knives now deals 3.5% current-HP on impact at full rage.",
+   "indirect": "Radiant Regeneration (97% core) and Restorative Locket trims hit his sustain core, and Tankbuster 8->7.5% softens his anti-tank slot.",
+   "build_adjustments": [
+    "Keep the spirit-regen core; lean on current-HP knives into the S-tier frontline."
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Yamato",
+   "verdict": "keep",
+   "one_liner": "Light-melee and heal scaling up; mobile burst assassin stays A in a tempo meta.",
+   "direct": "Crimson Slash T3 adds +0.4 heal spirit scaling, and Flying Slash light-melee scaling rises 1.0->1.2.",
+   "indirect": "Tankbuster 8->7.5% trims her late anti-tank luxury, but the Refresher-Unstoppable windows still suit the tempo meta.",
+   "build_adjustments": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Mina",
+   "verdict": "watch",
+   "one_liner": "Unchanged, but the tank/tempo meta eats her burst and Yamato owns her niche.",
+   "direct": "No direct changes.",
+   "indirect": "The tank/sustain frontline and tempo meta negate her single-target burst, and no item change lifts her. Effectively benched until a rework.",
+   "build_adjustments": [],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Paradox",
+   "verdict": "watch",
+   "one_liner": "Quick-scope carbine gutted; only the max-range sniper path now survives.",
+   "direct": "Kinetic Carbine min-damage multiplier 25->10% and no longer scaled by T3 kills the cheap close-range poke.",
+   "indirect": "Slowing Hex cd 27->29s trims her pick setup, and the tempo meta keeps punishing a stationary sniper.",
+   "build_adjustments": [
+    "Commit to the max-range HVR/Sharpshooter sniper line; abandon the quick-scope carbine poke."
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Mirage",
+   "verdict": "watch",
+   "one_liner": "Comeback gutting punishes his slow split-push scaling; Toxic Bullets is a small offset.",
+   "direct": "No direct changes.",
+   "indirect": "Gutted comeback souls and the now-competitive early Rift end games before his scaling map play comes online; the Toxic Bullets scaling buff barely offsets it.",
+   "build_adjustments": [
+    "Play for earlier tempo; do not bank on late split-push scaling."
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Infernus",
+   "verdict": "keep",
+   "one_liner": "Gun build lost its capstone; Dashfernus and the Toxic Bullets buff carry him.",
+   "direct": "No direct changes.",
+   "indirect": "Spiritual Overflow's nerf (spirit 40->30, fire rate 30->25%) hurts his burn-gun line; the Toxic Bullets spirit scaling buff offsets slightly.",
+   "build_adjustments": [
+    "Lean Dashfernus; move the gun build off Spiritual Overflow toward Toxic Bullets and Swift Striker."
+   ],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Holliday",
+   "verdict": "keep",
+   "one_liner": "Buffs plus longer-CC picks suit her; only her Veil Walker disengage is gone.",
+   "direct": "Crackshot T2 adds -6% bullet res, health/boon 41->43, and Lasso extends +1->+1.25s.",
+   "indirect": "The tempo meta and the 35->38s 20m respawn make her picks worth more; the Veil Walker strip removed her core disengage.",
+   "build_adjustments": [
+    "Replace the Veil Walker disengage; try the buffed Shadow Weave into Sprint Boots."
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Drifter",
+   "verdict": "keep",
+   "one_liner": "Early melee bruiser built for the tempo patch; only small item trims land.",
+   "direct": "No direct changes.",
+   "indirect": "Trophy Collector 18->16 souls/min and the Veil Walker nerf trim his anti-heal build, but the tempo/early-bruiser meta keeps his floor high.",
+   "build_adjustments": [],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Billy",
+   "verdict": "keep",
+   "one_liner": "Lane-bully frontline with buffed Lifestrike and Fortitude; rising Shiv is the risk.",
+   "direct": "No direct changes.",
+   "indirect": "Lifestrike buffed (120+1.75, 35% heal, slow now drags flyers) and Fortitude regen up, while the tempo meta rewards his lane-bully snowball; anti-tank Shiv rising is the main threat.",
+   "build_adjustments": [],
+   "confidence": 0.55
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "hero_updates": {
+  "Bebop": {
+   "trend": "falling",
+   "why": "Break-even hook initiator (~50% WR at a 54% PR) whose single-target lock-down still generates picks but converts less after the patch: his 77%-buy Veil Walker lost Sprint Boots and movespeed-on-break, and his slows were trimmed (Slowing Hex cd 27->29s, global slows -20%). He neither snowballs nor scales into a tempo meta full of tanks and sustain."
+  },
+  "Holliday": {
+   "why": "The tempo patch is shaped for her: with comeback souls gutted, lane winners snowball and the 20m respawn bump (35->38s) makes her Spirit Lasso picks worth more, while Crackshot T2 shred and a longer Lasso raise her pick value. Caveat: the Veil Walker rework stripped her disengage, so entries now commit harder, and her 48.6% WR is a pre-patch, pilot-conditional baseline."
+  },
+  "Warden": {
+   "tier": "C",
+   "why": "The patch's clearest casualty: bullet damage/boon, Alchemical Flask range/speed and Willpower T3 were all cut and both T4 gun finishers (Mercurial Magnum, Spiritual Overflow) were nerfed, so his late-scaler ceiling is gone in a meta that ends games early. The silence cage keeps him pickable, but he lands at C rather than balanced.",
+   "core_items": [
+    "High-Velocity Rounds",
+    "Opening Rounds",
+    "Extended Magazine",
+    "Swift Striker",
+    "Titanic Magazine",
+    "Quicksilver Reload",
+    "Fleetfoot",
+    "Shadow Weave",
+    "Spirit Lifesteal"
+   ],
+   "builds": [
+    {
+     "name": "Gun carry",
+     "damage": "gun",
+     "core_items": [
+      "High-Velocity Rounds",
+      "Opening Rounds",
+      "Extended Magazine",
+      "Swift Striker",
+      "Titanic Magazine",
+      "Quicksilver Reload",
+      "Fleetfoot"
+     ],
+     "popularity": "primary",
+     "notes": "Stack weapon tiers to farm fast and stat-check, then play for the mid-game spike before tempo closes; the old T4 capstone (Mercurial Magnum/Spiritual Overflow) was nerfed this patch, so the late slot must be re-routed to another line."
+    },
+    {
+     "name": "Cage bruiser",
+     "damage": "hybrid",
+     "core_items": [
+      "Shadow Weave",
+      "Spirit Lifesteal",
+      "Enduring Speed",
+      "Sprint Boots"
+     ],
+     "popularity": "secondary",
+     "notes": "Shadow Weave — now carrying Sprint Boots, faster sprint and a 37s cooldown — replaces the stripped Veil Walker as the invis-engage shell for walking up to land the silence cage."
+    }
+   ],
+   "notes": "Item data shows one dominant gun build; the 'cage build' is a Willpower skill choice, not a separate item path — creators' 'cage' tag overstates it.\nMatchup WRs are the 14-day, mostly pre-09-16 snapshot — use as baseline only.\n09-16: bullet dmg/boon, flask range/speed, Willpower T3 cut; Mercurial Magnum + Spiritual Overflow nerfed, Veil Walker lost Sprint Boots/movespeed-on-break."
+  },
+  "Viscous": {
+   "tier": "C",
+   "why": "Cube rescue still wins games, but the 09-16 trims to Cube cast range (26->20m), Puddle Punch cooldown (21->24s) and Splatter/alt-fire remove the tools that carried him, the tempo meta punishes a scaling enabler, and his cooldown-Cube shell lost Veil Walker's Sprint Boots and movespeed-on-break. Creators' S read is July/pre-nerf, so he settles at C until a post-patch WR shows otherwise.",
+   "notes": "Disagreement: creators call Decay/Echo Shard core, but usage data has neither in his top 15 — Mystic Burst (94%) and High-Velocity Rounds (81%) lead, so the real shell is spirit-hybrid plus cooldown items, not Echo Shard resets.\nTier set to C: creators' S read is July (pre-nerf) and 51.5%/23.4% is a pre-09-16 snapshot, so the nerfs land him at C, not B.\n09-16: Cube cast range 26->20m, Puddle Punch cooldown 21->24s, Splatter/alt-fire nerfs, Goo Ball T3 scaling buff; cooldown-Cube shell also lost Veil Walker's Sprint Boots/movespeed-on-break."
+  }
+ },
+ "change_log": [
+  "Bebop: trend stable -> falling (77%-buy Veil Walker lost Sprint Boots/movespeed-on-break; Slowing Hex cd 27->29s and global slows -20%); why rewritten around the loss.",
+  "Warden: tier B -> C (bullet dmg/boon, flask range/speed, Willpower T3 cuts; Mercurial Magnum + Spiritual Overflow nerfed); core_items and builds re-routed off the dead T4 finishers with Shadow Weave added as the new invis-engage; notes changelog updated.",
+  "Viscous: tier B -> C (Cube range 26->20m, Puddle Punch cd 21->24s, Splatter/alt-fire nerfs; cooldown-Cube shell lost Veil Walker); why and confidence note updated.",
+  "Holliday: why updated to treat the Veil Walker disengage loss as a hard commit constraint (still A/rising, no tier move)."
+ ]
+}

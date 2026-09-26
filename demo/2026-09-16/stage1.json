@@ -1,0 +1,151 @@
+{
+ "systems_changed": [
+  {
+   "system": "comeback economy",
+   "change_summary": "Comeback souls are gutted across three levers: the flat forgiveness bonus for being slightly behind is removed, comeback bounties are trimmed, and Rift resist now scales from ~10% up to a 40% cap at 30m instead of a flat 35%. Extra comeback value is rerouted to the two lowest-net-worth players via tick gold rather than paid to whoever holds the lead.",
+   "driving_changes": [
+    "Removed a fixed amount of extra bonus souls you would get for being behind even a very slightly amount in net worth",
+    "Slightly reduced comeback bounties in general",
+    "Unstable Rift comeback resist now 10% + 1% per minute, cap 40% at 30m (was flat 35%)",
+    "A portion of the comeback souls earned by players above enemy teams average net worth is instead distributed via tick gold to the lowest 2 players"
+   ],
+   "magnitude": "major",
+   "effect_on_play": "Losing lane is now a real, compounding deficit instead of a temporary one; the fed player can no longer be bailed out by a single kill, and early Unstable Rift fights become genuine contests rather than free resist-farming for the behind team. This is the single biggest swing in the patch."
+  },
+  {
+   "system": "objectives",
+   "change_summary": "Guardian bounty +10%, Walker +5%, but the share that goes to heroes standing nearby drops 30%->25%, with the remainder spread to all six players. Objective value is up in total but less concentrated on the players who actually take it.",
+   "driving_changes": [
+    "Guardian bounty increased by 10%",
+    "Walker bounty increased by 5%",
+    "Share for objectives bounty to nearby heroes reduced from 30% to 25%"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Taking map objectives is worth more to the team as a whole, so coordinated pushes still pay, but the individual snowballer who solos a Guardian gets a smaller personal spike. Slightly flattens intra-team econ from objectives while raising the pie."
+  },
+  {
+   "system": "respawn timers",
+   "change_summary": "Respawn at 20 minutes rises 35s->38s; the max later-game values are unchanged.",
+   "driving_changes": [
+    "Respawn Time at 20 minutes increased from 35s to 38s"
+   ],
+   "magnitude": "minor",
+   "effect_on_play": "A death in the mid-game costs marginally more map time, nudging the punishment for overextending in the tempo window. Small on its own."
+  },
+  {
+   "system": "movement and slows",
+   "change_summary": "All move slows cut ~20% and ground-dash slows ~10%, but slows now also bite air drag at 35% of their value. Ground mobility gets smoother; flight gets punished by the same CC that used to ignore it.",
+   "driving_changes": [
+    "All move slow values reduced by ~20% globally",
+    "All ground dash slows reduced by ~10% globally",
+    "Slows now also affect air drag by 35% of the slow value"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Ground kiting and escape get easier, so slows are a weaker lockdown tool in lane and skirmish; conversely flies become a liability, since any slow now drags them and chains into follow-up. Net shift of power off airborne heroes toward grounded mobile ones."
+  },
+  {
+   "system": "parry / reload / stun",
+   "change_summary": "Parry now pauses reload rather than restarting it, a dash can be cancelled into an on-the-spot parry, and stuns pause reload instead of resetting it.",
+   "driving_changes": [
+    "Using parry now pauses reloading",
+    "Parrying while doing a regular dash will now cancel the dash (and momentum) and parry on the spot",
+    "Getting stunned now pauses your reload rather than restarting it"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Defensive tech is cheaper: you no longer lose reload progress to parry or to a stun, and the dash-cancel parry gives a reactive block/parry option that previously cost momentum and cycle time. Rewards precise, reactive play and raises the ceiling on duel-heavy interactions."
+  },
+  {
+   "system": "gun cycle time",
+   "change_summary": "Dashes and light melee no longer pause the gun's cycle time, so weaving movement or melee into a fight stops costing you shots.",
+   "driving_changes": [
+    "Dashes and light melee's no longer pause your gun's cycle time"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Direct buff to shotgun/burst-cycle weapons and brawlers who attack while repositioning (high-cycle builds gain the most) and to melee-in-gun duels. Tightens the burst window for aggressive gun play, reinforcing the tempo direction."
+  },
+  {
+   "system": "jungle / tunnels",
+   "change_summary": "Underground tunnel breakables spawn later (3m->5m) and respawn slower (3m->5m).",
+   "driving_changes": [
+    "Breakables in the underground tunnels initial spawn time increased from 3m to 5m",
+    "Breakables in the underground tunnels respawn rate increased from 3m to 5m"
+   ],
+   "magnitude": "minor",
+   "effect_on_play": "Small hit to early jungle income from the tunnel route, mildly delaying the first farm spike and shifting value toward lane income and kills."
+  }
+ ],
+ "tempo_shift": {
+  "direction": "toward_tempo",
+  "confidence": 0.9,
+  "why": "Comeback souls are gutted on three fronts, rift resist no longer gifts the behind team, and the movement/reload/gun-cycle changes speed up aggressive dueling, so winning lane and snowballing now convert directly into the game rather than being refunded later."
+ },
+ "archetype_effects": [
+  {
+   "archetype": "lane bully",
+   "direction": "up",
+   "magnitude": "major",
+   "why": "Comeback bounty removal plus Guardian +10% means winning lane now compounds instead of being refunded."
+  },
+  {
+   "archetype": "gun carry",
+   "direction": "up",
+   "magnitude": "moderate",
+   "why": "Dashes and light melee no longer pause gun cycle time, disproportionately helping high-cycle weapons (Silver, Abrams-style)."
+  },
+  {
+   "archetype": "late scaler",
+   "direction": "down",
+   "magnitude": "major",
+   "why": "Gutted comeback souls and the scaling rift resist remove the safety net that let scalers absorb an early deficit."
+  },
+  {
+   "archetype": "mobile assassin",
+   "direction": "up",
+   "magnitude": "moderate",
+   "why": "Global slow reduction eases grounded escapes, and dash-cancel parry adds a cheap reactive option; tempo win-lane dynamics favor them."
+  },
+  {
+   "archetype": "burst caster",
+   "direction": "down",
+   "magnitude": "moderate",
+   "why": "Post-comeback-economy nerfs, casters that need to reach a spike are punished, and the gun-cycle change favors sustained gun damage over ability bursts in the tempo window."
+  },
+  {
+   "archetype": "tank/frontline",
+   "direction": "up",
+   "magnitude": "minor",
+   "why": "Tank core items untouched and reload now pauses through stuns/parry, but no direct system buff lands here."
+  },
+  {
+   "archetype": "poke/siege",
+   "direction": "down",
+   "magnitude": "moderate",
+   "why": "Slows now bite air drag at 35%, and airborne/poke heroes lose positioning safety while the game rewards early close-range aggression."
+  },
+  {
+   "archetype": "split pusher",
+   "direction": "neutral",
+   "magnitude": "minor",
+   "why": "Objective bounties rise (Guardian +10%, Walker +5%) but the local 30%->25% share spreads value across the team, roughly offsetting for the individual pusher."
+  },
+  {
+   "archetype": "support/healer",
+   "direction": "neutral",
+   "magnitude": "minor",
+   "why": "No systems change targets healing directly; the healing nerfs are item-side and not counted here."
+  },
+  {
+   "archetype": "initiator",
+   "direction": "up",
+   "magnitude": "minor",
+   "why": "Reactive dash-cancel parry and lower global slows make it easier to initiate into a fight without losing cycle time or reload."
+  },
+  {
+   "archetype": "spirit carry",
+   "direction": "down",
+   "magnitude": "moderate",
+   "why": "Scaling-reliant spirit builds lose the comeback economy and the early rift safety net that bought them time to spike."
+  }
+ ],
+ "intent_read": "Valve is closing the comeback valve so laning and early map pressure decide games, while softening combat feel (reload/parry no longer punish, gun cycle no longer pauses) to reward aggressive high-APM dueling. The air-drag slow adds a specific tax on airborne heroes, and the objective-share change spreads econ team-wide to blunt single-player snowball while keeping objectives worth fighting for."
+}

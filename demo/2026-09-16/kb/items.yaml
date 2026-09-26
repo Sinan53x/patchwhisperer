@@ -1,0 +1,1415 @@
+Toxic Bullets:
+  name: Toxic Bullets
+  role: anti-heal DoT weapon item
+  bought_by:
+  - Drifter
+  - Graves
+  - Infernus
+  - Mirage
+  slot: Weapon
+  tier: 2
+  notes: '09-16: spirit scaling 0.005->0.006%. Core burn/anti-heal slot and one of
+    the few real answers to inflated HP.'
+Fortitude:
+  name: Fortitude
+  role: sustain vitality item
+  bought_by:
+  - Infernus
+  - Seven
+  - Abrams
+  - Mo & Krill
+  - Shiv
+  - Warden
+  - Victor
+  - Paige
+  - The Doorman
+  - Billy
+  - Apollo
+  - Rem
+  - Silver
+  - Venator
+  - Celeste
+  - Dynamo
+  - Kelvin
+  - Vindicta
+  - Vyper
+  slot: Vitality
+  tier: 3
+  notes: '09-16: max-health regen 2->2.25%. The default survivability slot on almost
+    every bruiser.'
+Bullet Lifesteal:
+  name: Bullet Lifesteal
+  role: sustain weapon item
+  bought_by:
+  - Infernus
+  - Venator
+  slot: Weapon
+  tier: 2
+  notes: Unchanged; standard early lifesteal on gun carries.
+Decay:
+  name: Decay
+  role: anti-heal spirit item
+  bought_by:
+  - Infernus
+  - Lady Geist
+  - Abrams
+  - Mo & Krill
+  - Shiv
+  - Viscous
+  - Drifter
+  - Rem
+  - Billy
+  slot: Spirit
+  tier: 3
+  notes: '09-16: DPS -25% but duration +20% — trades burst healing-cut for better
+    late scaling. Still the go-to anti-heal slot.'
+Hollow Point:
+  name: Hollow Point
+  role: early weapon shred item
+  bought_by:
+  - Seven
+  - Vindicta
+  - Vyper
+  - Venator
+  - Silver
+  - Grey Talon
+  slot: Weapon
+  tier: 2
+  notes: '09-16: bullet resist reduction 9->10%. The cheap early-gun item of the tempo
+    meta.'
+Burst Fire:
+  name: Burst Fire
+  role: fire-rate weapon item
+  bought_by:
+  - Haze
+  - Seven
+  - Vindicta
+  - Vyper
+  slot: Weapon
+  tier: 2
+  notes: Unchanged; standard early burst weapon scaling.
+Titanic Magazine:
+  name: Titanic Magazine
+  role: ammo weapon item
+  bought_by:
+  - Infernus
+  - Ivy
+  - Mirage
+  - Seven
+  - Warden
+  slot: Weapon
+  tier: 3
+  notes: No recent change.
+High-Velocity Rounds:
+  name: High-Velocity Rounds
+  role: utility weapon item
+  bought_by:
+  - Celeste
+  - Grey Talon
+  - Paige
+  - Paradox
+  - Rem
+  - Sinclair
+  - Victor
+  - Vindicta
+  - Viscous
+  - Warden
+  slot: Weapon
+  tier: 2
+  notes: No recent change.
+Long Range:
+  name: Long Range
+  role: poke weapon item
+  bought_by:
+  - Grey Talon
+  - Paradox
+  - Vindicta
+  slot: Weapon
+  tier: 2
+  notes: No recent change.
+Boundless Spirit:
+  name: Boundless Spirit
+  role: spirit power item
+  bought_by:
+  - Apollo
+  - Calico
+  - Celeste
+  - Grey Talon
+  - Kelvin
+  - Lady Geist
+  - Mina
+  - Pocket
+  - The Doorman
+  slot: Spirit
+  tier: 3
+  notes: No recent change; the premier spirit-power stat stick.
+Mystic Reverb:
+  name: Mystic Reverb
+  role: spirit damage amp
+  bought_by:
+  - Lady Geist
+  - Yamato
+  - Mina
+  slot: Spirit
+  tier: 3
+  notes: No recent change.
+Witchmail:
+  name: Witchmail
+  role: tank vitality item
+  bought_by:
+  - Abrams
+  - Billy
+  - Celeste
+  - Shiv
+  slot: Vitality
+  tier: 3
+  notes: Core late-game survivability buy that makes fat tanks unkillable.
+Ethereal Shift:
+  name: Ethereal Shift
+  role: defensive active
+  bought_by:
+  - Abrams
+  slot: Vitality
+  tier: 3
+  notes: '07-28: cooldown 35->37s.'
+Capacitor:
+  name: Capacitor
+  role: CC/utility item
+  bought_by:
+  - Haze
+  - Ivy
+  - Wraith
+  slot: Weapon
+  tier: 3
+  notes: 09-16 Plated Armor fix means its on-hit spirit damage is now actually blocked
+    — a small indirect nerf.
+Slowing Hex:
+  name: Slowing Hex
+  role: CC active
+  bought_by:
+  - Bebop
+  - Billy
+  - Paige
+  - Paradox
+  - Silver
+  - The Doorman
+  - Wraith
+  slot: Spirit
+  tier: 3
+  notes: '09-16: cooldown 27->29s. Still a near-every-game buy on pick heroes, now
+    also a real slow given air-drag change.'
+Lucky Shot:
+  name: Lucky Shot
+  role: on-hit weapon item
+  bought_by:
+  - Wraith
+  - Haze
+  slot: Weapon
+  tier: 3
+  notes: No recent change.
+Heroic Aura:
+  name: Heroic Aura
+  role: team aura vitality item
+  bought_by:
+  - Graves
+  - McGinnis
+  slot: Vitality
+  tier: 3
+  notes: No recent change.
+Superior Duration:
+  name: Superior Duration
+  role: ability duration item
+  bought_by:
+  - Abrams
+  - Drifter
+  - Graves
+  - Holliday
+  - Infernus
+  - Ivy
+  - McGinnis
+  - Mo & Krill
+  - Pocket
+  - Rem
+  - Sinclair
+  slot: Spirit
+  tier: 2
+  notes: No recent change.
+Echo Shard:
+  name: Echo Shard
+  role: ability reset item
+  bought_by:
+  - Paradox
+  - Haze
+  - Bebop
+  - Calico
+  - Ivy
+  - Viscous
+  - Pocket
+  - Mirage
+  - Sinclair
+  - Mina
+  - The Doorman
+  - Victor
+  - Billy
+  - Graves
+  - Celeste
+  - Yamato
+  slot: Spirit
+  tier: 4
+  notes: '07-28: post-cast 0.5s, lost +5% fire rate, cooldown now 30s + imbued ability
+    cd — a real cap on the double-cast cheese builds, though it remains the connective
+    tissue of the meta.'
+Superior Cooldown:
+  name: Superior Cooldown
+  role: cooldown item
+  bought_by:
+  - Apollo
+  - Bebop
+  - Dynamo
+  - Holliday
+  - Mo & Krill
+  - Paige
+  - Paradox
+  - Pocket
+  - Shiv
+  - Sinclair
+  - The Doorman
+  - Viscous
+  slot: Spirit
+  tier: 3
+  notes: No recent change.
+Refresher:
+  name: Refresher
+  role: ultimate reset item
+  bought_by:
+  - Dynamo
+  - Victor
+  - Yamato
+  slot: Spirit
+  tier: 4
+  notes: Unchanged; what makes Dynamo, Victor and Yamato swing fights.
+Diviner's Kevlar:
+  name: Diviner's Kevlar
+  role: ultimate/defense item
+  bought_by:
+  - Dynamo
+  - Silver
+  slot: Vitality
+  tier: 3
+  notes: '09-16: now grants +10% Ultimate Ability CDR; 07-28: spirit power +35->+40.'
+Radiant Regeneration:
+  name: Radiant Regeneration
+  role: healing spirit item
+  bought_by:
+  - Celeste
+  - Kelvin
+  - Lady Geist
+  - Shiv
+  slot: Spirit
+  tier: 3
+  notes: 08-22 heal on cast 70->65 and 09-16 per-boon scaling 2->1.7 — cumulative
+    nerf to healing supports.
+Healing Nova:
+  name: Healing Nova
+  role: team heal item
+  bought_by:
+  - Kelvin
+  - Ivy
+  - Rem
+  slot: Vitality
+  tier: 3
+  notes: No recent change; part of the support-sustain package.
+Healbane:
+  name: Healbane
+  role: anti-heal vitality item
+  bought_by:
+  - Apollo
+  - Drifter
+  - Infernus
+  - Ivy
+  - Kelvin
+  - McGinnis
+  - Mirage
+  - Mo & Krill
+  - Seven
+  - Shiv
+  - Yamato
+  slot: Vitality
+  tier: 2
+  notes: No recent change.
+Ricochet:
+  name: Ricochet
+  role: multi-target weapon item
+  bought_by:
+  - Graves
+  - Haze
+  - Mirage
+  - Wraith
+  slot: Weapon
+  tier: 4
+  notes: No recent change; still the AFK-farm enabler and now pairs with Venator's
+    ricocheting ult.
+Tesla Bullets:
+  name: Tesla Bullets
+  role: on-hit spirit damage item
+  bought_by:
+  - Haze
+  - Ivy
+  slot: Weapon
+  tier: 3
+  notes: Now actually blocked by Plated Armor after the 09-16 fix.
+Veil Walker:
+  name: Veil Walker
+  role: invisibility utility item
+  bought_by:
+  - Bebop
+  - Drifter
+  - Holliday
+  - The Doorman
+  - Viscous
+  - Warden
+  slot: Vitality
+  tier: 3
+  notes: '09-16 nerf: no longer builds from Sprint Boots (lost +2 sprint/regen), movespeed
+    removed when invis drops, spirit power 10->6 — no longer an auto-buy, now a pick-hero
+    item.'
+Recharging Rush:
+  name: Recharging Rush
+  role: ability charge item
+  bought_by:
+  - Holliday
+  - Lash
+  slot: Spirit
+  tier: 3
+  notes: No direct change this patch; still the Holliday/Lash double-spell enabler.
+Rapid Recharge:
+  name: Rapid Recharge
+  role: ability charge item
+  bought_by:
+  - Calico
+  - Grey Talon
+  - Holliday
+  - Infernus
+  - Kelvin
+  - McGinnis
+  - Sinclair
+  - The Doorman
+  - Venator
+  - Vindicta
+  slot: Spirit
+  tier: 2
+  notes: Niche; the core of the 'nine spells' Holliday cheese.
+Extra Charge:
+  name: Extra Charge
+  role: ability charge item
+  bought_by:
+  - Bebop
+  - Dynamo
+  - Grey Talon
+  - Holliday
+  - Kelvin
+  - Lash
+  - McGinnis
+  - Paige
+  - Rem
+  - Shiv
+  - Sinclair
+  - The Doorman
+  - Venator
+  - Vindicta
+  slot: Spirit
+  tier: 2
+  notes: No recent change.
+Superior Stamina:
+  name: Superior Stamina
+  role: mobility item
+  bought_by:
+  - Calico
+  - Lash
+  - Mina
+  slot: Vitality
+  tier: 2
+  notes: No recent change.
+Sharpshooter:
+  name: Sharpshooter
+  role: long-range weapon item
+  bought_by:
+  - Grey Talon
+  - Lash
+  - Paradox
+  - Vindicta
+  slot: Weapon
+  tier: 3
+  notes: No recent change.
+Mystic Shot:
+  name: Mystic Shot
+  role: spirit proc weapon item
+  bought_by:
+  - Graves
+  - Grey Talon
+  - Lash
+  - Viscous
+  - Yamato
+  slot: Weapon
+  tier: 2
+  notes: '07-28: cooldown 9->8s, spirit scaling 1.2->0.9 — better uptime, less burst.'
+Scourge:
+  name: Scourge
+  role: max-health AoE spirit item
+  bought_by:
+  - Mo & Krill
+  - Mirage
+  - Billy
+  slot: Spirit
+  tier: 3
+  notes: '07-28: lost innate debuff resist, active now grants +20%; max-health/s 2.5->2.3%.
+    Still the best enabler on tanky AoE heroes and the item ''Scrooge'' refers to.'
+Tankbuster:
+  name: Tankbuster
+  role: anti-tank weapon item
+  bought_by:
+  - Apollo
+  - Drifter
+  - Grey Talon
+  - Holliday
+  - Lash
+  - Mina
+  - Mo & Krill
+  - Paradox
+  - Pocket
+  - Shiv
+  - Silver
+  - The Doorman
+  - Viscous
+  - Yamato
+  slot: Weapon
+  tier: 3
+  notes: '07-28: no longer procs off items; 09-16 current-health bonus 8->7.5% — cumulative
+    trim to the anti-tank slot.'
+Healing Tempo:
+  name: Healing Tempo
+  role: support healing item
+  bought_by:
+  - Ivy
+  - Paige
+  slot: Vitality
+  tier: 3
+  notes: No recent change; core to Ivy's sustain build.
+Mercurial Magnum:
+  name: Mercurial Magnum
+  role: spirit on-hit item
+  bought_by:
+  - Vyper
+  - Warden
+  - Wraith
+  slot: Spirit
+  tier: 3
+  notes: '09-16: base bullet damage scaling 0.49->0.38 and base damage 25->20% — a
+    heavy nerf that helps kill the Mercurial + Spiritual Overflow build.'
+Spiritual Overflow:
+  name: Spiritual Overflow
+  role: spirit proc/steroid item
+  bought_by:
+  - Infernus
+  - Warden
+  slot: Spirit
+  tier: 3
+  notes: '09-16: buildup 35% slower, spirit power 40->30, fire rate 30->25% (on top
+    of 07-28 changes); the Mercurial-carry build is dead.'
+Spirit Snatch:
+  name: Spirit Snatch
+  role: spirit steal item
+  bought_by:
+  - Apollo
+  - Bebop
+  - Billy
+  - Calico
+  - Drifter
+  - Viscous
+  - Yamato
+  slot: Spirit
+  tier: 3
+  notes: No recent change.
+Headhunter:
+  name: Headhunter
+  role: gun burst item
+  bought_by:
+  - Bebop
+  - Lash
+  - Paradox
+  slot: Weapon
+  tier: 3
+  notes: No recent change.
+Inhibitor:
+  name: Inhibitor
+  role: damage-penalty green item
+  bought_by:
+  - Mirage
+  slot: Vitality
+  tier: 4
+  notes: No recent change; the damage-penalty stat is still the strongest debuff in
+    the game.
+Monster Rounds:
+  name: Monster Rounds
+  role: jungle/econ weapon item
+  bought_by:
+  - Abrams
+  - Billy
+  - Ivy
+  - Lady Geist
+  - McGinnis
+  - Mirage
+  - Pocket
+  - Seven
+  - Sinclair
+  - Venator
+  - Wraith
+  slot: Weapon
+  tier: 1
+  notes: No recent change; part of the Venator no-item stat package.
+Weakening Headshot:
+  name: Weakening Headshot
+  role: shred weapon item
+  bought_by:
+  - Venator
+  slot: Weapon
+  tier: 3
+  notes: '09-16: bullet resist reduction -13%->-12%, a nudge down.'
+Knockdown:
+  name: Knockdown
+  role: CC active
+  bought_by:
+  - Paige
+  slot: Spirit
+  tier: 3
+  notes: No recent change; the CC-slop item wrapped around Paige's kit.
+Lifestrike:
+  name: Lifestrike
+  role: melee heal/CC weapon item
+  bought_by:
+  - Billy
+  slot: Weapon
+  tier: 3
+  notes: '09-16: melee-heal 100+1.5 -> 120+1.75 and 30->35%; with slows now affecting
+    air drag, its 48% slow makes it a strong CC item, especially spammed by Billy.'
+Dispel Magic:
+  name: Dispel Magic
+  role: cleanse utility item
+  bought_by:
+  - Abrams
+  - Apollo
+  - Lash
+  - Mina
+  - Mirage
+  - Pocket
+  - Wraith
+  slot: Vitality
+  tier: 3
+  notes: No recent change; near-mandatory sustain/cleanse.
+Restorative Locket:
+  name: Restorative Locket
+  role: sustain utility item
+  bought_by:
+  - Apollo
+  - Celeste
+  slot: Vitality
+  tier: 3
+  notes: '09-16: heal per boon 0.5->0.45, stack range 35->32m; 08-22 spirit resist
+    10->8%. Still viable for the stamina/utility.'
+Divine Barrier:
+  name: Divine Barrier
+  role: cleanse shield item
+  bought_by:
+  - Rem
+  slot: Vitality
+  tier: 3
+  notes: No recent change.
+Berserker:
+  name: Berserker
+  role: low-HP damage item
+  bought_by:
+  - Lady Geist
+  - Silver
+  - Venator
+  slot: Weapon
+  tier: 3
+  notes: No recent change.
+Shadow Weave:
+  name: Shadow Weave
+  role: invis weapon item
+  bought_by: []
+  slot: Weapon
+  tier: 3
+  notes: '09-16: now builds from Sprint Boots, sprint speed 1.5->2, cooldown 45->37s
+    — buffed, but creators still call it poor.'
+Cultist Sacrifice:
+  name: Cultist Sacrifice
+  role: econ spirit item
+  bought_by:
+  - Pocket
+  - Seven
+  slot: Spirit
+  tier: 3
+  notes: '09-16: bounty 180->170%; soul-gen trimmed as part of the economy tightening.'
+Ballistic Enchantment:
+  name: Ballistic Enchantment
+  role: utility spirit item
+  bought_by: []
+  slot: Spirit
+  tier: 3
+  notes: '09-16: duration 14->20s.'
+Trophy Collector:
+  name: Trophy Collector
+  role: econ item
+  bought_by:
+  - Drifter
+  - Mo & Krill
+  slot: Vitality
+  tier: 2
+  notes: '09-16: souls/min 18->16; part of the soul-economy trim.'
+Leech:
+  name: Leech
+  role: lifesteal item
+  bought_by: []
+  slot: Vitality
+  tier: 4
+  notes: '09-16: bullet+spirit lifesteal 25->28%; still generally weak.'
+Plated Armor:
+  name: Plated Armor
+  role: on-hit defense item
+  bought_by: []
+  slot: Vitality
+  tier: 3
+  notes: '09-16 bug fix: now actually blocks on-hit spirit damage from Mercurial Magnum,
+    Vindicta''s Flight, Wraith''s Full Auto, Tesla Bullets/Capacitor — a big indirect
+    nerf to those builds and an anti-mixed-damage counter.'
+Golden Goose Egg:
+  name: Golden Goose Egg
+  role: econ item
+  bought_by: []
+  slot: Vitality
+  tier: 4
+  notes: '09-16: damage penalty -10->-15%, souls/min 90->80, stored souls now count
+    toward net worth — effectively unbuyable; the patch''s worst item.'
+Focus Lens:
+  name: Focus Lens
+  role: spirit amp item
+  bought_by: []
+  slot: Spirit
+  tier: 3
+  notes: '09-16: damage 30->35%, cast range 20->25m; still cleansable, so niche.'
+Crushing Fists:
+  name: Crushing Fists
+  role: melee weapon item
+  bought_by: []
+  slot: Weapon
+  tier: 3
+  notes: '07-28: max-stack stun 0.5->0.75s, bullet-resist shred -4->-5% per stack.'
+Cursed Relic:
+  name: Cursed Relic
+  role: debuff spirit item
+  bought_by: []
+  slot: Spirit
+  tier: 3
+  notes: '07-28: lost innate -14% damage output, now applies -25% for 3.25s — the
+    CC/debuff-slop role creators call ''Curse''.'
+Frenzy:
+  name: Frenzy
+  role: low-HP steroid item
+  bought_by: []
+  slot: Weapon
+  tier: 3
+  notes: '07-28: gained +10% innate bullet lifesteal.'
+Fury Trance:
+  name: Fury Trance
+  role: active steroid item
+  bought_by: []
+  slot: Weapon
+  tier: 3
+  notes: '07-28: active grants +1m move speed and removes shooting move-speed penalty
+    (Fleetfoot-like).'
+Slowing Bullets:
+  name: Slowing Bullets
+  role: slow weapon item
+  bought_by: []
+  slot: Weapon
+  tier: 2
+  notes: '07-28: lost +15% weapon damage; more relevant now that slows hit air drag.'
+Weighted Shots:
+  name: Weighted Shots
+  role: slowing weapon item
+  bought_by: []
+  slot: Weapon
+  tier: 3
+  notes: '07-28: weapon damage 40->30%.'
+Spirit Burn:
+  name: Spirit Burn
+  role: spirit DoT item
+  bought_by:
+  - Mina
+  - Pocket
+  slot: Spirit
+  tier: 3
+  notes: '07-28: no longer AoE (single target), target-based cooldown, explosion 110->50.'
+Suppressor:
+  name: Suppressor
+  role: debuff item
+  bought_by:
+  - McGinnis
+  slot: Spirit
+  tier: 2
+  notes: '07-28: duration 5->4.5s.'
+Extra Spirit:
+  name: Extra Spirit
+  role: ''
+  bought_by:
+  - Apollo
+  - Graves
+  - Grey Talon
+  - Haze
+  - Holliday
+  - Infernus
+  - Kelvin
+  - Mina
+  - Mo & Krill
+  - Rem
+  - Victor
+  - Vindicta
+  - Vyper
+  - Wraith
+  slot: null
+  tier: null
+  notes: ''
+Improved Spirit:
+  name: Improved Spirit
+  role: ''
+  bought_by:
+  - Apollo
+  - Calico
+  - Graves
+  - Grey Talon
+  - Holliday
+  - Infernus
+  - Kelvin
+  - Mina
+  - Rem
+  - The Doorman
+  - Vindicta
+  - Viscous
+  slot: null
+  tier: null
+  notes: ''
+Spirit Lifesteal:
+  name: Spirit Lifesteal
+  role: ''
+  bought_by:
+  - Infernus
+  - Seven
+  - Victor
+  - Warden
+  - Wraith
+  slot: null
+  tier: null
+  notes: ''
+Mystic Vulnerability:
+  name: Mystic Vulnerability
+  role: ''
+  bought_by:
+  - Calico
+  - Infernus
+  - Kelvin
+  - McGinnis
+  - Mirage
+  - Seven
+  - Shiv
+  - Victor
+  slot: null
+  tier: null
+  notes: ''
+Escalating Exposure:
+  name: Escalating Exposure
+  role: ''
+  bought_by:
+  - Infernus
+  - Kelvin
+  - McGinnis
+  - Mirage
+  - Seven
+  - Shiv
+  - Victor
+  slot: null
+  tier: null
+  notes: ''
+Rapid Rounds:
+  name: Rapid Rounds
+  role: ''
+  bought_by:
+  - Haze
+  - Infernus
+  - Vyper
+  - Wraith
+  slot: null
+  tier: null
+  notes: ''
+Swift Striker:
+  name: Swift Striker
+  role: ''
+  bought_by:
+  - Grey Talon
+  - Haze
+  - Infernus
+  - Vindicta
+  - Warden
+  - Wraith
+  slot: null
+  tier: null
+  notes: ''
+Extended Magazine:
+  name: Extended Magazine
+  role: ''
+  bought_by:
+  - Infernus
+  - Ivy
+  - Warden
+  slot: null
+  tier: null
+  notes: ''
+Arcane Surge:
+  name: Arcane Surge
+  role: ''
+  bought_by:
+  - Dynamo
+  - Graves
+  - Rem
+  - Seven
+  slot: null
+  tier: null
+  notes: ''
+Extra Stamina:
+  name: Extra Stamina
+  role: ''
+  bought_by:
+  - Holliday
+  - Lash
+  - McGinnis
+  - Mina
+  - Seven
+  slot: null
+  tier: null
+  notes: ''
+Opening Rounds:
+  name: Opening Rounds
+  role: ''
+  bought_by:
+  - Grey Talon
+  - Paige
+  - Rem
+  - Sinclair
+  - Victor
+  - Vindicta
+  - Warden
+  slot: null
+  tier: null
+  notes: ''
+Counterspell:
+  name: Counterspell
+  role: ''
+  bought_by:
+  - Vindicta
+  slot: null
+  tier: null
+  notes: ''
+Extra Regen:
+  name: Extra Regen
+  role: ''
+  bought_by:
+  - Abrams
+  - Apollo
+  - Celeste
+  - Ivy
+  - Kelvin
+  - Lady Geist
+  - Rem
+  - Shiv
+  - Victor
+  slot: null
+  tier: null
+  notes: ''
+Mystic Regeneration:
+  name: Mystic Regeneration
+  role: ''
+  bought_by:
+  - Celeste
+  - Lady Geist
+  - Mirage
+  - Shiv
+  slot: null
+  tier: null
+  notes: ''
+Kinetic Dash:
+  name: Kinetic Dash
+  role: ''
+  bought_by:
+  - Lady Geist
+  - Mirage
+  slot: null
+  tier: null
+  notes: ''
+Mystic Burst:
+  name: Mystic Burst
+  role: ''
+  bought_by:
+  - Apollo
+  - Drifter
+  - Grey Talon
+  - Holliday
+  - Lady Geist
+  - Lash
+  - Mina
+  - Mo & Krill
+  - Paradox
+  - Pocket
+  - Silver
+  - The Doorman
+  - Viscous
+  slot: null
+  tier: null
+  notes: ''
+Bullet Resist Shredder:
+  name: Bullet Resist Shredder
+  role: ''
+  bought_by:
+  - Abrams
+  - Billy
+  - Ivy
+  - Lady Geist
+  - Lash
+  slot: null
+  tier: null
+  notes: ''
+Spirit Resilience:
+  name: Spirit Resilience
+  role: ''
+  bought_by:
+  - Abrams
+  - Lady Geist
+  - Venator
+  slot: null
+  tier: null
+  notes: ''
+Close Quarters:
+  name: Close Quarters
+  role: ''
+  bought_by:
+  - Abrams
+  - Billy
+  - Venator
+  - Vyper
+  slot: null
+  tier: null
+  notes: ''
+Melee Lifesteal:
+  name: Melee Lifesteal
+  role: ''
+  bought_by:
+  - Abrams
+  - Calico
+  - Drifter
+  - Silver
+  slot: null
+  tier: null
+  notes: ''
+Stalker:
+  name: Stalker
+  role: ''
+  bought_by:
+  - Abrams
+  - Bebop
+  - Billy
+  - Calico
+  - Drifter
+  - Silver
+  slot: null
+  tier: null
+  notes: ''
+Melee Charge:
+  name: Melee Charge
+  role: ''
+  bought_by:
+  - Abrams
+  slot: null
+  tier: null
+  notes: ''
+Hunter's Aura:
+  name: Hunter's Aura
+  role: ''
+  bought_by:
+  - Abrams
+  - Silver
+  - Yamato
+  slot: null
+  tier: null
+  notes: ''
+Warp Stone:
+  name: Warp Stone
+  role: ''
+  bought_by:
+  - Abrams
+  - Dynamo
+  slot: null
+  tier: null
+  notes: ''
+Duration Extender:
+  name: Duration Extender
+  role: ''
+  bought_by:
+  - Abrams
+  - Dynamo
+  - Mo & Krill
+  - Sinclair
+  slot: null
+  tier: null
+  notes: ''
+Phantom Strike:
+  name: Phantom Strike
+  role: ''
+  bought_by:
+  - Abrams
+  slot: null
+  tier: null
+  notes: ''
+Quicksilver Reload:
+  name: Quicksilver Reload
+  role: ''
+  bought_by:
+  - Lash
+  - Mina
+  - Mo & Krill
+  - Vyper
+  - Warden
+  - Wraith
+  slot: null
+  tier: null
+  notes: ''
+Surge of Power:
+  name: Surge of Power
+  role: ''
+  bought_by:
+  - Haze
+  - Wraith
+  slot: null
+  tier: null
+  notes: ''
+Intensifying Magazine:
+  name: Intensifying Magazine
+  role: ''
+  bought_by:
+  - McGinnis
+  - Venator
+  slot: null
+  tier: null
+  notes: ''
+Enduring Speed:
+  name: Enduring Speed
+  role: ''
+  bought_by:
+  - McGinnis
+  - Victor
+  - Warden
+  slot: null
+  tier: null
+  notes: ''
+Enchanter's Emblem:
+  name: Enchanter's Emblem
+  role: ''
+  bought_by:
+  - McGinnis
+  slot: null
+  tier: null
+  notes: ''
+Restorative Shot:
+  name: Restorative Shot
+  role: ''
+  bought_by:
+  - Graves
+  - Paradox
+  - Silver
+  - Venator
+  - Yamato
+  slot: null
+  tier: null
+  notes: ''
+Headshot Booster:
+  name: Headshot Booster
+  role: ''
+  bought_by:
+  - Bebop
+  - Lash
+  - Paradox
+  slot: null
+  tier: null
+  notes: ''
+Express Shot:
+  name: Express Shot
+  role: ''
+  bought_by:
+  - Paradox
+  - Viscous
+  slot: null
+  tier: null
+  notes: ''
+Compress Cooldown:
+  name: Compress Cooldown
+  role: ''
+  bought_by:
+  - Apollo
+  - Dynamo
+  - Grey Talon
+  - Mirage
+  - Mo & Krill
+  - Paradox
+  - Shiv
+  - Viscous
+  slot: null
+  tier: null
+  notes: ''
+Mystic Expansion:
+  name: Mystic Expansion
+  role: ''
+  bought_by:
+  - Apollo
+  - Celeste
+  - Dynamo
+  - Ivy
+  - Kelvin
+  - Mina
+  - Paige
+  - Pocket
+  - Sinclair
+  - The Doorman
+  - Viscous
+  slot: null
+  tier: null
+  notes: ''
+Unstoppable:
+  name: Unstoppable
+  role: ''
+  bought_by:
+  - Dynamo
+  - Silver
+  - Vyper
+  slot: null
+  tier: null
+  notes: ''
+Debuff Reducer:
+  name: Debuff Reducer
+  role: ''
+  bought_by:
+  - Dynamo
+  - Vyper
+  slot: null
+  tier: null
+  notes: ''
+Healing Booster:
+  name: Healing Booster
+  role: ''
+  bought_by:
+  - Apollo
+  - Celeste
+  - Ivy
+  - Kelvin
+  - Rem
+  - Victor
+  slot: null
+  tier: null
+  notes: ''
+Greater Expansion:
+  name: Greater Expansion
+  role: ''
+  bought_by:
+  - Celeste
+  - Ivy
+  - Kelvin
+  - Paige
+  - Pocket
+  - Sinclair
+  - The Doorman
+  - Viscous
+  slot: null
+  tier: null
+  notes: ''
+Active Reload:
+  name: Active Reload
+  role: ''
+  bought_by:
+  - Haze
+  - Ivy
+  slot: null
+  tier: null
+  notes: ''
+Sprint Boots:
+  name: Sprint Boots
+  role: ''
+  bought_by:
+  - Holliday
+  - Mo & Krill
+  - Viscous
+  - Warden
+  slot: null
+  tier: null
+  notes: ''
+Stamina Mastery:
+  name: Stamina Mastery
+  role: ''
+  bought_by:
+  - Holliday
+  - Lash
+  - Mina
+  - Vyper
+  slot: null
+  tier: null
+  notes: ''
+Spirit Strike:
+  name: Spirit Strike
+  role: ''
+  bought_by:
+  - Apollo
+  - Bebop
+  - Billy
+  - Calico
+  - Drifter
+  - Viscous
+  - Yamato
+  slot: null
+  tier: null
+  notes: ''
+Fleetfoot:
+  name: Fleetfoot
+  role: ''
+  bought_by:
+  - Bebop
+  - Venator
+  - Warden
+  slot: null
+  tier: null
+  notes: ''
+Siphon Bullets:
+  name: Siphon Bullets
+  role: ''
+  bought_by:
+  - Bebop
+  - Lash
+  slot: null
+  tier: null
+  notes: ''
+Cold Front:
+  name: Cold Front
+  role: ''
+  bought_by:
+  - Calico
+  - Mo & Krill
+  - Pocket
+  - Silver
+  slot: null
+  tier: null
+  notes: ''
+Spirit Shredder Bullets:
+  name: Spirit Shredder Bullets
+  role: ''
+  bought_by:
+  - Calico
+  - Mina
+  slot: null
+  tier: null
+  notes: ''
+Arctic Blast:
+  name: Arctic Blast
+  role: ''
+  bought_by:
+  - Calico
+  slot: null
+  tier: null
+  notes: ''
+Torment Pulse:
+  name: Torment Pulse
+  role: ''
+  bought_by:
+  - Celeste
+  - Mo & Krill
+  - Shiv
+  - Victor
+  - Yamato
+  slot: null
+  tier: null
+  notes: ''
+Majestic Leap:
+  name: Majestic Leap
+  role: ''
+  bought_by:
+  - Pocket
+  slot: null
+  tier: null
+  notes: ''
+Split Shot:
+  name: Split Shot
+  role: ''
+  bought_by:
+  - Vyper
+  slot: null
+  tier: null
+  notes: ''
+Grit:
+  name: Grit
+  role: ''
+  bought_by:
+  - Billy
+  - Celeste
+  - Rem
+  - Silver
+  - Vyper
+  slot: null
+  tier: null
+  notes: ''
+Spirit Shielding:
+  name: Spirit Shielding
+  role: ''
+  bought_by:
+  - Billy
+  - Celeste
+  - Silver
+  - Vyper
+  slot: null
+  tier: null
+  notes: ''
+Battle Vest:
+  name: Battle Vest
+  role: ''
+  bought_by:
+  - Venator
+  slot: null
+  tier: null
+  notes: ''
+Infuser:
+  name: Infuser
+  role: ''
+  bought_by:
+  - Victor
+  slot: null
+  tier: null
+  notes: ''
+Vortex Web:
+  name: Vortex Web
+  role: ''
+  bought_by:
+  - The Doorman
+  slot: null
+  tier: null
+  notes: ''
+Guardian Ward:
+  name: Guardian Ward
+  role: ''
+  bought_by:
+  - Rem
+  slot: null
+  tier: null
+  notes: ''

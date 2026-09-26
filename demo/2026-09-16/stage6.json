@@ -1,0 +1,206 @@
+{
+ "meta_md": "# Meta state\nLast patch: Minor Update - 09-16-2026 (2026-09-16)\n\n## Thesis\nGames are won in the lane. With comeback souls gutted and early Unstable Rift fights now real, a lane lead converts straight into tempo — brawling bruisers and mobile snowballers (Paige, Apollo, Silver, Yamato, Holliday, Lash, Haze) set the pace. Late scalers and flyers (Celeste, Warden, Wraith, Vindicta) lost the nets that bought them time. The old \"overloaded DLC\" S-tiers (Mirage, Venator, Doorman, Pocket) keep their kits at ~46% WR; the meta no longer rewards them.\n\n## Economy and systems\n- Comeback bounties are trimmed and extra comeback souls rerouted to the two lowest-econ players via tick gold, so the fed AFK farmer is dead and lane leads stick.\n- Guardian bounty +10%, Walker +5%, objective share 30->25%.\n- Unstable Rift resist 10% +1%/min (cap 40% at 30m), not flat 35% — early rift contests are real fights.\n- Respawn at 20m 35->38s; a longer death tax raises the value of every pick.\n- Stuns/parry pause reload instead of resetting; dashes and light melee no longer break gun cycle time (smooths Silver/Abrams weaving).\n- Slows -20% globally but now drag air drag at 35% — grounded kiting improves, airborne heroes get pulled down.\n\n## Archetype standing\n- Tempo bruisers/frontline: up — brawl patch, gun-cycle smoothing, lane-wins economy.\n- Early snowball carries: up — no comeback valve punishes an early lead.\n- Late scalers: down — no safety net; games close before they spike.\n- Flyers: down — air-drag slows plus Silver's anti-air Bola.\n- On-hit spirit carries: dead — Mercurial Magnum, Spiritual Overflow and Plated Armor hit at once.\n- Tanks: stable — core items untouched; Dynamo gains ult CDR from Diviner's Kevlar.\n- Sustain supports: down — Radiant Regeneration and Restorative Locket both trimmed.\n\n## Watchlist\n- Silver: Bola now grounds/interrupts flyers, plus HP/sprint and the gun-cycle change. Biggest winner.\n- On-hit spirit trio (Warden, Wraith, Vyper): check WR dips and migration to pure gun.\n- Veil Walker vs Shadow Weave: the invis items swapped Sprint Boots; watch Bebop/Holliday/Viscous.\n- Celeste: seven nerfs plus item/flyer hits; her 54.6% WR is a lagging pre-patch number.\n- Flyer WRs (Vindicta, Grey Talon, Lash) as evidence air-drag slows bite.\n\n## Recent history\n- Minor Update - 09-16-2026: tempo patch — comeback souls gutted, on-hit spirit carry killed, flyers taxed.\n- 08-22-2026: Celeste tuning.\n- 08-12-2026: McGinnis/Apollo tuning.\n- 07-30-2026: Ranked Mode added.\n- 07-28-2026: item and hero tuning.",
+ "hero_updates": {},
+ "item_updates": {
+  "Weakening Headshot": {
+   "bought_by": [
+    "Venator"
+   ],
+   "notes": "09-16: bullet resist reduction -13%->-12%. Now only 2 points off Hollow Point's shred, so the cheaper Hollow Point is the default for the slot; the edge this gave is smaller."
+  },
+  "Hollow Point": {
+   "bought_by": [
+    "Seven",
+    "Vindicta",
+    "Vyper",
+    "Venator",
+    "Silver",
+    "Grey Talon"
+   ],
+   "notes": "09-16: bullet resist reduction 9->10%. The default cheap early-gun shred of the tempo meta; its edge over Weakening Headshot widened in a lane-wins economy."
+  },
+  "Toxic Bullets": {
+   "bought_by": [
+    "Drifter",
+    "Graves",
+    "Infernus",
+    "Mirage"
+   ],
+   "notes": "09-16: spirit scaling 0.005->0.006%. With Decay's DPS cut, now the better sustained anti-heal/burn option for hybrid and spirit-hybrid carries."
+  },
+  "Shadow Weave": {
+   "bought_by": [
+    "Warden",
+    "Wraith"
+   ],
+   "notes": "09-16: now builds from Sprint Boots, sprint speed 1.5->2, cooldown 45->37s. Inherits Veil Walker's Sprint Boots path and disengage niche — a real invis-engage option for gun carries and cage bruisers."
+  },
+  "Cultist Sacrifice": {
+   "bought_by": [
+    "Pocket",
+    "Seven"
+   ],
+   "notes": "09-16: bounty 180->170%. A smaller soul lead in a patch that rewards banking leads; it does not change who buys it."
+  },
+  "Ballistic Enchantment": {
+   "bought_by": [],
+   "notes": "09-16: duration 14->20s. Uptime is now the selling point; a plausible pick for high-cast spirit builds that ignored the old short window."
+  },
+  "Spiritual Overflow": {
+   "bought_by": [
+    "Infernus",
+    "Warden"
+   ],
+   "notes": "09-16: buildup 35% slower, spirit power 40->30, fire rate 30->25%. With Mercurial Magnum's nerf and Plated Armor's fix, the on-hit spirit package is dead."
+  },
+  "Restorative Locket": {
+   "bought_by": [
+    "Apollo",
+    "Celeste"
+   ],
+   "notes": "09-16: heal per boon 0.5->0.45, stack range 35->32m (08-22: spirit resist 10->8%). Sustain-supports lose throughput alongside the Radiant Regeneration cut."
+  },
+  "Trophy Collector": {
+   "bought_by": [
+    "Drifter",
+    "Mo & Krill"
+   ],
+   "notes": "09-16: souls/min 18->16. Still correct on early bruisers, but banks a smaller lead into a patch that rewards banking leads."
+  },
+  "Veil Walker": {
+   "bought_by": [
+    "Bebop",
+    "Drifter",
+    "Holliday",
+    "The Doorman",
+    "Viscous"
+   ],
+   "notes": "09-16 nerf: no longer builds from Sprint Boots (lost +2 sprint/regen), movespeed removed when invis drops, spirit power 10->6. No longer an auto-buy; heroes who bought it purely to disengage must find a new bail-out."
+  },
+  "Fortitude": {
+   "bought_by": [
+    "Infernus",
+    "Seven",
+    "Abrams",
+    "Mo & Krill",
+    "Shiv",
+    "Warden",
+    "Victor",
+    "Paige",
+    "The Doorman",
+    "Billy",
+    "Apollo",
+    "Rem",
+    "Silver",
+    "Venator",
+    "Celeste",
+    "Dynamo",
+    "Kelvin",
+    "Vindicta",
+    "Vyper"
+   ],
+   "notes": "09-16: max-health regen 2->2.25%. The default survivability slot; quiet sustain that matters more in a burst-heavy tempo patch."
+  },
+  "Lifestrike": {
+   "bought_by": [
+    "Billy"
+   ],
+   "notes": "09-16: melee-heal 100+1.5 -> 120+1.75 and 30->35%; with slows now biting air drag, its 48% slow doubles as CC. Strong on melee bruisers, spammed by Billy."
+  },
+  "Leech": {
+   "bought_by": [],
+   "notes": "09-16: bullet+spirit lifesteal 25->28%. Still loses to cheaper lifesteal in the slot; a small nudge, not core."
+  },
+  "Plated Armor": {
+   "bought_by": [],
+   "notes": "09-16 bug fix: now actually blocks on-hit spirit damage from Mercurial Magnum, Vindicta's Flight, Wraith's Full Auto, Tesla Bullets/Capacitor. A live counter-item against mixed-damage on-hit carries."
+  },
+  "Diviner's Kevlar": {
+   "bought_by": [
+    "Dynamo",
+    "Silver"
+   ],
+   "notes": "09-16: now grants +10% Ultimate Ability CDR (07-28: spirit power +35->+40). Adds an ult-uptime reason to buy beyond raw spirit defense."
+  },
+  "Golden Goose Egg": {
+   "bought_by": [],
+   "notes": "09-16: damage penalty -10->-15%, souls/min 90->80, stored souls now count toward net worth — effectively unbuyable."
+  },
+  "Slowing Hex": {
+   "bought_by": [
+    "Bebop",
+    "Billy",
+    "Paige",
+    "Paradox",
+    "Silver",
+    "The Doorman",
+    "Wraith"
+   ],
+   "notes": "09-16: cooldown 27->29s. Slightly worse uptime, but its slow now bites airborne heroes, so it stays a near-every-game pick tool."
+  },
+  "Radiant Regeneration": {
+   "bought_by": [
+    "Celeste",
+    "Kelvin",
+    "Lady Geist",
+    "Shiv"
+   ],
+   "notes": "08-22 heal on cast 70->65 plus 09-16 per-boon scaling 2->1.7 — a cumulative nerf to healing supports; they can no longer absorb an early deficit."
+  },
+  "Tankbuster": {
+   "bought_by": [
+    "Apollo",
+    "Drifter",
+    "Grey Talon",
+    "Holliday",
+    "Lash",
+    "Mina",
+    "Mo & Krill",
+    "Paradox",
+    "Pocket",
+    "Shiv",
+    "Silver",
+    "The Doorman",
+    "Viscous",
+    "Yamato"
+   ],
+   "notes": "07-28 no longer procs off items; 09-16 current-health bonus 8->7.5% — cumulative trim, still correct into the tank-heavy frontline."
+  },
+  "Decay": {
+   "bought_by": [
+    "Infernus",
+    "Lady Geist",
+    "Abrams",
+    "Mo & Krill",
+    "Shiv",
+    "Viscous",
+    "Drifter",
+    "Rem",
+    "Billy"
+   ],
+   "notes": "09-16: DPS -25% but duration +20%. Still the default anti-heal slot, now better in drawn-out fights than bursting a heal window down."
+  },
+  "Mercurial Magnum": {
+   "bought_by": [
+    "Vyper",
+    "Warden",
+    "Wraith"
+   ],
+   "notes": "09-16: base bullet damage 25->20%, scaling 0.49->0.38. The Mercurial + Spiritual Overflow on-hit build is dead; buyers must pivot to pure gun or spirit lines."
+  },
+  "Focus Lens": {
+   "bought_by": [],
+   "notes": "09-16: damage 30->35%, cast range 20->25m. A standoff spirit-amp for setup casters; still cleansable, so situational."
+  }
+ },
+ "change_log": [
+  "meta.md: full rewrite — new thesis (lane-wins tempo), system bullets, archetype standing rows, watchlist, history trimmed to newest 5.",
+  "Shadow Weave: bought_by +Warden, +Wraith (real invis-engage pick now that it gained Sprint Boots, sprint, and lower cooldown).",
+  "Veil Walker: bought_by -Warden (his cage-bruiser shell pivots to Shadow Weave after losing Sprint Boots and movespeed-on-break).",
+  "Veil Walker: notes rewritten to flag the pick-hero demotion and the lost disengage.",
+  "Mercurial Magnum: bought_by kept but notes flag the dead Mercurial+Spiritual Overflow package and required pivot.",
+  "Spiritual Overflow: notes cross-referenced with Mercurial Magnum and Plated Armor to mark the on-hit spirit archetype dead.",
+  "Plated Armor: notes flag it as a live counter to Full Auto/Flight/Tesla/Mercurial on-hit spirit damage.",
+  "Hollow Point / Weakening Headshot: notes updated to show the widened shred gap between the two cheap gun items."
+ ]
+}
