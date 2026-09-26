@@ -17,7 +17,7 @@ Games are won in the lane. With comeback souls gutted and early Unstable Rift fi
 - Early snowball carries: up — no comeback valve punishes an early lead.
 - Late scalers: down — no safety net; games close before they spike.
 - Flyers: down — air-drag slows plus Silver's anti-air Bola.
-- On-hit spirit carries: dead — Mercurial Magnum, Spiritual Overflow and Plated Armor hit at once.
+- On-hit spirit carries: weakened — Mercurial Magnum, Spiritual Overflow and Plated Armor hit at once.
 - Tanks: stable — core items untouched; Dynamo gains ult CDR from Diviner's Kevlar.
 - Sustain supports: down — Radiant Regeneration and Restorative Locket both trimmed.
 

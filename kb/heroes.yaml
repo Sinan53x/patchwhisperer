@@ -192,12 +192,14 @@ Vindicta:
   archetypes:
   - poke/siege
   - gun carry
-  tier: B
-  trend: falling
-  why: 'Poke/siege carry the tempo economy wants, but the anti-flyer patch taxes her
-    the same way: air-drag slows and Silver''s Weighted Bola ground Flight, cutting
-    the uptime that converts a won lane. 37.8% PR keeps her ubiquitous, but 50.3%
-    WR says she isn''t free wins — a mid-tier pick now, not the S the tempo read implies.'
+  tier: A
+  trend: stable
+  why: 'High-tempo poke/siege carry — the exact profile the 09-16 patch rewards: super-scaling
+    trimmed, respawns stretched to 38s at 20m, and real early Rift fights mean lane
+    pressure sticks. She is also the archetypal flyer, so the same patch taxes her
+    uptime (air-drag slows, Silver''s Weighted Bola grounding). Holds A rather than
+    the S the tempo read implies: 37.8% PR keeps her everywhere but 50.3% WR says
+    she is not free wins.'
   core_items:
   - High-Velocity Rounds
   - Opening Rounds
@@ -226,8 +228,8 @@ Vindicta:
   - Yamato (mobile burst assassin)
   last_changed_patch: Minor Update - 08-12-2026
   notes: '09-16 (indirect): global slows now bite air drag and Silver''s Weighted
-    Bola grounds Flight — anti-flyer tax drops her to B; no line helps a poke carry
-    in a tempo meta.
+    Bola grounds Flight — anti-flyer tax offsets her tempo gains, so she holds A (two-sided
+    mover).
 
     heresy''s 09-17 ricochet/split-shot ult buff is unattributable; the 09-16 notes
     give it to Venator — treat as uncertain.
@@ -475,14 +477,14 @@ Wraith:
   archetypes:
   - gun carry
   - late scaler
-  tier: C
+  tier: B
   trend: falling
-  why: 'Wraith''s spirit on-hit identity was deleted by 09-16: Card Trick heal/scaling/resist/slow
-    cuts plus the Mercurial Magnum nerf and Plated Armor''s on-hit fix (which now
-    blanks Full Auto''s spirit damage) leave her a pure-gun carry. She keeps a high
-    floor (~51% WR, near-50% PR) as a fire-rate M1/AoE-delete, but is outclassed in
-    her slot by tempo carries (Silver, Venator, Haze) and punished by the dive the
-    meta rewards.'
+  why: 'Wraith''s spirit on-hit identity was heavily weakened by 09-16: Card Trick
+    heal/scaling/resist/slow cuts plus the Mercurial Magnum nerf and Plated Armor''s
+    on-hit fix (which now blanks Full Auto''s spirit damage) push her toward a pure-gun
+    build. She keeps a high floor (~51% WR, near-50% PR) as a fire-rate M1/AoE-delete,
+    but is outclassed in her slot by tempo carries (Silver, Venator, Haze) and punished
+    by the dive the meta rewards.'
   core_items:
   - Monster Rounds
   - Quicksilver Reload
@@ -510,12 +512,12 @@ Wraith:
   last_changed_patch: Minor Update - 09-16-2026
   notes: '09-16: Card Trick heal 75->60, heal scaling 0.75->0.5, resist shred -8->-7%
     (T3 -5->-4%), T3 slow +20->+15%; Mercurial Magnum + Spiritual Overflow gutted
-    and Plated Armor now blanks Full Auto spirit damage — on-hit-spirit core abandoned,
-    rebuild pure gun.
+    and Plated Armor now blanks Full Auto spirit damage — on-hit-spirit core weakened,
+    lean pure gun.
 
     Creator-cited Capacitor/Slowing Hex appear in none of the top-15 item slots; usage
     says the real core was spirit on-hit (Quicksilver Reload 100%, Mercurial Magnum
-    93%) — Magnum now dead.
+    93%) — Magnum now weakened.
 
     Build clustering is medium-confidence: inferred from shares/buy_min, no ability
     text.'
@@ -530,7 +532,7 @@ Wraith:
     - Surge of Power
     - Ricochet
     popularity: primary
-    notes: 'Post-09-16 rebuild: the Mercurial Magnum / on-hit-spirit package is dead
+    notes: 'Post-09-16 rebuild: the Mercurial Magnum / on-hit-spirit package is weakened
       (Magnum base 25->20% and scaling 0.49->0.38, Spiritual Overflow nerfed, Plated
       Armor now blanks Full Auto''s spirit damage), so stack fire rate and gun damage
       instead of spirit procs; Quicksilver Reload (100% share) is still the signature
@@ -2009,13 +2011,13 @@ Viscous:
   archetypes:
   - tank/frontline
   - support/healer
-  tier: C
+  tier: B
   trend: falling
   why: Cube rescue still wins games, but the 09-16 trims to Cube cast range (26->20m),
     Puddle Punch cooldown (21->24s) and Splatter/alt-fire remove the tools that carried
     him, the tempo meta punishes a scaling enabler, and his cooldown-Cube shell lost
     Veil Walker's Sprint Boots and movespeed-on-break. Creators' S read is July/pre-nerf,
-    so he settles at C until a post-patch WR shows otherwise.
+    so he settles at B until a post-patch WR shows otherwise.
   core_items:
   - High-Velocity Rounds
   - Mystic Burst
@@ -2047,8 +2049,8 @@ Viscous:
     in his top 15 — Mystic Burst (94%) and High-Velocity Rounds (81%) lead, so the
     real shell is spirit-hybrid plus cooldown items, not Echo Shard resets.
 
-    Tier set to C: creators'' S read is July (pre-nerf) and 51.5%/23.4% is a pre-09-16
-    snapshot, so the nerfs land him at C, not B.
+    Tier set to B: creators'' S read is July (pre-nerf) and 51.5%/23.4% is a pre-09-16
+    snapshot, so the nerfs land him at B, not S.
 
     09-16: Cube cast range 26->20m, Puddle Punch cooldown 21->24s, Splatter/alt-fire
     nerfs, Goo Ball T3 scaling buff; cooldown-Cube shell also lost Veil Walker''s
@@ -2107,7 +2109,7 @@ Pocket:
   - burst caster
   - late scaler
   - mobile assassin
-  tier: C
+  tier: B
   trend: falling
   why: 'Late-scaling Affliction burst carry with no comeback safety net: the gutted
     comeback souls and the Cultist Sacrifice bounty trim (180->170%) removed the bail-out
@@ -2141,9 +2143,9 @@ Pocket:
   - roots/lockdown (Warden, Viscous slows)
   - burst that out-ranges him (Celeste)
   last_changed_patch: Minor Update - 07-28-2026
-  notes: 'Changelog: 09-16 - no direct line; tier B->C on the gutted comeback economy
-    + Cultist Sacrifice trim. Low confidence on whether Flying Cloak counts as a flyer
-    for the new air-drag slow rule.
+  notes: 'Changelog: 09-16 - no direct line; tier stays B (falling) on the gutted
+    comeback economy + Cultist Sacrifice trim. Low confidence on whether Flying Cloak
+    counts as a flyer for the new air-drag slow rule.
 
     Creators'' ''7k on gun items'' claim is contradicted by 30-day usage: the only
     weapons with real share are farm items (Monster Rounds 92%, Cultist Sacrifice
@@ -2203,7 +2205,7 @@ Mirage:
   - gun carry
   - split pusher
   - late scaler
-  tier: C
+  tier: B
   trend: falling
   why: 'Slow teleport/split-push scaler that the 09-16 economy punishes hardest: comeback
     souls are gone and early Rift is now a real fight, so his map-play rarely comes
@@ -2236,7 +2238,7 @@ Mirage:
   - ranged gun carries (Warden)
   - tempo/snowball meta
   last_changed_patch: Minor Update - 07-28-2026
-  notes: 'Changelog: 09-16 - no Mirage line; tier B->C via the gutted comeback/tempo
+  notes: 'Changelog: 09-16 - no Mirage line; tier stays B; hurt by the gutted comeback/tempo
     system changes, partially offset by the Toxic Bullets scaling buff in his spirit-amp
     core.
 
@@ -2309,9 +2311,9 @@ Vyper:
   trend: falling
   why: 'Pre-patch elite numbers (54.6% WR / 26.9% PR) undercut by the 09-16 items:
     Mercurial Magnum''s base/scaling gut (25->20%, 0.49->0.38) plus Plated Armor''s
-    on-hit fix delete her 93%-share spirit-amp splice, leaving a lower-ceiling pure-gun
-    carry (the Slither/Bola nerfs are cosmetic). Still farms CC-light comps, still
-    lifted out by hard-CC initiation (Dynamo, Mo & Krill).'
+    on-hit fix weaken her 93%-share spirit-amp splice, pushing her toward a lower-ceiling
+    pure-gun carry (the Slither/Bola nerfs are cosmetic). Still farms CC-light comps,
+    still lifted out by hard-CC initiation (Dynamo, Mo & Krill).'
   core_items:
   - Close Quarters
   - Rapid Rounds
@@ -2344,7 +2346,7 @@ Vyper:
     54.6% WR / 26.9% PR is a pre-09-16 baseline (14-day snapshot, mostly pre-patch).
 
     Low confidence: whether the Mercurial spirit line was a true second build or a
-    mandatory splice - moot now that it is blocked.'
+    mandatory splice - less relevant now that it is weakened.'
   builds:
   - name: Gun build
     damage: gun
@@ -2354,9 +2356,9 @@ Vyper:
     - Split Shot
     - Burst Fire
     popularity: primary
-    notes: 'Now the only carry path: with Mercurial Magnum gutted (base 25->20%, scaling
+    notes: 'Now the main carry path: with Mercurial Magnum gutted (base 25->20%, scaling
       0.49->0.38) and Plated Armor blocking her spirit on-hit, the old near-universal
-      (79-93%) spirit splice is dead. Swift Striker (58%) and Tesla Bullets (52%)
+      (79-93%) spirit splice is weakened. Swift Striker (58%) and Tesla Bullets (52%)
       stay flex adds for close-range/AoE, though Tesla''s damage is now blocked by
       Plated Armor too.'
   - name: Survive-the-CC
@@ -3506,14 +3508,14 @@ Celeste:
   - burst caster
   - mobile assassin
   - late scaler
-  tier: C
+  tier: B
   trend: falling
   why: 'Late-scaling flying spirit burst is the wrong profile for a lane-wins tempo
     meta: comeback souls are gone, early-Rift fights are real, and the new air-drag
     slow bleeds her mid-flight. Seven direct 09-16 nerfs stack on Radiant Regeneration
-    and Restorative Locket trims, dropping her from B to C; the 54.6% WR / 26.4% PR
-    is a pre-patch baseline, and she still bursts squishy melee threats (Yamato, Pocket)
-    but folds to sustain and mobile initiators.'
+    and Restorative Locket trims, which is why she sits at B rather than A; the 54.6%
+    WR / 26.4% PR is a pre-patch baseline, and she still bursts squishy melee threats
+    (Yamato, Pocket) but folds to sustain and mobile initiators.'
   core_items:
   - Extra Regen
   - High-Velocity Rounds
@@ -3543,8 +3545,8 @@ Celeste:
   - Ivy — out-sustains her burst window
   - Lash / Calico — mobile initiators that close and survive
   last_changed_patch: Minor Update - 09-16-2026
-  notes: '09-16: tier reassessed B -> C (was trending B) — the seven-nerf stack below
-    plus the air-drag flyer tax; Witchmail remains her anti-slow answer.
+  notes: '09-16: tier held at B (down from A) — the seven-nerf stack below plus the
+    air-drag flyer tax; Witchmail remains her anti-slow answer.
 
     54.6% WR / 26.4% PR is a 14-day, mostly pre-patch snapshot — treat as a ceiling,
     not current strength.

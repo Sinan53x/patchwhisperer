@@ -505,7 +505,8 @@ Mercurial Magnum:
   slot: Spirit
   tier: 3
   notes: '09-16: base bullet damage 25->20%, scaling 0.49->0.38. The Mercurial + Spiritual
-    Overflow on-hit build is dead; buyers must pivot to pure gun or spirit lines.'
+    Overflow on-hit build is weakened; buyers are likely to pivot to pure gun or spirit
+    lines.'
 Spiritual Overflow:
   name: Spiritual Overflow
   role: spirit proc/steroid item
@@ -516,7 +517,7 @@ Spiritual Overflow:
   tier: 3
   notes: '09-16: buildup 35% slower, spirit power 40->30, fire rate 30->25%. With
     Mercurial Magnum''s nerf and Plated Armor''s fix, the on-hit spirit package is
-    dead.'
+    weakened.'
 Spirit Snatch:
   name: Spirit Snatch
   role: spirit steal item
@@ -642,7 +643,6 @@ Shadow Weave:
   role: invis weapon item
   bought_by:
   - Warden
-  - Wraith
   slot: Weapon
   tier: 3
   notes: '09-16: now builds from Sprint Boots, sprint speed 1.5->2, cooldown 45->37s.
