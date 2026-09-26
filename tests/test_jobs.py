@@ -117,10 +117,12 @@ def test_analyze_and_post(env, tmp_path):
     assert seen["kind"] == "analyzed"
     rec = state.post_get(result.patch_id, env["db"])
     assert rec["thread_id"] == "200"
-    # git commit invoked with changed paths
+    # git commit invoked once with KB files + the patch dir
     assert result.kb_updated is True
     commit.assert_called_once()
-    assert commit.call_args[0][1]  # changed paths non-empty
+    paths = commit.call_args[0][1]
+    assert env["kb"].patch_dir(result.patch_id) in paths
+    assert env["kb"].heroes_path in paths
 
 
 def test_hotfix_no_thread(env, tmp_path, entity_index):
@@ -149,7 +151,9 @@ def test_hotfix_no_thread(env, tmp_path, entity_index):
     )
     assert result.kind == "hotfix"
     assert channel.messages[0].thread is None
-    commit.assert_not_called()
+    commit.assert_called_once()
+    assert commit.call_args[0][1] == [env["kb"].patch_dir(result.patch_id)]
+    assert commit.call_args[0][2].endswith("(analysis artifacts only)")
     assert state.seen_get("hf1", env["db"])["kind"] == "hotfix"
 
 
@@ -220,7 +224,9 @@ def test_kb_update_failure_still_posts(env, tmp_path, monkeypatch):
     seen = state.seen_get(env["post"].gid, env["db"])
     assert seen["kind"] == "analyzed"
     assert seen["attempts"] == 0
-    commit.assert_not_called()
+    commit.assert_called_once()
+    assert commit.call_args[0][1] == [env["kb"].patch_dir(result.patch_id)]
+    assert commit.call_args[0][2].endswith("(analysis artifacts only)")
 
 
 def test_failure_attempts_and_skip(env, tmp_path, monkeypatch):
@@ -249,6 +255,27 @@ def test_failure_attempts_and_skip(env, tmp_path, monkeypatch):
     assert row["kind"] == "skipped"
     assert "Will retry on next poll (attempt 1/3)" in channel.sent[0]
     assert "giving up" in channel.sent[-1]
+
+
+def test_commit_failure_still_returns(env, tmp_path):
+    channel = FakeChannel()
+    commit = MagicMock(side_effect=RuntimeError("git exploded"))
+    result = analyze_and_post(
+        env["post"].gid,
+        pool=[],
+        channel=channel,
+        llm=env["llm"],
+        kb=env["kb"],
+        index=env["index"],
+        api=env["api"],
+        db=env["db"],
+        repo_root=tmp_path,
+        commit_fn=commit,
+    )
+    assert result.kind == "analyzed"
+    assert result.kb_updated is True
+    commit.assert_called_once()
+    assert state.seen_get(env["post"].gid, env["db"])["kind"] == "analyzed"
 
 
 def test_failure_notify_failures_false(env, tmp_path, monkeypatch):

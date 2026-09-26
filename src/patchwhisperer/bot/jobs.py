@@ -135,19 +135,18 @@ def analyze_and_post(
             db,
         )
         kb_updated = False
+        patch_dir = kb.patch_dir(patch_id)
         if not hotfix:
             try:
                 kb_update = run_kb_update(patch, kb, bundle, llm)
                 changed = apply_kb_update(kb, kb_update)
-                if changed:
-                    commit_fn(
-                        repo_root,
-                        changed,
-                        kb_commit_message(patch.title, kb_update.change_log),
-                    )
                 kb_updated = True
+                paths = changed + [patch_dir]
+                message = kb_commit_message(patch.title, kb_update.change_log)
             except Exception as e:
                 log.exception("kb update failed for %s", patch_id)
+                paths = [patch_dir]
+                message = f"kb: {patch.title} (analysis artifacts only)"
                 if channel is not None:
                     _await(
                         channel.send(
@@ -157,6 +156,13 @@ def analyze_and_post(
                         ),
                         loop,
                     )
+        else:
+            paths = [patch_dir]
+            message = f"kb: {patch.title} (analysis artifacts only)"
+        try:
+            commit_fn(repo_root, paths, message)
+        except Exception:
+            log.exception("kb commit failed for %s", patch_id)
         return PostResult(
             patch_id=patch_id,
             kind="hotfix" if hotfix else "analyzed",
