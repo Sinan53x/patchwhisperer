@@ -258,6 +258,9 @@ def demo(
     typer.echo("## Discord TL;DR")
     typer.echo("")
     typer.echo(rendered.tldr)
+    for extra in rendered.tldr_extra:
+        typer.echo("")
+        typer.echo(extra)
     typer.echo("")
     typer.echo("## Discord thread")
     typer.echo("")

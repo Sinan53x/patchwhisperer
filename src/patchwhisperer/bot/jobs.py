@@ -64,6 +64,8 @@ def _post_to_channel(bundle, channel, patch_title: str, hotfix: bool, loop=None)
     message = _await(channel.send(rendered.tldr), loop)
     _await(message.add_reaction("👍"), loop)
     _await(message.add_reaction("👎"), loop)
+    for extra in rendered.tldr_extra:
+        _await(channel.send(extra), loop)
     thread_id = None
     if not hotfix:
         thread = _await(message.create_thread(name=patch_title), loop)

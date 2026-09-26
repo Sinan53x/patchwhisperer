@@ -267,6 +267,38 @@ def test_failure_attempts_and_skip(env, tmp_path, monkeypatch):
     assert "giving up" in channel.sent[-1]
 
 
+def test_tldr_extra_sent_as_followups(env, tmp_path, monkeypatch):
+    from patchwhisperer.analysis.render import DiscordPost
+
+    channel = FakeChannel()
+    monkeypatch.setattr(
+        jobs,
+        "render_discord",
+        lambda bundle: DiscordPost(
+            tldr="first", tldr_extra=["second", "third"], thread=["t1"]
+        ),
+    )
+    result = analyze_and_post(
+        env["post"].gid,
+        pool=[],
+        channel=channel,
+        llm=env["llm"],
+        kb=env["kb"],
+        index=env["index"],
+        api=env["api"],
+        db=env["db"],
+        repo_root=tmp_path,
+        commit_fn=MagicMock(),
+        sync_fn=MagicMock(),
+    )
+    assert result.kind == "analyzed"
+    assert channel.sent[:3] == ["first", "second", "third"]
+    first = channel.messages[0]
+    assert first.reactions == ["👍", "👎"]
+    assert first.thread is not None and first.thread.sent == ["t1"]
+    assert channel.messages[1].thread is None
+
+
 def test_commit_failure_still_returns(env, tmp_path):
     channel = FakeChannel()
     commit = MagicMock(side_effect=RuntimeError("git exploded"))

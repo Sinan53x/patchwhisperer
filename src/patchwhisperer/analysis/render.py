@@ -84,29 +84,39 @@ def render_markdown(bundle: AnalysisBundle) -> str:
 
 class DiscordPost(BaseModel):
     tldr: str
+    tldr_extra: list[str] = []
     thread: list[str]
 
 
-def _split_section(text: str, limit: int = DISCORD_LIMIT) -> list[str]:
+def _pack(text: str, limit: int = DISCORD_LIMIT) -> list[str]:
+    """Split text into chunks <= limit, trying paragraph, then line, then word
+    boundaries; hard-cut only a single token longer than limit."""
     if len(text) <= limit:
         return [text]
-    chunks, cur = [], ""
-    for para in text.split("\n\n"):
-        if cur and len(cur) + len(para) + 2 > limit:
-            chunks.append(cur)
-            cur = para
-        else:
-            cur = f"{cur}\n\n{para}" if cur else para
-    if cur:
-        chunks.append(cur)
-    # last resort: hard-wrap paragraphs that still exceed the limit
-    out = []
-    for c in chunks:
-        while len(c) > limit:
-            out.append(c[:limit])
-            c = c[limit:]
-        out.append(c)
-    return out
+    for sep in ("\n\n", "\n", " "):
+        if sep in text:
+            chunks, cur = [], ""
+            for piece in text.split(sep):
+                cand = f"{cur}{sep}{piece}" if cur else piece
+                if len(cand) <= limit:
+                    cur = cand
+                    continue
+                if cur:
+                    chunks.append(cur)
+                if len(piece) > limit:
+                    sub = _pack(piece, limit)
+                    chunks.extend(sub[:-1])
+                    cur = sub[-1]
+                else:
+                    cur = piece
+            if cur:
+                chunks.append(cur)
+            return chunks
+    return [text[i : i + limit] for i in range(0, len(text), limit)]
+
+
+def _split_section(text: str, limit: int = DISCORD_LIMIT) -> list[str]:
+    return _pack(text, limit)
 
 
 def render_discord(bundle: AnalysisBundle) -> DiscordPost:
@@ -136,4 +146,7 @@ def render_discord(bundle: AnalysisBundle) -> DiscordPost:
             cur = f"{cur}\n\n{sec}" if cur else sec
     if cur:
         thread.extend(_split_section(cur))
-    return DiscordPost(tldr=tldr[:DISCORD_LIMIT], thread=thread)
+    tldr_chunks = _pack(tldr)
+    return DiscordPost(
+        tldr=tldr_chunks[0], tldr_extra=tldr_chunks[1:], thread=thread
+    )
