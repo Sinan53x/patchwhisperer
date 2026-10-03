@@ -1,0 +1,185 @@
+{
+ "systems_changed": [
+  {
+   "system": "map/layout",
+   "change_summary": "Full visual rework with lanes renamed (Broadway/Greenwich/York) and four new districts (Theater, Chinatown, Haunted Lot, Plaza) branching off the main lanes; the layout now dictates where picks and fights happen.",
+   "driving_changes": [
+    "Map: full visual rework; lanes renamed Blue Lane → Broadway, Green Lane → Greenwich, Yellow Lane → York",
+    "Districts: 4 new districts branching off the main lanes — Theater, Chinatown, Haunted Lot, Plaza"
+   ],
+   "magnitude": "major",
+   "effect_on_play": "New high-ground, roofs and hiding geometry change lane control and roaming routes; per peercontent the green-lane roof/tree above the bridge lets a hero hold lane permanently, so lane matchups are now map-conditional, not just kit-based."
+  },
+  {
+   "system": "neutrals/jungle",
+   "change_summary": "All old neutrals are replaced by Haunt creatures that hit harder, cluster and chase; the efficient jungle pattern becomes stacking camps and clearing them with AoE.",
+   "driving_changes": [
+    "Neutrals: all old neutrals replaced by new Haunt creatures with new behaviors (Specimen, Gutter Ghouls, Barrel Mimics, Past Dues, Stage Hands, Crabbage Pots, Festival Spirit, Shrooms, Underhands)",
+    "peercontent: camps deal more damage, group together and follow you, so sustain and AoE clear define the early game"
+   ],
+   "magnitude": "major",
+   "effect_on_play": "Sustain and AoE camp-clear rise (Yamato, Mina), squishy heroes get punished for casual jungling, and grouped chasing camps can be deliberately stacked for faster clears — a mechanical skill gap that replaces the old static-camp farm."
+  },
+  {
+   "system": "economy/farm (Tough Crates)",
+   "change_summary": "Tough Crates need a Heavy Melee to open and pay guaranteed souls (~58 each), and several lanes have 200-300-soul box routes, making box runs more soul-efficient than camp farming.",
+   "driving_changes": [
+    "Tough Crates: breakables that require a Heavy Melee to open and pay out extra souls, rewarding heavy-melee access",
+    "peercontent: 58 souls per crate, guaranteed drops, 200-300-soul quick routes; the 2:30 wave's boxes become heavy crates worth >100 souls"
+   ],
+   "magnitude": "major",
+   "effect_on_play": "Early income concentrates into crate routes from ~2:30, so farming efficiency and heavy-melee access decide the first ten minutes; heroes locked out of heavy melee (Calico's cat form) lose a farm lane they can't contest."
+  },
+  {
+   "system": "objectives/economy (Sunken Plaza & Bell Tower)",
+   "change_summary": "Two new soul hotspots anchor the map: Sunken Plaza (~400-500 souls in seconds at 5 min, exits to the secret shop, drains stamina/mutes sound) and Bell Tower (~280 souls at 5 min, three vaults, capture rings a map-wide bell).",
+   "driving_changes": [
+    "Sunken Plaza: sub-area beneath the Plaza district; descending drains your stamina and mutes outside sound; high risk, high reward",
+    "Bell Tower: Chinatown objective at the top of the tower holding a concentrated soul hotspot; collecting it rings a bell heard across the whole map"
+   ],
+   "magnitude": "major",
+   "effect_on_play": "Fights converge on Plaza at 5-8 min and Bell Tower after 8; teams must rotate to contest telegraphed soul hubs, and Plaza's secret-shop exit plus stamina drain make it a committed fight rather than a free grab."
+  },
+  {
+   "system": "buff containers",
+   "change_summary": "Buff Containers are reworked to grant permanent Spirit Resist, Bullet Resist, Ability Range and Move Speed instead of their old effect.",
+   "driving_changes": [
+    "Buff Containers: revamped golden statues now also grant Spirit Resist, Bullet Resist, Ability Range, and Move Speed as permanent bonuses"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Adds objective-gated stats independent of items, quietly scaling whoever controls early containers; Ability Range in particular rewards caster/poke kits that leverage the stat."
+  },
+  {
+   "system": "sustain & stealth (Healing Snacks, Steam Vents)",
+   "change_summary": "Healing Snacks (10% max HP) sit just behind lanes, and Steam Vents grant invisibility plus small regen for silent rotations.",
+   "driving_changes": [
+    "Healing Snacks: hidden pickups around the map for quick healing",
+    "Steam Vents: standing on one grants invisibility and a small regen, enabling silent team rotations"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Laning sustain and re-engage potential improve without items, and stealth rotations become map-driven; reveal/detection kits (Drifter, whose sense sees stealth) gain value from the stealth-friendly layout."
+  },
+  {
+   "system": "items/broker",
+   "change_summary": "A temporary merchant (The Broker) spawns with a first shipment ~30 min in, then roughly every 15 min, trading high-tier items for Corrupted versions.",
+   "driving_changes": [
+    "The Broker: temporary merchant spawning in random locations... first shipment ~30 min into a match, then roughly every 15 min; trades high-tier items for Corrupted versions"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Creates a mid-late power spike and build variance around 30 min, rewarding players who bank souls and know the Corrupted pool; the random location adds contest risk."
+  },
+  {
+   "system": "parry vs objectives",
+   "change_summary": "Successfully parrying an objective no longer resets your Parry cooldown.",
+   "driving_changes": [
+    "Parry: successfully parrying objectives no longer resets your Parry cooldown"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Tower dives become punishable — parry the Guardian, then heavy-melee the diver while the tower wakes up; only sustained/dive-capable picks (Apollo, Mo & Krill) can still dive, so sieging shifts from routine to committed."
+  },
+  {
+   "system": "combat input",
+   "change_summary": "Ability and item use is now instant on button press instead of waiting for the next input window.",
+   "driving_changes": [
+    "Abilities and items: use is now instant on button press instead of waiting for the next input window"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Raises the reaction ceiling — faster parries, dashes and spell combos — so high-APM execution and tight reaction windows are rewarded over pre-planned inputs."
+  },
+  {
+   "system": "walkers",
+   "change_summary": "Walkers no longer keep firing fireballs after dying.",
+   "driving_changes": [
+    "Walkers: no longer keep firing fireballs after dying"
+   ],
+   "magnitude": "minor",
+   "effect_on_play": "Removes post-mortem chip damage, making sieges and dives around a dying Walker slightly safer — a small nudge toward aggression on structures."
+  },
+  {
+   "system": "sinner's sacrifice",
+   "change_summary": "The Sinner's Sacrifice bonus now has variable timings.",
+   "driving_changes": [
+    "Sinner's Sacrifice: the bonus now has variable timings"
+   ],
+   "magnitude": "minor",
+   "effect_on_play": "Less predictable farm objective, forcing players to re-time their sacrifice route; exact upside is unclear from the notes."
+  },
+  {
+   "system": "street brawl",
+   "change_summary": "Street Brawl grants a corrupted item after the Round 5 item draft.",
+   "driving_changes": [
+    "Street Brawl: grants a corrupted item after the Round 5 item draft"
+   ],
+   "magnitude": "minor",
+   "effect_on_play": "Alternate mode gains earlier corrupted-item access; no bearing on the standard match meta."
+  }
+ ],
+ "tempo_shift": {
+  "direction": "toward_tempo",
+  "confidence": 0.5,
+  "why": "Early soul income is concentrated into crate routes (from ~2:30) and contested hubs (Plaza 5-8 min, Bell Tower 8+), with no new comeback valve, so map control and efficient routing decide games before most scalers spike. The counterweight — peercontent's read that guaranteed box drops push toward farming and slower brawling — keeps this a modest, economy-driven tempo shift rather than a return to pure lane brawling."
+ },
+ "archetype_effects": [
+  {
+   "archetype": "tank/frontline",
+   "direction": "up",
+   "magnitude": "moderate",
+   "why": "Harder-hitting, clumping Haunt camps reward sustain front lines (Krill up, Billy down per peercontent)."
+  },
+  {
+   "archetype": "mobile assassin",
+   "direction": "up",
+   "magnitude": "moderate",
+   "why": "New districts, extra hiding spots and Steam Vent invisibility open roam/pick routes (Paradox, Drifter, Doorman)."
+  },
+  {
+   "archetype": "split pusher",
+   "direction": "up",
+   "magnitude": "moderate",
+   "why": "More vaults spread around the map (Bell Tower alone has three) make objectives harder to defend against side pressure."
+  },
+  {
+   "archetype": "spirit carry",
+   "direction": "up",
+   "magnitude": "minor",
+   "why": "Buff Containers now grant permanent Ability Range and Spirit Resist independent of items."
+  },
+  {
+   "archetype": "late scaler",
+   "direction": "down",
+   "magnitude": "moderate",
+   "why": "Crate routes, early hubs and the intact no-comeback economy still close games early, though efficient farming partially offsets the loss."
+  },
+  {
+   "archetype": "lane bully",
+   "direction": "up",
+   "magnitude": "minor",
+   "why": "Lane-adjacent crate routes and Healing Snacks (10% max HP) reward early lane pressure and sustain."
+  },
+  {
+   "archetype": "gun carry",
+   "direction": "neutral",
+   "magnitude": "minor",
+   "why": "Instant item/ability use and bullet-resist containers help, but the top farm route (Tough Crates) needs heavy melee, not gun DPS."
+  },
+  {
+   "archetype": "burst caster",
+   "direction": "up",
+   "magnitude": "minor",
+   "why": "Instant-cast abilities plus Ability Range containers favor fast combo execution around the new contested hubs."
+  },
+  {
+   "archetype": "initiator",
+   "direction": "up",
+   "magnitude": "minor",
+   "why": "Telegraphed hub fights (Plaza, Bell Tower) and stealth rotations create structured pick windows."
+  },
+  {
+   "archetype": "support/healer",
+   "direction": "neutral",
+   "magnitude": "minor",
+   "why": "Healing Snacks and Steam Vent sustain ease lane pressure, but the value shifts toward roaming utility, not pure healing."
+  }
+ ],
+ "intent_read": "Valve is converting the game from a lane-brawl deciding factor into a map-objective economy skill test: behavior-rich Haunt camps, guaranteed soul-dense crate routes and the Plaza/Bell Tower hubs make routing, timing and contest the primary expression, with the Broker and corrupted items probing build variance for the road to 1.0. The parry-cooldown, Walker-fireball and instant-cast changes show a parallel push to tighten combat feel and punish greedy tower dives."
+}

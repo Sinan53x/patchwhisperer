@@ -1,0 +1,101 @@
+{
+ "patch_size": "major",
+ "size_why": "This is a full map rework with renamed lanes and four new districts, all neutrals replaced by new Haunt creatures, two new soul-hub objectives (Sunken Plaza, Bell Tower) plus a new crate economy, a temporary merchant tier (The Broker/Corrupted items), and combat-feel shifts (parry cooldown on objectives, instant cast, Walker fireballs). The way games are farmed and where they are fought both change, which is the definition of major.",
+ "headline": "Where you farm and where you fight — guaranteed soul crates and telegraphed hub objectives — now decides matches more than lane mechanics do.",
+ "meta_thesis": {
+  "previous": "Games were won in the lane: with comeback souls gutted and an early Unstable Rift, a lane lead from tempo bruisers (Paige, Apollo, Silver, Yamato, Lash) snowballed straight into a close before late scalers could spike.",
+  "new": "Games are now won in the map economy: routing to guaranteed high-value crate routes from ~2:30 and contesting Sunken Plaza (5-8 min) and Bell Tower (8+) replaces pure lane brawling as the lead engine, and AoE/sustain camp-clearers plus heavy-melee box farmers bank faster than anyone. The no-comeback valve is still intact, but efficient PvE farming and the ~30-min Broker spike partially re-open the door for scaling — the shift is from lane tempo to farm-route tempo, not a return to brawling.",
+  "relationship": "shift",
+  "why": "Tough Crates (58 souls, guaranteed, 200-300-soul lane routes) and the Plaza/Bell Tower hubs concentrate income into PvE routing (systems + peercontent), while the intact no-comeback economy keeps games close-able for camp-clearers like Yamato and Seven — the win condition moved off the lane, not off tempo."
+ },
+ "winners": [
+  {
+   "hero": "Yamato",
+   "why": "Direct note: Flying Strike now creates paths against objectives, and her punch AoE gathers and clears the new grouped, chasing Haunt camps faster than almost anyone — the two things this patch pays for.",
+   "indirect": false
+  },
+  {
+   "hero": "Seven",
+   "why": "Storm Cloud/Static Charge is arguably the best clear against stacked camps, so the patch's dominant PvE lead converts straight into his farm-then-scale line (55.0% WR on the snapshot).",
+   "indirect": true
+  },
+  {
+   "hero": "Mo & Krill",
+   "why": "Billy fell off the front-line slot and Krill's sustained uptime plus T3 bullet resist make him the default tank — one of the few who can still tower-dive past the parry-cooldown change.",
+   "indirect": true
+  },
+  {
+   "hero": "Lash",
+   "why": "The green-lane roof/tree lets him hold lane permanently (peercontent) and boxes matter more; still the top-pick initiator in a map built around forced hub fights.",
+   "indirect": true
+  },
+  {
+   "hero": "Drifter",
+   "why": "New districts and hiding spots plus Steam-Vent invisibility expand roam routes, and his sense revealing stealth heroes is the direct counter to that layout.",
+   "indirect": true
+  }
+ ],
+ "losers": [
+  {
+   "hero": "Calico",
+   "why": "Tough Crates — the patch's best farm route — require a Heavy Melee, which forces her out of cat form, locking her out of the dominant economy (unpicked in DNS per peercontent).",
+   "indirect": true
+  },
+  {
+   "hero": "Billy",
+   "why": "The camp/uptime meta wants sustained presence and his front-line slot visibly moved to a rising Mo & Krill.",
+   "indirect": true
+  },
+  {
+   "hero": "Bebop",
+   "why": "Same roamer slot as Paradox, but the more hiding-spot-friendly map now favors Paradox; his single-target hook converts less in a farm-and-sustain economy.",
+   "indirect": true
+  },
+  {
+   "hero": "Warden",
+   "why": "A late-scaling gun carry in a map-economy patch with no comeback valve; the Stealth/Vent layout helps real roamers, not his Shadow Weave engage.",
+   "indirect": true
+  },
+  {
+   "hero": "Infernus",
+   "why": "Peercontent reports his global napalm team-damage amp is gone — not present in these notes, so treat as unverified but he is sliding from first-pick/ban to ~sixth pick.",
+   "indirect": true
+  }
+ ],
+ "non_obvious_calls": [
+  {
+   "claim": "The 'Tough Crates need a Heavy Melee' line is effectively a targeted Calico nerf dressed as a general mechanic.",
+   "why": "Her cat form cannot perform the heavy melee, so the single best soul route in the patch is closed to her while it opens for Abrams, Krill and other melee cores.",
+   "confidence": 0.6
+  },
+  {
+   "claim": "The Broker's ~30-min Corrupted shipment is an unintended late-scaler safety valve that partly offsets the no-comeback economy.",
+   "why": "It gives scaling teams a concrete reason to bank souls and stall to 30 min, opposing the early-close thesis the rest of the patch reinforces.",
+   "confidence": 0.45
+  },
+  {
+   "claim": "The parry-cooldown change quietly deletes tower-diving for most of the roster, making Apollo and Krill outliers rather than the rule.",
+   "why": "Parrying a Guardian now spends your parry, so the dive punish is real; only picks with T3 bullet resist can still commit under tower (peercontent).",
+   "confidence": 0.55
+  },
+  {
+   "claim": "Infernus's drop is driven by a change that is not in these notes at all.",
+   "why": "If the reported global napalm amp removal is real, his fall is a stealth nerf a reader of the patch text would completely miss; flag as unverified.",
+   "confidence": 0.3
+  }
+ ],
+ "uncertainties": [
+  "The tempo direction is genuinely split: the systems pass reads toward tempo (0.5 confidence) while peercontent argues guaranteed crate drops push toward farming and slower games — the patch may do both at different match stages.",
+  "Six heroes announced for staggered release are not in these notes; their arrival can reset this entire thesis within weeks.",
+  "The source-reported auto-mantle (climb-and-shoot) is not in the notes but is called extremely broken — if real, it is a bigger combat change than anything listed.",
+  "Side asymmetry from Arch Mother (Sunken Plaza plus the theater) could skew win rates by map side rather than by hero, muddying week-one data."
+ ],
+ "what_to_watch": [
+  "Whether crate routes get hotfixed-nerfed — peercontent expects it, and that would instantly flip the farm-route thesis back toward lane brawling.",
+  "Yamato, Seven and Mina presence/win-rate as the camp-clear test of the AoE thesis.",
+  "Calico and Bebop pick rates — if they stay near zero, the crate-lockout and roamer-slot reads are confirmed.",
+  "Whether late-scaler win rates (Warden, Celeste, Infernus) stabilize after 30 min, which would validate the Broker-as-safety-valve read.",
+  "Arch Mother vs the other side win rates to quantify the map asymmetry that already changed DNS draft rules.",
+  "Any Infernus win-rate move to confirm or kill the unverified napalm-amp removal."
+ ]
+}

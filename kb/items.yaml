@@ -1424,3 +1424,16 @@ Guardian Ward:
   slot: null
   tier: null
   notes: ''
+Corrupted items:
+  name: Corrupted items
+  role: Late-game merchant tier unlocked by The Broker (~30 min, then ~every 15 min);
+    not a buildable slot — you convert a finished high-tier item for extra stats plus
+    match-wide random negative attributes.
+  bought_by: []
+  slot: Merchant shipment (The Broker) — no Vitality/Weapon/Spirit slot.
+  tier: null
+  notes: 'Rolls are symmetric: identical for all players in a match, so the tier adds
+    between-match variance, not intra-match advantage to whoever reaches The Broker
+    first. It rewards teams that can bank souls and stall to ~30 min, running counter
+    to this patch''s early-close economy. Read it at runtime, not in a build plan;
+    low-confidence (first KB entry).'

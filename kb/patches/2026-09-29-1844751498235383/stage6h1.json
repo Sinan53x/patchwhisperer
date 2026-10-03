@@ -1,0 +1,138 @@
+{
+ "hero_updates": {
+  "Infernus": {
+   "why": "Burn gun/spirit carry whose AoE still clears the new grouped, chasing Haunt camps, so the patch's farm-route economy is roughly neutral for him and Dashfernus (spirit dash) stays his stronger, untouched line. Watch item: an unverified report that his global napalm team-damage amp was removed — it is not in these notes.",
+   "notes": "City Never Sleeps (09-29): burn AoE clears the new grouped Haunt camps; an unverified peercontent report that his global napalm team-damage amp was removed is not in the notes — confirm via win rate.\n09-16 (indirect): Spiritual Overflow nerfed (40->30 spirit, 30->25% fire rate) — burn gun build drops it for Toxic Bullets/Swift Striker; Dashfernus untouched.\nCorrection accepted: not a pure gun hero — spirit items lead on both share and WR, so both builds kept; spirit build edges out gun."
+  },
+  "Seven": {
+   "trend": "rising",
+   "why": "Farm-first spirit AoE carry whose Storm Cloud/Static Charge is among the best clears for the patch's grouped, chasing Haunt camps, so guaranteed high-value crate routes bankroll his farm-then-scale line faster than most. The no-comeback economy is still intact, so a behind Seven cannot recover — the map-economy shift favors his archetype without restoring brawling.",
+   "enabled_by": [
+    "Abrams",
+    "Billy",
+    "Dynamo",
+    "Mo & Krill (frontline that makes space)",
+    "fast jungle clear vs grouped Haunt camps (Storm Cloud/Static Charge)",
+    "guaranteed high-value Tough-Crate routes",
+    "Healbane vs sustain comps"
+   ],
+   "notes": "City Never Sleeps (09-29, indirect): grouped Haunt camps + guaranteed Tough-Crate routes reward his AoE farm-first line; the no-comeback valve still caps a behind Seven.\n09-16 (indirect): Cultist Sacrifice bounty 180->170% trims his farm-banker opener.\n09-16 tempo patch (comeback souls cut, early Rift resist now 10%+1%/min, +3s respawn at 20m) hurts farm-first scalers."
+  },
+  "Vindicta": {
+   "trend": "rising",
+   "why": "Max-range poke/siege carry and a structural winner of the map rework: new roofs and high ground let her hold lanes and poke the telegraphed Sunken Plaza (5-8 min) and Bell Tower (8+) fights, and the tempo economy still rewards lane pressure. She still pays the flyer tax (Weighted Bola, air-drag slows), so she holds A rather than S.",
+   "enabled_by": [
+    "tempo economy (super-scaling trimmed)",
+    "increased 20m respawn timer",
+    "real early Rift fights (resist 10%+1%/min)",
+    "new roofs/high ground (lane hold + hub poke)",
+    "High-Velocity Rounds / Sharpshooter gun-core"
+   ],
+   "notes": "City Never Sleeps (09-29, indirect): new roofs/high ground and telegraphed Plaza/Bell Tower hub fights favor her max-range poke; flyer tax unchanged.\n09-16 (indirect): global slows now bite air drag and Silver's Weighted Bola grounds Flight — anti-flyer tax offsets her tempo gains, so she holds A.\nheresy's 09-17 ricochet/split-shot ult buff is unattributable; the 09-16 notes give it to Venator — treat as uncertain."
+  },
+  "Lady Geist": {
+   "why": "Regen spirit bruiser climbing the front-line slot: the patch's harder-hitting Haunt camps reward her Extra Regen/Mystic Regeneration sustain stack, Buff-Container Spirit Resist adds free defense, and her spirit-caster rivals (Celeste, Pocket, Mina) keep fading. Capped by the intact no-comeback economy that guts her 0-6-then-farm pattern and by the 09-16 Radiant Regeneration trim.",
+   "enabled_by": [
+    "regen gun-bruiser core (Extra Regen/Mystic Regeneration) untouched",
+    "harder Haunt camps (regen/sustain value)",
+    "Buff-Container Spirit Resist",
+    "Life Drain T3 spirit scaling buff",
+    "Essence Bomb T3 +4%",
+    "falling spirit-caster rivals: Celeste, Pocket, Mina",
+    "Soul Exchange fight-winning ult",
+    "frontline partners: Abrams, Mo & Krill, Dynamo"
+   ],
+   "notes": "City Never Sleeps (09-29, indirect): harder Haunt camps reward her sustain stack and Buff-Container Spirit Resist adds free defense; the no-comeback economy still caps her farm-then-scale pattern.\n09-16: Life Drain T3 spirit scaling 0.3->0.45 and Essence Bomb T3 26->30% buff her bomb/drain, but Radiant Regeneration 2->1.7 per-boon trims her 98%-buy regen core.\nWR 46.6% / PR 14.4% is a 14-day pre-patch snapshot; direction is split (vegas stable, heresy rising)."
+  },
+  "Abrams": {
+   "why": "Melee tank initiator whose melee core gives cheap heavy-melee access to the patch's best farm route (Tough Crates, 58 souls each), while the parry-cooldown-on-objectives change makes diving him under a Guardian riskier. Anti-heal stacking (Decay) still caps his Siphon sustain.",
+   "enabled_by": [
+    "gun-cycle change (dashes/light melee no longer break gun cycle)",
+    "melee core -> cheap heavy-melee access to Tough Crates (58 souls)",
+    "parry-cooldown change makes dives on him riskier",
+    "Infernal Resilience T3 buff",
+    "Fortitude max-health regen 2->2.25% (09-16)",
+    "early-tempo/early-snowball meta",
+    "core tank items untouched",
+    "Rem (heal enabler)"
+   ],
+   "notes": "City Never Sleeps (09-29, indirect): his melee core farms Tough Crates cheaply and the parry-on-objective change punishes dives on him; frontline archetype up.\nCorrected vs prior entry: matchup data has him beating Venator 62% (197 games), so Venator is a target, not a counter; anti-heal (Decay) is an item/system threat, not a hero pair.\nBuilds are data-derived (Close Quarters/Monster Rounds/Melee Charge >85% share) — one melee-gun core plus a late spirit-CC tank layer; creator echo-shard claim is not in usage data."
+  },
+  "McGinnis": {
+   "trend": "rising",
+   "why": "Zone controller whose turret/wall setup fits the patch's telegraphed hub fights (Sunken Plaza, Bell Tower), whose turrets also clear the grouped Haunt camps, and who benefits from the parry change punishing dives onto her wall. Still draft-dependent — near-useless into mobile dive + AoE.",
+   "enabled_by": [
+    "frontline tanks (Abrams, Dynamo, Billy) who hold space for turret and Medicinal Specter setups",
+    "telegraphed Plaza/Bell Tower hub fights (turret/wall zoning)",
+    "turrets clear grouped Haunt camps",
+    "parry-cooldown change punishes dives into her zone",
+    "tempo/objective meta — Guardian bounty +10% rewards her lane siege",
+    "Mini Turret HP buffs (08-12) and Medicinal Specter resist"
+   ],
+   "notes": "City Never Sleeps (09-29, indirect): telegraphed hub fights and the dive-punishing parry change favor her turret/wall zoning, and turrets clear the grouped Haunt camps.\nItem data (14d, mostly pre-09-16) shows a real gun core (Intensifying Magazine 77%, Monster Rounds 62%) plus spirit-amp turret items; no single dominant build.\nChangelog: 09-16 tempo patch (comeback gutted, slows -20%) hits her indirectly; no direct McGinnis change since 08-12."
+  },
+  "Paradox": {
+   "trend": "rising",
+   "why": "Pick/sniper whose roamer identity is the winner here: new districts, more hiding spots and Steam-Vent invisibility upgrade her pick setups and put her ahead of Bebop in the roamer slot. Her stationary Carbine sniper line still folds to the meta's mobile divers (Yamato, Lash, Holliday).",
+   "enabled_by": [
+    "Slowing Hex",
+    "Time Wall",
+    "Tankbuster",
+    "Dynamo",
+    "Mo & Krill",
+    "new districts/hiding spots/Steam Vent invisibility (roamer pick setups; ahead of Bebop)"
+   ],
+   "notes": "City Never Sleeps (09-29, indirect): new districts/hiding spots/Steam Vents upgrade her roamer pick setups and move her ahead of Bebop in that slot; the sniper line still folds to mobile divers.\nData disagrees with the old 'Echo Shard every game' read: the real core is a gun/carbine sniper, and Slowing Hex is 60%, not guaranteed.\nChangelog 09-16: Kinetic Carbine min-damage multiplier 25->10% and no longer scaled by T3; Slowing Hex cooldown up."
+  },
+  "Dynamo": {
+   "why": "Tempo initiator whose Singularity gets clean setup windows from the patch's telegraphed hub fights (Sunken Plaza, Bell Tower), with his initiator item spine untouched. Offset: his durable-frontline counters (Mo & Krill, Abrams) are the rising tank picks.",
+   "enabled_by": [
+    "tempo conversion",
+    "telegraphed Plaza/Bell Tower hub fights (Singularity setup)",
+    "AoE dispel (Quantum Entanglement)",
+    "Refresher",
+    "Singularity pickoff",
+    "Diviner's Kevlar +10% ultimate CDR (09-16)",
+    "core tank items untouched"
+   ],
+   "notes": "City Never Sleeps (09-29, indirect): telegraphed Plaza/Bell Tower hub fights give Singularity clean setup windows; initiator items untouched.\n09-16 (indirect): Diviner's Kevlar gained +10% ultimate CDR — now a live buy for his Refresher/Singularity plan.\nBuild read is a spirit-spine with a Refresher late spike; Headshot Booster (50%, 2.6 min) is just a starting item, not a gun build."
+  },
+  "Kelvin": {
+   "why": "Support/healer whose dome/sustain is more valuable against the patch's harder-hitting Haunt camps, with his cheap early sustain core turning Frozen Shelter's spirit scaling online early. Still capped by meta anti-heal (Healbane) and mobile dive (Lash, Drifter).",
+   "enabled_by": [
+    "Frozen Shelter spirit scaling",
+    "harder-hitting Haunt camps (dome/sustain value)",
+    "Extra Charge / Improved Spirit spirit stacking",
+    "tempo patch early heal relevance",
+    "healing-item nerfs (Radiant Regeneration 2->1.7, Restorative Locket trims) hurt rival sustain more than his Extra Regen/Healing Booster core",
+    "strong frontline allies he can heal (Abrams, Dynamo, Mo & Krill, Billy)"
+   ],
+   "notes": "City Never Sleeps (09-29, indirect): harder Haunt camps raise the value of his dome/sustain; Healing Snacks (10% max HP) reduce the relative value of dedicated healing.\nKB core_items were wrong: usage shows a spirit-sustain line (Extra Regen/Extra Charge/Healing Booster), not Radiant Regeneration/Healing Nova/Fortitude — corrected.\nChangelog: 09-16 — Frozen Shelter innate regen now scales with spirit power; High-Velocity Rounds (42%, 1.6 min) is lane filler, not a build."
+  },
+  "Holliday": {
+   "why": "Mobile pick assassin built for the new map: new districts, more hiding spots and Steam-Vent invisibility expand her roam routes, and the Bell Tower hub fights reward Spirit Lasso picks. She still loses to point-blank lockdown (Drifter, Bebop, Mo & Krill/Lash ults) that punishes her commit-heavy entry.",
+   "enabled_by": [
+    "tempo meta (comeback gutted; lane wins snowball)",
+    "20m respawn 35->38s (picks worth more)",
+    "new districts/hiding spots/Steam Vent invisibility (roam routes)",
+    "Bell Tower hub fights (lasso picks)",
+    "Spirit Lasso buff + longer lasso",
+    "Crackshot T2 resist-shred",
+    "bounce-pad double-charge via Extra Charge/Rapid Recharge"
+   ],
+   "notes": "City Never Sleeps (09-29, indirect): new districts/hiding spots/Steam Vents expand her roam routes and Bell Tower hub fights reward lasso picks.\nChangelog 09-16: Crackshot T2 resist-shred, longer Spirit Lasso, health/boon 41->43; Veil Walker lost Sprint Boots and movespeed-on-break.\nDisagreement: heresy (09-17) frames a 'gun hybrid' — ranked data shows a spirit charge/duration build with no gun items beyond Recharging Rush, so treat 'gun hybrid' as a skirmish label, not a build."
+  }
+ },
+ "change_log": [
+  "Infernus: why/notes refreshed; kept B/stable because the down-read rests on an unverified, not-in-notes napalm-amp change (burn AoE vs new camps is neutral-to-positive).",
+  "Seven: trend falling -> rising (Storm Cloud/Static Charge clears the patch's grouped Haunt camps + guaranteed crate routes bankroll his farm line); enabled_by + notes updated.",
+  "Vindicta: trend stable -> rising (new roofs/high ground hold lanes and poke Sunken Plaza/Bell Tower fights); enabled_by + notes updated.",
+  "Lady Geist: why/enabled_by/notes refreshed; keeps A/rising (harder camps reward her sustain stack, Buff-Container Spirit Resist adds defense).",
+  "Abrams: why/enabled_by/notes refreshed; keeps B/rising (melee core gives cheap heavy-melee access to Tough Crates; parry change punishes dives on him).",
+  "McGinnis: trend stable -> rising (telegraphed hub fights + dive-punishing parry change suit her zoning; turrets clear stacked camps); enabled_by + notes updated.",
+  "Paradox: trend falling -> rising (new districts/hiding spots/Steam Vents upgrade her roamer setups; ahead of Bebop); enabled_by + notes updated.",
+  "Dynamo: why/enabled_by/notes refreshed; keeps A/rising (telegraphed hub fights give Singularity clean setup windows).",
+  "Kelvin: why/enabled_by/notes refreshed; keeps B/rising (harder camps raise the value of his dome/sustain).",
+  "Holliday: why/enabled_by/notes refreshed; keeps A/rising (new districts/hiding spots expand roam routes; Bell Tower fights reward lasso picks)."
+ ]
+}

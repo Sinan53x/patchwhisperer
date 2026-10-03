@@ -1,0 +1,58 @@
+{
+ "hero_updates": {
+  "Bebop": {
+   "why": "Break-even single-target hook initiator (~50% WR at ~54% PR) who still generates picks but converts less in a farm-and-sustain economy: the roamer slot has tilted to Paradox, and a hook cannot punish PvE crate routing or camp clears. His 77%-buy Veil Walker remains stripped (no Sprint Boots, no movespeed-on-break) and his slows are still trimmed.",
+   "notes": "City Never Sleeps: no direct line; the farm/sustain economy plus Paradox's rise down-rank him in the roamer slot.\nSiphon Bullets (27% buy, 60.4% WR) is a small-sample late luxury, not a must-buy; builds stay hybrid — spirit-tagged pick tools (Spirit Strike/Snatch, Slowing Hex) out-share the gun items.\n09-16: slows -20%, Veil Walker loses Sprint Boots + movespeed-on-break; snapshot WRs are pre-patch baseline."
+  },
+  "Calico": {
+   "trend": "stable",
+   "why": "Lane-winning mobile assassin whose tempo snowball still fits the no-comeback economy, but the patch's best soul route — guaranteed Tough Crates — needs a Heavy Melee that forces her out of cat form, locking her out of that farm. She still bursts squishy carries (Seven, Pocket) before they kite and remains capped by tanks she cannot burst.",
+   "notes": "City Never Sleeps: cat form cannot perform the Heavy Melee that Tough Crates need, locking her out of the patch's best soul route; lean on kills/off-map gold.\nMelee-spirit is the default (Melee Lifesteal/Stalker/Spirit Strike/Cold Front/Spirit Snatch at 98-99%); the Rapid Recharge/Echo Shard set is gone.\nLast direct patch: Minor Update - 07-28-2026. Snapshot WR 50.2% is a 14-day pre-patch baseline."
+  },
+  "Mo & Krill": {
+   "tier": "A",
+   "why": "Default sustained front line now that Billy has slipped — sustained uptime and T3 bullet resist make him one of the few who can still commit under a tower after the parry-cooldown change, and the camp/uptime meta suits him. Long-range poke he cannot close on (Celeste, Vindicta) still kites him.",
+   "notes": "City Never Sleeps: camp/uptime meta plus Billy's slide hand him the default sustained front-line slot.\nSpirit build confirmed by data (Mystic Burst 100%, Torment Pulse 91%); no Scourge in top 15 and ~40% PR is high, not a win-rate outlier.\nLast hero-relevant change: Minor Update - 07-28-2026."
+  },
+  "Shiv": {
+   "why": "Rising anti-tank: the tank/frontline wave (Abrams, Mo & Krill, Billy) feeds his current-HP Serrated Knives, and harder camps reward his regen sustain. Burst and hook CC (Yamato, Drifter, Bebop) still kill him before regen ramps, and his core Radiant Regeneration was trimmed.",
+   "notes": "City Never Sleeps: rising anti-tank — the bigger front line feeds current-HP Serrated Knives and harder camps reward his regen.\nSpirit/regen rebuild confirmed (Mystic Regeneration/Extra Regen core); Mystic Vulnerability/Torment Pulse/Escalating Exposure run 40-55%.\n09-16: knives current-HP rework + alt-fire buff; Radiant Regeneration and Restorative Locket trimmed."
+  },
+  "Ivy": {
+   "notes": "City Never Sleeps: no direct line; peercontent floats a small lift off camp-damage sustain, but the Healing Snack addition and trimmed heal items cut both ways for her (low confidence).\nReal build is gun-first (Extended/Titanic/Tesla 68-74%); creator heal-support framing is stale.\n09-16: Stone Form radius 6->5.75m, T1 heal 7->6%."
+  },
+  "Warden": {
+   "why": "Late-scaling gun carry the no-comeback, farm-route economy refuses to wait for: tempo now runs through crate routes and hub objectives rather than lane brawling, and Shadow Weave's invis-engage gains little from the new Steam-Vent/district layout. His 09-16 cuts (bullet dmg/boon, flask range/speed, Willpower T3, nerfed T4 gun finishers) are still unanswered.",
+   "notes": "City Never Sleeps: no direct line; the farm-route/no-comeback economy still refuses to wait for a late gun scaler, and Shadow Weave gains little from the new Steam-Vent/district layout.\nOne dominant gun build; the 'cage' is a Willpower choice, not an item path.\n09-16: bullet dmg/boon, flask range/speed, Willpower T3 cut; Mercurial Magnum + Spiritual Overflow nerfed, Veil Walker stripped."
+  },
+  "Yamato": {
+   "why": "The patch's camp-clear champion: Flying Strike now creates paths against solid targets (turrets, Shrines, objectives) for extra mobility and objective access, and her punch AoE gathers the new grouped, chasing Haunt camps faster than almost anyone. Tempo burst plus point-click Spirit Snatch still deletes squishy carries; sustain tanks and anti-heal cap her at the top of A, toward S.",
+   "last_changed_patch": "City Never Sleeps",
+   "notes": "City Never Sleeps: Flying Strike now creates paths against solid targets (turrets, Shrines, objectives) — new mobility/objective access — and she is the patch's camp-clear champion vs the grouped Haunt camps.\nTankbuster is 39% share at a 25m average buy (late luxury, not core); the Refresher build stays niche/creator-driven.\n09-16: Crimson Slash T3 heal spirit scaling +0.4, Flying Slash light-melee scaling 1.0->1.2."
+  },
+  "Lash": {
+   "why": "Highest-pick initiator (62% PR) whose dive-and-stomp engage still snowballs in the no-comeback economy, now with the green-lane roof/tree giving him permanent lane high ground and boxes mattering more to his farm. Mass pick pressure drags his 51.8% WR; Silver's Weighted Bola and the air-drag slows are still the counter.",
+   "notes": "City Never Sleeps: no direct line; the green-lane roof/tree gives permanent lane high ground and boxes matter more to his farm.\nStomp/spirit is current; 30-day usage still shows gun Lash because the window is mostly pre-09-16.\n09-16: Ground Strike T3 scaling + per-meter damage up, gun falloff changed, Flog heal nerfed."
+  },
+  "Viscous": {
+   "notes": "City Never Sleeps: no direct line; harder camps reward Cube sustain and spread-out vaults suit Goo Ball, but this is a low-confidence lift.\nCreators' Decay/Echo Shard core is stale — Mystic Burst (94%) and High-Velocity Rounds (81%) lead.\n09-16: Cube cast range 26->20m, Puddle Punch cooldown 21->24s, Splatter/alt-fire nerfs; cooldown-Cube shell lost Veil Walker's Sprint Boots."
+  },
+  "Mina": {
+   "trend": "stable",
+   "why": "Overloaded mobile burst assassin still stuck at C: the camp/uptime patch rewards her grouped-camp AoE clear and new-district mobility, but her single-target rotation does not kill through the tank front line (Billy, Mo & Krill, Victor) and Yamato owns the mobile-burst niche. The damage gap is a rework problem, not a numbers one.",
+   "notes": "City Never Sleeps: no direct line; the camp/uptime patch rewards her grouped-camp AoE clear and new-district mobility, but her damage gap is unchanged.\nOne spirit build (Extra Spirit/Mystic Burst/Quicksilver Reload ~100%); only late anti-tank items diverge.\nLast direct touch: 07-28-2026."
+  }
+ },
+ "change_log": [
+  "Bebop: why rewritten (farm/sustain economy + Paradox's rise push him down the roamer queue); notes changelog line added; tier/trend held B/falling.",
+  "Calico: trend rising -> stable (Heavy-Melee Tough Crates force her out of cat form and lock her out of the patch's best soul route); why updated.",
+  "Mo & Krill: tier B -> A (Billy's slide hands him the default sustained front-line slot, T3 bullet-resist dive survives the parry change); why updated.",
+  "Shiv: why updated (rising anti-tank vs the bigger front line); tier/trend held A/rising.",
+  "Ivy: notes line added (peercontent camp-sustain lift, low confidence; heal-item trims cut both ways); tier/trend held A/falling.",
+  "Warden: why updated (no-comeback farm-route economy refuses to wait for a late gun scaler); tier/trend held C/falling.",
+  "Yamato: last_changed_patch set to City Never Sleeps; why updated (Flying Strike objective pathing + camp-clear champion); tier held A.",
+  "Lash: why updated (green-lane roof high ground + boxes); tier/trend held S/rising.",
+  "Viscous: notes line added (Cube sustain vs harder camps, low confidence); tier/trend held B/falling.",
+  "Mina: trend falling -> stable (grouped-camp AoE clear + district mobility lift, damage gap unchanged); why updated."
+ ]
+}

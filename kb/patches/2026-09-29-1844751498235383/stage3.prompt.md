@@ -1,3 +1,229 @@
+# Task: per-hero analysis (all heroes)
+
+Patch: City Never Sleeps (2026-09-29)
+
+## Systems analysis
+
+{
+ "systems_changed": [
+  {
+   "system": "map/layout",
+   "change_summary": "Full visual rework with lanes renamed (Broadway/Greenwich/York) and four new districts (Theater, Chinatown, Haunted Lot, Plaza) branching off the main lanes; the layout now dictates where picks and fights happen.",
+   "driving_changes": [
+    "Map: full visual rework; lanes renamed Blue Lane → Broadway, Green Lane → Greenwich, Yellow Lane → York",
+    "Districts: 4 new districts branching off the main lanes — Theater, Chinatown, Haunted Lot, Plaza"
+   ],
+   "magnitude": "major",
+   "effect_on_play": "New high-ground, roofs and hiding geometry change lane control and roaming routes; per peercontent the green-lane roof/tree above the bridge lets a hero hold lane permanently, so lane matchups are now map-conditional, not just kit-based."
+  },
+  {
+   "system": "neutrals/jungle",
+   "change_summary": "All old neutrals are replaced by Haunt creatures that hit harder, cluster and chase; the efficient jungle pattern becomes stacking camps and clearing them with AoE.",
+   "driving_changes": [
+    "Neutrals: all old neutrals replaced by new Haunt creatures with new behaviors (Specimen, Gutter Ghouls, Barrel Mimics, Past Dues, Stage Hands, Crabbage Pots, Festival Spirit, Shrooms, Underhands)",
+    "peercontent: camps deal more damage, group together and follow you, so sustain and AoE clear define the early game"
+   ],
+   "magnitude": "major",
+   "effect_on_play": "Sustain and AoE camp-clear rise (Yamato, Mina), squishy heroes get punished for casual jungling, and grouped chasing camps can be deliberately stacked for faster clears — a mechanical skill gap that replaces the old static-camp farm."
+  },
+  {
+   "system": "economy/farm (Tough Crates)",
+   "change_summary": "Tough Crates need a Heavy Melee to open and pay guaranteed souls (~58 each), and several lanes have 200-300-soul box routes, making box runs more soul-efficient than camp farming.",
+   "driving_changes": [
+    "Tough Crates: breakables that require a Heavy Melee to open and pay out extra souls, rewarding heavy-melee access",
+    "peercontent: 58 souls per crate, guaranteed drops, 200-300-soul quick routes; the 2:30 wave's boxes become heavy crates worth >100 souls"
+   ],
+   "magnitude": "major",
+   "effect_on_play": "Early income concentrates into crate routes from ~2:30, so farming efficiency and heavy-melee access decide the first ten minutes; heroes locked out of heavy melee (Calico's cat form) lose a farm lane they can't contest."
+  },
+  {
+   "system": "objectives/economy (Sunken Plaza & Bell Tower)",
+   "change_summary": "Two new soul hotspots anchor the map: Sunken Plaza (~400-500 souls in seconds at 5 min, exits to the secret shop, drains stamina/mutes sound) and Bell Tower (~280 souls at 5 min, three vaults, capture rings a map-wide bell).",
+   "driving_changes": [
+    "Sunken Plaza: sub-area beneath the Plaza district; descending drains your stamina and mutes outside sound; high risk, high reward",
+    "Bell Tower: Chinatown objective at the top of the tower holding a concentrated soul hotspot; collecting it rings a bell heard across the whole map"
+   ],
+   "magnitude": "major",
+   "effect_on_play": "Fights converge on Plaza at 5-8 min and Bell Tower after 8; teams must rotate to contest telegraphed soul hubs, and Plaza's secret-shop exit plus stamina drain make it a committed fight rather than a free grab."
+  },
+  {
+   "system": "buff containers",
+   "change_summary": "Buff Containers are reworked to grant permanent Spirit Resist, Bullet Resist, Ability Range and Move Speed instead of their old effect.",
+   "driving_changes": [
+    "Buff Containers: revamped golden statues now also grant Spirit Resist, Bullet Resist, Ability Range, and Move Speed as permanent bonuses"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Adds objective-gated stats independent of items, quietly scaling whoever controls early containers; Ability Range in particular rewards caster/poke kits that leverage the stat."
+  },
+  {
+   "system": "sustain & stealth (Healing Snacks, Steam Vents)",
+   "change_summary": "Healing Snacks (10% max HP) sit just behind lanes, and Steam Vents grant invisibility plus small regen for silent rotations.",
+   "driving_changes": [
+    "Healing Snacks: hidden pickups around the map for quick healing",
+    "Steam Vents: standing on one grants invisibility and a small regen, enabling silent team rotations"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Laning sustain and re-engage potential improve without items, and stealth rotations become map-driven; reveal/detection kits (Drifter, whose sense sees stealth) gain value from the stealth-friendly layout."
+  },
+  {
+   "system": "items/broker",
+   "change_summary": "A temporary merchant (The Broker) spawns with a first shipment ~30 min in, then roughly every 15 min, trading high-tier items for Corrupted versions.",
+   "driving_changes": [
+    "The Broker: temporary merchant spawning in random locations... first shipment ~30 min into a match, then roughly every 15 min; trades high-tier items for Corrupted versions"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Creates a mid-late power spike and build variance around 30 min, rewarding players who bank souls and know the Corrupted pool; the random location adds contest risk."
+  },
+  {
+   "system": "parry vs objectives",
+   "change_summary": "Successfully parrying an objective no longer resets your Parry cooldown.",
+   "driving_changes": [
+    "Parry: successfully parrying objectives no longer resets your Parry cooldown"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Tower dives become punishable — parry the Guardian, then heavy-melee the diver while the tower wakes up; only sustained/dive-capable picks (Apollo, Mo & Krill) can still dive, so sieging shifts from routine to committed."
+  },
+  {
+   "system": "combat input",
+   "change_summary": "Ability and item use is now instant on button press instead of waiting for the next input window.",
+   "driving_changes": [
+    "Abilities and items: use is now instant on button press instead of waiting for the next input window"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Raises the reaction ceiling — faster parries, dashes and spell combos — so high-APM execution and tight reaction windows are rewarded over pre-planned inputs."
+  },
+  {
+   "system": "walkers",
+   "change_summary": "Walkers no longer keep firing fireballs after dying.",
+   "driving_changes": [
+    "Walkers: no longer keep firing fireballs after dying"
+   ],
+   "magnitude": "minor",
+   "effect_on_play": "Removes post-mortem chip damage, making sieges and dives around a dying Walker slightly safer — a small nudge toward aggression on structures."
+  },
+  {
+   "system": "sinner's sacrifice",
+   "change_summary": "The Sinner's Sacrifice bonus now has variable timings.",
+   "driving_changes": [
+    "Sinner's Sacrifice: the bonus now has variable timings"
+   ],
+   "magnitude": "minor",
+   "effect_on_play": "Less predictable farm objective, forcing players to re-time their sacrifice route; exact upside is unclear from the notes."
+  },
+  {
+   "system": "street brawl",
+   "change_summary": "Street Brawl grants a corrupted item after the Round 5 item draft.",
+   "driving_changes": [
+    "Street Brawl: grants a corrupted item after the Round 5 item draft"
+   ],
+   "magnitude": "minor",
+   "effect_on_play": "Alternate mode gains earlier corrupted-item access; no bearing on the standard match meta."
+  }
+ ],
+ "tempo_shift": {
+  "direction": "toward_tempo",
+  "confidence": 0.5,
+  "why": "Early soul income is concentrated into crate routes (from ~2:30) and contested hubs (Plaza 5-8 min, Bell Tower 8+), with no new comeback valve, so map control and efficient routing decide games before most scalers spike. The counterweight — peercontent's read that guaranteed box drops push toward farming and slower brawling — keeps this a modest, economy-driven tempo shift rather than a return to pure lane brawling."
+ },
+ "archetype_effects": [
+  {
+   "archetype": "tank/frontline",
+   "direction": "up",
+   "magnitude": "moderate",
+   "why": "Harder-hitting, clumping Haunt camps reward sustain front lines (Krill up, Billy down per peercontent)."
+  },
+  {
+   "archetype": "mobile assassin",
+   "direction": "up",
+   "magnitude": "moderate",
+   "why": "New districts, extra hiding spots and Steam Vent invisibility open roam/pick routes (Paradox, Drifter, Doorman)."
+  },
+  {
+   "archetype": "split pusher",
+   "direction": "up",
+   "magnitude": "moderate",
+   "why": "More vaults spread around the map (Bell Tower alone has three) make objectives harder to defend against side pressure."
+  },
+  {
+   "archetype": "spirit carry",
+   "direction": "up",
+   "magnitude": "minor",
+   "why": "Buff Containers now grant permanent Ability Range and Spirit Resist independent of items."
+  },
+  {
+   "archetype": "late scaler",
+   "direction": "down",
+   "magnitude": "moderate",
+   "why": "Crate routes, early hubs and the intact no-comeback economy still close games early, though efficient farming partially offsets the loss."
+  },
+  {
+   "archetype": "lane bully",
+   "direction": "up",
+   "magnitude": "minor",
+   "why": "Lane-adjacent crate routes and Healing Snacks (10% max HP) reward early lane pressure and sustain."
+  },
+  {
+   "archetype": "gun carry",
+   "direction": "neutral",
+   "magnitude": "minor",
+   "why": "Instant item/ability use and bullet-resist containers help, but the top farm route (Tough Crates) needs heavy melee, not gun DPS."
+  },
+  {
+   "archetype": "burst caster",
+   "direction": "up",
+   "magnitude": "minor",
+   "why": "Instant-cast abilities plus Ability Range containers favor fast combo execution around the new contested hubs."
+  },
+  {
+   "archetype": "initiator",
+   "direction": "up",
+   "magnitude": "minor",
+   "why": "Telegraphed hub fights (Plaza, Bell Tower) and stealth rotations create structured pick windows."
+  },
+  {
+   "archetype": "support/healer",
+   "direction": "neutral",
+   "magnitude": "minor",
+   "why": "Healing Snacks and Steam Vent sustain ease lane pressure, but the value shifts toward roaming utility, not pure healing."
+  }
+ ],
+ "intent_read": "Valve is converting the game from a lane-brawl deciding factor into a map-objective economy skill test: behavior-rich Haunt camps, guaranteed soul-dense crate routes and the Plaza/Bell Tower hubs make routing, timing and contest the primary expression, with the Broker and corrupted items probing build variance for the road to 1.0. The parry-cooldown, Walker-fireball and instant-cast changes show a parallel push to tighten combat feel and punish greedy tower dives."
+}
+
+## Item analysis
+
+{
+ "items": [
+  {
+   "item": "Corrupted items",
+   "direction": "rework",
+   "magnitude": "moderate",
+   "summary": "This is not a slot anyone builds toward — it is a new late-game tier that only exists after The Broker spawns (~30 min, then ~every 15). Because the negative attributes and small stat rolls are match-wide random (identical for all players), the same Corrupted item can be a clean pickup in one match and a trap in the next, so its value is a runtime read, not something you plan a build around; my read is low-confidence (no KB entry).",
+   "affected_heroes": [],
+   "build_shift": "Adds a bank-souls incentive that competes with dumping souls into a sixth slot before 30 min, since the corrupted trade is the only way to convert a finished high-tier item into the tier's extra stats."
+  }
+ ],
+ "notable_item_stories": [
+  "The Broker's 30-min spike runs counter to this patch's early-close/tempo read: it gives late scalers a concrete reason to survive and hold souls, partially offsetting the no-comeback economy and the late-scaler burial flagged in the systems pass.",
+  "Because corrupted rolls are symmetric (match-wide identical), the tier adds variance between matches, not between players inside a match, so it should not skew win rates toward whoever reaches The Broker first — only toward teams that can stall to 30 min."
+ ]
+}
+
+## Direct hero changes in this patch (grouped by hero; heroes not listed had no direct changes)
+
+Check out everything that's new at:
+  - [neutral] Check out everything that's new at: https://www.playdeadlock.com/cityneversleeps
+Corrupted items:
+  - [neutral] Corrupted items: high-tier items exchanged at The Broker; each match rolls random negative attributes from a predefined set with small stat variability, identical for every player in that match
+Rat King:
+  - [rework] Nurse Harrow, Deadman Danny, Baba, Solomon, Rat King, Violet: six new heroes announced; released two per week on Tuesdays and Fridays starting Oct 2, order decided by community vote
+Yamato:
+  - [rework] Yamato: Flying Strike now creates paths against targets that are solid to the player (turrets, Shrines, objectives)
+Graves:
+  - [rework] Graves: can now destroy Venator's traps with her gun
+
+## Knowledge base: current state of every hero (pre-patch)
+
 Infernus:
   name: Infernus
   role: gun/spirit carry
@@ -8,10 +234,10 @@ Infernus:
   - late scaler
   tier: B
   trend: stable
-  why: 'Burn gun/spirit carry whose AoE still clears the new grouped, chasing Haunt
-    camps, so the patch''s farm-route economy is roughly neutral for him and Dashfernus
-    (spirit dash) stays his stronger, untouched line. Watch item: an unverified report
-    that his global napalm team-damage amp was removed — it is not in these notes.'
+  why: 'Infernus holds a huge 35.3% pick rate on a 47.7% WR: a comfort staple, not
+    a killer. Dashfernus (spirit dash) is his stronger, untouched line, while the
+    09-16 Spiritual Overflow nerf stripped the capstone from his burn-gun build, widening
+    the gap between his two identities in a meta that rewards mobility over late scaling.'
   core_items:
   - Extra Spirit
   - Improved Spirit
@@ -31,8 +257,8 @@ Infernus:
   enabled_by:
   - Toxic Bullets scaling buff (09-16)
   - Healbane into healer-heavy comps (77% buy)
-  - Spirit scaling — Escalating Exposure 54.0% WR leads (Spiritual Overflow nerfed
-    09-16)
+  - "Spirit scaling \u2014 Escalating Exposure 54.0% WR leads (Spiritual Overflow\
+    \ nerfed 09-16)"
   - 09-16 dash no longer breaking gun cycle time
   countered_by:
   - Decay
@@ -45,16 +271,12 @@ Infernus:
   - Yamato
   - Lash
   - tempo/snowball meta
-  last_changed_patch: null
-  notes: 'City Never Sleeps (09-29): burn AoE clears the new grouped Haunt camps;
-    an unverified peercontent report that his global napalm team-damage amp was removed
-    is not in the notes — confirm via win rate.
-
-    09-16 (indirect): Spiritual Overflow nerfed (40->30 spirit, 30->25% fire rate)
-    — burn gun build drops it for Toxic Bullets/Swift Striker; Dashfernus untouched.
-
-    Correction accepted: not a pure gun hero — spirit items lead on both share and
-    WR, so both builds kept; spirit build edges out gun.'
+  notes: "09-16 (indirect): Spiritual Overflow nerfed (40->30 spirit, 30->25% fire\
+    \ rate) \u2014 burn gun build drops it for Toxic Bullets/Swift Striker; Dashfernus\
+    \ untouched.\nCorrection accepted: not a pure gun hero \u2014 data agrees (spirit\
+    \ items lead on both share and WR), so both builds kept; spirit build edges out\
+    \ gun. Low confidence on matchups (samples 150-350 games) and on any post-patch\
+    \ shift, since the 47.7%/35.3% snapshot is pre-09-16."
   builds:
   - name: Dashfernus (spirit dash)
     damage: spirit
@@ -82,9 +304,10 @@ Infernus:
     - Titanic Magazine
     - Toxic Bullets
     popularity: secondary
-    notes: Gun build leaning on burn via Toxic Bullets; Spiritual Overflow was nerfed
-      09-16 (spirit 40->30, fire rate 30->25%, slower buildup) so it is dropped for
-      Swift Striker/Titanic Magazine — still his weaker-performing item set.
+    notes: "Gun build leaning on burn via Toxic Bullets; Spiritual Overflow was nerfed\
+      \ 09-16 (spirit 40->30, fire rate 30->25%, slower buildup) so it is dropped\
+      \ for Swift Striker/Titanic Magazine \u2014 still his weaker-performing item\
+      \ set."
   matchups:
     beats:
     - Shiv
@@ -103,7 +326,6 @@ Infernus:
     that negates his low-HP kite game: Dynamo 41% and Bebop 43% (initiations/hooks)
     and Vyper 42%, a straight gun duel his HP cap can''t win.'
   confidence: 0.6
-  released_on: null
   provisional: false
 Seven:
   name: Seven
@@ -112,12 +334,13 @@ Seven:
   - spirit carry
   - late scaler
   tier: B
-  trend: rising
-  why: Farm-first spirit AoE carry whose Storm Cloud/Static Charge is among the best
-    clears for the patch's grouped, chasing Haunt camps, so guaranteed high-value
-    crate routes bankroll his farm-then-scale line faster than most. The no-comeback
-    economy is still intact, so a behind Seven cannot recover — the map-economy shift
-    favors his archetype without restoring brawling.
+  trend: falling
+  why: "Farm-first spirit AoE carry \u2014 the item data (Mystic Vulnerability 91%,\
+    \ Escalating Exposure 89%) says spirit, not the gun build the KB lists. A 51.2%\
+    \ WR on a 25.5% PR is healthy and he actually wins the tempo S-tiers Lash and\
+    \ Billy, but the 09-16 patch gutted comeback souls and early Rift generosity,\
+    \ so the scaling farmer who falls behind no longer recovers. Strong in low elo\
+    \ where teams don't invade; unremarkable at the very top."
   core_items:
   - Mystic Vulnerability
   - Escalating Exposure
@@ -134,8 +357,7 @@ Seven:
   - Billy
   - Dynamo
   - Mo & Krill (frontline that makes space)
-  - fast jungle clear vs grouped Haunt camps (Storm Cloud/Static Charge)
-  - guaranteed high-value Tough-Crate routes
+  - fast jungle clear
   - Healbane vs sustain comps
   countered_by:
   - Calico (dive)
@@ -144,14 +366,11 @@ Seven:
   - Bebop (Hook CC-lock)
   - tempo/invade meta
   last_changed_patch: Minor Update - 08-12-2026
-  notes: 'City Never Sleeps (09-29, indirect): grouped Haunt camps + guaranteed Tough-Crate
-    routes reward his AoE farm-first line; the no-comeback valve still caps a behind
-    Seven.
+  notes: '09-16 (indirect): Cultist Sacrifice bounty 180->170% trims his farm-banker
+    opener.
 
-    09-16 (indirect): Cultist Sacrifice bounty 180->170% trims his farm-banker opener.
-
-    09-16 tempo patch (comeback souls cut, early Rift resist now 10%+1%/min, +3s respawn
-    at 20m) hurts farm-first scalers.'
+    Changelog: 09-16 tempo patch (comeback souls cut, early Rift resist now 10%+1%/min,
+    +3s respawn at 20m) hurts farm-first scalers.'
   builds:
   - name: Spirit AoE carry
     damage: spirit
@@ -187,13 +406,12 @@ Seven:
     - Ivy
     - Bebop
     - Infernus
-  matchup_notes: Beats grouped/initiating S-tiers — Paradox and Lash (both 58%) get
-    punished by his AoE and out-ranged on engage, and Vindicta's 53% edge grows as
-    the patch grounds flyers. Loses to Calico (42%), who dives the immobile farmer
-    before his AoE is up, and to Abrams/Bebop, who either out-tank his burst or Hook
-    him out of Storm Cloud range.
+  matchup_notes: "Beats grouped/initiating S-tiers \u2014 Paradox and Lash (both 58%)\
+    \ get punished by his AoE and out-ranged on engage, and Vindicta's 53% edge grows\
+    \ as the patch grounds flyers. Loses to Calico (42%), who dives the immobile farmer\
+    \ before his AoE is up, and to Abrams/Bebop, who either out-tank his burst or\
+    \ Hook him out of Storm Cloud range."
   confidence: 0.52
-  released_on: null
   provisional: false
 Vindicta:
   name: Vindicta
@@ -202,12 +420,13 @@ Vindicta:
   - poke/siege
   - gun carry
   tier: A
-  trend: rising
-  why: 'Max-range poke/siege carry and a structural winner of the map rework: new
-    roofs and high ground let her hold lanes and poke the telegraphed Sunken Plaza
-    (5-8 min) and Bell Tower (8+) fights, and the tempo economy still rewards lane
-    pressure. She still pays the flyer tax (Weighted Bola, air-drag slows), so she
-    holds A rather than S.'
+  trend: stable
+  why: "High-tempo poke/siege carry \u2014 the exact profile the 09-16 patch rewards:\
+    \ super-scaling trimmed, respawns stretched to 38s at 20m, and real early Rift\
+    \ fights mean lane pressure sticks. She is also the archetypal flyer, so the same\
+    \ patch taxes her uptime (air-drag slows, Silver's Weighted Bola grounding). Holds\
+    \ A rather than the S the tempo read implies: 37.8% PR keeps her everywhere but\
+    \ 50.3% WR says she is not free wins."
   core_items:
   - High-Velocity Rounds
   - Opening Rounds
@@ -227,7 +446,6 @@ Vindicta:
   - tempo economy (super-scaling trimmed)
   - increased 20m respawn timer
   - real early Rift fights (resist 10%+1%/min)
-  - new roofs/high ground (lane hold + hub poke)
   - High-Velocity Rounds / Sharpshooter gun-core
   countered_by:
   - Silver (Weighted Bola grounds flyers)
@@ -236,14 +454,11 @@ Vindicta:
   - dive/CC comps
   - Yamato (mobile burst assassin)
   last_changed_patch: Minor Update - 08-12-2026
-  notes: 'City Never Sleeps (09-29, indirect): new roofs/high ground and telegraphed
-    Plaza/Bell Tower hub fights favor her max-range poke; flyer tax unchanged.
-
-    09-16 (indirect): global slows now bite air drag and Silver''s Weighted Bola grounds
-    Flight — anti-flyer tax offsets her tempo gains, so she holds A.
-
-    heresy''s 09-17 ricochet/split-shot ult buff is unattributable; the 09-16 notes
-    give it to Venator — treat as uncertain.'
+  notes: "09-16 (indirect): global slows now bite air drag and Silver's Weighted Bola\
+    \ grounds Flight \u2014 anti-flyer tax offsets her tempo gains, so she holds A\
+    \ (two-sided mover).\nheresy's 09-17 ricochet/split-shot ult buff is unattributable;\
+    \ the 09-16 notes give it to Venator \u2014 treat as uncertain.\nLast changed\
+    \ Minor Update - 08-12-2026 (Stake T1 nerf)."
   builds:
   - name: Gun poke
     damage: gun
@@ -284,12 +499,12 @@ Vindicta:
     - Wraith
     - Ivy
     - Silver
-  matchup_notes: Out-ranges and out-snipes other gun carries who want to stand and
-    trade (Venator 61%, Mirage 55%) and punishes immobile fronts (Victor 55%, Bebop
-    54%, Abrams 53%). Folds to mobile divers and burst that close the gap before she
-    can kite — Lash 46%, Vyper 45%, Celeste 46% — the classic low-HP flyer weakness.
+  matchup_notes: "Out-ranges and out-snipes other gun carries who want to stand and\
+    \ trade (Venator 61%, Mirage 55%) and punishes immobile fronts (Victor 55%, Bebop\
+    \ 54%, Abrams 53%). Folds to mobile divers and burst that close the gap before\
+    \ she can kite \u2014 Lash 46%, Vyper 45%, Celeste 46% \u2014 the classic low-HP\
+    \ flyer weakness."
   confidence: 0.63
-  released_on: null
   provisional: false
 Lady Geist:
   name: Lady Geist
@@ -300,11 +515,12 @@ Lady Geist:
   - spirit carry
   tier: A
   trend: rising
-  why: 'Regen spirit bruiser climbing the front-line slot: the patch''s harder-hitting
-    Haunt camps reward her Extra Regen/Mystic Regeneration sustain stack, Buff-Container
-    Spirit Resist adds free defense, and her spirit-caster rivals (Celeste, Pocket,
-    Mina) keep fading. Capped by the intact no-comeback economy that guts her 0-6-then-farm
-    pattern and by the 09-16 Radiant Regeneration trim.'
+  why: 'Essence Bomb/Life Drain buffs land on a hero whose tank/regen core the tempo
+    patch left untouched, and her spirit-caster rivals (Celeste, Pocket, Mina) are
+    all falling, so she climbs the bruiser slot by attrition. The gain is capped:
+    the comeback rework guts her classic 0-6-lane-then-AFK-farm pattern, and Radiant
+    Regeneration (98% buy share) was trimmed, so she reads as a durable ult-bot rather
+    than a true scaler.'
   core_items:
   - Extra Regen
   - Monster Rounds
@@ -318,8 +534,6 @@ Lady Geist:
   - Spirit Soul-Exchange
   enabled_by:
   - regen gun-bruiser core (Extra Regen/Mystic Regeneration) untouched
-  - harder Haunt camps (regen/sustain value)
-  - Buff-Container Spirit Resist
   - Life Drain T3 spirit scaling buff
   - Essence Bomb T3 +4%
   - 'falling spirit-caster rivals: Celeste, Pocket, Mina'
@@ -334,16 +548,15 @@ Lady Geist:
   - Silver (S) gun tank that out-damages and out-tanks her
   - silence/burst before Soul Exchange
   last_changed_patch: Minor Update - 09-16-2026
-  notes: 'City Never Sleeps (09-29, indirect): harder Haunt camps reward her sustain
-    stack and Buff-Container Spirit Resist adds free defense; the no-comeback economy
-    still caps her farm-then-scale pattern.
+  notes: '09-16: Life Drain T3 spirit scaling 0.3->0.45 and Essence Bomb T3 26->30%
+    buff her bomb/drain, but Radiant Regeneration 2->1.7 per-boon trims her 98%-buy
+    regen core.
 
-    09-16: Life Drain T3 spirit scaling 0.3->0.45 and Essence Bomb T3 26->30% buff
-    her bomb/drain, but Radiant Regeneration 2->1.7 per-boon trims her 98%-buy regen
-    core.
+    Radiant Regeneration nerf plus the comeback rework gutting her 0-6-then-farm pattern
+    are what cap this rise, so I weight it below the creators'' ''rising''.
 
-    WR 46.6% / PR 14.4% is a 14-day pre-patch snapshot; direction is split (vegas
-    stable, heresy rising).'
+    WR 46.6% / PR 14.4% is a 14-day pre-patch snapshot; creator reads are A but direction
+    is split (vegas stable, heresy rising).'
   builds:
   - name: Regen gun-bruiser
     damage: hybrid
@@ -355,9 +568,9 @@ Lady Geist:
     - Kinetic Dash
     - Berserker
     popularity: primary
-    notes: Buy regen first (Extra Regen 2.7m, Monster Rounds 3.1m) to survive a losing
-      lane, then Kinetic Dash + Berserker to frontline and gun-spam; Soul Exchange
-      is the finisher — the vegas '6000 HP fire-rate hero'.
+    notes: "Buy regen first (Extra Regen 2.7m, Monster Rounds 3.1m) to survive a losing\
+      \ lane, then Kinetic Dash + Berserker to frontline and gun-spam; Soul Exchange\
+      \ is the finisher \u2014 the vegas '6000 HP fire-rate hero'."
   - name: Spirit Soul-Exchange
     damage: spirit
     core_items:
@@ -374,12 +587,11 @@ Lady Geist:
     loses_to:
     - Lash
     - Drifter
-  matchup_notes: The sample lists Lash (41%) and Drifter (45%) under both beats and
-    loses_to; both are sub-50%, so treat both as losses and beats as empty. Lash (S-tier)
-    throws/dives her before she scales, Drifter (A) wins the melee duel on tempo,
-    and she has no positive matchup sample — low confidence.
+  matchup_notes: "The sample lists Lash (41%) and Drifter (45%) under both beats and\
+    \ loses_to; both are sub-50%, so treat both as losses and beats as empty. Lash\
+    \ (S-tier) throws/dives her before she scales, Drifter (A) wins the melee duel\
+    \ on tempo, and she has no positive matchup sample \u2014 low confidence."
   confidence: 0.55
-  released_on: null
   provisional: false
 Abrams:
   name: Abrams
@@ -389,10 +601,11 @@ Abrams:
   - initiator
   tier: B
   trend: rising
-  why: Melee tank initiator whose melee core gives cheap heavy-melee access to the
-    patch's best farm route (Tough Crates, 58 souls each), while the parry-cooldown-on-objectives
-    change makes diving him under a Guardian riskier. Anti-heal stacking (Decay) still
-    caps his Siphon sustain.
+  why: A tempo patch that rewards early frontline bruisers left his core melee/tank
+    items untouched, and the dash/light-melee gun-cycle change lets him weave shots
+    and punches in lane. Anti-heal stacking (Decay, Radiant Regeneration trims) still
+    caps his Siphon sustain, so he settles as a healthy baseline rather than a dominant
+    pick. 50.3% WR at a huge 35.3% PR says the lobby understands him exactly.
   core_items:
   - Close Quarters
   - Monster Rounds
@@ -413,8 +626,6 @@ Abrams:
   - CC/sustain tank (spirit)
   enabled_by:
   - gun-cycle change (dashes/light melee no longer break gun cycle)
-  - melee core -> cheap heavy-melee access to Tough Crates (58 souls)
-  - parry-cooldown change makes dives on him riskier
   - Infernal Resilience T3 buff
   - Fortitude max-health regen 2->2.25% (09-16)
   - early-tempo/early-snowball meta
@@ -427,16 +638,14 @@ Abrams:
   - Shiv (anti-tank bruiser)
   - Ivy (peel/slow)
   last_changed_patch: Minor Update - 09-16-2026
-  notes: 'City Never Sleeps (09-29, indirect): his melee core farms Tough Crates cheaply
-    and the parry-on-objective change punishes dives on him; frontline archetype up.
-
-    Corrected vs prior entry: matchup data has him beating Venator 62% (197 games),
-    so Venator is a target, not a counter; anti-heal (Decay) is an item/system threat,
-    not a hero pair.
-
-    Builds are data-derived (Close Quarters/Monster Rounds/Melee Charge >85% share)
-    — one melee-gun core plus a late spirit-CC tank layer; creator echo-shard claim
-    is not in usage data.'
+  notes: "Corrected vs prior entry: matchup data has him beating Venator 62% (197\
+    \ games), so Venator is a target, not a counter; anti-heal belongs in countered_by\
+    \ as an item/system threat (Decay), not a hero pair.\nBuilds are data-derived\
+    \ (Close Quarters/Monster Rounds/Melee Charge >85% share) \u2014 one melee-gun\
+    \ core plus a late spirit-CC tank layer; creator echo-shard claim is not in current\
+    \ usage data.\nChangelog 09-16: Seismic Impact T3 Unstoppable 6s->5s; global dash/light-melee\
+    \ no longer break gun cycle. Snapshot WR is mostly pre-patch, so trend magnitude\
+    \ is low-confidence."
   builds:
   - name: Melee brawler (gun)
     damage: gun
@@ -479,14 +688,13 @@ Abrams:
     - Celeste
     - Wraith
     - Paige
-  matchup_notes: 'He wins any trade he can force: Venator (62%), Yamato (58%) and
-    Apollo (56%) are squishier carries whose burst Infernal Resilience + Siphon out-sustain
-    once he closes — note this directly contradicts the prior entry''s claim that
-    Venator counters him. He loses to disengage and spirit burst: Ivy (41%) peels/slows
-    his engage, while Vyper (45%), Wraith (45%) and Celeste (45%) out-range or out-burst
-    a static frontline.'
+  matchup_notes: "He wins any trade he can force: Venator (62%), Yamato (58%) and\
+    \ Apollo (56%) are squishier carries whose burst Infernal Resilience + Siphon\
+    \ out-sustain once he closes \u2014 note this directly contradicts the prior entry's\
+    \ claim that Venator counters him. He loses to disengage and spirit burst: Ivy\
+    \ (41%) peels/slows his engage, while Vyper (45%), Wraith (45%) and Celeste (45%)\
+    \ out-range or out-burst a static frontline."
   confidence: 0.7
-  released_on: null
   provisional: false
 Wraith:
   name: Wraith
@@ -527,17 +735,13 @@ Wraith:
   - Paige
   - Sinclair
   last_changed_patch: Minor Update - 09-16-2026
-  notes: '09-16: Card Trick heal 75->60, heal scaling 0.75->0.5, resist shred -8->-7%
-    (T3 -5->-4%), T3 slow +20->+15%; Mercurial Magnum + Spiritual Overflow gutted
-    and Plated Armor now blanks Full Auto spirit damage — on-hit-spirit core weakened,
-    lean pure gun.
-
-    Creator-cited Capacitor/Slowing Hex appear in none of the top-15 item slots; usage
-    says the real core was spirit on-hit (Quicksilver Reload 100%, Mercurial Magnum
-    93%) — Magnum now weakened.
-
-    Build clustering is medium-confidence: inferred from shares/buy_min, no ability
-    text.'
+  notes: "09-16: Card Trick heal 75->60, heal scaling 0.75->0.5, resist shred -8->-7%\
+    \ (T3 -5->-4%), T3 slow +20->+15%; Mercurial Magnum + Spiritual Overflow gutted\
+    \ and Plated Armor now blanks Full Auto spirit damage \u2014 on-hit-spirit core\
+    \ weakened, lean pure gun.\nCreator-cited Capacitor/Slowing Hex appear in none\
+    \ of the top-15 item slots; usage says the real core was spirit on-hit (Quicksilver\
+    \ Reload 100%, Mercurial Magnum 93%) \u2014 Magnum now weakened.\nBuild clustering\
+    \ is medium-confidence: inferred from shares/buy_min, no ability text."
   builds:
   - name: Gun carry (pure gun)
     damage: gun
@@ -578,12 +782,11 @@ Wraith:
     - Celeste
     - Dynamo
     - Ivy
-  matchup_notes: 'Card Trick''s homing spirit damage plus Full Auto''s AoE delete
-    squishy poke/siege heroes who cannot dodge — Grey Talon (60%), McGinnis (56%),
-    Mirage (56%). She folds to CC-and-dive she can''t out-range: Paige''s lane pressure
-    (43%), Dynamo''s initiation (46%), Sinclair''s burst (46%).'
+  matchup_notes: "Card Trick's homing spirit damage plus Full Auto's AoE delete squishy\
+    \ poke/siege heroes who cannot dodge \u2014 Grey Talon (60%), McGinnis (56%),\
+    \ Mirage (56%). She folds to CC-and-dive she can't out-range: Paige's lane pressure\
+    \ (43%), Dynamo's initiation (46%), Sinclair's burst (46%)."
   confidence: 0.6
-  released_on: null
   provisional: false
 McGinnis:
   name: McGinnis
@@ -592,11 +795,14 @@ McGinnis:
   - poke/siege
   - tank/frontline
   tier: B
-  trend: rising
-  why: Zone controller whose turret/wall setup fits the patch's telegraphed hub fights
-    (Sunken Plaza, Bell Tower), whose turrets also clear the grouped Haunt camps,
-    and who benefits from the parry change punishing dives onto her wall. Still draft-dependent
-    — near-useless into mobile dive + AoE.
+  trend: stable
+  why: "McGinnis is a draft-dependent zone controller whose value is lane/siege tempo\
+    \ rather than scaling, so the 09-16 tempo shift cuts both ways: early turret pressure\
+    \ matters more, but the mobile-burst meta (Yamato, Holliday, Silver) jumps her\
+    \ wall and deletes turrets. Data backs the 'above-average but not dominant' read\
+    \ \u2014 51.7% WR at a healthy 17.7% PR \u2014 and her item spread shows a genuine\
+    \ gun core, not the pure turret/support identity creators repeat. Held at B: near-uncounterable\
+    \ into the right draft, near-useless into dive+ AoE."
   core_items:
   - Intensifying Magazine
   - Monster Rounds
@@ -612,22 +818,19 @@ McGinnis:
   enabled_by:
   - frontline tanks (Abrams, Dynamo, Billy) who hold space for turret and Medicinal
     Specter setups
-  - telegraphed Plaza/Bell Tower hub fights (turret/wall zoning)
-  - turrets clear grouped Haunt camps
-  - parry-cooldown change punishes dives into her zone
-  - tempo/objective meta — Guardian bounty +10% rewards her lane siege
+  - "tempo/objective meta \u2014 Guardian bounty +10% rewards her lane siege"
   - Mini Turret HP buffs (08-12) and Medicinal Specter resist
   countered_by:
   - mobile burst divers (Yamato, Holliday, Silver) that jump the wall and delete turrets
   - AoE spirit burst (Lady Geist, Celeste, Dynamo) that clears turret stacks
   - global -20% slow nerf, which weakens her wall/Suppressor zoning
   last_changed_patch: Minor Update - 08-12-2026
-  notes: 'City Never Sleeps (09-29, indirect): telegraphed hub fights and the dive-punishing
-    parry change favor her turret/wall zoning, and turrets clear the grouped Haunt
-    camps.
+  notes: 'Item data (14d, mostly pre-09-16) shows a real gun core (Intensifying Magazine
+    77%, Monster Rounds 62%) plus spirit-amp turret items; no single dominant build,
+    so the old ''turret/AoE-support'' labels understate the gun.
 
-    Item data (14d, mostly pre-09-16) shows a real gun core (Intensifying Magazine
-    77%, Monster Rounds 62%) plus spirit-amp turret items; no single dominant build.
+    Matchup feed duplicated heroes in both Beats and Loses-to; resolved by direction
+    (Lash/Drifter >50% = beats, Wraith <50% = loses).
 
     Changelog: 09-16 tempo patch (comeback gutted, slows -20%) hits her indirectly;
     no direct McGinnis change since 08-12.'
@@ -639,9 +842,9 @@ McGinnis:
     - Intensifying Magazine
     - Heroic Aura
     popularity: primary
-    notes: Highest-share core (Intensifying Magazine 77%, Monster Rounds 62%) — ramp
-      fire rate behind turret cover, Monster Rounds for lane farm, Heroic Aura to
-      buff team fights.
+    notes: "Highest-share core (Intensifying Magazine 77%, Monster Rounds 62%) \u2014\
+      \ ramp fire rate behind turret cover, Monster Rounds for lane farm, Heroic Aura\
+      \ to buff team fights."
   - name: Spirit turret/ult
     damage: spirit
     core_items:
@@ -669,13 +872,12 @@ McGinnis:
     - Drifter
     loses_to:
     - Wraith
-  matchup_notes: 'She beats melee divers who must walk into her zone — Lash 56%, Drifter
-    52% — because Spectral Wall cuts their approach and turrets punish the dive. She
-    loses to Wraith (44%, i.e. Wraith wins 56%): a ranged gun carry who out-ranges
-    and bursts her before the wall matters. Small samples (150-230 games), so treat
-    as directional.'
+  matchup_notes: "She beats melee divers who must walk into her zone \u2014 Lash 56%,\
+    \ Drifter 52% \u2014 because Spectral Wall cuts their approach and turrets punish\
+    \ the dive. She loses to Wraith (44%, i.e. Wraith wins 56%): a ranged gun carry\
+    \ who out-ranges and bursts her before the wall matters. Small samples (150-230\
+    \ games), so treat as directional."
   confidence: 0.55
-  released_on: null
   provisional: false
 Paradox:
   name: Paradox
@@ -685,11 +887,12 @@ Paradox:
   - initiator
   - poke/siege
   tier: B
-  trend: rising
-  why: 'Pick/sniper whose roamer identity is the winner here: new districts, more
-    hiding spots and Steam-Vent invisibility upgrade her pick setups and put her ahead
-    of Bebop in the roamer slot. Her stationary Carbine sniper line still folds to
-    the meta''s mobile divers (Yamato, Lash, Holliday).'
+  trend: falling
+  why: 'Pick/sniper whose identity narrowed further by 09-16: the Kinetic Carbine
+    min-damage quick-scope (25->10%, no longer T3-scaled) is gone, so only the max-range
+    HVR/Sharpshooter path converts. A 47.5% WR on a 44% PR means the pick fantasy
+    stays popular even as the stationary sniper folds to the tempo meta''s mobile
+    divers (Yamato, Lash, Holliday).'
   core_items:
   - Restorative Shot
   - Headshot Booster
@@ -712,8 +915,6 @@ Paradox:
   - Tankbuster
   - Dynamo
   - Mo & Krill
-  - new districts/hiding spots/Steam Vent invisibility (roamer pick setups; ahead
-    of Bebop)
   countered_by:
   - Yamato
   - Lash
@@ -722,15 +923,12 @@ Paradox:
   - Veil Walker
   - range denial
   last_changed_patch: Minor Update - 09-16-2026
-  notes: 'City Never Sleeps (09-29, indirect): new districts/hiding spots/Steam Vents
-    upgrade her roamer pick setups and move her ahead of Bebop in that slot; the sniper
-    line still folds to mobile divers.
-
-    Data disagrees with the old ''Echo Shard every game'' read: the real core is a
-    gun/carbine sniper, and Slowing Hex is 60%, not guaranteed.
-
-    Changelog 09-16: Kinetic Carbine min-damage multiplier 25->10% and no longer scaled
-    by T3; Slowing Hex cooldown up.'
+  notes: "Data disagrees with the old 'Echo Shard every game' read: Echo Shard and\
+    \ Superior Cooldown miss the top-15 items; the real core is a gun/carbine sniper,\
+    \ and Slowing Hex is 60%, not guaranteed.\nLow-confidence on the niche Echo Shard\
+    \ line \u2014 usage suggests it is a personal build, not the meta path.\nChangelog\
+    \ 09-16: Kinetic Carbine min-damage multiplier 25->10% and no longer scaled by\
+    \ T3; Slowing Hex cooldown up."
   builds:
   - name: Carbine sniper
     damage: gun
@@ -775,12 +973,12 @@ Paradox:
     - Lash
     - Celeste
     - Holliday
-  matchup_notes: 'She out-ranges and pins immobile poke/gun carries — Grey Talon (59%)
-    and Venator (57%) cannot contest Kinetic Carbine/Time Wall range. She folds to
-    anything that closes distance or dumps burst on her small HP pool: Yamato (43%),
-    Lash (43%) and Holliday (43%) all dive her, and Celeste (43%) out-trades her outright.'
+  matchup_notes: "She out-ranges and pins immobile poke/gun carries \u2014 Grey Talon\
+    \ (59%) and Venator (57%) cannot contest Kinetic Carbine/Time Wall range. She\
+    \ folds to anything that closes distance or dumps burst on her small HP pool:\
+    \ Yamato (43%), Lash (43%) and Holliday (43%) all dive her, and Celeste (43%)\
+    \ out-trades her outright."
   confidence: 0.72
-  released_on: null
   provisional: false
 Dynamo:
   name: Dynamo
@@ -790,10 +988,13 @@ Dynamo:
   - support/healer
   tier: A
   trend: rising
-  why: 'Tempo initiator whose Singularity gets clean setup windows from the patch''s
-    telegraphed hub fights (Sunken Plaza, Bell Tower), with his initiator item spine
-    untouched. Offset: his durable-frontline counters (Mo & Krill, Abrams) are the
-    rising tank picks.'
+  why: "Dynamo is a tempo initiator and the 09-16 patch made tempo the win condition\
+    \ \u2014 a won lane plus one Singularity pick converts straight into kills and\
+    \ objectives. His 52.1% WR at a 27% pick rate is backed by real usage, and his\
+    \ item spine (Mystic Expansion, Extra Charge, Refresher) went untouched while\
+    \ his only structural counters are matchups, not global nerfs. He isn't S because\
+    \ a single interruptible channel is the whole payoff; durable frontline and Unstoppable\
+    \ buyers blank it."
   core_items:
   - Extra Charge
   - Arcane Surge
@@ -810,7 +1011,6 @@ Dynamo:
   - Refresher double-ult
   enabled_by:
   - tempo conversion
-  - telegraphed Plaza/Bell Tower hub fights (Singularity setup)
   - AoE dispel (Quantum Entanglement)
   - Refresher
   - Singularity pickoff
@@ -823,14 +1023,13 @@ Dynamo:
   - anti-heal vs Rejuvenating Aurora
   - Paige lane pressure
   last_changed_patch: Minor Update - 07-28-2026
-  notes: 'City Never Sleeps (09-29, indirect): telegraphed Plaza/Bell Tower hub fights
-    give Singularity clean setup windows; initiator items untouched.
-
-    09-16 (indirect): Diviner''s Kevlar gained +10% ultimate CDR — now a live buy
-    for his Refresher/Singularity plan.
-
-    Build read is a spirit-spine with a Refresher late spike; Headshot Booster (50%,
-    2.6 min) is just a starting item, not a gun build.'
+  notes: "09-16 (indirect): Diviner's Kevlar gained +10% ultimate CDR \u2014 now a\
+    \ live buy for his Refresher/Singularity plan.\nNewest creator note (07-16) rates\
+    \ him B, but the 09-16 tempo patch plus 52.1% WR / 27% PR supports A-rising; I\
+    \ follow the data. Matchup samples are moderate (~180-320) and the WR snapshot\
+    \ predates 09-16, so post-patch numbers could move.\nBuild read is spirit-spine\
+    \ with a Refresher late spike; Headshot Booster (50%, 2.6 min) is just a starting\
+    \ item, not a gun build."
   builds:
   - name: Spirit AoE initiator
     damage: spirit
@@ -842,9 +1041,9 @@ Dynamo:
     - Duration Extender
     - Warp Stone
     popularity: primary
-    notes: 'Every-game spine: cheaper, larger and more frequent Singularity/Rejuvenating
-      Aurora, with Warp Stone to reposition into the ult or escape after it — all
-      high-share (74-78%) and early buys.'
+    notes: "Every-game spine: cheaper, larger and more frequent Singularity/Rejuvenating\
+      \ Aurora, with Warp Stone to reposition into the ult or escape after it \u2014\
+      \ all high-share (74-78%) and early buys."
   - name: Refresher double-ult
     damage: spirit
     core_items:
@@ -853,9 +1052,9 @@ Dynamo:
     - Unstoppable
     - Debuff Reducer
     popularity: secondary
-    notes: Late spike for a second Black Hole; self-Unstoppable/Debuff Reducer make
-      the channel uninterruptible — these are his highest-WR items (Refresher 57.2%,
-      Superior Cooldown 56.6%).
+    notes: "Late spike for a second Black Hole; self-Unstoppable/Debuff Reducer make\
+      \ the channel uninterruptible \u2014 these are his highest-WR items (Refresher\
+      \ 57.2%, Superior Cooldown 56.6%)."
   matchups:
     beats:
     - Infernus
@@ -869,13 +1068,13 @@ Dynamo:
     - Warden
     - Abrams
     - Paige
-  matchup_notes: 'Quantum Entanglement''s AoE dispel is why he beats Infernus (59%)
-    and DOT/dive heroes — one cast strips burn and setup, and Calico/Drifter/Lash/Bebop
-    fold to AoE CC when they commit on him. He loses to durable frontline (Billy 42%,
-    Mo & Krill 45%, Abrams 49%): they eat Singularity, can''t be repositioned, and
-    outlast the cooldown, while Paige (51%) simply wins the lane in front of him.'
+  matchup_notes: "Quantum Entanglement's AoE dispel is why he beats Infernus (59%)\
+    \ and DOT/dive heroes \u2014 one cast strips burn and setup, and Calico/Drifter/Lash/Bebop\
+    \ fold to AoE CC when they commit on him. He loses to durable frontline (Billy\
+    \ 42%, Mo & Krill 45%, Abrams 49%): they eat Singularity, can't be repositioned,\
+    \ and outlast the cooldown, while Paige (51%) simply wins the lane in front of\
+    \ him."
   confidence: 0.72
-  released_on: null
   provisional: false
 Kelvin:
   name: Kelvin
@@ -885,10 +1084,11 @@ Kelvin:
   - late scaler
   tier: B
   trend: rising
-  why: Support/healer whose dome/sustain is more valuable against the patch's harder-hitting
-    Haunt camps, with his cheap early sustain core turning Frozen Shelter's spirit
-    scaling online early. Still capped by meta anti-heal (Healbane) and mobile dive
-    (Lash, Drifter).
+  why: "Frozen Shelter's regen now scales with spirit power, so his cheap early sustain\
+    \ items (Extra Regen, Healing Booster, Extra Charge) turn into real healing before\
+    \ he maxes the dome \u2014 the tempo patch rewards that timing. But he is still\
+    \ a late scaler at 47.8% WR / 17.7% PR, and the things that beat him (Healbane-stacking\
+    \ anti-heal, mobile dive from Lash/Drifter) are all meta, which caps him at B."
   core_items:
   - Extra Regen
   - Extra Charge
@@ -903,7 +1103,6 @@ Kelvin:
   - Spirit scaling/expansion
   enabled_by:
   - Frozen Shelter spirit scaling
-  - harder-hitting Haunt camps (dome/sustain value)
   - Extra Charge / Improved Spirit spirit stacking
   - tempo patch early heal relevance
   - healing-item nerfs (Radiant Regeneration 2->1.7, Restorative Locket trims) hurt
@@ -916,15 +1115,13 @@ Kelvin:
   - silence and burst that kill through the dome
   - late-scaling compression (tempo meta)
   last_changed_patch: Minor Update - 09-16-2026
-  notes: 'City Never Sleeps (09-29, indirect): harder Haunt camps raise the value
-    of his dome/sustain; Healing Snacks (10% max HP) reduce the relative value of
-    dedicated healing.
-
-    KB core_items were wrong: usage shows a spirit-sustain line (Extra Regen/Extra
-    Charge/Healing Booster), not Radiant Regeneration/Healing Nova/Fortitude — corrected.
-
-    Changelog: 09-16 — Frozen Shelter innate regen now scales with spirit power; High-Velocity
-    Rounds (42%, 1.6 min) is lane filler, not a build.'
+  notes: "KB core_items were wrong: usage shows a spirit-sustain line (Extra Regen/Extra\
+    \ Charge/Healing Booster), not Radiant Regeneration/Healing Nova/Fortitude \u2014\
+    \ corrected. Vegas (07-16) wanted a late->early power shift, but the 09-16 Frozen\
+    \ Shelter spirit scaling is a late-value change heresy (09-17) called usable WITHOUT\
+    \ maxing; I follow the newer read. High-Velocity Rounds (42%, 1.6 min) is lane\
+    \ filler, not a build. Changelog: 09-16 \u2014 Frozen Shelter innate regen now\
+    \ scales with spirit power."
   builds:
   - name: Spirit heal/support
     damage: spirit
@@ -959,13 +1156,12 @@ Kelvin:
     loses_to:
     - Lash
     - Drifter
-  matchup_notes: 'Bebop (58%) and Wraith (51%) are his best: their spirit burst is
-    fully answered by dome + heal, so he simply out-sustains their damage windows.
-    Lash (45%) and Drifter (46%) are his worst — mobile melee initiators that reach
-    and burst him before the dome lands, and his low mobility can''t disengage. Paradox
-    (50%) is a coin flip; a pick initiator can swap him out of position.'
+  matchup_notes: "Bebop (58%) and Wraith (51%) are his best: their spirit burst is\
+    \ fully answered by dome + heal, so he simply out-sustains their damage windows.\
+    \ Lash (45%) and Drifter (46%) are his worst \u2014 mobile melee initiators that\
+    \ reach and burst him before the dome lands, and his low mobility can't disengage.\
+    \ Paradox (50%) is a coin flip; a pick initiator can swap him out of position."
   confidence: 0.55
-  released_on: null
   provisional: false
 Haze:
   name: Haze
@@ -1006,15 +1202,12 @@ Haze:
   - Celeste burst
   - weak T4 gun items (Ricochet/Capacitor)
   last_changed_patch: Minor Update - 09-16-2026
-  notes: '09-16 (indirect): Plated Armor''s on-hit fix now blanks Tesla Bullets spirit
-    damage, weakening her Ricochet/Tesla late pivot.
-
-    Role reframed per reader: farm-carry is meta-dependent, not her identity — historically
-    a Smoke Bomb roamer/ganker on isolated targets, and T4 weakness gates the late-scaler
-    label.
-
-    Changelog: Minor Update - 09-16-2026 — Fixation headshot stacks 2->3, higher T3
-    weapon scaling.'
+  notes: "09-16 (indirect): Plated Armor's on-hit fix now blanks Tesla Bullets spirit\
+    \ damage, weakening her Ricochet/Tesla late pivot.\nRole reframed per reader:\
+    \ farm-carry is meta-dependent, not her identity \u2014 historically a Smoke Bomb\
+    \ roamer/ganker on isolated targets, and T4 weakness gates the late-scaler label.\n\
+    Changelog: Minor Update - 09-16-2026 \u2014 Fixation headshot stacks 2->3, higher\
+    \ T3 weapon scaling."
   builds:
   - name: Gun carry (Fixation)
     damage: gun
@@ -1026,9 +1219,9 @@ Haze:
     - Surge of Power
     - Burst Fire
     popularity: primary
-    notes: 'Default build: cheap early attack speed/reload items (buy_min 3.6-8.3)
-      land Fixation headshots faster, then Surge of Power/Burst Fire convert a lane
-      lead into single-target kills — pick it from a winning or even lane.'
+    notes: "Default build: cheap early attack speed/reload items (buy_min 3.6-8.3)\
+      \ land Fixation headshots faster, then Surge of Power/Burst Fire convert a lane\
+      \ lead into single-target kills \u2014 pick it from a winning or even lane."
   - name: Ricochet AoE / late pivot
     damage: gun
     core_items:
@@ -1052,14 +1245,13 @@ Haze:
     - Victor
     - Vyper
     - Paige
-  matchup_notes: 'She out-tempos immobile, kit-dependent heroes — Lady Geist (57%)
-    and Grey Talon (56%) cannot punish her lane before their tools scale, and Silver
-    (56%) is a slow gun tank she pokes out on Fixation. Her losses are the meta''s
-    strong mobile/lane heroes: Celeste (42%) out-bursts her before stacks build, Vyper
-    (45%) and Ivy (43%) dive or out-sustain her low-mobility frame, and Paige (46%)
-    wins the lane outright.'
+  matchup_notes: "She out-tempos immobile, kit-dependent heroes \u2014 Lady Geist\
+    \ (57%) and Grey Talon (56%) cannot punish her lane before their tools scale,\
+    \ and Silver (56%) is a slow gun tank she pokes out on Fixation. Her losses are\
+    \ the meta's strong mobile/lane heroes: Celeste (42%) out-bursts her before stacks\
+    \ build, Vyper (45%) and Ivy (43%) dive or out-sustain her low-mobility frame,\
+    \ and Paige (46%) wins the lane outright."
   confidence: 0.68
-  released_on: null
   provisional: false
 Holliday:
   name: Holliday
@@ -1069,10 +1261,11 @@ Holliday:
   - initiator
   tier: A
   trend: rising
-  why: 'Mobile pick assassin built for the new map: new districts, more hiding spots
-    and Steam-Vent invisibility expand her roam routes, and the Bell Tower hub fights
-    reward Spirit Lasso picks. She still loses to point-blank lockdown (Drifter, Bebop,
-    Mo & Krill/Lash ults) that punishes her commit-heavy entry.'
+  why: 'The tempo patch is shaped for her: with comeback souls gutted, lane winners
+    snowball and the 20m respawn bump (35->38s) makes her Spirit Lasso picks worth
+    more, while Crackshot T2 shred and a longer Lasso raise her pick value. Caveat:
+    the Veil Walker rework stripped her disengage, so entries now commit harder, and
+    her 48.6% WR is a pre-patch, pilot-conditional baseline.'
   core_items:
   - Extra Charge
   - Extra Spirit
@@ -1093,8 +1286,6 @@ Holliday:
   enabled_by:
   - tempo meta (comeback gutted; lane wins snowball)
   - 20m respawn 35->38s (picks worth more)
-  - new districts/hiding spots/Steam Vent invisibility (roam routes)
-  - Bell Tower hub fights (lasso picks)
   - Spirit Lasso buff + longer lasso
   - Crackshot T2 resist-shred
   - bounce-pad double-charge via Extra Charge/Rapid Recharge
@@ -1106,15 +1297,12 @@ Holliday:
   - Warden slowing gun pressure
   - slows now apply to air drag / slows-as-CC up
   last_changed_patch: Minor Update - 09-16-2026
-  notes: 'City Never Sleeps (09-29, indirect): new districts/hiding spots/Steam Vents
-    expand her roam routes and Bell Tower hub fights reward lasso picks.
-
-    Changelog 09-16: Crackshot T2 resist-shred, longer Spirit Lasso, health/boon 41->43;
-    Veil Walker lost Sprint Boots and movespeed-on-break.
-
-    Disagreement: heresy (09-17) frames a ''gun hybrid'' — ranked data shows a spirit
-    charge/duration build with no gun items beyond Recharging Rush, so treat ''gun
-    hybrid'' as a skirmish label, not a build.'
+  notes: "Changelog 09-16: Crackshot T2 resist-shred, longer Spirit Lasso, health/boon\
+    \ 41->43; Veil Walker lost Sprint Boots and movespeed-on-break.\nDisagreement:\
+    \ heresy (09-17) frames a 'gun hybrid' \u2014 ranked data shows a spirit charge/duration\
+    \ build with no gun items beyond Recharging Rush, so treat 'gun hybrid' as a skirmish\
+    \ label, not a build.\nLow confidence: 48.6% WR is a 14-day pre-patch baseline;\
+    \ 21% PR with sub-50 WR reads as over-picked at low elo, so the tier is pilot-conditional."
   builds:
   - name: Charge-spirit pick
     damage: spirit
@@ -1140,10 +1328,10 @@ Holliday:
     - Stamina Mastery
     - Tankbuster
     popularity: secondary
-    notes: Stamina stack plus Recharging Rush to survive the skirmish and reposition;
-      Veil Walker is bought (57%) for the break despite losing its movespeed-on-break,
-      and this is the source of the 'gun hybrid' label — there is no real gun build
-      in the data.
+    notes: "Stamina stack plus Recharging Rush to survive the skirmish and reposition;\
+      \ Veil Walker is bought (57%) for the break despite losing its movespeed-on-break,\
+      \ and this is the source of the 'gun hybrid' label \u2014 there is no real gun\
+      \ build in the data."
   matchups:
     beats:
     - Haze
@@ -1163,7 +1351,6 @@ Holliday:
     Bebop''s hook, and Mo & Krill/Lash ults punish a low-HP assassin who has to commit
     on entry.'
   confidence: 0.6
-  released_on: null
   provisional: false
 Bebop:
   name: Bebop
@@ -1173,11 +1360,11 @@ Bebop:
   - burst caster
   tier: B
   trend: falling
-  why: 'Break-even single-target hook initiator (~50% WR at ~54% PR) who still generates
-    picks but converts less in a farm-and-sustain economy: the roamer slot has tilted
-    to Paradox, and a hook cannot punish PvE crate routing or camp clears. His 77%-buy
-    Veil Walker remains stripped (no Sprint Boots, no movespeed-on-break) and his
-    slows are still trimmed.'
+  why: 'Break-even hook initiator (~50% WR at a 54% PR) whose single-target lock-down
+    still generates picks but converts less after the patch: his 77%-buy Veil Walker
+    lost Sprint Boots and movespeed-on-break, and his slows were trimmed (Slowing
+    Hex cd 27->29s, global slows -20%). He neither snowballs nor scales into a tempo
+    meta full of tanks and sustain.'
   core_items:
   - Headshot Booster
   - Spirit Strike
@@ -1204,16 +1391,12 @@ Bebop:
   - Dynamo
   - burst-proof tanks (Abrams, Mo & Krill)
   - cleanse/dispel items
-  last_changed_patch: null
-  notes: 'City Never Sleeps: no direct line; the farm/sustain economy plus Paradox''s
-    rise down-rank him in the roamer slot.
-
-    Siphon Bullets (27% buy, 60.4% WR) is a small-sample late luxury, not a must-buy;
-    builds stay hybrid — spirit-tagged pick tools (Spirit Strike/Snatch, Slowing Hex)
-    out-share the gun items.
-
-    09-16: slows -20%, Veil Walker loses Sprint Boots + movespeed-on-break; snapshot
-    WRs are pre-patch baseline.'
+  notes: "Builds: creators say 'gun is the build, don't build spirit,' but spirit-tagged\
+    \ items (Spirit Strike 95%, Spirit Snatch 88%, Slowing Hex 81%) out-share the\
+    \ gun items \u2014 the real default is hybrid; data wins. Siphon Bullets (27%\
+    \ buy, 60.4% WR) is a small-sample late luxury, not a must-buy. 09-16 changelog:\
+    \ slows -20% and Veil Walker loses Sprint Boots + movespeed-on-break; snapshot\
+    \ WRs are pre-patch baseline."
   builds:
   - name: Hook combo
     damage: hybrid
@@ -1269,7 +1452,6 @@ Bebop:
     tanks (Billy 43%), sustain that erases the burst (Kelvin 42%), and a better initiator
     dictating fights (Dynamo 44%).'
   confidence: 0.6
-  released_on: null
   provisional: false
 Calico:
   name: Calico
@@ -1277,12 +1459,14 @@ Calico:
   archetypes:
   - mobile assassin
   tier: A
-  trend: stable
-  why: Lane-winning mobile assassin whose tempo snowball still fits the no-comeback
-    economy, but the patch's best soul route — guaranteed Tough Crates — needs a Heavy
-    Melee that forces her out of cat form, locking her out of that farm. She still
-    bursts squishy carries (Seven, Pocket) before they kite and remains capped by
-    tanks she cannot burst.
+  trend: rising
+  why: Calico's value is winning the early lane and snowballing with off-map gold,
+    so the 09-16 tempo patch that gutted comeback souls plays directly to her; the
+    reader correction to re-rate her upward matches both that and the newest creator
+    read (bottom of A). Her melee-spirit kit bursts squishy carries (Seven 58%, Pocket
+    56%) before they can kite. She is still capped by tanks she cannot burst and gun
+    carries who out-range her, which is why she lands at the bottom of A rather than
+    higher.
   core_items:
   - Melee Lifesteal
   - Stalker
@@ -1309,14 +1493,12 @@ Calico:
   - long-range kiting gun carries (Vyper, Warden)
   - burst vs low HP (Yamato)
   last_changed_patch: Minor Update - 07-28-2026
-  notes: 'City Never Sleeps: cat form cannot perform the Heavy Melee that Tough Crates
-    need, locking her out of the patch''s best soul route; lean on kills/off-map gold.
-
-    Melee-spirit is the default (Melee Lifesteal/Stalker/Spirit Strike/Cold Front/Spirit
-    Snatch at 98-99%); the Rapid Recharge/Echo Shard set is gone.
-
-    Last direct patch: Minor Update - 07-28-2026. Snapshot WR 50.2% is a 14-day pre-patch
-    baseline.'
+  notes: "Data overrides old core_items: the Rapid Recharge/Echo Shard/Superior Stamina\
+    \ set is gone \u2014 current builds are melee-spirit (Melee Lifesteal/Stalker/Spirit\
+    \ Strike/Cold Front/Spirit Snatch at 98-99%). Reader correction followed: re-rated\
+    \ upward to A on tempo; snapshot WR 50.2% is a 14-day pre-patch baseline, not\
+    \ post-09-16. Secondary shred variant is the low-confidence part.\nLast patch:\
+    \ Minor Update - 09-16-2026 (tempo/economy; Calico not directly touched)."
   builds:
   - name: Melee spirit assassin
     damage: spirit
@@ -1327,9 +1509,9 @@ Calico:
     - Cold Front
     - Spirit Snatch
     popularity: primary
-    notes: Default build — spirit damage delivered through her melee combo; Melee
-      Lifesteal (1.2m) + Spirit Strike let her win the trade, Cold Front and Spirit
-      Snatch (both 98%) turn ganks into kills.
+    notes: "Default build \u2014 spirit damage delivered through her melee combo;\
+      \ Melee Lifesteal (1.2m) + Spirit Strike let her win the trade, Cold Front and\
+      \ Spirit Snatch (both 98%) turn ganks into kills."
   - name: Spirit-shred scaling
     damage: hybrid
     core_items:
@@ -1355,14 +1537,13 @@ Calico:
     - Dynamo
     - Victor
     - Abrams
-  matchup_notes: She beats squishy spirit/gun carries she can dive and burst before
-    they kite — Seven (58%), Pocket (56%), Grey Talon (54%), even against a flyer
-    the anti-air patch doesn't save. She loses to gun carries who out-range her (Warden
-    42%, Vyper 42%) and to CC/tank frontline she cannot burst through the health pool
-    (Dynamo 43%, Victor 45%, Abrams 46%) — the same 'no kill through HP' problem creators
-    flagged in April.
+  matchup_notes: "She beats squishy spirit/gun carries she can dive and burst before\
+    \ they kite \u2014 Seven (58%), Pocket (56%), Grey Talon (54%), even against a\
+    \ flyer the anti-air patch doesn't save. She loses to gun carries who out-range\
+    \ her (Warden 42%, Vyper 42%) and to CC/tank frontline she cannot burst through\
+    \ the health pool (Dynamo 43%, Victor 45%, Abrams 46%) \u2014 the same 'no kill\
+    \ through HP' problem creators flagged in April."
   confidence: 0.62
-  released_on: null
   provisional: false
 Grey Talon:
   name: Grey Talon
@@ -1372,12 +1553,12 @@ Grey Talon:
   - gun carry
   tier: C
   trend: falling
-  why: '45.7% WR across 1,354 games at a 20% pick rate, and his best matchup is only
-    49% — he isn''t actually winning anything, he just isn''t getting buried either.
-    The 09-16 patch hits both his identities at once: as a flyer he eats the new air-drag
-    slow and Silver''s anti-air bola, and as a poke/siege carry he needs the time
-    the tempo meta refuses to give him. The newest creator read (July, low-A/falling)
-    predates the patch; the data now says C.'
+  why: "45.7% WR across 1,354 games at a 20% pick rate, and his best matchup is only\
+    \ 49% \u2014 he isn't actually winning anything, he just isn't getting buried\
+    \ either. The 09-16 patch hits both his identities at once: as a flyer he eats\
+    \ the new air-drag slow and Silver's anti-air bola, and as a poke/siege carry\
+    \ he needs the time the tempo meta refuses to give him. The newest creator read\
+    \ (July, low-A/falling) predates the patch; the data now says C."
   core_items:
   - High-Velocity Rounds
   - Opening Rounds
@@ -1390,7 +1571,7 @@ Grey Talon:
   - Tankbuster
   - Rapid Recharge
   build_variants:
-  - Hybrid owl (gun lane → spirit execute)
+  - "Hybrid owl (gun lane \u2192 spirit execute)"
   - Spirit charge/burst
   - Gun carry
   enabled_by:
@@ -1404,18 +1585,14 @@ Grey Talon:
   - Haze
   - Silver (Weighted Bola anti-air)
   - air-drag slows (09-16)
-  last_changed_patch: null
-  notes: 'Item data overrides the stale core_items: Mystic Shot and Hollow Point don''t
-    appear in 30-day usage; the real opener is High-Velocity Rounds + Opening Rounds
-    into spirit charge items.
-
-    Flyer penalty applied per reader correction — 09-16 air-drag slow and Silver''s
-    Weighted Bola both count against him.
-
-    Last patch: Minor Update - 09-16-2026. No post-patch creator coverage; confidence
-    mid.'
+  notes: "Item data overrides the stale core_items: Mystic Shot and Hollow Point don't\
+    \ appear in 30-day usage; the real opener is High-Velocity Rounds + Opening Rounds\
+    \ into spirit charge items.\nFlyer penalty applied per reader correction \u2014\
+    \ 09-16 air-drag slow and Silver's Weighted Bola both count against him.\nLast\
+    \ patch: Minor Update - 09-16-2026. No post-patch creator coverage; confidence\
+    \ mid."
   builds:
-  - name: Hybrid owl (gun lane → spirit execute)
+  - name: "Hybrid owl (gun lane \u2192 spirit execute)"
     damage: hybrid
     core_items:
     - High-Velocity Rounds
@@ -1427,9 +1604,9 @@ Grey Talon:
     - Improved Spirit
     - Boundless Spirit
     popularity: primary
-    notes: Opens with cheap weapon items to win lane, then stacks spirit/charge to
-      scale Rain of Arrows and the Guided Owl execute — the standard line, and what
-      vegas described.
+    notes: "Opens with cheap weapon items to win lane, then stacks spirit/charge to\
+      \ scale Rain of Arrows and the Guided Owl execute \u2014 the standard line,\
+      \ and what vegas described."
   - name: Spirit charge/burst
     damage: spirit
     core_items:
@@ -1442,9 +1619,9 @@ Grey Talon:
     - Tankbuster
     - Boundless Spirit
     popularity: secondary
-    notes: Charge-reset spam (Extra Charge, Rapid Recharge, Compress Cooldown) maximizes
-      Rain of Arrows/snare uptime and burst — best into grouped or tanky teams, worst
-      when dove.
+    notes: "Charge-reset spam (Extra Charge, Rapid Recharge, Compress Cooldown) maximizes\
+      \ Rain of Arrows/snare uptime and burst \u2014 best into grouped or tanky teams,\
+      \ worst when dove."
   - name: Gun carry
     damage: gun
     core_items:
@@ -1467,13 +1644,13 @@ Grey Talon:
     - Wraith
     - Paradox
     - Haze
-  matchup_notes: 'His ''wins'' are even at best — 49% into Warden and Vindicta (the
-    latter a fellow flyer also hurt by anti-air) — while he kites melee bruisers like
-    Drifter/Calico with pure range. He hard-loses to mobile initiators and closers:
-    Lash (36%) dashes past his poke and bursts him before the Owl lands, and Wraith/Paradox/Haze
-    shut the same gap. Bebop sits at 46% both ways — treated as even.'
+  matchup_notes: "His 'wins' are even at best \u2014 49% into Warden and Vindicta\
+    \ (the latter a fellow flyer also hurt by anti-air) \u2014 while he kites melee\
+    \ bruisers like Drifter/Calico with pure range. He hard-loses to mobile initiators\
+    \ and closers: Lash (36%) dashes past his poke and bursts him before the Owl lands,\
+    \ and Wraith/Paradox/Haze shut the same gap. Bebop sits at 46% both ways \u2014\
+    \ treated as even."
   confidence: 0.55
-  released_on: null
   provisional: false
 Mo & Krill:
   name: Mo & Krill
@@ -1481,12 +1658,13 @@ Mo & Krill:
   archetypes:
   - tank/frontline
   - initiator
-  tier: A
+  tier: B
   trend: rising
-  why: Default sustained front line now that Billy has slipped — sustained uptime
-    and T3 bullet resist make him one of the few who can still commit under a tower
-    after the parry-cooldown change, and the camp/uptime meta suits him. Long-range
-    poke he cannot close on (Celeste, Vindicta) still kites him.
+  why: 'A genuinely balanced spirit bruiser who fit the 09-16 tempo patch: winning
+    lane and minute-one brawls is exactly what he wants, and his core tank/spirit
+    items were left untouched. His ceiling is capped by the meta''s strong poke and
+    flyer kits, which out-range him, and by S-tier frontline Billy, who out-brawls
+    him.'
   core_items:
   - Mystic Burst
   - Quicksilver Reload
@@ -1513,13 +1691,11 @@ Mo & Krill:
   - anti-tank bruisers (Billy, Shiv)
   - long-range gun carries (Vyper)
   last_changed_patch: Minor Update - 07-28-2026
-  notes: 'City Never Sleeps: camp/uptime meta plus Billy''s slide hand him the default
-    sustained front-line slot.
-
-    Spirit build confirmed by data (Mystic Burst 100%, Torment Pulse 91%); no Scourge
-    in top 15 and ~40% PR is high, not a win-rate outlier.
-
-    Last hero-relevant change: Minor Update - 07-28-2026.'
+  notes: "Data over creators: they named Scourge/Decay/Fortitude, but high-rank usage\
+    \ shows a spirit build (Mystic Burst 100%, Torment Pulse 91%) with no Scourge\
+    \ in the top 15. \"Underplayed\" is stale \u2014 ~40% PR is high, he is picked,\
+    \ just not a win-rate outlier. Changelog: last hero-relevant change Minor Update\
+    \ - 07-28-2026; 09-16 was systems-only."
   builds:
   - name: Spirit bruiser
     damage: spirit
@@ -1561,13 +1737,12 @@ Mo & Krill:
     - Billy
     - Paige
     - Vyper
-  matchup_notes: 'Combo (grab/suppress) plus Torment Pulse punishes short-range divers
-    who have to commit into him: Mirage (60%), Yamato (58%), Mina/Haze. He loses to
-    ranged kiting he can never close on — Celeste (46%) and Vindicta (47%) — and to
-    S-tier frontline Billy (47%), who simply out-brawls him, and lane-winning Paige
-    (47%).'
+  matchup_notes: "Combo (grab/suppress) plus Torment Pulse punishes short-range divers\
+    \ who have to commit into him: Mirage (60%), Yamato (58%), Mina/Haze. He loses\
+    \ to ranged kiting he can never close on \u2014 Celeste (46%) and Vindicta (47%)\
+    \ \u2014 and to S-tier frontline Billy (47%), who simply out-brawls him, and lane-winning\
+    \ Paige (47%)."
   confidence: 0.7
-  released_on: null
   provisional: false
 Shiv:
   name: Shiv
@@ -1577,10 +1752,13 @@ Shiv:
   - mobile assassin
   tier: A
   trend: rising
-  why: 'Rising anti-tank: the tank/frontline wave (Abrams, Mo & Krill, Billy) feeds
-    his current-HP Serrated Knives, and harder camps reward his regen sustain. Burst
-    and hook CC (Yamato, Drifter, Bebop) still kill him before regen ramps, and his
-    core Radiant Regeneration was trimmed.'
+  why: 'Shiv is the mobile frontline the tempo patch rewards: elite movement plus
+    current-HP Serrated Knives make him a live answer to the big-HP tanks (Billy,
+    Abrams, Mo & Krill) tempo keeps in fights, and he wins three common carries (Haze,
+    Paradox, Wraith). His identity is now a regen-heavy spirit bruiser, and that core
+    took a hit when Radiant Regeneration and Restorative Locket were trimmed, which
+    is why a 48% WR undersells a rising pick. Burst and hook CC (Yamato, Bebop, Drifter)
+    still kill him before his sustain ramps.'
   core_items:
   - Mystic Regeneration
   - Extra Regen
@@ -1607,14 +1785,11 @@ Shiv:
   - Dynamo (CC)
   - Healbane / anti-heal
   last_changed_patch: Minor Update - 09-16-2026
-  notes: 'City Never Sleeps: rising anti-tank — the bigger front line feeds current-HP
-    Serrated Knives and harder camps reward his regen.
-
-    Spirit/regen rebuild confirmed (Mystic Regeneration/Extra Regen core); Mystic
-    Vulnerability/Torment Pulse/Escalating Exposure run 40-55%.
-
-    09-16: knives current-HP rework + alt-fire buff; Radiant Regeneration and Restorative
-    Locket trimmed.'
+  notes: "Prior core_items (Decay/Fortitude/Witchmail/Tankbuster) don't appear in\
+    \ 30-day usage \u2014 rebuilt off the spirit/regen data. Data disagrees with vegas's\
+    \ \"zero damage items\" claim: Mystic Vulnerability/Torment Pulse/Escalating Exposure\
+    \ run 40-55%. 09-16: knives current-HP rework + alt-fire buff; his 97% core Radiant\
+    \ Regeneration and Restorative Locket were trimmed."
   builds:
   - name: Spirit sustain bruiser
     damage: spirit
@@ -1647,13 +1822,12 @@ Shiv:
     - Yamato
     - Drifter
     - Bebop
-  matchup_notes: 'Current-HP Serrated Knives make him a direct counter to S-tier tanks
-    — Billy (57%) and the big-HP frontlines tempo keeps alive are free food for him,
-    and he out-sustains carries like Haze (54%). He loses to burst and CC that land
-    before his regen ramps: Yamato''s burst (42%), Drifter''s melee duel (44%), and
-    Bebop''s hook (46%).'
+  matchup_notes: "Current-HP Serrated Knives make him a direct counter to S-tier tanks\
+    \ \u2014 Billy (57%) and the big-HP frontlines tempo keeps alive are free food\
+    \ for him, and he out-sustains carries like Haze (54%). He loses to burst and\
+    \ CC that land before his regen ramps: Yamato's burst (42%), Drifter's melee duel\
+    \ (44%), and Bebop's hook (46%)."
   confidence: 0.6
-  released_on: null
   provisional: false
 Ivy:
   name: Ivy
@@ -1696,14 +1870,11 @@ Ivy:
   - silence
   - grounding / air-drag slow (hits Air Drop)
   last_changed_patch: Minor Update - 09-16-2026
-  notes: 'City Never Sleeps: no direct line; peercontent floats a small lift off camp-damage
-    sustain, but the Healing Snack addition and trimmed heal items cut both ways for
-    her (low confidence).
-
-    Real build is gun-first (Extended/Titanic/Tesla 68-74%); creator heal-support
-    framing is stale.
-
-    09-16: Stone Form radius 6->5.75m, T1 heal 7->6%.'
+  notes: "Corrected: Healing Tempo / Healing Nova don't appear in 30-day high-rank\
+    \ usage \u2014 real build is gun-first (Extended/Titanic/Tesla 68-74%); creator\
+    \ heal-support framing is stale.\nLow confidence on how the new air-drag slow\
+    \ interacts with Air Drop while airborne.\n09-16: Stone Form radius 6->5.75m,\
+    \ T1 heal 7->6% \u2014 creator-approved trim to an overloaded kit."
   builds:
   - name: Gun Ivy (stat-check carry-support)
     damage: gun
@@ -1724,9 +1895,9 @@ Ivy:
     - Healbane
     - Healing Booster
     popularity: secondary
-    notes: Sustain package layered on the gun core — Healing Booster to amplify her
-      tether heals, Healbane to cut enemy healing; run when the enemy team has real
-      sustain or burst you can't out-trade.
+    notes: "Sustain package layered on the gun core \u2014 Healing Booster to amplify\
+      \ her tether heals, Healbane to cut enemy healing; run when the enemy team has\
+      \ real sustain or burst you can't out-trade."
   - name: Spirit AoE / control utility
     damage: spirit
     core_items:
@@ -1750,14 +1921,13 @@ Ivy:
     - Dynamo
     - Mo & Krill
     - Viscous
-  matchup_notes: 'She beats committed, immobile damage and frontline — Haze (59%)
-    and Abrams (59%) cannot punish the Stone Form i-frame/stun, and Kudzu Connection
-    out-sustains their chip while she out-ranges tanks. She loses to mobile burst
-    and displacement: Vyper (44%) and Yamato (47%) kill through her low-HP heal before
-    tether matters, while Dynamo and Mo & Krill (48%) displace her out of tether range
-    and stun past the Form window.'
+  matchup_notes: "She beats committed, immobile damage and frontline \u2014 Haze (59%)\
+    \ and Abrams (59%) cannot punish the Stone Form i-frame/stun, and Kudzu Connection\
+    \ out-sustains their chip while she out-ranges tanks. She loses to mobile burst\
+    \ and displacement: Vyper (44%) and Yamato (47%) kill through her low-HP heal\
+    \ before tether matters, while Dynamo and Mo & Krill (48%) displace her out of\
+    \ tether range and stun past the Form window."
   confidence: 0.62
-  released_on: null
   provisional: false
 Warden:
   name: Warden
@@ -1767,11 +1937,11 @@ Warden:
   - late scaler
   tier: C
   trend: falling
-  why: 'Late-scaling gun carry the no-comeback, farm-route economy refuses to wait
-    for: tempo now runs through crate routes and hub objectives rather than lane brawling,
-    and Shadow Weave''s invis-engage gains little from the new Steam-Vent/district
-    layout. His 09-16 cuts (bullet dmg/boon, flask range/speed, Willpower T3, nerfed
-    T4 gun finishers) are still unanswered.'
+  why: 'The patch''s clearest casualty: bullet damage/boon, Alchemical Flask range/speed
+    and Willpower T3 were all cut and both T4 gun finishers (Mercurial Magnum, Spiritual
+    Overflow) were nerfed, so his late-scaler ceiling is gone in a meta that ends
+    games early. The silence cage keeps him pickable, but he lands at C rather than
+    balanced.'
   core_items:
   - High-Velocity Rounds
   - Opening Rounds
@@ -1797,14 +1967,11 @@ Warden:
   - Veil Walker nerf (lost Sprint Boots + movespeed-on-break)
   - weak T4 gun items (Mercurial Magnum / Spiritual Overflow class)
   last_changed_patch: Minor Update - 09-16-2026
-  notes: 'City Never Sleeps: no direct line; the farm-route/no-comeback economy still
-    refuses to wait for a late gun scaler, and Shadow Weave gains little from the
-    new Steam-Vent/district layout.
-
-    One dominant gun build; the ''cage'' is a Willpower choice, not an item path.
-
-    09-16: bullet dmg/boon, flask range/speed, Willpower T3 cut; Mercurial Magnum
-    + Spiritual Overflow nerfed, Veil Walker stripped.'
+  notes: "Item data shows one dominant gun build; the 'cage build' is a Willpower\
+    \ skill choice, not a separate item path \u2014 creators' 'cage' tag overstates\
+    \ it.\nMatchup WRs are the 14-day, mostly pre-09-16 snapshot \u2014 use as baseline\
+    \ only.\n09-16: bullet dmg/boon, flask range/speed, Willpower T3 cut; Mercurial\
+    \ Magnum + Spiritual Overflow nerfed, Veil Walker lost Sprint Boots/movespeed-on-break."
   builds:
   - name: Gun carry
     damage: gun
@@ -1828,9 +1995,9 @@ Warden:
     - Enduring Speed
     - Sprint Boots
     popularity: secondary
-    notes: Shadow Weave — now carrying Sprint Boots, faster sprint and a 37s cooldown
-      — replaces the stripped Veil Walker as the invis-engage shell for walking up
-      to land the silence cage.
+    notes: "Shadow Weave \u2014 now carrying Sprint Boots, faster sprint and a 37s\
+      \ cooldown \u2014 replaces the stripped Veil Walker as the invis-engage shell\
+      \ for walking up to land the silence cage."
   matchups:
     beats:
     - Venator
@@ -1849,7 +2016,6 @@ Warden:
     59%). He loses to lane bullies (Paige 47%), sustain (Ivy 48%), and durable fronts
     (Mo & Krill/Victor 50%) that tank the cage and out-tempo him before he scales.'
   confidence: 0.6
-  released_on: null
   provisional: false
 Yamato:
   name: Yamato
@@ -1859,11 +2025,13 @@ Yamato:
   - burst caster
   tier: A
   trend: rising
-  why: 'The patch''s camp-clear champion: Flying Strike now creates paths against
-    solid targets (turrets, Shrines, objectives) for extra mobility and objective
-    access, and her punch AoE gathers the new grouped, chasing Haunt camps faster
-    than almost anyone. Tempo burst plus point-click Spirit Snatch still deletes squishy
-    carries; sustain tanks and anti-heal cap her at the top of A, toward S.'
+  why: Two straight buffs (Crimson Slash T3 heal spirit scaling +0.4, Flying Slash
+    light-melee scaling 1.0->1.2) land on a tempo meta that rewards her point-click
+    Spirit Snatch burst and Refresher-Unstoppable windows, and creators expect a real
+    pick-rate climb. But 49.7% WR at 29.2% PR is a popularity-not-dominance profile,
+    and the rising tank wave (Abrams, Mo & Krill, Billy) plus cheap anti-heal caps
+    her ceiling. I take A over the tier list's S until a post-patch WR confirms the
+    buffs converted.
   core_items:
   - Spirit Strike
   - Spirit Snatch
@@ -1891,16 +2059,14 @@ Yamato:
   - Mo & Krill
   - Celeste
   - anti-heal (Healbane buyers)
-  last_changed_patch: City Never Sleeps
-  notes: 'City Never Sleeps: Flying Strike now creates paths against solid targets
-    (turrets, Shrines, objectives) — new mobility/objective access — and she is the
-    patch''s camp-clear champion vs the grouped Haunt camps.
-
-    Tankbuster is 39% share at a 25m average buy (late luxury, not core); the Refresher
-    build stays niche/creator-driven.
-
-    09-16: Crimson Slash T3 heal spirit scaling +0.4, Flying Slash light-melee scaling
-    1.0->1.2.'
+  last_changed_patch: Minor Update - 09-16-2026
+  notes: "Disagreement resolved (data > creators): Tankbuster is 39% share at a 25m\
+    \ avg buy \u2014 a late luxury, not a core slot \u2014 and Refresher/Reverb fall\
+    \ below the usage cutoff, so the Refresher build is creator-driven and niche.\n\
+    Tier: list says S, but the last two creators who assigned one said A; 49.7% WR\
+    \ at 29.2% PR is popularity, not dominance, and that WR is a pre-09-16 baseline.\n\
+    09-16 changelog: Crimson Slash T3 heal spirit scaling +0.4, Flying Slash light-melee\
+    \ scaling 1.0->1.2 (last_changed_patch: Minor Update - 09-16-2026)."
   builds:
   - name: on-hit spirit proc
     damage: hybrid
@@ -1923,9 +2089,9 @@ Yamato:
     - Torment Pulse
     - Hunter's Aura
     popularity: secondary
-    notes: 'Post-20m spike: Tankbuster+Reverb turns her point-click into a 1,000+
-      delete; Torment Pulse/Hunter''s Aura add shred and AoE. Luxury tier — Tankbuster''s
-      39% share lands at a 25m average buy.'
+    notes: "Post-20m spike: Tankbuster+Reverb turns her point-click into a 1,000+\
+      \ delete; Torment Pulse/Hunter's Aura add shred and AoE. Luxury tier \u2014\
+      \ Tankbuster's 39% share lands at a 25m average buy."
   - name: Refresher unstoppable
     damage: spirit
     core_items:
@@ -1949,13 +2115,12 @@ Yamato:
     - Warden
     - Abrams
     - Haze
-  matchup_notes: She point-clicks squishy mobile and late-scaler carries before they
-    can answer (Shiv 58%, Paradox 57%, Mina 55%, Wraith 53% — Wraith is a falling
-    late scaler with no instant answer). She loses to sustain tanks that outlast her
-    burst (Mo & Krill 42%, Abrams 42%) and to Celeste/Warden (41-42%) who outrange
-    or CC her approach, while Counterspell and Dispel Magic delete the engage outright.
+  matchup_notes: "She point-clicks squishy mobile and late-scaler carries before they\
+    \ can answer (Shiv 58%, Paradox 57%, Mina 55%, Wraith 53% \u2014 Wraith is a falling\
+    \ late scaler with no instant answer). She loses to sustain tanks that outlast\
+    \ her burst (Mo & Krill 42%, Abrams 42%) and to Celeste/Warden (41-42%) who outrange\
+    \ or CC her approach, while Counterspell and Dispel Magic delete the engage outright."
   confidence: 0.62
-  released_on: null
   provisional: false
 Lash:
   name: Lash
@@ -1965,10 +2130,12 @@ Lash:
   - initiator
   tier: S
   trend: rising
-  why: Highest-pick initiator (62% PR) whose dive-and-stomp engage still snowballs
-    in the no-comeback economy, now with the green-lane roof/tree giving him permanent
-    lane high ground and boxes mattering more to his farm. Mass pick pressure drags
-    his 51.8% WR; Silver's Weighted Bola and the air-drag slows are still the counter.
+  why: "Highest pick rate in the game (62%) plus a tempo patch that gutted comeback\
+    \ souls means his dive-and-stomp engage snowballs harder than almost anyone's,\
+    \ and the 09-16 Ground Strike scaling buffs pushed him off gun items onto the\
+    \ stomp build. The 51.8% WR undersells him \u2014 mass pick pressure drags it\
+    \ and creators still rank him S \u2014 but Silver's Weighted Bola and the new\
+    \ air-drag slows are the one thing that can check his aerial engage."
   core_items:
   - Mystic Burst
   - Extra Charge
@@ -1994,14 +2161,11 @@ Lash:
   - 'Zone/anti-dive control: Dynamo, McGinnis, Seven'
   - Flog heal nerf + healing-item trims (Radiant Regeneration, Restorative Locket)
   last_changed_patch: Minor Update - 09-16-2026
-  notes: 'City Never Sleeps: no direct line; the green-lane roof/tree gives permanent
-    lane high ground and boxes matter more to his farm.
-
-    Stomp/spirit is current; 30-day usage still shows gun Lash because the window
-    is mostly pre-09-16.
-
-    09-16: Ground Strike T3 scaling + per-meter damage up, gun falloff changed, Flog
-    heal nerfed.'
+  notes: "Data vs creator: 30-day usage still shows gun Lash (Headhunter 93%, Recharging\
+    \ Rush 78%) because the window is mostly pre-09-16; the 09-17 creator says the\
+    \ gun build is dead \u2014 treat stomp/spirit as current.\nLow-confidence: Vyper/McGinnis/Paige\
+    \ samples are small (152-300 games) and pre-patch.\n09-16: Ground Strike T3 scaling\
+    \ + per-meter damage up, gun falloff changed, Flog heal nerfed."
   builds:
   - name: Stomp spirit
     damage: spirit
@@ -2012,8 +2176,8 @@ Lash:
     - Bullet Resist Shredder
     - Tankbuster
     popularity: primary
-    notes: Ground-Strike spam; the 09-16 T3 scaling/per-meter buffs made this the
-      best Lash — dump the stomp on a grouped team, reset with Grapple.
+    notes: "Ground-Strike spam; the 09-16 T3 scaling/per-meter buffs made this the\
+      \ best Lash \u2014 dump the stomp on a grouped team, reset with Grapple."
   - name: Gun Lash
     damage: gun
     core_items:
@@ -2047,14 +2211,13 @@ Lash:
     - McGinnis
     - Vyper
     - Paige
-  matchup_notes: Talon (64%) is his best lane — an immobile poke carry Lash grapples
-    onto and closes before he can kite, and Talon also eats the new air-drag/slow
-    change; Lady Geist (59%) is a slow bruiser with no answer to the dive. He loses
-    lane-to-late vs Seven (42%) and McGinnis (44%) — sustained AoE, turret/wall zoning
-    and stuns punish his engage — while Dynamo (44%) simply out-initiates him in the
-    5v5.
+  matchup_notes: "Talon (64%) is his best lane \u2014 an immobile poke carry Lash\
+    \ grapples onto and closes before he can kite, and Talon also eats the new air-drag/slow\
+    \ change; Lady Geist (59%) is a slow bruiser with no answer to the dive. He loses\
+    \ lane-to-late vs Seven (42%) and McGinnis (44%) \u2014 sustained AoE, turret/wall\
+    \ zoning and stuns punish his engage \u2014 while Dynamo (44%) simply out-initiates\
+    \ him in the 5v5."
   confidence: 0.6
-  released_on: null
   provisional: false
 Viscous:
   name: Viscous
@@ -2096,14 +2259,13 @@ Viscous:
   - tempo snowball meta
   - global slows (slow-as-CC)
   last_changed_patch: Minor Update - 09-16-2026
-  notes: 'City Never Sleeps: no direct line; harder camps reward Cube sustain and
-    spread-out vaults suit Goo Ball, but this is a low-confidence lift.
-
-    Creators'' Decay/Echo Shard core is stale — Mystic Burst (94%) and High-Velocity
-    Rounds (81%) lead.
-
-    09-16: Cube cast range 26->20m, Puddle Punch cooldown 21->24s, Splatter/alt-fire
-    nerfs; cooldown-Cube shell lost Veil Walker''s Sprint Boots.'
+  notes: "Disagreement: creators call Decay/Echo Shard core, but usage data has neither\
+    \ in his top 15 \u2014 Mystic Burst (94%) and High-Velocity Rounds (81%) lead,\
+    \ so the real shell is spirit-hybrid plus cooldown items, not Echo Shard resets.\n\
+    Tier set to B: creators' S read is July (pre-nerf) and 51.5%/23.4% is a pre-09-16\
+    \ snapshot, so the nerfs land him at B, not S.\n09-16: Cube cast range 26->20m,\
+    \ Puddle Punch cooldown 21->24s, Splatter/alt-fire nerfs, Goo Ball T3 scaling\
+    \ buff; cooldown-Cube shell also lost Veil Walker's Sprint Boots/movespeed-on-break."
   builds:
   - name: Spirit-hybrid Splatter/Punch
     damage: hybrid
@@ -2150,7 +2312,6 @@ Viscous:
     displacement punish a slow enabler, and Mo & Krill''s tank-sustain plus combo
     out-trades him; Drifter''s melee bruiser kit does the same.'
   confidence: 0.55
-  released_on: null
   provisional: false
 Pocket:
   name: Pocket
@@ -2216,9 +2377,9 @@ Pocket:
     - Superior Duration
     - Greater Expansion
     popularity: primary
-    notes: The default ranked build — burst plus duration to maximize Affliction's
-      DoT and Barrage; buy order Mystic Burst/Cold Front early, Tankbuster→Spirit
-      Burn→Superior Duration late (99% Mystic Burst, 95% Tankbuster).
+    notes: "The default ranked build \u2014 burst plus duration to maximize Affliction's\
+      \ DoT and Barrage; buy order Mystic Burst/Cold Front early, Tankbuster\u2192\
+      Spirit Burn\u2192Superior Duration late (99% Mystic Burst, 95% Tankbuster)."
   - name: Cloak skirmish
     damage: hybrid
     core_items:
@@ -2228,9 +2389,9 @@ Pocket:
     - Mystic Expansion
     - Dispel Magic
     popularity: secondary
-    notes: Farm-speed plus mobility/survivability splash — Monster Rounds/Cultist
-      Sacrifice to clear camps, Majestic Leap and Dispel Magic to engage or bail out;
-      taken when the enemy comp punishes the all-in.
+    notes: "Farm-speed plus mobility/survivability splash \u2014 Monster Rounds/Cultist\
+      \ Sacrifice to clear camps, Majestic Leap and Dispel Magic to engage or bail\
+      \ out; taken when the enemy comp punishes the all-in."
   matchups:
     beats:
     - Venator
@@ -2249,7 +2410,6 @@ Pocket:
     to a low-HP caster: Celeste out-trades at range (39%), Warden''s root and gun
     pressure catch the dive (41%), and Drifter/Viscous stay glued to him (41%/44%).'
   confidence: 0.58
-  released_on: null
   provisional: false
 Mirage:
   name: Mirage
@@ -2324,9 +2484,9 @@ Mirage:
     - Titanic Magazine
     - Ricochet
     popularity: secondary
-    notes: Gun/spread package at ~40-80% share (Ricochet 80%) for players leaning
-      on his gun and animation-cancel — late-scaling and therefore the half of the
-      kit the tempo meta punishes hardest.
+    notes: "Gun/spread package at ~40-80% share (Ricochet 80%) for players leaning\
+      \ on his gun and animation-cancel \u2014 late-scaling and therefore the half\
+      \ of the kit the tempo meta punishes hardest."
   - name: Echo Shard tornado
     damage: spirit
     core_items:
@@ -2348,14 +2508,13 @@ Mirage:
     - Lash
     - Wraith
     - Abrams
-  matchup_notes: 'He farms immobile carries and squishy divers — 53% into Infernus
-    and Calico — because Djinn''s Mark plus Fire Scarab spirit-amp bursts low-HP targets
-    while Dust Devil''s knock-up and untargetability blunt a dive. He folds to CC-frontline
-    and ranged gun pressure: 39% vs Warden (poke he cannot close), 40% vs Mo & Krill
-    (silence/combo locks a slow caster), 44% vs Lash (S-tier dive displaces him off
-    split-push).'
+  matchup_notes: "He farms immobile carries and squishy divers \u2014 53% into Infernus\
+    \ and Calico \u2014 because Djinn's Mark plus Fire Scarab spirit-amp bursts low-HP\
+    \ targets while Dust Devil's knock-up and untargetability blunt a dive. He folds\
+    \ to CC-frontline and ranged gun pressure: 39% vs Warden (poke he cannot close),\
+    \ 40% vs Mo & Krill (silence/combo locks a slow caster), 44% vs Lash (S-tier dive\
+    \ displaces him off split-push)."
   confidence: 0.6
-  released_on: null
   provisional: false
 Vyper:
   name: Vyper
@@ -2448,7 +2607,6 @@ Vyper:
     creator-flagged counters (Billy 50%, Silver/Venator) do NOT show in data - so
     treat ''she loses to CC'' as a comp-level problem, not a specific-hero counter.'
   confidence: 0.6
-  released_on: null
   provisional: false
 Sinclair:
   name: Sinclair
@@ -2486,7 +2644,6 @@ Sinclair:
   - mobile divers and bruisers (Lash, Yamato, Holliday, Calico, Drifter)
   - Bebop hook
   - low base survivability
-  last_changed_patch: null
   notes: 'Changelog: 09-16 - no Sinclair line; divers that beat him gained from the
     tempo push, his winning matchups (Wraith, Paradox) shrink, and no spirit/duration
     item moved. Net flat.
@@ -2530,12 +2687,11 @@ Sinclair:
     - Bebop
     - Calico
     - Lash
-  matchup_notes: 'His only real wins are Wraith (54%) and Paradox (51%) — falling
-    squishy carries he can burst before they scale. He loses to Drifter (43%), Bebop
-    (44%) and rising divers Lash/Calico (47%): gap-closers, hooks and dive punish
-    his low HP and his inability to pick a favourable setup without draft.'
+  matchup_notes: "His only real wins are Wraith (54%) and Paradox (51%) \u2014 falling\
+    \ squishy carries he can burst before they scale. He loses to Drifter (43%), Bebop\
+    \ (44%) and rising divers Lash/Calico (47%): gap-closers, hooks and dive punish\
+    \ his low HP and his inability to pick a favourable setup without draft."
   confidence: 0.42
-  released_on: null
   provisional: false
 Mina:
   name: Mina
@@ -2544,12 +2700,12 @@ Mina:
   - mobile assassin
   - burst caster
   tier: C
-  trend: stable
-  why: 'Overloaded mobile burst assassin still stuck at C: the camp/uptime patch rewards
-    her grouped-camp AoE clear and new-district mobility, but her single-target rotation
-    does not kill through the tank front line (Billy, Mo & Krill, Victor) and Yamato
-    owns the mobile-burst niche. The damage gap is a rework problem, not a numbers
-    one.'
+  trend: falling
+  why: 'Overloaded mobile burst assassin who no longer converts (47.3% WR on 39.9%
+    PR): the tempo/tank frontline (Billy, Mo & Krill) eats her single-target rotation,
+    Yamato has taken over her mobile-burst niche, and the Tankbuster trim (current-health
+    bonus 8->7.5%) weakens her last anti-tank answer. Damage is missing - a rework
+    problem, not a numbers problem.'
   core_items:
   - Extra Spirit
   - Mystic Burst
@@ -2577,13 +2733,14 @@ Mina:
   - tank/bruiser frontline that survives her burst
   - Yamato (owns the mobile-assassin niche)
   last_changed_patch: Minor Update - 07-28-2026
-  notes: 'City Never Sleeps: no direct line; the camp/uptime patch rewards her grouped-camp
-    AoE clear and new-district mobility, but her damage gap is unchanged.
+  notes: 'Changelog: 09-16 - no direct line; Tankbuster 8->7.5% shaves her anti-tank
+    finisher and the tempo/tank meta punishes her burst. Held at C.
 
-    One spirit build (Extra Spirit/Mystic Burst/Quicksilver Reload ~100%); only late
-    anti-tank items diverge.
+    Data shows essentially one spirit build (Extra Spirit/Mystic Burst/Quicksilver
+    Reload all ~100%) - ''build diversity'' is a myth; only late anti-tank items diverge.
+    Vegas (07-16): C falling, ''needs a rework not a buff.''
 
-    Last direct touch: 07-28-2026.'
+    Unchanged by Minor Update 09-16-2026; last direct touch 07-28-2026.'
   builds:
   - name: Spirit burst
     damage: spirit
@@ -2599,10 +2756,10 @@ Mina:
     - Tankbuster
     - Boundless Spirit
     popularity: primary
-    notes: Spirit-power burst with a near-universal stamina/dispel backbone (all ~96-100%
-      share) — dive a squishy carry and delete them before they react, using Quicksilver
-      Reload to cycle abilities through reloads and Dispel Magic to clear the CC that
-      otherwise ends her.
+    notes: "Spirit-power burst with a near-universal stamina/dispel backbone (all\
+      \ ~96-100% share) \u2014 dive a squishy carry and delete them before they react,\
+      \ using Quicksilver Reload to cycle abilities through reloads and Dispel Magic\
+      \ to clear the CC that otherwise ends her."
   - name: Gun-weave shred
     damage: hybrid
     core_items:
@@ -2626,13 +2783,12 @@ Mina:
     - Billy
     - Mo & Krill
     - Victor
-  matchup_notes: She beats the squishy carries she can dive and burst — Mirage, Pocket,
-    Haze (52-53%) — where her mobility converts a kill before they can react. She
-    loses hard to tanks and bruisers with CC/sustain (Billy 43%, Mo & Krill 43%, Victor
-    44%) and to Ivy (40%), who out-heals her burst. Single-target burst into heroes
-    that survive the first rotation is the whole story.
+  matchup_notes: "She beats the squishy carries she can dive and burst \u2014 Mirage,\
+    \ Pocket, Haze (52-53%) \u2014 where her mobility converts a kill before they\
+    \ can react. She loses hard to tanks and bruisers with CC/sustain (Billy 43%,\
+    \ Mo & Krill 43%, Victor 44%) and to Ivy (40%), who out-heals her burst. Single-target\
+    \ burst into heroes that survive the first rotation is the whole story."
   confidence: 0.7
-  released_on: null
   provisional: false
 Drifter:
   name: Drifter
@@ -2641,12 +2797,12 @@ Drifter:
   - mobile assassin
   - tank/frontline
   tier: A
-  trend: rising
-  why: Blind-pickable spirit-melee bruiser still on the field's highest pick rate;
-    the City Never Sleeps layout adds hiding spots, Steam Vents and heavy-melee Tough-Crate
-    routes that suit a stealth-revealing melee roam. He still lacks hard CC and closing
-    mobility, so a 51.4% WR floor and rising Dynamo/Mo & Krill/Apollo lane pressure
-    cap him at A.
+  trend: stable
+  why: 'Blind-pickable melee bruiser on a spirit-melee core (Melee Lifesteal, Stalker,
+    Spirit Strike) with built-in anti-heal, and his 57.8% pick rate is the field''s
+    highest. The 51.4% WR is a floor, not a ceiling: the tempo patch suits early bruisers
+    and his build spikes before 7m, but rising Dynamo/Mo & Krill/Apollo pressure his
+    losing matchups while he still lacks hard CC and closing mobility.'
   core_items:
   - Melee Lifesteal
   - Stalker
@@ -2665,8 +2821,6 @@ Drifter:
   - built-in anti-heal
   - tempo/early-snowball meta
   - Stalker (weapon T2)
-  - new districts + Steam Vents (stealth-reveal sense)
-  - Heavy-Melee Tough Crate routes (melee core)
   countered_by:
   - Dynamo
   - Mo & Krill
@@ -2674,15 +2828,12 @@ Drifter:
   - Vyper
   - anti-heal stacking
   - CC/silence
-  last_changed_patch: null
-  notes: '09-29 City Never Sleeps: no direct change - new districts/Steam Vents and
-    heavy-melee Tough-Crate routes fit his stealth-reveal roam (peercontent, unverified).
-
-    Dropped KB core_items Decay/Toxic Bullets/Fortitude - none show in current 30-day
-    usage; the ''Toxic Bullets bot'' framing is a 2026-04 artifact (data over creator).
-    Celeste falling softens one losing matchup, but Dynamo/Mo & Krill/Apollo rising
-    worsen others - net stable. 09-16 Minor Update: no direct Drifter change; gutted
-    comeback souls and ramped rift resist suit his early-bruiser floor.'
+  notes: "Dropped KB core_items Decay/Toxic Bullets/Fortitude \u2014 none show in\
+    \ current 30-day usage; the 'Toxic Bullets bot' framing is a 2026-04 artifact\
+    \ (data over creator). Celeste falling softens one losing matchup, but Dynamo/Mo\
+    \ & Krill/Apollo rising worsen others \u2014 net stable. 09-16 Minor Update: no\
+    \ direct Drifter change; gutted comeback souls and ramped rift resist suit his\
+    \ early-bruiser floor."
   builds:
   - name: Spirit melee bruiser
     damage: spirit
@@ -2704,8 +2855,8 @@ Drifter:
     - Tankbuster
     - Superior Duration
     popularity: secondary
-    notes: Mid-game survivability, anti-heal and extended ult duration — the pick
-      into healing comps and tanky fronts.
+    notes: "Mid-game survivability, anti-heal and extended ult duration \u2014 the\
+      \ pick into healing comps and tanky fronts."
   matchups:
     beats:
     - Pocket
@@ -2719,12 +2870,11 @@ Drifter:
     - Celeste
     - Mo & Krill
     - Apollo
-  matchup_notes: Beats squishy burst/carry targets he can close and delete — Pocket,
-    Venator, Holliday, Sinclair (57-59%). Loses the front-line/CC war to Dynamo and
-    Mo & Krill (44-48%), who out-sustain his dive and lock him down, and to rising
-    lane bullies Apollo and Vyper who never let him start.
+  matchup_notes: "Beats squishy burst/carry targets he can close and delete \u2014\
+    \ Pocket, Venator, Holliday, Sinclair (57-59%). Loses the front-line/CC war to\
+    \ Dynamo and Mo & Krill (44-48%), who out-sustain his dive and lock him down,\
+    \ and to rising lane bullies Apollo and Vyper who never let him start."
   confidence: 0.72
-  released_on: null
   provisional: false
 Venator:
   name: Venator
@@ -2813,25 +2963,26 @@ Venator:
     - Vindicta
     - Drifter
     - Lash
-  matchup_notes: Beats fellow gun carries by out-tanking and out-sustaining them —
-    Haze 48% and Wraith 47% match the reader note that he is the better pick in that
-    slot. Loses to gap-closing frontline CC (Abrams 38%, Lash 43%) that locks him
-    out of his own range. Vindicta's 39% is likely a lagging pre-patch number — she
-    is falling and flyers were hurt this patch.
+  matchup_notes: "Beats fellow gun carries by out-tanking and out-sustaining them\
+    \ \u2014 Haze 48% and Wraith 47% match the reader note that he is the better pick\
+    \ in that slot. Loses to gap-closing frontline CC (Abrams 38%, Lash 43%) that\
+    \ locks him out of his own range. Vindicta's 39% is likely a lagging pre-patch\
+    \ number \u2014 she is falling and flyers were hurt this patch."
   confidence: 0.6
-  released_on: null
   provisional: false
 Victor:
   name: Victor
   role: tank/frontline
   archetypes:
   - tank/frontline
-  tier: A
-  trend: rising
-  why: 'Sustain frontline the camp meta feeds: harder Haunt camps and longer PvE routes
-    reward his Spirit Lifesteal/Healing Booster regen stack, and the snapshot''s 56.4%
-    WR is the board''s second-highest. Still the one tank burst and anti-heal can
-    delete, and he drops the mirror to Abrams/Mo & Krill.'
+  tier: B
+  trend: stable
+  why: "A 26.1% pick rate with an exactly break-even 49.7% WR makes him the fair B-tier\
+    \ baseline other frontlines are measured against \u2014 popular, never oppressive.\
+    \ He grinds melee divers down with Aura of Suffering plus a Spirit Lifesteal/Healing\
+    \ Booster sustain stack, but his low HP-per-boon leaves him the one tank that\
+    \ burst and anti-heal can delete. The 09-16 tempo patch neither rewarded nor punished\
+    \ him, so he holds at B."
   core_items:
   - High-Velocity Rounds
   - Extra Regen
@@ -2848,7 +2999,7 @@ Victor:
   - Spirit sustain bruiser
   - Weapon-tempo start
   enabled_by:
-  - harder Haunt camps reward regen/sustain
+  - core tank items left untouched by 09-16
   - Spirit Lifesteal + Healing Booster sustain stack
   - melee-diver meta he outlasts (Mina, Calico, Lash)
   countered_by:
@@ -2858,15 +3009,11 @@ Victor:
   - tank stat-checks (Abrams, Mo & Krill)
   - CC
   last_changed_patch: Minor Update - 07-09-2026
-  notes: '09-29 City Never Sleeps: no direct change; hard Haunt camps and longer PvE
-    routes feed his sustain stack - flipped from fair B-tier baseline to A on a 56.4%
-    snapshot WR (peercontent read).
-
-    Data disagrees with the 07-16 creator read: Refresher and Echo Shard appear in
-    none of his top-15 high-rank buys over 30 days - his real build is spirit sustain,
-    not a Refresher initiator.
-
-    Untouched by Minor Update 09-16 (last changed 07-09).'
+  notes: "Data disagrees with the 07-16 creator read: Refresher and Echo Shard appear\
+    \ in none of his top-15 high-rank buys over 30 days \u2014 his real build is spirit\
+    \ sustain, not a Refresher initiator.\nWin and matchup numbers are a 14-day pre-09-16\
+    \ snapshot; the tier could drift if anti-heal or burst assassins tighten.\nUntouched\
+    \ by Minor Update 09-16 (last changed 07-09)."
   builds:
   - name: Spirit sustain bruiser
     damage: spirit
@@ -2906,13 +3053,12 @@ Victor:
     - Mo & Krill
     - Abrams
     - Drifter
-  matchup_notes: He beats divers who must enter his Aura of Suffering (Mina 56%, Calico
-    55%, Lash 53%) — his DoT sustain outlasts their burst. He loses to a kiting healer
-    (Ivy 43%) and a ranged flyer (Vindicta 45%) he cannot reach or finish, and drops
-    the tank mirror (Abrams 47%, Mo & Krill 47%) where low HP-per-boon leaves him
-    out-stat.
+  matchup_notes: "He beats divers who must enter his Aura of Suffering (Mina 56%,\
+    \ Calico 55%, Lash 53%) \u2014 his DoT sustain outlasts their burst. He loses\
+    \ to a kiting healer (Ivy 43%) and a ranged flyer (Vindicta 45%) he cannot reach\
+    \ or finish, and drops the tank mirror (Abrams 47%, Mo & Krill 47%) where low\
+    \ HP-per-boon leaves him out-stat."
   confidence: 0.6
-  released_on: null
   provisional: false
 Paige:
   name: Paige
@@ -2922,10 +3068,11 @@ Paige:
   - lane bully
   tier: S
   trend: rising
-  why: Lane-winning support whose pressure now converts straight into the patch's
-    early crate routes and Healing Snacks; she wins lane, then snowballs a carry before
-    trimmed comeback souls can rescue the enemy. 52.7% WR / 29.2% PR, near-even into
-    Rem/Ivy caps her dominance.
+  why: 'Support best built for the lane-wins-matter economy: she wins lane then snowballs
+    a carry (Billy, Abrams) before trimmed comeback souls can rescue the enemy. 09-16
+    heavy-melee spirit scaling (0.3->0.45) and Captivating Read buffs (T1 -11->-14s,
+    T3 +1m->+2m) sharpen a kit already lane-dominant, and the flyer threats she feared
+    were cut. 52.7% WR / 29.2% PR; near-even into Rem/Ivy caps her dominance.'
   core_items:
   - High-Velocity Rounds
   - Opening Rounds
@@ -2943,23 +3090,22 @@ Paige:
   - tempo / lane-wins meta
   - anti-flyer shifts (air-drag slows, Silver's Weighted Bola)
   - Billy/Abrams frontline partners
-  - guaranteed crate routes from ~2:30 + Healing Snacks
   countered_by:
   - burst assassins (Yamato, Lash, Holliday)
   - Rem
   - Ivy
   - anti-heal (healing-item trims)
   last_changed_patch: Minor Update - 09-16-2026
-  notes: '09-29 City Never Sleeps: no direct change; lane-adjacent crate routes and
-    Healing Snacks reward her lane pressure, and the contested hubs suit her carry-snowball
-    (peercontent).
-
-    Changelog: 09-16 - heavy-melee spirit scaling 0.3->0.45, Captivating Read T1 -11->-14s
-    / T3 +1m->+2m; Slowing Hex cd 27->29s is a minor tax.
+  notes: 'Changelog: 09-16 - heavy-melee spirit scaling 0.3->0.45, Captivating Read
+    T1 -11->-14s / T3 +1m->+2m; Slowing Hex cd 27->29s is a minor tax, partly offset
+    by its new air-drag reach.
 
     Data check: old core items Healing Tempo and Fortitude do not appear in the 30-day
     usage list - replaced by the real early-gun-into-spirit core. Knockdown is a below-average
-    buy (50.8% WR vs 52.7%).'
+    buy (50.8% WR vs 52.7% hero) despite 50% usage.
+
+    Matchup samples are small and the snapshot is pre-09-16, so the S leans on the
+    thesis plus the newest creator read (heresy 09-17) - confidence modest.'
   builds:
   - name: Tempo support
     damage: hybrid
@@ -2995,14 +3141,13 @@ Paige:
     - Dynamo
     - Billy
     - Vindicta
-  matchup_notes: 'The real edges are vs falling gun carries/initiators — Wraith 57%,
-    Paradox 57%, Haze 55% — where her lane pressure and Plot Armor heals blunt the
-    picks and scaling windows those archetypes need. She is only even (49%) into Rem
-    and Ivy, fitting the creator read that she is a weaker Rem: both out-heal and
-    out-escape her. Dynamo at 49% contradicts the old ''counters Dynamo ult'' line
-    — treat that as stale.'
+  matchup_notes: "The real edges are vs falling gun carries/initiators \u2014 Wraith\
+    \ 57%, Paradox 57%, Haze 55% \u2014 where her lane pressure and Plot Armor heals\
+    \ blunt the picks and scaling windows those archetypes need. She is only even\
+    \ (49%) into Rem and Ivy, fitting the creator read that she is a weaker Rem: both\
+    \ out-heal and out-escape her. Dynamo at 49% contradicts the old 'counters Dynamo\
+    \ ult' line \u2014 treat that as stale."
   confidence: 0.6
-  released_on: null
   provisional: false
 The Doorman:
   name: The Doorman
@@ -3011,11 +3156,12 @@ The Doorman:
   - initiator
   - burst caster
   tier: B
-  trend: stable
-  why: Popular but not-winning setup initiator (46.5% WR) whose delayed payoff the
-    tempo read still punishes - but Bell Tower's single rope and ~280-soul payout
-    hand his Doorway a real kidnap play on the new top objective. Reach still comes
-    late and early snowball beats him.
+  trend: falling
+  why: 'Popular but not winning (46.5% WR, 12.7% PR): a delayed, setup-dependent initiator
+    that early snowball beats. The 09-16 patch hit him indirectly twice - the tempo
+    meta rewards dive over setup, and Veil Walker''s rework stripped the Sprint Boots
+    plus movespeed-on-break his kidnap/escape shell relied on. Doorway still isolates
+    a carry (his answer to Silver), but reach comes too late.'
   core_items:
   - Mystic Burst
   - Extra Charge
@@ -3031,7 +3177,6 @@ The Doorman:
   - Kidnap / utility (Doorway pick)
   enabled_by:
   - Doorway isolate (answers Silver by removing the carry from a fight)
-  - Bell Tower single rope + ~280 souls (Doorway kidnap)
   - AoE/charge spirit items (Mystic Expansion, Greater Expansion, Extra Charge)
   - high pick rate keeps a large coordinated-player base
   countered_by:
@@ -3040,17 +3185,16 @@ The Doorman:
   - 'tempo meta: early snowball beats his delayed payoff'
   - Vortex Web/Slowing Hex being low-WR bait items
   last_changed_patch: Minor Update - 08-12-2026
-  notes: '09-29 City Never Sleeps: no direct change; Bell Tower''s single rope + ~280
-    souls makes his Doorway kidnap a real objective play (pre-place door before roping
-    up), offset by the tempo read punishing delayed setup - trend up from falling
-    to stable (peercontent).
+  notes: 'Changelog: 09-16 - no direct line; loses his Veil Walker disengage (Sprint
+    Boots + movespeed-on-break removed) and his archetype is punished by the tempo
+    push.
 
-    Changelog: 09-16 - no direct line; loses his Veil Walker disengage (Sprint Boots
-    + movespeed-on-break removed).
+    Usage backs the creator ''kidnap is a trap'' read: Vortex Web (56%, 45.1% WR)
+    and Slowing Hex (70%, 45.3%) are his two worst staples vs the Bell core''s Tankbuster
+    51.2% / Boundless Spirit 57.4%.
 
-    Usage backs the creator ''kidnap is a trap'' read: Vortex Web and Slowing Hex
-    are his two worst staples vs the Bell core''s Tankbuster 51.2% / Boundless Spirit
-    57.4%.'
+    No gun build exists despite HVR 78% / Opening Rounds 66% - those are cheap lane
+    filler. Low confidence on matchups (no qualifying pairs).'
   builds:
   - name: Bell carry (AoE spirit)
     damage: spirit
@@ -3092,7 +3236,6 @@ The Doorman:
     they reach a squishy caster before Luggage Cart/Doorway set up - the same ''tempo
     beats setup'' pattern the 09-16 patch rewards.'
   confidence: 0.55
-  released_on: null
   provisional: false
 Billy:
   name: Billy
@@ -3100,12 +3243,13 @@ Billy:
   archetypes:
   - tank/frontline
   - lane bully
-  tier: A
-  trend: falling
-  why: 'Lobby-default frontline whose lane-bully all-in the map-economy patch suits
-    less: the crate/camp meta wants sustained uptime, and his front-line slot has
-    visibly moved to rising Mo & Krill. Anti-tank Shiv remains his worst lane and
-    is climbing, so he slides off S.'
+  tier: S
+  trend: stable
+  why: Lobby-default frontline (52.1% WR, 31.8% PR) that the tempo patch suits - winning
+    lane now wins the game, and his lane-bully all-in wants early kills. Item tailwinds
+    help the brawl (Lifestrike melee-heal up to 120+1.75 and its slow now drags flyers;
+    Fortitude regen 2->2.25%), but anti-tank Shiv is his worst matchup and rising,
+    so S is popularity-supported, not runaway.
   core_items:
   - Spirit Snatch
   - Stalker
@@ -3133,16 +3277,16 @@ Billy:
   - kiting / sustained ranged gun (Warden, Seven)
   - sustain-peel (Ivy)
   last_changed_patch: Minor Update - 08-12-2026
-  notes: '09-29 City Never Sleeps: no direct change; the crate/camp-uptime meta wants
-    sustained presence and his front-line slot moved to rising Mo & Krill, with anti-tank
-    Shiv climbing - S was popularity-supported, so slides to A (peercontent, unverified).
-
-    Changelog: 09-16 - no direct line; item tailwinds (Lifestrike heal/slow, Fortitude
-    regen) and the lane-wins meta supported him.
+  notes: 'Changelog: 09-16 - no direct line; item tailwinds (Lifestrike heal/slow,
+    Fortitude regen) and the lane-wins meta support him. Anti-tank Shiv (his worst
+    lane) is climbing.
 
     Data beats creators: Lifestrike, Echo Shard, Witchmail and Scourge/Scrooge never
     appear in his top-15 buys - real core is Spirit Snatch (95%), Stalker (90%), Close
-    Quarters (88%), Monster Rounds (86%), Grit (83%).'
+    Quarters (88%), Monster Rounds (86%), Grit (83%). Item analysis calls him Lifestrike''s
+    prime buyer, which the 30-day usage contradicts - treat that as low confidence.
+
+    Held at S on 31.8% PR + a solid-not-dominant 52.1% WR; downgrade risk is real.'
   builds:
   - name: Melee-range hybrid bruiser
     damage: hybrid
@@ -3179,13 +3323,12 @@ Billy:
     - Warden
     - Seven
     - Vindicta
-  matchup_notes: 'He farms squishy, low-mobility heroes who can''t escape a melee
-    bruiser that out-stats them — Dynamo, Bebop, Paradox, Pocket and Mina all sit
-    at 55-58%. He bleeds to anti-tank and sustain: Shiv''s execute kit is his worst
-    lane (43%) and Shiv is rising, while Ivy and Warden out-sustain/out-range his
-    all-in (45% each) and Seven/Vindicta poke the big slow body from range (48%).'
+  matchup_notes: "He farms squishy, low-mobility heroes who can't escape a melee bruiser\
+    \ that out-stats them \u2014 Dynamo, Bebop, Paradox, Pocket and Mina all sit at\
+    \ 55-58%. He bleeds to anti-tank and sustain: Shiv's execute kit is his worst\
+    \ lane (43%) and Shiv is rising, while Ivy and Warden out-sustain/out-range his\
+    \ all-in (45% each) and Seven/Vindicta poke the big slow body from range (48%)."
   confidence: 0.58
-  released_on: null
   provisional: false
 Graves:
   name: Graves
@@ -3266,13 +3409,12 @@ Graves:
     - Warden
     - Wraith
     - Calico
-  matchup_notes: 'Beats Paradox (53%) and Bebop (52%): both stand still to channel
-    or duel, so Grasping Hands and summon pressure land easily. Loses to Warden (42%)
-    and Wraith (44%) — gun carries that out-range and out-scale her, Warden''s Binding
-    Word pinning her immobile frame. Calico/Lash/Drifter are near-even but all mobile
-    dive, so they reach her before she scales.'
+  matchup_notes: "Beats Paradox (53%) and Bebop (52%): both stand still to channel\
+    \ or duel, so Grasping Hands and summon pressure land easily. Loses to Warden\
+    \ (42%) and Wraith (44%) \u2014 gun carries that out-range and out-scale her,\
+    \ Warden's Binding Word pinning her immobile frame. Calico/Lash/Drifter are near-even\
+    \ but all mobile dive, so they reach her before she scales."
   confidence: 0.6
-  released_on: null
   provisional: false
 Apollo:
   name: Apollo
@@ -3283,10 +3425,12 @@ Apollo:
   - tank/frontline
   tier: S
   trend: rising
-  why: 'Tempo lane bully the map-economy patch still favors: he routes crate paths
-    and roams, and with T3 bullet resist is one of the few who can still commit under
-    a Guardian after the parry-cooldown change. Spirit core untouched - only his Locket
-    sustain line was trimmed. 49.3% WR is a pre-patch baseline.'
+  why: "The tempo patch's clearest archetype winner despite no direct notes: gutted\
+    \ comeback souls and the scaling early-Rift resist turn his win-lane/invade/escape\
+    \ tempo into real wins, and his spirit core lost nothing \u2014 only his secondary\
+    \ Restorative Locket sustain line was trimmed. The 49.3% WR / 21.3% PR is a 14-day\
+    \ pre-patch baseline, so hold the S read loosely; Riposte (08-12) keeps his duel/escape\
+    \ tool free."
   core_items:
   - Extra Regen
   - Mystic Burst
@@ -3311,7 +3455,6 @@ Apollo:
   - early-Rift resist nerf
   - Riposte buffs (08-12)
   - spirit item pool untouched
-  - tower-dive still open with T3 bullet resist vs the parry-cooldown change
   countered_by:
   - Lash
   - Abrams
@@ -3319,15 +3462,12 @@ Apollo:
   - Warden
   - anti-heal vs his Locket/heal sustain
   last_changed_patch: Minor Update - 08-12-2026
-  notes: '09-29 City Never Sleeps: no direct change; the parry-cooldown change removes
-    tower-diving for most of the roster, making his T3 bullet resist a real outlier
-    advantage, and crate/roam routing suits him (peercontent).
-
-    09-16: no direct changes - structural economy/Rift shifts favor his tempo; the
-    Restorative Locket nerf dents only his support line.
-
-    Old core_items (Fortitude) had zero usage; data says pure spirit, so reworked
-    to Extra Spirit/Mystic Burst/Improved Spirit cores.'
+  notes: "09-16: no direct changes \u2014 structural economy/Rift shifts favor his\
+    \ tempo; the Restorative Locket nerf dents only his support line.\nOld core_items\
+    \ (Fortitude) had zero usage; data says pure spirit, so reworked to Extra Spirit/Mystic\
+    \ Burst/Improved Spirit cores.\n'Super buffed this patch' (heresy 09-17) is creator\
+    \ inference, not measured \u2014 his 49.3% WR is a pre-patch baseline, so hold\
+    \ the size of the buff loosely."
   builds:
   - name: Spirit bruiser
     damage: spirit
@@ -3377,13 +3517,12 @@ Apollo:
     - Lash
     - Wraith
     - Mo & Krill
-  matchup_notes: 'He beats burst squishies he can dive before they scale: Mina (55%),
-    Vindicta/Haze (~52%), whose range his lane pressure and Riposte punish. He loses
-    to frontline that out-sustains his burst (Abrams 44%, Mo & Krill 46%) and to Lash
-    (44%), whose mobility out-positions his melee range — the vegas line that Riposte
-    ''cancels Lash'' reads as dated, the data has him losing that pairing.'
+  matchup_notes: "He beats burst squishies he can dive before they scale: Mina (55%),\
+    \ Vindicta/Haze (~52%), whose range his lane pressure and Riposte punish. He loses\
+    \ to frontline that out-sustains his burst (Abrams 44%, Mo & Krill 46%) and to\
+    \ Lash (44%), whose mobility out-positions his melee range \u2014 the vegas line\
+    \ that Riposte 'cancels Lash' reads as dated, the data has him losing that pairing."
   confidence: 0.6
-  released_on: null
   provisional: false
 Rem:
   name: Rem
@@ -3391,11 +3530,13 @@ Rem:
   archetypes:
   - support/healer
   tier: B
-  trend: rising
-  why: Coin-flip support whose percent-max-HP heal and cleanse gain value as harder
-    Haunt camps reward sustain and Bell Tower's three spread vaults stretch the map.
-    Healing Snacks cheapen dedicated healing, and he still loses the heal-slot duel
-    to Ivy.
+  trend: stable
+  why: 'Rem is a coin-flip support (50.1% WR) whose value tracks the frontline meta:
+    with deathball comps out and healing items trimmed (Radiant Regeneration, Restorative
+    Locket), his percent-max-HP heal and cleanse are strong but no longer a win condition
+    on their own. He farms wins off squishy burst carries he can out-sustain (Paradox,
+    Wraith, Haze) and loses to the meta''s divers (Lash, Drifter) and to Ivy, who
+    fills the same heal slot with a better body.'
   core_items:
   - Extra Charge
   - Healing Booster
@@ -3414,8 +3555,6 @@ Rem:
   enabled_by:
   - percent-max-HP heal
   - cleanse
-  - harder Haunt camps reward sustain
-  - spread-out vaults (Bell Tower now three)
   - Abrams
   - Billy
   - Shiv
@@ -3432,12 +3571,11 @@ Rem:
   - Holliday
   - tempo meta
   last_changed_patch: Minor Update - 09-16-2026
-  notes: '09-29 City Never Sleeps: no direct change; harder camps reward his sustain
-    and spread-out vaults (Bell Tower now three) strengthen his map play, while Healing
-    Snacks slightly cheapen dedicated healing - trend up (peercontent).
-
-    09-16 change is a breakable-spawn/bug fix plus target UI only (heresy 09-17);
+  notes: '09-16 change is a breakable-spawn/bug fix plus target UI only (heresy 09-17);
     not the ''big nerf'' the community assumed, so strength impact is minor.
+
+    Old core_items Decay/Healing Nova are absent from current high-rank usage; the
+    July ''always buys Decay'' read is stale and replaced by the spirit heal shell.
 
     Trend call is low-confidence: the 1500-match snapshot is 14 days and mostly pre-patch,
     so 50.1% is a baseline, not a post-patch number.'
@@ -3492,7 +3630,6 @@ Rem:
     dive/initiators Lash, Drifter and Mo & Krill that reach a low-HP support before
     the heal lands.
   confidence: 0.6
-  released_on: null
   provisional: false
 Silver:
   name: Silver
@@ -3502,12 +3639,12 @@ Silver:
   - tank/frontline
   tier: S
   trend: rising
-  why: 'An S-tier gun tank built for this patch: gun cycle now survives dashes/light
-    melee, health/boon rose 28->31 with sprint 1.5->2.5, and Weighted Bola grounds
-    and interrupts flyers — a front-line DPS tank who wants fights started early,
-    exactly what the lane-wins economy rewards. Her ceiling is stacked CC (Mo & Krill,
-    Bebop) and she still drops her two qualified matchups (Lash, Drifter); the 46.7%
-    WR is a pre-patch lagging number.'
+  why: "An S-tier gun tank built for this patch: gun cycle now survives dashes/light\
+    \ melee, health/boon rose 28->31 with sprint 1.5->2.5, and Weighted Bola grounds\
+    \ and interrupts flyers \u2014 a front-line DPS tank who wants fights started\
+    \ early, exactly what the lane-wins economy rewards. Her ceiling is stacked CC\
+    \ (Mo & Krill, Bebop) and she still drops her two qualified matchups (Lash, Drifter);\
+    \ the 46.7% WR is a pre-patch lagging number."
   core_items:
   - Restorative Shot
   - Melee Lifesteal
@@ -3536,16 +3673,12 @@ Silver:
   - anti-tank bruisers (Shiv) and enemy Tankbuster buyers
   - matches up badly vs Lash and Drifter
   last_changed_patch: Minor Update - 09-16-2026
-  notes: '09-29 City Never Sleeps: no direct change; the frontline/tank archetype
-    is up, but the move from lane tempo to farm-route tempo is roughly neutral for
-    a lane-fight gun tank, and heavy-melee crate routes need a heavy melee she does
-    not build toward (peercontent, low confidence).
-
-    09-16: health/boon 28->31, sprint 1.5->2.5, and Weighted Bola now grounds/interrupts
-    flyers - direct buffs; tier S held.
-
-    Matchups: data lists Lash and Drifter at 45%; treated as losing records. Low-confidence:
-    no post-patch WR exists.'
+  notes: "09-16: health/boon 28->31, sprint 1.5->2.5, and Weighted Bola now grounds/interrupts\
+    \ flyers \u2014 direct buffs; tier S held.\nMatchups: data lists Lash and Drifter\
+    \ under both beats and loses_to at 45%; treated as losing records (45% < 50%).\n\
+    Low-confidence: no post-patch WR exists (14-day snapshot is mostly pre-patch),\
+    \ so the S/rising call leans on creator consensus and the meta thesis; anti-flyer\
+    \ value of Weighted Bola is inferred."
   builds:
   - name: Gun tank
     damage: gun
@@ -3557,9 +3690,9 @@ Silver:
     - Hunter's Aura
     - Spirit Shielding
     popularity: primary
-    notes: The default shell — lane-sustain bruiser (97% Stalker, 96% Melee Lifesteal,
-      90% Restorative Shot) that scales into a front-line DPS tank; run it unless
-      the enemy comp forces anti-CC.
+    notes: "The default shell \u2014 lane-sustain bruiser (97% Stalker, 96% Melee\
+      \ Lifesteal, 90% Restorative Shot) that scales into a front-line DPS tank; run\
+      \ it unless the enemy comp forces anti-CC."
   - name: Utility/anti-CC bruiser
     damage: hybrid
     core_items:
@@ -3569,22 +3702,21 @@ Silver:
     - Tankbuster
     - Unstoppable
     popularity: secondary
-    notes: Splashes spirit chip and CC between gun cycles and stacks anti-CC when
-      you must survive the frontline — Unstoppable (42% share, 49.5% WR) and Debuff
-      Reducer are the highest-WR items on her.
+    notes: "Splashes spirit chip and CC between gun cycles and stacks anti-CC when\
+      \ you must survive the frontline \u2014 Unstoppable (42% share, 49.5% WR) and\
+      \ Debuff Reducer are the highest-WR items on her."
   matchups:
     beats: []
     loses_to:
     - Lash
     - Drifter
-  matchup_notes: 'The only two qualified pairs are both 45% — Lash and Drifter, mobile
-    melee bruisers who can stick to her and out-trade; Silver has no positive matchup
-    with enough games. That is a ceiling note, not a floor: she wins through tempo
-    and pick pressure (15.1% PR) rather than countering specific heroes. Weighted
-    Bola''s ground/interrupt should now help her against flyers (Vindicta, Grey Talon),
-    but that is inference, not data.'
+  matchup_notes: "The only two qualified pairs are both 45% \u2014 Lash and Drifter,\
+    \ mobile melee bruisers who can stick to her and out-trade; Silver has no positive\
+    \ matchup with enough games. That is a ceiling note, not a floor: she wins through\
+    \ tempo and pick pressure (15.1% PR) rather than countering specific heroes. Weighted\
+    \ Bola's ground/interrupt should now help her against flyers (Vindicta, Grey Talon),\
+    \ but that is inference, not data."
   confidence: 0.62
-  released_on: null
   provisional: false
 Celeste:
   name: Celeste
@@ -3624,20 +3756,18 @@ Celeste:
   - Ult damage in Mid Boss / Rift fights
   - Mystic/Radiant Regeneration sustain stack (nerfed but still core)
   countered_by:
-  - Silver — Weighted Bola grounds flyers like her
+  - "Silver \u2014 Weighted Bola grounds flyers like her"
   - Slows now bleed air drag (system)
   - 'Healing item trims: Radiant Regeneration, Restorative Locket'
-  - Scaling/comeback nerfs — late-scaler into a tempo meta
-  - Ivy — out-sustains her burst window
-  - Lash / Calico — mobile initiators that close and survive
+  - "Scaling/comeback nerfs \u2014 late-scaler into a tempo meta"
+  - "Ivy \u2014 out-sustains her burst window"
+  - "Lash / Calico \u2014 mobile initiators that close and survive"
   last_changed_patch: Minor Update - 09-16-2026
-  notes: '09-16: tier held at B (down from A) — the seven-nerf stack below plus the
-    air-drag flyer tax; Witchmail remains her anti-slow answer.
-
-    54.6% WR / 26.4% PR is a 14-day, mostly pre-patch snapshot — treat as a ceiling,
-    not current strength.
-
-    09-16: seven direct nerfs plus indirect item, scaling, and air-drag hits.'
+  notes: "09-16: tier held at B (down from A) \u2014 the seven-nerf stack below plus\
+    \ the air-drag flyer tax; Witchmail remains her anti-slow answer.\n54.6% WR /\
+    \ 26.4% PR is a 14-day, mostly pre-patch snapshot \u2014 treat as a ceiling, not\
+    \ current strength.\n09-16: seven direct nerfs plus indirect item, scaling, and\
+    \ air-drag hits."
   builds:
   - name: Spirit sustain-burst carrier
     damage: spirit
@@ -3652,9 +3782,9 @@ Celeste:
     - Torment Pulse
     - Greater Expansion
     popularity: primary
-    notes: 'Regen-stacked spirit build: HVR early for bullet velocity/movespeed, then
-      Torment Pulse + Greater Expansion for AoE burst around her ult — weaker now
-      that Radiant Regeneration and Restorative Locket were trimmed.'
+    notes: "Regen-stacked spirit build: HVR early for bullet velocity/movespeed, then\
+      \ Torment Pulse + Greater Expansion for AoE burst around her ult \u2014 weaker\
+      \ now that Radiant Regeneration and Restorative Locket were trimmed."
   - name: Anti-CC / anti-debuff tech
     damage: hybrid
     core_items:
@@ -3662,8 +3792,8 @@ Celeste:
     - Spirit Shielding
     - Grit
     popularity: secondary
-    notes: Witchmail is her highest-WR item (60.6%, bought ~24m) — the answer into
-      heavy slow/CC comps, which matter more now that slows bleed air drag.
+    notes: "Witchmail is her highest-WR item (60.6%, bought ~24m) \u2014 the answer\
+      \ into heavy slow/CC comps, which matter more now that slows bleed air drag."
   matchups:
     beats:
     - Pocket
@@ -3677,10 +3807,158 @@ Celeste:
     - Lash
     - Calico
     - Mina
-  matchup_notes: She wins the burst race vs squishy close-range threats — 61% vs Pocket
-    and 59% vs Yamato (S-tier, but she lands her damage before he closes). Sustained
-    healers out-last her damage window (Ivy 47%), while mobile initiators/bruisers
-    who survive the first burst and close the gap (Lash, Calico) beat her 52-53%.
+  matchup_notes: "She wins the burst race vs squishy close-range threats \u2014 61%\
+    \ vs Pocket and 59% vs Yamato (S-tier, but she lands her damage before he closes).\
+    \ Sustained healers out-last her damage window (Ivy 47%), while mobile initiators/bruisers\
+    \ who survive the first burst and close the gap (Lash, Calico) beat her 52-53%."
   confidence: 0.6
-  released_on: null
   provisional: false
+
+
+## Win/pick-rate snapshot (last 14 days before this patch, ranked matches, high-rank filter)
+
+hero | WR% | PR% | matches
+Graves | 56.8 | 40.7 | 256798
+Victor | 56.4 | 32.9 | 207561
+Paige | 55.7 | 38.9 | 245072
+Seven | 55.0 | 34.6 | 218176
+Kelvin | 54.2 | 19.5 | 122749
+Mo & Krill | 53.2 | 32.8 | 207058
+Haze | 53.1 | 54.2 | 341559
+Ivy | 52.7 | 28.7 | 181272
+Dynamo | 52.5 | 31.4 | 198107
+Lady Geist | 52.3 | 31.4 | 197703
+Abrams | 52.1 | 32.9 | 207599
+Calico | 51.7 | 27.1 | 171021
+Lash | 51.1 | 46.9 | 295547
+Drifter | 50.9 | 45.9 | 289535
+Apollo | 50.8 | 26.9 | 169888
+Vindicta | 50.5 | 31.2 | 196536
+Yamato | 50.0 | 28.7 | 180954
+Celeste | 49.6 | 29.2 | 184392
+McGinnis | 49.2 | 16.3 | 102683
+Infernus | 49.1 | 45.5 | 286629
+Vyper | 49.1 | 19.0 | 119529
+Warden | 49.1 | 20.6 | 129733
+Wraith | 49.0 | 33.3 | 209755
+Billy | 49.0 | 34.3 | 216500
+Grey Talon | 47.9 | 16.8 | 106206
+Holliday | 47.6 | 22.8 | 143890
+Rem | 47.5 | 39.4 | 248505
+Silver | 47.0 | 31.8 | 200635
+Bebop | 46.7 | 47.9 | 302137
+Viscous | 46.2 | 20.1 | 126663
+Pocket | 46.1 | 25.1 | 158153
+Shiv | 46.1 | 41.3 | 260511
+Paradox | 46.0 | 33.3 | 209948
+The Doorman | 45.9 | 19.1 | 120730
+Venator | 45.9 | 45.7 | 288453
+Mina | 45.8 | 39.3 | 247985
+Mirage | 44.1 | 16.0 | 100775
+Sinclair | 44.0 | 18.3 | 115317
+
+## What to do
+
+Produce an entry for **every hero in the knowledge base**, including heroes with no direct changes. For each hero combine:
+
+- direct changes (kit, stats, talents) and their magnitude relative to how the hero is actually played (a nerf to an ability nobody maxes is minor);
+- indirect effects from the item analysis (core items buffed/nerfed, build paths changed) and from the systems analysis (archetype up/down, tempo shift);
+- the prior state: tier, trend, win rate. A hero at 54%+ win rate absorbing a moderate nerf is likely still strong; a hero at 47% taking the same nerf drops out.
+- **cross-hero effects**: changes to *other* heroes matter. If a hero who counters this one (see `matchups.loses_to`, `countered_by`) got stronger or gained a tool that specifically punishes this hero (anti-air, anti-heal, silence, grounding), that is an indirect nerf; if a counter got weaker, an indirect buff. Name the other hero and the mechanic.
+- **builds, not just kits**: judge a change against the hero's actual `builds` (gun vs spirit, primary vs niche). A nerf to an item only the niche build buys is minor; a nerf to the primary build's core item is not.
+- **map and objectives**: for content/map updates, judge how the kit interacts with the new soul sources and fight locations (camp clear speed and AoE vs grouped Haunts, heavy melee for Tough Crates, mobility between districts, verticality for Bell Tower, stamina for Sunken Plaza, sustain vs harder camps, invisibility/vision for Steam Vents, split-push vs more spread-out objectives).
+
+New heroes listed under direct changes but absent from the knowledge base: include them with `tier_before` "?", `in_notes` true, low `confidence`, and say the read is provisional.
+
+## Reader corrections (authoritative)
+
+# Reader corrections
+
+Human-authored facts and judgments that override model output. Injected verbatim into
+the KB enrichment and the per-hero analysis stage. Keep entries short; date them.
+
+## 2026-09-19
+
+- Infernus: not a pure gun hero. Roughly 50/50 between a gun build (burn synergy) and
+  "Dashfernus", a full-spirit dash/mobility build. Both are mainstream, not niche.
+- Vindicta: S tier is doubtful. Flyers got hurt this patch: Silver's Weighted Bola now
+  grounds/interrupts flyers, and slows now affect air drag. Cross-hero effects like this
+  (a buffed anti-air tool on a strong hero) must count against flyers.
+- Calico: likely benefits from the tempo meta; re-evaluate upward.
+- Haze: rated too high. The Fixation buff is good but T4 gun items are still weak, so
+  gun carries that depend on them do not scale as the tier suggests. Compare against
+  Venator, who is probably the better pick in that slot.
+- General: reason about builds (which items, gun vs spirit, and how popular each build
+  actually is) and about how heroes affect each other given who is strong right now,
+  not just about a hero's own numbers.
+
+## 2026-09-23
+
+- Haze: not inherently a side-lane farming gun carry. That is how she is played in the
+  current patch, but historically she often plays as a roamer/ganker (Smoke Bomb picks,
+  Fixation on isolated targets). Her playstyle swings with balance and meta, so frame the
+  farm-carry role as meta-dependent, not as her identity.
+- Counter items: note the main counter items per archetype where relevant (e.g. Plated
+  Armor vs gun carries, Phantom Strike vs flyers/mobile heroes), but remember counters
+  have counters (e.g. Armor Piercing Rounds vs Plated Armor). Mention the key ones; do
+  not try to list every counter item for every hero.
+
+
+## Creator sources published after this patch (optional corroboration; the notes, KB and snapshot remain primary — if a source contradicts them, say so and keep your own read)
+
+### peercontent (2026-10-01)
+Camps now hit harder and cluster so they chase you, so sustain and AoE camp clear (Yamato punch, Mina) define the early game — but the patch's real seismic change is Tough Crates: 58 souls each, guaranteed drops, and 200-300-soul quick routes in several lanes, which makes box runs more soul-efficient than camp farming and pushes the game toward farming and slower tempo. Where fights happen is now map-driven: Sunken Plaza at the 5-8 minute window, Bell Tower centers after 8, and lanes next to crate routes. Side asymmetry (Arch Mother gets Sunken Plaza plus the theater with healing bats and heavy crates) is large enough that pros altered draft rules around it, and tower dives are now punishable because parrying a Guardian spends your parry cooldown.
+- map/neutrals: Haunt camps deal more damage so you must dodge attacks; players are already gaming it by pulling a T3 camp behind cover so it cannot shoot, clearing it with minimal damage.
+- map/neutrals: Because camps group together and follow you, you can stack them for AoE clear, which is what pushes camp-clear items and heroes up.
+- map/objectives: More vaults are on the map and spread out, making them harder to defend; Bell Tower alone has three. (Bell Tower: 3 vaults)
+- map/objectives: Sunken Plaza (purple pit) connects to the secret shop, so unlike Bell Tower it has more than one way out.
+- map/economy: Sunken Plaza pays ~4-500 souls collectible in about 10 seconds at 5 minutes, versus Rem's tunnels that gave about the same over a minute-plus — a massive efficiency jump. (~400-500 souls in ~10s vs ~500 souls over ~1min)
+- map/economy: Bell Tower is worth around 280 souls at 5 minutes, so purple pit dominates the 5-8 minute window; after that the centers take priority. (~280 souls at 5 min)
+- map/pickups: Healing Snacks (healing bats) heal 10% of maximum HP rather than missing HP, so even after taking laning damage two nearby bats reset you fast; they sit right behind each lane and pair well with a roamer's box route. (10% max HP)
+- map/farm: Tough Crates are the patch's biggest change: each gives 58 souls on first spawn, guaranteed drops make the route efficient, several lanes have a quick route worth 200-300 souls, and the pre-2:30 neutral boxes turn into heavy crates worth over 100 souls. (58 souls per crate; 200-300 soul routes; >100 souls from the 2:30 wave's boxes)
+- map/farm: Boxes now out-prioritize camps as a farm route because there are so many and the drops are guaranteed — and the creator expects crates to get nerfed.
+- map/objectives: Arch Mother is the favored side because it gets Sunken Plaza plus the theater (healing bats and heavy crates); the asymmetry is large enough that the DNS draft rule was changed so that choosing side vs pick order goes to the other team.
+- map/objectives: Guardians now spend your parry cooldown, so a tower dive can be punished — parry the Guardian, then heavy-melee the diver while the tower wakes up, forcing them to fight under it.
+- map/movement: Auto-mantle — specifically backward auto-mantle — lets you kite and shoot while climbing, which the creator calls extremely broken and tells everyone to enable.
+- patch call: major — Tough Crates (guaranteed 58-soul heavy boxes with 200-300-soul lane routes) make farming the dominant early game and push box routes above camp clears, while harder-hitting, clumping camps reward sustain and AoE.; winners: Yamato, Mina, Rem, The Doorman, Lash, Drifter, Apollo, Paradox, Mo & Krill, Celeste, Kelvin, Ivy; losers: Infernus, Billy, Calico, Bebop; non_obvious_calls: Rem rises because of a map change (three vaults at Bell Tower, vaults harder to defend), not a Rem buff., Infernus's drop is caused by removal of its global napalm amp that the creator could not find in the patch notes., Calico is held back by Tough Crates specifically, since punching them requires leaving cat form., Tower diving is effectively removed for most heroes by the parry-cooldown change, making Apollo and Krill outliers rather than the rule., Arch Mother's side advantage is big enough that DNS changed its side/pick-order draft rule around it., Sunken Plaza's value is its 5-8 minute timing (~400-500 souls in seconds) and secret-shop exit, so purple pit is the contested objective early while Bell Tower matures at 8+ minutes.
+- Yamato: tier None rising — Camps group and follow you, and Yamato can gather them and punch them down fast, so the same camp-damage change that hurts others made Yamato jump up.
+- Mina: tier None rising — Listed alongside Yamato as a riser off the grouped-camp clear dynamic.
+- Rem: tier None rising — Perma-banned in DNS as it is; more vaults spread around the map (Bell Tower now has three) make defending against it harder, and camp damage makes its sustain more valuable.
+- The Doorman: tier None rising — Bell Tower's single rope up/down plus its 280 souls makes kidnapping strong, and the height gap means you must pre-place a door before roping up — a build-around, not a casual pick. Bells ringing on any hit gives counterplay.
+- Kelvin: tier None stable — Sustain pick for the higher camp damage; tried once in DNS, did not look great, but the creator still thinks it is good.
+- Ivy: tier None rising — Floated as a sustain option for the same camp-damage pressure; low-confidence, one-line call.
+- Lash: tier None rising — Lane matchups: in green lane the roof/tree above the bridge lets you hold the lane permanently — hit minions, take all souls, threaten — and boxes matter more now.
+- Claire: tier None rising — Caption name is unreliable (not on the known hero list); grouped with Lash as buffed by lane matchups, specifically green-lane high-ground control. Treat as an unidentified hero.
+- Infernus: tier None falling — Its global napalm amp is gone — teammates no longer get the bonus damage on tagged targets — which the creator says is not in the patch notes he saw; it fell from first ban/first pick to sixth pick.
+- Drifter: tier None rising — More centers and hiding spots on the map, and Drifter's sense reveals players inside stealth, so it benefits from the stealth-friendly layout; typically paired with Apollo as a roaming pseudo front line.
+- Apollo: tier None rising — Roaming pseudo front line that farms better; with two points in its T3 for bullet resist it is one of the few picks that can still dive towers after the Guardian-parry change.
+- Paradox: tier None rising — The annoying-roamer slot is more viable with more hiding spots, and Paradox has moved ahead of Bebop in priority.
+- Bebop: tier None falling — Same roamer archetype as Paradox but now the lower-priority option in that slot.
+- Mo & Krill: tier None rising — The camp/uptime meta favors sustained front lines; with Billy down, Krill is the remaining real front line and already showed up in DNS.
+- Billy: tier None falling — Fell off because the meta is oriented around camps and needs more uptime; its front-line slot went to Krill.
+- Celeste: tier None stable — Unaffected and still extremely strong — very fast and a great scaler.
+- Calico: tier None falling — Tough Crates hurt it because you must leave cat form to heavy-punch them; unpicked so far in DNS, which the creator attributes to that.
+
+For heroes with nothing relevant (no direct changes, no affected core items, archetype neutral) set direction "neutral", magnitude "none", and keep reasons empty. Do not pad.
+
+`tier_after` is your call on the post-patch tier (S/A/B/C/D); keep `tier_before` from the KB (use "?" if unknown). Only move a tier when the reasons justify it. `confidence` reflects how sure you are about the direction, 0-1.
+
+## Output schema
+
+{
+  "heroes": [
+    {
+      "hero": "hero name exactly as in the knowledge base",
+      "in_notes": true,
+      "direction": "up|down|neutral",
+      "magnitude": "none|minor|moderate|major",
+      "confidence": 0.0,
+      "direct_reasons": ["1 short sentence per driving change, name the stat"],
+      "indirect_reasons": ["1 short sentence per item/system driver, name the item or system"],
+      "build_changes": ["concrete build advice: swap X for Y, delay Z, new core W; empty if none"],
+      "tier_before": "S|A|B|C|D|?",
+      "tier_after": "S|A|B|C|D",
+      "one_liner": "<= 20 words a player would actually say about this hero after the patch"
+    }
+  ]
+}

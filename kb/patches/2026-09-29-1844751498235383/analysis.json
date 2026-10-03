@@ -1,0 +1,995 @@
+{
+ "patch_id": "2026-09-29-1844751498235383",
+ "patch_title": "City Never Sleeps",
+ "systems": {
+  "systems_changed": [
+   {
+    "system": "map/layout",
+    "change_summary": "Full visual rework with lanes renamed (Broadway/Greenwich/York) and four new districts (Theater, Chinatown, Haunted Lot, Plaza) branching off the main lanes; the layout now dictates where picks and fights happen.",
+    "driving_changes": [
+     "Map: full visual rework; lanes renamed Blue Lane → Broadway, Green Lane → Greenwich, Yellow Lane → York",
+     "Districts: 4 new districts branching off the main lanes — Theater, Chinatown, Haunted Lot, Plaza"
+    ],
+    "magnitude": "major",
+    "effect_on_play": "New high-ground, roofs and hiding geometry change lane control and roaming routes; per peercontent the green-lane roof/tree above the bridge lets a hero hold lane permanently, so lane matchups are now map-conditional, not just kit-based."
+   },
+   {
+    "system": "neutrals/jungle",
+    "change_summary": "All old neutrals are replaced by Haunt creatures that hit harder, cluster and chase; the efficient jungle pattern becomes stacking camps and clearing them with AoE.",
+    "driving_changes": [
+     "Neutrals: all old neutrals replaced by new Haunt creatures with new behaviors (Specimen, Gutter Ghouls, Barrel Mimics, Past Dues, Stage Hands, Crabbage Pots, Festival Spirit, Shrooms, Underhands)",
+     "peercontent: camps deal more damage, group together and follow you, so sustain and AoE clear define the early game"
+    ],
+    "magnitude": "major",
+    "effect_on_play": "Sustain and AoE camp-clear rise (Yamato, Mina), squishy heroes get punished for casual jungling, and grouped chasing camps can be deliberately stacked for faster clears — a mechanical skill gap that replaces the old static-camp farm."
+   },
+   {
+    "system": "economy/farm (Tough Crates)",
+    "change_summary": "Tough Crates need a Heavy Melee to open and pay guaranteed souls (~58 each), and several lanes have 200-300-soul box routes, making box runs more soul-efficient than camp farming.",
+    "driving_changes": [
+     "Tough Crates: breakables that require a Heavy Melee to open and pay out extra souls, rewarding heavy-melee access",
+     "peercontent: 58 souls per crate, guaranteed drops, 200-300-soul quick routes; the 2:30 wave's boxes become heavy crates worth >100 souls"
+    ],
+    "magnitude": "major",
+    "effect_on_play": "Early income concentrates into crate routes from ~2:30, so farming efficiency and heavy-melee access decide the first ten minutes; heroes locked out of heavy melee (Calico's cat form) lose a farm lane they can't contest."
+   },
+   {
+    "system": "objectives/economy (Sunken Plaza & Bell Tower)",
+    "change_summary": "Two new soul hotspots anchor the map: Sunken Plaza (~400-500 souls in seconds at 5 min, exits to the secret shop, drains stamina/mutes sound) and Bell Tower (~280 souls at 5 min, three vaults, capture rings a map-wide bell).",
+    "driving_changes": [
+     "Sunken Plaza: sub-area beneath the Plaza district; descending drains your stamina and mutes outside sound; high risk, high reward",
+     "Bell Tower: Chinatown objective at the top of the tower holding a concentrated soul hotspot; collecting it rings a bell heard across the whole map"
+    ],
+    "magnitude": "major",
+    "effect_on_play": "Fights converge on Plaza at 5-8 min and Bell Tower after 8; teams must rotate to contest telegraphed soul hubs, and Plaza's secret-shop exit plus stamina drain make it a committed fight rather than a free grab."
+   },
+   {
+    "system": "buff containers",
+    "change_summary": "Buff Containers are reworked to grant permanent Spirit Resist, Bullet Resist, Ability Range and Move Speed instead of their old effect.",
+    "driving_changes": [
+     "Buff Containers: revamped golden statues now also grant Spirit Resist, Bullet Resist, Ability Range, and Move Speed as permanent bonuses"
+    ],
+    "magnitude": "moderate",
+    "effect_on_play": "Adds objective-gated stats independent of items, quietly scaling whoever controls early containers; Ability Range in particular rewards caster/poke kits that leverage the stat."
+   },
+   {
+    "system": "sustain & stealth (Healing Snacks, Steam Vents)",
+    "change_summary": "Healing Snacks (10% max HP) sit just behind lanes, and Steam Vents grant invisibility plus small regen for silent rotations.",
+    "driving_changes": [
+     "Healing Snacks: hidden pickups around the map for quick healing",
+     "Steam Vents: standing on one grants invisibility and a small regen, enabling silent team rotations"
+    ],
+    "magnitude": "moderate",
+    "effect_on_play": "Laning sustain and re-engage potential improve without items, and stealth rotations become map-driven; reveal/detection kits (Drifter, whose sense sees stealth) gain value from the stealth-friendly layout."
+   },
+   {
+    "system": "items/broker",
+    "change_summary": "A temporary merchant (The Broker) spawns with a first shipment ~30 min in, then roughly every 15 min, trading high-tier items for Corrupted versions.",
+    "driving_changes": [
+     "The Broker: temporary merchant spawning in random locations... first shipment ~30 min into a match, then roughly every 15 min; trades high-tier items for Corrupted versions"
+    ],
+    "magnitude": "moderate",
+    "effect_on_play": "Creates a mid-late power spike and build variance around 30 min, rewarding players who bank souls and know the Corrupted pool; the random location adds contest risk."
+   },
+   {
+    "system": "parry vs objectives",
+    "change_summary": "Successfully parrying an objective no longer resets your Parry cooldown.",
+    "driving_changes": [
+     "Parry: successfully parrying objectives no longer resets your Parry cooldown"
+    ],
+    "magnitude": "moderate",
+    "effect_on_play": "Tower dives become punishable — parry the Guardian, then heavy-melee the diver while the tower wakes up; only sustained/dive-capable picks (Apollo, Mo & Krill) can still dive, so sieging shifts from routine to committed."
+   },
+   {
+    "system": "combat input",
+    "change_summary": "Ability and item use is now instant on button press instead of waiting for the next input window.",
+    "driving_changes": [
+     "Abilities and items: use is now instant on button press instead of waiting for the next input window"
+    ],
+    "magnitude": "moderate",
+    "effect_on_play": "Raises the reaction ceiling — faster parries, dashes and spell combos — so high-APM execution and tight reaction windows are rewarded over pre-planned inputs."
+   },
+   {
+    "system": "walkers",
+    "change_summary": "Walkers no longer keep firing fireballs after dying.",
+    "driving_changes": [
+     "Walkers: no longer keep firing fireballs after dying"
+    ],
+    "magnitude": "minor",
+    "effect_on_play": "Removes post-mortem chip damage, making sieges and dives around a dying Walker slightly safer — a small nudge toward aggression on structures."
+   },
+   {
+    "system": "sinner's sacrifice",
+    "change_summary": "The Sinner's Sacrifice bonus now has variable timings.",
+    "driving_changes": [
+     "Sinner's Sacrifice: the bonus now has variable timings"
+    ],
+    "magnitude": "minor",
+    "effect_on_play": "Less predictable farm objective, forcing players to re-time their sacrifice route; exact upside is unclear from the notes."
+   },
+   {
+    "system": "street brawl",
+    "change_summary": "Street Brawl grants a corrupted item after the Round 5 item draft.",
+    "driving_changes": [
+     "Street Brawl: grants a corrupted item after the Round 5 item draft"
+    ],
+    "magnitude": "minor",
+    "effect_on_play": "Alternate mode gains earlier corrupted-item access; no bearing on the standard match meta."
+   }
+  ],
+  "tempo_shift": {
+   "direction": "toward_tempo",
+   "confidence": 0.5,
+   "why": "Early soul income is concentrated into crate routes (from ~2:30) and contested hubs (Plaza 5-8 min, Bell Tower 8+), with no new comeback valve, so map control and efficient routing decide games before most scalers spike. The counterweight — peercontent's read that guaranteed box drops push toward farming and slower brawling — keeps this a modest, economy-driven tempo shift rather than a return to pure lane brawling."
+  },
+  "archetype_effects": [
+   {
+    "archetype": "tank/frontline",
+    "direction": "up",
+    "magnitude": "moderate",
+    "why": "Harder-hitting, clumping Haunt camps reward sustain front lines (Krill up, Billy down per peercontent)."
+   },
+   {
+    "archetype": "mobile assassin",
+    "direction": "up",
+    "magnitude": "moderate",
+    "why": "New districts, extra hiding spots and Steam Vent invisibility open roam/pick routes (Paradox, Drifter, Doorman)."
+   },
+   {
+    "archetype": "split pusher",
+    "direction": "up",
+    "magnitude": "moderate",
+    "why": "More vaults spread around the map (Bell Tower alone has three) make objectives harder to defend against side pressure."
+   },
+   {
+    "archetype": "spirit carry",
+    "direction": "up",
+    "magnitude": "minor",
+    "why": "Buff Containers now grant permanent Ability Range and Spirit Resist independent of items."
+   },
+   {
+    "archetype": "late scaler",
+    "direction": "down",
+    "magnitude": "moderate",
+    "why": "Crate routes, early hubs and the intact no-comeback economy still close games early, though efficient farming partially offsets the loss."
+   },
+   {
+    "archetype": "lane bully",
+    "direction": "up",
+    "magnitude": "minor",
+    "why": "Lane-adjacent crate routes and Healing Snacks (10% max HP) reward early lane pressure and sustain."
+   },
+   {
+    "archetype": "gun carry",
+    "direction": "neutral",
+    "magnitude": "minor",
+    "why": "Instant item/ability use and bullet-resist containers help, but the top farm route (Tough Crates) needs heavy melee, not gun DPS."
+   },
+   {
+    "archetype": "burst caster",
+    "direction": "up",
+    "magnitude": "minor",
+    "why": "Instant-cast abilities plus Ability Range containers favor fast combo execution around the new contested hubs."
+   },
+   {
+    "archetype": "initiator",
+    "direction": "up",
+    "magnitude": "minor",
+    "why": "Telegraphed hub fights (Plaza, Bell Tower) and stealth rotations create structured pick windows."
+   },
+   {
+    "archetype": "support/healer",
+    "direction": "neutral",
+    "magnitude": "minor",
+    "why": "Healing Snacks and Steam Vent sustain ease lane pressure, but the value shifts toward roaming utility, not pure healing."
+   }
+  ],
+  "intent_read": "Valve is converting the game from a lane-brawl deciding factor into a map-objective economy skill test: behavior-rich Haunt camps, guaranteed soul-dense crate routes and the Plaza/Bell Tower hubs make routing, timing and contest the primary expression, with the Broker and corrupted items probing build variance for the road to 1.0. The parry-cooldown, Walker-fireball and instant-cast changes show a parallel push to tighten combat feel and punish greedy tower dives."
+ },
+ "items": {
+  "items": [
+   {
+    "item": "Corrupted items",
+    "direction": "rework",
+    "magnitude": "moderate",
+    "summary": "This is not a slot anyone builds toward — it is a new late-game tier that only exists after The Broker spawns (~30 min, then ~every 15). Because the negative attributes and small stat rolls are match-wide random (identical for all players), the same Corrupted item can be a clean pickup in one match and a trap in the next, so its value is a runtime read, not something you plan a build around; my read is low-confidence (no KB entry).",
+    "affected_heroes": [],
+    "build_shift": "Adds a bank-souls incentive that competes with dumping souls into a sixth slot before 30 min, since the corrupted trade is the only way to convert a finished high-tier item into the tier's extra stats."
+   }
+  ],
+  "notable_item_stories": [
+   "The Broker's 30-min spike runs counter to this patch's early-close/tempo read: it gives late scalers a concrete reason to survive and hold souls, partially offsetting the no-comeback economy and the late-scaler burial flagged in the systems pass.",
+   "Because corrupted rolls are symmetric (match-wide identical), the tier adds variance between matches, not between players inside a match, so it should not skew win rates toward whoever reaches The Broker first — only toward teams that can stall to 30 min."
+  ]
+ },
+ "heroes": {
+  "heroes": [
+   {
+    "hero": "Infernus",
+    "in_notes": false,
+    "direction": "down",
+    "magnitude": "minor",
+    "confidence": 0.35,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "peercontent reports his global napalm team-damage amp was removed, but it is not in these notes — treat as unverified and low-confidence.",
+     "Burn AoE still clears the new grouped, chasing Haunt camps, so farm routes partly offset any loss."
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "No notes change, but the community has him sliding — verify the napalm team-buff rumor before trusting it."
+   },
+   {
+    "hero": "Seven",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.45,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Storm Cloud/Static Charge AoE clears the new stacked, chasing Haunt camps faster than almost anyone, and ability-range Buff Containers scale that AoE.",
+     "No comeback valve still caps his farm-then-scale line, but the snapshot shows 55.0% WR."
+    ],
+    "build_changes": [
+     "Farm-core (Monster Rounds/Cultist Sacrifice) is more valuable: clear stacked camps then run crate routes."
+    ],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Best AoE jungle clearer in a patch built around stacked camps — his farm lead converts faster."
+   },
+   {
+    "hero": "Vindicta",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.35,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "New roofs/high ground let her hold lanes and poke into the Plaza (5-8 min) and Bell Tower fights; the flyer tax (Weighted Bola, air-drag slows) is already priced into her A."
+    ],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Holds lanes from the new roofs and pokes every hub fight, but still pays the flyer tax."
+   },
+   {
+    "hero": "Lady Geist",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Tank/frontline archetype up: harder-hitting camps reward her regen/sustain stack, and Buff-Container Spirit Resist adds free defense.",
+     "Her spirit-caster rivals Celeste and Pocket are still falling, clearing her slot."
+    ],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Regen bruiser that out-sustains the harder camps — quietly climbing the front-line slot."
+   },
+   {
+    "hero": "Abrams",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Tank/frontline up, and his melee core gives cheap heavy-melee access to Tough Crates (58 souls each), the patch's best farm route.",
+     "Parry-vs-objective change makes diving him under tower riskier for the enemy."
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Melee frontline that can farm the new heavy crates as fast as anyone — quietly stronger."
+   },
+   {
+    "hero": "Wraith",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.4,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Nothing in the patch touches her — still a B gun carry leaning pure gun."
+   },
+   {
+    "hero": "McGinnis",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.4,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Turrets/wall zone the contested hub fights and defend against the now-punishable dives (parry-cooldown change); more spread vaults reward her siege.",
+     "Turrets also help clear stacked camps."
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Zone controller whose turret/wall setup fits the telegraphed hub fights and punishes dives."
+   },
+   {
+    "hero": "Paradox",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.45,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "New districts, hiding spots and Steam-Vent invisibility upgrade her roamer/pick setups; peercontent puts her ahead of Bebop in that slot."
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "The annoying-roamer slot is more viable with more hiding spots — she's ahead of Bebop now."
+   },
+   {
+    "hero": "Dynamo",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Telegraphed hub fights (Plaza, Bell Tower) give Singularity clean setup windows, and his initiator items went untouched.",
+     "Offset: his durable-frontline counters (Krill) are rising."
+    ],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Singularity loves the new forced hub fights — still the default tempo initiator."
+   },
+   {
+    "hero": "Kelvin",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.4,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Harder-hitting camps make his dome/sustain more valuable, and the snapshot's 54.2% WR supports it.",
+     "Healing Snacks (10% max HP) and trimmed healing items slightly cheapen dedicated healing."
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Sustain pick for the higher camp damage — peercontent calls him stable, the WR says strong."
+   },
+   {
+    "hero": "Haze",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.4,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Unchanged by the patch; her farm-carry role is meta-driven, not identity."
+   },
+   {
+    "hero": "Holliday",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "New districts, hiding spots and Steam-Vent invisibility expand her roam/pick routes; Bell Tower hub fights reward her lasso picks."
+    ],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Mobile pick assassin built for the new hiding-spot, hub-fight map."
+   },
+   {
+    "hero": "Bebop",
+    "in_notes": false,
+    "direction": "down",
+    "magnitude": "minor",
+    "confidence": 0.45,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "peercontent: the roamer slot is more viable but Paradox has moved ahead of him, and his single-target hook converts less into a farm-and-sustain economy."
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Same roamer slot as Paradox, now the lower-priority option."
+   },
+   {
+    "hero": "Calico",
+    "in_notes": false,
+    "direction": "down",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Tough Crates — the patch's dominant farm route — need a Heavy Melee, which forces her out of cat form and locks her out of that economy; peercontent has her unpicked in DNS.",
+     "Offset: the tempo meta still suits her dives."
+    ],
+    "build_changes": [
+     "Cannot run the box-route economy efficiently; lean harder on kills/off-map gold and delay farm-heavy openings."
+    ],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Cat form locks her out of the new heavy-crate farm — the patch's one real black mark on her."
+   },
+   {
+    "hero": "Grey Talon",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.4,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "C",
+    "tier_after": "C",
+    "one_liner": "Nothing new for him this patch — still a C poke flyer paying the anti-air tax."
+   },
+   {
+    "hero": "Mo & Krill",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "peercontent: the camp/uptime meta favors sustained front lines and he takes Billy's front-line slot; tank archetype up.",
+     "With two points in T3 bullet resist he is one of the few that can still dive towers after the parry-cooldown change."
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "A",
+    "one_liner": "Billy's fall hands him the front-line slot — the default sustained tank now."
+   },
+   {
+    "hero": "Shiv",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.45,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Tank/frontline up means more big-HP targets for current-HP Serrated Knives; harder camps reward his regen sustain."
+    ],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Anti-tank that eats the rising frontline wave — quietly the best tank-killer."
+   },
+   {
+    "hero": "Ivy",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.35,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "peercontent floats her up on camp-damage sustain (low-confidence); Healing Snacks and trimmed healing items cut both ways for a healer."
+    ],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Sustain option for the harder camps, but the healing-item trims muddy her heal identity."
+   },
+   {
+    "hero": "Warden",
+    "in_notes": false,
+    "direction": "down",
+    "magnitude": "minor",
+    "confidence": 0.4,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Late-scaler gun carry in the early-close economy with no comeback valve; his Shadow Weave invis-engage gains little from Steam Vents relative to roamers."
+    ],
+    "build_changes": [],
+    "tier_before": "C",
+    "tier_after": "C",
+    "one_liner": "Still a slow gun scaler the tempo economy refuses to wait for."
+   },
+   {
+    "hero": "Yamato",
+    "in_notes": true,
+    "direction": "up",
+    "magnitude": "moderate",
+    "confidence": 0.55,
+    "direct_reasons": [
+     "Flying Strike now creates paths against solid targets (turrets, Shrines, objectives), adding mobility and objective access."
+    ],
+    "indirect_reasons": [
+     "peercontent: she gathers and punches down the new grouped, chasing Haunt camps faster than almost anyone; the tempo meta rewards her burst."
+    ],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Camp-clear champion of the patch with a new Flying Strike path — take A toward S."
+   },
+   {
+    "hero": "Lash",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "peercontent: green-lane high ground (roof/tree above the bridge) lets him hold lane permanently, and boxes matter more; his dive/stomp snowballs in the no-comeback economy."
+    ],
+    "build_changes": [],
+    "tier_before": "S",
+    "tier_after": "S",
+    "one_liner": "Still the highest-pick initiator, now with a lane-roof to farm off."
+   },
+   {
+    "hero": "Viscous",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.3,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Harder camps reward his Cube sustain, and more spread-out vaults reward his Goo Ball map presence."
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Cube sustain helps vs the harder camps; not a headline mover."
+   },
+   {
+    "hero": "Pocket",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.4,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Late-scaler DoT carry hurt by the tempo/no-comeback read, but his cloak mobility and AoE suit the more mobile, farm-heavy map."
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Mobile scaler caught between a friendly map and an unfriendly tempo."
+   },
+   {
+    "hero": "Mirage",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.4,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "More, more widely spread vaults make split-push harder to defend (up), but he is a slow scaler in a tempo economy (down)."
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Split-push loves the extra vaults; the fast economy doesn't love his slow curve."
+   },
+   {
+    "hero": "Vyper",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.4,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Patch-neutral gun carry; her (09-16) item hits are already priced in."
+   },
+   {
+    "hero": "Sinclair",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.35,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "C",
+    "tier_after": "C",
+    "one_liner": "No change touches him — still a draft-dependent coin-flip."
+   },
+   {
+    "hero": "Mina",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.4,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "peercontent: rises off grouped-camp AoE clear (same dynamic as Yamato), and her mobility suits the new districts."
+    ],
+    "build_changes": [],
+    "tier_before": "C",
+    "tier_after": "C",
+    "one_liner": "Camps group and chase — she clears them; her damage problem stays."
+   },
+   {
+    "hero": "Drifter",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "peercontent: more centers/hiding spots and his stealth-revealing sense favor him in the Steam-Vent layout; heavy-melee crate access and the tank/roamer archetypes are up."
+    ],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Stealth-friendly map plus a stealth-revealing sense — the roamer who benefits most."
+   },
+   {
+    "hero": "Venator",
+    "in_notes": true,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.4,
+    "direct_reasons": [
+     "Graves can now destroy his traps with her gun — a narrow counter, not a balance change."
+    ],
+    "indirect_reasons": [
+     "Tank/frontline up and heavy-melee crate access suit his bruiser build; his (09-16) buffs are already priced."
+    ],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Still the default gun bruiser — only his traps got a new answer."
+   },
+   {
+    "hero": "Victor",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.45,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Tank/frontline archetype up: harder camps reward his regen/sustain stack, and the snapshot's 56.4% WR is the second-highest on the board."
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "A",
+    "one_liner": "Sustain frontline the camp-damage meta feeds — climbing on the numbers."
+   },
+   {
+    "hero": "Paige",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.4,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Lane-adjacent crate routes and Healing Snacks reward the lane pressure that is her whole identity; the contested hubs suit her carry-snowball."
+    ],
+    "build_changes": [],
+    "tier_before": "S",
+    "tier_after": "S",
+    "one_liner": "Wins lane then banks crates and heals — exactly what the patch pays for."
+   },
+   {
+    "hero": "The Doorman",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.45,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "peercontent: Bell Tower's single rope up/down plus its ~280 souls makes his Doorway kidnap strong, and the height gap forces pre-placed doors — a build-around.",
+     "Offset: the tempo read still punishes his delayed setup."
+    ],
+    "build_changes": [
+     "Pre-place a Doorway before roping up to Bell Tower to enable the kidnap."
+    ],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Bell Tower's single rope makes his kidnap a real objective play."
+   },
+   {
+    "hero": "Billy",
+    "in_notes": false,
+    "direction": "down",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "peercontent: he fell off because the camp/farm meta wants more uptime, and his front-line slot went to rising Krill; anti-tank Shiv is still climbing."
+    ],
+    "build_changes": [],
+    "tier_before": "S",
+    "tier_after": "A",
+    "one_liner": "Fell off — the meta wants uptime and sustain, so Krill took the front-line slot."
+   },
+   {
+    "hero": "Graves",
+    "in_notes": true,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.35,
+    "direct_reasons": [
+     "Can now destroy Venator's traps with her gun (minor utility)."
+    ],
+    "indirect_reasons": [
+     "Late-scaler split-pusher: spread vaults reward split-push, but no comeback valve hurts her ~25-min line.",
+     "Snapshot shows 56.8% WR, directly contradicting the KB's 48.5%-WR C read — flag as unreliable."
+    ],
+    "build_changes": [],
+    "tier_before": "C",
+    "tier_after": "C",
+    "one_liner": "Notes say nothing bad; the snapshot's 56.8% WR clashes with the KB — data unresolved."
+   },
+   {
+    "hero": "Apollo",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "peercontent: roaming pseudo-front-line that farms crates/roams better and, with T3 bullet resist, is one of few still able to dive towers after the parry-cooldown change."
+    ],
+    "build_changes": [],
+    "tier_before": "S",
+    "tier_after": "S",
+    "one_liner": "Tempo lane bully that can still tower-dive — the patch's clean archetype winner."
+   },
+   {
+    "hero": "Rem",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.45,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "peercontent: harder camps reward his sustain and more spread-out vaults (Bell Tower now has three) make his map play stronger; Healing Snacks slightly cheapen dedicated healing."
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Rises on a map change, not a buff — harder camps and harder-to-defend vaults."
+   },
+   {
+    "hero": "Silver",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.35,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Tank/frontline up suits her gun-tank sustain shell; her anti-air (Weighted Bola) already prices flyers out."
+    ],
+    "build_changes": [],
+    "tier_before": "S",
+    "tier_after": "S",
+    "one_liner": "Gun tank the sustain/camp meta feeds; still the flyer answer."
+   },
+   {
+    "hero": "Celeste",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.4,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "peercontent keeps her a winner (fast scaler, camps), but she is a flyer/late-scaler eating the air-drag tax in a tempo economy — mixed."
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Creator says still strong; the flyer/late-scaler taxes say held in check."
+   },
+   {
+    "hero": "Rat King",
+    "in_notes": true,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.1,
+    "direct_reasons": [
+     "Announced as one of six new heroes; released two per week starting Oct 2 in a community-voted order — no kit detail in the notes."
+    ],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "?",
+    "tier_after": "B",
+    "one_liner": "Brand-new hero with no kit read — provisional only."
+   },
+   {
+    "hero": "Nurse Harrow",
+    "in_notes": true,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.1,
+    "direct_reasons": [
+     "Announced as one of six new heroes; released two per week starting Oct 2 in a community-voted order — no kit detail in the notes."
+    ],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "?",
+    "tier_after": "B",
+    "one_liner": "Brand-new hero with no kit read — provisional only."
+   },
+   {
+    "hero": "Deadman Danny",
+    "in_notes": true,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.1,
+    "direct_reasons": [
+     "Announced as one of six new heroes; released two per week starting Oct 2 in a community-voted order — no kit detail in the notes."
+    ],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "?",
+    "tier_after": "B",
+    "one_liner": "Brand-new hero with no kit read — provisional only."
+   },
+   {
+    "hero": "Baba",
+    "in_notes": true,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.1,
+    "direct_reasons": [
+     "Announced as one of six new heroes; released two per week starting Oct 2 in a community-voted order — no kit detail in the notes."
+    ],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "?",
+    "tier_after": "B",
+    "one_liner": "Brand-new hero with no kit read — provisional only."
+   },
+   {
+    "hero": "Solomon",
+    "in_notes": true,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.1,
+    "direct_reasons": [
+     "Announced as one of six new heroes; released two per week starting Oct 2 in a community-voted order — no kit detail in the notes."
+    ],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "?",
+    "tier_after": "B",
+    "one_liner": "Brand-new hero with no kit read — provisional only."
+   },
+   {
+    "hero": "Violet",
+    "in_notes": true,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.1,
+    "direct_reasons": [
+     "Announced as one of six new heroes; released two per week starting Oct 2 in a community-voted order — no kit detail in the notes."
+    ],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "?",
+    "tier_after": "B",
+    "one_liner": "Brand-new hero with no kit read — provisional only."
+   }
+  ]
+ },
+ "synthesis": {
+  "patch_size": "major",
+  "size_why": "This is a full map rework with renamed lanes and four new districts, all neutrals replaced by new Haunt creatures, two new soul-hub objectives (Sunken Plaza, Bell Tower) plus a new crate economy, a temporary merchant tier (The Broker/Corrupted items), and combat-feel shifts (parry cooldown on objectives, instant cast, Walker fireballs). The way games are farmed and where they are fought both change, which is the definition of major.",
+  "headline": "Where you farm and where you fight — guaranteed soul crates and telegraphed hub objectives — now decides matches more than lane mechanics do.",
+  "meta_thesis": {
+   "previous": "Games were won in the lane: with comeback souls gutted and an early Unstable Rift, a lane lead from tempo bruisers (Paige, Apollo, Silver, Yamato, Lash) snowballed straight into a close before late scalers could spike.",
+   "new": "Games are now won in the map economy: routing to guaranteed high-value crate routes from ~2:30 and contesting Sunken Plaza (5-8 min) and Bell Tower (8+) replaces pure lane brawling as the lead engine, and AoE/sustain camp-clearers plus heavy-melee box farmers bank faster than anyone. The no-comeback valve is still intact, but efficient PvE farming and the ~30-min Broker spike partially re-open the door for scaling — the shift is from lane tempo to farm-route tempo, not a return to brawling.",
+   "relationship": "shift",
+   "why": "Tough Crates (58 souls, guaranteed, 200-300-soul lane routes) and the Plaza/Bell Tower hubs concentrate income into PvE routing (systems + peercontent), while the intact no-comeback economy keeps games close-able for camp-clearers like Yamato and Seven — the win condition moved off the lane, not off tempo."
+  },
+  "winners": [
+   {
+    "hero": "Yamato",
+    "why": "Direct note: Flying Strike now creates paths against objectives, and her punch AoE gathers and clears the new grouped, chasing Haunt camps faster than almost anyone — the two things this patch pays for.",
+    "indirect": false
+   },
+   {
+    "hero": "Seven",
+    "why": "Storm Cloud/Static Charge is arguably the best clear against stacked camps, so the patch's dominant PvE lead converts straight into his farm-then-scale line (55.0% WR on the snapshot).",
+    "indirect": true
+   },
+   {
+    "hero": "Mo & Krill",
+    "why": "Billy fell off the front-line slot and Krill's sustained uptime plus T3 bullet resist make him the default tank — one of the few who can still tower-dive past the parry-cooldown change.",
+    "indirect": true
+   },
+   {
+    "hero": "Lash",
+    "why": "The green-lane roof/tree lets him hold lane permanently (peercontent) and boxes matter more; still the top-pick initiator in a map built around forced hub fights.",
+    "indirect": true
+   },
+   {
+    "hero": "Drifter",
+    "why": "New districts and hiding spots plus Steam-Vent invisibility expand roam routes, and his sense revealing stealth heroes is the direct counter to that layout.",
+    "indirect": true
+   }
+  ],
+  "losers": [
+   {
+    "hero": "Calico",
+    "why": "Tough Crates — the patch's best farm route — require a Heavy Melee, which forces her out of cat form, locking her out of the dominant economy (unpicked in DNS per peercontent).",
+    "indirect": true
+   },
+   {
+    "hero": "Billy",
+    "why": "The camp/uptime meta wants sustained presence and his front-line slot visibly moved to a rising Mo & Krill.",
+    "indirect": true
+   },
+   {
+    "hero": "Bebop",
+    "why": "Same roamer slot as Paradox, but the more hiding-spot-friendly map now favors Paradox; his single-target hook converts less in a farm-and-sustain economy.",
+    "indirect": true
+   },
+   {
+    "hero": "Warden",
+    "why": "A late-scaling gun carry in a map-economy patch with no comeback valve; the Stealth/Vent layout helps real roamers, not his Shadow Weave engage.",
+    "indirect": true
+   },
+   {
+    "hero": "Infernus",
+    "why": "Peercontent reports his global napalm team-damage amp is gone — not present in these notes, so treat as unverified but he is sliding from first-pick/ban to ~sixth pick.",
+    "indirect": true
+   }
+  ],
+  "non_obvious_calls": [
+   {
+    "claim": "The 'Tough Crates need a Heavy Melee' line is effectively a targeted Calico nerf dressed as a general mechanic.",
+    "why": "Her cat form cannot perform the heavy melee, so the single best soul route in the patch is closed to her while it opens for Abrams, Krill and other melee cores.",
+    "confidence": 0.6
+   },
+   {
+    "claim": "The Broker's ~30-min Corrupted shipment is an unintended late-scaler safety valve that partly offsets the no-comeback economy.",
+    "why": "It gives scaling teams a concrete reason to bank souls and stall to 30 min, opposing the early-close thesis the rest of the patch reinforces.",
+    "confidence": 0.45
+   },
+   {
+    "claim": "The parry-cooldown change quietly deletes tower-diving for most of the roster, making Apollo and Krill outliers rather than the rule.",
+    "why": "Parrying a Guardian now spends your parry, so the dive punish is real; only picks with T3 bullet resist can still commit under tower (peercontent).",
+    "confidence": 0.55
+   },
+   {
+    "claim": "Infernus's drop is driven by a change that is not in these notes at all.",
+    "why": "If the reported global napalm amp removal is real, his fall is a stealth nerf a reader of the patch text would completely miss; flag as unverified.",
+    "confidence": 0.3
+   }
+  ],
+  "uncertainties": [
+   "The tempo direction is genuinely split: the systems pass reads toward tempo (0.5 confidence) while peercontent argues guaranteed crate drops push toward farming and slower games — the patch may do both at different match stages.",
+   "Six heroes announced for staggered release are not in these notes; their arrival can reset this entire thesis within weeks.",
+   "The source-reported auto-mantle (climb-and-shoot) is not in the notes but is called extremely broken — if real, it is a bigger combat change than anything listed.",
+   "Side asymmetry from Arch Mother (Sunken Plaza plus the theater) could skew win rates by map side rather than by hero, muddying week-one data."
+  ],
+  "what_to_watch": [
+   "Whether crate routes get hotfixed-nerfed — peercontent expects it, and that would instantly flip the farm-route thesis back toward lane brawling.",
+   "Yamato, Seven and Mina presence/win-rate as the camp-clear test of the AoE thesis.",
+   "Calico and Bebop pick rates — if they stay near zero, the crate-lockout and roamer-slot reads are confirmed.",
+   "Whether late-scaler win rates (Warden, Celeste, Infernus) stabilize after 30 min, which would validate the Broker-as-safety-valve read.",
+   "Arch Mother vs the other side win rates to quantify the map asymmetry that already changed DNS draft rules.",
+   "Any Infernus win-rate move to confirm or kill the unverified napalm-amp removal."
+  ]
+ },
+ "pool": null,
+ "kb_update": null,
+ "usage": {
+  "prompt_tokens": 77490,
+  "completion_tokens": 36091,
+  "stage_seconds": {
+   "1": 43.24391412734985,
+   "2": 18.47404408454895,
+   "3": 192.85466384887695,
+   "4": 22.72508192062378
+  }
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "summary": "City Never Sleeps is a major content update: a full visual rework of the map with renamed lanes, all neutrals replaced by new Haunt creatures with new behaviors, and a wave of new map objectives and pickups (Sunken Plaza, Bell Tower, Tough Crates, revamped Buff Containers, Healing Snacks, Steam Vents). A temporary merchant, The Broker, sells match-wide Corrupted versions of high-tier items, and six new heroes are announced for staggered release. System-level changes (parry vs objectives, instant ability/item use, Walker death fireballs, Sinner's Sacrifice timing) and a handful of hero interaction fixes round out the update.",
+ "sections": {
+  "Map": [
+   "Map: full visual rework; lanes renamed Blue Lane → Broadway, Green Lane → Greenwich, Yellow Lane → York",
+   "Neutrals: all old neutrals replaced by new Haunt creatures with new behaviors (Specimen, Gutter Ghouls, Barrel Mimics, Past Dues, Stage Hands, Crabbage Pots, Festival Spirit, Shrooms, Underhands)",
+   "Districts: 4 new districts branching off the main lanes — Theater, Chinatown, Haunted Lot, Plaza",
+   "Sunken Plaza: sub-area beneath the Plaza district; descending drains your stamina and mutes outside sound; framed as high risk, high reward",
+   "Bell Tower: Chinatown objective at the top of the tower holding a concentrated soul hotspot; collecting it rings a bell heard across the whole map",
+   "Tough Crates: breakables that require a Heavy Melee to open and pay out extra souls, rewarding heavy-melee access",
+   "Buff Containers: revamped golden statues now also grant Spirit Resist, Bullet Resist, Ability Range, and Move Speed as permanent bonuses",
+   "Healing Snacks: hidden pickups around the map for quick healing",
+   "Steam Vents: standing on one grants invisibility and a small regen, enabling silent team rotations",
+   "The Broker: temporary merchant spawning in random locations (an uptown alley, a Chinatown storefront); first shipment ~30 min into a match, then roughly every 15 min; trades high-tier items for Corrupted versions; leaves when the first new hero releases"
+  ],
+  "General": [
+   "Parry: successfully parrying objectives no longer resets your Parry cooldown",
+   "Sinner's Sacrifice: the bonus now has variable timings",
+   "Walkers: no longer keep firing fireballs after dying",
+   "Abilities and items: use is now instant on button press instead of waiting for the next input window",
+   "Street Brawl: grants a corrupted item after the Round 5 item draft"
+  ],
+  "Items": [
+   "Corrupted items: high-tier items exchanged at The Broker; each match rolls random negative attributes from a predefined set with small stat variability, identical for every player in that match"
+  ],
+  "Heroes": [
+   "Nurse Harrow, Deadman Danny, Baba, Solomon, Rat King, Violet: six new heroes announced; released two per week on Tuesdays and Fridays starting Oct 2, order decided by community vote",
+   "Yamato: Flying Strike now creates paths against targets that are solid to the player (turrets, Shrines, objectives)",
+   "Graves: can now destroy Venator's traps with her gun"
+  ]
+ },
+ "new_heroes": [
+  "Nurse Harrow",
+  "Deadman Danny",
+  "Baba",
+  "Solomon",
+  "Rat King",
+  "Violet"
+ ]
+}

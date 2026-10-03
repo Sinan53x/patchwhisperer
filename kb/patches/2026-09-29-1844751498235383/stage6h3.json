@@ -1,0 +1,102 @@
+{
+ "hero_updates": {
+  "Drifter": {
+   "trend": "rising",
+   "why": "Blind-pickable spirit-melee bruiser still on the field's highest pick rate; the City Never Sleeps layout adds hiding spots, Steam Vents and heavy-melee Tough-Crate routes that suit a stealth-revealing melee roam. He still lacks hard CC and closing mobility, so a 51.4% WR floor and rising Dynamo/Mo & Krill/Apollo lane pressure cap him at A.",
+   "enabled_by": [
+    "blind-pickable",
+    "built-in anti-heal",
+    "tempo/early-snowball meta",
+    "Stalker (weapon T2)",
+    "new districts + Steam Vents (stealth-reveal sense)",
+    "Heavy-Melee Tough Crate routes (melee core)"
+   ],
+   "notes": "09-29 City Never Sleeps: no direct change - new districts/Steam Vents and heavy-melee Tough-Crate routes fit his stealth-reveal roam (peercontent, unverified).\nDropped KB core_items Decay/Toxic Bullets/Fortitude - none show in current 30-day usage; the 'Toxic Bullets bot' framing is a 2026-04 artifact (data over creator). Celeste falling softens one losing matchup, but Dynamo/Mo & Krill/Apollo rising worsen others - net stable. 09-16 Minor Update: no direct Drifter change; gutted comeback souls and ramped rift resist suit his early-bruiser floor."
+  },
+  "Victor": {
+   "tier": "A",
+   "trend": "rising",
+   "why": "Sustain frontline the camp meta feeds: harder Haunt camps and longer PvE routes reward his Spirit Lifesteal/Healing Booster regen stack, and the snapshot's 56.4% WR is the board's second-highest. Still the one tank burst and anti-heal can delete, and he drops the mirror to Abrams/Mo & Krill.",
+   "enabled_by": [
+    "harder Haunt camps reward regen/sustain",
+    "Spirit Lifesteal + Healing Booster sustain stack",
+    "melee-diver meta he outlasts (Mina, Calico, Lash)"
+   ],
+   "notes": "09-29 City Never Sleeps: no direct change; hard Haunt camps and longer PvE routes feed his sustain stack - flipped from fair B-tier baseline to A on a 56.4% snapshot WR (peercontent read).\nData disagrees with the 07-16 creator read: Refresher and Echo Shard appear in none of his top-15 high-rank buys over 30 days - his real build is spirit sustain, not a Refresher initiator.\nUntouched by Minor Update 09-16 (last changed 07-09)."
+  },
+  "Paige": {
+   "why": "Lane-winning support whose pressure now converts straight into the patch's early crate routes and Healing Snacks; she wins lane, then snowballs a carry before trimmed comeback souls can rescue the enemy. 52.7% WR / 29.2% PR, near-even into Rem/Ivy caps her dominance.",
+   "enabled_by": [
+    "09-16 buffs (heavy melee spirit scaling; Captivating Read talents)",
+    "tempo / lane-wins meta",
+    "anti-flyer shifts (air-drag slows, Silver's Weighted Bola)",
+    "Billy/Abrams frontline partners",
+    "guaranteed crate routes from ~2:30 + Healing Snacks"
+   ],
+   "notes": "09-29 City Never Sleeps: no direct change; lane-adjacent crate routes and Healing Snacks reward her lane pressure, and the contested hubs suit her carry-snowball (peercontent).\nChangelog: 09-16 - heavy-melee spirit scaling 0.3->0.45, Captivating Read T1 -11->-14s / T3 +1m->+2m; Slowing Hex cd 27->29s is a minor tax.\nData check: old core items Healing Tempo and Fortitude do not appear in the 30-day usage list - replaced by the real early-gun-into-spirit core. Knockdown is a below-average buy (50.8% WR vs 52.7%)."
+  },
+  "The Doorman": {
+   "trend": "stable",
+   "why": "Popular but not-winning setup initiator (46.5% WR) whose delayed payoff the tempo read still punishes - but Bell Tower's single rope and ~280-soul payout hand his Doorway a real kidnap play on the new top objective. Reach still comes late and early snowball beats him.",
+   "enabled_by": [
+    "Doorway isolate (answers Silver by removing the carry from a fight)",
+    "Bell Tower single rope + ~280 souls (Doorway kidnap)",
+    "AoE/charge spirit items (Mystic Expansion, Greater Expansion, Extra Charge)",
+    "high pick rate keeps a large coordinated-player base"
+   ],
+   "notes": "09-29 City Never Sleeps: no direct change; Bell Tower's single rope + ~280 souls makes his Doorway kidnap a real objective play (pre-place door before roping up), offset by the tempo read punishing delayed setup - trend up from falling to stable (peercontent).\nChangelog: 09-16 - no direct line; loses his Veil Walker disengage (Sprint Boots + movespeed-on-break removed).\nUsage backs the creator 'kidnap is a trap' read: Vortex Web and Slowing Hex are his two worst staples vs the Bell core's Tankbuster 51.2% / Boundless Spirit 57.4%."
+  },
+  "Billy": {
+   "tier": "A",
+   "trend": "falling",
+   "why": "Lobby-default frontline whose lane-bully all-in the map-economy patch suits less: the crate/camp meta wants sustained uptime, and his front-line slot has visibly moved to rising Mo & Krill. Anti-tank Shiv remains his worst lane and is climbing, so he slides off S.",
+   "notes": "09-29 City Never Sleeps: no direct change; the crate/camp-uptime meta wants sustained presence and his front-line slot moved to rising Mo & Krill, with anti-tank Shiv climbing - S was popularity-supported, so slides to A (peercontent, unverified).\nChangelog: 09-16 - no direct line; item tailwinds (Lifestrike heal/slow, Fortitude regen) and the lane-wins meta supported him.\nData beats creators: Lifestrike, Echo Shard, Witchmail and Scourge/Scrooge never appear in his top-15 buys - real core is Spirit Snatch (95%), Stalker (90%), Close Quarters (88%), Monster Rounds (86%), Grit (83%)."
+  },
+  "Apollo": {
+   "why": "Tempo lane bully the map-economy patch still favors: he routes crate paths and roams, and with T3 bullet resist is one of the few who can still commit under a Guardian after the parry-cooldown change. Spirit core untouched - only his Locket sustain line was trimmed. 49.3% WR is a pre-patch baseline.",
+   "enabled_by": [
+    "economy/tempo patch (09-16)",
+    "comeback-soul gutting",
+    "early-Rift resist nerf",
+    "Riposte buffs (08-12)",
+    "spirit item pool untouched",
+    "tower-dive still open with T3 bullet resist vs the parry-cooldown change"
+   ],
+   "notes": "09-29 City Never Sleeps: no direct change; the parry-cooldown change removes tower-diving for most of the roster, making his T3 bullet resist a real outlier advantage, and crate/roam routing suits him (peercontent).\n09-16: no direct changes - structural economy/Rift shifts favor his tempo; the Restorative Locket nerf dents only his support line.\nOld core_items (Fortitude) had zero usage; data says pure spirit, so reworked to Extra Spirit/Mystic Burst/Improved Spirit cores."
+  },
+  "Rem": {
+   "trend": "rising",
+   "why": "Coin-flip support whose percent-max-HP heal and cleanse gain value as harder Haunt camps reward sustain and Bell Tower's three spread vaults stretch the map. Healing Snacks cheapen dedicated healing, and he still loses the heal-slot duel to Ivy.",
+   "enabled_by": [
+    "percent-max-HP heal",
+    "cleanse",
+    "harder Haunt camps reward sustain",
+    "spread-out vaults (Bell Tower now three)",
+    "Abrams",
+    "Billy",
+    "Shiv",
+    "Viscous",
+    "Dynamo",
+    "Divine Barrier"
+   ],
+   "notes": "09-29 City Never Sleeps: no direct change; harder camps reward his sustain and spread-out vaults (Bell Tower now three) strengthen his map play, while Healing Snacks slightly cheapen dedicated healing - trend up (peercontent).\n09-16 change is a breakable-spawn/bug fix plus target UI only (heresy 09-17); not the 'big nerf' the community assumed, so strength impact is minor.\nTrend call is low-confidence: the 1500-match snapshot is 14 days and mostly pre-patch, so 50.1% is a baseline, not a post-patch number."
+  },
+  "Silver": {
+   "notes": "09-29 City Never Sleeps: no direct change; the frontline/tank archetype is up, but the move from lane tempo to farm-route tempo is roughly neutral for a lane-fight gun tank, and heavy-melee crate routes need a heavy melee she does not build toward (peercontent, low confidence).\n09-16: health/boon 28->31, sprint 1.5->2.5, and Weighted Bola now grounds/interrupts flyers - direct buffs; tier S held.\nMatchups: data lists Lash and Drifter at 45%; treated as losing records. Low-confidence: no post-patch WR exists."
+  }
+ },
+ "change_log": [
+  "Drifter: trend stable -> rising (new districts + Steam Vents favor stealth-reveal roam; heavy-melee crate routes fit a melee core)",
+  "Drifter: enabled_by + why + notes refreshed to City Never Sleeps map economy",
+  "Victor: tier B -> A, trend stable -> rising (hard Haunt camps feed his sustain stack; 56.4% snapshot WR)",
+  "Victor: enabled_by swapped 'core items untouched' for 'harder Haunt camps reward regen/sustain'",
+  "Paige: why + enabled_by + notes refreshed (crate routes + Healing Snacks convert her lane pressure)",
+  "The Doorman: trend falling -> stable (Bell Tower rope + ~280 souls makes Doorway kidnap an objective play)",
+  "The Doorman: enabled_by + notes updated with Bell Tower kidnap setup",
+  "Billy: tier S -> A, trend stable -> falling (camp-uptime meta moved his front-line slot to Mo & Krill; anti-tank Shiv climbing)",
+  "Apollo: why + enabled_by + notes refreshed (parry-cooldown change makes his T3-resist tower-dive an outlier)",
+  "Rem: trend stable -> rising (harder camps reward sustain; spread-out Bell Tower vaults stretch the map)",
+  "Rem: enabled_by + notes updated for City Never Sleeps camp/vault changes",
+  "Silver: notes updated (no direct change; farm-route meta roughly neutral for a lane-fight gun tank)"
+ ]
+}
