@@ -1,0 +1,300 @@
+{
+ "meta_thesis": "The 09-16 patch is a lock-down patch: movement slows nerfed, comeback bounty trimmed and pushed downward to the poorest two players, and the tunnel/box-route lane escape deleted. That removes the tempo pattern where mobile heroes (Calico, Rem) left lane, farmed a box/tunnel route and returned on a timing to win lane — and it makes slippery heroes generally easier to catch. The top of the meta survives (Celeste, Rem, Mirage, with Haze moving up to top three), while Silver and Shiv come back to viable and Calico/Warden drop.",
+ "hero_claims": [
+  {
+   "hero": "Celeste",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Explicitly called 'still good' and possibly 'number one'; the patch's movement-slow and comeback trims don't dislodge her.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "Rem",
+   "tier": "S",
+   "direction": "stable",
+   "why": "The tunnel/box-route nerf kills his old lane-win timing and 'significantly hurts' him, but he says the kit alone keeps Rem 'still at the top'.",
+   "items": [
+    "Life Strike"
+   ],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Mirage",
+   "tier": "S",
+   "direction": "stable",
+   "why": "Untouched by the patch, so he stays 'towards the top' while others move around him.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Haze",
+   "tier": "S",
+   "direction": "rising",
+   "why": "'Pretty big deal' — Haze has 'probably moved up in the meta' and should land top three; he also jokes about new meme builds for her.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Silver",
+   "tier": "A",
+   "direction": "rising",
+   "why": "'Viable again, for sure' — he credits quality-of-life changes plus global movement-slow nerfs making targets easier to lock down.",
+   "items": [
+    "Life Strike",
+    "Diviner's Kevlar"
+   ],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Shiv",
+   "tier": "A",
+   "direction": "rising",
+   "why": "Alt-fire buff builds on an existing alt-fire build, and he expects an 'express shot' Shiv build to appear and drive Shiv play.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Calico",
+   "tier": "A",
+   "direction": "falling",
+   "why": "Losing the tunnel/box-route timing removes her lane-win pattern; 'I expect Calico to not even be a top three anymore.'",
+   "items": [
+    "Life Strike"
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Warden",
+   "tier": "B",
+   "direction": "falling",
+   "why": "'Warden got hit a lot more than Celeste did... I think Warden falls down.'",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Wraith",
+   "tier": null,
+   "direction": "falling",
+   "why": "Nerfed, with only a small compensation that 'I don't think... makes up' for it; also affected by proxy item shifts.",
+   "items": [
+    "Mercurial Magnum"
+   ],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Drifter",
+   "tier": null,
+   "direction": "rising",
+   "why": "Rises 'by proxy' as Calico falls out of the top three; flagged as a hero who may buy the full Life Strike upgrade since he has melee/trade patterns in his base kit.",
+   "items": [
+    "Life Strike"
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Vindicta",
+   "tier": null,
+   "direction": "rising",
+   "why": "Now able to use Ricochet and Split Shot, plus better Plated Armor — quiet winners from changes framed as quality-of-life.",
+   "items": [
+    "Ricochet"
+   ],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Paradox",
+   "tier": null,
+   "direction": "falling",
+   "why": "The 'combine' (carbine) combo can no longer insta-proc — you have to fully charge it, so the instant-burst build is gone.",
+   "items": [],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Lady Geist",
+   "tier": null,
+   "direction": null,
+   "why": "A spirit build is 'potentially' opened up, but he doesn't see why you'd pick it over her existing options — try-it-out, not a promotion.",
+   "items": [],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Lash",
+   "tier": null,
+   "direction": null,
+   "why": "Says gun Lash 'has pivoted... to slam', i.e. the change pushes gun Lash toward a slam build.",
+   "items": [],
+   "confidence": 0.3
+  },
+  {
+   "hero": "Venator",
+   "tier": null,
+   "direction": "falling",
+   "why": "Listed in the hero notes and described in the summary as hit heavily (caption reads as soul-regeneration nerfs); audio is garbled — low confidence.",
+   "items": [],
+   "confidence": 0.3
+  }
+ ],
+ "item_claims": [
+  {
+   "item": "Spirit Overflow",
+   "standing": "weak",
+   "bought_by": [],
+   "why": "Heavily nerfed — 'massive... which is good. The item definitely needed.'"
+  },
+  {
+   "item": "Veil Walker",
+   "standing": "weak",
+   "bought_by": [],
+   "why": "Stats 'have to be pretty bad now' after the nerf; expects buyers to shift off it."
+  },
+  {
+   "item": "Fortitude",
+   "standing": "strong",
+   "bought_by": [
+    "Veil Walker buyers"
+   ],
+   "why": "Expected 'a lot more fortitudes coming back into the meta' as the Veil Walker slot replacement."
+  },
+  {
+   "item": "Shadow Weave",
+   "standing": "niche",
+   "bought_by": [],
+   "why": "'There could be play time with this', and it could be built over Veil Walker — but he wants to see."
+  },
+  {
+   "item": "Life Strike",
+   "standing": "strong",
+   "bought_by": [
+    "Drifter",
+    "Silver",
+    "Calico"
+   ],
+   "why": "Buffed enough that heroes would buy the full upgrade rather than stopping at melee Life Strike, especially trade-pattern heroes."
+  },
+  {
+   "item": "Leech",
+   "standing": "strong",
+   "bought_by": [],
+   "why": "Buff he simply endorses ('Leech, that's good')."
+  },
+  {
+   "item": "Plated Armor",
+   "standing": "strong",
+   "bought_by": [],
+   "why": "'Very big... really good' buff; the summary lists Plated Armor as better, with knock-on effects on Veil Walker."
+  },
+  {
+   "item": "Diviner's Kevlar",
+   "standing": "strong",
+   "bought_by": [
+    "Silver",
+    "Pocket"
+   ],
+   "why": "'A big change' and 'probably a really good Silver item'; he expects Pockets to buy it too."
+  },
+  {
+   "item": "Mercurial Magnum",
+   "standing": "niche",
+   "bought_by": [
+    "Wraith"
+   ],
+   "why": "Interaction with Wraith's full auto clarified/added — a lot of players didn't know it applied; relevant given Wraith's nerf-compensation."
+  },
+  {
+   "item": "Golden Goose Egg",
+   "standing": "weak",
+   "bought_by": [],
+   "why": "Still counts toward net worth, so buying it is 'grieving'; he expects to see no eggs at all."
+  },
+  {
+   "item": "Radiant Regeneration",
+   "standing": "niche",
+   "bought_by": [
+    "same heroes as before"
+   ],
+   "why": "Nerf 'hurts a little bit' but the same characters will keep buying it."
+  },
+  {
+   "item": "Decay",
+   "standing": "strong",
+   "bought_by": [],
+   "why": "'They made it an actual item again' — restored to real-item status."
+  },
+  {
+   "item": "Ricochet",
+   "standing": "strong",
+   "bought_by": [
+    "Vindicta"
+   ],
+   "why": "Bounces now and 'just applies'; Vindicta gaining access is called out as a quality change that matters."
+  },
+  {
+   "item": "Murk Mag / Spiritual Murk Mag",
+   "standing": "weak",
+   "bought_by": [],
+   "why": "Called a 'massive change, really needed' nerf and one of 'the two big ones that were hit' — caption name is garbled, item identity low confidence."
+  }
+ ],
+ "map_claims": [
+  {
+   "topic": "objectives",
+   "claim": "You can now fight the first Unstable Rift with shred instead of conceding it every time — a change he calls a 'big deal' for early objective contention.",
+   "numbers": "",
+   "confidence": 0.6
+  },
+  {
+   "topic": "economy",
+   "claim": "Overall comeback bounty reduced, and the remaining comeback souls are split so more flows to the lowest two players; positive, because comeback was 'overwhelming'.",
+   "numbers": "lowest two players",
+   "confidence": 0.6
+  },
+  {
+   "topic": "farm",
+   "claim": "Tunnel/breakable-route timing nerfed, killing the 'box out' lane escape; Calico/Rem can still do the route but it is 'not nearly as efficient', especially in lane phase.",
+   "numbers": "",
+   "confidence": 0.7
+  },
+  {
+   "topic": "movement",
+   "claim": "Global movement slows nerfed, so slippery heroes are easier to lock down and pin — he ties this directly to Silver being better.",
+   "numbers": "",
+   "confidence": 0.6
+  }
+ ],
+ "reasoning_patterns": [
+  "Reads a general map change as a targeted nerf: the tunnel/breakable-timing adjustment is framed as a general change but he immediately identifies it as the death of Calico and Rem's lane-win route.",
+  "Chains item nerf to slot replacement: Veil Walker's stats gutted means Fortitude returns to the meta because it occupies the same defensive slot.",
+  "Reasons on relative standings rather than absolute power: 'Calico goes down, which kind of means Drifter could go up just by proxy.'",
+  "Separates systemic nerfs from kit quality: the tunnel change 'significantly hurts' Rem, but Rem stays top because the kit alone is strong.",
+  "Treats quality-of-life changes as power shifts: Vindicta now being able to use Ricochet/Split Shot plus better Plated Armor makes her a quiet winner even though the notes read as bug/QoL fixes."
+ ],
+ "patch_calls": {
+  "size": "significant",
+  "headline": "Movement-slow nerfs plus removal of the tunnel/box lane route reshuffle the top: Celeste/Rem/Mirage hold, Haze climbs to top three, Calico and Warden fall, Silver and Shiv return.",
+  "winners": [
+   "Celeste",
+   "Rem",
+   "Mirage",
+   "Haze",
+   "Silver",
+   "Shiv",
+   "Drifter",
+   "Vindicta"
+  ],
+  "losers": [
+   "Calico",
+   "Warden",
+   "Wraith",
+   "Paradox",
+   "Venator"
+  ],
+  "non_obvious_calls": [
+   "Drifter rises with no direct buff, purely as the beneficiary of Calico leaving the top three.",
+   "Fortitude becomes the meta defensive slot again by default once Veil Walker is gutted.",
+   "Vindicta is a sleeper winner: Ricochet/Split Shot access and better Plated Armor, all framed as quality-of-life.",
+   "Calico's adaptation is a build pivot — max two points plus two in Life Strike early to win lane now that there is nowhere to leave.",
+   "The comeback-bounty trim is read as a buff to the poorest players, not just a nerf."
+  ]
+ }
+}

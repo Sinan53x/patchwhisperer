@@ -1,0 +1,290 @@
+{
+ "meta_thesis": "Camps now hit harder and cluster so they chase you, so sustain and AoE camp clear (Yamato punch, Mina) define the early game — but the patch's real seismic change is Tough Crates: 58 souls each, guaranteed drops, and 200-300-soul quick routes in several lanes, which makes box runs more soul-efficient than camp farming and pushes the game toward farming and slower tempo. Where fights happen is now map-driven: Sunken Plaza at the 5-8 minute window, Bell Tower centers after 8, and lanes next to crate routes. Side asymmetry (Arch Mother gets Sunken Plaza plus the theater with healing bats and heavy crates) is large enough that pros altered draft rules around it, and tower dives are now punishable because parrying a Guardian spends your parry cooldown.",
+ "hero_claims": [
+  {
+   "hero": "Yamato",
+   "tier": null,
+   "direction": "rising",
+   "why": "Camps group and follow you, and Yamato can gather them and punch them down fast, so the same camp-damage change that hurts others made Yamato jump up.",
+   "items": [],
+   "confidence": 0.75
+  },
+  {
+   "hero": "Mina",
+   "tier": null,
+   "direction": "rising",
+   "why": "Listed alongside Yamato as a riser off the grouped-camp clear dynamic.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Rem",
+   "tier": null,
+   "direction": "rising",
+   "why": "Perma-banned in DNS as it is; more vaults spread around the map (Bell Tower now has three) make defending against it harder, and camp damage makes its sustain more valuable.",
+   "items": [],
+   "confidence": 0.8
+  },
+  {
+   "hero": "The Doorman",
+   "tier": null,
+   "direction": "rising",
+   "why": "Bell Tower's single rope up/down plus its 280 souls makes kidnapping strong, and the height gap means you must pre-place a door before roping up — a build-around, not a casual pick. Bells ringing on any hit gives counterplay.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Kelvin",
+   "tier": null,
+   "direction": "stable",
+   "why": "Sustain pick for the higher camp damage; tried once in DNS, did not look great, but the creator still thinks it is good.",
+   "items": [],
+   "confidence": 0.45
+  },
+  {
+   "hero": "Ivy",
+   "tier": null,
+   "direction": "rising",
+   "why": "Floated as a sustain option for the same camp-damage pressure; low-confidence, one-line call.",
+   "items": [],
+   "confidence": 0.35
+  },
+  {
+   "hero": "Lash",
+   "tier": null,
+   "direction": "rising",
+   "why": "Lane matchups: in green lane the roof/tree above the bridge lets you hold the lane permanently — hit minions, take all souls, threaten — and boxes matter more now.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Claire",
+   "tier": null,
+   "direction": "rising",
+   "why": "Caption name is unreliable (not on the known hero list); grouped with Lash as buffed by lane matchups, specifically green-lane high-ground control. Treat as an unidentified hero.",
+   "items": [],
+   "confidence": 0.3
+  },
+  {
+   "hero": "Infernus",
+   "tier": null,
+   "direction": "falling",
+   "why": "Its global napalm amp is gone — teammates no longer get the bonus damage on tagged targets — which the creator says is not in the patch notes he saw; it fell from first ban/first pick to sixth pick.",
+   "items": [],
+   "confidence": 0.85
+  },
+  {
+   "hero": "Drifter",
+   "tier": null,
+   "direction": "rising",
+   "why": "More centers and hiding spots on the map, and Drifter's sense reveals players inside stealth, so it benefits from the stealth-friendly layout; typically paired with Apollo as a roaming pseudo front line.",
+   "items": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Apollo",
+   "tier": null,
+   "direction": "rising",
+   "why": "Roaming pseudo front line that farms better; with two points in its T3 for bullet resist it is one of the few picks that can still dive towers after the Guardian-parry change.",
+   "items": [],
+   "confidence": 0.65
+  },
+  {
+   "hero": "Paradox",
+   "tier": null,
+   "direction": "rising",
+   "why": "The annoying-roamer slot is more viable with more hiding spots, and Paradox has moved ahead of Bebop in priority.",
+   "items": [],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Bebop",
+   "tier": null,
+   "direction": "falling",
+   "why": "Same roamer archetype as Paradox but now the lower-priority option in that slot.",
+   "items": [],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Mo & Krill",
+   "tier": null,
+   "direction": "rising",
+   "why": "The camp/uptime meta favors sustained front lines; with Billy down, Krill is the remaining real front line and already showed up in DNS.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Billy",
+   "tier": null,
+   "direction": "falling",
+   "why": "Fell off because the meta is oriented around camps and needs more uptime; its front-line slot went to Krill.",
+   "items": [],
+   "confidence": 0.65
+  },
+  {
+   "hero": "Celeste",
+   "tier": null,
+   "direction": "stable",
+   "why": "Unaffected and still extremely strong — very fast and a great scaler.",
+   "items": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Calico",
+   "tier": null,
+   "direction": "falling",
+   "why": "Tough Crates hurt it because you must leave cat form to heavy-punch them; unpicked so far in DNS, which the creator attributes to that.",
+   "items": [],
+   "confidence": 0.6
+  }
+ ],
+ "item_claims": [
+  {
+   "item": "Close Quarters",
+   "standing": "strong",
+   "bought_by": [
+    "Yamato",
+    "camp-clearing heroes"
+   ],
+   "why": "Now that camps clump and follow you, close-range damage items get more value per camp clear."
+  },
+  {
+   "item": "Rebuttal",
+   "standing": "strong",
+   "bought_by": [
+    "Yamato",
+    "camp-clearing heroes"
+   ],
+   "why": "Grouped camps make this camp-clear item better; caption name is uncertain, treat with low confidence."
+  },
+  {
+   "item": "Corrupted items (category)",
+   "standing": "strong",
+   "bought_by": [
+    "pro teams"
+   ],
+   "why": "So strong that DNS teams agreed to delay them to 45-60 minutes (30 in NA finals) and they are being removed soon."
+  },
+  {
+   "item": "Divine Barrier",
+   "standing": "strong",
+   "bought_by": [
+    "pro teams"
+   ],
+   "why": "Called out as the corrupted item pros most wanted kept out of play — too overpowered for competitive."
+  }
+ ],
+ "map_claims": [
+  {
+   "topic": "neutrals",
+   "claim": "Haunt camps deal more damage so you must dodge attacks; players are already gaming it by pulling a T3 camp behind cover so it cannot shoot, clearing it with minimal damage.",
+   "numbers": "",
+   "confidence": 0.8
+  },
+  {
+   "topic": "neutrals",
+   "claim": "Because camps group together and follow you, you can stack them for AoE clear, which is what pushes camp-clear items and heroes up.",
+   "numbers": "",
+   "confidence": 0.75
+  },
+  {
+   "topic": "objectives",
+   "claim": "More vaults are on the map and spread out, making them harder to defend; Bell Tower alone has three.",
+   "numbers": "Bell Tower: 3 vaults",
+   "confidence": 0.7
+  },
+  {
+   "topic": "objectives",
+   "claim": "Sunken Plaza (purple pit) connects to the secret shop, so unlike Bell Tower it has more than one way out.",
+   "numbers": "",
+   "confidence": 0.8
+  },
+  {
+   "topic": "economy",
+   "claim": "Sunken Plaza pays ~4-500 souls collectible in about 10 seconds at 5 minutes, versus Rem's tunnels that gave about the same over a minute-plus — a massive efficiency jump.",
+   "numbers": "~400-500 souls in ~10s vs ~500 souls over ~1min",
+   "confidence": 0.75
+  },
+  {
+   "topic": "economy",
+   "claim": "Bell Tower is worth around 280 souls at 5 minutes, so purple pit dominates the 5-8 minute window; after that the centers take priority.",
+   "numbers": "~280 souls at 5 min",
+   "confidence": 0.7
+  },
+  {
+   "topic": "pickups",
+   "claim": "Healing Snacks (healing bats) heal 10% of maximum HP rather than missing HP, so even after taking laning damage two nearby bats reset you fast; they sit right behind each lane and pair well with a roamer's box route.",
+   "numbers": "10% max HP",
+   "confidence": 0.7
+  },
+  {
+   "topic": "farm",
+   "claim": "Tough Crates are the patch's biggest change: each gives 58 souls on first spawn, guaranteed drops make the route efficient, several lanes have a quick route worth 200-300 souls, and the pre-2:30 neutral boxes turn into heavy crates worth over 100 souls.",
+   "numbers": "58 souls per crate; 200-300 soul routes; >100 souls from the 2:30 wave's boxes",
+   "confidence": 0.85
+  },
+  {
+   "topic": "farm",
+   "claim": "Boxes now out-prioritize camps as a farm route because there are so many and the drops are guaranteed — and the creator expects crates to get nerfed.",
+   "numbers": "",
+   "confidence": 0.75
+  },
+  {
+   "topic": "objectives",
+   "claim": "Arch Mother is the favored side because it gets Sunken Plaza plus the theater (healing bats and heavy crates); the asymmetry is large enough that the DNS draft rule was changed so that choosing side vs pick order goes to the other team.",
+   "numbers": "",
+   "confidence": 0.7
+  },
+  {
+   "topic": "objectives",
+   "claim": "Guardians now spend your parry cooldown, so a tower dive can be punished — parry the Guardian, then heavy-melee the diver while the tower wakes up, forcing them to fight under it.",
+   "numbers": "",
+   "confidence": 0.8
+  },
+  {
+   "topic": "movement",
+   "claim": "Auto-mantle — specifically backward auto-mantle — lets you kite and shoot while climbing, which the creator calls extremely broken and tells everyone to enable.",
+   "numbers": "",
+   "confidence": 0.75
+  }
+ ],
+ "reasoning_patterns": [
+  "Reads invisible intent: the Guardian-parry change is framed as a general defensive tweak, but its real effect is to delete the standard tower dive — only kits with built-in mitigation (Apollo's 2-point T3 bullet resist, Krill's burrow) can still do it.",
+  "Diagnoses an unlisted change from the outcome: Infernus's fall is not explained by the notes he saw, so he infers the removal of its global napalm amp from the pick-order collapse (first ban/first pick to sixth pick).",
+  "Derives map priority from soul-per-second math: ~500 souls in one minute (Rem tunnels) versus ~500 in ten seconds (purple pit) is the entire reason purple pit, not Bell Tower's 280 at 5 min, owns the 5-8 minute window.",
+  "Uses a rules change as evidence of balance: DNS switching to 'side or pick order, other team picks the rest' is treated as proof that Arch Mother is a materially favored side, not just a preference.",
+  "Flags any strong map interaction as a future bug/nerf: higher camp damage plus cover means players will find camp-shooting exploits, and crates being the most efficient farm means they are due for a nerf."
+ ],
+ "patch_calls": {
+  "size": "major",
+  "headline": "Tough Crates (guaranteed 58-soul heavy boxes with 200-300-soul lane routes) make farming the dominant early game and push box routes above camp clears, while harder-hitting, clumping camps reward sustain and AoE.",
+  "winners": [
+   "Yamato",
+   "Mina",
+   "Rem",
+   "The Doorman",
+   "Lash",
+   "Drifter",
+   "Apollo",
+   "Paradox",
+   "Mo & Krill",
+   "Celeste",
+   "Kelvin",
+   "Ivy"
+  ],
+  "losers": [
+   "Infernus",
+   "Billy",
+   "Calico",
+   "Bebop"
+  ],
+  "non_obvious_calls": [
+   "Rem rises because of a map change (three vaults at Bell Tower, vaults harder to defend), not a Rem buff.",
+   "Infernus's drop is caused by removal of its global napalm amp that the creator could not find in the patch notes.",
+   "Calico is held back by Tough Crates specifically, since punching them requires leaving cat form.",
+   "Tower diving is effectively removed for most heroes by the parry-cooldown change, making Apollo and Krill outliers rather than the rule.",
+   "Arch Mother's side advantage is big enough that DNS changed its side/pick-order draft rule around it.",
+   "Sunken Plaza's value is its 5-8 minute timing (~400-500 souls in seconds) and secret-shop exit, so purple pit is the contested objective early while Bell Tower matures at 8+ minutes."
+  ]
+ }
+}
