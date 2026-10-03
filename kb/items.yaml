@@ -14,25 +14,26 @@ Fortitude:
   name: Fortitude
   role: sustain vitality item
   bought_by:
-  - Infernus
-  - Seven
   - Abrams
-  - Mo & Krill
-  - Shiv
-  - Warden
-  - Victor
-  - Paige
-  - The Doorman
-  - Billy
   - Apollo
-  - Rem
-  - Silver
-  - Venator
+  - Billy
   - Celeste
   - Dynamo
+  - Infernus
   - Kelvin
+  - Mo & Krill
+  - Paige
+  - Rat King
+  - Rem
+  - Seven
+  - Shiv
+  - Silver
+  - The Doorman
+  - Venator
+  - Victor
   - Vindicta
   - Vyper
+  - Warden
   slot: Vitality
   tier: 3
   notes: '09-16: max-health regen 2->2.25%. The default survivability slot; quiet
@@ -108,6 +109,7 @@ High-Velocity Rounds:
   - Grey Talon
   - Paige
   - Paradox
+  - Rat King
   - Rem
   - Sinclair
   - Victor
@@ -160,6 +162,7 @@ Witchmail:
   - Abrams
   - Billy
   - Celeste
+  - Rat King
   - Shiv
   slot: Vitality
   tier: 3
@@ -661,7 +664,8 @@ Cultist Sacrifice:
 Ballistic Enchantment:
   name: Ballistic Enchantment
   role: utility spirit item
-  bought_by: []
+  bought_by:
+  - Rat King
   slot: Spirit
   tier: 3
   notes: '09-16: duration 14->20s. Uptime is now the selling point; a plausible pick
@@ -783,6 +787,7 @@ Extra Spirit:
   - Kelvin
   - Mina
   - Mo & Krill
+  - Rat King
   - Rem
   - Victor
   - Vindicta
@@ -881,6 +886,7 @@ Extended Magazine:
   bought_by:
   - Infernus
   - Ivy
+  - Rat King
   - Warden
   slot: null
   tier: null
@@ -940,6 +946,7 @@ Extra Regen:
   - Ivy
   - Kelvin
   - Lady Geist
+  - Rat King
   - Rem
   - Shiv
   - Victor
@@ -995,6 +1002,7 @@ Bullet Resist Shredder:
   - Ivy
   - Lady Geist
   - Lash
+  - Rat King
   slot: null
   tier: null
   notes: ''
@@ -1014,6 +1022,7 @@ Close Quarters:
   bought_by:
   - Abrams
   - Billy
+  - Rat King
   - Venator
   - Vyper
   slot: null
@@ -1125,6 +1134,7 @@ Enduring Speed:
   role: ''
   bought_by:
   - McGinnis
+  - Rat King
   - Victor
   - Warden
   slot: null
@@ -1196,6 +1206,7 @@ Mystic Expansion:
   - Mina
   - Paige
   - Pocket
+  - Rat King
   - Sinclair
   - The Doorman
   - Viscous
@@ -1437,3 +1448,11 @@ Corrupted items:
     first. It rewards teams that can bank souls and stall to ~30 min, running counter
     to this patch''s early-close economy. Read it at runtime, not in a build plan;
     low-confidence (first KB entry).'
+Extra Health:
+  name: Extra Health
+  role: ''
+  bought_by:
+  - Rat King
+  slot: null
+  tier: null
+  notes: ''

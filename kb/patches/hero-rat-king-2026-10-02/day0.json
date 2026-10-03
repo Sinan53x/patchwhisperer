@@ -1,0 +1,113 @@
+{
+ "enrichment": {
+  "role": "frontline brawler",
+  "archetypes": [
+   "tank/frontline",
+   "lane bully"
+  ],
+  "tier": "A",
+  "trend": "rising",
+  "why": "Rat King slots directly into the City Never Sleeps economy: 116 heavy melee plus 800 HP and 2.0 regen open Tough Crate routes, and Scrap Grenade's multi-detonation clears the grouped, chasing Haunt camps. His banner ult converts the patch's forced hub fights into favorable ones (move speed, slow immunity, damage reduction), while Rat Swarm strips bullet resist for his Spreadshot. The 59.4% first-week WR is novelty-inflated, but the kit-to-map fit justifies a provisional A.",
+  "builds": [
+   {
+    "name": "Gun bruiser",
+    "damage": "gun",
+    "core_items": [
+     "High-Velocity Rounds",
+     "Close Quarters",
+     "Extended Magazine",
+     "Ballistic Enchantment",
+     "Enduring Speed"
+    ],
+    "popularity": "primary",
+    "notes": "Rat Swarm strips bullet resist, then Spreadshot and grenades do the work; HVR is the 78% default yet wins least (47%)."
+   },
+   {
+    "name": "Vitality frontline",
+    "damage": "hybrid",
+    "core_items": [
+     "Extra Regen",
+     "Fortitude",
+     "Extra Health",
+     "Enduring Speed",
+     "Witchmail"
+    ],
+    "popularity": "secondary",
+    "notes": "Bulks up to lead the banner charge; Witchmail late is the standout signal (24% pick, 82% WR, small sample)."
+   },
+   {
+    "name": "Swarm shred",
+    "damage": "spirit",
+    "core_items": [
+     "Mystic Expansion",
+     "Bullet Resist Shredder",
+     "Extra Spirit"
+    ],
+    "popularity": "niche",
+    "notes": "Leans on Rat Swarm T3 (-1 resist, +8 per bite); under-represented in the early item data."
+   }
+  ],
+  "core_items": [
+   "High-Velocity Rounds",
+   "Close Quarters",
+   "Extra Regen",
+   "Enduring Speed",
+   "Witchmail"
+  ],
+  "matchups": {
+   "beats": [
+    "Haze",
+    "Wraith",
+    "Venator"
+   ],
+   "loses_to": [
+    "Celeste",
+    "Mina",
+    "Holliday"
+   ]
+  },
+  "matchup_notes": "Royal Pestments (bullet deflect) plus Rat Swarm's bullet-resist shred make gun carries and grouped hub comps his best matchups, and the banner's slow immunity blunts slow-based kits. His real answers are spirit burst that ignores the anti-bullet barrier and dashes that shake off rats, so he is soft to mobile assassins and casters rather than to other gun heroes. Plated Armor is a weaker answer against him than against most gun carries because his swarm shreds the bullet resist it grants.",
+  "enabled_by": [
+   "Grouped, chasing Haunt camps that reward AoE clear — Scrap Grenade multi-detonation",
+   "Tough Crate routes needing heavy melee — 116 heavy melee, 800 HP, 2.0 regen",
+   "Forced hub fights at Sunken Plaza/Bell Tower — banner ult (move speed, slow immunity, DR)",
+   "Gun-carry meta — Rat Swarm bullet-resist shred sets up Spreadshot"
+  ],
+  "countered_by": [
+   "Spirit burst (barrier is anti-bullet and gains no resists)",
+   "Mobility/dashes that shake off rats and kill the shred",
+   "Silence and CC (Silence Wave, Silencer) denying banner and barrier",
+   "Anti-heal (Healbane, Decay) against his regen stacking"
+  ],
+  "notes": "First-week 59.4% WR / 8.5% PR is novelty-inflated; the crate/camp/hub fit is the reason to start at A, not the raw WR. Raise if he holds >52% with a settled gun build; drop if swarm/vitality builds and spirit-burst counters dominate. A Tough Crate hotfix (on the meta watchlist) would cut his farm-route value.",
+  "confidence": 0.4
+ },
+ "card": {
+  "headline": "Crate-farming brawler who shreds bullet resist and buffs the forced hub fight.",
+  "kit_read": [
+   "Spreadshot pairs with Rat Swarm: rats deal spirit DoT and strip bullet resist per bite, so his shotgun hits harder; dashes shake them off.",
+   "Scrap Grenade (multi-detonation; T3 adds a 300-dmg 14m blast and slow) is his camp-clear and choke tool.",
+   "Royal Pestments grants a max-HP barrier (no resists) that deflects bullets back — his anti-gun trade and frontline glue.",
+   "Ult banner gives nearby allies move speed, slow immunity and damage reduction — a forced-fight teamfight tool."
+  ],
+  "meta_fit": "The patch rewards AoE camp clear, heavy-melee crate routes and telegraphed hub fights, and Rat King does all three (grenade clear, 116 heavy melee, banner). The 59% first-week WR is novelty-inflated, but the fit is real.",
+  "threatens": [
+   "Wraith / Haze / Venator — gun carries eat the deflected bullets and stripped bullet resist",
+   "Grouped hub comps — Scrap Grenade plus banner win the forced Sunken Plaza/Bell Tower fight",
+   "Slow-reliant kits — banner grants allies slow immunity"
+  ],
+  "threatened_by": [
+   "Celeste / Mina — spirit burst bypasses his anti-bullet barrier (no resists on barrier)",
+   "Holliday / Calico — a dash shakes off rats, killing his bullet-resist shred",
+   "Silence Wave/Silencer and Healbane/Decay — deny the banner and his regen stacking"
+  ],
+  "build_read": "Gun-first with vitality: High-Velocity Rounds, Close Quarters, Extended Magazine and Ballistic Enchantment over Extra Regen (54% pick), Fortitude and Enduring Speed; Witchmail late (24% pick, 82% WR) is the standout. HVR's 78% pick / 47% WR suggests the default buy may be a trap.",
+  "provisional_tier": "A",
+  "confidence": 0.4,
+  "what_to_watch": [
+   "Post-novelty WR — 59% should drift toward 50; >52% with a settled build keeps him at A.",
+   "Which build wins out (gun vs swarm/vitality) and whether the Witchmail late-buy (82%) holds on sample.",
+   "Tough Crate hotfix on the meta watchlist, and whether spirit-burst/mobility picks rise to answer him."
+  ]
+ }
+}

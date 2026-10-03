@@ -3684,3 +3684,96 @@ Celeste:
   confidence: 0.6
   released_on: null
   provisional: false
+Rat King:
+  name: Rat King
+  role: frontline brawler
+  archetypes:
+  - tank/frontline
+  - lane bully
+  tier: A
+  trend: rising
+  why: 'Rat King slots directly into the City Never Sleeps economy: 116 heavy melee
+    plus 800 HP and 2.0 regen open Tough Crate routes, and Scrap Grenade''s multi-detonation
+    clears the grouped, chasing Haunt camps. His banner ult converts the patch''s
+    forced hub fights into favorable ones (move speed, slow immunity, damage reduction),
+    while Rat Swarm strips bullet resist for his Spreadshot. The 59.4% first-week
+    WR is novelty-inflated, but the kit-to-map fit justifies a provisional A.'
+  core_items:
+  - High-Velocity Rounds
+  - Close Quarters
+  - Extra Regen
+  - Enduring Speed
+  - Witchmail
+  build_variants:
+  - Gun bruiser
+  - Vitality frontline
+  - Swarm shred
+  enabled_by:
+  - Grouped, chasing Haunt camps that reward AoE clear — Scrap Grenade multi-detonation
+  - Tough Crate routes needing heavy melee — 116 heavy melee, 800 HP, 2.0 regen
+  - Forced hub fights at Sunken Plaza/Bell Tower — banner ult (move speed, slow immunity,
+    DR)
+  - Gun-carry meta — Rat Swarm bullet-resist shred sets up Spreadshot
+  countered_by:
+  - Spirit burst (barrier is anti-bullet and gains no resists)
+  - Mobility/dashes that shake off rats and kill the shred
+  - Silence and CC (Silence Wave, Silencer) denying banner and barrier
+  - Anti-heal (Healbane, Decay) against his regen stacking
+  last_changed_patch: Listen up, Crumbums! Your King is here.
+  notes: 'Day-0 kit read (2026-10-03), provisional — data check-in due 2026-10-09.
+
+    First-week 59.4% WR / 8.5% PR is novelty-inflated; the crate/camp/hub fit is the
+    reason to start at A, not the raw WR. Raise if he holds >52% with a settled gun
+    build; drop if swarm/vitality builds and spirit-burst counters dominate. A Tough
+    Crate hotfix (on the meta watchlist) would cut his farm-route value.'
+  builds:
+  - name: Gun bruiser
+    damage: gun
+    core_items:
+    - High-Velocity Rounds
+    - Close Quarters
+    - Extended Magazine
+    - Ballistic Enchantment
+    - Enduring Speed
+    popularity: primary
+    notes: Rat Swarm strips bullet resist, then Spreadshot and grenades do the work;
+      HVR is the 78% default yet wins least (47%).
+  - name: Vitality frontline
+    damage: hybrid
+    core_items:
+    - Extra Regen
+    - Fortitude
+    - Extra Health
+    - Enduring Speed
+    - Witchmail
+    popularity: secondary
+    notes: Bulks up to lead the banner charge; Witchmail late is the standout signal
+      (24% pick, 82% WR, small sample).
+  - name: Swarm shred
+    damage: spirit
+    core_items:
+    - Mystic Expansion
+    - Bullet Resist Shredder
+    - Extra Spirit
+    popularity: niche
+    notes: Leans on Rat Swarm T3 (-1 resist, +8 per bite); under-represented in the
+      early item data.
+  matchups:
+    beats:
+    - Haze
+    - Wraith
+    - Venator
+    loses_to:
+    - Celeste
+    - Mina
+    - Holliday
+  matchup_notes: Royal Pestments (bullet deflect) plus Rat Swarm's bullet-resist shred
+    make gun carries and grouped hub comps his best matchups, and the banner's slow
+    immunity blunts slow-based kits. His real answers are spirit burst that ignores
+    the anti-bullet barrier and dashes that shake off rats, so he is soft to mobile
+    assassins and casters rather than to other gun heroes. Plated Armor is a weaker
+    answer against him than against most gun carries because his swarm shreds the
+    bullet resist it grants.
+  confidence: 0.4
+  released_on: '2026-10-02'
+  provisional: true
