@@ -35,12 +35,22 @@ TODAY = date(2026, 10, 9)
 
 
 @pytest.fixture
-def kb(tmp_path):
+def kb(tmp_path, entity_index):
     root = tmp_path / "kb"
     root.mkdir()
     for f in ("heroes.yaml", "items.yaml", "meta.md"):
         shutil.copy(f"kb/{f}", root / f)
-    return KBStore(root)
+    store = KBStore(root)
+    # tests must not depend on live roster state: drop heroes the fixture
+    # index doesn't know (e.g. Rat King) and clear provisional flags
+    known = {h["name"] for h in entity_index.heroes}
+    heroes = {
+        n: h.model_copy(update={"provisional": False, "released_on": None})
+        for n, h in store.load_heroes().items()
+        if n in known
+    }
+    store.save_heroes(heroes)
+    return store
 
 
 def _rat_king() -> dict:
