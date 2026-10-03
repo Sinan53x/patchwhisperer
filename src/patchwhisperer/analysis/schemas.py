@@ -135,6 +135,18 @@ class KBUpdate(BaseModel):
         return self
 
 
+class ContentDigest(BaseModel):
+    summary: str = ""
+    sections: dict[str, list[str]] = {}
+    new_heroes: list[str] = []
+
+    @model_validator(mode="after")
+    def _non_empty(self):
+        if not any(self.sections.values()):
+            raise ValueError("ContentDigest must have at least one non-empty section")
+        return self
+
+
 class KBHeroUpdate(BaseModel):
     hero_updates: dict[str, dict] = {}
     change_log: list[str] = []
@@ -156,6 +168,13 @@ class ItemClaim(BaseModel):
     why: str = ""
 
 
+class MapClaim(BaseModel):
+    topic: str = ""
+    claim: str = ""
+    numbers: str = ""
+    confidence: float = 0.0
+
+
 class PatchCalls(BaseModel):
     size: Literal["major", "significant", "minor", "hotfix"] | None = None
     headline: str | None = None
@@ -168,6 +187,7 @@ class DistilledSource(BaseModel):
     meta_thesis: str = ""
     hero_claims: list[HeroClaim] = Field(min_length=1)
     item_claims: list[ItemClaim] = []
+    map_claims: list[MapClaim] = []
     reasoning_patterns: list[str] = []
     patch_calls: PatchCalls = Field(default_factory=PatchCalls)
 
@@ -205,6 +225,23 @@ class HeroEnrichment(BaseModel):
     countered_by: list[str] = []
     notes: str = ""
     confidence: float = 0.0
+
+
+class NewHeroCard(BaseModel):
+    headline: str = Field(min_length=1)
+    kit_read: list[str] = Field(min_length=1)
+    meta_fit: str = ""
+    threatens: list[str] = []
+    threatened_by: list[str] = []
+    build_read: str = ""
+    provisional_tier: Tier | Literal["?"] = "?"
+    confidence: float = 0.0
+    what_to_watch: list[str] = []
+
+
+class NewHeroEvaluation(BaseModel):
+    enrichment: HeroEnrichment = Field(default_factory=HeroEnrichment)
+    card: NewHeroCard
 
 
 class AnalysisBundle(BaseModel):

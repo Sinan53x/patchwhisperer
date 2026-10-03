@@ -127,7 +127,7 @@ def _direction(text: str, field_info: tuple[str, bool | None] | None) -> Directi
     return Direction.nerf if good else Direction.buff
 
 
-def _parse_change(section: str, line: str, index: EntityIndex) -> Change:
+def parse_change_line(section: str, line: str, index: EntityIndex) -> Change:
     entity_type = EntityType.system
     entity_id = None
     entity_name = "General"
@@ -181,9 +181,12 @@ def _parse_change(section: str, line: str, index: EntityIndex) -> Change:
     )
 
 
+_parse_change = parse_change_line
+
+
 def parse_patch(post: SteamPost, index: EntityIndex) -> Patch:
     changes = [
-        _parse_change(section, line, index)
+        parse_change_line(section, line, index)
         for section, line in bbcode_to_lines(post.contents)
     ]
     return Patch(
@@ -194,4 +197,5 @@ def parse_patch(post: SteamPost, index: EntityIndex) -> Patch:
         author=post.author,
         raw_bbcode=post.contents,
         changes=changes,
+        kind=post.kind,
     )

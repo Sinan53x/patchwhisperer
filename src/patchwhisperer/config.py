@@ -18,6 +18,7 @@ DEFAULT_POOL = os.getenv("DEFAULT_POOL", "")
 # reasoning models spend a variable, often large share of max_tokens on hidden
 # reasoning before emitting JSON, so budgets include generous headroom for it
 STAGE_MAX_TOKENS = {
+    0: 24000,
     1: 24000,
     2: 32000,
     3: 48000,
@@ -28,6 +29,7 @@ STAGE_MAX_TOKENS = {
     "distill": 32000,
     "seed": 60000,
     "enrich": 24000,
+    "hero": 24000,
 }
 
 STAGE6_HERO_BATCH = 10

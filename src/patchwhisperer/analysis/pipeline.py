@@ -65,6 +65,7 @@ def _run_stage(
     *,
     tag: str | None = None,
     budget_key=None,
+    prefix: str = "stage",
     **values,
 ):
     tag = tag or str(n)
@@ -76,13 +77,13 @@ def _run_stage(
         prompt,
         schema,
         max_tokens=config.STAGE_MAX_TOKENS[budget_key if budget_key is not None else n],
-        raw_path=pdir / f"stage{tag}.raw.txt",
+        raw_path=pdir / f"{prefix}{tag}.raw.txt",
     )
     elapsed = time.time() - t0
     STAGE_SECONDS[tag] = elapsed
     log.info("stage %s (%s) done in %.1fs", tag, name, elapsed)
-    (pdir / f"stage{tag}.prompt.md").write_text(prompt)
-    (pdir / f"stage{tag}.json").write_text(result.model_dump_json(indent=1))
+    (pdir / f"{prefix}{tag}.prompt.md").write_text(prompt)
+    (pdir / f"{prefix}{tag}.json").write_text(result.model_dump_json(indent=1))
     return result
 
 
@@ -94,11 +95,17 @@ def run_analysis(
     llm,
     *,
     update_kb: bool = True,
+    creator_sources: str = "",
 ) -> AnalysisBundle:
     STAGE_SECONDS.clear()
     patch_id = patch_id_of(patch)
     meta_md = kb.load_meta() if kb.meta_path.exists() else "(empty)"
-    common = {"patch_title": patch.title, "patch_date": f"{patch.date:%Y-%m-%d}"}
+    common = {
+        "patch_title": patch.title,
+        "patch_date": f"{patch.date:%Y-%m-%d}",
+        "creator_sources": creator_sources or "(none)",
+        "digest_summary": patch.digest_summary or "(n/a)",
+    }
     sys_changes = ctx.system_changes(patch)
     it_changes = ctx.item_changes(patch)
     h_changes = ctx.hero_changes(patch)
@@ -141,21 +148,26 @@ def run_analysis(
         )
         s1 = systems.model_dump_json(indent=1)
 
-        item_hero_names = ctx.hero_names_affected_by_items(kb, changed_items)
-        items = _run_stage(
-            llm,
-            kb,
-            patch_id,
-            2,
-            "stage2_items",
-            ItemAnalysis,
-            **common,
-            stage1_json=s1,
-            item_changes=ctx.format_changes(it_changes),
-            items_kb=ctx.items_kb(kb, changed_items),
-            heroes_kb_subset=ctx.heroes_kb_subset(kb, item_hero_names),
-        )
-        s2 = items.model_dump_json(indent=1)
+        if it_changes:
+            item_hero_names = ctx.hero_names_affected_by_items(kb, changed_items)
+            items = _run_stage(
+                llm,
+                kb,
+                patch_id,
+                2,
+                "stage2_items",
+                ItemAnalysis,
+                **common,
+                stage1_json=s1,
+                item_changes=ctx.format_changes(it_changes),
+                items_kb=ctx.items_kb(kb, changed_items),
+                heroes_kb_subset=ctx.heroes_kb_subset(kb, item_hero_names),
+            )
+            s2 = items.model_dump_json(indent=1)
+        else:
+            items = ItemAnalysis()
+            s2 = '{"items": [], "notable_item_stories": []}'
+            STAGE_SECONDS["2"] = 0.0
 
         heroes = _run_stage(
             llm,

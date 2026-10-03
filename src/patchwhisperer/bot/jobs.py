@@ -3,6 +3,7 @@ import logging
 from dataclasses import dataclass
 from pathlib import Path
 
+from patchwhisperer.analysis.digest import prepare_patch
 from patchwhisperer.analysis.llm import LLMClient
 from patchwhisperer.analysis.pipeline import (
     apply_kb_update,
@@ -11,13 +12,18 @@ from patchwhisperer.analysis.pipeline import (
     run_kb_update,
 )
 from patchwhisperer.analysis.render import render_discord
+from patchwhisperer.analysis.roster import RosterResult, sync_roster
 from patchwhisperer.bot import state
 from patchwhisperer.kb.git import git_commit_kb, git_sync, kb_commit_message
 from patchwhisperer.kb.store import KBStore
 from patchwhisperer.parse.entities import EntityIndex
 from patchwhisperer.parse.patch_parser import parse_patch
 from patchwhisperer.sources.deadlock_api import DeadlockAPI
-from patchwhisperer.sources.steam_news import fetch_patch_posts, fetch_post
+from patchwhisperer.sources.steam_news import (
+    PostKind,
+    fetch_patch_posts,
+    fetch_post,
+)
 
 log = logging.getLogger(__name__)
 
@@ -29,7 +35,7 @@ MAX_ATTEMPTS = 3
 @dataclass
 class PostResult:
     patch_id: str
-    kind: str  # analyzed | hotfix
+    kind: str  # analyzed | hotfix | hero_release
     message_id: str | None = None
     thread_id: str | None = None
     kb_updated: bool = False
@@ -91,15 +97,26 @@ def analyze_and_post(
     commit_fn=git_commit_kb,
     sync_fn=git_sync,
     notify_failures: bool = True,
+    on_hero_release=None,
+    creator_sources_fn=None,
 ) -> PostResult | None:
-    """Fetch, analyze, and post a patch to Discord. Returns None if skipped."""
+    """Fetch, analyze, and post a patch to Discord. Returns None if skipped.
+
+    The automatic (bot/poller) path never injects creator sources; callers may
+    opt in via `creator_sources_fn(post) -> str`."""
     post = fetch_post(gid) if gid != "latest" else fetch_patch_posts(count=1)[0]
     if post is None:
         raise RuntimeError(f"post {gid} not found")
 
     existing = state.seen_get(post.gid, db)
-    if existing and existing["kind"] in ("analyzed", "hotfix") and not force:
+    if (
+        existing
+        and existing["kind"] in ("analyzed", "hotfix", "hero_release")
+        and not force
+    ):
         return None
+
+    creator_sources = creator_sources_fn(post) if creator_sources_fn else ""
 
     llm = llm or LLMClient()
     index = index or EntityIndex.load()
@@ -109,13 +126,37 @@ def analyze_and_post(
 
     try:
         sync_fn(repo_root)
+        kb = kb or KBStore(KB_ROOT)
+        if not force and (kb.patch_dir(patch_id) / "analysis.json").exists():
+            # a second machine already processed this post; kb is git-synced
+            state.seen_mark(
+                post.gid, post.title, f"{post.date:%Y-%m-%d}", "analyzed", db
+            )
+            return None
+        if patch.kind == PostKind.hero_release:
+            state.seen_mark(
+                post.gid, post.title, f"{post.date:%Y-%m-%d}", "hero_release", db
+            )
+            if on_hero_release is not None:
+                on_hero_release(post)
+            return PostResult(patch_id=patch_id, kind="hero_release")
+        patch = prepare_patch(post, index, kb, llm)
+        patch_id = patch_id_of(patch)
+        hotfix = patch.is_hotfix()
         api = api or DeadlockAPI()
         snapshot = _snapshot_for(post.date.timestamp(), api)
         if pool is None:
             pool = state.pool_all(db)
-        kb = kb or KBStore(KB_ROOT)
 
-        bundle = run_analysis(patch, kb, snapshot, pool, llm, update_kb=False)
+        bundle = run_analysis(
+            patch,
+            kb,
+            snapshot,
+            pool,
+            llm,
+            update_kb=False,
+            creator_sources=creator_sources,
+        )
 
         if channel is not None:
             message_id, thread_id = _post_to_channel(
@@ -199,3 +240,47 @@ def analyze_and_post(
                 loop,
             )
         raise
+
+
+def run_roster_sync(
+    *,
+    channel=None,
+    loop=None,
+    db=None,
+    llm=None,
+    kb: KBStore | None = None,
+    index: EntityIndex | None = None,
+    api: DeadlockAPI | None = None,
+    repo_root: Path = REPO_ROOT,
+    commit_fn=git_commit_kb,
+    sync_fn=git_sync,
+    release_post=None,
+) -> RosterResult:
+    """Sync new heroes into the KB and post day-0 cards / check-in cards."""
+    llm = llm or LLMClient()
+    index = index or EntityIndex.load()
+    api = api or DeadlockAPI()
+    kb = kb or KBStore(KB_ROOT)
+
+    def post_fn(text: str, patch_id: str) -> None:
+        if channel is None:
+            return
+        message = _await(channel.send(text), loop)
+        _await(message.add_reaction("👍"), loop)
+        _await(message.add_reaction("👎"), loop)
+        state.post_record(
+            patch_id, getattr(channel, "id", ""), getattr(message, "id", "") or "", None, db
+        )
+
+    return sync_roster(
+        kb=kb,
+        index=index,
+        api=api,
+        llm=llm,
+        sources_dir=KB_ROOT / "sources",
+        release_post=release_post,
+        post_fn=post_fn if channel is not None else None,
+        commit_fn=commit_fn,
+        sync_fn=sync_fn,
+        repo_root=repo_root,
+    )

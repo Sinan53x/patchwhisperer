@@ -26,10 +26,11 @@ Patch: {{patch_title}} ({{patch_date}})
 
 Produce the post-patch knowledge base state. This KB is read by the analyst on the *next* patch, so write it as durable state, not as a patch summary.
 
-1. **meta.md**: rewrite the whole document in this structure (markdown, <= 400 words):
+1. **meta.md**: rewrite the whole document in this structure (markdown, <= 550 words):
    - `# Meta state` line with `Last patch: {{patch_title}} ({{patch_date}})`
    - `## Thesis` — 2-4 sentences: how games are won right now (tempo vs scaling, fight shape, what archetypes carry).
    - `## Economy and systems` — bullets describing the current state of comeback, bounties, objectives, respawn, movement/slows, in present tense with current numbers where known.
+   - `## Map` — current map state in present tense: lanes/districts, objectives with timings and values where known, farm sources (Haunt tiers, crates/boxes, Sinner's Sacrifice variants, Buff Containers), pickups (Healing Snacks, Steam Vents), side asymmetry, key routes. Keep it when nothing changed.
    - `## Archetype standing` — one bullet per archetype in play: up/down/stable and why.
    - `## Watchlist` — 3-6 bullets: heroes/items/systems that are uncertain and should be checked against data.
    - `## Recent history` — keep at most 5 bullets, newest first, one line per patch: "{{patch_title}}: <headline>". Carry forward existing bullets from the current meta.md, drop the oldest beyond 5.

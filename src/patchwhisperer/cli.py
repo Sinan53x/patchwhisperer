@@ -2,7 +2,7 @@ import asyncio
 import json
 import os
 from collections import Counter
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 from typing import Annotated
 
@@ -11,6 +11,7 @@ from pydantic import ValidationError
 
 from patchwhisperer import config
 from patchwhisperer.analysis import context as actx
+from patchwhisperer.analysis.digest import prepare_patch
 from patchwhisperer.analysis.llm import (
     SYSTEM_PROMPT,
     LLMClient,
@@ -26,11 +27,15 @@ from patchwhisperer.analysis.pipeline import (
 from patchwhisperer.analysis.render import render_discord, render_markdown
 from patchwhisperer.analysis.schemas import DistilledSource, SeedKB
 from patchwhisperer.kb.schema import HeroState, ItemState
-from patchwhisperer.kb.store import KBStore
+from patchwhisperer.kb.store import KBStore, slugify
 from patchwhisperer.parse.entities import EntityIndex
 from patchwhisperer.parse.patch_parser import parse_patch
 from patchwhisperer.sources.deadlock_api import DeadlockAPI
-from patchwhisperer.sources.steam_news import fetch_patch_posts, fetch_post
+from patchwhisperer.sources.steam_news import (
+    PostKind,
+    fetch_patch_posts,
+    fetch_post,
+)
 from patchwhisperer.sources.youtube import fetch_transcript
 
 app = typer.Typer(help="PatchWhisperer: Deadlock patch-note analysis.")
@@ -44,7 +49,10 @@ KB_ROOT = Path("kb")
 def fetch(count: int = 20) -> None:
     """List recent patch posts."""
     for p in fetch_patch_posts(count=count):
-        typer.echo(f"{p.gid}  {p.date:%Y-%m-%d}  {p.title}  ({len(p.contents)} chars)")
+        typer.echo(
+            f"{p.gid}  {p.date:%Y-%m-%d}  {p.kind.value:<12}  "
+            f"{p.title}  ({len(p.contents)} chars)"
+        )
 
 
 @app.command()
@@ -71,7 +79,8 @@ def parse(gid: str, as_json: bool = typer.Option(False, "--json")) -> None:
     typer.echo("---")
     typer.echo(
         f"total={len(patch.changes)} sections={dict(counts)} "
-        f"unresolved={len(unresolved)} hotfix={patch.is_hotfix()}"
+        f"unresolved={len(unresolved)} hotfix={patch.is_hotfix()} "
+        f"kind={patch.kind.value}"
     )
     for u in unresolved:
         typer.echo(f"  unresolved: {u}")
@@ -129,6 +138,8 @@ def analyze(
     dry_run: bool = typer.Option(False, "--dry-run"),
     no_kb_update: bool = typer.Option(False, "--no-kb-update"),
     model: str = typer.Option("", "--model"),
+    notes: Annotated[Path | None, typer.Option("--notes")] = None,
+    sources: bool = typer.Option(False, "--sources/--no-sources"),
     out: Annotated[Path | None, typer.Option("--out")] = None,
 ) -> None:
     """Run the full analysis pipeline on a patch post."""
@@ -136,7 +147,18 @@ def analyze(
     if post is None:
         typer.echo(f"post {gid} not found", err=True)
         raise typer.Exit(1)
-    patch = parse_patch(post, EntityIndex.load())
+    if post.kind == PostKind.hero_release:
+        typer.echo(
+            "hero release post; nothing to analyse "
+            "(roster sync handles new heroes)"
+        )
+        raise typer.Exit(0)
+    index = EntityIndex.load()
+    kb = KBStore(KB_ROOT)
+    llm = LLMClient(model=model or config.LLM_MODEL)
+    patch = prepare_patch(
+        post, index, kb, llm, notes=notes.read_text() if notes else None
+    )
     api = DeadlockAPI()
     min_unix = int(post.date.timestamp()) - 14 * 86400
     stats = api.hero_stats(min_unix=min_unix, max_unix=int(post.date.timestamp()))
@@ -154,9 +176,19 @@ def analyze(
     pool_list = [
         p.strip() for p in (pool or config.DEFAULT_POOL).split(",") if p.strip()
     ]
-    kb = KBStore(KB_ROOT)
-    llm = LLMClient(model=model or config.LLM_MODEL)
-    bundle = run_analysis(patch, kb, snap, pool_list, llm, update_kb=not no_kb_update)
+    bundle = run_analysis(
+        patch,
+        kb,
+        snap,
+        pool_list,
+        llm,
+        update_kb=not no_kb_update,
+        creator_sources=actx.creator_sources_since(
+            KB_ROOT / "sources", post.date.date()
+        )
+        if sources
+        else "",
+    )
     md = render_markdown(bundle)
     typer.echo(md)
     if out:
@@ -303,8 +335,29 @@ def demo(
         shutil.rmtree(tmp, ignore_errors=True)
 
 
-def _slug(text: str) -> str:
-    return "".join(c.lower() if c.isalnum() else "-" for c in text).strip("-")
+_slug = slugify
+
+
+def _source_md(meta: dict, published: str, vid: str, result: DistilledSource) -> str:
+    lines = [
+        f"# {meta.get('title', vid)} — {meta.get('author', '?')} ({published})",
+        "",
+        "## Meta thesis",
+        result.meta_thesis,
+        "",
+        "## Hero claims",
+    ]
+    for h in result.hero_claims:
+        lines.append(f"- **{h.hero}** tier={h.tier} dir={h.direction}: {h.why}")
+    lines.append("\n## Map claims")
+    lines += [
+        f"- **{c.topic}**: {c.claim}"
+        + (f" ({c.numbers})" if c.numbers else "")
+        for c in result.map_claims
+    ]
+    lines.append("\n## Reasoning patterns")
+    lines += [f"- {r}" for r in result.reasoning_patterns]
+    return "\n".join(lines)
 
 
 @app.command()
@@ -331,6 +384,8 @@ def distill(raw: str) -> None:
                     break
         except ValueError:
             pass
+    visual_path = path.with_suffix(".visual.md")
+    visual_notes = visual_path.read_text() if visual_path.exists() else "(none)"
     prompt = render_prompt(
         "distill_source",
         author=meta.get("author", path.stem.split("-")[0]),
@@ -339,6 +394,7 @@ def distill(raw: str) -> None:
         published=published,
         patch_context=patch_context,
         transcript=transcript,
+        visual_notes=visual_notes,
         hero_names=", ".join(h["name"] for h in index.heroes),
     )
     llm = LLMClient()
@@ -347,19 +403,7 @@ def distill(raw: str) -> None:
     vid = meta.get("video_id", path.stem)
     base = KB_ROOT / "sources" / f"{slug}-{published}-{vid}"
     base.with_suffix(".json").write_text(result.model_dump_json(indent=1))
-    lines = [
-        f"# {meta.get('title', vid)} — {meta.get('author', '?')} ({published})",
-        "",
-        "## Meta thesis",
-        result.meta_thesis,
-        "",
-        "## Hero claims",
-    ]
-    for h in result.hero_claims:
-        lines.append(f"- **{h.hero}** tier={h.tier} dir={h.direction}: {h.why}")
-    lines.append("\n## Reasoning patterns")
-    lines += [f"- {r}" for r in result.reasoning_patterns]
-    base.with_suffix(".md").write_text("\n".join(lines))
+    base.with_suffix(".md").write_text(_source_md(meta, published, vid, result))
     typer.echo(f"-> {base.with_suffix('.json')} ({_usage_line(llm.usage)})")
 
 
@@ -461,11 +505,8 @@ def enrich(
     all_heroes: bool = typer.Option(False, "--all"),
 ) -> None:
     """Enrich KB hero entries with item-usage and matchup data."""
-    import yaml as _yaml
-
-    from patchwhisperer.analysis.context import _non_empty, tier_list
-    from patchwhisperer.analysis.enrich import merge_enrichment
-    from patchwhisperer.analysis.schemas import HeroEnrichment
+    from patchwhisperer.analysis.context import creator_claims, tier_list
+    from patchwhisperer.analysis.enrich import enrich_hero, merge_enrichment
 
     kb = KBStore(KB_ROOT)
     index = EntityIndex.load()
@@ -476,21 +517,7 @@ def enrich(
     corrections = kb.load_corrections()
     tiers = tier_list(kb)
     snap = api.snapshot(days=14)
-
-    # creator claims per hero, newest first
-    claims: dict[str, list[str]] = {}
-    for f in sorted((KB_ROOT / "sources").glob("*.json"), reverse=True):
-        d = json.loads(f.read_text())
-        parts = f.stem.rsplit("-", 2)
-        date, author = parts[1] if len(parts) > 2 else "?", parts[0]
-        for c in d.get("hero_claims", []):
-            line = (
-                f"{date} {author}: tier {c.get('tier')}, "
-                f"direction {c.get('direction')} — {c.get('why')}; "
-                f"items: {', '.join(c.get('items') or [])}"
-            )
-            claims.setdefault(c.get("hero", ""), []).append(line)
-
+    claims = creator_claims(KB_ROOT / "sources")
     counters = api.hero_counters(days=days)
     latest = fetch_patch_posts(count=1)
     latest_title = latest[0].title if latest else "unknown"
@@ -506,54 +533,22 @@ def enrich(
 
     for name in targets:
         h = heroes[name]
-        hero_id = next(x["id"] for x in index.heroes if x["name"] == name)
-        usage = api.hero_item_usage(hero_id, index, days=days)
-        usage_txt = "\n".join(
-            f"{u.item} | {u.share * 100:.0f}% | {u.win_rate * 100:.1f}% | "
-            f"{u.avg_buy_min:.1f} | {u.slot or '?'} T{u.tier or '?'}"
-            for u in usage
-        )
-        c = counters.get(hero_id)
-        beats = (
-            ", ".join(f"{n} ({wr * 100:.0f}% over {m})" for n, wr, m in c.beats)
-            if c
-            else "(none)"
-        )
-        loses = (
-            ", ".join(f"{n} ({wr * 100:.0f}% over {m})" for n, wr, m in c.loses_to)
-            if c
-            else "(none)"
-        )
-        hsnap = snap.get(name, {})
-        snap_txt = (
-            f"WR {hsnap.get('win_rate', 0) * 100:.1f}% | "
-            f"PR {hsnap.get('pick_rate', 0) * 100:.1f}% | "
-            f"matches {hsnap.get('matches', 0)}"
-        )
-        prompt = render_prompt(
-            "enrich_hero",
-            hero=name,
-            as_of_date=f"{datetime.now(tz=UTC):%Y-%m-%d}",
-            latest_patch_title=latest_title,
-            hero_entry=_yaml.safe_dump(_non_empty(h.model_dump()), sort_keys=False),
-            abilities=", ".join(index.abilities.get(hero_id, [])),
-            days=str(days),
-            item_usage=usage_txt or "(no data)",
-            beats=beats,
-            loses_to=loses,
-            hero_snapshot=snap_txt,
-            creator_claims="\n".join(claims.get(name, [])) or "(none)",
-            tier_list=tiers,
-            corrections=corrections or "(none)",
-            meta_md=meta_md,
-        )
-        result: HeroEnrichment = llm.complete_json(
-            SYSTEM_PROMPT,
-            prompt,
-            HeroEnrichment,
-            max_tokens=config.STAGE_MAX_TOKENS["enrich"],
-        )
         before = h.tier
+        result = enrich_hero(
+            name,
+            kb=kb,
+            index=index,
+            api=api,
+            llm=llm,
+            claims=claims,
+            counters=counters,
+            snap=snap,
+            meta_md=meta_md,
+            corrections=corrections,
+            tiers=tiers,
+            latest_title=latest_title,
+            days=days,
+        )
         merge_enrichment(h, result)
         heroes[name] = h
         kb.save_heroes(heroes)
@@ -565,15 +560,9 @@ def enrich(
         )
 
     # deterministic rebuild of items.bought_by from hero builds
-    items = kb.load_items()
     for h in heroes.values():
         for b in h.builds:
-            for item_name in b.core_items:
-                item = items.get(item_name, ItemState(name=item_name))
-                if h.name not in item.bought_by:
-                    item.bought_by = sorted(set(item.bought_by) | {h.name})
-                    items[item_name] = item
-    kb.save_items(items)
+            kb.add_bought_by(h.name, b.core_items)
     typer.echo(_usage_line(llm.usage))
 
 
@@ -585,15 +574,11 @@ def bot() -> None:
     run()
 
 
-@app.command(name="run-job")
-def run_job(
-    gid: str,
-    force: bool = typer.Option(False, "--force"),
-) -> None:
-    """Run analyze_and_post once without the gateway (posts to Discord)."""
+def _with_channel(fn):
+    """Run async fn(channel, loop) inside a minimal Discord client."""
     import discord
 
-    from patchwhisperer.bot import jobs, state
+    from patchwhisperer.bot import state
 
     state.init_db()
     channel_id = int(os.environ.get("DISCORD_CHANNEL_ID", "0"))
@@ -612,13 +597,7 @@ def run_job(
         )
         loop = asyncio.get_running_loop()
         try:
-            result["r"] = await asyncio.to_thread(
-                jobs.analyze_and_post,
-                gid,
-                force=force,
-                channel=channel,
-                loop=loop,
-            )
+            result["r"] = await fn(channel, loop)
         finally:
             await client.close()
 
@@ -627,7 +606,169 @@ def run_job(
         typer.echo("DISCORD_TOKEN not set", err=True)
         raise typer.Exit(1)
     client.run(token)
-    typer.echo(result.get("r"))
+    return result.get("r")
+
+
+@app.command(name="run-job")
+def run_job(
+    gid: str,
+    force: bool = typer.Option(False, "--force"),
+    sources: bool = typer.Option(False, "--sources/--no-sources"),
+) -> None:
+    """Run analyze_and_post once without the gateway (posts to Discord)."""
+    from patchwhisperer.bot import jobs
+
+    fn = (
+        (lambda post: actx.creator_sources_since(KB_ROOT / "sources", post.date.date()))
+        if sources
+        else None
+    )
+    r = _with_channel(
+        lambda channel, loop: asyncio.to_thread(
+            jobs.analyze_and_post,
+            gid,
+            force=force,
+            channel=channel,
+            loop=loop,
+            creator_sources_fn=fn,
+        )
+    )
+    typer.echo(r)
+
+
+roster_app = typer.Typer()
+app.add_typer(roster_app, name="roster")
+
+
+def _tmp_kb() -> KBStore:
+    import shutil
+    import tempfile
+
+    root = Path(tempfile.mkdtemp(prefix="pw-kb-"))
+    for f in ("heroes.yaml", "items.yaml", "meta.md", "corrections.md"):
+        src = KB_ROOT / f
+        if src.exists():
+            shutil.copy(src, root / f)
+    return KBStore(root)
+
+
+@roster_app.command("sync")
+def roster_sync(
+    dry_run: bool = typer.Option(False, "--dry-run"),
+) -> None:
+    """Evaluate new heroes and run due 7-day check-ins (no Discord)."""
+    from patchwhisperer.analysis.render import render_hero_card
+    from patchwhisperer.analysis.roster import (
+        checkin_hero,
+        checkins_due,
+        evaluate_new_hero,
+        new_heroes,
+        sync_roster,
+    )
+
+    kb = _tmp_kb() if dry_run else KBStore(KB_ROOT)
+    index = EntityIndex.load()
+    api = DeadlockAPI()
+    llm = LLMClient()
+    today = datetime.now(tz=UTC).date()
+    if not dry_run:
+        result = sync_roster(
+            kb=kb,
+            index=index,
+            api=api,
+            llm=llm,
+            sources_dir=KB_ROOT / "sources",
+            repo_root=Path("."),
+        )
+        heroes_after = kb.load_heroes()
+        parts = []
+        for n in result.added:
+            h = heroes_after.get(n)
+            if h is not None and h.released_on:
+                due = date.fromisoformat(h.released_on) + timedelta(days=7)
+                parts.append(f"{n} (released {h.released_on}, check-in due {due})")
+            else:
+                parts.append(n)
+        typer.echo(
+            f"added: {', '.join(parts) or '(none)'}, "
+            f"check-ins: {result.checked_in or '(none)'}"
+        )
+        return
+    heroes = kb.load_heroes()
+    for hero in sorted(new_heroes(api.heroes(), heroes), key=lambda h: h["id"]):
+        state, card = evaluate_new_hero(
+            hero["name"],
+            hero,
+            kb=kb,
+            index=index,
+            api=api,
+            llm=llm,
+            release_post=None,
+            sources_dir=KB_ROOT / "sources",
+            today=today,
+        )
+        import yaml
+
+        typer.echo(render_hero_card(hero["name"], card, state))
+        due = date.fromisoformat(state.released_on) + timedelta(days=7)
+        typer.echo(
+            f"released_on: {state.released_on} (check-in due {due})"
+        )
+        typer.echo("---")
+        typer.echo(yaml.safe_dump(state.model_dump(), sort_keys=False))
+    for name in checkins_due(heroes, today):
+        _, _, card = checkin_hero(
+            name, kb=kb, index=index, api=api, llm=llm, today=today
+        )
+        typer.echo(card)
+
+
+@roster_app.command("checkin")
+def roster_checkin(
+    hero: str,
+    dry_run: bool = typer.Option(False, "--dry-run"),
+) -> None:
+    """Run the 7-day data check-in for one hero."""
+    from patchwhisperer.analysis.roster import checkin_hero
+    from patchwhisperer.kb.git import git_commit_kb
+
+    kb = _tmp_kb() if dry_run else KBStore(KB_ROOT)
+    index = EntityIndex.load()
+    hit = index.resolve(hero)
+    if not hit:
+        typer.echo(f"unknown hero: {hero}", err=True)
+        raise typer.Exit(1)
+    name = hit[2]
+    api = DeadlockAPI()
+    llm = LLMClient()
+    _, _, card = checkin_hero(
+        name,
+        kb=kb,
+        index=index,
+        api=api,
+        llm=llm,
+        today=datetime.now(tz=UTC).date(),
+    )
+    typer.echo(card)
+    if dry_run:
+        typer.echo("(dry-run: nothing saved or committed)")
+        return
+    git_commit_kb(
+        Path("."), [kb.heroes_path, kb.items_path], f"kb: {name} 7-day check-in"
+    )
+
+
+@roster_app.command("post-sync")
+def roster_post_sync() -> None:
+    """Run roster sync and post cards to Discord."""
+    from patchwhisperer.bot import jobs
+
+    r = _with_channel(
+        lambda channel, loop: asyncio.to_thread(
+            jobs.run_roster_sync, channel=channel, loop=loop
+        )
+    )
+    typer.echo(r)
 
 
 def main() -> None:

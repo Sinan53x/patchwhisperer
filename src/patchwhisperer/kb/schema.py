@@ -36,6 +36,8 @@ class HeroState(BaseModel):
     matchups: Matchups = Field(default_factory=Matchups)
     matchup_notes: str = ""
     confidence: float | None = None
+    released_on: str | None = None  # YYYY-MM-DD, set for roster-added heroes
+    provisional: bool = False
 
 
 class ItemState(BaseModel):

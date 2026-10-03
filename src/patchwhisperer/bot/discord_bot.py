@@ -49,12 +49,37 @@ class PatchWhispererBot(commands.Bot):
         self.tree.copy_global_to(guild=discord.Object(id=GUILD_ID))
         if GUILD_ID:
             await self.tree.sync(guild=discord.Object(id=GUILD_ID))
-        self._poll_task = asyncio.create_task(poller.poll_loop(self._job, None))
+        self._poll_task = asyncio.create_task(
+            poller.poll_loop(self._job, None, roster_job=self._roster_job)
+        )
 
     async def _job(self, gid: str) -> None:
         channel = self.get_channel(CHANNEL_ID) or await self.fetch_channel(CHANNEL_ID)
         loop = asyncio.get_running_loop()
-        await asyncio.to_thread(jobs.analyze_and_post, gid, channel=channel, loop=loop)
+
+        def _on_hero_release(post):
+            result = jobs.run_roster_sync(
+                channel=channel, loop=loop, release_post=post
+            )
+            if result.index is not None:
+                self.index = result.index
+
+        await asyncio.to_thread(
+            jobs.analyze_and_post,
+            gid,
+            channel=channel,
+            loop=loop,
+            on_hero_release=_on_hero_release,
+        )
+
+    async def _roster_job(self) -> None:
+        channel = self.get_channel(CHANNEL_ID) or await self.fetch_channel(CHANNEL_ID)
+        loop = asyncio.get_running_loop()
+        result = await asyncio.to_thread(
+            jobs.run_roster_sync, channel=channel, loop=loop
+        )
+        if result is not None and result.index is not None:
+            self.index = result.index
 
     async def on_raw_reaction_add(self, payload: discord.RawReactionActionEvent):
         if payload.user_id == self.user.id:
@@ -190,6 +215,36 @@ def make_bot() -> PatchWhispererBot:
         ][:25]
 
     tree.add_command(kb_group)
+
+    @tree.command(name="roster", description="New/provisional and upcoming heroes")
+    async def roster(interaction: discord.Interaction):
+        from patchwhisperer.analysis.roster import upcoming_heroes
+        from patchwhisperer.sources.deadlock_api import DeadlockAPI
+
+        await interaction.response.defer(ephemeral=True)
+        heroes = KBStore(KB_ROOT).load_heroes()
+        lines = []
+        provisional = [
+            h for h in heroes.values() if h.provisional and h.released_on
+        ]
+        if provisional:
+            lines.append("**Provisional (awaiting 7-day check-in):**")
+            lines += [
+                f"- {h.name} — released {h.released_on}, tier {h.tier}"
+                for h in provisional
+            ]
+        else:
+            lines.append("No provisional heroes.")
+        try:
+            upcoming = await asyncio.to_thread(
+                lambda: upcoming_heroes(DeadlockAPI().all_heroes())
+            )
+        except Exception:  # noqa: BLE001 - upcoming list is best-effort
+            upcoming = []
+        lines.append(
+            "**Upcoming:** " + (", ".join(upcoming) if upcoming else "(none)")
+        )
+        await interaction.followup.send("\n".join(lines))
 
     @tree.command(name="feedback", description="Leave feedback on the latest analysis")
     async def feedback(interaction: discord.Interaction, text: str):

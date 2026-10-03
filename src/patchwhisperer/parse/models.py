@@ -3,6 +3,8 @@ from enum import Enum
 
 from pydantic import BaseModel
 
+from patchwhisperer.sources.steam_news import PostKind
+
 
 class Direction(str, Enum):
     buff = "buff"
@@ -42,8 +44,13 @@ class Patch(BaseModel):
     author: str
     raw_bbcode: str
     changes: list[Change]
+    kind: PostKind = PostKind.balance
+    digest_summary: str = ""
+    new_heroes: list[str] = []
 
     def is_hotfix(self, max_changes: int = 8) -> bool:
+        if self.kind != PostKind.balance:
+            return False
         return len(self.changes) < max_changes and not any(
             c.section == "General" for c in self.changes
         )

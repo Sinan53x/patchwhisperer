@@ -6,6 +6,10 @@ from pydantic import BaseModel
 from patchwhisperer.kb.schema import HeroState, ItemState
 
 
+def slugify(text: str) -> str:
+    return "".join(c.lower() if c.isalnum() else "-" for c in text).strip("-")
+
+
 def _dump(models: dict[str, BaseModel]) -> str:
     return yaml.safe_dump(
         {k: v.model_dump() for k, v in models.items()},
@@ -55,6 +59,19 @@ class KBStore:
 
     def save_meta(self, text: str) -> None:
         self.meta_path.write_text(text)
+
+    def add_bought_by(self, hero_name: str, item_names: list[str]) -> bool:
+        items = self.load_items()
+        changed = False
+        for item_name in item_names:
+            item = items.get(item_name, ItemState(name=item_name))
+            if hero_name not in item.bought_by:
+                item.bought_by = sorted(set(item.bought_by) | {hero_name})
+                items[item_name] = item
+                changed = True
+        if changed:
+            self.save_items(items)
+        return changed
 
     def patch_dir(self, patch_id: str) -> Path:
         d = self.root / "patches" / patch_id

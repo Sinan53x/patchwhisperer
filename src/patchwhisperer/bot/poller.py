@@ -14,14 +14,25 @@ POLL_INTERVAL_S = int(os.getenv("POLL_INTERVAL_S", "300"))
 HEALTHCHECK_URL = os.getenv("HEALTHCHECK_URL", "")
 
 
-async def poll_once(job, db=None, *, first_run_mark_only: bool = False) -> None:
+async def _maybe_call(fn) -> None:
+    if inspect.iscoroutinefunction(fn):
+        await fn()
+    else:
+        await asyncio.to_thread(fn)
+
+
+async def poll_once(
+    job, db=None, *, first_run_mark_only: bool = False, roster_job=None
+) -> None:
     """One poll iteration; job(gid) is called for each unseen post."""
-    posts = await asyncio.to_thread(fetch_patch_posts, 10)
+    posts = await asyncio.to_thread(fetch_patch_posts, 12)
     if state.seen_count(db) == 0 or first_run_mark_only:
         # first-run guard: don't analyze the backlog, only mark it seen
         for p in posts:
             state.seen_mark(p.gid, p.title, f"{p.date:%Y-%m-%d}", "skipped", db)
         log.info("first poll: marked %d existing posts as skipped", len(posts))
+        if roster_job is not None:
+            await _maybe_call(roster_job)
         return
     for p in reversed(posts):  # oldest first
         seen = state.seen_get(p.gid, db)
@@ -30,6 +41,8 @@ async def poll_once(job, db=None, *, first_run_mark_only: bool = False) -> None:
                 await job(p.gid)
             else:
                 await asyncio.to_thread(job, p.gid)
+    if roster_job is not None:
+        await _maybe_call(roster_job)
 
 
 async def healthcheck() -> None:
@@ -42,10 +55,24 @@ async def healthcheck() -> None:
         log.warning("healthcheck ping failed: %s", e)
 
 
-async def poll_loop(job, db=None, shutdown: asyncio.Event | None = None) -> None:
+async def poll_loop(
+    job,
+    db=None,
+    shutdown: asyncio.Event | None = None,
+    roster_job=None,
+    roster_every: int = 12,
+) -> None:
+    iteration = 0
     while shutdown is None or not shutdown.is_set():
         try:
-            await poll_once(job, db)
+            await poll_once(
+                job,
+                db,
+                roster_job=roster_job
+                if roster_job is not None and iteration % roster_every == 0
+                else None,
+            )
+            iteration += 1
             await healthcheck()
         except Exception:
             log.exception("poll iteration failed")

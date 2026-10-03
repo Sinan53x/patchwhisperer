@@ -86,9 +86,35 @@ the token limit.
 | `/analyze [patch] [force]` | Analyze a patch now (`gid` or `latest`; `force` re-runs a processed patch). Reports success/failure ephemerally. |
 | `/patches` | Recent patch posts with their seen state |
 | `/kb hero <name>` | Show a hero's KB entry |
+| `/roster` | Provisional new heroes and announced-but-unreleased heroes |
 | `/feedback <text>` | Attach feedback to the latest analysis |
 
 👍/👎 reactions on the TL;DR message are recorded as feedback on that patch.
+
+## Patch kinds
+
+Every Steam announcement is classified before analysis: `balance` (patch/hotfix
+notes — the normal pipeline), `major` (big content updates like *City Never
+Sleeps*, whose real notes live on a JS-rendered playdeadlock.com page — a stage-0
+digest turns that page into patch-note lines first), `hero_release` (a new hero
+announcement — no patch analysis; roster sync handles it), and `other` (ignored).
+For a major update you can drop hand-written notes at
+`kb/patches/<patch_id>/notes.md` (or pass `--notes` to `pw analyze`) to skip the
+page fetch, and `pw analyze --sources` feeds post-patch creator takes from
+`kb/sources/` into stages 1/3/4 as corroboration (the automatic bot run never
+injects sources — it must stand alone).
+
+## New heroes
+
+Roster sync watches the live hero roster for names missing from `kb/heroes.yaml`.
+A new hero triggers a day-0 evaluation — kit text, base stats, popular items and
+a few days of (deliberately distrusted) ranked stats go into a `new_hero` stage —
+which writes a provisional KB entry (`provisional: true`, `released_on`) and posts
+a day-0 card to Discord. Seven days after release the hero is automatically
+re-evaluated with real usage/counter data via the `enrich` path, `provisional`
+flips to false, and a check-in card posts the tier movement. The bot runs roster
+sync hourly in the poll loop and immediately on hero-release posts; `/roster`
+lists provisional and announced-but-unreleased heroes.
 
 Failure behavior: a new patch that fails analysis is retried on subsequent polls up
 to 3 attempts, then marked `skipped`. A patch whose analysis succeeds but whose
@@ -173,7 +199,9 @@ tests/         pytest suite with canned LLM fixtures
 pw demo [--full] [--keep]  # offline replay of the real 09-16 run
 pw fetch [--count N]       # list recent patch posts
 pw parse <gid|latest>      # parse a patch into structured changes
-pw analyze <gid|latest>    # run the pipeline yourself (needs LLM credentials)
+pw analyze <gid|latest>    # run the pipeline yourself (needs LLM credentials;
+                           #   --notes PATH overrides the major-update page fetch,
+                           #   --sources adds post-patch creator takes)
 pw kb init                 # seed kb/heroes.yaml from live assets
 pw ingest <youtube_url>    # fetch transcript into kb/sources/raw/
 pw distill <raw>           # distill a transcript into KB seed claims
@@ -182,4 +210,8 @@ pw snapshot                # top-10 heroes by win rate (last 14 days)
 pw enrich [--all|--hero H] # refresh builds/matchups from usage + counter data
 pw bot                     # run the Discord bot + patch poller
 pw run-job <gid>           # one analyze_and_post run without the gateway
+                           #   (--sources injects post-patch creator takes into stages 1/3/4)
+pw roster sync [--dry-run]    # evaluate new heroes + due check-ins (no Discord)
+pw roster checkin <hero>      # run the 7-day data check-in for one hero
+pw roster post-sync           # roster sync + post cards to Discord
 ```

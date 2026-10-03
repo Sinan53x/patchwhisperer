@@ -12,6 +12,9 @@ Games are won in the lane. With comeback souls gutted and early Unstable Rift fi
 - Stuns/parry pause reload instead of resetting; dashes and light melee no longer break gun cycle time (smooths Silver/Abrams weaving).
 - Slows -20% globally but now drag air drag at 35% — grounded kiting improves, airborne heroes get pulled down.
 
+## Map
+(pre-City-Never-Sleeps map; not yet described)
+
 ## Archetype standing
 - Tempo bruisers/frontline: up — brawl patch, gun-cycle smoothing, lane-wins economy.
 - Early snowball carries: up — no comeback valve punishes an early lead.

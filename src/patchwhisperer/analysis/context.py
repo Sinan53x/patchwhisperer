@@ -1,5 +1,7 @@
 import json
 from collections import Counter
+from datetime import UTC, date, datetime
+from pathlib import Path
 
 import yaml
 
@@ -22,11 +24,17 @@ def format_changes(changes: list[Change]) -> str:
 
 
 def system_changes(patch: Patch) -> list[Change]:
-    return [
+    changes = [
         c
         for c in patch.changes
         if c.section not in ("Heroes", "Items") and c.entity_type == EntityType.system
     ]
+    # Map lines (major content updates) come first in the stage-1 input
+    return sorted(changes, key=lambda c: c.section != "Map")
+
+
+def map_changes(patch: Patch) -> list[Change]:
+    return [c for c in patch.changes if c.section == "Map"]
 
 
 def item_changes(patch: Patch) -> list[Change]:
@@ -127,6 +135,63 @@ def hero_names_affected_by_items(kb: KBStore, changed_items: list[str]) -> list[
         if touched & set(changed_items):
             names.append(name)
     return names
+
+
+def creator_claims(sources_dir: Path) -> dict[str, list[str]]:
+    """Creator claims per hero, newest first (same format as cli.enrich)."""
+    claims: dict[str, list[str]] = {}
+    for f in sorted(sources_dir.glob("*.json"), reverse=True):
+        d = json.loads(f.read_text())
+        parts = f.stem.rsplit("-", 2)
+        date_s, author = parts[1] if len(parts) > 2 else "?", parts[0]
+        for c in d.get("hero_claims", []):
+            line = (
+                f"{date_s} {author}: tier {c.get('tier')}, "
+                f"direction {c.get('direction')} — {c.get('why')}; "
+                f"items: {', '.join(c.get('items') or [])}"
+            )
+            claims.setdefault(c.get("hero", ""), []).append(line)
+    return claims
+
+
+def creator_sources_since(sources_dir: Path, since: date) -> str:
+    """Render kb/sources/*.json distilled sources published on/after `since`."""
+    entries = []
+    for f in sources_dir.glob("*.json"):
+        parts = f.stem.rsplit("-", 2)
+        if len(parts) < 3 or not parts[1].isdigit():
+            continue
+        d = datetime.strptime(parts[1], "%Y%m%d").replace(tzinfo=UTC).date()
+        if d >= since:
+            entries.append((d, parts[0], f))
+    entries.sort(key=lambda t: t[0], reverse=True)
+    out = []
+    for d, author, f in entries[:6]:
+        data = json.loads(f.read_text())
+        lines = [f"### {author} ({d})"]
+        if data.get("meta_thesis"):
+            lines.append(data["meta_thesis"])
+        for c in data.get("map_claims", []):
+            line = f"- map/{c.get('topic', '')}: {c.get('claim', '')}"
+            if c.get("numbers"):
+                line += f" ({c['numbers']})"
+            lines.append(line)
+        pc = data.get("patch_calls") or {}
+        if pc.get("size") or pc.get("headline"):
+            call = f"- patch call: {pc.get('size') or '?'}"
+            if pc.get("headline"):
+                call += f" — {pc['headline']}"
+            for key in ("winners", "losers", "non_obvious_calls"):
+                if pc.get(key):
+                    call += f"; {key}: {', '.join(pc[key])}"
+            lines.append(call)
+        for c in data.get("hero_claims", []):
+            bits = [b for b in (f"tier {c.get('tier')}", c.get("direction")) if b]
+            lines.append(
+                f"- {c.get('hero', '?')}: {' '.join(bits)} — {c.get('why', '')}"
+            )
+        out.append("\n".join(lines))
+    return "\n\n".join(out)
 
 
 def tier_list(kb: KBStore) -> str:

@@ -346,3 +346,44 @@ def test_failure_notify_failures_false(env, tmp_path, monkeypatch):
         )
     assert channel.sent == []
     assert state.seen_get(env["post"].gid, env["db"])["attempts"] == 1
+
+
+def test_creator_sources_fn_lands_in_stage1(env, tmp_path):
+    channel = FakeChannel()
+    analyze_and_post(
+        env["post"].gid,
+        pool=[],
+        channel=channel,
+        llm=env["llm"],
+        kb=env["kb"],
+        index=env["index"],
+        api=env["api"],
+        db=env["db"],
+        repo_root=tmp_path,
+        commit_fn=MagicMock(),
+        sync_fn=MagicMock(),
+        creator_sources_fn=lambda post: "### vegas (2026-09-20)\nmarker claim xyz",
+    )
+    patch_id = f"{env['post'].date:%Y-%m-%d}-{env['post'].gid}"
+    prompt = (env["kb"].patch_dir(patch_id) / "stage1.prompt.md").read_text()
+    assert "marker claim xyz" in prompt
+
+
+def test_no_creator_sources_fn_prompt_shows_none(env, tmp_path):
+    channel = FakeChannel()
+    analyze_and_post(
+        env["post"].gid,
+        pool=[],
+        channel=channel,
+        llm=env["llm"],
+        kb=env["kb"],
+        index=env["index"],
+        api=env["api"],
+        db=env["db"],
+        repo_root=tmp_path,
+        commit_fn=MagicMock(),
+        sync_fn=MagicMock(),
+    )
+    patch_id = f"{env['post'].date:%Y-%m-%d}-{env['post'].gid}"
+    prompt = (env["kb"].patch_dir(patch_id) / "stage1.prompt.md").read_text()
+    assert "(none)" in prompt

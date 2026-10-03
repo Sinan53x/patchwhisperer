@@ -26,7 +26,7 @@ Today's game state date: {{as_of_date}}. The most recent patch is {{latest_patch
 
 Synthesize one coherent current state. Where sources disagree, prefer the newer source and the data, and record the disagreement in `notes`. Where a hero has no creator coverage, infer from the snapshot and recent patch notes and set a low-confidence `why` that says so.
 
-1. **meta_md** in exactly the structure used by the KB (see below), <= 400 words.
+1. **meta_md** in exactly the structure used by the KB (see below), <= 550 words.
 2. **heroes**: an entry for every hero listed. `role` is a short label (e.g. "gun carry", "spirit burst caster", "tank initiator"). `archetypes` uses this vocabulary: gun carry, spirit carry, burst caster, tank/frontline, lane bully, late scaler, mobile assassin, support/healer, split pusher, initiator, poke/siege. `core_items` 3-6 canonical item names the hero almost always builds. `build_variants` short labels ("gun build", "spirit ult build"). `enabled_by` items or systems that make the hero good right now; `countered_by` heroes/items that beat them. `why` present-tense 1-2 sentences. `trend` from the trajectory across sources.
 3. **items**: entries for every item that appears in any hero's `core_items` or `build_variants`, plus every item touched in the recent patches. `bought_by` lists heroes that build it.
 
@@ -37,6 +37,7 @@ Last patch: <title> (<date>)
 
 ## Thesis
 ## Economy and systems
+## Map — current map state in present tense: lanes/districts, objectives with timings and values where known, farm sources (Haunt tiers, crates/boxes, Sinner's Sacrifice variants, Buff Containers), pickups (Healing Snacks, Steam Vents), side asymmetry, key routes. Keep it when nothing changed.
 ## Archetype standing
 ## Watchlist
 ## Recent history
