@@ -1,0 +1,806 @@
+{
+ "patch_id": "2026-10-05-1845383656394833",
+ "patch_title": "Minor Update - 10-05-2026",
+ "systems": {
+  "systems_changed": [
+   {
+    "system": "lane troopers / wave tempo",
+    "change_summary": "Troopers were walking too slowly in lane; the bug fix restores intended trooper movement speed, so waves arrive, meet and crash on schedule again. This is a regression repair, not a tuning pass — it re-enables normal lane cadence rather than making troopers faster than baseline.",
+    "driving_changes": [
+     "[fix] Fixed bugs that were causing troopers to walk too slowly in lane"
+    ],
+    "magnitude": "minor",
+    "effect_on_play": "Restores predictable wave timing for last-hits, freeze and push, and re-opens the standard dive/punish windows on an enemy who is stuck under a slow wave. Since the KB says the lead engine sits in the map economy (Tough Crates, Haunt camps, hub fights) rather than the lane, the practical impact is small — it mostly removes an unintended quality-of-life drag on lane phase rather than changing who wins."
+   }
+  ],
+  "tempo_shift": {
+   "direction": "neutral",
+   "confidence": 0.6,
+   "why": "Fixing trooper speed only restores baseline lane tempo; it adds no new early snowball or comeback lever, and the KB lead engine (map economy, no comeback valve) is untouched. Faintly toward tempo at best, because normal wave timing makes lane pressure and crashes land as designed again."
+  },
+  "archetype_effects": [
+   {
+    "archetype": "lane bully",
+    "direction": "up",
+    "magnitude": "minor",
+    "why": "On-schedule trooper speed restores the wave-crash timing that makes bullying and dive-punish windows land reliably."
+   },
+   {
+    "archetype": "split pusher",
+    "direction": "up",
+    "magnitude": "minor",
+    "why": "Reliable trooper pathing makes pushed waves and side-lane pressure convert at the intended cadence rather than stalling."
+   },
+   {
+    "archetype": "late scaler",
+    "direction": "neutral",
+    "magnitude": "minor",
+    "why": "No economy, comeback or objective change accompanies the fix; the Broker stall window and trimmed comeback bounties are unchanged."
+   }
+  ],
+  "intent_read": "Valve appears to be patching a regression from the City Never Sleeps map/trooper rework, not steering the meta. The intent is to make lane phase behave as originally designed; the game's lead engine (map economy, no comeback valve) is deliberately left untouched."
+ },
+ "items": {
+  "items": [],
+  "notable_item_stories": []
+ },
+ "heroes": {
+  "heroes": [
+   {
+    "hero": "Rat King",
+    "in_notes": true,
+    "direction": "down",
+    "magnitude": "moderate",
+    "confidence": 0.55,
+    "direct_reasons": [
+     "Rule, Ratannia! gutted: cooldown 130->160, damage reduction 20->15%, radius 24->20m, charge duration 12->10s.",
+     "Ult talents stripped: T1 loses -20s cooldown, T2 loses +8s charge, T3 DR 15->10% (total DR 35->25%).",
+     "Bonus move speed no longer scales with Spirit, devaluing any spirit stacking for the banner.",
+     "Base kit buffed: Scrap Grenade 65->70 (T2 too), Rat Swarm cooldown 28->24s, grenade bounce targeting fixed."
+    ],
+    "indirect_reasons": [
+     "Trooper speed fix restores on-schedule wave crashes for his lane-bully archetype (minor)."
+    ],
+    "build_changes": [
+     "Gun bruiser core unchanged and slightly favored (grenade +5, swarm -4s CD); drop any spirit-stack-for-ult-movespeed plan."
+    ],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Banner ult is far weaker and base kit tweaked up; still strong, and the 61% WR was the target."
+   },
+   {
+    "hero": "Sinclair",
+    "in_notes": true,
+    "direction": "down",
+    "magnitude": "moderate",
+    "confidence": 0.55,
+    "direct_reasons": [
+     "Base HP regen 2->1 and gun falloff 25-61->20-60 (also on Spectral Assistant) cut lane sustain and range.",
+     "Bullet base damage 17.76->16.5 weakens both the gun-hybrid lane and assistant poke.",
+     "Rabbit Hex radius 6.5->6m and T3 +3->+2m shrink the duration build's utility.",
+     "Audience Participation copy duration 12->9s and copied cooldown 40%->60% blunt his kit-steal win-condition.",
+     "Vexing Bolt now does half damage to objectives, cutting structure pressure."
+    ],
+    "indirect_reasons": [],
+    "build_changes": [
+     "Spirit Duration build now leans harder on stealing a strong enemy kit; value the gun-hybrid lane opener less."
+    ],
+    "tier_before": "C",
+    "tier_after": "C",
+    "one_liner": "Broad trim to an already-weak kit-steal pick; lane, utility and ult all worse."
+   },
+   {
+    "hero": "Paige",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.45,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Trooper speed fix restores lane cadence, and her tempo-support identity trades on lane pressure (KB lane bully)."
+    ],
+    "build_changes": [],
+    "tier_before": "S",
+    "tier_after": "S",
+    "one_liner": "No direct change; lane-cadence fix marginally helps her already-top lane pressure."
+   },
+   {
+    "hero": "Billy",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.4,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Trooper fix restores wave timing that his lane-bully all-in depends on."
+    ],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Marginal lane-cadence help; his real slide (slot lost to Mo & Krill) is unchanged."
+   },
+   {
+    "hero": "Apollo",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.4,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Trooper fix restores lane crash timing for his lane-bully pressure."
+    ],
+    "build_changes": [],
+    "tier_before": "S",
+    "tier_after": "S",
+    "one_liner": "No change; lane-cadence fix trims a hair off his lane edge, still top-frontline."
+   },
+   {
+    "hero": "Mirage",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.4,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Trooper fix restores intended wave pathing, so pushed side-lane pressure converts on schedule for a split pusher."
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Tiny split-push QoL from the trooper fix; the tempo economy still buries his scaling."
+   },
+   {
+    "hero": "Graves",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.35,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Trooper fix restores wave pathing for her split-push line."
+    ],
+    "build_changes": [],
+    "tier_before": "C",
+    "tier_after": "C",
+    "one_liner": "Marginal split-push help; her no-comeback early game is still the problem."
+   },
+   {
+    "hero": "Infernus",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "No change; burn gun/spirit carry unaffected, and the unverified napalm-amp removal isn't in these notes."
+   },
+   {
+    "hero": "Seven",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "No change; farm-first AoE carry still matches the crate/camp economy."
+   },
+   {
+    "hero": "Vindicta",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.7,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "No change; range-poke carry holds A, anti-air flyer tax unchanged."
+   },
+   {
+    "hero": "Lady Geist",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "No change; regen bruiser keeps rising on sustain-friendly camps."
+   },
+   {
+    "hero": "Abrams",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "No change; melee tank initiator steady."
+   },
+   {
+    "hero": "Wraith",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "No change; pure-gun rebuild after 09-16 stands."
+   },
+   {
+    "hero": "McGinnis",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "No change; turret/wall controller steady."
+   },
+   {
+    "hero": "Paradox",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "No change; roamer pick initiator unchanged."
+   },
+   {
+    "hero": "Dynamo",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "No change; tempo initiator holds A."
+   },
+   {
+    "hero": "Kelvin",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "No change; dome sustain support steady."
+   },
+   {
+    "hero": "Haze",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "No change; Fixation tempo carry, weak T4 gun ceiling still caps her."
+   },
+   {
+    "hero": "Holliday",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "No change; mobile pick assassin holds A."
+   },
+   {
+    "hero": "Bebop",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.7,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "No change; hook initiator keeps sliding as the roamer slot tilts to Paradox."
+   },
+   {
+    "hero": "Calico",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.7,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "No change; lane-winning assassin steady (tempo gains already priced in)."
+   },
+   {
+    "hero": "Grey Talon",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "C",
+    "tier_after": "C",
+    "one_liner": "No change; poke/flyer carry still bottom of the board."
+   },
+   {
+    "hero": "Mo & Krill",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "No change; default sustained frontline holds A."
+   },
+   {
+    "hero": "Shiv",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "No change; anti-tank bruiser keeps rising."
+   },
+   {
+    "hero": "Ivy",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "No change; default support holds A."
+   },
+   {
+    "hero": "Warden",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "C",
+    "tier_after": "C",
+    "one_liner": "No change; late gun scaler still punished by tempo."
+   },
+   {
+    "hero": "Yamato",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "No change; camp-clear burst assassin holds high A."
+   },
+   {
+    "hero": "Lash",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "S",
+    "tier_after": "S",
+    "one_liner": "No change; top initiator holds S."
+   },
+   {
+    "hero": "Viscous",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "No change; Cube enabler stable at B."
+   },
+   {
+    "hero": "Pocket",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "No change; late Affliction burst still lacks a comeback valve."
+   },
+   {
+    "hero": "Vyper",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "No change; Mercurial Magnum gut already priced in."
+   },
+   {
+    "hero": "Mina",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "C",
+    "tier_after": "C",
+    "one_liner": "No change; single-target burst still can't kill tanks."
+   },
+   {
+    "hero": "Drifter",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "No change; blind-pickable bruiser holds A."
+   },
+   {
+    "hero": "Venator",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "No change; default gun carry unchanged."
+   },
+   {
+    "hero": "Victor",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "No change; sustain frontline holds A."
+   },
+   {
+    "hero": "The Doorman",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "No change; setup initiator steady at B."
+   },
+   {
+    "hero": "Rem",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "No change; percent-HP heal support steady."
+   },
+   {
+    "hero": "Silver",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "S",
+    "tier_after": "S",
+    "one_liner": "No change; gun tank holds S."
+   },
+   {
+    "hero": "Celeste",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.75,
+    "direct_reasons": [],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "No change; flying burst carry still capped by the anti-air tax."
+   }
+  ]
+ },
+ "synthesis": {
+  "patch_size": "minor",
+  "size_why": "The defining move is a regression repair (trooper speed restored) plus targeted trims to two outliers (Rat King, Sinclair); there are no systems, economy, objective, or item changes, so the way games are won is untouched. Twenty-five line items sounds broad, but they cluster as tuning/fixes, not structural shifts.",
+  "headline": "A regression-repair patch: lane wave tempo is fixed and two outliers are trimmed, but the map-economy lead engine is deliberately left alone.",
+  "meta_thesis": {
+   "previous": "Games are won in the map economy — guaranteed Tough Crate routes, Haunt camp farming and telegraphed hub fights — not the lane, with no comeback valve and late scalers only relieved by The Broker's ~30-min stall window.",
+   "new": "The shape is unchanged: the map-economy lead engine still decides games, and this patch only restores intended lane wave cadence and trims two outliers. Restored trooper speed marginally re-weights the lane versus camp farming, but no economy, objective, item or comeback lever moved.",
+   "relationship": "continuation",
+   "why": "Drivers are the trooper-speed regression fix (restores baseline lane cadence, not a new tempo lever) and the Rat King/Sinclair kit trims; nothing touches souls, bounties, objectives or The Broker."
+  },
+  "winners": [
+   {
+    "hero": "Apollo",
+    "why": "On-schedule wave crashes restore his lane-bully punish windows, and Rat King's frontline trim thins the competing A-tier bruiser pool.",
+    "indirect": true
+   },
+   {
+    "hero": "Paige",
+    "why": "Lane-cadence fix maximizes the wave pressure her tempo-support identity trades on; still S.",
+    "indirect": true
+   },
+   {
+    "hero": "Billy",
+    "why": "Restored wave timing helps his lane-bully all-in, though his real slide (slot lost to Mo & Krill) is unchanged.",
+    "indirect": true
+   },
+   {
+    "hero": "Mirage",
+    "why": "Reliable trooper pathing lets split-push side-lane pressure convert on schedule instead of stalling.",
+    "indirect": true
+   }
+  ],
+  "losers": [
+   {
+    "hero": "Rat King",
+    "why": "Banner ult gutted — cooldown 130->160, DR 20->15%, radius 24->20m, charge 12->10s, plus T1/T2/T3 talent strips (total DR 35->25%) — hitting the 61% WR outlier.",
+    "indirect": false
+   },
+   {
+    "hero": "Sinclair",
+    "why": "Broad trim across lane, utility and ult — HP regen 2->1, gun falloff and bullet damage down, Rabbit Hex radius down, ult copy duration 12->9s / cooldown 40%->60%, Vexing Bolt halved on objectives.",
+    "indirect": false
+   },
+   {
+    "hero": "Sinclair duration build",
+    "why": "With Hex radius and copy duration both cut, the duration-spirit build now leans entirely on stealing a strong enemy kit to function.",
+    "indirect": false
+   }
+  ],
+  "non_obvious_calls": [
+   {
+    "claim": "The trooper 'bug fix' is effectively a partial, unintended walk-back of the City Never Sleeps lane de-emphasis — it re-weights lane tempo upward against camp farming.",
+    "why": "Restoring wave-crash timing re-opens dive/punish windows, benefiting lane bullies and split pushers the KB had ranked below AoE camp clearers.",
+    "confidence": 0.45
+   },
+   {
+    "claim": "Rat King stays A-tier despite the ult gutting; don't move him down a tier.",
+    "why": "Base-kit buffs (Scrap Grenade 65->70, Rat Swarm 28->24s, bounce targeting fixed) offset the banner nerf, so this is a correction toward 50%, not a burial.",
+    "confidence": 0.55
+   },
+   {
+    "claim": "The quiet kill in this patch is Sinclair's Vexing Bolt doing half damage to objectives — a kit-steal pick's only structure pressure removed.",
+    "why": "He was already C-tier per the KB; stripping objective damage leaves the pick with almost no win-condition beyond stealing a meta kit.",
+    "confidence": 0.5
+   },
+   {
+    "claim": "The single largest number swing here is Rat King's total banner DR going 35->25%, a team-fight-identity nerf, not a solo-stat trim.",
+    "why": "Base 20->15% plus T3 15->10% compounds to a 10-point swing, hitting the AoE damage-reduction aura his comp play revolved around.",
+    "confidence": 0.6
+   }
+  ],
+  "uncertainties": [
+   "The summary reports 25 general changes but only the trooper fix and two hero kits surfaced — other tuning may have landed unlisted.",
+   "Whether the trooper speed fix over-corrects to faster-than-baseline waves rather than restoring the intended cadence.",
+   "Whether Rat King's nerf is large enough to move a 61% WR toward 50% or just trims the ceiling.",
+   "Whether Sinclair was already weak enough that this is a correction or a full burial, since no snapshot WR was given."
+  ],
+  "what_to_watch": [
+   "Rat King win rate post-patch — does it fall below ~55%, validating the nerf?",
+   "Sinclair pick rate — near-zero confirms the kit-steal slot is dead.",
+   "Lane-phase dive/kill stats vs camp-farm souls — did restoring wave speed actually re-raise lane-bully WRs?",
+   "Any follow-up hotfix to Tough Crates, still the KB's flagged farm-route risk."
+  ]
+ },
+ "pool": {
+  "verdicts": [
+   {
+    "hero": "Venator",
+    "verdict": "keep",
+    "one_liner": "Untouched default gun carry; no patch lever moves him.",
+    "direct": "No direct changes.",
+    "indirect": "No item, system, or economy change lands on his path; the trooper-cadence fix only touches lane timing he already wins with Weakening Headshot.",
+    "build_adjustments": [],
+    "confidence": 0.72
+   },
+   {
+    "hero": "Haze",
+    "verdict": "keep",
+    "one_liner": "Untouched tempo carry; trooper fix marginally helps her lane-win path.",
+    "direct": "No direct changes.",
+    "indirect": "Restored wave cadence slightly re-weights the lane her Fixation tempo trades on; no item change to her core and her T4 ceiling problem persists.",
+    "build_adjustments": [],
+    "confidence": 0.7
+   },
+   {
+    "hero": "Wraith",
+    "verdict": "keep",
+    "one_liner": "Untouched pure-gun rebuild; the patch is lane-neutral for her.",
+    "direct": "No direct changes.",
+    "indirect": "No item or system shift touches her post-09-16 gun build; the trooper fix gives her nothing her lane plan wasn't already doing.",
+    "build_adjustments": [],
+    "confidence": 0.72
+   },
+   {
+    "hero": "Warden",
+    "verdict": "keep",
+    "one_liner": "Untouched; still C-tier late scaler the tempo economy won't wait for.",
+    "direct": "No direct changes.",
+    "indirect": "Nothing here addresses or worsens his core problem — a no-comeback, farm-route economy that ends before he scales.",
+    "build_adjustments": [],
+    "confidence": 0.7
+   },
+   {
+    "hero": "Shiv",
+    "verdict": "keep",
+    "one_liner": "Untouched anti-tank; Rat King trim slightly thins the frontline pool he farms.",
+    "direct": "No direct changes.",
+    "indirect": "Rat King's frontline nerf removes a bruiser rival, a marginal plus for an anti-tank who feeds on frontlines, but his real driver (the tank meta) is unchanged.",
+    "build_adjustments": [],
+    "confidence": 0.62
+   },
+   {
+    "hero": "Yamato",
+    "verdict": "keep",
+    "one_liner": "Untouched camp-clear burst assassin; her niche is left alone.",
+    "direct": "No direct changes.",
+    "indirect": "No item or system change touches her; she stays the camp-clear/mobile-burst pick with the same sustain-tank counters.",
+    "build_adjustments": [],
+    "confidence": 0.72
+   },
+   {
+    "hero": "Mina",
+    "verdict": "keep",
+    "one_liner": "Untouched; her C-tier damage gap is a rework problem, not this patch's.",
+    "direct": "No direct changes.",
+    "indirect": "No lever in this patch helps or hurts her; single-target burst into tank fronts still fails exactly as before.",
+    "build_adjustments": [],
+    "confidence": 0.72
+   },
+   {
+    "hero": "Paradox",
+    "verdict": "keep",
+    "one_liner": "Untouched roamer pick; no item or system shift touches her identity.",
+    "direct": "No direct changes.",
+    "indirect": "Nothing in the patch moves her sniper/roam setup or her mobile-diver counters, so her rising trend carries on untouched.",
+    "build_adjustments": [],
+    "confidence": 0.72
+   },
+   {
+    "hero": "Mirage",
+    "verdict": "keep",
+    "one_liner": "Small split-push QoL from the trooper fix; the economy still buries him.",
+    "direct": "No direct changes.",
+    "indirect": "Restored wave cadence lets pushed side-lane pressure convert on schedule, a real but tiny QoL for a split pusher; the tempo economy that kills his scaling is untouched.",
+    "build_adjustments": [
+     "Keep side-lane pressure on schedule — push now converts instead of stalling."
+    ],
+    "confidence": 0.6
+   },
+   {
+    "hero": "Infernus",
+    "verdict": "keep",
+    "one_liner": "Untouched; both builds and his farm-route economy are exactly as before.",
+    "direct": "No direct changes.",
+    "indirect": "No item or system pressure lands on Dashfernus or the burn gun line; the reported napalm-amp removal is not in these notes.",
+    "build_adjustments": [],
+    "confidence": 0.75
+   },
+   {
+    "hero": "Holliday",
+    "verdict": "keep",
+    "one_liner": "Untouched mobile pick assassin; no lever in this patch moves her.",
+    "direct": "No direct changes.",
+    "indirect": "Her roam/Spirit-Lasso pick identity is untouched and no item she buys was changed.",
+    "build_adjustments": [],
+    "confidence": 0.72
+   },
+   {
+    "hero": "Drifter",
+    "verdict": "keep",
+    "one_liner": "Untouched blind-pick bruiser; Sinclair's nerf barely touches his prey pool.",
+    "direct": "No direct changes.",
+    "indirect": "Sinclair's broad trim weakens a matchup he already won (57-59%), a negligible effect on a hero whose value is the blind-pick frontline floor.",
+    "build_adjustments": [],
+    "confidence": 0.7
+   },
+   {
+    "hero": "Billy",
+    "verdict": "watch",
+    "one_liner": "Lane-cadence fix slightly helps his all-in, but his slot keeps sliding.",
+    "direct": "No direct changes.",
+    "indirect": "Restored trooper timing re-opens the lane punish windows his bully all-in depends on — a real but uncertain-size tailwind; his front-line slot erosion to Mo & Krill continues regardless.",
+    "build_adjustments": [
+     "Play for early lane kills — wave crashes are back on schedule."
+    ],
+    "confidence": 0.45
+   }
+  ]
+ },
+ "kb_update": null,
+ "usage": {
+  "prompt_tokens": 64951,
+  "completion_tokens": 22300,
+  "stage_seconds": {
+   "1": 11.140552043914795,
+   "2": 1.9494199752807617,
+   "3": 73.6532051563263,
+   "4": 31.895129203796387,
+   "5": 28.213702917099
+  }
+ }
+}

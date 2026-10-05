@@ -1,0 +1,83 @@
+# Task: item analysis
+
+Patch: Minor Update - 10-05-2026 (2026-10-05)
+
+## Systems analysis of this patch (already done)
+
+{
+ "systems_changed": [
+  {
+   "system": "lane troopers / wave tempo",
+   "change_summary": "Troopers were walking too slowly in lane; the bug fix restores intended trooper movement speed, so waves arrive, meet and crash on schedule again. This is a regression repair, not a tuning pass — it re-enables normal lane cadence rather than making troopers faster than baseline.",
+   "driving_changes": [
+    "[fix] Fixed bugs that were causing troopers to walk too slowly in lane"
+   ],
+   "magnitude": "minor",
+   "effect_on_play": "Restores predictable wave timing for last-hits, freeze and push, and re-opens the standard dive/punish windows on an enemy who is stuck under a slow wave. Since the KB says the lead engine sits in the map economy (Tough Crates, Haunt camps, hub fights) rather than the lane, the practical impact is small — it mostly removes an unintended quality-of-life drag on lane phase rather than changing who wins."
+  }
+ ],
+ "tempo_shift": {
+  "direction": "neutral",
+  "confidence": 0.6,
+  "why": "Fixing trooper speed only restores baseline lane tempo; it adds no new early snowball or comeback lever, and the KB lead engine (map economy, no comeback valve) is untouched. Faintly toward tempo at best, because normal wave timing makes lane pressure and crashes land as designed again."
+ },
+ "archetype_effects": [
+  {
+   "archetype": "lane bully",
+   "direction": "up",
+   "magnitude": "minor",
+   "why": "On-schedule trooper speed restores the wave-crash timing that makes bullying and dive-punish windows land reliably."
+  },
+  {
+   "archetype": "split pusher",
+   "direction": "up",
+   "magnitude": "minor",
+   "why": "Reliable trooper pathing makes pushed waves and side-lane pressure convert at the intended cadence rather than stalling."
+  },
+  {
+   "archetype": "late scaler",
+   "direction": "neutral",
+   "magnitude": "minor",
+   "why": "No economy, comeback or objective change accompanies the fix; the Broker stall window and trimmed comeback bounties are unchanged."
+  }
+ ],
+ "intent_read": "Valve appears to be patching a regression from the City Never Sleeps map/trooper rework, not steering the meta. The intent is to make lane phase behave as originally designed; the game's lead engine (map economy, no comeback valve) is deliberately left untouched."
+}
+
+## Item changes in this patch (grouped by item)
+
+
+
+## Knowledge base: the changed items (who buys them and why)
+
+(none)
+
+## Knowledge base: heroes whose core_items or build_variants include a changed item
+
+(none)
+
+## What to do
+
+For each changed item, decide the net direction and magnitude, then trace the consequence to heroes: who has it as a core slot, who used it situationally, and who might now pick it up. Note build-path changes (component changes, slot moves, what it now competes with). Think about the systems context: an item that was good because of the old economy may be worse even if its numbers went up, and vice versa.
+
+Group multiple lines for the same item into one entry. Skip pure bug fixes unless the fix meaningfully changes an interaction (then say which heroes it affects).
+
+Magnitude guide: minor = tuning that will not change who buys it; moderate = changes timing or priority in builds; major = adds or removes the item from core builds, or changes what it does.
+
+## Output schema
+
+{
+  "items": [
+    {
+      "item": "canonical item name",
+      "direction": "buff|nerf|rework|neutral",
+      "magnitude": "minor|moderate|major",
+      "summary": "1-2 sentences of consequence, not restatement",
+      "affected_heroes": [
+        {"hero": "hero name", "relationship": "core|situational|new_option", "effect": "up|down|neutral", "why": "1 sentence"}
+      ],
+      "build_shift": "optional 1 sentence on component/slot/competition changes, or empty string"
+    }
+  ],
+  "notable_item_stories": ["0-3 one-sentence cross-item stories, e.g. 'invisibility items were buffed together, expect Shadow Weave on more gun carries'"]
+}

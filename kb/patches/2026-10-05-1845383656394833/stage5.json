@@ -1,0 +1,125 @@
+{
+ "verdicts": [
+  {
+   "hero": "Venator",
+   "verdict": "keep",
+   "one_liner": "Untouched default gun carry; no patch lever moves him.",
+   "direct": "No direct changes.",
+   "indirect": "No item, system, or economy change lands on his path; the trooper-cadence fix only touches lane timing he already wins with Weakening Headshot.",
+   "build_adjustments": [],
+   "confidence": 0.72
+  },
+  {
+   "hero": "Haze",
+   "verdict": "keep",
+   "one_liner": "Untouched tempo carry; trooper fix marginally helps her lane-win path.",
+   "direct": "No direct changes.",
+   "indirect": "Restored wave cadence slightly re-weights the lane her Fixation tempo trades on; no item change to her core and her T4 ceiling problem persists.",
+   "build_adjustments": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Wraith",
+   "verdict": "keep",
+   "one_liner": "Untouched pure-gun rebuild; the patch is lane-neutral for her.",
+   "direct": "No direct changes.",
+   "indirect": "No item or system shift touches her post-09-16 gun build; the trooper fix gives her nothing her lane plan wasn't already doing.",
+   "build_adjustments": [],
+   "confidence": 0.72
+  },
+  {
+   "hero": "Warden",
+   "verdict": "keep",
+   "one_liner": "Untouched; still C-tier late scaler the tempo economy won't wait for.",
+   "direct": "No direct changes.",
+   "indirect": "Nothing here addresses or worsens his core problem — a no-comeback, farm-route economy that ends before he scales.",
+   "build_adjustments": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Shiv",
+   "verdict": "keep",
+   "one_liner": "Untouched anti-tank; Rat King trim slightly thins the frontline pool he farms.",
+   "direct": "No direct changes.",
+   "indirect": "Rat King's frontline nerf removes a bruiser rival, a marginal plus for an anti-tank who feeds on frontlines, but his real driver (the tank meta) is unchanged.",
+   "build_adjustments": [],
+   "confidence": 0.62
+  },
+  {
+   "hero": "Yamato",
+   "verdict": "keep",
+   "one_liner": "Untouched camp-clear burst assassin; her niche is left alone.",
+   "direct": "No direct changes.",
+   "indirect": "No item or system change touches her; she stays the camp-clear/mobile-burst pick with the same sustain-tank counters.",
+   "build_adjustments": [],
+   "confidence": 0.72
+  },
+  {
+   "hero": "Mina",
+   "verdict": "keep",
+   "one_liner": "Untouched; her C-tier damage gap is a rework problem, not this patch's.",
+   "direct": "No direct changes.",
+   "indirect": "No lever in this patch helps or hurts her; single-target burst into tank fronts still fails exactly as before.",
+   "build_adjustments": [],
+   "confidence": 0.72
+  },
+  {
+   "hero": "Paradox",
+   "verdict": "keep",
+   "one_liner": "Untouched roamer pick; no item or system shift touches her identity.",
+   "direct": "No direct changes.",
+   "indirect": "Nothing in the patch moves her sniper/roam setup or her mobile-diver counters, so her rising trend carries on untouched.",
+   "build_adjustments": [],
+   "confidence": 0.72
+  },
+  {
+   "hero": "Mirage",
+   "verdict": "keep",
+   "one_liner": "Small split-push QoL from the trooper fix; the economy still buries him.",
+   "direct": "No direct changes.",
+   "indirect": "Restored wave cadence lets pushed side-lane pressure convert on schedule, a real but tiny QoL for a split pusher; the tempo economy that kills his scaling is untouched.",
+   "build_adjustments": [
+    "Keep side-lane pressure on schedule — push now converts instead of stalling."
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Infernus",
+   "verdict": "keep",
+   "one_liner": "Untouched; both builds and his farm-route economy are exactly as before.",
+   "direct": "No direct changes.",
+   "indirect": "No item or system pressure lands on Dashfernus or the burn gun line; the reported napalm-amp removal is not in these notes.",
+   "build_adjustments": [],
+   "confidence": 0.75
+  },
+  {
+   "hero": "Holliday",
+   "verdict": "keep",
+   "one_liner": "Untouched mobile pick assassin; no lever in this patch moves her.",
+   "direct": "No direct changes.",
+   "indirect": "Her roam/Spirit-Lasso pick identity is untouched and no item she buys was changed.",
+   "build_adjustments": [],
+   "confidence": 0.72
+  },
+  {
+   "hero": "Drifter",
+   "verdict": "keep",
+   "one_liner": "Untouched blind-pick bruiser; Sinclair's nerf barely touches his prey pool.",
+   "direct": "No direct changes.",
+   "indirect": "Sinclair's broad trim weakens a matchup he already won (57-59%), a negligible effect on a hero whose value is the blind-pick frontline floor.",
+   "build_adjustments": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Billy",
+   "verdict": "watch",
+   "one_liner": "Lane-cadence fix slightly helps his all-in, but his slot keeps sliding.",
+   "direct": "No direct changes.",
+   "indirect": "Restored trooper timing re-opens the lane punish windows his bully all-in depends on — a real but uncertain-size tailwind; his front-line slot erosion to Mo & Krill continues regardless.",
+   "build_adjustments": [
+    "Play for early lane kills — wave crashes are back on schedule."
+   ],
+   "confidence": 0.45
+  }
+ ]
+}

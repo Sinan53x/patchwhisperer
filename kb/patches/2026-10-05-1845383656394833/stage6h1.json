@@ -1,0 +1,40 @@
+{
+ "hero_updates": {
+  "Rat King": {
+   "trend": "stable",
+   "why": "Strong crate/camp/hub fit, but his banner team-fight identity was cut back — Rule, Ratannia! DR 35->25% total (20->15% base + T3 15->10%), radius 24->20m, cooldown 130->160, charge 12->10s and no more Spirit-scaled move speed. Scrap Grenade 65->70 and Rat Swarm 28->24s keep the gun-bruiser core live, so this reads as a correction toward 50% rather than a burial — still A.",
+   "last_changed_patch": "Minor Update - 10-05-2026",
+   "notes": "10-05: banner ult gutted — CD 130->160, DR 20->15%, radius 24->20m, charge 12->10s, move speed no longer Spirit-scaled, ult talents stripped (T1 -20s CD, T2 +8s charge, T3 DR 15->10%: total DR 35->25%); base kit buffed (Scrap Grenade 65->70, Rat Swarm CD 28->24s, grenade bounce targeting fixed). Nerf targets the 61% WR outlier, so tier holds at A.\n\nDay-0 kit read (2026-10-03), provisional — data check-in due 2026-10-09.\nFirst-week 59.4% WR / 8.5% PR is novelty-inflated; the crate/camp/hub fit is the reason to start at A, not the raw WR. Raise if he holds >52% with a settled gun build; drop if swarm/vitality builds and spirit-burst counters dominate. A Tough Crate hotfix (on the meta watchlist) would cut his farm-route value."
+  },
+  "Sinclair": {
+   "trend": "falling",
+   "why": "Coin-flip kit-steal pick trimmed across the whole kit — lane (HP regen 2->1, bullet 17.76->16.5, falloff 25-61->20-60), utility (Rabbit Hex radius 6.5->6m / T3 +3->+2m) and ult (copy duration 12->9s, copied-kit CD 40%->60%) — so his already-thin win-condition leans entirely on stealing a strong enemy kit, with Vexing Bolt's objective damage halved.",
+   "last_changed_patch": "Minor Update - 10-05-2026",
+   "notes": "10-05: broad trim — HP regen 2->1, gun falloff 25-61->20-60 (also on Spectral Assistant), bullet 17.76->16.5, Rabbit Hex radius 6.5->6m / T3 +3->+2m, Audience Participation copy 12->9s and copied-kit CD 40%->60%, Vexing Bolt halved vs objectives. Still C; the objective-damage cut removes his only structure pressure.\n\nChangelog: 09-16 - no Sinclair line; divers that beat him gained from the tempo push, his winning matchups (Wraith, Paradox) shrink, and no spirit/duration item moved. Net flat.\n\nData disagrees with creators: no Echo Shard in the top-15 buys (30d, high rank); the build is duration/cooldown spirit."
+  },
+  "Apollo": {
+   "notes": "10-05: no direct change; the trooper-speed regression fix restores on-schedule lane crashes for his bully pressure (net near-neutral for an already top frontline), and Rat King's frontline trim thins the competing A-tier bruiser pool."
+  },
+  "Paige": {
+   "notes": "10-05: no direct change; the trooper-speed fix restores lane-wave cadence, marginally boosting the lane pressure her tempo-support identity trades on — still S.\n\n09-29 City Never Sleeps: no direct change; lane-adjacent crate routes and Healing Snacks reward her lane pressure, and the contested hubs suit her carry-snowball (peercontent).\n\nChangelog: 09-16 - heavy-melee spirit scaling 0.3->0.45, Captivating Read T1 -11->-14s / T3 +1m->+2m; Slowing Hex cd 27->29s is a minor tax."
+  },
+  "Billy": {
+   "notes": "10-05: no direct change; the trooper-speed fix marginally helps his lane-bully all-in, but his real slide (front-line slot lost to rising Mo & Krill, anti-tank Shiv climbing) is unchanged.\n\n09-29 City Never Sleeps: no direct change; the crate/camp-uptime meta wants sustained presence and his front-line slot moved to rising Mo & Krill, with anti-tank Shiv climbing - S was popularity-supported, so slides to A (peercontent, unverified).\n\nChangelog: 09-16 - no direct line; item tailwinds (Lifestrike heal/slow, Fortitude regen) and the lane-wins meta supported him."
+  },
+  "Mirage": {
+   "notes": "10-05: no direct change; the trooper-speed fix restores intended wave pathing so his split-push side-lane pressure converts on schedule — tiny QoL, but the tempo economy still buries his scaling.\n\nChangelog: 09-16 - no Mirage line; tier stays B; hurt by the gutted comeback/tempo system changes, partially offset by the Toxic Bullets scaling buff in his spirit-amp core.\n\nData over creators: 30-day high-rank usage shows a spirit-amp hybrid core (Mystic Regen/Healbane/Mystic Vulnerability), not the Echo Shard-Scourge-Inhibitor build the summer creators cited - Echo Shard is ~0% now."
+  },
+  "Graves": {
+   "notes": "10-05: no direct change; the trooper-speed fix marginally helps her split-push wave pathing, but her no-comeback early game is still the problem.\n\nChangelog: 09-16 - comeback souls trimmed and Rift resist made per-minute, removing her comeback path; health/boon 33->35 + Jar of Dead buffs are small; Toxic Bullets scaling buff is a marginal on-hit gain.\n\nCreator vegas (07-16) rates D; I rate C because 48.5% WR is bad but not collapse and 21% PR keeps her visible. heresy (09-17) gives no read."
+  }
+ },
+ "change_log": [
+  "Rat King: trend rising -> stable; tier held A (banner ult gutted — CD 130->160, DR 20->15%, radius 24->20m, charge 12->10s, Spirit move-speed scaling removed, talents stripped to total DR 35->25%; base kit buffed). why/notes rewritten, last_changed_patch set.",
+  "Sinclair: trend stable -> falling; tier held C (HP regen 2->1, bullet 17.76->16.5, falloff 25-61->20-60, Rabbit Hex radius cut, ult copy 12->9s and copied-kit CD 40%->60%, Vexing Bolt halved vs objectives). notes rewritten, last_changed_patch set.",
+  "Apollo: notes only — no direct change; trooper-speed fix + Rat King trim; tier S / trend rising unchanged.",
+  "Paige: notes only — no direct change; trooper-speed fix marginally helps lane pressure; tier S / trend rising unchanged.",
+  "Billy: notes only — no direct change; trooper-speed fix marginal, front-line slot slide unchanged; tier A / trend falling unchanged.",
+  "Mirage: notes only — no direct change; trooper-speed fix is minor split-push QoL; tier B / trend falling unchanged.",
+  "Graves: notes only — no direct change; trooper-speed fix marginal, no-comeback early game unchanged; tier C / trend falling unchanged."
+ ]
+}

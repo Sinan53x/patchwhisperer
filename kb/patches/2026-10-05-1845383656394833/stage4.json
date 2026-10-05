@@ -1,0 +1,84 @@
+{
+ "patch_size": "minor",
+ "size_why": "The defining move is a regression repair (trooper speed restored) plus targeted trims to two outliers (Rat King, Sinclair); there are no systems, economy, objective, or item changes, so the way games are won is untouched. Twenty-five line items sounds broad, but they cluster as tuning/fixes, not structural shifts.",
+ "headline": "A regression-repair patch: lane wave tempo is fixed and two outliers are trimmed, but the map-economy lead engine is deliberately left alone.",
+ "meta_thesis": {
+  "previous": "Games are won in the map economy — guaranteed Tough Crate routes, Haunt camp farming and telegraphed hub fights — not the lane, with no comeback valve and late scalers only relieved by The Broker's ~30-min stall window.",
+  "new": "The shape is unchanged: the map-economy lead engine still decides games, and this patch only restores intended lane wave cadence and trims two outliers. Restored trooper speed marginally re-weights the lane versus camp farming, but no economy, objective, item or comeback lever moved.",
+  "relationship": "continuation",
+  "why": "Drivers are the trooper-speed regression fix (restores baseline lane cadence, not a new tempo lever) and the Rat King/Sinclair kit trims; nothing touches souls, bounties, objectives or The Broker."
+ },
+ "winners": [
+  {
+   "hero": "Apollo",
+   "why": "On-schedule wave crashes restore his lane-bully punish windows, and Rat King's frontline trim thins the competing A-tier bruiser pool.",
+   "indirect": true
+  },
+  {
+   "hero": "Paige",
+   "why": "Lane-cadence fix maximizes the wave pressure her tempo-support identity trades on; still S.",
+   "indirect": true
+  },
+  {
+   "hero": "Billy",
+   "why": "Restored wave timing helps his lane-bully all-in, though his real slide (slot lost to Mo & Krill) is unchanged.",
+   "indirect": true
+  },
+  {
+   "hero": "Mirage",
+   "why": "Reliable trooper pathing lets split-push side-lane pressure convert on schedule instead of stalling.",
+   "indirect": true
+  }
+ ],
+ "losers": [
+  {
+   "hero": "Rat King",
+   "why": "Banner ult gutted — cooldown 130->160, DR 20->15%, radius 24->20m, charge 12->10s, plus T1/T2/T3 talent strips (total DR 35->25%) — hitting the 61% WR outlier.",
+   "indirect": false
+  },
+  {
+   "hero": "Sinclair",
+   "why": "Broad trim across lane, utility and ult — HP regen 2->1, gun falloff and bullet damage down, Rabbit Hex radius down, ult copy duration 12->9s / cooldown 40%->60%, Vexing Bolt halved on objectives.",
+   "indirect": false
+  },
+  {
+   "hero": "Sinclair duration build",
+   "why": "With Hex radius and copy duration both cut, the duration-spirit build now leans entirely on stealing a strong enemy kit to function.",
+   "indirect": false
+  }
+ ],
+ "non_obvious_calls": [
+  {
+   "claim": "The trooper 'bug fix' is effectively a partial, unintended walk-back of the City Never Sleeps lane de-emphasis — it re-weights lane tempo upward against camp farming.",
+   "why": "Restoring wave-crash timing re-opens dive/punish windows, benefiting lane bullies and split pushers the KB had ranked below AoE camp clearers.",
+   "confidence": 0.45
+  },
+  {
+   "claim": "Rat King stays A-tier despite the ult gutting; don't move him down a tier.",
+   "why": "Base-kit buffs (Scrap Grenade 65->70, Rat Swarm 28->24s, bounce targeting fixed) offset the banner nerf, so this is a correction toward 50%, not a burial.",
+   "confidence": 0.55
+  },
+  {
+   "claim": "The quiet kill in this patch is Sinclair's Vexing Bolt doing half damage to objectives — a kit-steal pick's only structure pressure removed.",
+   "why": "He was already C-tier per the KB; stripping objective damage leaves the pick with almost no win-condition beyond stealing a meta kit.",
+   "confidence": 0.5
+  },
+  {
+   "claim": "The single largest number swing here is Rat King's total banner DR going 35->25%, a team-fight-identity nerf, not a solo-stat trim.",
+   "why": "Base 20->15% plus T3 15->10% compounds to a 10-point swing, hitting the AoE damage-reduction aura his comp play revolved around.",
+   "confidence": 0.6
+  }
+ ],
+ "uncertainties": [
+  "The summary reports 25 general changes but only the trooper fix and two hero kits surfaced — other tuning may have landed unlisted.",
+  "Whether the trooper speed fix over-corrects to faster-than-baseline waves rather than restoring the intended cadence.",
+  "Whether Rat King's nerf is large enough to move a 61% WR toward 50% or just trims the ceiling.",
+  "Whether Sinclair was already weak enough that this is a correction or a full burial, since no snapshot WR was given."
+ ],
+ "what_to_watch": [
+  "Rat King win rate post-patch — does it fall below ~55%, validating the nerf?",
+  "Sinclair pick rate — near-zero confirms the kit-steal slot is dead.",
+  "Lane-phase dive/kill stats vs camp-farm souls — did restoring wave speed actually re-raise lane-bully WRs?",
+  "Any follow-up hotfix to Tough Crates, still the KB's flagged farm-route risk."
+ ]
+}

@@ -103,8 +103,6 @@ Infernus:
     that negates his low-HP kite game: Dynamo 41% and Bebop 43% (initiations/hooks)
     and Vyper 42%, a straight gun duel his HP cap can''t win.'
   confidence: 0.6
-  released_on: null
-  provisional: false
 Seven:
   name: Seven
   role: spirit carry
@@ -193,8 +191,6 @@ Seven:
     before his AoE is up, and to Abrams/Bebop, who either out-tank his burst or Hook
     him out of Storm Cloud range.
   confidence: 0.52
-  released_on: null
-  provisional: false
 Vindicta:
   name: Vindicta
   role: poke/siege carry
@@ -289,8 +285,6 @@ Vindicta:
     54%, Abrams 53%). Folds to mobile divers and burst that close the gap before she
     can kite — Lash 46%, Vyper 45%, Celeste 46% — the classic low-HP flyer weakness.
   confidence: 0.63
-  released_on: null
-  provisional: false
 Lady Geist:
   name: Lady Geist
   role: spirit bruiser
@@ -379,8 +373,6 @@ Lady Geist:
     throws/dives her before she scales, Drifter (A) wins the melee duel on tempo,
     and she has no positive matchup sample — low confidence.
   confidence: 0.55
-  released_on: null
-  provisional: false
 Abrams:
   name: Abrams
   role: tank initiator
@@ -486,8 +478,6 @@ Abrams:
     his engage, while Vyper (45%), Wraith (45%) and Celeste (45%) out-range or out-burst
     a static frontline.'
   confidence: 0.7
-  released_on: null
-  provisional: false
 Wraith:
   name: Wraith
   role: gun carry
@@ -583,8 +573,6 @@ Wraith:
     Mirage (56%). She folds to CC-and-dive she can''t out-range: Paige''s lane pressure
     (43%), Dynamo''s initiation (46%), Sinclair''s burst (46%).'
   confidence: 0.6
-  released_on: null
-  provisional: false
 McGinnis:
   name: McGinnis
   role: poke/siege controller
@@ -675,8 +663,6 @@ McGinnis:
     and bursts her before the wall matters. Small samples (150-230 games), so treat
     as directional.'
   confidence: 0.55
-  released_on: null
-  provisional: false
 Paradox:
   name: Paradox
   role: pick/sniper initiator
@@ -780,8 +766,6 @@ Paradox:
     anything that closes distance or dumps burst on her small HP pool: Yamato (43%),
     Lash (43%) and Holliday (43%) all dive her, and Celeste (43%) out-trades her outright.'
   confidence: 0.72
-  released_on: null
-  provisional: false
 Dynamo:
   name: Dynamo
   role: initiator/support
@@ -875,8 +859,6 @@ Dynamo:
     Mo & Krill 45%, Abrams 49%): they eat Singularity, can''t be repositioned, and
     outlast the cooldown, while Paige (51%) simply wins the lane in front of him.'
   confidence: 0.72
-  released_on: null
-  provisional: false
 Kelvin:
   name: Kelvin
   role: support/healer
@@ -965,8 +947,6 @@ Kelvin:
     and burst him before the dome lands, and his low mobility can''t disengage. Paradox
     (50%) is a coin flip; a pick initiator can swap him out of position.'
   confidence: 0.55
-  released_on: null
-  provisional: false
 Haze:
   name: Haze
   role: gun carry
@@ -1059,8 +1039,6 @@ Haze:
     (45%) and Ivy (43%) dive or out-sustain her low-mobility frame, and Paige (46%)
     wins the lane outright.'
   confidence: 0.68
-  released_on: null
-  provisional: false
 Holliday:
   name: Holliday
   role: mobile assassin
@@ -1163,8 +1141,6 @@ Holliday:
     Bebop''s hook, and Mo & Krill/Lash ults punish a low-HP assassin who has to commit
     on entry.'
   confidence: 0.6
-  released_on: null
-  provisional: false
 Bebop:
   name: Bebop
   role: hook initiator
@@ -1269,8 +1245,6 @@ Bebop:
     tanks (Billy 43%), sustain that erases the burst (Kelvin 42%), and a better initiator
     dictating fights (Dynamo 44%).'
   confidence: 0.6
-  released_on: null
-  provisional: false
 Calico:
   name: Calico
   role: mobile assassin
@@ -1362,8 +1336,6 @@ Calico:
     (Dynamo 43%, Victor 45%, Abrams 46%) — the same 'no kill through HP' problem creators
     flagged in April.
   confidence: 0.62
-  released_on: null
-  provisional: false
 Grey Talon:
   name: Grey Talon
   role: poke/siege carry
@@ -1473,8 +1445,6 @@ Grey Talon:
     Lash (36%) dashes past his poke and bursts him before the Owl lands, and Wraith/Paradox/Haze
     shut the same gap. Bebop sits at 46% both ways — treated as even.'
   confidence: 0.55
-  released_on: null
-  provisional: false
 Mo & Krill:
   name: Mo & Krill
   role: spirit tank initiator
@@ -1567,8 +1537,6 @@ Mo & Krill:
     S-tier frontline Billy (47%), who simply out-brawls him, and lane-winning Paige
     (47%).'
   confidence: 0.7
-  released_on: null
-  provisional: false
 Shiv:
   name: Shiv
   role: anti-tank spirit bruiser
@@ -1653,8 +1621,6 @@ Shiv:
     before his regen ramps: Yamato''s burst (42%), Drifter''s melee duel (44%), and
     Bebop''s hook (46%).'
   confidence: 0.6
-  released_on: null
-  provisional: false
 Ivy:
   name: Ivy
   role: support/healer
@@ -1757,8 +1723,6 @@ Ivy:
     tether matters, while Dynamo and Mo & Krill (48%) displace her out of tether range
     and stun past the Form window.'
   confidence: 0.62
-  released_on: null
-  provisional: false
 Warden:
   name: Warden
   role: gun carry
@@ -1849,8 +1813,6 @@ Warden:
     59%). He loses to lane bullies (Paige 47%), sustain (Ivy 48%), and durable fronts
     (Mo & Krill/Victor 50%) that tank the cage and out-tempo him before he scales.'
   confidence: 0.6
-  released_on: null
-  provisional: false
 Yamato:
   name: Yamato
   role: mobile burst assassin
@@ -1955,8 +1917,6 @@ Yamato:
     burst (Mo & Krill 42%, Abrams 42%) and to Celeste/Warden (41-42%) who outrange
     or CC her approach, while Counterspell and Dispel Magic delete the engage outright.
   confidence: 0.62
-  released_on: null
-  provisional: false
 Lash:
   name: Lash
   role: mobile initiator
@@ -2054,8 +2014,6 @@ Lash:
     and stuns punish his engage — while Dynamo (44%) simply out-initiates him in the
     5v5.
   confidence: 0.6
-  released_on: null
-  provisional: false
 Viscous:
   name: Viscous
   role: tank/enabler
@@ -2150,8 +2108,6 @@ Viscous:
     displacement punish a slow enabler, and Mo & Krill''s tank-sustain plus combo
     out-trades him; Drifter''s melee bruiser kit does the same.'
   confidence: 0.55
-  released_on: null
-  provisional: false
 Pocket:
   name: Pocket
   role: spirit carry
@@ -2249,8 +2205,6 @@ Pocket:
     to a low-HP caster: Celeste out-trades at range (39%), Warden''s root and gun
     pressure catch the dive (41%), and Drifter/Viscous stay glued to him (41%/44%).'
   confidence: 0.58
-  released_on: null
-  provisional: false
 Mirage:
   name: Mirage
   role: split-push hybrid carry
@@ -2291,15 +2245,19 @@ Mirage:
   - ranged gun carries (Warden)
   - tempo/snowball meta
   last_changed_patch: Minor Update - 07-28-2026
-  notes: 'Changelog: 09-16 - no Mirage line; tier stays B; hurt by the gutted comeback/tempo
+  notes: '10-05: no direct change; the trooper-speed fix restores intended wave pathing
+    so his split-push side-lane pressure converts on schedule — tiny QoL, but the
+    tempo economy still buries his scaling.
+
+
+    Changelog: 09-16 - no Mirage line; tier stays B; hurt by the gutted comeback/tempo
     system changes, partially offset by the Toxic Bullets scaling buff in his spirit-amp
     core.
 
+
     Data over creators: 30-day high-rank usage shows a spirit-amp hybrid core (Mystic
     Regen/Healbane/Mystic Vulnerability), not the Echo Shard-Scourge-Inhibitor build
-    the summer creators cited - Echo Shard is ~0% now.
-
-    Low confidence on whether the new air-drag slow interacts with Dust Devil''s lift.'
+    the summer creators cited - Echo Shard is ~0% now.'
   builds:
   - name: Spirit-amp hybrid
     damage: hybrid
@@ -2355,8 +2313,6 @@ Mirage:
     (silence/combo locks a slow caster), 44% vs Lash (S-tier dive displaces him off
     split-push).'
   confidence: 0.6
-  released_on: null
-  provisional: false
 Vyper:
   name: Vyper
   role: gun carry
@@ -2448,8 +2404,6 @@ Vyper:
     creator-flagged counters (Billy 50%, Silver/Venator) do NOT show in data - so
     treat ''she loses to CC'' as a comp-level problem, not a specific-hero counter.'
   confidence: 0.6
-  released_on: null
-  provisional: false
 Sinclair:
   name: Sinclair
   role: burst cast/steal
@@ -2457,12 +2411,12 @@ Sinclair:
   - burst caster
   - mobile assassin
   tier: C
-  trend: stable
-  why: Kit-steal coin-flip with no draft to force a favourable matchup (48.3% WR).
-    The tempo patch strengthens the gap-closing divers that already beat him (Lash,
-    Yamato, Holliday, Drifter) while his two winning lanes (Wraith, Paradox) are falling
-    archetypes getting rarer, and no item change touches his duration/cooldown spirit
-    build - net flat-to-slightly-down.
+  trend: falling
+  why: Coin-flip kit-steal pick trimmed across the whole kit — lane (HP regen 2->1,
+    bullet 17.76->16.5, falloff 25-61->20-60), utility (Rabbit Hex radius 6.5->6m
+    / T3 +3->+2m) and ult (copy duration 12->9s, copied-kit CD 40%->60%) — so his
+    already-thin win-condition leans entirely on stealing a strong enemy kit, with
+    Vexing Bolt's objective damage halved.
   core_items:
   - Greater Expansion
   - Superior Duration
@@ -2486,17 +2440,20 @@ Sinclair:
   - mobile divers and bruisers (Lash, Yamato, Holliday, Calico, Drifter)
   - Bebop hook
   - low base survivability
-  last_changed_patch: null
-  notes: 'Changelog: 09-16 - no Sinclair line; divers that beat him gained from the
-    tempo push, his winning matchups (Wraith, Paradox) shrink, and no spirit/duration
-    item moved. Net flat.
+  last_changed_patch: Minor Update - 10-05-2026
+  notes: '10-05: broad trim — HP regen 2->1, gun falloff 25-61->20-60 (also on Spectral
+    Assistant), bullet 17.76->16.5, Rabbit Hex radius 6.5->6m / T3 +3->+2m, Audience
+    Participation copy 12->9s and copied-kit CD 40%->60%, Vexing Bolt halved vs objectives.
+    Still C; the objective-damage cut removes his only structure pressure.
+
+
+    Changelog: 09-16 - no Sinclair line; divers that beat him gained from the tempo
+    push, his winning matchups (Wraith, Paradox) shrink, and no spirit/duration item
+    moved. Net flat.
+
 
     Data disagrees with creators: no Echo Shard in the top-15 buys (30d, high rank);
-    the build is duration/cooldown spirit, so the 07-16 ''Echo Shard bunny'' claim
-    is dated.
-
-    Low confidence: without drafting his tier is effectively an RNG function, and
-    the 48.3% WR is a 14-day near-pre-patch snapshot.'
+    the build is duration/cooldown spirit.'
   builds:
   - name: Spirit Duration
     damage: spirit
@@ -2535,8 +2492,6 @@ Sinclair:
     (44%) and rising divers Lash/Calico (47%): gap-closers, hooks and dive punish
     his low HP and his inability to pick a favourable setup without draft.'
   confidence: 0.42
-  released_on: null
-  provisional: false
 Mina:
   name: Mina
   role: mobile spirit assassin
@@ -2632,8 +2587,6 @@ Mina:
     44%) and to Ivy (40%), who out-heals her burst. Single-target burst into heroes
     that survive the first rotation is the whole story.
   confidence: 0.7
-  released_on: null
-  provisional: false
 Drifter:
   name: Drifter
   role: melee bruiser
@@ -2724,8 +2677,6 @@ Drifter:
     Mo & Krill (44-48%), who out-sustain his dive and lock him down, and to rising
     lane bullies Apollo and Vyper who never let him start.
   confidence: 0.72
-  released_on: null
-  provisional: false
 Venator:
   name: Venator
   role: gun carry
@@ -2819,8 +2770,6 @@ Venator:
     out of his own range. Vindicta's 39% is likely a lagging pre-patch number — she
     is falling and flyers were hurt this patch.
   confidence: 0.6
-  released_on: null
-  provisional: false
 Victor:
   name: Victor
   role: tank/frontline
@@ -2912,8 +2861,6 @@ Victor:
     the tank mirror (Abrams 47%, Mo & Krill 47%) where low HP-per-boon leaves him
     out-stat.
   confidence: 0.6
-  released_on: null
-  provisional: false
 Paige:
   name: Paige
   role: lane-winning support
@@ -2950,16 +2897,18 @@ Paige:
   - Ivy
   - anti-heal (healing-item trims)
   last_changed_patch: Minor Update - 09-16-2026
-  notes: '09-29 City Never Sleeps: no direct change; lane-adjacent crate routes and
-    Healing Snacks reward her lane pressure, and the contested hubs suit her carry-snowball
+  notes: '10-05: no direct change; the trooper-speed fix restores lane-wave cadence,
+    marginally boosting the lane pressure her tempo-support identity trades on — still
+    S.
+
+
+    09-29 City Never Sleeps: no direct change; lane-adjacent crate routes and Healing
+    Snacks reward her lane pressure, and the contested hubs suit her carry-snowball
     (peercontent).
 
-    Changelog: 09-16 - heavy-melee spirit scaling 0.3->0.45, Captivating Read T1 -11->-14s
-    / T3 +1m->+2m; Slowing Hex cd 27->29s is a minor tax.
 
-    Data check: old core items Healing Tempo and Fortitude do not appear in the 30-day
-    usage list - replaced by the real early-gun-into-spirit core. Knockdown is a below-average
-    buy (50.8% WR vs 52.7%).'
+    Changelog: 09-16 - heavy-melee spirit scaling 0.3->0.45, Captivating Read T1 -11->-14s
+    / T3 +1m->+2m; Slowing Hex cd 27->29s is a minor tax.'
   builds:
   - name: Tempo support
     damage: hybrid
@@ -3002,8 +2951,6 @@ Paige:
     out-escape her. Dynamo at 49% contradicts the old ''counters Dynamo ult'' line
     — treat that as stale.'
   confidence: 0.6
-  released_on: null
-  provisional: false
 The Doorman:
   name: The Doorman
   role: utility initiator
@@ -3092,8 +3039,6 @@ The Doorman:
     they reach a squishy caster before Luggage Cart/Doorway set up - the same ''tempo
     beats setup'' pattern the 09-16 patch rewards.'
   confidence: 0.55
-  released_on: null
-  provisional: false
 Billy:
   name: Billy
   role: tank/frontline
@@ -3133,16 +3078,18 @@ Billy:
   - kiting / sustained ranged gun (Warden, Seven)
   - sustain-peel (Ivy)
   last_changed_patch: Minor Update - 08-12-2026
-  notes: '09-29 City Never Sleeps: no direct change; the crate/camp-uptime meta wants
-    sustained presence and his front-line slot moved to rising Mo & Krill, with anti-tank
-    Shiv climbing - S was popularity-supported, so slides to A (peercontent, unverified).
+  notes: '10-05: no direct change; the trooper-speed fix marginally helps his lane-bully
+    all-in, but his real slide (front-line slot lost to rising Mo & Krill, anti-tank
+    Shiv climbing) is unchanged.
+
+
+    09-29 City Never Sleeps: no direct change; the crate/camp-uptime meta wants sustained
+    presence and his front-line slot moved to rising Mo & Krill, with anti-tank Shiv
+    climbing - S was popularity-supported, so slides to A (peercontent, unverified).
+
 
     Changelog: 09-16 - no direct line; item tailwinds (Lifestrike heal/slow, Fortitude
-    regen) and the lane-wins meta supported him.
-
-    Data beats creators: Lifestrike, Echo Shard, Witchmail and Scourge/Scrooge never
-    appear in his top-15 buys - real core is Spirit Snatch (95%), Stalker (90%), Close
-    Quarters (88%), Monster Rounds (86%), Grit (83%).'
+    regen) and the lane-wins meta supported him.'
   builds:
   - name: Melee-range hybrid bruiser
     damage: hybrid
@@ -3185,8 +3132,6 @@ Billy:
     lane (43%) and Shiv is rising, while Ivy and Warden out-sustain/out-range his
     all-in (45% each) and Seven/Vindicta poke the big slow body from range (48%).'
   confidence: 0.58
-  released_on: null
-  provisional: false
 Graves:
   name: Graves
   role: gun carry/summoner split pusher
@@ -3226,15 +3171,17 @@ Graves:
   - slows
   - tempo/comeback-nerf meta
   last_changed_patch: Minor Update - 09-16-2026
-  notes: 'Changelog: 09-16 - comeback souls trimmed and Rift resist made per-minute,
-    removing her comeback path; health/boon 33->35 + Jar of Dead buffs are small;
-    Toxic Bullets scaling buff is a marginal on-hit gain.
+  notes: '10-05: no direct change; the trooper-speed fix marginally helps her split-push
+    wave pathing, but her no-comeback early game is still the problem.
+
+
+    Changelog: 09-16 - comeback souls trimmed and Rift resist made per-minute, removing
+    her comeback path; health/boon 33->35 + Jar of Dead buffs are small; Toxic Bullets
+    scaling buff is a marginal on-hit gain.
+
 
     Creator vegas (07-16) rates D; I rate C because 48.5% WR is bad but not collapse
-    and 21% PR keeps her visible. heresy (09-17) gives no read.
-
-    Losses skew to mobile dive (Warden 42%, Wraith 44%) and assassins who reach her
-    before she scales.'
+    and 21% PR keeps her visible. heresy (09-17) gives no read.'
   builds:
   - name: Summoner/cooldown spirit
     damage: spirit
@@ -3272,8 +3219,6 @@ Graves:
     Word pinning her immobile frame. Calico/Lash/Drifter are near-even but all mobile
     dive, so they reach her before she scales.'
   confidence: 0.6
-  released_on: null
-  provisional: false
 Apollo:
   name: Apollo
   role: lane bully initiator
@@ -3319,15 +3264,9 @@ Apollo:
   - Warden
   - anti-heal vs his Locket/heal sustain
   last_changed_patch: Minor Update - 08-12-2026
-  notes: '09-29 City Never Sleeps: no direct change; the parry-cooldown change removes
-    tower-diving for most of the roster, making his T3 bullet resist a real outlier
-    advantage, and crate/roam routing suits him (peercontent).
-
-    09-16: no direct changes - structural economy/Rift shifts favor his tempo; the
-    Restorative Locket nerf dents only his support line.
-
-    Old core_items (Fortitude) had zero usage; data says pure spirit, so reworked
-    to Extra Spirit/Mystic Burst/Improved Spirit cores.'
+  notes: '10-05: no direct change; the trooper-speed regression fix restores on-schedule
+    lane crashes for his bully pressure (net near-neutral for an already top frontline),
+    and Rat King''s frontline trim thins the competing A-tier bruiser pool.'
   builds:
   - name: Spirit bruiser
     damage: spirit
@@ -3383,8 +3322,6 @@ Apollo:
     (44%), whose mobility out-positions his melee range — the vegas line that Riposte
     ''cancels Lash'' reads as dated, the data has him losing that pairing.'
   confidence: 0.6
-  released_on: null
-  provisional: false
 Rem:
   name: Rem
   role: support/healer
@@ -3492,8 +3429,6 @@ Rem:
     dive/initiators Lash, Drifter and Mo & Krill that reach a low-HP support before
     the heal lands.
   confidence: 0.6
-  released_on: null
-  provisional: false
 Silver:
   name: Silver
   role: gun tank carry
@@ -3584,8 +3519,6 @@ Silver:
     Bola''s ground/interrupt should now help her against flyers (Vindicta, Grey Talon),
     but that is inference, not data.'
   confidence: 0.62
-  released_on: null
-  provisional: false
 Celeste:
   name: Celeste
   role: spirit burst carry
@@ -3682,8 +3615,6 @@ Celeste:
     healers out-last her damage window (Ivy 47%), while mobile initiators/bruisers
     who survive the first burst and close the gap (Lash, Calico) beat her 52-53%.
   confidence: 0.6
-  released_on: null
-  provisional: false
 Rat King:
   name: Rat King
   role: frontline brawler
@@ -3691,13 +3622,12 @@ Rat King:
   - tank/frontline
   - lane bully
   tier: A
-  trend: rising
-  why: 'Rat King slots directly into the City Never Sleeps economy: 116 heavy melee
-    plus 800 HP and 2.0 regen open Tough Crate routes, and Scrap Grenade''s multi-detonation
-    clears the grouped, chasing Haunt camps. His banner ult converts the patch''s
-    forced hub fights into favorable ones (move speed, slow immunity, damage reduction),
-    while Rat Swarm strips bullet resist for his Spreadshot. The 59.4% first-week
-    WR is novelty-inflated, but the kit-to-map fit justifies a provisional A.'
+  trend: stable
+  why: Strong crate/camp/hub fit, but his banner team-fight identity was cut back
+    — Rule, Ratannia! DR 35->25% total (20->15% base + T3 15->10%), radius 24->20m,
+    cooldown 130->160, charge 12->10s and no more Spirit-scaled move speed. Scrap
+    Grenade 65->70 and Rat Swarm 28->24s keep the gun-bruiser core live, so this reads
+    as a correction toward 50% rather than a burial — still A.
   core_items:
   - High-Velocity Rounds
   - Close Quarters
@@ -3719,8 +3649,15 @@ Rat King:
   - Mobility/dashes that shake off rats and kill the shred
   - Silence and CC (Silence Wave, Silencer) denying banner and barrier
   - Anti-heal (Healbane, Decay) against his regen stacking
-  last_changed_patch: Listen up, Crumbums! Your King is here.
-  notes: 'Day-0 kit read (2026-10-03), provisional — data check-in due 2026-10-09.
+  last_changed_patch: Minor Update - 10-05-2026
+  notes: '10-05: banner ult gutted — CD 130->160, DR 20->15%, radius 24->20m, charge
+    12->10s, move speed no longer Spirit-scaled, ult talents stripped (T1 -20s CD,
+    T2 +8s charge, T3 DR 15->10%: total DR 35->25%); base kit buffed (Scrap Grenade
+    65->70, Rat Swarm CD 28->24s, grenade bounce targeting fixed). Nerf targets the
+    61% WR outlier, so tier holds at A.
+
+
+    Day-0 kit read (2026-10-03), provisional — data check-in due 2026-10-09.
 
     First-week 59.4% WR / 8.5% PR is novelty-inflated; the crate/camp/hub fit is the
     reason to start at A, not the raw WR. Raise if he holds >52% with a settled gun
@@ -3775,5 +3712,3 @@ Rat King:
     answer against him than against most gun carries because his swarm shreds the
     bullet resist it grants.
   confidence: 0.4
-  released_on: '2026-10-02'
-  provisional: true
