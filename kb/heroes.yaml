@@ -103,6 +103,8 @@ Infernus:
     that negates his low-HP kite game: Dynamo 41% and Bebop 43% (initiations/hooks)
     and Vyper 42%, a straight gun duel his HP cap can''t win.'
   confidence: 0.6
+  released_on: null
+  provisional: false
 Seven:
   name: Seven
   role: spirit carry
@@ -191,6 +193,8 @@ Seven:
     before his AoE is up, and to Abrams/Bebop, who either out-tank his burst or Hook
     him out of Storm Cloud range.
   confidence: 0.52
+  released_on: null
+  provisional: false
 Vindicta:
   name: Vindicta
   role: poke/siege carry
@@ -285,6 +289,8 @@ Vindicta:
     54%, Abrams 53%). Folds to mobile divers and burst that close the gap before she
     can kite — Lash 46%, Vyper 45%, Celeste 46% — the classic low-HP flyer weakness.
   confidence: 0.63
+  released_on: null
+  provisional: false
 Lady Geist:
   name: Lady Geist
   role: spirit bruiser
@@ -373,6 +379,8 @@ Lady Geist:
     throws/dives her before she scales, Drifter (A) wins the melee duel on tempo,
     and she has no positive matchup sample — low confidence.
   confidence: 0.55
+  released_on: null
+  provisional: false
 Abrams:
   name: Abrams
   role: tank initiator
@@ -478,6 +486,8 @@ Abrams:
     his engage, while Vyper (45%), Wraith (45%) and Celeste (45%) out-range or out-burst
     a static frontline.'
   confidence: 0.7
+  released_on: null
+  provisional: false
 Wraith:
   name: Wraith
   role: gun carry
@@ -573,6 +583,8 @@ Wraith:
     Mirage (56%). She folds to CC-and-dive she can''t out-range: Paige''s lane pressure
     (43%), Dynamo''s initiation (46%), Sinclair''s burst (46%).'
   confidence: 0.6
+  released_on: null
+  provisional: false
 McGinnis:
   name: McGinnis
   role: poke/siege controller
@@ -663,6 +675,8 @@ McGinnis:
     and bursts her before the wall matters. Small samples (150-230 games), so treat
     as directional.'
   confidence: 0.55
+  released_on: null
+  provisional: false
 Paradox:
   name: Paradox
   role: pick/sniper initiator
@@ -766,6 +780,8 @@ Paradox:
     anything that closes distance or dumps burst on her small HP pool: Yamato (43%),
     Lash (43%) and Holliday (43%) all dive her, and Celeste (43%) out-trades her outright.'
   confidence: 0.72
+  released_on: null
+  provisional: false
 Dynamo:
   name: Dynamo
   role: initiator/support
@@ -859,6 +875,8 @@ Dynamo:
     Mo & Krill 45%, Abrams 49%): they eat Singularity, can''t be repositioned, and
     outlast the cooldown, while Paige (51%) simply wins the lane in front of him.'
   confidence: 0.72
+  released_on: null
+  provisional: false
 Kelvin:
   name: Kelvin
   role: support/healer
@@ -947,6 +965,8 @@ Kelvin:
     and burst him before the dome lands, and his low mobility can''t disengage. Paradox
     (50%) is a coin flip; a pick initiator can swap him out of position.'
   confidence: 0.55
+  released_on: null
+  provisional: false
 Haze:
   name: Haze
   role: gun carry
@@ -1039,6 +1059,8 @@ Haze:
     (45%) and Ivy (43%) dive or out-sustain her low-mobility frame, and Paige (46%)
     wins the lane outright.'
   confidence: 0.68
+  released_on: null
+  provisional: false
 Holliday:
   name: Holliday
   role: mobile assassin
@@ -1141,6 +1163,8 @@ Holliday:
     Bebop''s hook, and Mo & Krill/Lash ults punish a low-HP assassin who has to commit
     on entry.'
   confidence: 0.6
+  released_on: null
+  provisional: false
 Bebop:
   name: Bebop
   role: hook initiator
@@ -1245,6 +1269,8 @@ Bebop:
     tanks (Billy 43%), sustain that erases the burst (Kelvin 42%), and a better initiator
     dictating fights (Dynamo 44%).'
   confidence: 0.6
+  released_on: null
+  provisional: false
 Calico:
   name: Calico
   role: mobile assassin
@@ -1336,6 +1362,8 @@ Calico:
     (Dynamo 43%, Victor 45%, Abrams 46%) — the same 'no kill through HP' problem creators
     flagged in April.
   confidence: 0.62
+  released_on: null
+  provisional: false
 Grey Talon:
   name: Grey Talon
   role: poke/siege carry
@@ -1445,6 +1473,8 @@ Grey Talon:
     Lash (36%) dashes past his poke and bursts him before the Owl lands, and Wraith/Paradox/Haze
     shut the same gap. Bebop sits at 46% both ways — treated as even.'
   confidence: 0.55
+  released_on: null
+  provisional: false
 Mo & Krill:
   name: Mo & Krill
   role: spirit tank initiator
@@ -1537,6 +1567,8 @@ Mo & Krill:
     S-tier frontline Billy (47%), who simply out-brawls him, and lane-winning Paige
     (47%).'
   confidence: 0.7
+  released_on: null
+  provisional: false
 Shiv:
   name: Shiv
   role: anti-tank spirit bruiser
@@ -1621,6 +1653,8 @@ Shiv:
     before his regen ramps: Yamato''s burst (42%), Drifter''s melee duel (44%), and
     Bebop''s hook (46%).'
   confidence: 0.6
+  released_on: null
+  provisional: false
 Ivy:
   name: Ivy
   role: support/healer
@@ -1723,6 +1757,8 @@ Ivy:
     tether matters, while Dynamo and Mo & Krill (48%) displace her out of tether range
     and stun past the Form window.'
   confidence: 0.62
+  released_on: null
+  provisional: false
 Warden:
   name: Warden
   role: gun carry
@@ -1813,6 +1849,8 @@ Warden:
     59%). He loses to lane bullies (Paige 47%), sustain (Ivy 48%), and durable fronts
     (Mo & Krill/Victor 50%) that tank the cage and out-tempo him before he scales.'
   confidence: 0.6
+  released_on: null
+  provisional: false
 Yamato:
   name: Yamato
   role: mobile burst assassin
@@ -1917,6 +1955,8 @@ Yamato:
     burst (Mo & Krill 42%, Abrams 42%) and to Celeste/Warden (41-42%) who outrange
     or CC her approach, while Counterspell and Dispel Magic delete the engage outright.
   confidence: 0.62
+  released_on: null
+  provisional: false
 Lash:
   name: Lash
   role: mobile initiator
@@ -2014,6 +2054,8 @@ Lash:
     and stuns punish his engage — while Dynamo (44%) simply out-initiates him in the
     5v5.
   confidence: 0.6
+  released_on: null
+  provisional: false
 Viscous:
   name: Viscous
   role: tank/enabler
@@ -2108,6 +2150,8 @@ Viscous:
     displacement punish a slow enabler, and Mo & Krill''s tank-sustain plus combo
     out-trades him; Drifter''s melee bruiser kit does the same.'
   confidence: 0.55
+  released_on: null
+  provisional: false
 Pocket:
   name: Pocket
   role: spirit carry
@@ -2205,6 +2249,8 @@ Pocket:
     to a low-HP caster: Celeste out-trades at range (39%), Warden''s root and gun
     pressure catch the dive (41%), and Drifter/Viscous stay glued to him (41%/44%).'
   confidence: 0.58
+  released_on: null
+  provisional: false
 Mirage:
   name: Mirage
   role: split-push hybrid carry
@@ -2313,6 +2359,8 @@ Mirage:
     (silence/combo locks a slow caster), 44% vs Lash (S-tier dive displaces him off
     split-push).'
   confidence: 0.6
+  released_on: null
+  provisional: false
 Vyper:
   name: Vyper
   role: gun carry
@@ -2404,6 +2452,8 @@ Vyper:
     creator-flagged counters (Billy 50%, Silver/Venator) do NOT show in data - so
     treat ''she loses to CC'' as a comp-level problem, not a specific-hero counter.'
   confidence: 0.6
+  released_on: null
+  provisional: false
 Sinclair:
   name: Sinclair
   role: burst cast/steal
@@ -2492,6 +2542,8 @@ Sinclair:
     (44%) and rising divers Lash/Calico (47%): gap-closers, hooks and dive punish
     his low HP and his inability to pick a favourable setup without draft.'
   confidence: 0.42
+  released_on: null
+  provisional: false
 Mina:
   name: Mina
   role: mobile spirit assassin
@@ -2587,6 +2639,8 @@ Mina:
     44%) and to Ivy (40%), who out-heals her burst. Single-target burst into heroes
     that survive the first rotation is the whole story.
   confidence: 0.7
+  released_on: null
+  provisional: false
 Drifter:
   name: Drifter
   role: melee bruiser
@@ -2677,6 +2731,8 @@ Drifter:
     Mo & Krill (44-48%), who out-sustain his dive and lock him down, and to rising
     lane bullies Apollo and Vyper who never let him start.
   confidence: 0.72
+  released_on: null
+  provisional: false
 Venator:
   name: Venator
   role: gun carry
@@ -2770,6 +2826,8 @@ Venator:
     out of his own range. Vindicta's 39% is likely a lagging pre-patch number — she
     is falling and flyers were hurt this patch.
   confidence: 0.6
+  released_on: null
+  provisional: false
 Victor:
   name: Victor
   role: tank/frontline
@@ -2861,6 +2919,8 @@ Victor:
     the tank mirror (Abrams 47%, Mo & Krill 47%) where low HP-per-boon leaves him
     out-stat.
   confidence: 0.6
+  released_on: null
+  provisional: false
 Paige:
   name: Paige
   role: lane-winning support
@@ -2951,6 +3011,8 @@ Paige:
     out-escape her. Dynamo at 49% contradicts the old ''counters Dynamo ult'' line
     — treat that as stale.'
   confidence: 0.6
+  released_on: null
+  provisional: false
 The Doorman:
   name: The Doorman
   role: utility initiator
@@ -3039,6 +3101,8 @@ The Doorman:
     they reach a squishy caster before Luggage Cart/Doorway set up - the same ''tempo
     beats setup'' pattern the 09-16 patch rewards.'
   confidence: 0.55
+  released_on: null
+  provisional: false
 Billy:
   name: Billy
   role: tank/frontline
@@ -3132,6 +3196,8 @@ Billy:
     lane (43%) and Shiv is rising, while Ivy and Warden out-sustain/out-range his
     all-in (45% each) and Seven/Vindicta poke the big slow body from range (48%).'
   confidence: 0.58
+  released_on: null
+  provisional: false
 Graves:
   name: Graves
   role: gun carry/summoner split pusher
@@ -3219,6 +3285,8 @@ Graves:
     Word pinning her immobile frame. Calico/Lash/Drifter are near-even but all mobile
     dive, so they reach her before she scales.'
   confidence: 0.6
+  released_on: null
+  provisional: false
 Apollo:
   name: Apollo
   role: lane bully initiator
@@ -3322,6 +3390,8 @@ Apollo:
     (44%), whose mobility out-positions his melee range — the vegas line that Riposte
     ''cancels Lash'' reads as dated, the data has him losing that pairing.'
   confidence: 0.6
+  released_on: null
+  provisional: false
 Rem:
   name: Rem
   role: support/healer
@@ -3429,6 +3499,8 @@ Rem:
     dive/initiators Lash, Drifter and Mo & Krill that reach a low-HP support before
     the heal lands.
   confidence: 0.6
+  released_on: null
+  provisional: false
 Silver:
   name: Silver
   role: gun tank carry
@@ -3519,6 +3591,8 @@ Silver:
     Bola''s ground/interrupt should now help her against flyers (Vindicta, Grey Talon),
     but that is inference, not data.'
   confidence: 0.62
+  released_on: null
+  provisional: false
 Celeste:
   name: Celeste
   role: spirit burst carry
@@ -3615,6 +3689,8 @@ Celeste:
     healers out-last her damage window (Ivy 47%), while mobile initiators/bruisers
     who survive the first burst and close the gap (Lash, Calico) beat her 52-53%.
   confidence: 0.6
+  released_on: null
+  provisional: false
 Rat King:
   name: Rat King
   role: frontline brawler
@@ -3712,3 +3788,100 @@ Rat King:
     answer against him than against most gun carries because his swarm shreds the
     bullet resist it grants.
   confidence: 0.4
+  released_on: null
+  provisional: false
+Baba:
+  name: Baba
+  role: bulky spirit bruiser-caster
+  archetypes:
+  - spirit carry
+  - initiator
+  - tank/frontline
+  - lane bully
+  tier: B
+  trend: stable
+  why: Baba is a high-HP mystic who converts Threadsap's stolen Spirit into bonus
+    spirit damage on Heavy Artillery bullets, then forces hub fights with a mass pigeon-hex
+    ultimate. She farms the crate/Haunt economy with heavy melee and AoE and sustains
+    through Brew's barrier, so the map engine suits her. But she is a spirit/on-hit
+    hybrid in a patch that taxed on-hit spirit carries, and her ult is a channel —
+    interruptible, and cycling Brew is unreliable.
+  core_items:
+  - Boundless Spirit
+  - Arcane Surge
+  - Duration Extender
+  - Extra Charge
+  build_variants:
+  - Spirit utility/caster
+  - On-hit hybrid
+  - Melee frontline
+  enabled_by:
+  - Forced telegraphed hub fights (Sunken Plaza, Bell Tower) reward her AoE hex and
+    silence
+  - Heavy melee plus AoE Brew/Haunts clear the crate-camp economy
+  - Duration Extender and Arcane Surge spirit-support items amplify hex/silence windows
+  - Silence and Spirit-steal gain value in the current caster-heavy A/S tiers
+  countered_by:
+  - 'Channel interrupts/silences: Knockdown, Cursed Relic, Silencer, Silence Wave'
+  - 'Sustained bullet pressure: Plated Armor, Bullet Resilience'
+  - 'Anti-heal vs melee lifesteal: Healbane, Decay'
+  - Mobile assassins that dodge Threadsap and close before the ult channel
+  last_changed_patch: Mind the Birds!
+  notes: 'Day-0 kit read (2026-10-09), provisional — data check-in due 2026-10-13.
+
+    Provisional B on first-week data (46.5% WR at 25.9% PR, novelty-inflated) — the
+    kit reads stronger than the win rate, so treat WR as noisy. Cycling Brew and the
+    channel make her feel inconsistent before T3. Change my mind if utility win rates
+    (Duration Extender/Boundless Spirit) hold while raw WR climbs past ~50%, or if
+    a hotfix buffs her cast.'
+  builds:
+  - name: Spirit utility/caster
+    damage: spirit
+    core_items:
+    - Boundless Spirit
+    - Arcane Surge
+    - Duration Extender
+    - Extra Charge
+    popularity: primary
+    notes: Spams Threadsap + Brew and extends silence/hex/slow durations; Duration
+      Extender and Boundless Spirit win rates back this path.
+  - name: On-hit hybrid
+    damage: hybrid
+    core_items:
+    - High-Velocity Rounds
+    - Swift Striker
+    - Boundless Spirit
+    - Spiritual Overflow
+    popularity: secondary
+    notes: Leans on Threadsap's bonus-spirit-per-bullet, but Heavy Artillery's slow
+      fire rate and the 09-16 on-hit-spirit item hits blunt it.
+  - name: Melee frontline
+    damage: hybrid
+    core_items:
+    - Extra Health
+    - Fortitude
+    - Enduring Speed
+    - Lifestrike
+    - Colossus
+    popularity: niche
+    notes: Uses Granny Long Legs melee resist/lifesteal and crate access to brawl;
+      samples are tiny and the 50 lifesteal only lands at T3.
+  matchups:
+    beats:
+    - Lady Geist
+    - Seven
+    - Celeste
+    - Pocket
+    loses_to:
+    - Vindicta
+    - Silver
+    - Holliday
+    - Yamato
+  matchup_notes: Silence plus Spirit-steal punishes slow spirit casters (Lady Geist,
+    Seven, Celeste, Pocket) who cannot function with their Spirit trimmed and their
+    kit muted. She struggles into sustained long-range gun pressure she cannot out-poke
+    (Vindicta, Silver) and mobile assassins (Holliday, Yamato) who dodge Threadsap
+    and kill her before the channel completes.
+  confidence: 0.4
+  released_on: '2026-10-06'
+  provisional: true

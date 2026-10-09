@@ -1,0 +1,119 @@
+{
+ "enrichment": {
+  "role": "bulky spirit bruiser-caster",
+  "archetypes": [
+   "spirit carry",
+   "initiator",
+   "tank/frontline",
+   "lane bully"
+  ],
+  "tier": "B",
+  "trend": "stable",
+  "why": "Baba is a high-HP mystic who converts Threadsap's stolen Spirit into bonus spirit damage on Heavy Artillery bullets, then forces hub fights with a mass pigeon-hex ultimate. She farms the crate/Haunt economy with heavy melee and AoE and sustains through Brew's barrier, so the map engine suits her. But she is a spirit/on-hit hybrid in a patch that taxed on-hit spirit carries, and her ult is a channel — interruptible, and cycling Brew is unreliable.",
+  "builds": [
+   {
+    "name": "Spirit utility/caster",
+    "damage": "spirit",
+    "core_items": [
+     "Boundless Spirit",
+     "Arcane Surge",
+     "Duration Extender",
+     "Extra Charge"
+    ],
+    "popularity": "primary",
+    "notes": "Spams Threadsap + Brew and extends silence/hex/slow durations; Duration Extender and Boundless Spirit win rates back this path."
+   },
+   {
+    "name": "On-hit hybrid",
+    "damage": "hybrid",
+    "core_items": [
+     "High-Velocity Rounds",
+     "Swift Striker",
+     "Boundless Spirit",
+     "Spiritual Overflow"
+    ],
+    "popularity": "secondary",
+    "notes": "Leans on Threadsap's bonus-spirit-per-bullet, but Heavy Artillery's slow fire rate and the 09-16 on-hit-spirit item hits blunt it."
+   },
+   {
+    "name": "Melee frontline",
+    "damage": "hybrid",
+    "core_items": [
+     "Extra Health",
+     "Fortitude",
+     "Enduring Speed",
+     "Lifestrike",
+     "Colossus"
+    ],
+    "popularity": "niche",
+    "notes": "Uses Granny Long Legs melee resist/lifesteal and crate access to brawl; samples are tiny and the 50 lifesteal only lands at T3."
+   }
+  ],
+  "core_items": [
+   "Boundless Spirit",
+   "Arcane Surge",
+   "Duration Extender",
+   "Extra Charge"
+  ],
+  "matchups": {
+   "beats": [
+    "Lady Geist",
+    "Seven",
+    "Celeste",
+    "Pocket"
+   ],
+   "loses_to": [
+    "Vindicta",
+    "Silver",
+    "Holliday",
+    "Yamato"
+   ]
+  },
+  "matchup_notes": "Silence plus Spirit-steal punishes slow spirit casters (Lady Geist, Seven, Celeste, Pocket) who cannot function with their Spirit trimmed and their kit muted. She struggles into sustained long-range gun pressure she cannot out-poke (Vindicta, Silver) and mobile assassins (Holliday, Yamato) who dodge Threadsap and kill her before the channel completes.",
+  "enabled_by": [
+   "Forced telegraphed hub fights (Sunken Plaza, Bell Tower) reward her AoE hex and silence",
+   "Heavy melee plus AoE Brew/Haunts clear the crate-camp economy",
+   "Duration Extender and Arcane Surge spirit-support items amplify hex/silence windows",
+   "Silence and Spirit-steal gain value in the current caster-heavy A/S tiers"
+  ],
+  "countered_by": [
+   "Channel interrupts/silences: Knockdown, Cursed Relic, Silencer, Silence Wave",
+   "Sustained bullet pressure: Plated Armor, Bullet Resilience",
+   "Anti-heal vs melee lifesteal: Healbane, Decay",
+   "Mobile assassins that dodge Threadsap and close before the ult channel"
+  ],
+  "notes": "Provisional B on first-week data (46.5% WR at 25.9% PR, novelty-inflated) — the kit reads stronger than the win rate, so treat WR as noisy. Cycling Brew and the channel make her feel inconsistent before T3. Change my mind if utility win rates (Duration Extender/Boundless Spirit) hold while raw WR climbs past ~50%, or if a hotfix buffs her cast.",
+  "confidence": 0.4
+ },
+ "card": {
+  "headline": "Bulky spirit-mage who steals Spirit, silences, and mass-hexes — but her channel can be cut.",
+  "kit_read": [
+   "Threadsap: skillshot steals enemy Spirit; while held, her bullets deal bonus spirit damage — hybrid gun/spirit scaling.",
+   "Granny Long Legs: move-speed/jump steroid with melee + debuff resist; heavy ground pound for knockup/slow and Tough Crate opens.",
+   "Baba's Brew: thrown AoE that cycles shield / silence / burn+spirit-shred — unreliable, but large at T3.",
+   "Feed The Birds: channeled stacking slow into a mass pigeon-hex plus barrage — a teamfight lockdown.",
+   "780 HP, high melee, innate resistances: she wants to stand in the fight, not poke from range."
+  ],
+  "meta_fit": "Fits the crate/Haunt farm-and-hub-fight engine: she clears camps with AoE, opens boxes with heavy melee, and forces the group fights The Broker and hubs already push the game toward. Offsetting that, she is a spirit/on-hit hybrid right after on-hit-spirit items were hit.",
+  "threatens": [
+   "Lady Geist — silence + Spirit-steal strips a spirit bruiser's kit and damage",
+   "Seven — mutes and drains a spirit carry that needs its abilities",
+   "Celeste — silence/shrink denies a spirit burst window",
+   "Pocket — hex locks a slippery spirit carry in place"
+  ],
+  "threatened_by": [
+   "Vindicta — out-ranges her slow Heavy Artillery and pokes the channel",
+   "Silver — sustained gun tank she cannot shred with spirit damage",
+   "Holliday — mobile assassin that dodges Threadsap and kills first",
+   "Knockdown / Cursed Relic / Silencer — cancel the Feed The Birds channel and mute Brew"
+  ],
+  "build_read": "Data points to a spirit-utility core — Boundless Spirit, Arcane Surge, Duration Extender, Extra Charge — spamming Threadsap and Brew and stretching hex/silence/slow windows. On-hit hybrid (High-Velocity Rounds, Swift Striker) is real but fights the on-hit-spirit nerfs and Heavy Artillery's slow fire rate.",
+  "provisional_tier": "B",
+  "confidence": 0.4,
+  "what_to_watch": [
+   "WR trajectory past novelty — does 46.5% climb toward 50% as players learn her?",
+   "Which build wins out: spirit-utility (Duration Extender/Boundless Spirit) vs on-hit hybrid",
+   "Whether the hex ult becomes a must-pick hub-fight tool once cooldown/duration builds mature"
+  ]
+ }
+}
