@@ -3885,3 +3885,99 @@ Baba:
   confidence: 0.4
   released_on: '2026-10-06'
   provisional: true
+Solomon:
+  name: Solomon
+  role: control support / zone-control strategist
+  archetypes:
+  - support/healer
+  - initiator
+  - poke/siege
+  tier: B
+  trend: rising
+  why: 'Solomon is a cooldown-driven zone controller: persistent bishop zones (slow
+    + spirit ticks + diagonal mines, T3 stacks a -2.5/stack armor shred) and a two-rook
+    immobilize convert telegraphed hub fights better than raw DPS. Kingside Knight
+    (ally stamina + barrier, double barrier self-cast, T3 cleanse) plus an invulnerable
+    reposition on the piece makes him a genuine enabler under the 38s respawn tax.
+    He is not a top camp-clearer, so his income rides on heavy-melee crate routes
+    and team souls rather than solo jungle farming.'
+  core_items:
+  - Extra Spirit
+  - Superior Cooldown
+  - Mystic Burst
+  - Boundless Spirit
+  build_variants:
+  - Cooldown control
+  - Barrier support
+  - Gun
+  enabled_by:
+  - Hub-fight meta (Sunken Plaza ~5-8 min, Bell Tower 8+) rewarding telegraphed zone
+    control
+  - Superior Cooldown / Arcane Surge cooldown stacking
+  - Heavy melee 116 opening Tough Crates for guaranteed 58-soul routes
+  - Barrier + cleanse support value under the 38s respawn tax
+  countered_by:
+  - Silence (Silencer, Silence Wave) denying the cooldown loop
+  - Unstoppable (ignores rook immobilize)
+  - Debuff Reducer (shrinks slow/immobilize)
+  - Knockdown
+  - Burst mobility landing before the self-cast invuln
+  last_changed_patch: Released 2026-10-09
+  notes: 'Day-0 kit read (2026-10-09), provisional — data check-in due 2026-10-16.
+
+    Develop Queen tooltip is empty — ult power is the single biggest unknown; T2 hints
+    a ''Checkmate'' threshold (200/5) scaled by slow. Gun builds are losing, spirit/cooldown
+    builds winning, but on small novelty samples. If 7-day data shows the Knight/Divine
+    Barrier build clustering >55% WR, promote to A; if zone impact proves marginal
+    in the fast-cast meta, drop toward C.'
+  builds:
+  - name: Cooldown control
+    damage: spirit
+    core_items:
+    - Extra Spirit
+    - Superior Cooldown
+    - Mystic Burst
+    - Arcane Surge
+    - Boundless Spirit
+    popularity: primary
+    notes: Spams bishop/rook on short cooldowns; the winning cluster (Mystic Burst
+      71% early, Arcane Surge 80% mid).
+  - name: Barrier support
+    damage: spirit
+    core_items:
+    - Divine Barrier
+    - Guardian Ward
+    - Healbane
+    - Healing Booster
+    - Superior Duration
+    popularity: secondary
+    notes: Leans into Kingside Knight barrier + cleanse for teamfights; Divine Barrier
+      sits at 62% late WR.
+  - name: Gun
+    damage: gun
+    core_items:
+    - High-Velocity Rounds
+    - Swift Striker
+    - Extended Magazine
+    popularity: niche
+    notes: Swift Striker is a trap here (20% mid, 33% late WR) — no kit reason to
+      buy attack speed yet.
+  matchups:
+    beats:
+    - Drifter
+    - Abrams
+    - Grey Talon
+    - Seven
+    loses_to:
+    - Lash
+    - Holliday
+    - Calico
+    - Vindicta
+  matchup_notes: 'Bishop tiles plus rook immobilize punish anything that must physically
+    occupy hub space, so melee divers and low-mobility poke (Grey Talon, Seven) get
+    zoned. He in turn dies to burst mobility that lands before he can self-cast Knight''s
+    invuln (Lash, Holliday, Calico) and to Vindicta''s range. He is a strong pick-enabler:
+    immobilize + shred set up Lash, Holliday and Paradox dives.'
+  confidence: 0.35
+  released_on: '2026-10-09'
+  provisional: true

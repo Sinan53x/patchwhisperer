@@ -114,6 +114,7 @@ High-Velocity Rounds:
   - Rat King
   - Rem
   - Sinclair
+  - Solomon
   - Victor
   - Vindicta
   - Viscous
@@ -144,6 +145,7 @@ Boundless Spirit:
   - Lady Geist
   - Mina
   - Pocket
+  - Solomon
   - The Doorman
   slot: Spirit
   tier: 3
@@ -237,6 +239,7 @@ Superior Duration:
   - Pocket
   - Rem
   - Sinclair
+  - Solomon
   slot: Spirit
   tier: 2
   notes: No recent change.
@@ -279,6 +282,7 @@ Superior Cooldown:
   - Pocket
   - Shiv
   - Sinclair
+  - Solomon
   - The Doorman
   - Viscous
   slot: Spirit
@@ -340,6 +344,7 @@ Healbane:
   - Mo & Krill
   - Seven
   - Shiv
+  - Solomon
   - Yamato
   slot: Vitality
   tier: 2
@@ -634,6 +639,7 @@ Divine Barrier:
   role: cleanse shield item
   bought_by:
   - Rem
+  - Solomon
   slot: Vitality
   tier: 3
   notes: No recent change.
@@ -795,6 +801,7 @@ Extra Spirit:
   - Mo & Krill
   - Rat King
   - Rem
+  - Solomon
   - Victor
   - Vindicta
   - Vyper
@@ -881,6 +888,7 @@ Swift Striker:
   - Grey Talon
   - Haze
   - Infernus
+  - Solomon
   - Vindicta
   - Warden
   - Wraith
@@ -894,6 +902,7 @@ Extended Magazine:
   - Infernus
   - Ivy
   - Rat King
+  - Solomon
   - Warden
   slot: null
   tier: null
@@ -907,6 +916,7 @@ Arcane Surge:
   - Graves
   - Rem
   - Seven
+  - Solomon
   slot: null
   tier: null
   notes: ''
@@ -996,6 +1006,7 @@ Mystic Burst:
   - Paradox
   - Pocket
   - Silver
+  - Solomon
   - The Doorman
   - Viscous
   slot: null
@@ -1251,6 +1262,7 @@ Healing Booster:
   - Ivy
   - Kelvin
   - Rem
+  - Solomon
   - Victor
   slot: null
   tier: null
@@ -1442,6 +1454,7 @@ Guardian Ward:
   role: ''
   bought_by:
   - Rem
+  - Solomon
   slot: null
   tier: null
   notes: ''
