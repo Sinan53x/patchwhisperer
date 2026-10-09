@@ -3699,97 +3699,108 @@ Rat King:
   - lane bully
   tier: A
   trend: stable
-  why: Strong crate/camp/hub fit, but his banner team-fight identity was cut back
-    — Rule, Ratannia! DR 35->25% total (20->15% base + T3 15->10%), radius 24->20m,
-    cooldown 130->160, charge 12->10s and no more Spirit-scaled move speed. Scrap
-    Grenade 65->70 and Rat Swarm 28->24s keep the gun-bruiser core live, so this reads
-    as a correction toward 50% rather than a burial — still A.
+  why: 'Post-nerf he settles at 55.4% WR, right on the watchlist ~55% line — the 10-05
+    banner trim (CD 130->160, total DR 35->25%) pulled the 61% outlier down without
+    burying the kit. The gun-bruiser core is untouched and near-universally built
+    (Monster Rounds/HVR by ~3 min, Extra Health 91%), and his map-economy fit (heavy-melee
+    crates, AoE Haunt clear, forced hub fights) still matches the farm-then-group-fight
+    meta. He holds A, not S: strong but soft to sustain/support comps and spirit burst
+    that bypass his anti-bullet barrier.'
   core_items:
+  - Monster Rounds
   - High-Velocity Rounds
-  - Close Quarters
-  - Extra Regen
+  - Opening Rounds
+  - Extra Health
+  - Cultist Sacrifice
   - Enduring Speed
-  - Witchmail
+  - Fortitude
+  - Superior Cooldown
   build_variants:
   - Gun bruiser
   - Vitality frontline
   - Swarm shred
   enabled_by:
-  - Grouped, chasing Haunt camps that reward AoE clear — Scrap Grenade multi-detonation
-  - Tough Crate routes needing heavy melee — 116 heavy melee, 800 HP, 2.0 regen
-  - Forced hub fights at Sunken Plaza/Bell Tower — banner ult (move speed, slow immunity,
-    DR)
-  - Gun-carry meta — Rat Swarm bullet-resist shred sets up Spreadshot
+  - 'Map-economy lead engine: grouped, chasing Haunt camps reward Scrap Grenade AoE
+    clear and regen sustain'
+  - Tough Crate routes needing heavy melee — 116 heavy melee, 800 HP, 2.0 regen open
+    guaranteed ~58-soul crates
+  - Forced telegraphed hub fights at Sunken Plaza/Bell Tower — banner ult adds move
+    speed, slow immunity and DR
+  - Gun-carry meta — Rat Swarm's bullet-resist shred and Royal Pestments deflect punish
+    Venator/Silver/Paradox
   countered_by:
-  - Spirit burst (barrier is anti-bullet and gains no resists)
-  - Mobility/dashes that shake off rats and kill the shred
-  - Silence and CC (Silence Wave, Silencer) denying banner and barrier
+  - Heal/save supports that out-sustain his damage window — Ivy, Kelvin, Paige, Dynamo
+  - Spirit burst that bypasses the anti-bullet barrier — Celeste
+  - Silence/CC (Silence Wave, Silencer) denying banner and barrier
   - Anti-heal (Healbane, Decay) against his regen stacking
   last_changed_patch: Minor Update - 10-05-2026
-  notes: '10-05: banner ult gutted — CD 130->160, DR 20->15%, radius 24->20m, charge
-    12->10s, move speed no longer Spirit-scaled, ult talents stripped (T1 -20s CD,
-    T2 +8s charge, T3 DR 15->10%: total DR 35->25%); base kit buffed (Scrap Grenade
-    65->70, Rat Swarm CD 28->24s, grenade bounce targeting fixed). Nerf targets the
-    61% WR outlier, so tier holds at A.
+  notes: '7-day check-in (2026-10-09): tier A -> A, WR 59%, PR 86% over 430072 matches.
 
+    10-05: banner ult trimmed (CD 130->160, DR 20->15% base + T3 15->10% = 35->25%
+    total, radius 24->20m, charge 12->10s, no Spirit-scaled move speed); base kit
+    buffed (Scrap Grenade 65->70, Rat Swarm CD 28->24s).
 
-    Day-0 kit read (2026-10-03), provisional — data check-in due 2026-10-09.
+    Data: WR 55.4% sits on the watchlist ~55% line and PR 83.8% is novelty-inflated
+    (~1-week-old hero) — tier holds A, not S.
 
-    First-week 59.4% WR / 8.5% PR is novelty-inflated; the crate/camp/hub fit is the
-    reason to start at A, not the raw WR. Raise if he holds >52% with a settled gun
-    build; drop if swarm/vitality builds and spirit-burst counters dominate. A Tough
-    Crate hotfix (on the meta watchlist) would cut his farm-route value.'
+    Disagreement: prior ''Swarm shred'' listed Bullet Resist Shredder/Extra Spirit,
+    but no shred item appears in usage; the spirit angle is under-built (Mystic Expansion
+    only).'
   builds:
   - name: Gun bruiser
     damage: gun
     core_items:
+    - Monster Rounds
     - High-Velocity Rounds
-    - Close Quarters
-    - Extended Magazine
+    - Opening Rounds
+    - Cultist Sacrifice
+    - Fleetfoot
+    - Berserker
     - Ballistic Enchantment
-    - Enduring Speed
     popularity: primary
-    notes: Rat Swarm strips bullet resist, then Spreadshot and grenades do the work;
-      HVR is the 78% default yet wins least (47%).
+    notes: Near-universal core — Monster Rounds + HVR at ~3 min into Opening Rounds;
+      Rat Swarm strips bullet resist so the Spreadshot/grenade window does the work.
   - name: Vitality frontline
     damage: hybrid
     core_items:
-    - Extra Regen
-    - Fortitude
     - Extra Health
+    - Sprint Boots
     - Enduring Speed
-    - Witchmail
+    - Fortitude
+    - Compress Cooldown
+    - Superior Cooldown
     popularity: secondary
-    notes: Bulks up to lead the banner charge; Witchmail late is the standout signal
-      (24% pick, 82% WR, small sample).
+    notes: Extra Health (91%) and Fortitude (90%) anchor the lead-the-charge build;
+      Superior/Compress Cooldown (57.9%/57.7% WR) are the post-nerf answer to the
+      banner ult's 130->160s cooldown.
   - name: Swarm shred
     damage: spirit
     core_items:
     - Mystic Expansion
-    - Bullet Resist Shredder
-    - Extra Spirit
     popularity: niche
-    notes: Leans on Rat Swarm T3 (-1 resist, +8 per bite); under-represented in the
-      early item data.
+    notes: Leans on Rat Swarm T3 shred plus Mystic Expansion AoE, but no dedicated
+      shred item shows in usage — under-built and data-thin.
   matchups:
     beats:
-    - Haze
-    - Wraith
     - Venator
+    - Paradox
+    - Silver
+    - Rem
+    - Grey Talon
     loses_to:
+    - Ivy
+    - Kelvin
     - Celeste
-    - Mina
-    - Holliday
-  matchup_notes: Royal Pestments (bullet deflect) plus Rat Swarm's bullet-resist shred
-    make gun carries and grouped hub comps his best matchups, and the banner's slow
-    immunity blunts slow-based kits. His real answers are spirit burst that ignores
-    the anti-bullet barrier and dashes that shake off rats, so he is soft to mobile
-    assassins and casters rather than to other gun heroes. Plated Armor is a weaker
-    answer against him than against most gun carries because his swarm shreds the
-    bullet resist it grants.
-  confidence: 0.4
+    - Dynamo
+    - Paige
+  matchup_notes: Royal Pestments' bullet deflect plus Rat Swarm's bullet-resist shred
+    make him a gun-carry killer — Venator 64%, Silver 62%, Paradox 62%. His losses
+    cluster on sustain/support comps that out-heal a single damage window (Ivy 44%,
+    Kelvin 48%, Paige 51%, Dynamo 51%) and on spirit burst that ignores his anti-bullet
+    barrier (Celeste 48%); Rem, another support, is the exception he beats at 61%.
+  confidence: 0.55
   released_on: '2026-10-02'
-  provisional: true
+  provisional: false
 Baba:
   name: Baba
   role: bulky spirit bruiser-caster

@@ -280,6 +280,7 @@ Superior Cooldown:
   - Paige
   - Paradox
   - Pocket
+  - Rat King
   - Shiv
   - Sinclair
   - Solomon
@@ -575,6 +576,7 @@ Monster Rounds:
   - McGinnis
   - Mirage
   - Pocket
+  - Rat King
   - Seven
   - Sinclair
   - Venator
@@ -648,6 +650,7 @@ Berserker:
   role: low-HP damage item
   bought_by:
   - Lady Geist
+  - Rat King
   - Silver
   - Venator
   slot: Weapon
@@ -668,6 +671,7 @@ Cultist Sacrifice:
   role: econ spirit item
   bought_by:
   - Pocket
+  - Rat King
   - Seven
   slot: Spirit
   tier: 3
@@ -938,6 +942,7 @@ Opening Rounds:
   bought_by:
   - Grey Talon
   - Paige
+  - Rat King
   - Rem
   - Sinclair
   - Victor
@@ -1210,6 +1215,7 @@ Compress Cooldown:
   - Mirage
   - Mo & Krill
   - Paradox
+  - Rat King
   - Shiv
   - Viscous
   slot: null
@@ -1297,6 +1303,7 @@ Sprint Boots:
   bought_by:
   - Holliday
   - Mo & Krill
+  - Rat King
   - Viscous
   - Warden
   slot: null
@@ -1332,6 +1339,7 @@ Fleetfoot:
   role: ''
   bought_by:
   - Bebop
+  - Rat King
   - Venator
   - Warden
   slot: null
