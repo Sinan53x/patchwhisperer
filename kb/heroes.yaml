@@ -3788,8 +3788,8 @@ Rat King:
     answer against him than against most gun carries because his swarm shreds the
     bullet resist it grants.
   confidence: 0.4
-  released_on: null
-  provisional: false
+  released_on: '2026-10-02'
+  provisional: true
 Baba:
   name: Baba
   role: bulky spirit bruiser-caster
