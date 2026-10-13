@@ -4003,3 +4003,94 @@ Solomon:
   confidence: 0.35
   released_on: '2026-10-09'
   provisional: true
+Deadman Danny:
+  name: Deadman Danny
+  role: Flying marksman / dive-pick
+  archetypes:
+  - gun carry
+  - mobile assassin
+  - initiator
+  tier: C
+  trend: stable
+  why: A marksman with a full dive/pick kit — Chimera overheat explosion, Close The
+    Deal grab-slam, plus a genuine shred/mark gun package — so on paper he is a lane-to-hub
+    skirmisher, not a backline turret. But he is a flyer in an explicitly anti-flyer
+    patch (air drag 35%, slows hit him airborne by his own tooltip, Silver's Bola
+    grounds), so his signature mobility is a tax, not an edge. The 34.9% WR over 0.2%
+    PR is novelty-deflated, but the kit and item scatter do not contradict the bad
+    signal.
+  core_items:
+  - High-Velocity Rounds
+  - Express Shot
+  - Bullet Resist Shredder
+  - Superior Cooldown
+  build_variants:
+  - Shred/mark gun
+  - Ability burst
+  - Dive bruiser
+  enabled_by:
+  - Grouped hub fights (Sunken Plaza, Bell Tower) that reward the overheat-dive AoE
+    and launch
+  - AoE clear of grouped Haunt camps
+  - An anchor/initiator teammate to hold targets so Strix Salvo marks and Close The
+    Deal land
+  countered_by:
+  - Anti-air (Silver's Weighted Bola)
+  - Silence / Knockdown / Silencing Hex / Bebop hook
+  - Slows — doubled by the global air-drag tax plus his own airborne-slow tooltip
+  - Plated Armor vs his gun; Debuff Reducer vs his mark and fading slow
+  - His own no-hero-hit self-stun combined with the long death tax
+  last_changed_patch: Released 2026-10-13
+  notes: 'Day-0 kit read (2026-10-13), provisional — data check-in due 2026-10-20.
+
+    Provisional C on a ~2-day sample; 34.9% WR / 0.2% PR is novelty-deflated but directionally
+    bad, and the build pool is unformed (many 0-20% win picks). Would revise up if
+    WR clears ~45% as PR grows and a mark/charged-shot build consolidates; down if
+    the flyer tax holds and no build lands.'
+  builds:
+  - name: Shred/mark gun
+    damage: hybrid
+    core_items:
+    - High-Velocity Rounds
+    - Express Shot
+    - Bullet Resist Shredder
+    - Superior Cooldown
+    popularity: primary
+    notes: Jettison Fuel's bullet-resist shred stacked with Bullet Resist Shredder
+      amplifies the marksman damage; HV Rounds (86% pick) and Express Shot carry the
+      charged-shot mark-consume.
+  - name: Ability burst
+    damage: spirit
+    core_items:
+    - Boundless Spirit
+    - Superior Cooldown
+    - Arctic Blast
+    popularity: secondary
+    notes: Scales Strix Salvo marks plus Close The Deal and overheat-dive spirit explosions;
+      36% late Boundless Spirit pick shows players testing it.
+  - name: Dive bruiser
+    damage: hybrid
+    core_items:
+    - Fortitude
+    - Extra Health
+    - Indomitable
+    popularity: niche
+    notes: Survivability to blunt the whiff-self-stun and always-explode-on-death
+      pattern; no clear payoff yet — Fortitude shows 9% win late.
+  matchups:
+    beats:
+    - Seven
+    - Celeste
+    - Graves
+    loses_to:
+    - Silver
+    - Lash
+    - Apollo
+  matchup_notes: 'He threatens squishy, grouped or immobile carries he can mark with
+    Salvo then burst with a dive or Close The Deal. He loses to anti-air and disruption:
+    Silver''s Weighted Bola grounds flyers on top of out-trading him, Lash can fling
+    him out of dives, and Apollo out-lanes him. Silences/knockdowns and a whiffed
+    dive (self-stun) are his own worst enemy given the 38s respawn tax.'
+  confidence: 0.4
+  released_on: '2026-10-13'
+  provisional: true

@@ -1,0 +1,112 @@
+{
+ "enrichment": {
+  "role": "Flying marksman / dive-pick",
+  "archetypes": [
+   "gun carry",
+   "mobile assassin",
+   "initiator"
+  ],
+  "tier": "C",
+  "trend": "stable",
+  "why": "A marksman with a full dive/pick kit — Chimera overheat explosion, Close The Deal grab-slam, plus a genuine shred/mark gun package — so on paper he is a lane-to-hub skirmisher, not a backline turret. But he is a flyer in an explicitly anti-flyer patch (air drag 35%, slows hit him airborne by his own tooltip, Silver's Bola grounds), so his signature mobility is a tax, not an edge. The 34.9% WR over 0.2% PR is novelty-deflated, but the kit and item scatter do not contradict the bad signal.",
+  "builds": [
+   {
+    "name": "Shred/mark gun",
+    "damage": "hybrid",
+    "core_items": [
+     "High-Velocity Rounds",
+     "Express Shot",
+     "Bullet Resist Shredder",
+     "Superior Cooldown"
+    ],
+    "popularity": "primary",
+    "notes": "Jettison Fuel's bullet-resist shred stacked with Bullet Resist Shredder amplifies the marksman damage; HV Rounds (86% pick) and Express Shot carry the charged-shot mark-consume."
+   },
+   {
+    "name": "Ability burst",
+    "damage": "spirit",
+    "core_items": [
+     "Boundless Spirit",
+     "Superior Cooldown",
+     "Arctic Blast"
+    ],
+    "popularity": "secondary",
+    "notes": "Scales Strix Salvo marks plus Close The Deal and overheat-dive spirit explosions; 36% late Boundless Spirit pick shows players testing it."
+   },
+   {
+    "name": "Dive bruiser",
+    "damage": "hybrid",
+    "core_items": [
+     "Fortitude",
+     "Extra Health",
+     "Indomitable"
+    ],
+    "popularity": "niche",
+    "notes": "Survivability to blunt the whiff-self-stun and always-explode-on-death pattern; no clear payoff yet — Fortitude shows 9% win late."
+   }
+  ],
+  "core_items": [
+   "High-Velocity Rounds",
+   "Express Shot",
+   "Bullet Resist Shredder",
+   "Superior Cooldown"
+  ],
+  "matchups": {
+   "beats": [
+    "Seven",
+    "Celeste",
+    "Graves"
+   ],
+   "loses_to": [
+    "Silver",
+    "Lash",
+    "Apollo"
+   ]
+  },
+  "matchup_notes": "He threatens squishy, grouped or immobile carries he can mark with Salvo then burst with a dive or Close The Deal. He loses to anti-air and disruption: Silver's Weighted Bola grounds flyers on top of out-trading him, Lash can fling him out of dives, and Apollo out-lanes him. Silences/knockdowns and a whiffed dive (self-stun) are his own worst enemy given the 38s respawn tax.",
+  "enabled_by": [
+   "Grouped hub fights (Sunken Plaza, Bell Tower) that reward the overheat-dive AoE and launch",
+   "AoE clear of grouped Haunt camps",
+   "An anchor/initiator teammate to hold targets so Strix Salvo marks and Close The Deal land"
+  ],
+  "countered_by": [
+   "Anti-air (Silver's Weighted Bola)",
+   "Silence / Knockdown / Silencing Hex / Bebop hook",
+   "Slows — doubled by the global air-drag tax plus his own airborne-slow tooltip",
+   "Plated Armor vs his gun; Debuff Reducer vs his mark and fading slow",
+   "His own no-hero-hit self-stun combined with the long death tax"
+  ],
+  "notes": "Provisional C on a ~2-day sample; 34.9% WR / 0.2% PR is novelty-deflated but directionally bad, and the build pool is unformed (many 0-20% win picks). Would revise up if WR clears ~45% as PR grows and a mark/charged-shot build consolidates; down if the flyer tax holds and no build lands.",
+  "confidence": 0.4
+ },
+ "card": {
+  "headline": "Reckless flying marksman with a dive-bomb and grab-slam — high ceiling, anti-flyer meta.",
+  "kit_read": [
+   "Chimera Mk1: jetpack flight builds heat; the overheat dive explodes and launches nearby enemies — but self-stuns if it hits no hero, and he always explodes on death.",
+   "Strix Salvo: a line of spirit missiles marks targets; a charged shot consumes the mark for bonus spirit damage and a fading slow.",
+   "Close The Deal: grab a hero, fly up, slam — spirit DoT plus impact damage, amped vs targets under 50% HP (T3 adds a stun).",
+   "Jettison Fuel: weapon-DoT spray that shreds bullet resist and builds to a spirit backblast knockback; also vents the jetpack.",
+   "Frame: 680 HP and 116 heavy melee (opens Tough Crates), mixed gun/spirit — picks with dives, farms with AoE."
+  ],
+  "meta_fit": "His AoE (overheat explosion, Salvo) clears grouped Haunt camps and his heavy melee opens Tough Crates, and forced hub fights reward the dive — but he is a flyer in a patch built to tax flyers, and 38s respawns make every whiffed self-stun dive expensive.",
+  "threatens": [
+   "Seven — squishy grouped spirit carry; Salvo mark plus dive/Close The Deal chunks him",
+   "Celeste — burst spirit carry with no escape from the grab",
+   "Graves — immobile split pusher, an easy Close The Deal target"
+  ],
+  "threatened_by": [
+   "Silver — Bola grounds flyers on top of being a gun-tank that out-trades him",
+   "Lash — mobile initiator flings him out of dives",
+   "Silence / Knockdown / Silencing Hex — locks the jetpack and Close The Deal mid-dive",
+   "Plated Armor vs his gun; Debuff Reducer vs his mark and slow"
+  ],
+  "build_read": "The only coherent build so far is hybrid: High-Velocity Rounds + Express Shot for the charged-shot/mark gun package, Bullet Resist Shredder stacked with Jettison Fuel, Superior Cooldown for uptime, Boundless Spirit late. Item data is scattered (many 0-20% win picks) — nobody has converged, so the meta build is still unformed.",
+  "provisional_tier": "C",
+  "confidence": 0.4,
+  "what_to_watch": [
+   "WR as PR rises past novelty — does 34.9% climb toward ~45%?",
+   "Whether a mark/charged-shot build consolidates around Express Shot + Bullet Resist Shredder",
+   "Any flyer-tax easing (air drag, slows) or Silver Bola nerf that un-taxes his core mobility"
+  ]
+ }
+}

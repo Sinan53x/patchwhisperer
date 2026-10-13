@@ -19,6 +19,7 @@ Fortitude:
   - Baba
   - Billy
   - Celeste
+  - Deadman Danny
   - Dynamo
   - Infernus
   - Kelvin
@@ -108,6 +109,7 @@ High-Velocity Rounds:
   bought_by:
   - Baba
   - Celeste
+  - Deadman Danny
   - Grey Talon
   - Paige
   - Paradox
@@ -140,6 +142,7 @@ Boundless Spirit:
   - Baba
   - Calico
   - Celeste
+  - Deadman Danny
   - Grey Talon
   - Kelvin
   - Lady Geist
@@ -275,6 +278,7 @@ Superior Cooldown:
   - Apollo
   - Baba
   - Bebop
+  - Deadman Danny
   - Dynamo
   - Holliday
   - Mo & Krill
@@ -1029,6 +1033,7 @@ Bullet Resist Shredder:
   bought_by:
   - Abrams
   - Billy
+  - Deadman Danny
   - Ivy
   - Lady Geist
   - Lash
@@ -1206,6 +1211,7 @@ Express Shot:
   name: Express Shot
   role: ''
   bought_by:
+  - Deadman Danny
   - Paradox
   - Viscous
   slot: null
@@ -1388,6 +1394,7 @@ Arctic Blast:
   role: ''
   bought_by:
   - Calico
+  - Deadman Danny
   slot: null
   tier: null
   notes: ''
@@ -1494,6 +1501,7 @@ Extra Health:
   role: ''
   bought_by:
   - Baba
+  - Deadman Danny
   - Rat King
   slot: null
   tier: null
@@ -1503,6 +1511,14 @@ Colossus:
   role: ''
   bought_by:
   - Baba
+  slot: null
+  tier: null
+  notes: ''
+Indomitable:
+  name: Indomitable
+  role: ''
+  bought_by:
+  - Deadman Danny
   slot: null
   tier: null
   notes: ''
