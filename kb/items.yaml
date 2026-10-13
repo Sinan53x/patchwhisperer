@@ -273,6 +273,7 @@ Superior Cooldown:
   role: cooldown item
   bought_by:
   - Apollo
+  - Baba
   - Bebop
   - Dynamo
   - Holliday
@@ -313,6 +314,7 @@ Radiant Regeneration:
   name: Radiant Regeneration
   role: healing spirit item
   bought_by:
+  - Baba
   - Celeste
   - Kelvin
   - Lady Geist
@@ -398,6 +400,7 @@ Rapid Recharge:
   name: Rapid Recharge
   role: ability charge item
   bought_by:
+  - Baba
   - Calico
   - Grey Talon
   - Holliday
@@ -537,6 +540,7 @@ Spirit Snatch:
   role: spirit steal item
   bought_by:
   - Apollo
+  - Baba
   - Bebop
   - Billy
   - Calico
@@ -965,6 +969,7 @@ Extra Regen:
   bought_by:
   - Abrams
   - Apollo
+  - Baba
   - Celeste
   - Ivy
   - Kelvin
@@ -980,6 +985,7 @@ Mystic Regeneration:
   name: Mystic Regeneration
   role: ''
   bought_by:
+  - Baba
   - Celeste
   - Lady Geist
   - Mirage
@@ -1210,6 +1216,7 @@ Compress Cooldown:
   role: ''
   bought_by:
   - Apollo
+  - Baba
   - Dynamo
   - Grey Talon
   - Mirage
@@ -1264,6 +1271,7 @@ Healing Booster:
   role: ''
   bought_by:
   - Apollo
+  - Baba
   - Celeste
   - Ivy
   - Kelvin
@@ -1325,6 +1333,7 @@ Spirit Strike:
   role: ''
   bought_by:
   - Apollo
+  - Baba
   - Bebop
   - Billy
   - Calico
@@ -1386,6 +1395,7 @@ Torment Pulse:
   name: Torment Pulse
   role: ''
   bought_by:
+  - Baba
   - Celeste
   - Mo & Krill
   - Shiv

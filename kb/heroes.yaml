@@ -3806,96 +3806,107 @@ Baba:
   role: bulky spirit bruiser-caster
   archetypes:
   - spirit carry
-  - initiator
   - tank/frontline
   - lane bully
+  - initiator
   tier: B
   trend: stable
-  why: Baba is a high-HP mystic who converts Threadsap's stolen Spirit into bonus
-    spirit damage on Heavy Artillery bullets, then forces hub fights with a mass pigeon-hex
-    ultimate. She farms the crate/Haunt economy with heavy melee and AoE and sustains
-    through Brew's barrier, so the map engine suits her. But she is a spirit/on-hit
-    hybrid in a patch that taxed on-hit spirit carries, and her ult is a channel —
-    interruptible, and cycling Brew is unreliable.
+  why: 'Baba is one of the patch''s most-picked heroes (51.0% WR, 64.1% PR over 4.7k
+    games), and the usage data — not her old theorycrafted shell — defines her: a
+    regen-stacking spirit bruiser (Extra Charge, Mystic Regeneration, Radiant Regeneration)
+    who out-sustains the Haunt/crate economy and forces hub fights her AoE hex and
+    silence win. She holds B rather than rising because sustain supports (Kelvin,
+    Dynamo, Paige) match her grind and mobile gun pressure (Holliday, Wraith) out-pokes
+    her before the ult channel completes. The map-economy patch still suits her heavy-melee
+    plus AoE farm profile.'
   core_items:
-  - Boundless Spirit
-  - Arcane Surge
-  - Duration Extender
   - Extra Charge
+  - Extra Regen
+  - Mystic Regeneration
+  - Spirit Strike
+  - Radiant Regeneration
+  - Healing Booster
+  - Torment Pulse
+  - Compress Cooldown
+  - Spirit Snatch
+  - Duration Extender
+  - Superior Cooldown
   build_variants:
-  - Spirit utility/caster
-  - On-hit hybrid
-  - Melee frontline
+  - Spirit regen bruiser
+  - Cooldown caster
   enabled_by:
-  - Forced telegraphed hub fights (Sunken Plaza, Bell Tower) reward her AoE hex and
-    silence
-  - Heavy melee plus AoE Brew/Haunts clear the crate-camp economy
-  - Duration Extender and Arcane Surge spirit-support items amplify hex/silence windows
-  - Silence and Spirit-steal gain value in the current caster-heavy A/S tiers
+  - Tough Crates need heavy melee and Haunts group-and-sustain-check — Baba clears
+    both with Granny Long Legs melee plus a regen stack
+  - Forced, telegraphed hub fights at Sunken Plaza and Bell Tower reward her AoE hex
+    and silence on grouped enemies
+  - Global slows -20% / air drag 35% favor grounded bruisers over flyers
+  - No-comeback economy rewards her early camp income converting into an unkillable
+    mid-game frontline
   countered_by:
-  - 'Channel interrupts/silences: Knockdown, Cursed Relic, Silencer, Silence Wave'
-  - 'Sustained bullet pressure: Plated Armor, Bullet Resilience'
-  - 'Anti-heal vs melee lifesteal: Healbane, Decay'
-  - Mobile assassins that dodge Threadsap and close before the ult channel
+  - 'Anti-heal vs her regen wall: Healbane, Decay, Toxic Bullets'
+  - 'Sustain supports that neutralize her grind: Kelvin, Dynamo, Paige'
+  - 'Channel interrupts/silence on her ult: Knockdown, Cursed Relic, Silencer'
+  - 'Burst/mobile gun pressure she can''t out-poke: Holliday, Wraith; Plated Armor
+    and Bullet Resilience vs her gun damage'
   last_changed_patch: Mind the Birds!
-  notes: 'Day-0 kit read (2026-10-09), provisional — data check-in due 2026-10-13.
+  notes: '7-day check-in (2026-10-13): tier B -> B, WR 51%, PR 64% over 305220 matches.
 
-    Provisional B on first-week data (46.5% WR at 25.9% PR, novelty-inflated) — the
-    kit reads stronger than the win rate, so treat WR as noisy. Cycling Brew and the
-    channel make her feel inconsistent before T3. Change my mind if utility win rates
-    (Duration Extender/Boundless Spirit) hold while raw WR climbs past ~50%, or if
-    a hotfix buffs her cast.'
+    1) Usage overrides the prior entry: Boundless Spirit/Arcane Surge and the on-hit/melee
+    shells (High-Velocity Rounds, Lifestrike, Colossus) barely register in high-rank
+    buys — the real core is regen + cooldown-spirit items. 2) Matchups replaced by
+    7-day data (beats Solomon/Apollo/Calico; loses to Kelvin/Dynamo/Paige), which
+    differs sharply from the day-0 guesses. 3) Changelog: no Baba kit change since
+    Mind the Birds!; 10-05 was a trooper-speed fix only, leaving her map-economy engine
+    intact.'
   builds:
-  - name: Spirit utility/caster
+  - name: Spirit regen bruiser
     damage: spirit
     core_items:
-    - Boundless Spirit
-    - Arcane Surge
-    - Duration Extender
     - Extra Charge
+    - Extra Regen
+    - Mystic Regeneration
+    - Spirit Strike
+    - Radiant Regeneration
+    - Healing Booster
+    - Torment Pulse
     popularity: primary
-    notes: Spams Threadsap + Brew and extends silence/hex/slow durations; Duration
-      Extender and Boundless Spirit win rates back this path.
-  - name: On-hit hybrid
-    damage: hybrid
+    notes: 'The every-game shell: stack regen and HP to out-sustain Haunt chip and
+      hub fights, with Torment Pulse turning her into an AoE aura; Extra Charge (98%),
+      Mystic Regeneration (95%) and Radiant Regeneration (94%) are near-universal.'
+  - name: Cooldown caster
+    damage: spirit
     core_items:
-    - High-Velocity Rounds
-    - Swift Striker
-    - Boundless Spirit
-    - Spiritual Overflow
+    - Compress Cooldown
+    - Spirit Snatch
+    - Duration Extender
+    - Superior Cooldown
+    - Rapid Recharge
     popularity: secondary
-    notes: Leans on Threadsap's bonus-spirit-per-bullet, but Heavy Artillery's slow
-      fire rate and the 09-16 on-hit-spirit item hits blunt it.
-  - name: Melee frontline
-    damage: hybrid
-    core_items:
-    - Extra Health
-    - Fortitude
-    - Enduring Speed
-    - Lifestrike
-    - Colossus
-    popularity: niche
-    notes: Uses Granny Long Legs melee resist/lifesteal and crate access to brawl;
-      samples are tiny and the 50 lifesteal only lands at T3.
+    notes: Late slot conversion (~20-24 min) to spam Threadsap/Brew/ult and extend
+      hex/silence; Duration Extender (59.3%) and Superior Cooldown (58.8%) are her
+      best-winrate items, while Rapid Recharge (48.2%) is a trap.
   matchups:
     beats:
-    - Lady Geist
-    - Seven
-    - Celeste
-    - Pocket
+    - Solomon
+    - Apollo
+    - Calico
+    - Grey Talon
+    - Mina
     loses_to:
-    - Vindicta
-    - Silver
+    - Kelvin
+    - Dynamo
+    - Paige
     - Holliday
-    - Yamato
-  matchup_notes: Silence plus Spirit-steal punishes slow spirit casters (Lady Geist,
-    Seven, Celeste, Pocket) who cannot function with their Spirit trimmed and their
-    kit muted. She struggles into sustained long-range gun pressure she cannot out-poke
-    (Vindicta, Silver) and mobile assassins (Holliday, Yamato) who dodge Threadsap
-    and kill her before the channel completes.
-  confidence: 0.4
+    - Wraith
+  matchup_notes: She beats telegraphed control/spirit heroes she can silence and out-sustain
+    — Solomon (67%) and Apollo (59%), plus Calico (58%), who cannot heavy-melee the
+    crate economy so Baba out-farms the tempo assassin. She loses to sustain that
+    matches her regen — Kelvin (39%) and Dynamo (41%) — and to S-tier lane support
+    Paige (43%) and mobile gun pressure Holliday (44%)/Wraith (45%) she cannot out-poke
+    before the channel lands.
+  confidence: 0.55
   released_on: '2026-10-06'
-  provisional: true
+  provisional: false
 Solomon:
   name: Solomon
   role: control support / zone-control strategist
