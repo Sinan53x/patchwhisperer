@@ -1,0 +1,103 @@
+{
+ "hero_updates": {
+  "Baba": {
+   "tier": "C",
+   "trend": "falling",
+   "why": "Regen-stacking spirit bruiser whose unkillable-frontline identity just got cut - Brew's barrier (1.2->0.7 scaling, base 100->90, CD 25->27s), base bullet resist (-7%) and Granny Long Legs mobility are all down, so she no longer out-sustains and out-tanks hub fights as reliably. She still farms Tough Crates and grouped Haunts and holds fights with AoE hex, but folds faster to focus fire, anti-heal and mobile gun pressure.",
+   "core_items": [
+    "Extra Charge",
+    "Extra Regen",
+    "Mystic Regeneration",
+    "Spirit Strike",
+    "Radiant Regeneration",
+    "Healing Booster",
+    "Spirit Resilience",
+    "Torment Pulse",
+    "Compress Cooldown",
+    "Spirit Snatch",
+    "Duration Extender",
+    "Superior Cooldown"
+   ],
+   "builds": [
+    {
+     "name": "Spirit regen bruiser",
+     "damage": "spirit",
+     "core_items": [
+      "Extra Charge",
+      "Extra Regen",
+      "Mystic Regeneration",
+      "Spirit Strike",
+      "Radiant Regeneration",
+      "Healing Booster",
+      "Torment Pulse",
+      "Spirit Resilience"
+     ],
+     "popularity": "primary",
+     "notes": "The every-game shell: stack regen and HP to out-sustain Haunt chip and hub fights, with Torment Pulse as an AoE aura (Extra Charge 98%, Mystic Regeneration 95%, Radiant Regeneration 94%). The 10-14 cuts (barrier, bullet/spirit resist, mobility) make the stack shakier - buy Healing Booster/Spirit Resilience earlier and stop counting on out-tanking focus; Brew is now a T2 (CD 25->27s), so it lands later."
+    },
+    {
+     "name": "Cooldown caster",
+     "damage": "spirit",
+     "core_items": [
+      "Compress Cooldown",
+      "Spirit Snatch",
+      "Duration Extender",
+      "Superior Cooldown",
+      "Rapid Recharge"
+     ],
+     "popularity": "secondary",
+     "notes": "Late slot conversion (~20-24 min) to spam Threadsap/Brew/ult and extend hex/silence; Duration Extender (59.3%) and Superior Cooldown (58.8%) stay her best-WR items while Rapid Recharge (48.2%) is a trap. Threadsap CD 26->28 and its spirit shred now ends on her death, so duration and landing the silence matter more than raw sustain."
+    }
+   ],
+   "last_changed_patch": "Minor Update - 10-14-2026",
+   "notes": "10-14: major kit cut - Brew barrier scaling 1.2->0.7 and base 100->90 with CD 25->27s (later, T2), -7% Base Bullet Resist, spirit-resist scaling 0.12->0.1, Granny Long Legs CD 30->32 with lower light-melee launch and decaying repeat air-melee momentum, Threadsap CD 26->28 with its spirit shred now ending on death; plus Radiant Regeneration 0.04->0.035. Tier B -> C, trend falling.\n7-day check-in (2026-10-13): tier B -> B, WR 51%, PR 64% over 305220 matches.\nUsage overrides the prior entry: the real core is regen + cooldown-spirit items (Extra Charge 98%, Mystic Regeneration 95%, Radiant Regeneration 94%), not the Boundless Spirit/on-hit shells; 7-day matchups beat Solomon/Apollo/Calico, lose to Kelvin/Dynamo/Paige."
+  },
+  "Deadman Danny": {
+   "trend": "rising",
+   "why": "Flying marksman with a genuine shred/mark gun package that just got a real buff (base HP 680->730, gun 12->15/44->48, Chimera Mk1 scaling 1.15->1.4, Strix Salvo CD 30->25s and spirit scaling 0.9->1.1, Close The Deal execute 50%->75%), so his lane-to-hub mark burst is considerably sharper. Still a flyer in an explicitly anti-flyer environment (air drag, Silver's Bola), so his signature mobility stays a tax and keeps him capped at C.",
+   "last_changed_patch": "Minor Update - 10-14-2026",
+   "notes": "10-14: buff package - base HP 680->730 and regen 2.5->3.25, gun 12->15/44->48, Chimera Mk1 weapon scaling 1.15->1.4, Strix Salvo CD 30->25s and spirit scaling 0.9->1.1 with T2 +30/+45 and T3 +0.35, Close The Deal AP +50->+90 and execute 50%->75%, Rocket Jump self-damage 6.5%->5%. Held at C - the buffs fight an unchanged anti-air/flyer-tax context.\nDay-0 kit read (2026-10-13), provisional - data check-in due 2026-10-20.\nProvisional C on a ~2-day sample; 34.9% WR / 0.2% PR is novelty-deflated but directionally bad, and the build pool is unformed (many 0-20% win picks). Would revise up if WR clears ~45% as PR grows and a mark/charged-shot build consolidates; down if the flyer tax holds and no build lands."
+  },
+  "Lady Geist": {
+   "trend": "stable",
+   "why": "Regen spirit bruiser still climbing the front-line slot on her Extra Regen/Mystic Regeneration sustain and fading spirit-caster rivals, but the third cumulative Radiant Regeneration trim (0.04->0.035 spirit scaling) narrows the ~98%-buy regen window her build runs on, and the no-comeback economy still caps her 0-6-then-farm pattern.",
+   "notes": "10-14: Radiant Regeneration spirit scaling 0.04->0.035 (third cumulative trim) narrows her ~98%-buy regen core; the Spirit Soul-Exchange variant, which stacks the most spirit power, loses most.\nCity Never Sleeps (09-29, indirect): harder Haunt camps reward her sustain stack and Buff-Container Spirit Resist adds free defense; the no-comeback economy still caps her farm-then-scale pattern.\n09-16: Life Drain T3 spirit scaling 0.3->0.45 and Essence Bomb T3 26->30% buff her bomb/drain, but Radiant Regeneration 2->1.7 per-boon trims her 98%-buy regen core."
+  },
+  "Kelvin": {
+   "why": "Support/healer whose dome/sustain keeps value against the patch's harder-hitting Haunt camps, and a relative gain now that the Radiant Regeneration trim hits rival sustain (Baba, Lady Geist, Shiv, Celeste) while his Extra Regen/Healing Booster core is untouched; still capped by meta anti-heal (Healbane) and mobile dive (Lash, Drifter).",
+   "notes": "10-14: Radiant Regeneration spirit scaling 0.04->0.035 trims rival sustain (Baba, Lady Geist, Shiv, Celeste) while his Extra Regen/Healing Booster core is untouched - small relative gain.\nCity Never Sleeps (09-29, indirect): harder Haunt camps raise the value of his dome/sustain; Healing Snacks (10% max HP) reduce the relative value of dedicated healing.\nKB core_items were wrong: usage shows a spirit-sustain line (Extra Regen/Extra Charge/Healing Booster), not Radiant Regeneration/Healing Nova/Fortitude - corrected."
+  },
+  "Calico": {
+   "why": "Lane-winning mobile assassin whose tempo snowball still fits the no-comeback economy, and her worst matchup (Baba, ~58% against her) just lost barrier, bullet resist and mobility; she is still locked out of the Tough Crate farm by cat form and remains capped by tanks she cannot burst.",
+   "notes": "10-14: Baba (beats her ~58%, her worst listed matchup) took a major nerf - eases with no cost to her; no direct change.\nCity Never Sleeps: cat form cannot perform the Heavy Melee that Tough Crates need, locking her out of the patch's best soul route; lean on kills/off-map gold.\nMelee-spirit is the default (Melee Lifesteal/Stalker/Spirit Strike/Cold Front/Spirit Snatch at 98-99%); the Rapid Recharge/Echo Shard set is gone."
+  },
+  "Shiv": {
+   "why": "Rising anti-tank fed by the tank/frontline wave (Abrams, Mo & Krill, Billy) his current-HP Serrated Knives shred and by harder camps rewarding his regen; the third Radiant Regeneration trim chips the spirit-sustain front line he holds, and burst/hook CC (Yamato, Drifter, Bebop) still kills him before regen ramps.",
+   "notes": "10-14: Radiant Regeneration spirit scaling 0.04->0.035 chips his near-universal Mystic/Extra Regen spirit-sustain core; kit untouched.\nCity Never Sleeps: rising anti-tank - the bigger front line feeds current-HP Serrated Knives and harder camps reward his regen.\nSpirit/regen rebuild confirmed (Mystic Regeneration/Extra Regen core); Mystic Vulnerability/Torment Pulse/Escalating Exposure run 40-55%."
+  },
+  "Apollo": {
+   "why": "Tempo lane bully the map-economy patch favors: he routes crate paths and roams, and with T3 bullet resist is one of the few who can still commit under a Guardian after the parry-cooldown change; his spirit core is untouched and his worst lane (Baba, ~59%) just got materially weaker.",
+   "notes": "10-14: Baba (beats him ~59%) took a major nerf - a marginal easing of a bad lane; no direct change.\n10-05: no direct change; the trooper-speed regression fix restores on-schedule lane crashes for his bully pressure, and Rat King's frontline trim thins the competing A-tier bruiser pool."
+  },
+  "Celeste": {
+   "why": "Late-scaling flying spirit burst is the wrong profile for a lane-wins tempo meta (comeback souls gone, early-Rift fights real, the air-drag slow bleeds her mid-flight), and a third Radiant Regeneration trim plus a buffed Deadman Danny (beats her 61%) compound the loss; she still bursts squishy melee threats (Yamato, Pocket) but folds to sustain and mobile initiators.",
+   "notes": "10-14: Radiant Regeneration spirit scaling 0.04->0.035 is the third trim to her sustain-burst core; Deadman Danny (beats her 61%) got a buff package.\n09-16: tier held at B (down from A) - the seven-nerf stack plus the air-drag flyer tax; Witchmail remains her anti-slow answer.\n54.6% WR / 26.4% PR is a 14-day, mostly pre-patch snapshot - treat as a ceiling, not current strength."
+  },
+  "Solomon": {
+   "why": "Cooldown-driven zone controller whose persistent bishop zones and rook immobilize convert telegraphed hub fights, now helped by his hardest matchup (Baba, 67%) taking a major nerf; not a top camp-clearer, so his income still rides on heavy-melee crate routes and team souls rather than solo jungle farming.",
+   "notes": "10-14: Baba - his hardest listed loss at 67% - took a major nerf, loosening his worst matchup; no direct change.\nDay-0 kit read (2026-10-09), provisional - data check-in due 2026-10-16.\nDevelop Queen tooltip is empty - ult power is the single biggest unknown; T2 hints a 'Checkmate' threshold (200/5) scaled by slow. Gun builds are losing, spirit/cooldown builds winning on small novelty samples."
+  }
+ },
+ "change_log": [
+  "Baba: tier B -> C, trend stable -> falling; major kit cut (Brew barrier 1.2->0.7 / base 100->90 / CD 25->27s to T2, -7% Base Bullet Resist, spirit-resist scaling 0.12->0.1, Granny Long Legs and Threadsap trims) plus Radiant Regeneration 0.04->0.035; added Spirit Resilience and refreshed both build notes.",
+  "Lady Geist: trend rising -> stable; Radiant Regeneration spirit scaling 0.04->0.035 (third cumulative trim) narrows her ~98%-buy regen core.",
+  "Deadman Danny: trend stable -> rising; direct buff package (HP 680->730, gun 12->15/44->48, Chimera scaling 1.15->1.4, Strix Salvo CD 30->25s and spirit scaling, Close The Deal execute 50%->75%); held at C on the unchanged flyer tax.",
+  "Kelvin: why/notes updated - relative gain as rival sustain (Baba, Lady Geist, Shiv, Celeste) absorbs the Radiant Regeneration trim while his core is untouched.",
+  "Shiv: why/notes updated - Radiant Regeneration trim chips his Mystic/Extra Regen spirit-sustain core; kit untouched.",
+  "Calico: why/notes updated - Baba (beats her ~58%) nerfed, easing her worst matchup.",
+  "Apollo: why/notes updated - Baba (beats him ~59%) nerfed, easing his bad lane.",
+  "Celeste: why/notes updated - third regen trim plus buffed Deadman Danny (beats her 61%) matchup.",
+  "Solomon: why/notes updated - Baba (his hardest loss at 67%) nerfed, loosening his worst matchup.",
+  "Matchups fields left unchanged: no head-to-head flipped in the supplied data (Baba's losses to Apollo/Calico/Solomon ease but do not reverse)."
+ ]
+}

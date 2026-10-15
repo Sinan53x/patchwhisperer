@@ -1,0 +1,124 @@
+{
+ "verdicts": [
+  {
+   "hero": "Venator",
+   "verdict": "keep",
+   "one_liner": "Untouched A-tier gun bruiser; no patch lever moved him.",
+   "direct": "No direct changes.",
+   "indirect": "Radiant Regeneration/Deadman Danny reshuffle doesn't touch his gun-bruiser core or his listed losses (Abrams, Warden, Lash), so his slot is unchanged.",
+   "build_adjustments": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Haze",
+   "verdict": "keep",
+   "one_liner": "Untouched; her worst lane (Celeste) just got weaker.",
+   "direct": "No direct changes.",
+   "indirect": "Celeste, her hardest listed loss (42%), ate the Radiant Regeneration trim and faces a buffed Deadman Danny (beats her 61%) — her lane loosens for free.",
+   "build_adjustments": [],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Wraith",
+   "verdict": "keep",
+   "one_liner": "Untouched; pure-gun rebuild carries over, one loss softens.",
+   "direct": "No direct changes.",
+   "indirect": "Celeste (46% against her) weakened by the regen trim and Danny buffs, a small relief for a falling B carry with no other patch contact.",
+   "build_adjustments": [],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Warden",
+   "verdict": "keep",
+   "one_liner": "Untouched C late scaler; the tempo economy still won't wait for him.",
+   "direct": "No direct changes.",
+   "indirect": "No meaningful indirect effects — no item in his gun-carry core moved, and the 09-16 economy that buries him is untouched.",
+   "build_adjustments": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Shiv",
+   "verdict": "watch",
+   "one_liner": "Regen wall chipped again; Spirit Star 3 doesn't heal as much per point.",
+   "direct": "No direct changes.",
+   "indirect": "Radiant Regeneration spirit scaling 0.04->0.035 trims his near-universal Mystic/Extra Regen sustain core — minor, but it shaves the exact wall he frontlines behind.",
+   "build_adjustments": [
+    "Keep Radiant Regeneration (no replacement exists); just expect less healing per spirit point.",
+    "If fights run long, weight Extra Regen/Mystic Regeneration earlier than the regen capstone."
+   ],
+   "confidence": 0.45
+  },
+  {
+   "hero": "Yamato",
+   "verdict": "keep",
+   "one_liner": "Untouched A camp-clearer; one hard loss (Celeste) eased.",
+   "direct": "No direct changes.",
+   "indirect": "Celeste, a listed loss (41-42%), was weakened by the regen trim plus the Deadman Danny buff, softening a rare bad matchup on an already-rising hero.",
+   "build_adjustments": [],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Mina",
+   "verdict": "keep",
+   "one_liner": "Untouched C burst assassin; still can't kill through tanks.",
+   "direct": "No direct changes.",
+   "indirect": "No meaningful indirect effects — nothing in her spirit-burst core moved, and her tank matchup (Billy/Mo & Krill/Victor) is unchanged by the patch.",
+   "build_adjustments": [],
+   "confidence": 0.65
+  },
+  {
+   "hero": "Paradox",
+   "verdict": "keep",
+   "one_liner": "Untouched rising pick/sniper; no lever moved.",
+   "direct": "No direct changes.",
+   "indirect": "No meaningful indirect effects — Slowing Hex/carbine core untouched, and no listed matchup shifted from the Baba cut or regen trim.",
+   "build_adjustments": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Mirage",
+   "verdict": "keep",
+   "one_liner": "No changes; still beaten by the tempo economy, not the notes.",
+   "direct": "No direct changes.",
+   "indirect": "No meaningful indirect effects — his spirit-amp core (Mystic Regen/Healbane) is outside the regen trim and no listed matchup moved.",
+   "build_adjustments": [],
+   "confidence": 0.65
+  },
+  {
+   "hero": "Infernus",
+   "verdict": "keep",
+   "one_liner": "Untouched; Healbane buy quietly rises as regen erodes.",
+   "direct": "No direct changes.",
+   "indirect": "His 77%-buy Healbane core gets marginally more valuable as Radiant Regeneration bleeds value (third trim) and sustain archetypes erode.",
+   "build_adjustments": [],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Holliday",
+   "verdict": "keep",
+   "one_liner": "Untouched A roamer; lasso picks still the plan.",
+   "direct": "No direct changes.",
+   "indirect": "No meaningful indirect effects — no charge/spirit item in her build moved and no listed matchup shifted.",
+   "build_adjustments": [],
+   "confidence": 0.7
+  },
+  {
+   "hero": "Drifter",
+   "verdict": "keep",
+   "one_liner": "Untouched A bruiser; a listed loss (Celeste) got weaker.",
+   "direct": "No direct changes.",
+   "indirect": "Celeste, a listed loss, was trimmed by the regen cut and faces buffed Danny — small relief on an already-rising blind pick; his Healbane core gains marginally as sustain erodes.",
+   "build_adjustments": [],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Billy",
+   "verdict": "keep",
+   "one_liner": "No changes; Baba's slot opens but the read says Mo & Krill takes it.",
+   "direct": "No direct changes.",
+   "indirect": "Baba's frontline gutting frees the tank role, but the synthesis routes it to Mo & Krill, and Billy's real slide (his slot already ceded, anti-tank Shiv climbing) is unchanged — treat as neutral.",
+   "build_adjustments": [],
+   "confidence": 0.6
+  }
+ ]
+}

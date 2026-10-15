@@ -1,0 +1,95 @@
+{
+ "patch_size": "minor",
+ "size_why": "One item trim (Radiant Regeneration) plus one major hero cut (Baba) and one buff package (Deadman Danny) — no economy, objective, movement, map or comeback lever moved, so the way games are won is untouched. The 'General 27' count is breadth of tuning, not structural depth.",
+ "headline": "Baba's unkillable frontline got gutted and Deadman Danny got a real buff package, but the Tough Crate/Sunken Plaza/Bell Tower income engine still decides games exactly as before.",
+ "meta_thesis": {
+  "previous": "Games are won by templated PvE map income — guaranteed Tough Crate routes, Sunken Plaza (5-8m) and Bell Tower (8m+) hub fights — with no comeback valve, so AoE/sustain camp-clearers and heavy-melee box farmers bank faster than lane bullies.",
+  "new": "Unchanged: the economy, objective bounties, respawn tax and no-comeback valve all carry over, so the farm-route-then-forced-hub-fight shape stands; the patch only reshuffles which sustain frontline holds the archetype slot, cutting Baba out of it and handing Deadman Danny a sharper (but still flyer-taxed) kit.",
+  "relationship": "continuation",
+  "why": "No systems, economy, map or item-slot change — the drivers are a third cumulative Radiant Regeneration trim and a Baba kit cut, which move heroes inside existing archetypes rather than moving the archetypes themselves."
+ },
+ "winners": [
+  {
+   "hero": "Deadman Danny",
+   "why": "Direct package: base HP 680->730, gun 12->15 / charged 44->48, Chimera Mk1 scaling 1.15->1.4, Strix Salvo CD 30->25s and Close The Deal execute 50%->75%.",
+   "indirect": false
+  },
+  {
+   "hero": "Kelvin",
+   "why": "His Extra Regen/Healing Booster sustain core is untouched while every named rival sustain buyer (Baba, Lady Geist, Shiv, Celeste) ate the Radiant Regeneration trim — a pure relative gain.",
+   "indirect": true
+  },
+  {
+   "hero": "Calico",
+   "why": "Untouched, and her worst listed matchup (Baba, ~58% against her) just lost barrier, bullet resist and mobility.",
+   "indirect": true
+  },
+  {
+   "hero": "Apollo",
+   "why": "S-tier and untouched; Baba beats him ~59% and just got materially weaker, easing his worst lane.",
+   "indirect": true
+  },
+  {
+   "hero": "Solomon",
+   "why": "His hardest listed loss (Baba, 67%) took a major nerf — worst matchup loosens with no cost to him.",
+   "indirect": true
+  }
+ ],
+ "losers": [
+  {
+   "hero": "Baba",
+   "why": "Brew barrier 1.2->0.7 scaling and base 100->90 with 25->27s CD, -7% Base Bullet Resist, spirit-resist scaling 0.12->0.1, plus Granny Long Legs and Threadsap trims — mobility, shield and tank identity all cut. B->C.",
+   "indirect": false
+  },
+  {
+   "hero": "Lady Geist",
+   "why": "~98% buy on Radiant Regeneration; spirit scaling 0.04->0.035 bites hardest on her Spirit Soul-Exchange build.",
+   "indirect": true
+  },
+  {
+   "hero": "Celeste",
+   "why": "Third trim to her sustain-burst core lands on a hero already falling, and Deadman Danny (beats her 61%) got a large buff package.",
+   "indirect": true
+  },
+  {
+   "hero": "Shiv",
+   "why": "Radiant Regeneration chipped again in his near-universal Mystic/Extra Regen spirit-sustain core.",
+   "indirect": true
+  }
+ ],
+ "non_obvious_calls": [
+  {
+   "claim": "The patch's real winner set is 'anyone who fought Baba' — Apollo, Calico and Solomon all move up while untouched.",
+   "why": "All three list Baba as their worst or near-worst matchup, and her cut hits barrier, bullet resist and mobility simultaneously.",
+   "confidence": 0.5
+  },
+  {
+   "claim": "Radiant Regeneration's third consecutive trim is a stealth buff to anti-heal and burst, not a sustain-item change.",
+   "why": "No competing sustain item was added, so Healbane/Decay and pre-ramp burst get relatively better while the regen archetype erodes file-by-file.",
+   "confidence": 0.6
+  },
+  {
+   "claim": "Deadman Danny's buff package does not lift him out of C-tier despite the numbers.",
+   "why": "He is still a flyer in an anti-air, high-air-drag environment where Silver's Bola is the answer — the direct buffs fight a context that was not changed.",
+   "confidence": 0.55
+  },
+  {
+   "claim": "Baba's cut is framed as hero tuning but targets the front-line dive slot only T3-bullet-resist picks can hold.",
+   "why": "-7% Base Bullet Resist plus the barrier gutting attacks exactly the commit-to-dive role the KB says is reserved for Apollo/Mo & Krill.",
+   "confidence": 0.45
+  }
+ ],
+ "uncertainties": [
+  "Whether Baba's -7% bullet resist plus barrier cut is survivable enough to keep her a frontline pick or drops her out of the archetype entirely.",
+  "Kelvin's relative win is inferred with no KB entry — magnitude and relationship are low confidence.",
+  "What 'Street Brawl' is (mode vs kit) and whether its change matters to the standard game is unclear from the supplied analysis.",
+  "Whether Deadman Danny's buffs overcome the unchanged flyer tax — the buff and the context point opposite directions."
+ ],
+ "what_to_watch": [
+  "Baba's WR and pick rate post-nerf — does the frontline slot go to Mo & Krill/Billy outright?",
+  "Radiant Regeneration buy rate on Lady Geist, Shiv, Celeste and Baba — does the third trim finally drop it below core?",
+  "Deadman Danny WR — does the buff package translate past the anti-air environment?",
+  "Healbane/Decay buy rate as regen erodes — the tell that anti-heal is the new sustain answer.",
+  "Any hotfix that adds a sustain item or touches the Tough Crate/Bell Tower economy, which would break the continuation thesis."
+ ]
+}

@@ -1,0 +1,595 @@
+{
+ "heroes": [
+  {
+   "hero": "Infernus",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Untouched; burn gun and Dashfernus builds carry over unchanged at B."
+  },
+  {
+   "hero": "Seven",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; farm-first AoE clear still fits the crate economy."
+  },
+  {
+   "hero": "Vindicta",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Untouched; still the anti-air-taxed max-range poke carry at A."
+  },
+  {
+   "hero": "Lady Geist",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Radiant Regeneration spirit scaling 0.04->0.035 trims the ~98%-buy regen core in both her gun-bruiser and Spirit Soul-Exchange builds; the spirit build loses the most."
+   ],
+   "build_changes": [
+    "No swap needed, just a narrower sustain window - Healbane/Decay now beat her regen slightly more easily."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Kit untouched, but a third regen-item trim narrows the sustain her build runs on."
+  },
+  {
+   "hero": "Abrams",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; melee-crate frontline holds B."
+  },
+  {
+   "hero": "Wraith",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Untouched; pure-gun rebuild is still her path."
+  },
+  {
+   "hero": "McGinnis",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; turret and wall zoning hold."
+  },
+  {
+   "hero": "Paradox",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Untouched; roamer pick setups still her edge."
+  },
+  {
+   "hero": "Dynamo",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "No changes; Singularity setup holds A."
+  },
+  {
+   "hero": "Kelvin",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.3,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "The Radiant Regeneration trim hits rival sustain (Baba, Lady Geist, Shiv, Celeste) while his Extra Regen/Healing Booster core is untouched - a small relative gain."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Rivals' healing got trimmed, not his - a quiet, small relative win."
+  },
+  {
+   "hero": "Haze",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; tempo gun carry holds B."
+  },
+  {
+   "hero": "Holliday",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Untouched; charge-spirit lasso picks hold A."
+  },
+  {
+   "hero": "Bebop",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; hook initiator holds B."
+  },
+  {
+   "hero": "Calico",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.25,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Baba, who beats her roughly 58%, took a major nerf - her worst listed matchup loosens slightly."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Untouched; her worst matchup (Baba) got weaker."
+  },
+  {
+   "hero": "Grey Talon",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "No changes; still a C flyer caught by the air-drag tax."
+  },
+  {
+   "hero": "Mo & Krill",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "No changes; default sustained frontline holds A."
+  },
+  {
+   "hero": "Shiv",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Radiant Regeneration scaling 0.04->0.035 chips the regen wall in his near-universal Mystic/Extra Regen spirit-sustain core."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Anti-tank kit untouched; a small regen trim chips his sustain front line."
+  },
+  {
+   "hero": "Ivy",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "No changes; best peel in the game keeps her at A."
+  },
+  {
+   "hero": "Warden",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Untouched; still a C late scaler the tempo meta won't wait for."
+  },
+  {
+   "hero": "Yamato",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "No changes; camp-clear burst assassin holds A."
+  },
+  {
+   "hero": "Lash",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Untouched; top-pick dive initiator keeps S."
+  },
+  {
+   "hero": "Viscous",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; Cube enabler holds B."
+  },
+  {
+   "hero": "Pocket",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Untouched; Affliction scaler holds B."
+  },
+  {
+   "hero": "Mirage",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; split-push scaler holds B."
+  },
+  {
+   "hero": "Vyper",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Untouched; pure-gun pivot holds B."
+  },
+  {
+   "hero": "Sinclair",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "No changes; kit-steal coin flip holds C."
+  },
+  {
+   "hero": "Mina",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Untouched; can't kill through tanks, holds C."
+  },
+  {
+   "hero": "Drifter",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "No changes; blind-pickable melee bruiser holds A."
+  },
+  {
+   "hero": "Venator",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Untouched; gun-tank carry holds A."
+  },
+  {
+   "hero": "Victor",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "No changes; sustain frontline holds A."
+  },
+  {
+   "hero": "Paige",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Untouched; lane-winning support keeps S."
+  },
+  {
+   "hero": "The Doorman",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; setup initiator holds B."
+  },
+  {
+   "hero": "Billy",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Untouched; frontline holds A."
+  },
+  {
+   "hero": "Graves",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "No changes; late-scaling gun carry still C."
+  },
+  {
+   "hero": "Apollo",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.25,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Baba, who beats him roughly 59%, took a major nerf - a marginal easing of a bad lane."
+   ],
+   "build_changes": [],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Untouched; only notable shift is Baba, his bad lane, getting nerfed."
+  },
+  {
+   "hero": "Rem",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; coin-flip heal support holds B."
+  },
+  {
+   "hero": "Silver",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Untouched; anti-air gun tank keeps S."
+  },
+  {
+   "hero": "Celeste",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Radiant Regeneration scaling 0.04->0.035 trims her sustain-burst core; Deadman Danny, who beats her 61%, got a large buff package."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Already falling; another regen trim plus a buffed matchup dent her survivability."
+  },
+  {
+   "hero": "Rat King",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.0,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "No changes; post-nerf frontline holds A."
+  },
+  {
+   "hero": "Baba",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "major",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Baba's Brew barrier scaling 1.2->0.7 and base 100->90 gut the frontline shield her regen-bruiser build runs, and CD 25->27s moves it to T2 (later online).",
+    "-7% Base Bullet Resistance plus Spirit Resistance scaling 0.12->0.1 cut both her lane bullet-tank and her anti-spirit bruiser identity.",
+    "Granny Long Legs (CD 30->32, lower light-melee launch, decaying repeat air-melee momentum, no slope speed on heavy melee) trims her mobility and escape; Threadsap CD 26->28 and its spirit shred now ends when she dies."
+   ],
+   "indirect_reasons": [
+    "Radiant Regeneration spirit scaling 0.04->0.035 shaves her ~94%-buy core heal - a third trim to the sustain her tank plan leans on."
+   ],
+   "build_changes": [
+    "Regen stack is shakier now - buy Healing Booster/Spirit Resilience earlier and value Duration Extender/Superior Cooldown for silence plays over pure sustain; Brew lands later as a T2."
+   ],
+   "tier_before": "B",
+   "tier_after": "C",
+   "one_liner": "Mobility, barrier and bullet resist all cut - no longer the unkillable frontline she was."
+  },
+  {
+   "hero": "Solomon",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.25,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Baba - his hardest listed loss at 67% - took a major nerf, loosening his worst matchup."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No direct change, but Baba's nerf loosens his worst matchup."
+  },
+  {
+   "hero": "Deadman Danny",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.5,
+   "direct_reasons": [
+    "Base health 680->730 and regen 2.5->3.25 shore up his squishy flyer frame.",
+    "Gun 12->15 uncharged / 44->48 charged plus Chimera Mk1 weapon scaling 1.15->1.4 raise his marksman DPS.",
+    "Strix Salvo CD 30->25s, spirit scaling 0.9->1.1, T2 +30/+45, T3 +0.35 buff his mark burst; Close The Deal AP +50->+90 and execute +50%->+75%; Rocket Jump self-damage 6.5%->5%."
+   ],
+   "indirect_reasons": [],
+   "build_changes": [
+    "Lean into the buffed Strix Salvo plus Close The Deal mark-execute line with Bullet Resist Shredder and HV Rounds/Express Shot; stay ranged - the anti-air flyer tax is unchanged."
+   ],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Big health, gun and mark buffs - but still a flyer in an anti-air patch."
+  },
+  {
+   "hero": "Street Brawl",
+   "in_notes": true,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.1,
+   "direct_reasons": [
+    "Only line is a mode-style tweak (Baba's Threadsap duration -35%); treated as the Street Brawl game mode, not a ranked hero - read is provisional."
+   ],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "?",
+   "tier_after": "B",
+   "one_liner": "Likely the Street Brawl mode, not a hero - the line only trims Baba's Threadsap there."
+  }
+ ]
+}

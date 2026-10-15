@@ -325,8 +325,12 @@ Radiant Regeneration:
   - Shiv
   slot: Spirit
   tier: 3
-  notes: 08-22 heal on cast 70->65 plus 09-16 per-boon scaling 2->1.7 — a cumulative
-    nerf to healing supports; they can no longer absorb an early deficit.
+  notes: 'Third cumulative trim to the regen shell: 08-22 heal on cast 70->65, 09-16
+    per-boon scaling 2->1.7, 10-14 spirit scaling 0.04->0.035. Still 94-98% buy on
+    holders, so it stays core, but each point of spirit power now buys less healing
+    — spirit-stacking users (Lady Geist Soul-Exchange, Shiv, Baba) feel it most. No
+    competing sustain item added, so nothing displaces it; the slot just shrinks in
+    value, quietly favouring anti-heal (Healbane, Decay) and pre-ramp burst.'
 Healing Nova:
   name: Healing Nova
   role: team heal item

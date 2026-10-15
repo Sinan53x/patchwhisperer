@@ -1,0 +1,46 @@
+{
+ "items": [
+  {
+   "item": "Radiant Regeneration",
+   "direction": "nerf",
+   "magnitude": "minor",
+   "summary": "Third cumulative trim to the regen-sustain shell (heal-on-cast 08-22, per-boon 09-16, spirit scaling 0.04->0.035 now). At 94-98% buy on its holders it won't drop out of builds, but spirit-scaling means each point of spirit power buys less healing, so spirit-stacking users feel it more than gun-hybrid ones.",
+   "affected_heroes": [
+    {
+     "hero": "Baba",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Radiant Regeneration is ~94% buy in her regen-stacking shell; the scaling cut shaves the exact heal her out-sustain-the-economy plan runs on."
+    },
+    {
+     "hero": "Lady Geist",
+     "relationship": "core",
+     "effect": "down",
+     "why": "~98% buy across both builds, and the trim bites hardest on her Spirit Soul-Exchange variant because it stacks the most spirit power."
+    },
+    {
+     "hero": "Shiv",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Near-universal in his Mystic/Extra Regen spirit-sustain core — one more chip off the regen wall he frontlines behind."
+    },
+    {
+     "hero": "Celeste",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Still core to her sustain-burst shell, but she's already B-tier and falling, so a third regen trim compounds her survivability loss rather than being absorbed."
+    },
+    {
+     "hero": "Kelvin",
+     "relationship": "situational",
+     "effect": "down",
+     "why": "Listed as a buyer and named as the sustain support Baba loses to, but he has no KB entry — low confidence on relationship and magnitude."
+    }
+   ],
+   "build_shift": "No component or slot change: Radiant Regeneration stays the T3 Spirit regen slot and its healing rivals (Restorative Locket, Healing Booster) were trimmed in the same window, so nothing displaces it — the slot just shrinks in value."
+  }
+ ],
+ "notable_item_stories": [
+  "Radiant Regeneration is on its third consecutive trim with no competing sustain item added, so the regen archetype keeps eroding file-by-file — a quiet buff to anti-heal (Healbane, Decay) and to burst that lands before sustain ramps."
+ ]
+}

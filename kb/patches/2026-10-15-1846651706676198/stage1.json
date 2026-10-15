@@ -1,0 +1,10 @@
+{
+ "systems_changed": [],
+ "tempo_shift": {
+  "direction": "neutral",
+  "confidence": 0.9,
+  "why": "no systems changes — the General/systems section is empty, so the map-economy lead engine, comeback valve, respawn timers, slows and objective bounties all carry over unchanged from 10-05."
+ },
+ "archetype_effects": [],
+ "intent_read": "This is a narrow housekeeping patch: one item (Radiant Regeneration) and three hero kits (Baba, Deadman Danny, Street Brawl) were touched, with nothing at the economy, objective, movement or map layer. Valve is not trying to move the meta here — the templated Tough Crate/Sunken Plaza/Bell Tower income engine and the no-comeback valve stand as the KB thesis describes, so any meta movement must come from the item and hero changes alone."
+}
