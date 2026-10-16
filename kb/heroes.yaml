@@ -3922,98 +3922,117 @@ Baba:
   provisional: false
 Solomon:
   name: Solomon
-  role: control support / zone-control strategist
+  role: zone-control support
   archetypes:
   - support/healer
   - initiator
   - poke/siege
-  tier: B
-  trend: rising
-  why: Cooldown-driven zone controller whose persistent bishop zones and rook immobilize
-    convert telegraphed hub fights, now helped by his hardest matchup (Baba, 67%)
-    taking a major nerf; not a top camp-clearer, so his income still rides on heavy-melee
-    crate routes and team souls rather than solo jungle farming.
+  tier: C
+  trend: stable
+  why: 'One week in, Solomon''s 42.6% WR at a 59.9% (novelty-inflated) pick rate is
+    the real signal: he farms the front-line matchups (Deadman Danny 61%, Abrams/Shiv/Mo
+    & Krill ~48%) but folds to the rising mobile-assassin class (Holliday 37%, Yamato
+    38%, Celeste 35%, Rat King 35%) that skips his telegraphed Bishop/Rook zones.
+    The 10-14 Baba front-line cut should loosen his worst matchup, yet the data still
+    reads 36% and no item lifts him off his ~43% baseline.'
   core_items:
   - Extra Spirit
+  - Mystic Expansion
+  - Improved Spirit
   - Superior Cooldown
+  - Greater Expansion
+  - Compress Cooldown
   - Mystic Burst
-  - Boundless Spirit
+  - High-Velocity Rounds
+  - Opening Rounds
   build_variants:
-  - Cooldown control
-  - Barrier support
-  - Gun
+  - Spirit cooldown control
+  - Gun lane
+  - Vitality/sustain
   enabled_by:
   - Hub-fight meta (Sunken Plaza ~5-8 min, Bell Tower 8+) rewarding telegraphed zone
     control
-  - Superior Cooldown / Arcane Surge cooldown stacking
-  - Heavy melee 116 opening Tough Crates for guaranteed 58-soul routes
-  - Barrier + cleanse support value under the 38s respawn tax
+  - Cooldown stacking — Superior Cooldown (84%), Greater Expansion (81%), Compress
+    Cooldown (73%)
+  - 'Heavy melee 116 opening Tough Crates: not a camp-clearer, so income rides on
+    guaranteed 58-soul routes and team souls'
+  - Front-line-heavy lobbies — beats Abrams, Mo & Krill, Shiv
   countered_by:
+  - 'Burst mobility landing before the self-cast Knight''s invuln: Lash (S), Holliday,
+    Calico, Yamato (all A/S, rising)'
   - Silence (Silencer, Silence Wave) denying the cooldown loop
-  - Unstoppable (ignores rook immobilize)
-  - Debuff Reducer (shrinks slow/immobilize)
-  - Knockdown
-  - Burst mobility landing before the self-cast invuln
+  - Unstoppable ignoring rook immobilize; Knockdown on the cast
+  - Rat King (A, stable) and Celeste spirit burst closing into his zone (35% losses)
   last_changed_patch: Released 2026-10-09
-  notes: '10-14: Baba - his hardest listed loss at 67% - took a major nerf, loosening
-    his worst matchup; no direct change.
+  notes: '7-day check-in (2026-10-16): tier B -> C, WR 45%, PR 61% over 329000 matches.
 
-    Day-0 kit read (2026-10-09), provisional - data check-in due 2026-10-16.
+    Usage overrides the day-0 ''Barrier support'' and full-gun builds: Divine Barrier/Healbane/Healing
+    Booster/Superior Duration and Swift Striker do not appear in high-rank item data.
 
-    Develop Queen tooltip is empty - ult power is the single biggest unknown; T2 hints
-    a ''Checkmate'' threshold (200/5) scaled by slow. Gun builds are losing, spirit/cooldown
-    builds winning on small novelty samples.'
+    Vindicta now reads 48% (even), not the day-0 loss; Baba still 36% despite the
+    10-14 front-line cut (her barrier 1.2->0.7, -7% bullet resist, B->C).
+
+    10-14: no direct change; one week old and the empty Develop Queen tooltip leaves
+    his ult and its Checkmate (200/5) threshold the biggest unknown.'
   builds:
-  - name: Cooldown control
+  - name: Spirit cooldown control
     damage: spirit
     core_items:
     - Extra Spirit
-    - Superior Cooldown
+    - Mystic Expansion
+    - Improved Spirit
     - Mystic Burst
-    - Arcane Surge
+    - Compress Cooldown
+    - Superior Cooldown
+    - Greater Expansion
     - Boundless Spirit
     popularity: primary
-    notes: Spams bishop/rook on short cooldowns; the winning cluster (Mystic Burst
-      71% early, Arcane Surge 80% mid).
-  - name: Barrier support
-    damage: spirit
-    core_items:
-    - Divine Barrier
-    - Guardian Ward
-    - Healbane
-    - Healing Booster
-    - Superior Duration
-    popularity: secondary
-    notes: Leans into Kingside Knight barrier + cleanse for teamfights; Divine Barrier
-      sits at 62% late WR.
-  - name: Gun
+    notes: Stacks spirit power + cooldown reduction (Superior Cooldown 84% at 20:00,
+      Greater Expansion 81%, Compress Cooldown 73%) to spam Bishop/Rook; the only
+      shell where single items beat his 42.6% baseline (Mystic Burst 44.6%, Boundless
+      Spirit 49.3%).
+  - name: Gun lane
     damage: gun
     core_items:
     - High-Velocity Rounds
-    - Swift Striker
-    - Extended Magazine
+    - Opening Rounds
+    popularity: secondary
+    notes: HVR (86% at 2:42) and Opening Rounds (83% at 5:06) are near-universal early
+      buys but sit at the ~43% baseline — the day-0 full-weapon path (Swift Striker,
+      Extended Magazine) never shows up in usage, so treat this as a lane crutch,
+      not a carry build.
+  - name: Vitality/sustain
+    damage: spirit
+    core_items:
+    - Grit
+    - Extra Stamina
+    - Guardian Ward
+    - Stamina Mastery
     popularity: niche
-    notes: Swift Striker is a trap here (20% mid, 33% late WR) — no kit reason to
-      buy attack speed yet.
+    notes: Stamina/HP fillers (Extra Stamina 68%, Grit 53%) to survive dive-heavy
+      lobbies; the day-0 'Barrier support' shell (Divine Barrier, Healbane, Healing
+      Booster, Superior Duration) is absent from high-rank usage.
   matchups:
     beats:
-    - Drifter
+    - Deadman Danny
+    - Mo & Krill
     - Abrams
-    - Grey Talon
-    - Seven
-    loses_to:
-    - Lash
-    - Holliday
-    - Calico
     - Vindicta
-  matchup_notes: 'Bishop tiles plus rook immobilize punish anything that must physically
-    occupy hub space, so melee divers and low-mobility poke (Grey Talon, Seven) get
-    zoned. He in turn dies to burst mobility that lands before he can self-cast Knight''s
-    invuln (Lash, Holliday, Calico) and to Vindicta''s range. He is a strong pick-enabler:
-    immobilize + shred set up Lash, Holliday and Paradox dives.'
-  confidence: 0.35
+    - Shiv
+    loses_to:
+    - Celeste
+    - Rat King
+    - Baba
+    - Holliday
+    - Yamato
+  matchup_notes: Bishop tiles + rook immobilize zone anything that must physically
+    hold hub space, so he beats front-line bodies (Deadman Danny 61%; Shiv/Mo & Krill/Abrams
+    ~even) — note Vindicta now reads 48% (even), not the loss the day-0 entry claimed.
+    He dies to burst mobility that lands before his self-cast Knight's invuln (Holliday
+    37%, Yamato 38%) and to Rat King/Celeste closing inside his zone.
+  confidence: 0.4
   released_on: '2026-10-09'
-  provisional: true
+  provisional: false
 Deadman Danny:
   name: Deadman Danny
   role: Flying marksman / dive-pick

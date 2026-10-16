@@ -838,6 +838,7 @@ Improved Spirit:
   - Kelvin
   - Mina
   - Rem
+  - Solomon
   - The Doorman
   - Vindicta
   - Viscous
@@ -945,6 +946,7 @@ Extra Stamina:
   - McGinnis
   - Mina
   - Seven
+  - Solomon
   slot: null
   tier: null
   notes: ''
@@ -957,6 +959,7 @@ Opening Rounds:
   - Rat King
   - Rem
   - Sinclair
+  - Solomon
   - Victor
   - Vindicta
   - Warden
@@ -1234,6 +1237,7 @@ Compress Cooldown:
   - Paradox
   - Rat King
   - Shiv
+  - Solomon
   - Viscous
   slot: null
   tier: null
@@ -1252,6 +1256,7 @@ Mystic Expansion:
   - Pocket
   - Rat King
   - Sinclair
+  - Solomon
   - The Doorman
   - Viscous
   slot: null
@@ -1301,6 +1306,7 @@ Greater Expansion:
   - Paige
   - Pocket
   - Sinclair
+  - Solomon
   - The Doorman
   - Viscous
   slot: null
@@ -1334,6 +1340,7 @@ Stamina Mastery:
   - Holliday
   - Lash
   - Mina
+  - Solomon
   - Vyper
   slot: null
   tier: null
@@ -1439,6 +1446,7 @@ Grit:
   - Celeste
   - Rem
   - Silver
+  - Solomon
   - Vyper
   slot: null
   tier: null
