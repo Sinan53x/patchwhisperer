@@ -4141,3 +4141,95 @@ Deadman Danny:
   confidence: 0.4
   released_on: '2026-10-13'
   provisional: true
+Violet:
+  name: Violet
+  role: spirit zone-control caster
+  archetypes:
+  - spirit carry
+  - burst caster
+  - initiator
+  tier: B
+  trend: rising
+  why: 'Violet is a squishy (710 HP), immobile mystic caster whose value is a stack
+    of zones: Flow State gives allies slide distance and enemies a scaling slow/DoT,
+    Still Life is a gaze DoT that stuns and permanently banks stats, and Abstract
+    Landscape blocks vision and silences anything that leaves it. The winning item
+    data is unambiguously spirit (Superior Cooldown 76% WR, Escalating Exposure 80%,
+    Boundless Spirit 57%), and the gun path (High-Velocity Rounds 40% pick / 28% WR)
+    is a trap. She fits the tempo meta only through teamfights and objective zones;
+    nothing about her farms or survives a dive.'
+  core_items:
+  - Boundless Spirit
+  - Superior Cooldown
+  - Escalating Exposure
+  build_variants:
+  - Spirit caster (lead)
+  - Charge/utility
+  - Gun / fire-rate
+  enabled_by:
+  - Superior Cooldown / Extra Charge — the kit is cooldown-gated, so cycling Flow
+    State, ult and Still Life is the whole game
+  - Objective-hub teamfights (Sunken Plaza, Bell Tower, Buff Container contests) where
+    a vision-blocking silence zone decides the fight
+  - Her standard 116 heavy melee — she can farm Tough Crates and grouped Haunt camps
+    like a frontline
+  countered_by:
+  - Dive assassins (Holliday, Calico, Yamato, Lash) — no escape, low HP
+  - Long-range poke (Vindicta, Grey Talon) that outranges her zones
+  - Silence Wave / Disarming Hex / Knockdown — interrupt or cancel the Still Life
+    gaze
+  - Healbane / anti-heal — undercuts Still Life's regen talents and Healing Booster
+  - Spirit Resilience / Debuff Reducer — blunts her DoT and exit-silence
+  last_changed_patch: Released 2026-10-16
+  notes: 'Day-0 kit read (2026-10-16), provisional — data check-in due 2026-10-23.
+
+    Confidence low: no ranked data, no creator read, kit judged from tooltips. Still
+    Life''s permanent stat bank is the swing factor — if it snowballs in a tempo meta
+    she is A, if games end before it pays she is a B/C. Watch whether the spirit build''s
+    high WR holds and whether anyone plays the gun line at all.'
+  builds:
+  - name: Spirit caster (lead)
+    damage: spirit
+    core_items:
+    - Boundless Spirit
+    - Superior Cooldown
+    - Escalating Exposure
+    - Spirit Lifesteal
+    - Diviner's Kevlar
+    popularity: primary
+    notes: Superior Cooldown (~76% WR) and Escalating Exposure (~80% WR) are the standout
+      win items; the kit is cooldown-gated and DoT-based, so both fit.
+  - name: Charge/utility
+    damage: spirit
+    core_items:
+    - Extra Charge
+    - Duration Extender
+    - Mystic Burst
+    popularity: secondary
+    notes: Extra Charge is the most-picked early item (87%) but sits at ~46% WR —
+      people feel charge-starved, not that charges win.
+  - name: Gun / fire-rate
+    damage: gun
+    core_items:
+    - High-Velocity Rounds
+    - Swift Striker
+    - Living Ink (T3)
+    popularity: niche
+    notes: High-Velocity Rounds at 28% WR says the Living Ink gun line is bait despite
+      the T3 bullet-damage multiplier.
+  matchups:
+    beats:
+    - Drifter
+    - Abrams
+    - Seven
+    loses_to:
+    - Holliday
+    - Yamato
+    - Vindicta
+  matchup_notes: Her exit-silence zone and gaze-stun punish melee who commit (Drifter,
+    Abrams) and casters whose channel/ult she can silence (Seven). She has no dash
+    and 710 HP, so dive assassins (Holliday, Calico, Yamato, Lash) and anything that
+    outranges her (Vindicta, Grey Talon) kill her before a fight starts.
+  confidence: 0.35
+  released_on: '2026-10-16'
+  provisional: true
