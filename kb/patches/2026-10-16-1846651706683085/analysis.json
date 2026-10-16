@@ -1,0 +1,1277 @@
+{
+ "patch_id": "2026-10-16-1846651706683085",
+ "patch_title": "Paint the Town",
+ "systems": {
+  "systems_changed": [
+   {
+    "system": "Jungle / neutral camps (Haunts rework)",
+    "change_summary": "Every neutral camp is replaced by nine new Haunt creature types with new behaviors (Specimen, Gutter Ghouls, Barrel Mimics, Past Dues, Stage Hands, Crabbage Pots, Festival Spirit, Shrooms, Underhands).",
+    "driving_changes": [
+     "Haunts: all neutral camps replaced by new creature types with new behaviors"
+    ],
+    "magnitude": "major",
+    "effect_on_play": "Fixed jungle routes are dead — players must re-learn which camps pay and which punish, so map knowledge and AoE/sustain kits bank faster than memorized templates. Camp-fight shape (grouping, chasing, damage) is now a per-creature read rather than one known camp."
+   },
+   {
+    "system": "Objectives (Bell Tower / Sunken Plaza)",
+    "change_summary": "Two new district objectives: Bell Tower atop Chinatown (high soul concentration but rings a map-wide bell) and Sunken Plaza beneath the Plaza (strips stamina on descent and mutes outside sound).",
+    "driving_changes": [
+     "Bell Tower: new objective atop the Chinatown district; highly concentrated soul hotspot, but collecting it rings a bell heard across the map",
+     "Sunken Plaza: new objective beneath the Plaza district main square; descending strips your stamina and mutes outside sound"
+    ],
+    "magnitude": "major",
+    "effect_on_play": "Both pull telegraphed group fights to fixed hubs earlier, matching the existing Sunken Plaza/Bell Tower fight-gravity. Bell Tower taxes greed by broadcasting the farm; Sunken Plaza rewards a commit but the stamina-strip and muted audio make the exit a real risk."
+   },
+   {
+    "system": "Bounty economy (Soul Bags)",
+    "change_summary": "Kills now drop a contested Soul Bag you must secure before an ally takes it; last-hit rules apply to the bounty itself.",
+    "driving_changes": [
+     "Soul Bags: kills now drop a Soul Bag you must secure before an ally takes it — contested-last-hit rules now apply to the bounty itself"
+    ],
+    "magnitude": "moderate",
+    "effect_on_play": "Kill income is no longer banked on the kill alone — the killer (or a faster teammate) must secure the bag, so fights extend and bounty income becomes slightly less reliable. Marginal nerf to clean 'secure the kill, bank guaranteed' burst patterns."
+   },
+   {
+    "system": "Economy — Buff Containers",
+    "change_summary": "Buff Containers now also roll Spirit Resist, Bullet Resist, Ability Range and Move Speed as permanent bonuses, not just the old range/resist pair.",
+    "driving_changes": [
+     "Buff Containers: revamped golden statues now also roll Spirit Resist, Bullet Resist, Ability Range, and Move Speed as permanent bonuses"
+    ],
+    "magnitude": "moderate",
+    "effect_on_play": "Detouring for containers now pays off across more of a build, so off-lane routing and map-control roams gain value for every archetype; move speed and resists are worth contesting, raising the number of small skirmishes around pickups."
+   },
+   {
+    "system": "Melee / breakables (Tough Crates)",
+    "change_summary": "Tough Crates stay Heavy-Melee-gated and yield extra souls, confirming melee itemization as a farm prerequisite.",
+    "driving_changes": [
+     "Tough Crates: breakables that require a Heavy Melee to open; yield extra souls"
+    ],
+    "magnitude": "moderate",
+    "effect_on_play": "Reinforces the heavy-melee frontline as the crate-economy king; gun-only and non-melee kits must buy into melee or concede that income, keeping the box-farm lead engine intact after the camp rework."
+   },
+   {
+    "system": "Traversal / movement (Steam Vents, districts, pickups)",
+    "change_summary": "Steam Vents grant invisibility plus regen while stood on, four off-lane districts add farm/fight routes, Healing Snacks are hidden heal pickups, and Sunken Plaza strips stamina on descent.",
+    "driving_changes": [
+     "Steam Vents: new terrain pickups granting invisibility and a small amount of regen while standing on them",
+     "Districts: four off-lane areas added — Theater, Chinatown, Haunted Lot, Plaza",
+     "Healing Snacks: new hidden pickups around the map that heal on grab",
+     "Sunken Plaza: descending strips your stamina"
+    ],
+    "magnitude": "moderate",
+    "effect_on_play": "Movement now carries a stealth/escape layer and stat detours, so repositioning and vision play matter more than raw lane presence; invisibility vents reward mobile assassins and vision counters, and healing snacks reward sustain-light kits."
+   },
+   {
+    "system": "Parry",
+    "change_summary": "Successfully parrying objectives no longer resets Parry cooldown.",
+    "driving_changes": [
+     "Parry: successfully parrying objectives no longer resets your Parry cooldown"
+    ],
+    "magnitude": "minor",
+    "effect_on_play": "Kills the free parry chain at objective fights, so objective diving is harder to sustain and the T3-bullet-resist bodies that leaned on chained parries (Apollo, Mo & Krill) lose a small edge."
+   },
+   {
+    "system": "Ability / Item activation",
+    "change_summary": "Abilities and items now fire the instant the button is pressed instead of waiting for the next input window, lowering reaction latency globally.",
+    "driving_changes": [
+     "Ability/Item use: now fires the instant the button is pressed instead of waiting for the next input window"
+    ],
+    "magnitude": "moderate",
+    "effect_on_play": "Combo and defensive-item timing tightens for every hero; burst and initiation windows land more cleanly and reactive saves (parry, defensive items) are more reliable, mildly favouring fast-cast kits over slow telegraphs."
+   },
+   {
+    "system": "Corrupted items / The Broker",
+    "change_summary": "Broker trades high-tier items for Corrupted versions with shared per-match random negatives, first shipment ~30 min then roughly every 15 min; Street Brawl now grants a Corrupted item after the Round 5 draft.",
+    "driving_changes": [
+     "Corrupted items: high-tier items can be exchanged for Corrupted versions with random negative attributes assigned per match; the positive/negative roll is identical for all players in a given game",
+     "Street Brawl: now grants a Corrupted item after the item draft in Round 5"
+    ],
+    "magnitude": "major",
+    "effect_on_play": "Adds a mid-late risk/reward conversion layer that is identical for everyone, keeping the ~30-min mark as the key scaling/stall window and rewarding leads that convert before the shared negatives bite."
+   },
+   {
+    "system": "Sinner's Sacrifice",
+    "change_summary": "Bonus now has variable timings instead of a fixed window.",
+    "driving_changes": [
+     "Sinner's Sacrifice: bonus now has variable timings instead of a fixed window"
+    ],
+    "magnitude": "minor",
+    "effect_on_play": "Removes memorized-timer contesting of the sacrifice, so players must react to it and the objective becomes higher-variance and less reliably pre-farmed."
+   },
+   {
+    "system": "Walkers",
+    "change_summary": "Walkers no longer keep firing fireballs after dying.",
+    "driving_changes": [
+     "Walkers: no longer keep firing fireballs after dying"
+    ],
+    "magnitude": "minor",
+    "effect_on_play": "Removes post-death chip damage, so lingering near a killed Walker to push the wave or take a fight is safer — a small quality-of-life buff to sieging and to holding a just-cleared lane."
+   }
+  ],
+  "tempo_shift": {
+   "direction": "toward_tempo",
+   "confidence": 0.6,
+   "why": "New early-mid soul hotspots (Bell Tower, Sunken Plaza) and contested Soul Bags push fights over income sooner while no comeback lever is added and the Broker's ~30-min window stays the only scaling stall. The shared Corrupted layer and Buff Container stat detours add map-wide risk/reward but do not add a comeback valve."
+  },
+  "archetype_effects": [
+   {
+    "archetype": "tank/frontline",
+    "direction": "up",
+    "magnitude": "moderate",
+    "why": "Tough Crates keep heavy-melee income king and Buff Containers now roll Bullet/Spirit Resist as permanent bonuses; the objective-parry nerf is only a minor tax."
+   },
+   {
+    "archetype": "mobile assassin",
+    "direction": "up",
+    "magnitude": "moderate",
+    "why": "Steam Vents grant invisibility, districts add routes, and instant ability/item activation tightens pick and escape timing."
+   },
+   {
+    "archetype": "burst caster",
+    "direction": "up",
+    "magnitude": "minor",
+    "why": "Instant ability/item use cleans up combo windows, and Buff Containers now roll Ability Range as a permanent bonus."
+   },
+   {
+    "archetype": "initiator",
+    "direction": "up",
+    "magnitude": "minor",
+    "why": "Lower activation latency makes engage windows land more reliably across the new telegraphed hubs."
+   },
+   {
+    "archetype": "gun carry",
+    "direction": "neutral",
+    "magnitude": "minor",
+    "why": "Instant activation helps, but the crate economy stays melee-gated and Buff Containers roll defensive stats rather than gun stats."
+   },
+   {
+    "archetype": "lanes bully",
+    "direction": "neutral",
+    "magnitude": "minor",
+    "why": "Lane cadence is untouched and the income engine still lives off-lane in camps and district hubs."
+   },
+   {
+    "archetype": "late scaler",
+    "direction": "down",
+    "magnitude": "minor",
+    "why": "No comeback lever was added and new early-mid hotspots concentrate tempo fights, while the Broker window is unchanged."
+   },
+   {
+    "archetype": "support/healer",
+    "direction": "down",
+    "magnitude": "minor",
+    "why": "Healing Snacks and Steam Vent regen let sustain-light kits self-sustain, trimming reliance on dedicated healing."
+   },
+   {
+    "archetype": "split pusher",
+    "direction": "neutral",
+    "magnitude": "minor",
+    "why": "Districts open more routes but contested Soul Bags make bounty income less reliable, roughly cancelling out."
+   },
+   {
+    "archetype": "poke/siege",
+    "direction": "up",
+    "magnitude": "minor",
+    "why": "Walkers no longer fire after dying, making it safer to hold a just-cleared lane and press the wave."
+   }
+  ],
+  "intent_read": "Valve is relaunching the City Never Sleeps map as the game's main content and re-spreading soul income across many contested, discoverable sources rather than one memorized route. The reworked Haunts, new district objectives, contested Soul Bags and permanent-stat Buff Containers push players into more telegraphed, fought-over economy moments, with the shared Corrupted-item layer standardizing late risk/reward across the lobby."
+ },
+ "items": {
+  "items": [
+   {
+    "item": "Corrupted items",
+    "direction": "rework",
+    "magnitude": "major",
+    "summary": "A new non-buildable merchant tier converts a finished high-tier item into a stat-boosted version carrying match-wide random negatives, so it's a between-match variance lever rather than an edge to whoever reaches The Broker first (rolls are symmetric). Because it only activates at ~30 min and pays teams that bank and stall, it runs against this patch's earlier, more contested soul economy — the tier raises the ceiling for games that still go long, and largely idles in the tempo games the patch is pushing.",
+    "affected_heroes": [],
+    "build_shift": "It converts an existing completed slot rather than adding one, so a bad negative roll can brick a core item — expect late-game players to hold a spare high-tier slot or delay a purchase until after the first ~30-min shipment rather than buy greedily into an unknown roll."
+   }
+  ],
+  "notable_item_stories": [
+   "Corrupted items are the only new late-game power layer in a patch that pulled income earlier (Bell Tower, Sunken Plaza, contested Soul Bags), so its real value is inversely tied to how fast lobbies now close.",
+   "Street Brawl's Round 5 Corrupted grant imports the tier into draft-mode mid-game, where symmetric rolls matter more than raw stats — watch whether it reshapes late Brawl picks.",
+   "No hero has Corrupted items as a core or situational build slot (it isn't a buildable item), so there is no direct core-item hero link to trace this patch."
+  ]
+ },
+ "heroes": {
+  "heroes": [
+   {
+    "hero": "Infernus",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.45,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Grouped, chasing Haunt camps reward his burn AoE clear (Haunts rework)",
+     "Buff Containers now roll Ability Range and Move Speed, both live on his spirit build",
+     "Late-scaler down: no comeback lever added and the tempo shift ends games before his burn spikes"
+    ],
+    "build_changes": [
+     "Dashfernus stays the primary line; the AoE farm tailwind adds value to the spirit build, not the burn gun build"
+    ],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Burn AoE farms the new Haunt camps, but the map still ends before his late spike."
+   },
+   {
+    "hero": "Seven",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.55,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Storm Cloud/Static Charge is among the best clears for grouped, chasing Haunt camps (Haunts rework)",
+     "Guaranteed high-value Tough Crate routes bankroll his farm-then-scale opener",
+     "New telegraphed hub fights (Sunken Plaza, Bell Tower) reward his AoE; Buff Containers add Ability Range",
+     "Loses to rising dive (Calico/Yamato/Holliday) and the no-comeback economy still caps a behind Seven"
+    ],
+    "build_changes": [
+     "Keep the Monster Rounds/Cultist Sacrifice farm opener; AoE camp clear is now the fastest route to his spirit core"
+    ],
+    "tier_before": "B",
+    "tier_after": "A",
+    "one_liner": "Best camp-clearer in the patch banks the new routes — strongest farmer, still no comeback."
+   },
+   {
+    "hero": "Vindicta",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "New roofs/high ground and telegraphed Plaza/Bell Tower hubs favor max-range poke (poke/siege up)",
+     "Flyer tax unchanged: Silver's Weighted Bola grounds and air-drag slows still bite",
+     "Loses to rising Silver and Lash, who close on her low-HP frame"
+    ],
+    "build_changes": [
+     "Counterspell stays mandatory as the dive class rises; gun-poke core unchanged"
+    ],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "New high ground is hers, but the anti-air tax still keeps her out of S."
+   },
+   {
+    "hero": "Lady Geist",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Harder Haunt camps reward her regen stack, and Buff Containers now roll Spirit Resist as free defense",
+     "Tank/frontline archetype up",
+     "Still loses to rising Lash and Drifter dive before Soul Exchange comes online"
+    ],
+    "build_changes": [
+     "No swap; regen gun-bruiser core stays, Spirit Resist containers slightly reduce pressure to buy early defense"
+    ],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Harder camps and the tank meta suit her; rising dive still ends the farm line."
+   },
+   {
+    "hero": "Abrams",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.55,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Melee core gives cheap heavy-melee access to Tough Crates (58 souls each)",
+     "Parry no longer resetting on objectives makes dives onto him riskier",
+     "Tank/frontline and initiator archetypes both up; rising anti-tank Shiv is his real counter"
+    ],
+    "build_changes": [
+     "Keep Close Quarters/Monster Rounds opener; treat Tough Crates as a second guaranteed soul route alongside lane"
+    ],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Crate-melee income plus the parry change make him the farm-and-frontline winner."
+   },
+   {
+    "hero": "Wraith",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.4,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Gun-carry archetype neutral; late-scaler down under the no-comeback economy",
+     "Loses to rising S-tier lane support Paige (57% against her)"
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Pure-gun rebuild isn't helped or hurt much; Paige is still the wall."
+   },
+   {
+    "hero": "McGinnis",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Turrets clear grouped Haunt camps, adding a real farm route",
+     "Telegraphed Plaza/Bell Tower hubs suit wall/turret zoning; Buff Containers add Ability Range",
+     "Parry change punishes dives into her zone; poke/siege archetype up"
+    ],
+    "build_changes": [
+     "Gun-turret core stays; turret AoE is now worth farming camps between hub fights"
+    ],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Turrets farm the new camps and zone the new hubs — a quiet map-rework winner."
+   },
+   {
+    "hero": "Paradox",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.55,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "New districts, hiding spots and Steam-Vent invisibility upgrade her roamer pick setups",
+     "Burst caster (Ability Range containers) and initiator archetypes up",
+     "Still folds to rising mobile divers Yamato/Lash/Holliday"
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Steam Vents and extra districts sharpen her picks; divers still punish the sniper."
+   },
+   {
+    "hero": "Dynamo",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.55,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Telegraphed Plaza/Bell Tower hub fights give Singularity clean setup; initiator up",
+     "Quantum Entanglement AoE dispel beats rising Lash/Drifter/Calico commits",
+     "Loses to rising durable frontline Mo & Krill and Abrams"
+    ],
+    "build_changes": [
+     "Spirit AoE initiator spine unchanged; hub fights make Warp Stone engage timings more valuable"
+    ],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "New forced hub fights hand him Singularity windows; tank rise is the offset."
+   },
+   {
+    "hero": "Kelvin",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Harder Haunt camps raise the value of his dome/sustain",
+     "Healing Snacks and Steam-Vent regen trim reliance on dedicated healing (support/healer down)",
+     "Rival healing-item trims spare his Extra Regen/Healing Booster core; loses to rising Lash/Drifter"
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Camps want his dome; free snacks and dive cut both ways."
+   },
+   {
+    "hero": "Haze",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Gun-carry archetype neutral; Steam Vents invisibility marginally helps Smoke Bomb picks",
+     "Loses to rising Paige and Victor; her T4 gun items stay weak",
+     "Market-position note: Venator remains the stronger pick in the carry slot (reader correction)"
+    ],
+    "build_changes": [
+     "Fixation gun core holds; the Ricochet/Tesla late pivot is still gated by weak T4 gun items"
+    ],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Tempo gun carry with no new lever — 55% WR but Venator is the better slot."
+   },
+   {
+    "hero": "Holliday",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.55,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "New districts, hiding spots and Steam-Vent invisibility expand her roam routes (mobile assassin up)",
+     "Bell Tower hub fights reward Spirit Lasso picks",
+     "Still loses to point-blank lockdown (Drifter, Bebop, Mo & Krill/Lash ults)"
+    ],
+    "build_changes": [
+     "Charge-spirit pick build unchanged; Extra Charge/Rapid Recharge double-dips matter more with more roam angles"
+    ],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "More districts and Steam Vents give the best pick assassin more routes and more lassos."
+   },
+   {
+    "hero": "Bebop",
+    "in_notes": false,
+    "direction": "down",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "A single-target hook cannot punish PvE crate/camp routing, and the roamer slot has tilted to Paradox",
+     "Contested Soul Bags slightly extend fights he can win, but the farm/sustain economy converts less",
+     "Loses to sustain and burst-proof tanks (Kelvin, Billy, Vyper)"
+    ],
+    "build_changes": [
+     "Stays hook-combo hybrid; Siphon Bullets remains a niche late luxury, not a carry pivot"
+    ],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Hook picks still land, but the economy now pays farming, not single-target combos."
+   },
+   {
+    "hero": "Calico",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Tempo/lane-snowball economy and new district/Steam-Vent routes suit her roam (mobile assassin up)",
+     "Cat form still cannot heavy-melee Tough Crates, locking her out of the patch's best soul route",
+     "Loses to rising tank frontline she cannot burst (Abrams, Victor, Dynamo)"
+    ],
+    "build_changes": [
+     "Lean kills/off-map souls over crate income; Melee Lifesteal/Stalker spirit-assassin core unchanged"
+    ],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Tempo and extra routes reward her dives; the crate lockout caps the farm half."
+   },
+   {
+    "hero": "Grey Talon",
+    "in_notes": false,
+    "direction": "down",
+    "magnitude": "minor",
+    "confidence": 0.45,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Flyer tax unchanged: air-drag slows and Silver's Weighted Bola ground him",
+     "Lash (S, rising) is his worst lane at 36% and the highest-pick initiator",
+     "New roofs/hubs favor poke, but the tempo economy denies him time"
+    ],
+    "build_changes": [],
+    "tier_before": "C",
+    "tier_after": "C",
+    "one_liner": "Poke-flyer squeezed by the anti-air tax and a rising Lash — stays buried."
+   },
+   {
+    "hero": "Mo & Krill",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.55,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Parry no longer resets on objectives removes his free objective-parry chain",
+     "Default sustained front line with Billy slipping; T3 bullet resist still lets him commit under a Guardian",
+     "Camp/uptime meta and telegraphed hubs suit Scorn/Burrow brawling",
+     "Loses to rising Paige lane pressure and long-range kiting (Celeste, Vindicta)"
+    ],
+    "build_changes": [
+     "Spirit bruiser core unchanged; Torment Pulse/Cold Front AoE is now a camp-clear tool between hub fights"
+    ],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Handed the default front-line slot by the map economy; ranged kiting still beats him."
+   },
+   {
+    "hero": "Shiv",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.45,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "The tank/frontline wave (Abrams, Mo & Krill, Billy) feeds his current-HP Serrated Knives",
+     "Harder Haunt camps reward his regen stack",
+     "Snapshot WR is only 43.4% — treat the archetype read as directional, not confirmed"
+    ],
+    "build_changes": [
+     "Spirit regen bruiser core unchanged; Serrated Knives get more value as frontline picks rise"
+    ],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Rising frontlines are free food for his knives — if the low snapshot WR turns around."
+   },
+   {
+    "hero": "Ivy",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Healing Snacks and Steam-Vent regen trim reliance on dedicated healing (support/healer down)",
+     "Still beats rising Abrams/Victor frontline with Stone Form peel, but loses to rising Yamato/Dynamo/Mo & Krill displacement"
+    ],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Best peel in the game, but the meta keeps trimming dedicated-healer value."
+   },
+   {
+    "hero": "Warden",
+    "in_notes": false,
+    "direction": "down",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Late-scaler down: the farm-route, no-comeback economy refuses to wait for his spike",
+     "Shadow Weave gains little from the new district/Steam-Vent layout",
+     "Gun-carry archetype neutral; no item in his core moved"
+    ],
+    "build_changes": [
+     "One gun build stays; no new capstone replaces the nerfed T4 gun finishers"
+    ],
+    "tier_before": "C",
+    "tier_after": "C",
+    "one_liner": "Late gun scaler in an economy that ends games before he finishes building."
+   },
+   {
+    "hero": "Yamato",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.55,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "The patch's camp-clear champion: punch AoE gathers grouped, chasing Haunt camps",
+     "Flying Strike creates paths against solid targets (turrets, Shrines, objectives) — extra objective access and mobility",
+     "Mobile assassin and burst caster archetypes up; Buff Containers add Ability Range",
+     "Still loses to rising sustain tanks Mo & Krill and Abrams"
+    ],
+    "build_changes": [
+     "On-hit spirit proc backbone unchanged; use Flying Strike paths to reach Shrines/objectives the layout now separates"
+    ],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Fastest camp-clear plus new objective paths — top-of-A assassin, capped by tanks."
+   },
+   {
+    "hero": "Lash",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.6,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Green-lane roof/tree gives permanent lane high ground and boxes matter more to his farm",
+     "Mobile assassin and initiator archetypes up; Steam Vents and districts extend his dive routes",
+     "Silver's Weighted Bola and air-drag slows remain the counter"
+    ],
+    "build_changes": [
+     "Stomp spirit build stays primary; the 09-16 Ground Strike scaling buffs still lead"
+    ],
+    "tier_before": "S",
+    "tier_after": "S",
+    "one_liner": "Highest-pick initiator gets lane high ground and more dive routes — still S."
+   },
+   {
+    "hero": "Viscous",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.45,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Harder Haunt camps raise the value of Cube sustain; spread-out Bell Tower vaults suit Goo Ball",
+     "Tank/frontline up, but support/healer down as Healing Snacks cheapen dedicated saves",
+     "Loses to rising Lash, Mo & Krill and Drifter"
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Cube rescues still win fights; the meta punishes a slow scaling enabler."
+   },
+   {
+    "hero": "Pocket",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.45,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Late-scaler down: gutted comeback souls removed his bail-out",
+     "Barrage/Monster Rounds camp clear and cloak/Steam-Vent roam are the only upsides",
+     "Loses to rising Drifter and Warden pressure"
+    ],
+    "build_changes": [
+     "Affliction spirit burst core unchanged; farm-speed splash (Monster Rounds/Cultist Sacrifice) stays the fallback into punishing comps"
+    ],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Slow Affliction scaler with no comeback valve — rarely spikes before tempo ends it."
+   },
+   {
+    "hero": "Mirage",
+    "in_notes": false,
+    "direction": "down",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Late-scaler down and split-pusher archetype neutral under the contested-Soul-Bag economy",
+     "Loses to rising Mo & Krill silence, Abrams and Lash dive",
+     "Kit intact — he is beaten by the meta, not the notes"
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Split-push scaler the tempo economy buries; kit fine, meta hostile."
+   },
+   {
+    "hero": "Vyper",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.45,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Gun-carry archetype neutral; no patch-specific item or system lever for her",
+     "Beats CC-light squishies but loses to rising Dynamo, Mo & Krill and Warden initiation"
+    ],
+    "build_changes": [
+     "Pure-gun path stays the carry route; the Survive-the-CC overlay is more load-bearing as initiation comps rise"
+    ],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "CC-light stomper, CC-heavy victim — the patch doesn't change that."
+   },
+   {
+    "hero": "Sinclair",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.45,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Burst caster and mobile assassin archetypes up, but his 10-05 kit-wide trim is unanswered",
+     "Loses to rising divers Lash, Drifter, Calico and Yamato"
+    ],
+    "build_changes": [],
+    "tier_before": "C",
+    "tier_after": "C",
+    "one_liner": "Kit-steal coin flip whose only two winning lanes are both falling heroes."
+   },
+   {
+    "hero": "Mina",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Grouped-Haunt AoE clear and new district mobility suit her (mobile assassin, burst caster up)",
+     "Still cannot kill through the rising tank front line (Billy, Mo & Krill, Victor)"
+    ],
+    "build_changes": [
+     "Spirit burst core unchanged; use district mobility to farm camps between dives"
+    ],
+    "tier_before": "C",
+    "tier_after": "C",
+    "one_liner": "More camps and routes for her burst, but she still can't kill a tank."
+   },
+   {
+    "hero": "Drifter",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.55,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "New districts, Steam Vents and heavy-melee Tough-Crate routes fit his stealth-reveal melee roam",
+     "Mobile assassin and tank/frontline archetypes up",
+     "Loses to rising Apollo, Dynamo and Mo & Krill lane pressure"
+    ],
+    "build_changes": [
+     "Spirit melee bruiser core unchanged; Tough-Crate melee routes add a farm angle to his roam"
+    ],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Blind-pickable melee bruiser the new map's routes and crates were built for."
+   },
+   {
+    "hero": "Venator",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Gun bruiser fits the tempo/lane-wins economy; vitality items untouched",
+     "Loses to gap-closing tank Abrams (38%) and rising Lash",
+     "Graves's gun now destroys his traps — a small counter-tool on a low-pick hero"
+    ],
+    "build_changes": [
+     "Battle Vest first buy holds; the ~40% grenade pivot stays the late anti-tank option"
+    ],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Unkillable M1 bruiser, but Abrams and Lash still lock him out of range."
+   },
+   {
+    "hero": "Victor",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.55,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Harder Haunt camps and longer PvE routes reward his Spirit Lifesteal/Healing Booster regen stack",
+     "Tank/frontline up; his Aura of Suffering outlasts rising divers Mina/Calico/Lash",
+     "Loses to anti-heal stacking and trimmed healing items"
+    ],
+    "build_changes": [
+     "Spirit sustain bruiser core unchanged; regen stack is at its most valuable in a harder-camp economy"
+    ],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "The camp meta feeds his regen stack; anti-heal is still his off-switch."
+   },
+   {
+    "hero": "Paige",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.55,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Lane-adjacent crate routes and Healing Snacks reward her lane pressure",
+     "Contested Plaza/Bell Tower hubs suit her carry-snowball; anti-flyer shifts help her team",
+     "Loses to burst assassins (Yamato, Lash, Holliday), who are rising"
+    ],
+    "build_changes": [
+     "Tempo support core unchanged; crate-route timings from ~2:30 add to her lane-pressure snowball"
+    ],
+    "tier_before": "S",
+    "tier_after": "S",
+    "one_liner": "Lane pressure converts straight into the patch's early crate and hub economy — still S."
+   },
+   {
+    "hero": "The Doorman",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Bell Tower's single rope and ~280-soul payout make his Doorway kidnap a real objective play",
+     "Initiator archetype up; AoE/charge spirit items suit his Bell build",
+     "Still punished by dive tempo (Yamato, Lash, Apollo, Holliday)"
+    ],
+    "build_changes": [
+     "Bell carry (AoE spirit) stays the real build; pre-place a Doorway before roping up to Bell Tower"
+    ],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Bell Tower finally gives his Doorway a kidnap objective play, but tempo still beats setup."
+   },
+   {
+    "hero": "Billy",
+    "in_notes": false,
+    "direction": "down",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Crate/camp-uptime meta wants sustained presence; his front-line slot has moved to rising Mo & Krill",
+     "Anti-tank Shiv (his worst lane, 43%) is climbing",
+     "Tank archetype up, but his lane-bully all-in profile fits the patch less than the sustained fronts"
+    ],
+    "build_changes": [],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Lane-bully frontliner losing his slot to Mo & Krill in a sustain-and-farm economy."
+   },
+   {
+    "hero": "Graves",
+    "in_notes": true,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.4,
+    "direct_reasons": [
+     "Her gun now destroys Venator's traps — a real utility tool into an A-tier, 42% PR hero"
+    ],
+    "indirect_reasons": [
+     "Late-scaler down: the no-comeback economy deletes her ~25-min scaling path",
+     "Split-pusher archetype neutral; she still has the worst carry early game",
+     "Snapshot reads 56.5% WR / 40.9% PR against the KB's 48.5% / 21% — conflict noted, tier held"
+    ],
+    "build_changes": [],
+    "tier_before": "C",
+    "tier_after": "C",
+    "one_liner": "Trap-clearing is a genuine new tool, but the economy still denies her scaling window."
+   },
+   {
+    "hero": "Apollo",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.55,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Parry no longer resets on objectives costs him the free objective-parry chain",
+     "Routes crate paths and roams; T3 bullet resist still lets him commit under a Guardian despite the parry change",
+     "Lane bully/initiator/tank archetypes up; his spirit item pool is untouched",
+     "Baba's nerf eases his worst lane (~59% against him)"
+    ],
+    "build_changes": [
+     "Spirit bruiser core unchanged; spirit items are untouched, so early T1s into Improved Spirit still lead"
+    ],
+    "tier_before": "S",
+    "tier_after": "S",
+    "one_liner": "Lane-bully initiator the crate-and-hub economy was built for — still S."
+   },
+   {
+    "hero": "Rem",
+    "in_notes": false,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Harder Haunt camps reward his percent-max-HP heal; Bell Tower's three spread vaults stretch his map play",
+     "Healing Snacks cheapen dedicated healing (support/healer down)",
+     "Loses to rising Lash, Drifter and Mo & Krill that reach him before the heal lands"
+    ],
+    "build_changes": [],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Cleanse and percent-HP heal still good; free snacks and dive blunt the value."
+   },
+   {
+    "hero": "Silver",
+    "in_notes": false,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.6,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Tank/frontline archetype up; gun cycle smoothing keeps her dash/melee M1 online",
+     "Weighted Bola grounds the flyers the meta now leans on (Vindicta, Grey Talon, Celeste, Deadman Danny)",
+     "Loses to rising Lash and Drifter, mobile bruisers that stick to her"
+    ],
+    "build_changes": [
+     "Gun tank shell unchanged; Weighted Bola is now a live anti-air pick into flyer lanes"
+    ],
+    "tier_before": "S",
+    "tier_after": "S",
+    "one_liner": "Front-line gun tank with built-in anti-air, in a patch that rewards early fights — S."
+   },
+   {
+    "hero": "Celeste",
+    "in_notes": false,
+    "direction": "down",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [],
+    "indirect_reasons": [
+     "Late-scaler down plus the flyer tax (air-drag slows, Silver's Bola)",
+     "Deadman Danny got a buff package and beats her 61% — a direct cross-hero threat",
+     "Still loses to rising Ivy/Lash/Calico sustain-and-dive"
+    ],
+    "build_changes": [
+     "Witchmail (her best-WR item) is the anti-slow answer now that slows matter more"
+    ],
+    "tier_before": "B",
+    "tier_after": "B",
+    "one_liner": "Flying burst scaler: wrong profile for a tempo patch, and Danny now hunts her."
+   },
+   {
+    "hero": "Rat King",
+    "in_notes": true,
+    "direction": "up",
+    "magnitude": "minor",
+    "confidence": 0.5,
+    "direct_reasons": [
+     "Notes entry only: added to the weekly release-vote schedule — no balance change this patch"
+    ],
+    "indirect_reasons": [
+     "Map-economy lead engine: heavy-melee Tough Crates, Scrap Grenade AoE clear of grouped Haunts, forced hub fights",
+     "Tank/frontline and lane-bully fit the farm-then-group-fight meta",
+     "Loses to sustain supports (Ivy, Kelvin, Paige, Dynamo) that out-heal one damage window"
+    ],
+    "build_changes": [
+     "Gun-bruiser core unchanged; banner ult CD trim stays covered by Superior/Compress Cooldown"
+    ],
+    "tier_before": "A",
+    "tier_after": "A",
+    "one_liner": "Heavy-melee crate king with the board's best kit fit — holds A, not S."
+   },
+   {
+    "hero": "Baba",
+    "in_notes": true,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.45,
+    "direct_reasons": [
+     "Notes entry only: added to the weekly release-vote schedule — her kit cut was the 10-14 patch, already baked in"
+    ],
+    "indirect_reasons": [
+     "Tank/frontline up; heavy-melee Tough Crates and grouped Haunt sustain-checks suit her regen stack",
+     "She counters Calico (58%) and Apollo (59%)",
+     "Loses to rising Paige and Holliday, and anti-heal still walls her regen"
+    ],
+    "build_changes": [
+     "Regen + cooldown-spirit core unchanged; the shakier barrier means buying Healing Booster/Spirit Resilience earlier"
+    ],
+    "tier_before": "C",
+    "tier_after": "C",
+    "one_liner": "Barrier, resist and mobility all trimmed on 10-14 — a regen wall that now leaks."
+   },
+   {
+    "hero": "Solomon",
+    "in_notes": true,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.4,
+    "direct_reasons": [
+     "Notes entry only: added to the weekly release-vote schedule — no balance change this patch"
+    ],
+    "indirect_reasons": [
+     "Telegraphed Plaza/Bell Tower hubs reward his Bishop/Rook zone control (poke/siege up)",
+     "Heavy-melee 116 opening reaches Tough Crates, but he is not a camp-clearer",
+     "Folds to the rising mobile-assassin class (Holliday, Yamato, Rat King, Celeste)"
+    ],
+    "build_changes": [
+     "Spirit cooldown-control shell stays the only path that beats his ~43% baseline; skip the day-0 Barrier-support build"
+    ],
+    "tier_before": "C",
+    "tier_after": "C",
+    "one_liner": "Zone-control support with a hub-friendly kit — and a 43% floor the meta doesn't fix."
+   },
+   {
+    "hero": "Deadman Danny",
+    "in_notes": true,
+    "direction": "neutral",
+    "magnitude": "minor",
+    "confidence": 0.4,
+    "direct_reasons": [
+     "Notes entry only: added to the weekly release-vote schedule — his buff package landed on 10-14"
+    ],
+    "indirect_reasons": [
+     "Grouped hub fights reward his overheat-dive AoE; AoE clears grouped Haunt camps",
+     "Flyer tax: Silver's Weighted Bola grounds him and air-drag slows double his airborne penalty",
+     "Loses to rising Silver, Lash and Apollo"
+    ],
+    "build_changes": [
+     "Shred/mark gun core is the only shell with real pick share; the dive-bruiser survival build shows no payoff yet"
+    ],
+    "tier_before": "C",
+    "tier_after": "C",
+    "one_liner": "Buffed flying marksman still taxed by anti-air — kit sharper, ceiling unchanged."
+   },
+   {
+    "hero": "Violet",
+    "in_notes": true,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.2,
+    "direct_reasons": [
+     "New hero: Living Ink amps her bullets, Flow State weaves toward danger for damage or away for escape, Still Life stuns, Abstract Landscape wraps her and nearby allies"
+    ],
+    "indirect_reasons": [
+     "No KB data or post-release games — this read is provisional until WR/PR land"
+    ],
+    "build_changes": [],
+    "tier_before": "?",
+    "tier_after": "B",
+    "one_liner": "New gun/spirit hybrid with a stun and mobility — kit reads strong, performance unknown."
+   },
+   {
+    "hero": "Nurse Harrow",
+    "in_notes": true,
+    "direction": "neutral",
+    "magnitude": "none",
+    "confidence": 0.15,
+    "direct_reasons": [
+     "New hero, releases 2026-10-20 at 2pm PDT; the notes give no kit detail"
+    ],
+    "indirect_reasons": [],
+    "build_changes": [],
+    "tier_before": "?",
+    "tier_after": "C",
+    "one_liner": "Unreleased hero with no kit info — provisional C until data lands."
+   }
+  ]
+ },
+ "synthesis": {
+  "patch_size": "major",
+  "size_why": "A full map and neutral overhaul (all camps replaced by nine Haunt creature types), two new district objectives, contested Soul Bags, a new Corrupted-item merchant tier, and six new heroes — the content moves where souls come from, not hero stats.",
+  "headline": "The map economy is rebuilt from memorized farm routes into contested, discoverable soul sources — tempo arrives earlier and no two jungles read the same.",
+  "meta_thesis": {
+   "previous": "The lead engine was templated PvE income — guaranteed Tough Crate routes plus Sunken Plaza/Bell Tower hub fights — so AoE/sustain camp clearers and heavy-melee box farmers banked faster than lane bullies, with no comeback valve.",
+   "new": "The off-lane economy still wins games, but the fixed routes are gone: souls now come from behavior-varied Haunt camps, contested Soul Bags, permanent-stat Buff Containers, and earlier district objectives, so map knowledge and fast-clear kits bank faster than template memorizers.",
+   "relationship": "shift",
+   "why": "Drivers: all neutral camps replaced by nine Haunt types with new behaviors, Bell Tower/Sunken Plaza objectives, contested Soul Bags, and Buff Containers now rolling Move Speed plus Bullet/Spirit Resist. It extends 'map economy wins' but changes how and how early income is earned."
+  },
+  "winners": [
+   {
+    "hero": "Seven",
+    "why": "Storm Cloud/Static Charge is the best clear for grouped, chasing Haunts and his crate-route opener now farms even faster (B->A).",
+    "indirect": true
+   },
+   {
+    "hero": "Yamato",
+    "why": "Punch AoE farms the new camps fastest and Flying Strike paths open separated Shrines/objectives the new layout creates.",
+    "indirect": true
+   },
+   {
+    "hero": "Lash",
+    "why": "Green-lane roof/tree gives permanent lane high ground and districts/Steam Vents extend an already top-pick diver's routes; stays S.",
+    "indirect": true
+   },
+   {
+    "hero": "Silver",
+    "why": "Front-line gun tank with Weighted Bola anti-air in a patch that forces earlier fights — both the flyer tax and the frontline rise point at her.",
+    "indirect": true
+   },
+   {
+    "hero": "Mo & Krill",
+    "why": "Handed the default front-line slot with Baba still cut and Billy slipping; T3 bullet resist still commits under a Guardian despite the parry change.",
+    "indirect": true
+   }
+  ],
+  "losers": [
+   {
+    "hero": "Bebop",
+    "why": "A single-target hook cannot punish crate/camp routing — the farm economy pays AoE, not pick combos.",
+    "indirect": true
+   },
+   {
+    "hero": "Grey Talon",
+    "why": "Flyer tax is unchanged (air drag, Silver's Bola) and rising Lash is his worst lane — stays buried.",
+    "indirect": true
+   },
+   {
+    "hero": "Warden",
+    "why": "Late gun scaler in a no-comeback economy that now closes even faster; no item in his core moved.",
+    "indirect": true
+   },
+   {
+    "hero": "Mirage",
+    "why": "Split-push scaler punished by contested Soul Bags and rising M&K/Lash — beaten by the meta, not the notes.",
+    "indirect": true
+   },
+   {
+    "hero": "Celeste",
+    "why": "Flying burst scaler in a tempo patch, now hunted by buffed Deadman Danny (61% against her) and grounded by Bola.",
+    "indirect": true
+   }
+  ],
+  "non_obvious_calls": [
+   {
+    "claim": "The parry change is framed as a general objective tweak but is really a targeted nerf to the T3-bullet-resist objective-dive chain that Apollo and Mo & Krill relied on.",
+    "why": "Removing the cooldown reset on objective parries deletes the free parry chain only those resist-heavy divers used to sustain a Guardian dive.",
+    "confidence": 0.6
+   },
+   {
+    "claim": "Contested Soul Bags quietly nerf burst assassins who banked income on 'secure the kill, bank guaranteed.'",
+    "why": "Kill income now requires winning a second last-hit race on the bag, so secure-burst patterns convert less reliably.",
+    "confidence": 0.55
+   },
+   {
+    "claim": "Buff Containers are no longer just caster range stops — rolling Move Speed and Bullet/Spirit Resist makes them tank-contested pickups.",
+    "why": "Permanent defensive and mobility stats change who detours and why, raising the count of small skirmishes around pickups.",
+    "confidence": 0.5
+   },
+   {
+    "claim": "The Corrupted tier's value is inversely tied to how fast this patch ends games.",
+    "why": "It only activates around ~30 min, but Bell Tower/Sunken Plaza and contested income push fights and closures earlier, so many lobbies never reach the payoff.",
+    "confidence": 0.55
+   }
+  ],
+  "uncertainties": [
+   "Six new heroes are vote-gated, so their real meta impact is a rollout question, not a balance question — the first days are a lottery of who gets to play them.",
+   "Haunt camp soul values and clear difficulty are unstated, so 'which camps pay' is a live discovery rather than a given.",
+   "It is unclear whether the tempo shift actually closes games before The Broker's ~30-min window or just relocates the stall to the new hubs.",
+   "The win/pick snapshot conflicts with the KB in places (e.g., Graves 56.5%/48.5%), so some directional reads rest on contested data."
+  ],
+  "what_to_watch": [
+   "Haunt camp soul values — which creature types are farm-worthy and which punish, and which kits clear them fastest.",
+   "First-contest timing at Bell Tower (bell broadcast) and Sunken Plaza (stamina strip) — the tells that hubs have moved earlier.",
+   "Soul Bag pickup rate — do fights genuinely extend to secure bounty, or does the bag get snaked and shift nothing.",
+   "Buff Container contest rate, especially Move Speed and Bullet Resist rolls, as the signal that pickups now matter to tanks.",
+   "New hero pick/win rates as the vote schedule rolls them out — plus whether a hotfix touches camp or crate economy."
+  ]
+ },
+ "pool": {
+  "verdicts": [
+   {
+    "hero": "Venator",
+    "verdict": "keep",
+    "one_liner": "Gun bruiser still fits the tempo economy; Abrams and Lash remain the ceiling.",
+    "direct": "No direct changes.",
+    "indirect": "Vitality items untouched and the lane-wins economy suits his tanky M1; Graves's gun now pops his traps, and gap-closers Abrams (38%) and Lash still lock him out of range.",
+    "build_adjustments": [
+     "Keep Battle Vest as the first buy.",
+     "Hold the ~40% grenade charge pivot for late anti-tank."
+    ],
+    "confidence": 0.55
+   },
+   {
+    "hero": "Haze",
+    "verdict": "keep",
+    "one_liner": "Neutral tempo carry; Steam Vents help slightly, but Venator is still the better slot.",
+    "direct": "No direct changes.",
+    "indirect": "Steam-Vent invisibility marginally helps Smoke Bomb picks, but the faster-closing economy puts her weak T4 gun finish (Ricochet/Capacitor) further out of reach, and Paige/Victor still beat her.",
+    "build_adjustments": [
+     "Skip the Ricochet/Tesla late pivot unless the game goes long."
+    ],
+    "confidence": 0.5
+   },
+   {
+    "hero": "Wraith",
+    "verdict": "keep",
+    "one_liner": "Pure-gun rebuild isn't moved either way; Paige still walls her.",
+    "direct": "No direct changes.",
+    "indirect": "Gun-carry archetype neutral and no core item moved, but she's a late scaler in an economy that ends faster, and rising Paige still beats her (57%).",
+    "build_adjustments": [
+     "Stay on the pure-gun fire-rate core."
+    ],
+    "confidence": 0.4
+   },
+   {
+    "hero": "Warden",
+    "verdict": "bench",
+    "one_liner": "C-tier late scaler in an economy that closes before he finishes building.",
+    "direct": "No direct changes.",
+    "indirect": "The crate/camp, no-comeback economy ends games before his spike and Shadow Weave gains little from the new district/Steam-Vent layout; no core item moved.",
+    "build_adjustments": [],
+    "confidence": 0.5
+   },
+   {
+    "hero": "Shiv",
+    "verdict": "keep",
+    "one_liner": "Rising anti-tank gets fed by the new tank wave, if his low snapshot WR turns.",
+    "direct": "No direct changes.",
+    "indirect": "The rising tank front (Abrams, Mo & Krill, Billy) is free food for current-HP Serrated Knives, and harder Haunt camps reward his regen stack; Yamato/Bebop burst still kills him early.",
+    "build_adjustments": [
+     "Keep the regen core; knives gain value as frontlines rise."
+    ],
+    "confidence": 0.45
+   },
+   {
+    "hero": "Yamato",
+    "verdict": "keep",
+    "one_liner": "Fastest Haunt clear plus new Flying Strike objective paths, top of A.",
+    "direct": "No direct changes.",
+    "indirect": "Punch AoE is the patch's best clear of grouped, chasing Haunts, and Flying Strike now creates paths to the Shrines/objectives the new layout separates; Buff Container Ability Range adds value.",
+    "build_adjustments": [
+     "Stay on the on-hit spirit proc backbone.",
+     "Use Flying Strike paths to reach separated Shrines and objectives."
+    ],
+    "confidence": 0.55
+   },
+   {
+    "hero": "Mina",
+    "verdict": "keep",
+    "one_liner": "Camps and districts suit her, but she still can't kill a tank.",
+    "direct": "No direct changes.",
+    "indirect": "Grouped-Haunt AoE clear and new-district mobility suit her, but nothing fixes her real problem: single-target burst that can't kill the rising tank front (Billy, Mo & Krill, Victor).",
+    "build_adjustments": [
+     "Farm camps with district mobility between dives."
+    ],
+    "confidence": 0.5
+   },
+   {
+    "hero": "Paradox",
+    "verdict": "keep",
+    "one_liner": "Steam Vents and new districts sharpen her picks; divers still punish her.",
+    "direct": "No direct changes.",
+    "indirect": "New districts, hiding spots and Steam-Vent invisibility upgrade her roamer setups and put her ahead of Bebop in the pick slot; mobile divers Yamato/Lash/Holliday still dive a stationary sniper.",
+    "build_adjustments": [
+     "Use Steam-Vent invisibility for new pick angles."
+    ],
+    "confidence": 0.55
+   },
+   {
+    "hero": "Mirage",
+    "verdict": "bench",
+    "one_liner": "Split-push scaler the contested economy buries; kit fine, meta hostile.",
+    "direct": "No direct changes.",
+    "indirect": "Contested Soul Bags and the faster-closing tempo economy punish split-push scaling, and rising Mo & Krill silence and Lash dive beat him; his 46% WR confirms it.",
+    "build_adjustments": [
+     "No build fix, the problem is the map economy, not his items."
+    ],
+    "confidence": 0.5
+   },
+   {
+    "hero": "Infernus",
+    "verdict": "keep",
+    "one_liner": "Burn AoE farms the new Haunt camps, but the map still ends before his spike.",
+    "direct": "No direct changes.",
+    "indirect": "Grouped, chasing Haunt camps reward his burn AoE, and Buff Containers now rolling Ability Range/Move Speed help the spirit line; the faster economy still ends before his late spike.",
+    "build_adjustments": [
+     "Stay on Dashfernus; the farm tailwind favors spirit, not burn gun."
+    ],
+    "confidence": 0.45
+   },
+   {
+    "hero": "Holliday",
+    "verdict": "keep",
+    "one_liner": "More districts and Steam Vents give the best pick assassin more lassos.",
+    "direct": "No direct changes.",
+    "indirect": "New districts, hiding spots and Steam-Vent invisibility expand her roam, and Bell Tower hub fights reward Spirit Lasso picks; point-blank lockdown (Drifter, Bebop, M&K/Lash ults) still ends her.",
+    "build_adjustments": [
+     "Keep Extra Charge/Rapid Recharge to double-dip bounce-pad and lasso casts."
+    ],
+    "confidence": 0.55
+   },
+   {
+    "hero": "Drifter",
+    "verdict": "keep",
+    "one_liner": "Melee bruiser the new Steam Vents and Tough-Crate routes were built for.",
+    "direct": "No direct changes.",
+    "indirect": "New districts, Steam Vents and heavy-melee Tough-Crate routes fit his stealth-reveal roam, and the rising tank/frontline archetype suits him; Dynamo/M&K/Apollo lane pressure still caps him.",
+    "build_adjustments": [
+     "Take heavy-melee Tough Crate routes as a farm angle on your roam."
+    ],
+    "confidence": 0.55
+   },
+   {
+    "hero": "Billy",
+    "verdict": "watch",
+    "one_liner": "Lane-bully frontliner losing his slot to Mo & Krill in a sustain-and-farm economy.",
+    "direct": "No direct changes.",
+    "indirect": "The crate/camp-uptime economy wants sustained presence, not his all-in, and his front-line slot has moved to rising Mo & Krill; anti-tank Shiv (his worst lane, 43%) is climbing.",
+    "build_adjustments": [
+     "No item change; draft around Shiv rather than into it."
+    ],
+    "confidence": 0.5
+   }
+  ]
+ },
+ "kb_update": null,
+ "usage": {
+  "prompt_tokens": 149740,
+  "completion_tokens": 52222,
+  "stage_seconds": {
+   "1": 33.929818868637085,
+   "2": 11.850085258483887,
+   "3": 158.12321591377258,
+   "4": 21.42262625694275,
+   "5": 28.59027409553528
+  }
+ }
+}

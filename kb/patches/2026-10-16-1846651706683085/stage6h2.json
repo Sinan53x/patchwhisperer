@@ -1,0 +1,49 @@
+{
+ "hero_updates": {
+  "Mo & Krill": {
+   "why": "Default sustained front line the new economy keeps handing him — Scorn/Burrow uptime and T3 bullet resist make him one of the few tanks who can still commit under a Guardian, though objective parries no longer reset, trimming the free dive chain he leaned on. Ranged poke he cannot close on (Celeste, Vindicta) and rising Paige still beat him.",
+   "notes": "Paint the Town: no direct change; the Haunt-camp/hub economy keeps him the default sustained front line, but objective parries no longer reset — the free dive chain is trimmed. Ranged poke (Celeste, Vindicta) and rising Paige still beat him.\nCity Never Sleeps: camp/uptime meta plus Billy's slide hand him the default sustained front-line slot.\nData: spirit core confirmed (Mystic Burst 100%, Torment Pulse 91%); ~40% PR is high, not a WR outlier."
+  },
+  "Shiv": {
+   "why": "Anti-tank the rising frontline feeds — current-HP Serrated Knives shred Abrams/Mo & Krill/Billy and his regen stack loves the harder Haunt camps — but burst/hook CC (Yamato, Drifter, Bebop) kills him before regen ramps, and a 43.4% snapshot WR keeps this a directional read.",
+   "notes": "Paint the Town: no direct change; harder Haunt camps reward his regen stack and the rising frontline feeds Serrated Knives, but a 43.4% snapshot WR keeps this soft.\nCity Never Sleeps: rising anti-tank — the bigger front line feeds current-HP Serrated Knives and harder camps reward his regen.\n10-14: Radiant Regeneration spirit scaling 0.04->0.035 chips his near-universal regen core; kit untouched."
+  },
+  "Warden": {
+   "notes": "Paint the Town: no direct line; contested Soul Bags and earlier Bell Tower/Sunken Plaza objectives close games even faster, deepening the wait a late gun scaler cannot afford — no core item moved.\nCity Never Sleeps: no direct line; the no-comeback farm-route economy refuses to wait for him and Shadow Weave gains little from the layout.\n09-16: bullet dmg/boon, flask range/speed, Willpower T3 cut; Mercurial Magnum + Spiritual Overflow nerfed, Veil Walker stripped."
+  },
+  "Yamato": {
+   "notes": "Paint the Town: no direct change; punch AoE is still the fastest clear for the new grouped, behavior-varied Haunt camps and Flying Strike paths open the separated Shrine/objective layout.\nCity Never Sleeps: Flying Strike creates paths against solid targets (turrets, Shrines, objectives) — new mobility/objective access — and she was the camp-clear champion vs grouped camps.\nTankbuster is a 39% late luxury (25m avg buy); the Refresher build stays niche/creator-driven."
+  },
+  "Lash": {
+   "notes": "Paint the Town: no direct change; new districts/Steam Vents extend his dive routes and the green-lane roof/tree keeps permanent lane high ground — still S.\nCity Never Sleeps: no direct line; the green-lane roof/tree gives permanent lane high ground and boxes matter more to his farm.\n09-16: Ground Strike T3 scaling + per-meter damage up, gun falloff changed, Flog heal nerfed."
+  },
+  "Mirage": {
+   "why": "Split-push hybrid the tempo economy buries: contested Soul Bags and earlier hub objectives make his slow scaling and map-play rarely come online, and rising Mo & Krill/Lash dive him off his map-play. Kit intact — beaten by the meta, not the notes.",
+   "notes": "Paint the Town: no direct change; contested Soul Bags and earlier hub objectives worsen a slow split-pusher, and rising M&K/Lash dive him off his map-play — beaten by the meta, not the notes.\nCity Never Sleeps: no direct line; comeback souls gutted and early Rift is now a real fight, so his map-play rarely comes online; Toxic Bullets scaling buff is a small offset.\n10-05: trooper-speed fix restores intended wave pathing so his split-push converts on schedule (tiny QoL)."
+  },
+  "Drifter": {
+   "notes": "Paint the Town: no direct change; new districts, Steam Vents and heavy-melee Tough-Crate routes fit his stealth-reveal roam (peercontent, unverified); Celeste falling softens one lane, but rising Dynamo/M&K/Apollo worsen others — net stable.\n09-29 City Never Sleeps: no direct change; new districts/Steam Vents and heavy-melee Tough-Crate routes fit his roam.\nDropped KB core_items Decay/Toxic Bullets/Fortitude — none in current 30-day usage; the 'Toxic Bullets bot' framing is a 2026-04 artifact."
+  },
+  "Victor": {
+   "notes": "Paint the Town: no direct change; harder Haunt camps and longer PvE routes feed his regen stack, keeping him A on a 56.4% snapshot WR (board's second-highest) — anti-heal and burst are still his off-switch.\n09-29 City Never Sleeps: no direct change; hard Haunt camps fed his sustain stack, flipping him from fair B-baseline to A on the 56.4% snapshot WR.\nData disagrees with the 07-16 creator read: Refresher/Echo Shard appear in none of his top-15 buys — his real build is spirit sustain."
+  },
+  "Paige": {
+   "notes": "Paint the Town: no direct change; lane-adjacent crate routes and Healing Snacks reward her lane pressure and the contested hubs suit her carry-snowball — still S.\nCity Never Sleeps: no direct change; lane-adjacent crate routes and Healing Snacks reward her lane pressure, and the contested hubs suit her carry-snowball.\n09-16: heavy-melee spirit scaling 0.3->0.45, Captivating Read T1 -11->-14s / T3 +1m->+2m; Slowing Hex cd 27->29s a minor tax."
+  },
+  "The Doorman": {
+   "notes": "Paint the Town: no direct change; Bell Tower's single rope and ~280-soul payout give his Doorway a real kidnap objective play, but tempo dive (Yamato, Lash, Apollo, Holliday) still beats his setup.\nCity Never Sleeps: no direct change; Bell Tower's single rope + ~280 souls makes his Doorway kidnap a real objective play (pre-place door before roping up).\n09-16: no direct line; loses his Veil Walker disengage (Sprint Boots + movespeed-on-break removed)."
+  }
+ },
+ "change_log": [
+  "Mo & Krill: why refreshed (objective parries no longer reset, still default front line); notes added Paint the Town line — tier stays A, trend rising.",
+  "Shiv: why adds 43.4% snapshot-WR caveat; notes added Paint the Town line — tier stays A, trend rising.",
+  "Warden: notes added Paint the Town line (contested Soul Bags + earlier hubs speed games up) — tier stays C, trend falling.",
+  "Yamato: notes added Paint the Town line (best clear for new grouped Haunt camps) — tier stays A, trend rising.",
+  "Lash: notes added Paint the Town line (districts/Steam Vents extend dive routes) — tier stays S, trend rising.",
+  "Mirage: why adds contested Soul Bags; notes added Paint the Town line — tier stays B, trend falling.",
+  "Drifter: notes added Paint the Town line — tier stays A, trend rising.",
+  "Victor: notes added Paint the Town line (Haunt camps feed his regen stack) — tier stays A, trend rising.",
+  "Paige: notes added Paint the Town line (crate routes + contested hubs) — tier stays S, trend rising.",
+  "The Doorman: notes added Paint the Town line (Bell Tower rope kidnap play) — tier stays B, trend stable."
+ ]
+}

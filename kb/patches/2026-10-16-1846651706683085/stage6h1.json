@@ -1,0 +1,55 @@
+{
+ "hero_updates": {
+  "Seven": {
+   "tier": "A",
+   "why": "Farm-first spirit AoE carry now an A-tier jungle engine: Storm Cloud/Static Charge is the fastest clear for the patch's grouped, chasing Haunt camps, and the telegraphed Plaza/Bell Tower hub fights reward his AoE. The no-comeback economy is intact, so a behind Seven still cannot brawl back — he converts a farm lead, not a deficit.",
+   "notes": "Paint the Town (10-16, indirect): fastest Haunt-camp clear plus telegraphed Plaza/Bell Tower hub fights push him B->A; the no-comeback economy still caps a behind Seven.\nCity Never Sleeps (09-29, indirect): grouped Haunt camps + guaranteed Tough-Crate routes reward his AoE farm-first line; the no-comeback valve still caps a behind Seven.\n09-16 (indirect): Cultist Sacrifice bounty 180->170% trims his farm-banker opener."
+  },
+  "Infernus": {
+   "trend": "rising",
+   "why": "Burn gun/spirit carry whose AoE clears the grouped, chasing Haunt camps and whose spirit build gains from Buff Containers now rolling Ability Range and Move Speed, tilting the farm economy slightly his way. Dashfernus stays the stronger line and the tempo shift still ends games before a behind Infernus spikes.",
+   "notes": "Paint the Town (10-16, indirect): grouped Haunt camps suit his burn AoE and Buff Containers now roll Ability Range/Move Speed for his spirit build; the tempo shift still ends games before his late spike.\nCity Never Sleeps (09-29): burn AoE clears the new grouped Haunt camps; an unverified peercontent report that his global napalm team-damage amp was removed is not in the notes — confirm via win rate.\n09-16 (indirect): Spiritual Overflow nerfed (40->30 spirit, 30->25% fire rate) — burn gun build drops it for Toxic Bullets/Swift Striker; Dashfernus untouched."
+  },
+  "Calico": {
+   "trend": "rising",
+   "why": "Lane-winning mobile assassin riding the no-comeback snowball: new districts and Steam-Vent invisibility sharpen her roam and her worst matchup (Baba) already lost tools. Cat form still can't heavy-melee Tough Crates and tanks she can't burst cap her.",
+   "notes": "Paint the Town (10-16, indirect): tempo snowball plus new district/Steam-Vent routes suit her roam; cat form still cannot heavy-melee Tough Crates, so lean kills/off-map souls.\n10-14: Baba (beats her ~58%, her worst listed matchup) took a major nerf - eases with no cost to her; no direct change.\nCity Never Sleeps: cat form cannot perform the Heavy Melee that Tough Crates need, locking her out of the patch's best soul route; lean on kills/off-map gold."
+  },
+  "Abrams": {
+   "notes": "Paint the Town (10-16, indirect): his melee core remains the cheap route into the Haunt/crate farm and the objective-parry change keeps dives on him risky; frontline up, anti-tank Shiv his real counter.\nCity Never Sleeps (09-29, indirect): his melee core farms Tough Crates cheaply and the parry-on-objective change punishes dives on him; frontline archetype up.\nCorrected vs prior entry: matchup data has him beating Venator 62% (197 games), so Venator is a target, not a counter; anti-heal (Decay) is an item/system threat, not a hero pair."
+  },
+  "McGinnis": {
+   "notes": "Paint the Town (10-16, indirect): turrets clear the new grouped Haunt camps and zone the telegraphed Plaza/Bell Tower hubs, while the objective-parry change punishes dives into her wall.\nCity Never Sleeps (09-29, indirect): telegraphed hub fights and the dive-punishing parry change favor her turret/wall zoning, and turrets clear the grouped Haunt camps.\nItem data (14d, mostly pre-09-16) shows a real gun core (Intensifying Magazine 77%, Monster Rounds 62%) plus spirit-amp turret items; no single dominant build."
+  },
+  "Paradox": {
+   "notes": "Paint the Town (10-16, indirect): new districts, more hiding spots and Steam-Vent invisibility sharpen her roamer pick setups and keep her ahead of Bebop in that slot; the sniper line still folds to mobile divers.\nCity Never Sleeps (09-29, indirect): new districts/hiding spots/Steam Vents upgrade her roamer pick setups and move her ahead of Bebop in that slot; the sniper line still folds to mobile divers.\nData disagrees with the old 'Echo Shard every game' read: the real core is a gun/carbine sniper, and Slowing Hex is 60%, not guaranteed."
+  },
+  "Dynamo": {
+   "notes": "Paint the Town (10-16, indirect): telegraphed Plaza/Bell Tower hub fights hand Singularity clean windows and Quantum Entanglement's AoE dispel beats rising Lash/Drifter/Calico commits; durable-frontline counters (M&K, Abrams) are the offset.\nCity Never Sleeps (09-29, indirect): telegraphed Plaza/Bell Tower hub fights give Singularity clean setup windows; initiator items untouched.\n09-16 (indirect): Diviner's Kevlar gained +10% ultimate CDR — now a live buy for his Refresher/Singularity plan."
+  },
+  "Holliday": {
+   "notes": "Paint the Town (10-16, indirect): new districts and Steam-Vent invisibility expand her roam routes and Bell Tower hub fights reward Spirit Lasso picks; point-blank lockdown (Drifter/Bebop/M&K/Lash) still punishes her commit.\nCity Never Sleeps (09-29, indirect): new districts/hiding spots/Steam Vents expand her roam routes and Bell Tower hub fights reward lasso picks.\nChangelog 09-16: Crackshot T2 resist-shred, longer Spirit Lasso, health/boon 41->43; Veil Walker lost Sprint Boots and movespeed-on-break."
+  },
+  "Bebop": {
+   "notes": "Paint the Town (10-16, indirect): a single-target hook cannot punish Haunt/crate routing, contested Soul Bags only partly extend his fights, and the roamer slot has tilted to Paradox.\nCity Never Sleeps: no direct line; the farm/sustain economy plus Paradox's rise down-rank him in the roamer slot.\nSiphon Bullets (27% buy, 60.4% WR) is a small-sample late luxury, not a must-buy; builds stay hybrid — spirit-tagged pick tools (Spirit Strike/Snatch, Slowing Hex) out-share the gun items."
+  },
+  "Grey Talon": {
+   "notes": "Paint the Town (10-16, indirect): flyer tax unchanged (air-drag slows, Silver's Weighted Bola) and rising Lash (36% for Grey Talon) is his worst lane — stays C.\nItem data overrides the stale core_items: Mystic Shot and Hollow Point don't appear in 30-day usage; the real opener is High-Velocity Rounds + Opening Rounds into spirit charge items.\nFlyer penalty applied per reader correction — 09-16 air-drag slow and Silver's Weighted Bola both count against him."
+  }
+ },
+ "change_log": [
+  "Seven: tier B -> A and why rewritten (fastest Haunt-camp clear + telegraphed Plaza/Bell Tower hub fights; no comeback lever added)",
+  "Seven: notes+ Paint the Town line (farm-economy bump, no-comeback cap)",
+  "Infernus: trend stable -> rising and why refreshed (burn AoE clears Haunt camps + Buff Containers roll Ability Range/Move Speed)",
+  "Infernus: notes+ Paint the Town line",
+  "Calico: trend stable -> rising and why refreshed (tempo snowball + new district/Steam-Vent routes; crate lockout unchanged)",
+  "Calico: notes+ Paint the Town line",
+  "Abrams: notes+ Paint the Town line (melee/haunt-crate farm + objective-parry change keep him a rising frontline)",
+  "McGinnis: notes+ Paint the Town line (turret clears Haunt camps, zones new hubs, parry punishes dives)",
+  "Paradox: notes+ Paint the Town line (districts/Steam Vents sharpen roamer picks; ahead of Bebop)",
+  "Dynamo: notes+ Paint the Town line (hub-fight Singularity windows + dispel vs rising divers)",
+  "Holliday: notes+ Paint the Town line (districts/Steam Vents expand roam; Bell Tower lassos)",
+  "Bebop: notes+ Paint the Town line (hook can't punish PvE routing; roamer slot to Paradox)",
+  "Grey Talon: notes+ Paint the Town line (anti-air tax + rising Lash keep him C)"
+ ]
+}

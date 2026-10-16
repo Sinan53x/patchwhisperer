@@ -1,0 +1,55 @@
+{
+ "hero_updates": {
+  "Billy": {
+   "why": "Lane-bully frontline whose all-in fits the contested-Haunt economy worse than sustained uptime; the front-line slot has moved to rising Mo & Krill and anti-tank Shiv remains his worst lane, so he sits below S.",
+   "notes": "10-16 Paint the Town: no direct change; behavior-varied Haunt camps and contested soul sources reward sustained presence, so his lane-bully all-in fits the economy less and the front-line slot stays with rising Mo & Krill.\n\n10-05: no direct change; the trooper-speed fix marginally helps his lane-bully all-in, but his real slide (front-line slot lost to rising Mo & Krill, anti-tank Shiv climbing) is unchanged.\n\n09-29 City Never Sleeps: no direct change; the crate/camp-uptime meta wants sustained presence and his front-line slot moved to rising Mo & Krill, with anti-tank Shiv climbing - S was popularity-supported, so slides to A (peercontent, unverified)."
+  },
+  "Graves": {
+   "trend": "stable",
+   "why": "Trap-clearing gun is a real utility tool into Venator, but the contested, earlier soul economy still denies her ~25-min scaling window: worst early game of any carry (low HP, two stamina, no mobility) with no comeback bail-out.",
+   "last_changed_patch": "Paint the Town",
+   "notes": "10-16 Paint the Town: her gun now destroys Venator's traps - a genuine utility tool into an A-tier hero - but the earlier, contested soul economy still deletes her ~25-min scaling line; tier held C.\n\n10-05: no direct change; the trooper-speed fix marginally helps her split-push wave pathing, but her no-comeback early game is still the problem.\n\nChangelog: 09-16 - comeback souls trimmed and Rift resist made per-minute, removing her comeback path; health/boon 33->35 + Jar of Dead buffs are small; Toxic Bullets scaling buff is a marginal on-hit gain."
+  },
+  "Apollo": {
+   "why": "Tempo lane bully the rebuilt map economy favors: he routes Haunt camps and roams, and with T3 bullet resist is one of the few who can still commit under a Guardian despite the objective-parry cooldown removal; his spirit core is untouched and his worst lane (Baba) just got weaker.",
+   "notes": "10-16 Paint the Town: no direct change; the objective-parry cooldown-reset removal trims the T3-bullet-resist Guardian-dive chain he leaned on, but the crate-and-Haunt economy and his untouched spirit core keep him S.\n\n10-14: Baba (beats him ~59%) took a major nerf - a marginal easing of a bad lane; no direct change.\n\n10-05: no direct change; the trooper-speed regression fix restores on-schedule lane crashes for his bully pressure, and Rat King's frontline trim thins the competing A-tier bruiser pool."
+  },
+  "Silver": {
+   "why": "Front-line gun tank built for a patch that starts fights earlier: gun cycle survives dashes/light melee, health/boon and sprint are up, and Weighted Bola grounds flyers - the contested-Haunt economy rewards her tempo; ceiling remains stacked CC and the Lash/Drifter pair.",
+   "notes": "10-16 Paint the Town: no direct change; the contested, earlier soul economy rewards her front-line tempo and Weighted Bola anti-air, so tier S holds.\n\n09-29 City Never Sleeps: no direct change; the frontline/tank archetype is up, but the move from lane tempo to farm-route tempo is roughly neutral for a lane-fight gun tank, and heavy-melee crate routes need a heavy melee she does not build toward (peercontent, low confidence).\n\n09-16: health/boon 28->31, sprint 1.5->2.5, and Weighted Bola now grounds/interrupts flyers - direct buffs; tier S held."
+  },
+  "Celeste": {
+   "why": "Late-scaling flying spirit burst is the wrong profile for the contested, earlier-tempo economy (no comeback line, air-drag slow bleeds her mid-flight), and buffed Deadman Danny now hunts her; she still bursts squishy melee but folds to sustain and mobile initiators.",
+   "matchups": {
+    "beats": [
+     "Pocket",
+     "Yamato",
+     "Haze",
+     "Paradox",
+     "Bebop"
+    ],
+    "loses_to": [
+     "Ivy",
+     "Warden",
+     "Lash",
+     "Calico",
+     "Mina",
+     "Deadman Danny"
+    ]
+   },
+   "notes": "10-16 Paint the Town: no direct change; the contested, earlier soul economy punishes her late-scaling line and buffed Deadman Danny (61% vs her) adds a direct threat; tier B held.\n\n10-14: Radiant Regeneration spirit scaling 0.04->0.035 is the third trim to her sustain-burst core; Deadman Danny (beats her 61%) got a buff package.\n\n09-16: tier held at B (down from A) - the seven-nerf stack plus the air-drag flyer tax; Witchmail remains her anti-slow answer."
+  },
+  "Rat King": {
+   "why": "Post-nerf frontline brawler settled near the ~55% WR line (the 10-05 banner trim pulled the outlier down without burying the kit); his map-economy fit (heavy-melee crates, AoE Haunt clear, contested soul sources, forced hub fights) still matches the farm-then-group-fight meta. Holds A, not S: strong but soft to sustain/support comps and spirit burst that bypasses his anti-bullet barrier.",
+   "notes": "10-16 Paint the Town: notes entry only - added to the weekly release-vote schedule, no balance change; the contested-Haunt economy still matches his heavy-melee crate and AoE-clear kit, so tier holds A.\n\n7-day check-in (2026-10-09): tier A -> A, WR 59%, PR 86% over 430072 matches.\n\n10-05: banner ult trimmed (CD 130->160, DR 20->15% base + T3 15->10% = 35->25% total, radius 24->20m, charge 12->10s, no Spirit-scaled move speed); base kit buffed (Scrap Grenade 65->70, Rat Swarm CD 28->24s)."
+  }
+ },
+ "change_log": [
+  "Billy: why/notes refreshed for Paint the Town (Haunt/contested-soul economy suits sustained fronts less; front-line slot stays with Mo & Krill); tier A, trend falling held.",
+  "Graves: trend falling -> stable; why/notes refreshed; last_changed_patch -> Paint the Town (gun now destroys Venator traps, but earlier contested economy still denies her scaling window); tier C held.",
+  "Apollo: why/notes refreshed (objective-parry cooldown reset removed, trimming his T3-bullet-resist Guardian-dive chain; crate/Haunt economy + Baba nerf keep him S).",
+  "Silver: why/notes refreshed for Paint the Town (contested early economy rewards her front-line tempo + Weighted Bola anti-air); tier S, trend rising held.",
+  "Celeste: loses_to += Deadman Danny (61% against her); why/notes refreshed for the earlier contested economy; tier B, trend falling held.",
+  "Rat King: why/notes refreshed (added to weekly release-vote schedule, no balance change; contested-Haunt economy keeps his kit fit); tier A, trend stable held."
+ ]
+}

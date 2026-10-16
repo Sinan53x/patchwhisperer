@@ -1,0 +1,100 @@
+{
+ "patch_size": "major",
+ "size_why": "A full map and neutral overhaul (all camps replaced by nine Haunt creature types), two new district objectives, contested Soul Bags, a new Corrupted-item merchant tier, and six new heroes — the content moves where souls come from, not hero stats.",
+ "headline": "The map economy is rebuilt from memorized farm routes into contested, discoverable soul sources — tempo arrives earlier and no two jungles read the same.",
+ "meta_thesis": {
+  "previous": "The lead engine was templated PvE income — guaranteed Tough Crate routes plus Sunken Plaza/Bell Tower hub fights — so AoE/sustain camp clearers and heavy-melee box farmers banked faster than lane bullies, with no comeback valve.",
+  "new": "The off-lane economy still wins games, but the fixed routes are gone: souls now come from behavior-varied Haunt camps, contested Soul Bags, permanent-stat Buff Containers, and earlier district objectives, so map knowledge and fast-clear kits bank faster than template memorizers.",
+  "relationship": "shift",
+  "why": "Drivers: all neutral camps replaced by nine Haunt types with new behaviors, Bell Tower/Sunken Plaza objectives, contested Soul Bags, and Buff Containers now rolling Move Speed plus Bullet/Spirit Resist. It extends 'map economy wins' but changes how and how early income is earned."
+ },
+ "winners": [
+  {
+   "hero": "Seven",
+   "why": "Storm Cloud/Static Charge is the best clear for grouped, chasing Haunts and his crate-route opener now farms even faster (B->A).",
+   "indirect": true
+  },
+  {
+   "hero": "Yamato",
+   "why": "Punch AoE farms the new camps fastest and Flying Strike paths open separated Shrines/objectives the new layout creates.",
+   "indirect": true
+  },
+  {
+   "hero": "Lash",
+   "why": "Green-lane roof/tree gives permanent lane high ground and districts/Steam Vents extend an already top-pick diver's routes; stays S.",
+   "indirect": true
+  },
+  {
+   "hero": "Silver",
+   "why": "Front-line gun tank with Weighted Bola anti-air in a patch that forces earlier fights — both the flyer tax and the frontline rise point at her.",
+   "indirect": true
+  },
+  {
+   "hero": "Mo & Krill",
+   "why": "Handed the default front-line slot with Baba still cut and Billy slipping; T3 bullet resist still commits under a Guardian despite the parry change.",
+   "indirect": true
+  }
+ ],
+ "losers": [
+  {
+   "hero": "Bebop",
+   "why": "A single-target hook cannot punish crate/camp routing — the farm economy pays AoE, not pick combos.",
+   "indirect": true
+  },
+  {
+   "hero": "Grey Talon",
+   "why": "Flyer tax is unchanged (air drag, Silver's Bola) and rising Lash is his worst lane — stays buried.",
+   "indirect": true
+  },
+  {
+   "hero": "Warden",
+   "why": "Late gun scaler in a no-comeback economy that now closes even faster; no item in his core moved.",
+   "indirect": true
+  },
+  {
+   "hero": "Mirage",
+   "why": "Split-push scaler punished by contested Soul Bags and rising M&K/Lash — beaten by the meta, not the notes.",
+   "indirect": true
+  },
+  {
+   "hero": "Celeste",
+   "why": "Flying burst scaler in a tempo patch, now hunted by buffed Deadman Danny (61% against her) and grounded by Bola.",
+   "indirect": true
+  }
+ ],
+ "non_obvious_calls": [
+  {
+   "claim": "The parry change is framed as a general objective tweak but is really a targeted nerf to the T3-bullet-resist objective-dive chain that Apollo and Mo & Krill relied on.",
+   "why": "Removing the cooldown reset on objective parries deletes the free parry chain only those resist-heavy divers used to sustain a Guardian dive.",
+   "confidence": 0.6
+  },
+  {
+   "claim": "Contested Soul Bags quietly nerf burst assassins who banked income on 'secure the kill, bank guaranteed.'",
+   "why": "Kill income now requires winning a second last-hit race on the bag, so secure-burst patterns convert less reliably.",
+   "confidence": 0.55
+  },
+  {
+   "claim": "Buff Containers are no longer just caster range stops — rolling Move Speed and Bullet/Spirit Resist makes them tank-contested pickups.",
+   "why": "Permanent defensive and mobility stats change who detours and why, raising the count of small skirmishes around pickups.",
+   "confidence": 0.5
+  },
+  {
+   "claim": "The Corrupted tier's value is inversely tied to how fast this patch ends games.",
+   "why": "It only activates around ~30 min, but Bell Tower/Sunken Plaza and contested income push fights and closures earlier, so many lobbies never reach the payoff.",
+   "confidence": 0.55
+  }
+ ],
+ "uncertainties": [
+  "Six new heroes are vote-gated, so their real meta impact is a rollout question, not a balance question — the first days are a lottery of who gets to play them.",
+  "Haunt camp soul values and clear difficulty are unstated, so 'which camps pay' is a live discovery rather than a given.",
+  "It is unclear whether the tempo shift actually closes games before The Broker's ~30-min window or just relocates the stall to the new hubs.",
+  "The win/pick snapshot conflicts with the KB in places (e.g., Graves 56.5%/48.5%), so some directional reads rest on contested data."
+ ],
+ "what_to_watch": [
+  "Haunt camp soul values — which creature types are farm-worthy and which punish, and which kits clear them fastest.",
+  "First-contest timing at Bell Tower (bell broadcast) and Sunken Plaza (stamina strip) — the tells that hubs have moved earlier.",
+  "Soul Bag pickup rate — do fights genuinely extend to secure bounty, or does the bag get snaked and shift nothing.",
+  "Buff Container contest rate, especially Move Speed and Bullet Resist rolls, as the signal that pickups now matter to tanks.",
+  "New hero pick/win rates as the vote schedule rolls them out — plus whether a hotfix touches camp or crate economy."
+ ]
+}

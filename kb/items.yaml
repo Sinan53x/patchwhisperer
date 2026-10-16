@@ -1499,15 +1499,18 @@ Corrupted items:
   name: Corrupted items
   role: Late-game merchant tier unlocked by The Broker (~30 min, then ~every 15 min);
     not a buildable slot — you convert a finished high-tier item for extra stats plus
-    match-wide random negative attributes.
+    match-wide random negative attributes. Street Brawl's Round 5 grant imports the
+    same tier into draft-mode mid-game.
   bought_by: []
   slot: Merchant shipment (The Broker) — no Vitality/Weapon/Spirit slot.
   tier: null
-  notes: 'Rolls are symmetric: identical for all players in a match, so the tier adds
-    between-match variance, not intra-match advantage to whoever reaches The Broker
-    first. It rewards teams that can bank souls and stall to ~30 min, running counter
-    to this patch''s early-close economy. Read it at runtime, not in a build plan;
-    low-confidence (first KB entry).'
+  notes: Rolls are symmetric and match-wide, so the tier adds between-match variance,
+    not an edge to whoever reaches The Broker first. It only activates at ~30 min
+    and pays teams that bank and stall, running counter to this patch's earlier, contested
+    soul economy (Bell Tower, Sunken Plaza, Soul Bags) — expect it to idle in the
+    tempo lobbies Paint the Town is pushing. A bad negative roll can brick a core
+    item, so hold a spare high-tier slot or delay past the first shipment rather than
+    buying greedily into an unknown roll.
 Extra Health:
   name: Extra Health
   role: ''

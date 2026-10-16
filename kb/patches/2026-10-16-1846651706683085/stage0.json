@@ -1,0 +1,46 @@
+{
+ "summary": "City Never Sleeps / Paint the Town is a major content update: a full map and neutral overhaul (new Haunts, districts, objectives, and pickups), six new heroes rolled out on a vote schedule, plus a temporary Corrupted-item merchant (The Broker). Almost no hero balance numbers — the meta moves through new soul sources, new pickups, and the Corrupted-item system rather than stat tuning. Read it as an economy/objective/kit-access update, not a balance patch.",
+ "sections": {
+  "Map": [
+   "Haunts: all neutral camps replaced by new creature types with new behaviors — Specimen, Gutter Ghouls, Barrel Mimics, Past Dues, Stage Hands, Crabbage Pots, Festival Spirit, Shrooms, Underhands",
+   "Bell Tower: new objective atop the Chinatown district; highly concentrated soul hotspot, but collecting it rings a bell heard across the map (telegraphs the farm to everyone)",
+   "Sunken Plaza: new objective beneath the Plaza district main square; descending strips your stamina and mutes outside sound — high risk, high reward",
+   "Tough Crates: breakables that require a Heavy Melee to open; yield extra souls (rewards heavy-melee-capable kits and melee itemization over gun-only farmers)",
+   "Buff Containers: revamped golden statues now also roll Spirit Resist, Bullet Resist, Ability Range, and Move Speed as permanent bonuses — widens which stats are worth detouring for",
+   "Healing Snacks: new hidden pickups around the map that heal on grab; rewards map knowledge and sustain-light heroes",
+   "Steam Vents: new terrain pickups granting invisibility and a small amount of regen while standing on them — adds a stealth/escape layer to traversal and team fights",
+   "Districts: four off-lane areas added — Theater, Chinatown, Haunted Lot, Plaza — creating new farm and fight routes between the main lanes",
+   "The Broker: temporary shop; exchange high-tier items for Corrupted versions, first shipment around 30 minutes in and a further Corrupted Item available on average every 15 minutes after; appears in different spots and only for a few days"
+  ],
+  "General": [
+   "Corrupted items: high-tier items can be exchanged for Corrupted versions with random negative attributes assigned per match; the positive/negative roll varies only slightly and is identical for all players in a given game — a shared, per-match risk/reward layer rather than a per-player buy",
+   "Street Brawl: now grants a Corrupted item after the item draft in Round 5",
+   "Parry: successfully parrying objectives no longer resets your Parry cooldown — removes the free parry refresh some players used to chain objective fights",
+   "Sinner's Sacrifice: bonus now has variable timings instead of a fixed window — you cannot rely on a memorized timer to secure it",
+   "Walkers: no longer keep firing fireballs after dying — removes post-death chip damage that punished players lingering near a killed Walker",
+   "Soul Bags: kills now drop a Soul Bag you must secure before an ally takes it — contested-last-hit rules now apply to the bounty itself",
+   "Ability/Item use: now fires the instant the button is pressed instead of waiting for the next input window — effectively lower reaction latency for every hero's combo and item activation"
+  ],
+  "Items": [
+   "Corrupted items: new item tier obtained by exchanging a high-tier item at The Broker; each carries random negative attributes (same set for everyone in the match) with small variability in magnitude — a high-roll/high-risk slot that competes with normal completed items"
+  ],
+  "Heroes": [
+   "Violet: new hero — Living Ink empowers her bullets and turns inspiration into reality; Flow State makes her ink weave toward danger for damage or away for escape; Still Life stuns, Abstract Landscape surrounds her and nearby allies",
+   "Nurse Harrow: new hero, releasing Tuesday October 20th at 2pm PDT",
+   "Deadman Danny: new hero (added this update, released via the weekly vote schedule)",
+   "Baba: new hero (added this update, released via the weekly vote schedule)",
+   "Solomon: new hero (added this update, released via the weekly vote schedule)",
+   "Rat King: new hero (added this update, released via the weekly vote schedule)",
+   "Graves: her gun can now destroy Venator's traps — shifts the Graves/Venator matchup and gives Graves trap-clearing utility"
+  ],
+  "new_heroes": [
+   "Violet",
+   "Nurse Harrow",
+   "Deadman Danny",
+   "Baba",
+   "Solomon",
+   "Rat King"
+  ]
+ },
+ "new_heroes": []
+}

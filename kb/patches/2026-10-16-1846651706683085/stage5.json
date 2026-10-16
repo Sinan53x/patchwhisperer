@@ -1,0 +1,147 @@
+{
+ "verdicts": [
+  {
+   "hero": "Venator",
+   "verdict": "keep",
+   "one_liner": "Gun bruiser still fits the tempo economy; Abrams and Lash remain the ceiling.",
+   "direct": "No direct changes.",
+   "indirect": "Vitality items untouched and the lane-wins economy suits his tanky M1; Graves's gun now pops his traps, and gap-closers Abrams (38%) and Lash still lock him out of range.",
+   "build_adjustments": [
+    "Keep Battle Vest as the first buy.",
+    "Hold the ~40% grenade charge pivot for late anti-tank."
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Haze",
+   "verdict": "keep",
+   "one_liner": "Neutral tempo carry; Steam Vents help slightly, but Venator is still the better slot.",
+   "direct": "No direct changes.",
+   "indirect": "Steam-Vent invisibility marginally helps Smoke Bomb picks, but the faster-closing economy puts her weak T4 gun finish (Ricochet/Capacitor) further out of reach, and Paige/Victor still beat her.",
+   "build_adjustments": [
+    "Skip the Ricochet/Tesla late pivot unless the game goes long."
+   ],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Wraith",
+   "verdict": "keep",
+   "one_liner": "Pure-gun rebuild isn't moved either way; Paige still walls her.",
+   "direct": "No direct changes.",
+   "indirect": "Gun-carry archetype neutral and no core item moved, but she's a late scaler in an economy that ends faster, and rising Paige still beats her (57%).",
+   "build_adjustments": [
+    "Stay on the pure-gun fire-rate core."
+   ],
+   "confidence": 0.4
+  },
+  {
+   "hero": "Warden",
+   "verdict": "bench",
+   "one_liner": "C-tier late scaler in an economy that closes before he finishes building.",
+   "direct": "No direct changes.",
+   "indirect": "The crate/camp, no-comeback economy ends games before his spike and Shadow Weave gains little from the new district/Steam-Vent layout; no core item moved.",
+   "build_adjustments": [],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Shiv",
+   "verdict": "keep",
+   "one_liner": "Rising anti-tank gets fed by the new tank wave, if his low snapshot WR turns.",
+   "direct": "No direct changes.",
+   "indirect": "The rising tank front (Abrams, Mo & Krill, Billy) is free food for current-HP Serrated Knives, and harder Haunt camps reward his regen stack; Yamato/Bebop burst still kills him early.",
+   "build_adjustments": [
+    "Keep the regen core; knives gain value as frontlines rise."
+   ],
+   "confidence": 0.45
+  },
+  {
+   "hero": "Yamato",
+   "verdict": "keep",
+   "one_liner": "Fastest Haunt clear plus new Flying Strike objective paths, top of A.",
+   "direct": "No direct changes.",
+   "indirect": "Punch AoE is the patch's best clear of grouped, chasing Haunts, and Flying Strike now creates paths to the Shrines/objectives the new layout separates; Buff Container Ability Range adds value.",
+   "build_adjustments": [
+    "Stay on the on-hit spirit proc backbone.",
+    "Use Flying Strike paths to reach separated Shrines and objectives."
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Mina",
+   "verdict": "keep",
+   "one_liner": "Camps and districts suit her, but she still can't kill a tank.",
+   "direct": "No direct changes.",
+   "indirect": "Grouped-Haunt AoE clear and new-district mobility suit her, but nothing fixes her real problem: single-target burst that can't kill the rising tank front (Billy, Mo & Krill, Victor).",
+   "build_adjustments": [
+    "Farm camps with district mobility between dives."
+   ],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Paradox",
+   "verdict": "keep",
+   "one_liner": "Steam Vents and new districts sharpen her picks; divers still punish her.",
+   "direct": "No direct changes.",
+   "indirect": "New districts, hiding spots and Steam-Vent invisibility upgrade her roamer setups and put her ahead of Bebop in the pick slot; mobile divers Yamato/Lash/Holliday still dive a stationary sniper.",
+   "build_adjustments": [
+    "Use Steam-Vent invisibility for new pick angles."
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Mirage",
+   "verdict": "bench",
+   "one_liner": "Split-push scaler the contested economy buries; kit fine, meta hostile.",
+   "direct": "No direct changes.",
+   "indirect": "Contested Soul Bags and the faster-closing tempo economy punish split-push scaling, and rising Mo & Krill silence and Lash dive beat him; his 46% WR confirms it.",
+   "build_adjustments": [
+    "No build fix, the problem is the map economy, not his items."
+   ],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Infernus",
+   "verdict": "keep",
+   "one_liner": "Burn AoE farms the new Haunt camps, but the map still ends before his spike.",
+   "direct": "No direct changes.",
+   "indirect": "Grouped, chasing Haunt camps reward his burn AoE, and Buff Containers now rolling Ability Range/Move Speed help the spirit line; the faster economy still ends before his late spike.",
+   "build_adjustments": [
+    "Stay on Dashfernus; the farm tailwind favors spirit, not burn gun."
+   ],
+   "confidence": 0.45
+  },
+  {
+   "hero": "Holliday",
+   "verdict": "keep",
+   "one_liner": "More districts and Steam Vents give the best pick assassin more lassos.",
+   "direct": "No direct changes.",
+   "indirect": "New districts, hiding spots and Steam-Vent invisibility expand her roam, and Bell Tower hub fights reward Spirit Lasso picks; point-blank lockdown (Drifter, Bebop, M&K/Lash ults) still ends her.",
+   "build_adjustments": [
+    "Keep Extra Charge/Rapid Recharge to double-dip bounce-pad and lasso casts."
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Drifter",
+   "verdict": "keep",
+   "one_liner": "Melee bruiser the new Steam Vents and Tough-Crate routes were built for.",
+   "direct": "No direct changes.",
+   "indirect": "New districts, Steam Vents and heavy-melee Tough-Crate routes fit his stealth-reveal roam, and the rising tank/frontline archetype suits him; Dynamo/M&K/Apollo lane pressure still caps him.",
+   "build_adjustments": [
+    "Take heavy-melee Tough Crate routes as a farm angle on your roam."
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Billy",
+   "verdict": "watch",
+   "one_liner": "Lane-bully frontliner losing his slot to Mo & Krill in a sustain-and-farm economy.",
+   "direct": "No direct changes.",
+   "indirect": "The crate/camp-uptime economy wants sustained presence, not his all-in, and his front-line slot has moved to rising Mo & Krill; anti-tank Shiv (his worst lane, 43%) is climbing.",
+   "build_adjustments": [
+    "No item change; draft around Shiv rather than into it."
+   ],
+   "confidence": 0.5
+  }
+ ]
+}
