@@ -1,0 +1,43 @@
+{
+ "hero_updates": {
+  "Rem": {
+   "notes": "10-20 Shh...: no direct change; harder corridor camps raise the value of his percent-max-HP heal on the farm route, but Healing Snacks do part of his job for free and he still loses the heal-slot duel to Ivy — held B/rising.\n\n09-29 City Never Sleeps: no direct change; harder camps reward his sustain and spread-out vaults (Bell Tower now three) strengthen his map play, while Healing Snacks slightly cheapen dedicated healing - trend up (peercontent).\n\n09-16 change is a breakable-spawn/bug fix plus target UI only (heresy 09-17); not the 'big nerf' the community assumed, so strength impact is minor."
+  },
+  "Celeste": {
+   "why": "Late-scaling flying spirit burst with no camp-clear or crate route in a corridor economy that pays for both, and the air-drag flyer tax still bleeds her mid-flight. She bursts squishy melee but folds to sustain, to Barrel Mimic ambushes on a low-HP clear, and to the mobile initiators who close on her.",
+   "notes": "10-20 Shh...: no direct change; the off-lane/corridor economy gives her no camp or crate income route, and Barrel Mimics tax a low-HP clearer, so the tempo patch keeps her B/falling.\n\n10-16 Paint the Town: no direct change; the contested, earlier soul economy punishes her late-scaling line and buffed Deadman Danny (61% vs her) adds a direct threat; tier B held.\n\n10-14: Radiant Regeneration spirit scaling 0.04->0.035 is the third trim to her sustain-burst core; Deadman Danny (beats her 61%) got a buff package."
+  },
+  "Rat King": {
+   "tier": "S",
+   "trend": "rising",
+   "why": "The patch's shape in one kit: 116 heavy melee opens Tough Crates for uncontestable income, Scrap Grenade clears grouped Haunt camps, and Bell Tower/Sunken Plaza force the stacked fights his banner ult wants. Still soft to sustain supports and to spirit burst that bypasses his bullet barrier, so the S is fit-driven and needs WR confirmation.",
+   "notes": "10-20 Shh...: no direct change; Tough Crates, grouped chasing Haunts, forced Bell Tower/Sunken Plaza hubs and Barrel Mimics all point at heavy-melee camp-clear frontlines, so the systems patch lifts him A -> S on fit, not numbers - confirm against win rate before locking.\n\n10-16 Paint the Town: notes entry only - added to the weekly release-vote schedule, no balance change; the contested-Haunt economy still matches his heavy-melee crate and AoE-clear kit, so tier held A.\n\n10-05: banner ult trimmed (CD 130->160, DR 20->15% base + T3 15->10% = 35->25% total, radius 24->20m, charge 12->10s, no Spirit-scaled move speed); base kit buffed (Scrap Grenade 65->70, Rat Swarm CD 28->24s)."
+  },
+  "Baba": {
+   "trend": "stable",
+   "why": "Grounded regen bruiser who farms Tough Crates and grouped Haunts and wants the telegraphed hub fights this map schedules; the 10-14 barrier, resist and mobility cuts still cap her, so she out-sustains camp chip but not focus fire or anti-heal.",
+   "notes": "10-20 Shh...: no direct change; the new corridors, grouped Haunt camps and forced Bell Tower/Plaza fights suit her melee-regen clear and arrest the post-10-14 fall, but the barrier/resist cuts still bind - trend falling -> stable at C.\n\n10-14: major kit cut - Brew barrier scaling 1.2->0.7 and base 100->90 with CD 25->27s (later, T2), -7% Base Bullet Resist, spirit-resist scaling 0.12->0.1, Granny Long Legs CD 30->32 with lower light-melee launch and decaying repeat air-melee momentum, Threadsap CD 26->28 with its spirit shred now ending on death; plus Radiant Regeneration 0.04->0.035. Tier B -> C, trend falling.\n\n7-day check-in (2026-10-13): tier B -> B, WR 51%, PR 64% over 305220 matches. Usage overrides the prior entry: the real core is regen + cooldown-spirit items (Extra Charge 98%, Mystic Regeneration 95%, Radiant Regeneration 94%), not the Boundless Spirit/on-hit shells; 7-day matchups beat Solomon/Apollo/Calico, lose to Kelvin/Dynamo/Paige."
+  },
+  "Solomon": {
+   "why": "Zone-control support drafted for telegraphed hub fights - Bell Tower, Sunken Plaza and container contests are exactly his ground - but the mobile dive class that skips his Bishop/Rook zones (Holliday, Yamato, Rat King, Celeste) is up in the same patch, so he sits near his ~43% baseline.",
+   "notes": "10-20 Shh...: no direct change; the patch schedules the fights his zones want (Bell Tower, container contests) but also lifts the dive class that lands before them, so he holds C/stable.\n\n7-day check-in (2026-10-16): tier B -> C, WR 45%, PR 61% over 329000 matches. Usage overrides the day-0 'Barrier support' and full-gun builds: Divine Barrier/Healbane/Healing Booster/Superior Duration and Swift Striker do not appear in high-rank item data. Vindicta now reads 48% (even), not the day-0 loss; Baba still 36% despite the 10-14 front-line cut (her barrier 1.2->0.7, -7% bullet resist, B->C).\n\n10-14: no direct change; one week old and the empty Develop Queen tooltip leaves his ult and its Checkmate (200/5) threshold the biggest unknown."
+  },
+  "Deadman Danny": {
+   "why": "Spirit mark-burster whose AoE finally has the right targets - grouped, chasing Haunt camps plus stacked hub fights - and Steam Vents give him pick angles; still a 730-HP flyer with the air-drag tax intact and nothing above 49% head-to-head.",
+   "notes": "10-20 Shh...: no direct change; grouped chasing Haunt camps and corridor farm suit his spirit AoE marks and Steam Vents add approach angles, but the flyer tax and Barrel Mimic risk on a 730-HP commit keep him C/rising.\n\n7-day check-in (2026-10-20): tier C -> C, WR 45%, PR 69% over 446352 matches. Corrected: the usage data kills the 'shred/mark gun' identity - Bullet Resist Shredder does not appear at all, and the real build is spirit (Extra/Improved Spirit, Mystic Burst at 79-90%) with HV Rounds as the lone weapon staple. The old beats list was inverted - Celeste (33%) and Graves (32%) are among his worst lanes, not wins. PR 69.1% is a new-hero novelty spike (previously 0.2% on a two-day sample), so read WR 38.5% and ignore pick rate. Held C/rising: the build finally consolidated and WR gained ~3.6 points, but nothing clears 49% head-to-head and the flyer tax is intact; upgrade only on ~45%+ WR, drop to D if the spirit capstone stays a post-30-min luxury.\n\nPaint the Town (10-16) changelog: no Danny-specific changes; the 10-14 buff package is still his live state."
+  },
+  "Violet": {
+   "why": "Cooldown-gated spirit zoner who now farms like a frontline - 116 heavy melee on Tough Crates and grouped Haunt camps - and decides Bell Tower/container contests with a vision-blocking silence; 710 HP with no dash means any dive assassin deletes her before the zone lands.",
+   "notes": "10-20 Shh...: provisional read holds; corridor farm, Tough Crates and Bell Tower/container contests are exactly her fight shape, but the dive class is up and she is still a 710-HP caster with no escape - B pending data.\n\nDay-0 kit read (2026-10-16), provisional - data check-in due 2026-10-23. Confidence low: no ranked data, no creator read, kit judged from tooltips. Still Life's permanent stat bank is the swing factor - if it snowballs in a tempo meta she is A, if games end before it pays she is a B/C. Watch whether the spirit build's high WR holds and whether anyone plays the gun line at all."
+  }
+ },
+ "change_log": [
+  "Rat King: tier A -> S, trend stable -> rising (Tough Crates + grouped Haunt clear + forced Bell Tower/Plaza hubs; systems-driven, unconfirmed by WR)",
+  "Baba: trend falling -> stable (map now suits her melee/regen camp clear, but 10-14 barrier and resist cuts still bind; tier held C)",
+  "Celeste: why/notes rewritten - corridor economy offers her no camp or crate route, Barrel Mimics tax low-HP clear, tier held B/falling",
+  "Solomon: why/notes refreshed - scheduled hub fights help, but the dive class that skips his zones is up; held C/stable",
+  "Deadman Danny: why/notes refreshed - grouped Haunt camps and Steam Vents fit his spirit AoE, flyer tax caps him; held C/rising",
+  "Violet: why/notes refreshed - crate/camp farm and hub contests fit, 710 HP no-dash problem unchanged; held B/rising, still provisional",
+  "Rem: notes only - harder camps raise sustain value but Healing Snacks cap the payoff and Ivy still wins the heal slot; held B/rising"
+ ]
+}

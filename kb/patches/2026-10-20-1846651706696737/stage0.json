@@ -1,0 +1,48 @@
+{
+ "summary": "A structural map-and-content update rather than a numbers patch: the neutral/jungle layer is rebuilt around new Haunt creatures, four off-lane Districts with their own objectives (Sunken Plaza, Bell Tower, Tough Crates, Steam Vents, Healing Snacks), and a rotating merchant, The Broker, who injects per-match Corrupted items into the economy. Six new heroes arrive on a voted, staggered release schedule, so the meta read is mostly about where souls now come from and which kits can exploit the new map geometry. No hero balance numbers were published, so archetype shifts are inferred from systems, not tuning.",
+ "sections": {
+  "Map": [
+   "Haunts: all neutral camps replaced by new creature types (Specimen, Gutter Ghouls, Barrel Mimics, Past Dues, Stage Hands, Crabbage Pots, Festival Spirit, Shrooms, Underhands) with new behaviors — prior clear routes, timings and sustain math no longer transfer",
+   "Barrel Mimics: some breakables are now mimics — smashing crates and boxes in the jungle is no longer free souls",
+   "Districts: four off-lane corridors added (Theater, Chinatown, Haunted Lot, Plaza) with their own content — souls are no longer concentrated on the three lanes",
+   "Sunken Plaza: high-risk sub-area below the Plaza District square; stamina drains as you descend and outside sound fades — taxes low-mobility and disengage-poor kits, pays those who can commit",
+   "Bell Tower: Chinatown vertical objective; concentrated soul hotspot at the top, but collecting rings the bell map-wide — turns a farm route into a broadcast gank target",
+   "Tough Crates: breakables requiring a Heavy Melee that pay extra souls — rewards heavy-melee access and gives melee-capable kits a farm lane lanes cannot contest",
+   "Buff Containers: revamped golden statues now also roll permanent Spirit Resist, Bullet Resist, Ability Range and Move Speed — not just a damage/health pickup, so permanent-buff contests matter for tanks and casters alike",
+   "Healing Snacks: hidden pickups scattered around the map for healing in a pinch — reduces forced base returns during lane phase",
+   "Steam Vents: standing on one grants invisibility and small regen — new gank setup and disengage tool; makes vision and grouped rotations stronger",
+   "The Broker: temporary merchant that relocates per match (dark uptown alley, abandoned Chinatown storefront); first stock around 30 minutes, further Corrupted items roughly every 15 minutes after — pulls players to a contested point in the mid/late game",
+   "Sinner's Sacrifice: bonus now has variable timings — the ritual is no longer a fixed-timer camp, so pre-timing it is harder",
+   "Lanes: renamed Broadway (blue), Greenwich (green), York (yellow) — callouts change with the visual rework; treat old lane knowledge as dated",
+   "Uptown: positioned as the quickest route to where the action is — rotations and collapses will route through it"
+  ],
+  "General": [
+   "Ability/item cast: fires the instant the button is pressed instead of on the next input window — reaction speed, cancels and clutch parries get tighter for every hero",
+   "Parry: successfully parrying objectives no longer resets Parry cooldown — objective-parry stops being a free defensive reset before a fight",
+   "Walkers: no longer keep firing fireballs after dying — diving a Walker you just killed is now safe",
+   "Street Brawl: corrupted item granted after the Round 5 item draft",
+   "Hero releases: six new heroes, two per week on Tue/Fri 2:00pm PT, first release Oct 2, order decided by vote; voting moved to the Pregame lobby with the winning team's votes counting double, and play earns priority tokens"
+  ],
+  "Items": [
+   "Corrupted Items: high-tier items can be exchanged for Corrupted versions via the Broker; each match assigns the same random negative attributes to every Corrupted item and every player, with small magnitude variance — the whole lobby plays around identical downsides, so the item is a read on the match, not a personal upgrade"
+  ],
+  "Heroes": [
+   "Nurse Harrow: new hero — no kit details in the notes",
+   "Deadman Danny: new hero — no kit details in the notes",
+   "Baba: new hero — no kit details in the notes",
+   "Solomon: new hero — no kit details in the notes",
+   "Rat King: new hero — no kit details in the notes",
+   "Violet: new hero — no kit details in the notes",
+   "Graves: her gun can now destroy Venator's traps — she is a direct counter-pick into trap zoning",
+   "Yamato: Flying Strike now creates paths against solid targets (turrets, Shrines, objectives) — objective-adjacent ults stop whiffing"
+  ]
+ },
+ "new_heroes": [
+  "Nurse Harrow",
+  "Deadman Danny",
+  "Baba",
+  "Solomon",
+  "Rat King",
+  "Violet"
+ ]
+}

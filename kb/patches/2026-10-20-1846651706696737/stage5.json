@@ -1,0 +1,144 @@
+{
+ "verdicts": [
+  {
+   "hero": "Venator",
+   "verdict": "watch",
+   "one_liner": "Graves is now a popular hard counter to his traps; drop from A to B.",
+   "direct": "Graves' gun destroys his pre-placed traps, so trap zoning — his main lane tool — is deleted in any lobby with a Graves (now a ~40% pick).",
+   "indirect": "Permanent Bullet Resist container rolls tax a gun-bruiser for the whole match, and spread corridors plus Steam Vents open flank angles on a slow tanky gunner.",
+   "build_adjustments": [
+    "Against Graves, hold traps for fight setup instead of pre-placing them as lane vision."
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Haze",
+   "verdict": "keep",
+   "one_liner": "Roam build gains from vents and corridors; farm build gains nothing.",
+   "direct": "No direct changes.",
+   "indirect": "Steam Vents and corridors feed the Smoke Bomb roamer line, but permanent Bullet Resist container rolls blunt gun damage and Barrel Mimics punish crate-chaining on her squishy frame.",
+   "build_adjustments": [
+    "Play vent ambushes on isolated corridor farmers instead of static camp farming.",
+    "Never chain breakables at low HP — a mimic turns a routine clear into a death."
+   ],
+   "confidence": 0.45
+  },
+  {
+   "hero": "Wraith",
+   "verdict": "keep",
+   "one_liner": "Untouched by the patch; still a fire-rate gun carry in a roam meta.",
+   "direct": "No direct changes.",
+   "indirect": "No meaningful indirect effects.",
+   "build_adjustments": [],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Warden",
+   "verdict": "bench",
+   "one_liner": "Vents give everyone his Shadow Weave engage, and he still spikes too late.",
+   "direct": "No direct changes.",
+   "indirect": "Steam Vents hand every hero the invis-engage he pays Shadow Weave for, so his one exclusivity is gone — and the tempo clock that kills his late gun spike is unchanged.",
+   "build_adjustments": [
+    "Shadow Weave stays the engage shell, but it no longer buys exclusivity."
+   ],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Shiv",
+   "verdict": "keep",
+   "one_liner": "Harder camps feed his regen ramp; the tank front line he shreds rose.",
+   "direct": "No direct changes.",
+   "indirect": "Harder camp damage rewards his regen stack, and the rising frontline gives current-HP Serrated Knives more targets — though Steam Vents give divers a free approach before he ramps.",
+   "build_adjustments": [],
+   "confidence": 0.45
+  },
+  {
+   "hero": "Yamato",
+   "verdict": "keep",
+   "one_liner": "Free pathing off objectives plus the best camp clear: closest thing to S.",
+   "direct": "Flying Strike now creates paths against solid targets (turrets, Shrines, objectives), so objective-adjacent ults stop whiffing; parry no longer resets on objectives, making a Shrine dive one-shot.",
+   "indirect": "Her punch AoE is still the fastest clear of the grouped, behavior-varied Haunt camps, which is where souls now live.",
+   "build_adjustments": [
+    "Use Flying Strike off a Walker or Guardian to path out, not only to engage.",
+    "Plan the Shrine/Walker dive exit before committing — no parry reset to bail you out."
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Mina",
+   "verdict": "keep",
+   "one_liner": "Camps and new districts love her; the tanks she cannot kill also got better.",
+   "direct": "No direct changes.",
+   "indirect": "Grouped Haunt camps suit her AoE clear and the new off-lane districts give her dive routes, but the frontline archetype rose and tanks are her worst matchups.",
+   "build_adjustments": [
+    "Dive corridor farmers between camps; skip Tough Crates, she has no heavy-melee route."
+   ],
+   "confidence": 0.4
+  },
+  {
+   "hero": "Paradox",
+   "verdict": "keep",
+   "one_liner": "Four corridors and vent invisibility give her carbine real hiding spots.",
+   "direct": "No direct changes.",
+   "indirect": "Steam-Vent invisibility and off-lane corridors add fresh Kinetic Carbine pick angles, and Barrel Mimics make crate-chaining lethal for the low-HP clearers she picks on.",
+   "build_adjustments": [
+    "Set picks from Steam Vents and corridors instead of lane brushes."
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Mirage",
+   "verdict": "bench",
+   "one_liner": "The patch deleted lane-shoving as an income strategy; his whole plan was that.",
+   "direct": "No direct changes.",
+   "indirect": "Souls moved off the lanes into corridors and shared objectives, so his split-push pressure converts to less income, and Steam Vents hand roamers a free approach on his map-play.",
+   "build_adjustments": [
+    "If you play him, farm corridors instead of shoving a lane and pick isolated camp clearers with Djinn's Mark."
+   ],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Infernus",
+   "verdict": "keep",
+   "one_liner": "Camps and containers both like him; neither build changes.",
+   "direct": "No direct changes.",
+   "indirect": "Grouped, chasing Haunt camps are the main income route and his burn AoE clears them itemless, while Buff Containers' permanent Spirit Resist is a match-long answer he cannot strip.",
+   "build_adjustments": [
+    "Skip Tough Crates entirely — farm grouped camps instead.",
+    "In lobbies stacking Spirit Resist rolls, lean on the gun/burn build over pure spirit."
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Holliday",
+   "verdict": "keep",
+   "one_liner": "More roam routes and a map-wide announced target: her kind of map.",
+   "direct": "No direct changes.",
+   "indirect": "Four off-lane corridors plus vent invisibility expand her roam routes, and Bell Tower's top payout is a scheduled gank spot for a lasso pick.",
+   "build_adjustments": [
+    "Pre-place bounce-pad exits near the Bell Tower rope before roping; lasso the farmer, not the escort."
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Drifter",
+   "verdict": "keep",
+   "one_liner": "Melee bruiser with a private income lane and free hiding spots.",
+   "direct": "No direct changes.",
+   "indirect": "Heavy-Melee Tough Crates give his melee core the same uncontestable soul lane the tanks got, and Steam Vents plus new hiding spots fit his stealth-reveal roam — though his counters Dynamo and Mo & Krill also rose.",
+   "build_adjustments": [
+    "Sweep Tough Crates between roams; Stalker stays the first buy."
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Billy",
+   "verdict": "watch",
+   "one_liner": "Frontline patch helps, but he is still the second-best front line.",
+   "direct": "No direct changes.",
+   "indirect": "Harder camps reward the sustained frontline archetype he lives in, but the slot still reads Mo & Krill and rising anti-tank Shiv is his worst lane.",
+   "build_adjustments": [],
+   "confidence": 0.4
+  }
+ ]
+}

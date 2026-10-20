@@ -1,0 +1,58 @@
+{
+ "hero_updates": {
+  "Calico": {
+   "why": "Tempo roamer whose district and Steam-Vent routes sharpen her gank angles, but cat form still cannot heavy-melee Tough Crates, so her income stays kill-based. The rising frontline (Abrams, Rat King) caps her at A — she cannot burst through stacked HP.",
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): districts and vent invisibility extend her roam; cat form still can't heavy-melee Tough Crates, and the frontline meta gives her more unburstable bodies.\nPaint the Town (10-16, indirect): tempo snowball plus new district/Steam-Vent routes suit her roam; cat form still cannot heavy-melee Tough Crates, so lean kills/off-map souls.\n10-14: Baba (beats her ~58%, her worst listed matchup) took a major nerf - eases with no cost to her; no direct change."
+  },
+  "Grey Talon": {
+   "why": "Sub-50% poke carry with no camp or crate route: Steam Vents give divers free invisibility onto an immobile flyer, and Healing Snacks blunt the chip he converts into lane leads. Air-drag and Silver's bola are unchanged, so C holds.",
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): Steam Vents give roamers a free approach on an immobile flyer, and Healing Snacks blunt the poke he turns into lane leads; no camp or crate route suits him.\nPaint the Town (10-16, indirect): flyer tax unchanged (air-drag slows, Silver's Weighted Bola) and rising Lash (36% for Grey Talon) is his worst lane — stays C.\nFlyer penalty applied per reader correction — 09-16 air-drag slow and Silver's Weighted Bola both count against him."
+  },
+  "Mo & Krill": {
+   "why": "Default sustained front line for harder Haunt camps and contested Buff Containers; Scorn/Burrow uptime plus T3 bullet resist let him commit. Objective parries no longer reset, so his Guardian dive is one-shot, and ranged poke he cannot close on still beats him.",
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): harder Haunt camps and contested Buff Containers reward his sustained frontline; objective parries no longer reset, trimming the free Guardian-dive chain.\nPaint the Town: no direct change; the Haunt-camp/hub economy keeps him the default sustained front line, but objective parries no longer reset — the free dive chain is trimmed. Ranged poke (Celeste, Vindicta) and rising Paige still beat him.\nCity Never Sleeps: camp/uptime meta plus Billy's slide hand him the default sustained front-line slot."
+  },
+  "Shiv": {
+   "why": "Anti-tank bruiser the rising frontline feeds — current-HP Serrated Knives shred Abrams/Mo & Krill/Billy and harder camps reward his regen stack. Steam Vents give divers a free approach before regen ramps, so burst/hook CC still kills him.",
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): harder camps reward his regen stack and the rising frontline feeds current-HP Serrated Knives, but vents hand divers a free approach before he ramps.\nPaint the Town: no direct change; harder Haunt camps reward his regen stack and the rising frontline feeds Serrated Knives, but a 43.4% snapshot WR keeps this soft.\n10-14: Radiant Regeneration spirit scaling 0.04->0.035 chips his near-universal regen core; kit untouched."
+  },
+  "Ivy": {
+   "why": "Still the best peel in the game (Stone Form i-frame/stun) and a 53.7% WR support, but Healing Snacks plus four spread corridors reduce the value of a grouped healer, and districts pull her team apart. Tether a frontline bruiser sweeping corridors rather than a lane partner.",
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): Healing Snacks plus spread corridors cut the value of a grouped healer; districts pull her team apart, so tether a frontline bruiser sweeping corridors instead of a lane partner.\nCity Never Sleeps: no direct line; peercontent floats a small lift off camp-damage sustain, but the Healing Snack addition and trimmed heal items cut both ways for her (low confidence).\nReal build is gun-first (Extended/Titanic/Tesla 68-74%); creator heal-support framing is stale."
+  },
+  "Warden": {
+   "why": "Late-scaling gun carry the tempo economy still refuses to wait for; Steam Vents hand every hero the invis-engage he pays Shadow Weave for, so his one exclusivity is gone. No item or system route slows the clock that kills his late spike.",
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): Steam Vents give every hero the invis-engage he pays Shadow Weave for, flattening his one unique tool while tempo still ends games before his late gun spike.\nPaint the Town: no direct line; contested Soul Bags and earlier Bell Tower/Sunken Plaza objectives close games even faster, deepening the wait a late gun scaler cannot afford — no core item moved.\n09-16: bullet dmg/boon, flask range/speed, Willpower T3 cut; Mercurial Magnum + Spiritual Overflow nerfed, Veil Walker stripped."
+  },
+  "Yamato": {
+   "why": "Camp-clear champion: Flying Strike now paths off solid objectives/turrets for a second mobility vector, and her punch AoE still clears grouped Haunts fastest. Objective parries no longer reset, so her Shrine dive is one-shot — plan the exit before committing.",
+   "last_changed_patch": "Shh... This Won't Hurt a Bit.",
+   "notes": "Shh... This Won't Hurt a Bit. (10-20): Flying Strike creates paths against solid targets (turrets, Shrines, objectives) for extra mobility/objective access; parry no longer resets on objectives, so her Shrine/Walker dive is one-shot.\nPaint the Town: no direct change; punch AoE is still the fastest clear for the new grouped, behavior-varied Haunt camps and Flying Strike paths open the separated Shrine/objective layout.\nCity Never Sleeps: Flying Strike creates paths against solid targets (turrets, Shrines, objectives) — new mobility/objective access — and she was the camp-clear champion vs grouped camps."
+  },
+  "Lash": {
+   "why": "Highest-pick S-tier initiator: districts and Steam Vents extend his dive routes, and Bell Tower/Sunken Plaza concentrate teams into Ground Strike setups. The objective-parry reset removal takes a free defensive out from the fights he starts; Silver/air-drag remain the counter.",
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): districts and Steam Vents extend his dive routes beyond three lanes, and hub fights at Bell Tower/Sunken Plaza concentrate teams into Ground Strike; objective parries no longer reset.\nPaint the Town: no direct change; new districts/Steam Vents extend his dive routes and the green-lane roof/tree keeps permanent lane high ground — still S.\n09-16: Ground Strike T3 scaling + per-meter damage up, gun falloff changed, Flog heal nerfed."
+  },
+  "Viscous": {
+   "why": "Cube rescue gains value when fights are scheduled at Bell Tower and Buff Containers, and harder camps reward Cube sustain while Goo Ball suits the spread vaults/corridors. Still a B enabler until a post-patch WR shows the 09-16 trims are absorbed.",
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): Bell Tower's spread vaults and four corridors suit Goo Ball traversal, and harder camps plus forced hub fights raise Cube rescue value.\nCity Never Sleeps: no direct line; harder camps reward Cube sustain and spread-out vaults suit Goo Ball, but this is a low-confidence lift.\n09-16: Cube cast range 26->20m, Puddle Punch cooldown 21->24s, Splatter/alt-fire nerfs; cooldown-Cube shell lost Veil Walker's Sprint Boots."
+  },
+  "Mirage": {
+   "tier": "C",
+   "why": "Split-push hybrid the patch buried: souls moved off the lanes into corridors and shared objectives, so sidelane pressure converts to less income, and Steam-Vent invisibility hands roamers a free approach on his map-play. Farm corridors instead; Djinn's Mark picks isolated camp clearers.",
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): souls moved off the lanes into corridors and shared objectives, so split-push converts to less income; Steam Vents give roamers a free approach on his map-play.\nPaint the Town: no direct change; contested Soul Bags and earlier hub objectives worsen a slow split-pusher, and rising M&K/Lash dive him off his map-play — beaten by the meta, not the notes.\n10-05: trooper-speed fix restores intended wave pathing so his split-push converts on schedule (tiny QoL)."
+  }
+ },
+ "change_log": [
+  "Calico: why/notes refreshed — districts and vent invisibility extend her roam, but Tough Crates stay locked to cat form.",
+  "Grey Talon: why/notes refreshed — Steam Vents and Healing Snacks tax his poke; stays C.",
+  "Mo & Krill: why/notes refreshed — harder camps and Buff Container contests reward his frontline; objective parry reset trimmed.",
+  "Shiv: why/notes refreshed — camp damage helps his regen ramp, but vents expose him before it comes online.",
+  "Ivy: why/notes refreshed — Healing Snacks plus spread corridors cut grouped-healer value; stays A/falling.",
+  "Warden: why/notes refreshed — Steam Vents flatten Shadow Weave exclusivity, and tempo still kills his late spike.",
+  "Yamato: last_changed_patch set; why/notes refreshed — Flying Strike objective pathing is a new mobility vector, objective parry is now one-shot.",
+  "Lash: why/notes refreshed — corridor dive routes and hub fights suit Ground Strike; objective parry reset removed.",
+  "Viscous: why/notes refreshed — Cube rescue gains at scheduled Bell Tower/container fights; Goo Ball suits the spread map.",
+  "Mirage: tier B -> C — split-push income deleted by corridor/shared-objective souls; why/notes refreshed."
+ ]
+}

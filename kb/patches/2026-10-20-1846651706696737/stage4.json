@@ -1,0 +1,102 @@
+{
+ "patch_size": "major",
+ "size_why": "Not a numbers patch: the neutral layer is rebuilt as nine behavior-varied Haunt types, four off-lane districts and sub-areas (Sunken Plaza, Bell Tower) re-price where souls come from, and Barrel Mimics/Steam Vents/Healing Snacks change how farm, vision and disengage work. Zero hero balance numbers means every tier movement is inferred from systems, not tuning.",
+ "headline": "Souls moved off the lanes into corridors, camps and announced hub fights — kits that clear grouped camps and heavy-melee crates bank first, single-target lane bullies and split pushers starve.",
+ "meta_thesis": {
+  "previous": "With memorized routes dead, souls come from behavior-varied Haunts, contested Soul Bags, permanent-stat Buff Containers and earlier district objectives, so tempo, fast-clear kits and sustained frontlines carry while late scalers and split pushers fall off.",
+  "new": "Same economy, wider map: souls now sit in four off-lane corridors plus sub-areas that a five-man team cannot cover, so income is a coverage question answered by AoE camp clear and heavy-melee crate access, and fights get scheduled at hubs (Bell Tower bell, container contests, ~30-minute Broker) instead of picked in lanes.",
+  "relationship": "continuation",
+  "why": "The Haunt/container/Broker economy from Paint the Town is extended, not replaced — districts, Bell Tower, Sunken Plaza and Tough Crates were already priced into the KB thesis, so the genuinely new levers are Haunt creature behavior, Barrel Mimics, Steam Vents, Healing Snacks, instant casts and the confirmed Broker cadence."
+ },
+ "winners": [
+  {
+   "hero": "Rat King",
+   "why": "Heavy-melee open cracks Tough Crates for guaranteed souls, Scrap Grenade clears grouped chasing Haunts, and Sunken Plaza/Bell Tower force the stacked fights his ult wants — he is the patch's shape in one kit.",
+   "indirect": true
+  },
+  {
+   "hero": "Yamato",
+   "why": "Flying Strike pathing off solid objectives plus the best punch-AoE camp clear makes her the closest thing to S; the lost objective-parry reset only trims her Shrine dive to one shot.",
+   "indirect": false
+  },
+  {
+   "hero": "Graves",
+   "why": "Her gun now destroys Venator's traps, converting an unplayed C-tier into a draftable counter into a ~40%-pick A-tier — the single largest delta any one line in the notes creates.",
+   "indirect": false
+  },
+  {
+   "hero": "Drifter",
+   "why": "Melee core gives him the same uncontestable Tough Crate income lane the tanks got, and Steam Vents plus new hiding spots are his stealth-reveal roam with better geometry.",
+   "indirect": true
+  },
+  {
+   "hero": "Holliday",
+   "why": "Four corridors and vent invisibility multiply her roam routes, and Bell Tower's map-wide payout is a scheduled lasso target she can pre-plan around.",
+   "indirect": true
+  }
+ ],
+ "losers": [
+  {
+   "hero": "Venator",
+   "why": "Graves deletes his pre-placed traps, and Bullet Resist container rolls tax a slow gun-bruiser for the full match — A to B on one hero matchup plus one map system.",
+   "indirect": false
+  },
+  {
+   "hero": "Mirage",
+   "why": "Sidelane shoving converts to less income now that souls live in corridors and shared objectives; the strategy he was drafted for is the one the map deleted.",
+   "indirect": true
+  },
+  {
+   "hero": "Warden",
+   "why": "Steam Vents hand every hero the invis-engage he pays Shadow Weave for, so his one exclusivity is gone while the tempo clock that kills his late spike is unchanged.",
+   "indirect": true
+  },
+  {
+   "hero": "Bebop",
+   "why": "A single-target hook converts nothing on spread corridor farm, Steam Vents give targets a free disengage his combo cannot chase, and Paradox still owns the roamer slot.",
+   "indirect": true
+  },
+  {
+   "hero": "Grey Talon",
+   "why": "Healing Snacks blunt the poke he converts into lane leads and vents hand divers an approach onto a sub-50% immobile flyer; no camp or crate route suits him either.",
+   "indirect": true
+  }
+ ],
+ "non_obvious_calls": [
+  {
+   "claim": "The headline hero change is a Venator nerf filed under Graves.",
+   "why": "The line reads as a Graves buff, but its only real effect is deleting trap zoning from a 40%-pick A-tier, which is the largest single-hero swing in a patch with no balance numbers.",
+   "confidence": 0.6
+  },
+  {
+   "claim": "Most of the 'new map' was already priced into the KB, so the real new information is smaller than 33 changes implies.",
+   "why": "Districts, Bell Tower, Sunken Plaza, Tough Crates and the Broker all appear in the pre-patch thesis; the genuinely new inputs are Haunt creature behavior, Barrel Mimics, Steam Vents, Healing Snacks and instant casts.",
+   "confidence": 0.6
+  },
+  {
+   "claim": "Barrel Mimics convert crate-chaining from a tempo route into a sustain check, and it hits squishy gun carries hardest.",
+   "why": "Smashing breakables now risks a fight, so low-HP, no-disengage clearers (Vyper, Graves, Celeste) eat the tax while melee bruisers heal through it — the opposite of the 'free souls on the walk' habit.",
+   "confidence": 0.55
+  },
+  {
+   "claim": "Cast-on-press is a silent buff to high-execution combo and parry kits that win rates will not show for a week.",
+   "why": "Casts firing on the input rather than the next window tightens combos and clutch parries for Yamato, Lash and Paradox without touching a number, so it reads as player skill until the sample stabilizes.",
+   "confidence": 0.5
+  }
+ ],
+ "uncertainties": [
+  "Haunt soul values and clear difficulty are still unstated, so which of the nine camp types is actually worth farming is discovery, not analysis.",
+  "Corrupted item power is unquantified, and banking souls for a ~30-minute Broker stock is an anti-tempo habit in a patch that otherwise pays you to spend and rotate.",
+  "Six heroes on a voted Tue/Fri rollout make day-one pick and win rates noise for the first two weeks.",
+  "The Graves snapshot (56.5% WR / 40.9% PR) still contradicts the KB (48.5% / 21%) and I cannot resolve which is current.",
+  "Whether a wider map plus the Broker actually lengthens games past 30 minutes or tempo still closes lobbies first — the two forces point opposite ways."
+ ],
+ "what_to_watch": [
+  "Per-Haunt-type clear times and souls banked: if one or two types dominate, farm routes re-converge and the 'no memorization' intent fails.",
+  "Average game length and the share of games reaching the ~30-minute Broker window — the cleanest test of tempo versus stall.",
+  "Buff Container contest rate, especially Bullet Resist and Move Speed rolls, since those permanently skew duels.",
+  "Steam Vent usage in kill participation: if vent ganks spike, grouping discipline becomes the skill gap and solo picks (Bebop, Grey Talon) fall further.",
+  "Rat King's win rate against his pick rate — an A-to-S jump this fast usually needs the data to confirm it is not just novelty.",
+  "Whether Venator's pick rate collapses specifically into Graves lobbies, confirming the counter-pick read rather than a general decline."
+ ]
+}

@@ -1,0 +1,813 @@
+{
+ "heroes": [
+  {
+   "hero": "Infernus",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Grouped, chasing Haunt camps are the biggest income route now and his burn AoE clears them without extra items.",
+    "Buff Containers roll permanent Spirit Resist, a match-long answer to burn/spirit damage that he cannot strip.",
+    "Containers also roll Ability Range and Move Speed, which feeds the Dashfernus spirit line more than the gun line."
+   ],
+   "build_changes": [
+    "Skip Tough Crates entirely — he has no heavy-melee route; farm grouped camps instead.",
+    "In lobbies that stack Bullet/Spirit Resist container rolls, lean on the gun/burn build over pure spirit."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Camps and containers both like him; his two builds don't change."
+  },
+  {
+   "hero": "Seven",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Storm Cloud/Static Charge is still the fastest clear of the new behavior-varied Haunt camps — and camp income is now the main soul route.",
+    "Bell Tower and Sunken Plaza force the grouped hub fights his AoE farms best.",
+    "The tempo push still ends games before a behind Seven recovers, so this rewards the lead, not the comeback."
+   ],
+   "build_changes": [
+    "Keep the Monster Rounds/Cultist Sacrifice farm opener; corridor camps replace lane static-holding.",
+    "Only rope up to Bell Tower with a teammate holding the rope — the bell is a map-wide gank call."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Fastest camp clearer in the game, and camps are now where souls live."
+  },
+  {
+   "hero": "Vindicta",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Steam Vents hand every roamer free invisibility, adding approach angles against a low-HP flyer with one escape.",
+    "Four off-lane districts thin the bodies in lane, so dives arrive from directions max-range poke cannot pre-aim.",
+    "Silver's Weighted Bola and the air-drag slow are unchanged, so the flyer ceiling stays where it was."
+   ],
+   "build_changes": [
+    "Keep Counterspell as the mandatory anti-dive slot; nothing here justifies dropping it.",
+    "Farm from roofs as before, but do not solo the Bell Tower top."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "More high ground, more hiding spots — and more things that can ground her."
+  },
+  {
+   "hero": "Lady Geist",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Buff Containers now roll permanent Bullet/Spirit Resist — frontline stats her regen shell wants for free.",
+    "Harder Haunt camps reward her Extra Regen/Mystic Regeneration stack; Tough Crates stay closed to her without a heavy-melee commitment.",
+    "Lash and other divers gain from Steam Vents and corridors, and she is still their food."
+   ],
+   "build_changes": [
+    "Regen first stays correct — camp chip damage is higher than last patch.",
+    "Contest Buff Containers; a Bullet Resist roll is worth more to her than any damage roll."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Tankier from container rolls, still dies to the same dive heroes."
+  },
+  {
+   "hero": "Abrams",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "His melee core gives a cheap Heavy Melee, the only key to Tough Crates (58 souls each) — an income lane ranged kits cannot contest.",
+    "Harder Haunt camps reward his Siphon/melee-lifesteal sustain on the farm route.",
+    "Parry no longer resets on objectives: dives on him are one-shot, but his own Guardian-dive loses the free second parry."
+   ],
+   "build_changes": [
+    "Insert a Tough-Crate sweep between camp respawns; his heavy melee makes it free souls.",
+    "Keep the Close Quarters/Monster Rounds opener — it is the same spike as before."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Heavy melee is now a farm stat, and he owns that route."
+  },
+  {
+   "hero": "Wraith",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Nothing in this patch touches her; still a fire-rate gun carry in a roam meta."
+  },
+  {
+   "hero": "McGinnis",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Turrets clear the new grouped, chasing Haunt camps without leaving cover.",
+    "The objective-parry change punishes dives into her wall/turret zone under a Guardian.",
+    "Fights spread across four corridors dilute her static-zone value relative to a three-lane map."
+   ],
+   "build_changes": [
+    "Prioritize turret placement on Sunken Plaza and Bell Tower approaches over lane siege."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Her turrets farm the new camps; just stop sieging empty lanes."
+  },
+  {
+   "hero": "Paradox",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Four off-lane districts and Steam-Vent invisibility add fresh Kinetic Carbine pick angles off the lanes.",
+    "Barrel Mimics make crate-chaining risky for the low-HP clearers she picks on."
+   ],
+   "build_changes": [
+    "Set picks from Steam Vents and corridors instead of lane brushes; carbine sniper core unchanged."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "The map finally has hiding spots for her carbine picks."
+  },
+  {
+   "hero": "Dynamo",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Telegraphed Bell Tower and Sunken Plaza fights hand Singularity clean setup windows on grouped teams.",
+    "His worst matchups (Billy, Mo & Krill, Abrams) are also up — the frontline archetype rose with him."
+   ],
+   "build_changes": [
+    "Payoff stays Refresher/Unstoppable double-ult; spend it on hub contests, not lane."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Grouped fights at objectives are exactly where his ult wins games."
+  },
+  {
+   "hero": "Kelvin",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Harder, behavior-varied Haunt camps raise the value of dome sustain on the farm route.",
+    "Bell Tower and Sunken Plaza make Frozen Shelter a zone tool at forced objective fights.",
+    "Healing Snacks cut the number of forced returns he used to heal teammates through."
+   ],
+   "build_changes": [
+    "Save the dome for the Bell Tower/Plaza contest; snacks cover the between-camp healing."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "His dome is now worth more at objectives than in lane."
+  },
+  {
+   "hero": "Haze",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Corridors plus Steam Vents boost the Smoke Bomb roamer line; the farm-carry line gets nothing from Tough Crates.",
+    "Permanent Bullet Resist rolls on Buff Containers blunt gun damage for the rest of the match.",
+    "Barrel Mimics punish chaining crates at low HP on a squishy frame."
+   ],
+   "build_changes": [
+    "Play vent ambushes on isolated corridor farmers instead of static camp farming.",
+    "Never chain breakables while low — a mimic turns a routine clear into a death."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Roam build gains, farm build loses; nothing touches her T4 problem."
+  },
+  {
+   "hero": "Holliday",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Four off-lane corridors plus Steam Vent invisibility expand her roam routes beyond the old lanes.",
+    "Bell Tower's top payout rings map-wide, which is a scheduled gank spot for a lasso pick."
+   ],
+   "build_changes": [
+    "Pre-place bounce-pad exits near the Bell Tower rope before roping; lasso the farmer, not the escort."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "More routes and a broadcast target — her kind of map."
+  },
+  {
+   "hero": "Bebop",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "A single-target hook converts nothing on a spread-out corridor farm route — there is no lane body to punish.",
+    "Paradox keeps the roamer slot and the new districts and Steam Vents give her pick angles a hook cannot match.",
+    "Steam Vents give every target a free disengage his combo cannot chase."
+   ],
+   "build_changes": [
+    "Hook off corridor chokepoints and camp entrances instead of lane."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Hooks still land, but nothing in the new economy punishes a farm route."
+  },
+  {
+   "hero": "Calico",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Districts and Steam Vent invisibility sharpen the tempo roam the no-comeback economy already rewards.",
+    "Cat form still cannot Heavy Melee, so Tough Crates stay closed — her income must come from kills and corridors.",
+    "The frontline archetype rose, giving her more bodies she cannot burst (Abrams, Rat King)."
+   ],
+   "build_changes": [
+    "Lean kills and off-map souls; ignore Corrupted items, they are a late gold sink she should not bank for."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Better roam angles, same locked-out crate route."
+  },
+  {
+   "hero": "Grey Talon",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Steam Vents give roamers free invisibility against a sub-50%-WR immobile flyer.",
+    "Healing Snacks blunt the chip damage his poke converts into lane leads.",
+    "Air-drag slow and Silver's Weighted Bola are unchanged, and neither camp routes nor crates suit him."
+   ],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Poke carries keep losing value; the map keeps giving divers more ways in."
+  },
+  {
+   "hero": "Mo & Krill",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Sustained frontline is what harder Haunt camps and contested Buff Containers reward.",
+    "Objective parries no longer reset, so his Guardian-dive chain is now one-shot.",
+    "Ranged poke he cannot close on still beats him, and that is unchanged."
+   ],
+   "build_changes": [
+    "Frontline the Buff Container contests; a Bullet Resist roll compounds with his T3."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Default front line for a patch that pays for standing in camps."
+  },
+  {
+   "hero": "Shiv",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Harder camps reward his regen stack, and the rising frontline feeds current-HP Serrated Knives.",
+    "Steam Vents hand divers a free approach on a hero who needs regen ramp time before he is unkillable."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Anti-tank is still the right job; the camp damage just helps him ramp."
+  },
+  {
+   "hero": "Ivy",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healing Snacks plus spread corridors reduce the value of a dedicated healer who wants the team grouped.",
+    "Districts pull her team apart, so a single tether covers less of the map than on three lanes.",
+    "Her frontline partners (Abrams, Billy) are up, which is the one thing going her way."
+   ],
+   "build_changes": [
+    "Tether to a frontline bruiser sweeping corridors rather than a lane partner."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Still the best peel in the game, but the map now punishes grouping less."
+  },
+  {
+   "hero": "Warden",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Steam Vents give every hero the invis-engage he pays Shadow Weave for, flattening his one unique tool.",
+    "Tempo still ends games before his late gun spike, and no item or system route slows that."
+   ],
+   "build_changes": [
+    "Shadow Weave stays the engage shell, but it no longer buys exclusivity."
+   ],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Everyone gets a free invis now; his late spike still arrives too late."
+  },
+  {
+   "hero": "Yamato",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.55,
+   "direct_reasons": [
+    "Flying Strike now creates paths against solid targets (turrets, Shrines, objectives) — objective-adjacent ults stop whiffing and she gets a second mobility vector."
+   ],
+   "indirect_reasons": [
+    "Her punch AoE remains the fastest clear of the grouped, behavior-varied Haunt camps.",
+    "Parry no longer resets on objectives, so her Shrine/Walker dive is one-shot — plan the exit before committing."
+   ],
+   "build_changes": [
+    "Use Flying Strike off a Walker or Guardian to path out, not only to engage."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Free pathing off objectives plus the best camp clear: closest thing to S."
+  },
+  {
+   "hero": "Lash",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Districts and Steam Vents extend his dive routes beyond the three lanes.",
+    "Bell Tower and Sunken Plaza concentrate teams into exactly his Ground Strike setup.",
+    "The objective-parry change removes the free defensive reset from the fights he starts."
+   ],
+   "build_changes": [
+    "Rotate corridors between stomps — roam income replaces lane pressure."
+   ],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "More places to dive from, same stomp."
+  },
+  {
+   "hero": "Viscous",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Bell Tower's spread vaults and four corridors suit Goo Ball traversal and escapes.",
+    "Harder camps reward Cube sustain, and forced hub fights raise Cube rescue value."
+   ],
+   "build_changes": [
+    "Hold Cube for the Buff Container or Bell Tower contest, not lane trades."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Cube rescue is worth more when fights are scheduled at objectives."
+  },
+  {
+   "hero": "Pocket",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "The late-scaler profile stays penalized: corridor income and forced container fights bank tempo before Affliction comes online.",
+    "Steam Vents give every hero the ambush value his cloak used to monopolize."
+   ],
+   "build_changes": [
+    "Farm corridors with Monster Rounds/Cultist Sacrifice; skip crate chains he cannot survive."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Same bad fit for the economy, one more way to be found out."
+  },
+  {
+   "hero": "Mirage",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Split-push loses its payoff — souls moved off the lanes into corridors and shared objectives, so sidelane pressure converts to less income.",
+    "Steam Vent invisibility hands roamers a free approach on his map-play."
+   ],
+   "build_changes": [
+    "Farm corridors instead of shoving a lane; Djinn's Mark picks isolated camp clearers."
+   ],
+   "tier_before": "B",
+   "tier_after": "C",
+   "one_liner": "The patch deleted lane-pushing as an income strategy."
+  },
+  {
+   "hero": "Vyper",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Buff Containers roll permanent Bullet Resist, a match-long tax on a pure-gun carry.",
+    "Barrel Mimics punish close-range crate-chaining while low on a hero with no disengage."
+   ],
+   "build_changes": [
+    "Nothing to swap; the pure-gun pivot is worse into resist rolls, not better."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Every container roll of Bullet Resist is a small loss for her."
+  },
+  {
+   "hero": "Sinclair",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Nothing here changes a hero who wins by stealing someone else's kit."
+  },
+  {
+   "hero": "Mina",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Grouped Haunt camps suit her AoE clear, and the new districts give her dive routes.",
+    "The tank/frontline archetype rose, and tanks are her worst matchups."
+   ],
+   "build_changes": [
+    "Dive corridor farmers between camps; skip crates, she has no heavy-melee route."
+   ],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "The camps love her; the tanks she cannot kill got better."
+  },
+  {
+   "hero": "Drifter",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Steam Vents and the new hiding spots fit his stealth-reveal roam exactly.",
+    "Heavy-Melee Tough Crates give his melee core the same uncontestable soul lane the tanks got.",
+    "The frontline archetype rose, though so did his counters Dynamo and Mo & Krill."
+   ],
+   "build_changes": [
+    "Sweep Tough Crates between roams; Stalker stays the first buy."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Melee bruiser with a private income lane and free hiding spots."
+  },
+  {
+   "hero": "Venator",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [
+    "Graves' gun now destroys his traps, turning a C-tier pick into a direct counter into his zoning."
+   ],
+   "indirect_reasons": [
+    "Buff Containers' permanent Bullet Resist roll taxes a gun-bruiser carry for the whole match.",
+    "Spread corridors and Steam Vents add flank angles on a slow tanky gunner."
+   ],
+   "build_changes": [
+    "Against a Graves, hold traps for fight setup instead of pre-placing them as lane vision."
+   ],
+   "tier_before": "A",
+   "tier_after": "B",
+   "one_liner": "Trap zoning now has a hero who deletes traps, and he is popular."
+  },
+  {
+   "hero": "Victor",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Harder, behavior-varied Haunt camps and longer PvE routes feed his Spirit Lifesteal/Healing Booster stack.",
+    "Buff Containers' Bullet/Spirit Resist rolls are frontline stats he gets for contesting."
+   ],
+   "build_changes": [
+    "Contest containers; keep the High-Velocity Rounds/Opening Rounds weapon start."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Camp damage went up; his sustain stack went up with it."
+  },
+  {
+   "hero": "Paige",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healing Snacks let her lane pressure stick instead of resetting on an opponent's recall.",
+    "Lane-adjacent crate routes from ~2:30 keep the tempo lead she builds in lane."
+   ],
+   "build_changes": [
+    "Convert the lane win into corridor crate routes rather than a sidelane shove."
+   ],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Wins lane, and the new map pays lane winners immediately."
+  },
+  {
+   "hero": "The Doorman",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Bell Tower's single rope and ~280-soul payout give Doorway a real kidnap play on the top platform.",
+    "The dive archetype is up (Yamato, Lash, Holliday) and still reaches him before Cart/Doorway set up."
+   ],
+   "build_changes": [
+    "Pre-place the door at the Bell Tower base before roping up."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Bell Tower is a kidnap setup with his name on it."
+  },
+  {
+   "hero": "Billy",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Harder Haunt camps and sustained presence reward the frontline archetype he lives in.",
+    "The front-line slot still reads Mo & Krill, and ranged corridor clear beats his all-in."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Frontline patch, but he is still the second-best front line."
+  },
+  {
+   "hero": "Graves",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Her gun now destroys Venator's traps, making her a genuine counter-pick into a 40%-pick-rate A-tier hero."
+   ],
+   "indirect_reasons": [
+    "Split-push and late-scaling both got worse: souls moved into corridors and shared objectives, away from the sidelanes she pressed.",
+    "Barrel Mimics punish a low-HP, two-stamina carry chaining breakables."
+   ],
+   "build_changes": [
+    "Draft her into Venator specifically; skip risky crate chains while low.",
+    "Corrupted items at ~30 minutes are her only realistic late power spike — bank for the Broker."
+   ],
+   "tier_before": "C",
+   "tier_after": "B",
+   "one_liner": "Finally a reason to pick her: she deletes Venator's traps."
+  },
+  {
+   "hero": "Apollo",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "His lane-bully pressure now converts into lane-adjacent crate routes and Healing Snacks.",
+    "The objective-parry change trims his T3-bullet-resist Guardian dive chain to one shot.",
+    "Frontline archetype up and his spirit core untouched."
+   ],
+   "build_changes": [
+    "Dive Guardians as a one-shot decision; there is no free second parry."
+   ],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Still a lane bully, but his free Guardian dive is gone."
+  },
+  {
+   "hero": "Rem",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Harder camps raise the value of a percent-max-HP heal on the farm route.",
+    "Healing Snacks cheapen the dedicated healing he sells, and the tank partners who benefit are up."
+   ],
+   "build_changes": [
+    "Shadow a frontline bruiser through corridors rather than sitting in a lane."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Sustain matters more, but snacks do part of his job for free."
+  },
+  {
+   "hero": "Silver",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Frontline tempo and forced hub fights suit her gun-tank shell, and Weighted Bola still grounds flyers.",
+    "Permanent Bullet Resist container rolls compound her tank side.",
+    "She has no heavy-melee crate route, so the patch's best soul lane is closed to her."
+   ],
+   "build_changes": [
+    "Play the Bell Tower/Plaza contest and container fights, not the crate sweep."
+   ],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Anti-air police in a flyer-heavy meta; the snapshot WR says she is over-picked."
+  },
+  {
+   "hero": "Celeste",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Flyer tax is intact (air-drag slow, Weighted Bola) while fights concentrate at the vertical Bell Tower.",
+    "Late-scaling burst is exactly the profile a tempo patch punishes; Barrel Mimics punish squishy clearers too."
+   ],
+   "build_changes": [
+    "Witchmail stays the anti-slow answer; do not rope up alone."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Flying late scaler in a grounded, early-fight patch."
+  },
+  {
+   "hero": "Rat King",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "His 116 heavy-melee open still cracks Tough Crates for guaranteed ~58 souls each — an uncontestable income route.",
+    "Scrap Grenade AoE clears the grouped, chasing Haunt camps and the corridors between them.",
+    "Sunken Plaza and Bell Tower force the grouped fights his banner ult was built for."
+   ],
+   "build_changes": [
+    "Open the same heavy-melee/HP line and sweep crates before the first camp."
+   ],
+   "tier_before": "A",
+   "tier_after": "S",
+   "one_liner": "The map was rebuilt around heavy melee, camp AoE and forced fights — his kit."
+  },
+  {
+   "hero": "Baba",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Her melee-regen stack still clears Tough Crates and grouped Haunt camps, the two new income routes.",
+    "Grounded bruisers gain from the air-drag slow, and forced hub fights suit her AoE hex and silence.",
+    "The 10-14 barrier/resist cuts are unchanged — this patch adds fit, not power."
+   ],
+   "build_changes": [
+    "Buy Healing Booster/Spirit Resilience earlier and stop counting on out-tanking focus."
+   ],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "The new map suits her kit; the barrier nerf still does not."
+  },
+  {
+   "hero": "Solomon",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Telegraphed Bell Tower and Sunken Plaza fights reward his Bishop/Rook zone control.",
+    "The dive archetype is up (Yamato, Lash, Holliday) and still lands before his zones are placed."
+   ],
+   "build_changes": [
+    "Set zones on the Bell Tower rope and container spawns, not lanes."
+   ],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Scheduled fights help him; the heroes that skip his zones are still strong."
+  },
+  {
+   "hero": "Deadman Danny",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Spirit AoE marks suit the grouped, chasing Haunt camps that now carry the income.",
+    "Bell Tower and Plaza reward mark-then-dive on stacked teams.",
+    "The flyer tax is intact and Barrel Mimics punish a 730-HP commit."
+   ],
+   "build_changes": [
+    "Farm grouped camps, not crates; keep High-Velocity Rounds as the only weapon staple."
+   ],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "His mark burst likes stacked camps; the air tax still eats him."
+  },
+  {
+   "hero": "Violet",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.35,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "A 116 heavy-melee open lets her farm Tough Crates and grouped camps like a frontline.",
+    "Buff Container and Bell Tower contests are where her silence zone decides the fight.",
+    "Steam Vents give dive assassins a free approach on a 710-HP caster with no escape."
+   ],
+   "build_changes": [
+    "Spirit plus cooldown only — the High-Velocity Rounds gun line sits at ~28% WR."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Her kit was quietly built for the new map, if she survives the dive."
+  },
+  {
+   "hero": "Nurse Harrow",
+   "in_notes": true,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.15,
+   "direct_reasons": [
+    "New hero shipping in the staggered six-hero rollout; the notes carry no kit, only that she won the release vote."
+   ],
+   "indirect_reasons": [
+    "Two heroes per week means her day-one pick and win data is novelty noise, not a read."
+   ],
+   "build_changes": [],
+   "tier_before": "?",
+   "tier_after": "B",
+   "one_liner": "No kit in the notes — treat any Harrow take as provisional."
+  }
+ ]
+}

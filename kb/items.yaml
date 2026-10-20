@@ -1571,3 +1571,25 @@ Reactive Barrier:
   slot: null
   tier: null
   notes: ''
+Corrupted Items:
+  name: Corrupted Items
+  role: Late-game gold sink via item exchange with the Broker — not a build slot and
+    not an early-path component.
+  bought_by:
+  - Graves
+  - Warden
+  - Celeste
+  - Vyper
+  slot: Replaces an item already owned (sixth-slot compression), competing with counter-item
+    purchases rather than adding a slot.
+  tier: B
+  notes: 'Post-2026-10-20 read, low confidence: no numbers and no per-item detail
+    exist, so bought_by is inferred from who can afford to bank souls for the ~30-min
+    Broker and whose build tolerates the public negative roll — late gun/spirit scalers
+    who lack another spike, not tempo heroes who should be spending and rotating.
+    The negative attribute roll is symmetric and visible to both teams, so value goes
+    to the player whose build cares least about the degraded stat, and corrupted upgrades
+    widen a lead more than they close a gap. Calico-style tempo roamers should skip
+    it; a squad that scuttles to hunt an unadvertised merchant usually loses more
+    tempo than the item returns. Not a rework of any existing item — no legacy entry
+    to reconcile.'

@@ -1,0 +1,100 @@
+{
+ "hero_updates": {
+  "Infernus": {
+   "trend": "stable",
+   "why": "Burn carry whose AoE still clears the new behavior-varied Haunt types, but this patch's new levers all cut against him: Healing Snacks heal through burn poke, permanent Spirit Resist container rolls are unstrippable, and Barrel Mimics tax the crate walks he has no heavy melee for. Dashfernus stays his stronger line and the tempo meta still ends games before a behind Infernus spikes.",
+   "countered_by": [
+    "Decay",
+    "Healbane",
+    "Dispel Magic",
+    "Healing Snacks (heals through burn poke)",
+    "Buff-Container Spirit Resist rolls",
+    "Dynamo",
+    "Bebop",
+    "Vyper",
+    "Paradox",
+    "Yamato",
+    "Lash",
+    "tempo/snowball meta"
+   ],
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): Healing Snacks heal through burn and Buff-Container Spirit Resist is permanent and unstrippable, so the camp-AoE gain no longer nets out positive; Barrel Mimics punish the crate walks he has no heavy melee for.\nPaint the Town (10-16, indirect): grouped Haunt camps suit his burn AoE and Buff Containers roll Ability Range/Move Speed for his spirit build; the tempo shift still ends games before his late spike.\nCity Never Sleeps (09-29): burn AoE clears the grouped Haunt camps; an unverified report that his global napalm team-damage amp was removed is not in the notes — confirm via win rate."
+  },
+  "Seven": {
+   "why": "Farm-first AoE carry and the clearest jungle winner on the board: nine behavior-varied Haunt types make the fastest camp clear the largest income edge on the map, and pre-announced Bell Tower/Sunken Plaza fights reward his AoE. He still converts a lead only — the no-comeback economy leaves a behind Seven unable to brawl back.",
+   "enabled_by": [
+    "Abrams",
+    "Billy",
+    "Dynamo",
+    "Mo & Krill (frontline that makes space)",
+    "fastest clear of nine behavior-varied Haunt camps (Storm Cloud/Static Charge)",
+    "guaranteed high-value Tough-Crate routes",
+    "Healbane vs sustain comps"
+   ],
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): nine behavior-varied Haunt types (grouped/chasing) make the fastest camp clear the biggest income lever in the game; he has no crate or Barrel Mimic route and does not need one.\nPaint the Town (10-16, indirect): fastest Haunt-camp clear plus telegraphed Plaza/Bell Tower hub fights push him B->A; the no-comeback economy still caps a behind Seven.\nCity Never Sleeps (09-29, indirect): grouped Haunt camps + guaranteed Tough-Crate routes reward his AoE farm-first line; the no-comeback valve still caps a behind Seven."
+  },
+  "Lady Geist": {
+   "why": "Regen frontline bruiser whose Extra Regen/Mystic Regeneration stack clears the patch's sustain check — harder camps and Barrel Mimic fights chip but do not break her — while permanent container Bullet/Spirit Resist is free frontline defense. She still folds to the same dive assassins and the cumulative Radiant Regeneration trims keep narrowing her regen window.",
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): harder camps plus Barrel Mimic fights make farm a sustain check her regen stack passes, and container Bullet/Spirit Resist rolls add free frontline stats; the same dive heroes still eat her.\n10-14: Radiant Regeneration spirit scaling 0.04->0.035 (third cumulative trim) narrows her ~98%-buy regen core; the Spirit Soul-Exchange variant, which stacks the most spirit power, loses most.\nCity Never Sleeps (09-29, indirect): harder Haunt camps reward her sustain stack and Buff-Container Spirit Resist adds free defense; the no-comeback economy still caps her farm-then-scale pattern."
+  },
+  "Abrams": {
+   "enabled_by": [
+    "gun-cycle change (dashes/light melee no longer break gun cycle)",
+    "melee core -> cheap heavy-melee access to Tough Crates (58 souls) and Barrel Mimics, which punish squishy clearers but not his Siphon sustain",
+    "parry-cooldown change makes dives on him riskier",
+    "Infernal Resilience T3 buff",
+    "Fortitude max-health regen 2->2.25% (09-16)",
+    "early-tempo/early-snowball meta",
+    "core tank items untouched",
+    "Rem (heal enabler)"
+   ],
+   "why": "Melee tank who owns the two farm routes ranged kits cannot contest — 58-soul Tough Crates and now Barrel Mimics, which are a sustain check his Siphon/heavy-melee core passes and low-HP gun clearers fail. Anti-heal stacking is still his ceiling.",
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): Barrel Mimics convert breakable-chaining into a sustain check his heavy-melee + Siphon core passes, making the uncontestable crate route safer than it is for squishy gun clearers.\nPaint the Town (10-16, indirect): his melee core remains the cheap route into the Haunt/crate farm and the objective-parry change keeps dives on him risky; frontline up, anti-tank Shiv his real counter.\nCity Never Sleeps (09-29, indirect): his melee core farms Tough Crates cheaply and the parry-on-objective change punishes dives on him; frontline archetype up."
+  },
+  "McGinnis": {
+   "trend": "stable",
+   "why": "Turret/wall zone controller who still wins the pre-announced hub fights, but four off-lane corridors pull the map's fights away from her static setup, flattening the Paint the Town gain. Turrets still farm grouped camps and Barrel Mimics from cover; still useless into mobile dive + AoE.",
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): the map's four off-lane corridors spread fights away from her turret/wall setup, flattening the hub-fight gain; turrets still clear grouped Haunt camps and Barrel Mimics from cover.\nPaint the Town (10-16, indirect): turrets clear the new grouped Haunt camps and zone the telegraphed Plaza/Bell Tower hubs, while the objective-parry change punishes dives into her wall.\nCity Never Sleeps (09-29, indirect): telegraphed hub fights and the dive-punishing parry change favor her turret/wall zoning, and turrets clear the grouped Haunt camps."
+  },
+  "Paradox": {
+   "enabled_by": [
+    "Slowing Hex",
+    "Time Wall",
+    "Tankbuster",
+    "Dynamo",
+    "Mo & Krill",
+    "instant casts (carbine->swap combo fires on input, not the next window)",
+    "new districts/hiding spots/Steam Vent invisibility (roamer pick setups; ahead of Bebop)"
+   ],
+   "why": "Pick/sniper whose roamer identity keeps improving: Steam Vent invisibility, more off-lane hiding spots and instant-cast combo timing tighten her carbine picks, and Barrel Mimics leave low-HP crate clearers standing still to shoot. Anything that closes distance still kills her.",
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): instant casts tighten her carbine->swap combo, and Barrel Mimics leave squishy crate clearers stationary for picks; mobile divers still close on her.\nPaint the Town (10-16, indirect): new districts, more hiding spots and Steam-Vent invisibility sharpen her roamer pick setups and keep her ahead of Bebop in that slot; the sniper line still folds to mobile divers.\nCity Never Sleeps (09-29, indirect): new districts/hiding spots/Steam Vents upgrade her roamer pick setups and move her ahead of Bebop in that slot."
+  },
+  "Dynamo": {
+   "why": "Tempo initiator whose Singularity wins the now pre-announced hub fights — fights are scheduled at Bell Tower and Sunken Plaza, so setup is planned rather than opportunistic. His ceiling is unchanged: the durable frontlines that eat Singularity (Billy, Mo & Krill, Abrams) are also rising.",
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): hub contests are pre-announced (the Bell Tower rings map-wide), so his setup windows are planned rather than opportunistic — good for coordination, bad for surprise, raising the value of Unstoppable/Refresher on the channel.\nPaint the Town (10-16, indirect): telegraphed Plaza/Bell Tower hub fights hand Singularity clean windows and Quantum Entanglement's AoE dispel beats rising Lash/Drifter/Calico commits; durable-frontline counters (M&K, Abrams) are the offset.\nCity Never Sleeps (09-29, indirect): telegraphed Plaza/Bell Tower hub fights give Singularity clean setup windows; initiator items untouched."
+  },
+  "Kelvin": {
+   "why": "Support/healer whose dome is now an objective-fight tool at Bell Tower/Sunken Plaza and whose Extra Regen/Healing Booster core the Radiant Regeneration trims never touched. Cheap Healing Snacks cap how much dedicated healing he can sell, and anti-heal plus mobile dive still end him.",
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): harder camps and Barrel Mimic fights raise dome/sustain value while cheap Healing Snacks cap the between-fight healing he used to sell; his dome is worth most at the announced hub contests, not in lane.\n10-14: Radiant Regeneration spirit scaling 0.04->0.035 trims rival sustain (Baba, Lady Geist, Shiv, Celeste) while his Extra Regen/Healing Booster core is untouched - small relative gain.\nCity Never Sleeps (09-29, indirect): harder Haunt camps raise the value of his dome/sustain; Healing Snacks (10% max HP) reduce the relative value of dedicated healing."
+  },
+  "Holliday": {
+   "why": "Mobile lasso assassin built for the widened map: Steam Vent invisibility plus Barrel Mimic pauses create more stationary targets, and the map-wide Bell Tower call is a scheduled, pre-plannable pick window. Point-blank lockdown that punishes her commit-heavy entry is still the answer.",
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): behavior-varied camps and Barrel Mimics leave farmers stationary at predictable spots — more lasso targets — and the Bell Tower payout is a scheduled map-wide announcement she can pre-place bounce pads around.\nPaint the Town (10-16, indirect): new districts and Steam-Vent invisibility expand her roam routes and Bell Tower hub fights reward Spirit Lasso picks; point-blank lockdown still punishes her commit.\nCity Never Sleeps (09-29, indirect): new districts/hiding spots/Steam Vents expand her roam routes and Bell Tower hub fights reward lasso picks."
+  },
+  "Bebop": {
+   "why": "Single-target hook initiator whose one job — punishing a body standing in lane — is worth less every patch: souls sit in spread corridors, Steam Vents hand hooked targets a disengage his combo cannot chase, and Paradox owns the roamer slot. His Veil Walker is still stripped and the farm economy gives a hook nothing to punish.",
+   "notes": "Shh... This Won't Hurt a Bit. (10-20, indirect): Steam Vents give every hooked target a free disengage he cannot chase, and a spread corridor farm offers a single-target hook nothing to punish.\nPaint the Town (10-16, indirect): a single-target hook cannot punish Haunt/crate routing, contested Soul Bags only partly extend his fights, and the roamer slot has tilted to Paradox.\nCity Never Sleeps: no direct line; the farm/sustain economy plus Paradox's rise down-rank him in the roamer slot."
+  }
+ },
+ "change_log": [
+  "Infernus: trend rising -> stable (Healing Snacks heal through burn, unstrippable Spirit Resist container rolls, Barrel Mimics tax crate walks); added Healing Snacks and container rolls to countered_by.",
+  "Seven: why/enabled_by sharpened to nine behavior-varied Haunt types making fastest AoE clear the top income lever; tier A rising held.",
+  "Lady Geist: why/notes now state harder camps + Barrel Mimics are a sustain check her regen stack passes; A stable held.",
+  "Abrams: enabled_by adds Barrel Mimics as a second uncontestable heavy-melee farm route; B rising held.",
+  "McGinnis: trend rising -> stable (four off-lane corridors spread fights away from her static turret/wall setup, offsetting the hub-fight gain).",
+  "Paradox: enabled_by adds instant-cast combo timing; notes tie Barrel Mimics to stationary pick targets; B rising held.",
+  "Dynamo: why/notes note hub contests are pre-announced, making Singularity setup planned rather than surprising and raising Unstoppable/Refresher value; A rising held.",
+  "Kelvin: why/notes now frame the dome as a hub-contest tool with Healing Snacks capping his heal-selling; B rising held.",
+  "Holliday: why/notes add Barrel Mimic pauses as extra lasso targets and the Bell Tower call as a pre-plannable window; A rising held.",
+  "Bebop: why/notes add Steam Vent disengage as the reason his hook converts less; B falling held."
+ ]
+}

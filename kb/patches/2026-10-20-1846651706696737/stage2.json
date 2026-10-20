@@ -1,0 +1,17 @@
+{
+ "items": [
+  {
+   "item": "Corrupted Items",
+   "direction": "rework",
+   "magnitude": "moderate",
+   "summary": "A new late-game gold sink rather than a build slot: you trade an item you already own for a stronger-with-a-downside version, so it changes nothing about early build paths and only taxes the 25-40 minute gold decision. Because every Corrupted item in a lobby rolls the same negative attributes (small magnitude variance), the downside is public information — both teams know exactly which stat is degraded, so the edge goes to whoever's build cares least about that roll, not to whoever bought it first. Whether it is net strong or net weak is unclear (no KB entry, no numbers), so treat this as a low-confidence rework read.",
+   "affected_heroes": [],
+   "build_shift": "The exchange doesn't move components or add a slot; it competes with sixth-slot completion and counter-item purchases, and it rewards banking souls for the ~30-minute Broker stock — an anti-tempo habit in a patch that otherwise pays you to spend and rotate."
+  }
+ ],
+ "notable_item_stories": [
+  "Corrupted Items are a win-more lever: an ahead team converts surplus souls into stacked corrupted upgrades every ~15 minutes, so despite the Broker being a scheduled group-and-fight point for losing teams, the economy gap widens if the ahead team wins that fight.",
+  "Since the negative roll is identical for everyone and visible, corrupted items turn into an exploit map — you know which stat your opponents lost and can build or fight into that hole, which favors teams that actually check the roll over teams that just take the upgrade.",
+  "The Broker relocates per match and isn't advertised on the map, so the first corrupt is a scouting check; in uncoordinated lobbies the tempo lost hunting the merchant likely exceeds the item's value, which quietly favors stacks."
+ ]
+}

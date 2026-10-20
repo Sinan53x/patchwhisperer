@@ -1,0 +1,268 @@
+# Task: item analysis
+
+Patch: Shh... This Won't Hurt a Bit. (2026-10-20)
+
+## Systems analysis of this patch (already done)
+
+{
+ "systems_changed": [
+  {
+   "system": "Jungle / neutral camps (Haunts)",
+   "change_summary": "Every neutral camp is now one of nine named Haunt creature types with its own group/chase/hit behavior, so the camp layer is content, not a timer table. Clear routes, sustain math and camp value must be re-learned per type rather than memorized per spawn.",
+   "driving_changes": [
+    "Haunts: all neutral camps replaced by new creature types (Specimen, Gutter Ghouls, Barrel Mimics, Past Dues, Stage Hands, Crabbage Pots, Festival Spirit, Shrooms, Underhands) with new behaviors — prior clear routes, timings and sustain math no longer transfer"
+   ],
+   "magnitude": "major",
+   "effect_on_play": "Farm efficiency becomes a kit question (AoE to hit grouped chasers, regen to survive the damage, disengage if a camp turns) instead of a route question. Kits that must single-target or take chip damage per camp fall behind on income without dying loudly."
+  },
+  {
+   "system": "Breakables / crates and boxes",
+   "change_summary": "Some breakables are now Barrel Mimics — smashing jungle crates is no longer guaranteed income and can turn into a fight. The 'free souls on the walk between camps' assumption is gone.",
+   "driving_changes": [
+    "Barrel Mimics: some breakables are now mimics — smashing crates and boxes in the jungle is no longer free souls"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Crate-clearing adds risk to what was a zero-risk income habit, and low-HP clearers get punished for chaining breakables while weak. The payoff skews to kits that can kill a mimic instantly or heal through it."
+  },
+  {
+   "system": "Map / districts",
+   "change_summary": "Four off-lane corridors (Theater, Chinatown, Haunted Lot, Plaza) now carry their own content, pulling soul income off the three lanes. The map has more simultaneous farm sites than a five-player team can cover.",
+   "driving_changes": [
+    "Districts: four off-lane corridors added (Theater, Chinatown, Haunted Lot, Plaza) with their own content — souls are no longer concentrated on the three lanes"
+   ],
+   "magnitude": "major",
+   "effect_on_play": "Lane static-holding loses value; the team that rotates through corridor content banks more and creates more pick angles. It also means fewer bodies per lane, so ganks and collapses arrive from directions old lane reads don't predict."
+  },
+  {
+   "system": "Sunken Plaza (sub-area)",
+   "change_summary": "A high-risk sub-area below the Plaza square where stamina drains on descent and outside sound fades — entry is cheap, exit is not. It pays committed kits and taxes low-mobility or disengage-poor ones.",
+   "driving_changes": [
+    "Sunken Plaza: high-risk sub-area below the Plaza District square; stamina drains as you descend and outside sound fades — taxes low-mobility and disengage-poor kits, pays those who can commit"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "It becomes a commitment check: mobile, burst-y kits can farm it and leave, while immobile farmers effectively hand a kill to anyone who follows them down. Stamina drain doubles as a fight-denial tool for whoever arrives first."
+  },
+  {
+   "system": "Bell Tower (vertical objective)",
+   "change_summary": "A vertical Chinatown hotspot whose soul payout rings a map-wide bell, converting a farm route into a broadcast gank target. Income and information are now the same action.",
+   "driving_changes": [
+    "Bell Tower: Chinatown vertical objective; concentrated soul hotspot at the top, but collecting rings the bell map-wide — turns a farm route into a broadcast gank target"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Farming the top is a public commitment, so it wants either a teammate holding the rope or a kit that can escape vertically. It also gives roamers a scheduled convergence point instead of a lucky one."
+  },
+  {
+   "system": "Tough Crates",
+   "change_summary": "Heavy-Melee-gated breakables pay extra souls, creating a farm lane lanes cannot contest. Heavy-melee access is now a direct income stat, not just a dueling tool.",
+   "driving_changes": [
+    "Tough Crates: breakables requiring a Heavy Melee that pay extra souls — rewards heavy-melee access and gives melee-capable kits a farm lane lanes cannot contest"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Frontline and melee bruisers get a guaranteed income floor while ranged glass kits farm slower off the same map. It rewards putting a body in the jungle rather than in lane, which suits tank/frontline tempo."
+  },
+  {
+   "system": "Buff Containers",
+   "change_summary": "Golden statues now roll permanent Spirit Resist, Bullet Resist, Ability Range and Move Speed, so the pickup is a permanent-stat draft rather than a heal. Contest value rises for tanks (defensive rolls) and casters (range).",
+   "driving_changes": [
+    "Buff Containers: revamped golden statues now also roll permanent Spirit Resist, Bullet Resist, Ability Range and Move Speed — not just a damage/health pickup, so permanent-buff contests matter for tanks and casters alike"
+   ],
+   "magnitude": "major",
+   "effect_on_play": "Contesting containers is now worth a rotation and a fight, and the roll itself creates asymmetry — a Bullet Resist roll changes a duel outcome for the rest of the match. It pushes early skirmishing toward the containers instead of the lanes."
+  },
+  {
+   "system": "Healing Snacks",
+   "change_summary": "Hidden map pickups give a heal in place, cutting forced base returns during lane phase. Lane uptime rises, and chip damage converts into map pressure less reliably.",
+   "driving_changes": [
+    "Healing Snacks: hidden pickups scattered around the map for healing in a pinch — reduces forced base returns during lane phase"
+   ],
+   "magnitude": "minor",
+   "effect_on_play": "Poke that would have forced a recall now just moves the opponent to a snack, so sustained lane pressure matters more than one big trade. Suits bullies and sustain kits, hurts pure poke."
+  },
+  {
+   "system": "Steam Vents",
+   "change_summary": "Standing on a vent grants invisibility plus small regen — a reusable stealth tile rather than a hero ability. Gank setup and disengage become map skills available to every kit.",
+   "driving_changes": [
+    "Steam Vents: standing on one grants invisibility and small regen — new gank setup and disengage tool; makes vision and grouped rotations stronger"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Every hero gets a soft escape and an ambush angle, so overextending near a vent is punished and grouped rotations beat solo picks. Vision denial becomes a real cost, favoring teams that travel together."
+  },
+  {
+   "system": "The Broker",
+   "change_summary": "A relocating merchant injects Corrupted items into the economy from ~30 minutes, then roughly every 15 minutes, at a per-match location. A mid/late-game contested point is created on a schedule the map does not advertise.",
+   "driving_changes": [
+    "The Broker: temporary merchant that relocates per match (dark uptown alley, abandoned Chinatown storefront); first stock around 30 minutes, further Corrupted items roughly every 15 minutes after — pulls players to a contested point in the mid/late game"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "It gives losing teams a scheduled reason to group and fight, and gives winning teams a place to force a decisive fight — either way the game converges on a known point instead of a PvE race. Corrupted rolls are symmetric, so it's a tempo swing, not a comeback lever."
+  },
+  {
+   "system": "Sinner's Sacrifice timing",
+   "change_summary": "The ritual camp no longer runs on a fixed timer, so pre-timing it from memory fails. Camp planning shifts from schedule knowledge to scouting.",
+   "driving_changes": [
+    "Sinner's Sacrifice: bonus now has variable timings — the ritual is no longer a fixed-timer camp, so pre-timing it is harder"
+   ],
+   "magnitude": "minor",
+   "effect_on_play": "Small, but it removes another memorized timer, which is the patch's recurring theme: you have to look at the map instead of the clock."
+  },
+  {
+   "system": "Input / ability & item cast",
+   "change_summary": "Casting fires on button press instead of the next input window — every hero gains a frame of responsiveness on casts, cancels and parries.",
+   "driving_changes": [
+    "Ability/item cast: fires the instant the button is pressed instead of on the next input window — reaction speed, cancels and clutch parries get tighter for every hero"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Higher-execution play is rewarded: combos land more reliably and clutch parries become a real skill expression. This raises the ceiling on burst and reaction-based kits without changing any number."
+  },
+  {
+   "system": "Parry vs objectives",
+   "change_summary": "Parrying an objective no longer resets the parry cooldown, deleting the free defensive reset before a dive. Committing under a Guardian now carries an un-refunded cooldown.",
+   "driving_changes": [
+    "Parry: successfully parrying objectives no longer resets Parry cooldown — objective-parry stops being a free defensive reset before a fight"
+   ],
+   "magnitude": "moderate",
+   "effect_on_play": "Objective dives and defenses are one-shot decisions: tanks with bullet resist can still commit under a Guardian, but nobody gets a second parry for free. Slightly favors the attacker who forces the parry early."
+  },
+  {
+   "system": "Walkers",
+   "change_summary": "Walkers stop firing fireballs after death, so killing one removes the zone immediately rather than after the corpse clears.",
+   "driving_changes": [
+    "Walkers: no longer keep firing fireballs after dying — diving a Walker you just killed is now safe"
+   ],
+   "magnitude": "minor",
+   "effect_on_play": "Siege sequences get cleaner — kill the Walker, then commit into the space behind it without eating posthumous chip. Small, but it rewards fast conversion after a pick instead of waiting out the corpse."
+  },
+  {
+   "system": "Lanes / callouts",
+   "change_summary": "Lanes renamed Broadway (blue), Greenwich (green), York (yellow) with a visual rework — old lane vocabulary and its muscle memory are dated.",
+   "driving_changes": [
+    "Lanes: renamed Broadway (blue), Greenwich (green), York (yellow) — callouts change with the visual rework; treat old lane knowledge as dated"
+   ],
+   "magnitude": "minor",
+   "effect_on_play": "A short-term coordination tax on every team, and a real edge for stacks that relearn callouts fast. No economic effect beyond early-patch confusion."
+  },
+  {
+   "system": "Hero releases & Street Brawl",
+   "change_summary": "Six new heroes ship two per week on a voted order, with voting moved to the Pregame lobby (winning team's votes double) and play earning priority tokens; Street Brawl grants a corrupted item after the Round 5 draft.",
+   "driving_changes": [
+    "Hero releases: six new heroes, two per week on Tue/Fri 2:00pm PT, first release Oct 2, order decided by vote; voting moved to the Pregame lobby with the winning team's votes counting double, and play earns priority tokens",
+    "Street Brawl: corrupted item granted after the Round 5 item draft"
+   ],
+   "magnitude": "minor",
+   "effect_on_play": "A staggered rollout means the roster is unstable week to week, so archetype reads are provisional and day-one pick/win data is noise. Corrupted items enter Brawl at the same mid-point they enter the main mode, keeping that mode's power curve aligned."
+  }
+ ],
+ "tempo_shift": {
+  "direction": "toward_tempo",
+  "confidence": 0.7,
+  "why": "Souls spread across four off-lane corridors, Heavy-Melee Tough Crates and contested Buff Containers reward early rotations and map presence over lane farming, and Healing Snacks plus Steam Vents cut the cost of staying out. The Broker's ~30-minute stock is the counterweight that can stall a game, but the bell-broadcast and container fights resolve earlier."
+ },
+ "archetype_effects": [
+  {
+   "archetype": "tank/frontline",
+   "direction": "up",
+   "magnitude": "major",
+   "why": "Heavy-Melee Tough Crates give a guaranteed uncontestable soul route, harder Haunt camps reward sustain stacks, and Buff Container's permanent Bullet/Spirit Resist rolls are tank stats."
+  },
+  {
+   "archetype": "mobile assassin",
+   "direction": "up",
+   "magnitude": "major",
+   "why": "Four off-lane corridors, Steam Vent invisibility and Bell Tower's broadcast gank target hand roamers scheduled pick angles they didn't have on three lanes."
+  },
+  {
+   "archetype": "lane bully",
+   "direction": "up",
+   "magnitude": "moderate",
+   "why": "Healing Snacks remove forced base returns during lane phase, so converted lane pressure sticks instead of resetting on a recall."
+  },
+  {
+   "archetype": "initiator",
+   "direction": "up",
+   "magnitude": "moderate",
+   "why": "Bell Tower rings map-wide and Buff Container contests are permanent-stat fights, giving initiators fixed points to force engagements on."
+  },
+  {
+   "archetype": "support/healer",
+   "direction": "up",
+   "magnitude": "minor",
+   "why": "Grouped rotations beat Steam Vent solos and Healing Snacks supplement in-fight sustain, both favoring a body that enables the group."
+  },
+  {
+   "archetype": "poke/siege",
+   "direction": "neutral",
+   "magnitude": "minor",
+   "why": "Walker fireballs stopping on death and instant casts help conversion, but Healing Snacks blunt the chip damage that poke relies on — roughly a wash."
+  },
+  {
+   "archetype": "spirit carry",
+   "direction": "neutral",
+   "magnitude": "minor",
+   "why": "Buff Container's Ability Range roll helps, but its permanent Spirit Resist roll gives opponents a stacking answer to spirit damage."
+  },
+  {
+   "archetype": "gun carry",
+   "direction": "neutral",
+   "magnitude": "minor",
+   "why": "Bullet Resist and Move Speed rolls on contested containers cut both ways, and The Broker's per-match Corrupted stock adds variance rather than a guaranteed spike."
+  },
+  {
+   "archetype": "burst caster",
+   "direction": "up",
+   "magnitude": "minor",
+   "why": "Casts now fire on button press rather than the next input window, tightening combo execution, and Ability Range is a permanent container roll."
+  },
+  {
+   "archetype": "split pusher",
+   "direction": "down",
+   "magnitude": "moderate",
+   "why": "Souls moving off the lanes into corridors means sidelane pressure converts to less income, and shared map objectives pull the pusher's team elsewhere."
+  },
+  {
+   "archetype": "late scaler",
+   "direction": "down",
+   "magnitude": "moderate",
+   "why": "Corridor souls, contested containers and bell-broadcast fights bank tempo before a late spike; The Broker at ~30 minutes is the only scheduled late-game bailout."
+  }
+ ],
+ "intent_read": "Valve is deleting route memorization: souls move off the three lanes into corridors, sub-areas and behavior-varied Haunt camps, so income comes from reading the map and fitting a kit to the content rather than knowing timers. The Broker and Bell Tower exist to convert farming into announced, contested fights, so games resolve on map pressure instead of a PvE race — and the push is deliberately toward tempo, at the cost of late-scaling identities."
+}
+
+## Item changes in this patch (grouped by item)
+
+Corrupted Items:
+  - [neutral] Corrupted Items: high-tier items can be exchanged for Corrupted versions via the Broker; each match assigns the same random negative attributes to every Corrupted item and every player, with small magnitude variance — the whole lobby plays around identical downsides, so the item is a read on the match, not a personal upgrade
+
+## Knowledge base: the changed items (who buys them and why)
+
+Corrupted Items: (not in KB yet)
+
+## Knowledge base: heroes whose core_items or build_variants include a changed item
+
+(none)
+
+## What to do
+
+For each changed item, decide the net direction and magnitude, then trace the consequence to heroes: who has it as a core slot, who used it situationally, and who might now pick it up. Note build-path changes (component changes, slot moves, what it now competes with). Think about the systems context: an item that was good because of the old economy may be worse even if its numbers went up, and vice versa.
+
+Group multiple lines for the same item into one entry. Skip pure bug fixes unless the fix meaningfully changes an interaction (then say which heroes it affects).
+
+Magnitude guide: minor = tuning that will not change who buys it; moderate = changes timing or priority in builds; major = adds or removes the item from core builds, or changes what it does.
+
+## Output schema
+
+{
+  "items": [
+    {
+      "item": "canonical item name",
+      "direction": "buff|nerf|rework|neutral",
+      "magnitude": "minor|moderate|major",
+      "summary": "1-2 sentences of consequence, not restatement",
+      "affected_heroes": [
+        {"hero": "hero name", "relationship": "core|situational|new_option", "effect": "up|down|neutral", "why": "1 sentence"}
+      ],
+      "build_shift": "optional 1 sentence on component/slot/competition changes, or empty string"
+    }
+  ],
+  "notable_item_stories": ["0-3 one-sentence cross-item stories, e.g. 'invisibility items were buffed together, expect Shadow Weave on more gun carries'"]
+}
