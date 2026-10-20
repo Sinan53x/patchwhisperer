@@ -4047,100 +4047,126 @@ Solomon:
   provisional: false
 Deadman Danny:
   name: Deadman Danny
-  role: Flying marksman / dive-pick
+  role: Flying spirit marksman / dive-pick
   archetypes:
-  - gun carry
+  - spirit carry
   - mobile assassin
-  - initiator
+  - burst caster
   tier: C
   trend: rising
-  why: Flying marksman with a genuine shred/mark gun package that just got a real
-    buff (base HP 680->730, gun 12->15/44->48, Chimera Mk1 scaling 1.15->1.4, Strix
-    Salvo CD 30->25s and spirit scaling 0.9->1.1, Close The Deal execute 50%->75%),
-    so his lane-to-hub mark burst is considerably sharper. Still a flyer in an explicitly
-    anti-flyer environment (air drag, Silver's Bola), so his signature mobility stays
-    a tax and keeps him capped at C.
+  why: Danny is the live test of whether raw numbers beat the flyer tax, and the 10-14
+    package is being played as a spirit mark-burster (Extra Spirit, Improved Spirit,
+    Mystic Burst all 79-90% share; HV Rounds the only weapon staple at 97%), which
+    does land — WR is up to 38.5% from 34.9%. But the payoff is late (Boundless Spirit,
+    51% share, ~47-min average buy) in a tempo meta that closes games before it, and
+    the anti-air tax is untouched, so he loses the entire roster head-to-head — his
+    best lane is 49%.
   core_items:
   - High-Velocity Rounds
+  - Extra Spirit
+  - Mystic Burst
+  - Improved Spirit
+  - Mystic Expansion
+  - Reactive Barrier
+  - Tankbuster
+  - Greater Expansion
+  - Opening Rounds
   - Express Shot
-  - Bullet Resist Shredder
-  - Superior Cooldown
   build_variants:
-  - Shred/mark gun
-  - Ability burst
-  - Dive bruiser
+  - Spirit mark burst
+  - Hybrid charged-shot
   enabled_by:
-  - Grouped hub fights (Sunken Plaza, Bell Tower) that reward the overheat-dive AoE
-    and launch
-  - AoE clear of grouped Haunt camps
-  - An anchor/initiator teammate to hold targets so Strix Salvo marks and Close The
-    Deal land
+  - Grouped hub fights (Sunken Plaza ~5-8 min, Bell Tower 8+) that reward mark-then-AoE-dive
+    on stacked targets
+  - Spirit AoE (Mystic Burst, Mystic Expansion, Greater Expansion) into grouped, chasing
+    Haunt camps — the meta's fastest income route
+  - 'Anchor initiators who hold targets for Strix Salvo marks and Close The Deal:
+    Dynamo, Mo & Krill, Abrams (all A/rising)'
+  - Steam Vent invisibility roams for pick angles, in a meta where roamer/pick assassins
+    ticked up
   countered_by:
-  - Anti-air (Silver's Weighted Bola)
-  - Silence / Knockdown / Silencing Hex / Bebop hook
-  - Slows — doubled by the global air-drag tax plus his own airborne-slow tooltip
-  - Plated Armor vs his gun; Debuff Reducer vs his mark and fading slow
-  - His own no-hero-hit self-stun combined with the long death tax
+  - Silver's Weighted Bola — S-tier anti-air that grounds him in addition to out-trading
+    his gun
+  - 'Slows and slow fields (Kelvin): doubled by the global air drag, they strip his
+    disengage from every dive'
+  - Silence/knockdown (Silencing Hex, Knockdown) plus Bebop hook catching a committed
+    dive
+  - Plated Armor vs HV Rounds/Opening Rounds poke; Debuff Reducer vs his marks and
+    fading slow
+  - His own whiffed-dive self-stun against the 38s respawn timer at 20 min — a single
+    bad dive is a lost fight
+  - 'Late payoff vs tempo: Boundless Spirit''s ~47-min average buy arrives after the
+    game usually ends'
   last_changed_patch: Minor Update - 10-14-2026
-  notes: '10-14: buff package - base HP 680->730 and regen 2.5->3.25, gun 12->15/44->48,
-    Chimera Mk1 weapon scaling 1.15->1.4, Strix Salvo CD 30->25s and spirit scaling
-    0.9->1.1 with T2 +30/+45 and T3 +0.35, Close The Deal AP +50->+90 and execute
-    50%->75%, Rocket Jump self-damage 6.5%->5%. Held at C - the buffs fight an unchanged
-    anti-air/flyer-tax context.
+  notes: '7-day check-in (2026-10-20): tier C -> C, WR 45%, PR 69% over 446352 matches.
 
-    Day-0 kit read (2026-10-13), provisional - data check-in due 2026-10-20.
+    Corrected: the usage data kills the ''shred/mark gun'' identity — Bullet Resist
+    Shredder does not appear at all, and the real build is spirit (Extra/Improved
+    Spirit, Mystic Burst at 79-90%) with HV Rounds as the lone weapon staple. The
+    old beats list was inverted — Celeste (33%) and Graves (32%) are among his worst
+    lanes, not wins.
 
-    Provisional C on a ~2-day sample; 34.9% WR / 0.2% PR is novelty-deflated but directionally
-    bad, and the build pool is unformed (many 0-20% win picks). Would revise up if
-    WR clears ~45% as PR grows and a mark/charged-shot build consolidates; down if
-    the flyer tax holds and no build lands.'
+    PR 69.1% is a new-hero novelty spike (previously 0.2% on a two-day sample), so
+    read WR 38.5% and ignore pick rate. Held C/rising: the build finally consolidated
+    and WR gained ~3.6 points, but nothing clears 49% head-to-head and the flyer tax
+    is intact; upgrade only on ~45%+ WR, drop to D if the spirit capstone stays a
+    post-30-min luxury.
+
+    Paint the Town (10-16) changelog: no Danny-specific changes; the 10-14 buff package
+    is still his live state.'
   builds:
-  - name: Shred/mark gun
+  - name: Spirit mark burst
+    damage: spirit
+    core_items:
+    - High-Velocity Rounds
+    - Extra Spirit
+    - Mystic Burst
+    - Improved Spirit
+    - Mystic Expansion
+    - Reactive Barrier
+    - Tankbuster
+    - Greater Expansion
+    - Boundless Spirit
+    popularity: primary
+    notes: Spirit stacking amplifies Strix Salvo marks (1.1 spirit scaling) and the
+      75% Close The Deal execute while Mystic Burst/Expansion give the overheat-dive
+      AoE; Compress and Superior Cooldown are the late luxuries and Boundless Spirit
+      lands ~47 min, after most games are decided.
+  - name: Hybrid charged-shot
     damage: hybrid
     core_items:
     - High-Velocity Rounds
-    - Express Shot
-    - Bullet Resist Shredder
-    - Superior Cooldown
-    popularity: primary
-    notes: Jettison Fuel's bullet-resist shred stacked with Bullet Resist Shredder
-      amplifies the marksman damage; HV Rounds (86% pick) and Express Shot carry the
-      charged-shot mark-consume.
-  - name: Ability burst
-    damage: spirit
-    core_items:
-    - Boundless Spirit
-    - Superior Cooldown
-    - Arctic Blast
-    popularity: secondary
-    notes: Scales Strix Salvo marks plus Close The Deal and overheat-dive spirit explosions;
-      36% late Boundless Spirit pick shows players testing it.
-  - name: Dive bruiser
-    damage: hybrid
-    core_items:
-    - Fortitude
+    - Opening Rounds
+    - Grit
     - Extra Health
-    - Indomitable
-    popularity: niche
-    notes: Survivability to blunt the whiff-self-stun and always-explode-on-death
-      pattern; no clear payoff yet — Fortitude shows 9% win late.
+    - Express Shot
+    popularity: secondary
+    notes: The surviving gun skeleton — HV Rounds into Opening Rounds keeps lane poke
+      and the mark-consume hit relevant while spirit items carry the burst; Grit,
+      Extra Health and Reactive Barrier are near-universal defensive glue across both
+      builds, not a separate archetype.
   matchups:
     beats:
-    - Seven
-    - Celeste
-    - Graves
+    - Violet
+    - Grey Talon
+    - Calico
+    - Paradox
     loses_to:
-    - Silver
-    - Lash
-    - Apollo
-  matchup_notes: 'He threatens squishy, grouped or immobile carries he can mark with
-    Salvo then burst with a dive or Close The Deal. He loses to anti-air and disruption:
-    Silver''s Weighted Bola grounds flyers on top of out-trading him, Lash can fling
-    him out of dives, and Apollo out-lanes him. Silences/knockdowns and a whiffed
-    dive (self-stun) are his own worst enemy given the 38s respawn tax.'
-  confidence: 0.4
+    - Kelvin
+    - Vyper
+    - Graves
+    - Celeste
+    - Paige
+  matchup_notes: 'Nothing on the roster is actually favourable — Violet at 49% is
+    his ceiling, so ''beats'' means least-bad. The genuine losses are sustain-plus-slow:
+    Kelvin (29%) heals through the mark-to-execute window and his slow stacks with
+    the 35% air drag, while Paige (33%) out-lanes him and converts the ~2:30 crate/hub
+    timing before his kit is online. Celeste and Vyper (33/32%) simply out-burst a
+    730-HP flyer who has to commit to a dive; Silver (unsampled) is the theoretical
+    floor via Weighted Bola.'
+  confidence: 0.55
   released_on: '2026-10-13'
-  provisional: true
+  provisional: false
 Violet:
   name: Violet
   role: spirit zone-control caster

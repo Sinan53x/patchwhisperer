@@ -498,6 +498,7 @@ Tankbuster:
   role: anti-tank weapon item
   bought_by:
   - Apollo
+  - Deadman Danny
   - Drifter
   - Grey Talon
   - Holliday
@@ -812,6 +813,7 @@ Extra Spirit:
   role: ''
   bought_by:
   - Apollo
+  - Deadman Danny
   - Graves
   - Grey Talon
   - Haze
@@ -836,6 +838,7 @@ Improved Spirit:
   bought_by:
   - Apollo
   - Calico
+  - Deadman Danny
   - Graves
   - Grey Talon
   - Holliday
@@ -962,6 +965,7 @@ Opening Rounds:
   name: Opening Rounds
   role: ''
   bought_by:
+  - Deadman Danny
   - Grey Talon
   - Paige
   - Rat King
@@ -1026,6 +1030,7 @@ Mystic Burst:
   role: ''
   bought_by:
   - Apollo
+  - Deadman Danny
   - Drifter
   - Grey Talon
   - Holliday
@@ -1258,6 +1263,7 @@ Mystic Expansion:
   bought_by:
   - Apollo
   - Celeste
+  - Deadman Danny
   - Dynamo
   - Ivy
   - Kelvin
@@ -1311,6 +1317,7 @@ Greater Expansion:
   role: ''
   bought_by:
   - Celeste
+  - Deadman Danny
   - Ivy
   - Kelvin
   - Paige
@@ -1454,6 +1461,7 @@ Grit:
   bought_by:
   - Billy
   - Celeste
+  - Deadman Danny
   - Rem
   - Silver
   - Solomon
@@ -1552,6 +1560,14 @@ Living Ink (T3):
   role: ''
   bought_by:
   - Violet
+  slot: null
+  tier: null
+  notes: ''
+Reactive Barrier:
+  name: Reactive Barrier
+  role: ''
+  bought_by:
+  - Deadman Danny
   slot: null
   tier: null
   notes: ''
