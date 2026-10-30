@@ -1,6 +1,6 @@
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 Tier = Literal["S", "A", "B", "C", "D", "?"]
 Trend = Literal["rising", "stable", "falling", "?"]
@@ -20,6 +20,8 @@ class Matchups(BaseModel):
 
 
 class HeroState(BaseModel):
+    model_config = ConfigDict(validate_assignment=True)
+
     name: str
     role: str = ""
     archetypes: list[str] = []
@@ -41,6 +43,8 @@ class HeroState(BaseModel):
 
 
 class ItemState(BaseModel):
+    model_config = ConfigDict(validate_assignment=True)
+
     name: str
     role: str = ""
     bought_by: list[str] = []

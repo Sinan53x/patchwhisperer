@@ -1582,7 +1582,7 @@ Corrupted Items:
   - Vyper
   slot: Replaces an item already owned (sixth-slot compression), competing with counter-item
     purchases rather than adding a slot.
-  tier: B
+  tier: null
   notes: 'Post-2026-10-20 read, low confidence: no numbers and no per-item detail
     exist, so bought_by is inferred from who can afford to bank souls for the ~30-min
     Broker and whose build tolerates the public negative roll — late gun/spirit scalers

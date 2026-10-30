@@ -331,7 +331,12 @@ def apply_kb_update(kb: KBStore, update: KBUpdate) -> list[Path]:
                     except (TypeError, ValidationError) as e:
                         log.warning("hero %s: dropping invalid matchups: %s", name, e)
                         continue
-                setattr(hero, key, value)
+                try:
+                    setattr(hero, key, value)
+                except ValidationError as e:
+                    log.warning(
+                        "hero %s: dropping invalid %s %r: %s", name, key, value, e
+                    )
         kb.save_heroes(heroes)
         changed.append(kb.heroes_path)
 
@@ -343,7 +348,12 @@ def apply_kb_update(kb: KBStore, update: KBUpdate) -> list[Path]:
                 if key not in _ITEM_FIELDS:
                     log.warning("item %s: dropping unknown field %r", name, key)
                     continue
-                setattr(item, key, value)
+                try:
+                    setattr(item, key, value)
+                except ValidationError as e:
+                    log.warning(
+                        "item %s: dropping invalid %s %r: %s", name, key, value, e
+                    )
             items[name] = item
         kb.save_items(items)
         changed.append(kb.items_path)
