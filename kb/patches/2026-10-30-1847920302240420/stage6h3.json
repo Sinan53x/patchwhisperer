@@ -1,0 +1,66 @@
+{
+ "hero_updates": {
+  "Paige": {
+   "trend": "falling",
+   "why": "Still the best lane-winning support, but her lane itself got thinner — base bullet damage 35->32 is roughly a 9% lane cut — and the new economy (tick souls to the two poorest, 30% non-hero comeback cap, deficit-scaled secure rate) now rescues exactly the carry she used to snowball past. She wins lane; the conversion is slower than on 10-20.",
+   "countered_by": [
+    "burst assassins (Yamato, Lash, Holliday)",
+    "Rem",
+    "Ivy",
+    "stacking anti-heal (multi-source Healbane, Toxic Bullets 40%, Crippling Headshot 40%)"
+   ],
+   "last_changed_patch": "Halloween 2026 + Gameplay Update",
+   "notes": "10-30 Halloween + Gameplay Update: base bullet 35->32 (~9% lane cut; growth 0.52->0.61 pays back later) and Bookwyrm T2 trail +2s->+1s; HVR velocity 60->45 weakens her 1.2-min buy — Opening Rounds before HVR is now the safer opener, and comeback gold blunts the lead she converts.\n10-20 Shh...: no direct change; Healing Snacks let her lane pressure stick instead of resetting on a recall, and lane-adjacent crate routes from ~2:30 pay the lane winner immediately — S held.\nCity Never Sleeps: no direct change; lane-adjacent crate routes and Healing Snacks reward her lane pressure, and the contested hubs suit her carry-snowball."
+  },
+  "The Doorman": {
+   "why": "Popular but not-winning setup initiator (46.5% WR) whose Call Bell damage is fine but whose engage still arrives late; Luggage Cart T2 wall impact 75->90 gives the Bell Tower rope-kidnap real damage, yet tempo dive reaches him before the door is placed.",
+   "last_changed_patch": "Halloween 2026 + Gameplay Update",
+   "notes": "10-30 Halloween + Gameplay Update: Luggage Cart T2 wall impact 75->90 is a real engage buff (T3 is tagged nerf while the number moves -15s->-18s — direction unclear, treat as neutral); Shadow Weave's 6s pre-stealth wind-up and Steam Vents' invis->stamina swap both slow the invis-kidnap line, and neither helps his setup.\n10-20 Shh...: no direct change; Bell Tower's single rope + ~280 souls keeps the Doorway kidnap real — pre-place the door at the base before roping up.\nPaint the Town: no direct change; Bell Tower's single rope and ~280-soul payout give his Doorway a real kidnap objective play, but tempo dive still beats his setup."
+  },
+  "Billy": {
+   "trend": "stable",
+   "why": "Lane-bully frontline whose all-in got a longer, bigger durability window (Rising Ram T3 +10%->+15% max HP for 16s->20s) plus a 25s Blasted cooldown, and the melee-front archetype is up on Torment Pulse's +4% melee resist; he still bleeds to anti-tank Shiv and to ranged kiting, and the new tick-soul economy trims the lane lead he snowballs.",
+   "enabled_by": [
+    "09-16 tempo patch (lane leads snowball)",
+    "Spirit Snatch",
+    "untouched core tank/Vitality items",
+    "lane-bully meta",
+    "Torment Pulse +4% melee resist (AoE aura gains in exactly the corridor/melee fights he starts)",
+    "anti-tank counter Shiv hit by Radiant Regeneration's in-combat gate and Healbane kill-heal 275->170",
+    "Lifestrike melee-heal + flyer-dragging slow buff (low confidence - item sits outside his top-15 30-day buys)",
+    "Fortitude regen buff"
+   ],
+   "countered_by": [
+    "anti-tank bruisers (Shiv — softened by the Radiant Regeneration trim)",
+    "stacking anti-heal (multi-source Healbane, Toxic Bullets 40%)",
+    "kiting / sustained ranged gun (Seven; Warden's HVR velocity 60->45 and Shadow Weave rework make that lane softer)",
+    "sustain-peel (Ivy)"
+   ],
+   "last_changed_patch": "Halloween 2026 + Gameplay Update",
+   "notes": "10-30 Halloween + Gameplay Update: Rising Ram T3 +10%->+15% max HP for 16s->20s and Blasted 27->25s; Torment Pulse +4% melee resist plus the Radiant Regeneration/Healbane trims on Shiv help, but tick souls to the two poorest blunt the lane lead he converts and Spirit Shielding's -3% spirit resist taxes his shred build.\n10-20 Shh...: no direct change; harder Haunt camps reward sustained frontline presence, but Mo & Krill still owns the front-line slot and ranged corridor clear beats his all-in.\n10-16 Paint the Town: no direct change; behavior-varied Haunt camps and contested soul sources reward sustained presence, so his lane-bully all-in fits the economy less."
+  },
+  "Graves": {
+   "why": "Trap-clearing gun carry who still deletes Venator's pre-placed traps, and the one archetype the new economy actually fixes: tick souls to the two poorest, a 30% non-hero comeback cap and up-to-50% faster secure when behind fund the ~25-minute window she previously never reached. The summoner/cooldown shell is her real path (Echo Shard post-cast 0.5->0.2s); the on-hit gun variant is taxed by Bullet Resilience 30->35% and the now-visible 10% bullet resist on Return Fire.",
+   "countered_by": [
+    "mobile assassins (Holliday, Lash, Yamato, Mina, Calico, Drifter)",
+    "dive",
+    "out-scaling gun carries (Haze, Silver, Wraith, Warden)",
+    "slows",
+    "anti-gun-carry defences (Bullet Resilience 30->35%, Return Fire's now-visible 10% bullet resist)",
+    "Barrel Mimics (crate chains while low HP)"
+   ],
+   "last_changed_patch": "Halloween 2026 + Gameplay Update",
+   "notes": "10-30 Halloween + Gameplay Update: her documented 'no comeback bail-out' weakness is reversed — 30% non-hero comeback cap, tick souls to the two poorest and faster deficit secure fund the ~25-min window; Echo Shard post-cast 0.5->0.2s helps the summoner core and Toxic Bullets 40% helps the on-hit line, while Bullet Resilience 30->35% taxes the gun variant. Her direct line was flagged in-notes but not parsed by the batch analysis — direction unresolved; win/pick snapshot 56.5%/40.9% still conflicts with the KB's 48.5%/21% and needs a recheck.\n10-20 Shh...: tier C->B, trend rising — trap-clearing into Venator is a real draft lever, but Barrel Mimics punish her low-HP, two-stamina crate chains and the corridor economy still taxes her scaling window.\n10-16 Paint the Town: her gun destroys Venator's traps - genuine utility into an A-tier hero - but the earlier, contested soul economy still deletes her ~25-min scaling line."
+  }
+ },
+ "change_log": [
+  "Paige: trend rising -> falling (bullet 35->32 lane cut + tick souls/comeback cap blunting her snowball; HVR velocity 60->45)",
+  "Paige: countered_by anti-heal entry sharpened to stacking anti-heal (Healbane multi-source, Toxic Bullets 40%)",
+  "The Doorman: why rewritten around Luggage Cart T2 75->90 and Bell Tower kidnap; last_changed_patch updated",
+  "Billy: trend falling -> stable (Rising Ram T3 HP +10%->15% for 16s->20s, Blasted 27->25s, Torment Pulse melee resist)",
+  "Billy: enabled_by adds Torment Pulse and Shiv's Radiant Regeneration/Healbane trims; countered_by qualifies Shiv and names stacking anti-heal",
+  "Graves: why rewritten — comeback levers reverse her 'no bail-out' weakness; Echo Shard 0.5->0.2s favours summoner core",
+  "Graves: countered_by drops 'tempo/comeback-nerf meta', adds Bullet Resilience/Return Fire anti-gun-carry defences",
+  "Notes changelog lines prepended for Paige, The Doorman, Billy, Graves (last 3 kept, newest first)"
+ ]
+}

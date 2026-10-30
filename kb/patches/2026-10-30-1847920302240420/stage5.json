@@ -1,0 +1,163 @@
+{
+ "verdicts": [
+  {
+   "hero": "Venator",
+   "verdict": "keep",
+   "one_liner": "Stake nerfed, but his whole frontline item shell was buffed — hold and build brawlier.",
+   "direct": "Ira Domini blessed stake 115->95 with boon scaling 3->3.6 is a net loss until roughly boon 33, so basically all game. That is a small cut to one ability, not the gun-bruiser plan.",
+   "indirect": "Battle Vest 18->22% weapon damage and Bullet Lifesteal +4% weapon/+2% lifesteal are exactly his M1 shell, and Graves — the counter whose gun deletes his traps — ate bullet growth and move speed. Point Blank's extra 0.5s slow now bleeds more speed via the 0.35->0.5 air-drag change, so he has a real second utility slot.",
+   "build_adjustments": [
+    "Buy Battle Vest and Bullet Lifesteal earlier — they are now his core bruiser opener.",
+    "Test Point Blank over Weakening Headshot when the slow, not the shred, wins the trade.",
+    "Stop pre-placing traps into Graves; hold them for fight setup."
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Haze",
+   "verdict": "watch",
+   "one_liner": "Damage untouched, but tanks finally have a working item against her.",
+   "direct": "Smoke Bomb T3 no longer dispels undispellable debuffs (e.g. Specter Crash), cutting the cleanse she uses to exit a dive. Her Fixation numbers are unchanged.",
+   "indirect": "Return Fire now returns Fixation damage, creating the anti-Haze slot frontline tanks were already buying, and Bullet Resilience 30->35% with doubled out-of-combat regen is another cheap answer to gun carries. Her fire-rate core took no item hits.",
+   "build_adjustments": [
+    "Do not hold M1 through Return Fire on a frontline tank — break the channel and re-angle.",
+    "Keep the Fixation gun core; no forced item swap."
+   ],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Wraith",
+   "verdict": "watch",
+   "one_liner": "Two smalls cut on a hero already drifting toward pure gun — still playable.",
+   "direct": "Card Trick heal 60->45 trims her only sustain, and Project Mind 46->50s cooldown with initial cast 0.75->1s slows the repositioning her survival plan runs on.",
+   "indirect": "Her fire-rate gun core (Monster Rounds, Quicksilver Reload, Rapid Rounds, Swift Striker, Ricochet) was untouched, and Paige's base bullet damage 35->32 slightly eases her worst matchup.",
+   "build_adjustments": [
+    "Lean pure gun; do not rebuild around Card Trick sustain.",
+    "Value Dispel Magic higher if you are the dive target."
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Warden",
+   "verdict": "watch",
+   "one_liner": "Kit buffs are real, but Shadow Weave was reworked out from under his cage engage.",
+   "direct": "Alchemical Flask travels 40% faster with -30% weapon damage, Willpower +15->+20% speed, and Last Stand T2 +40.5->50 DPS with -40s cooldown — his debuff now lands on reaction instead of prediction.",
+   "indirect": "Shadow Weave lost its fire rate and now needs 6s of pre-stealth to reach full ambush damage, so the item he bought to walk up and cage is a setup tool, not a burst window. High-Velocity Rounds 60->45% trims his poke and Steam Vents no longer hand out the invis-engage he pays for.",
+   "build_adjustments": [
+    "Demote Shadow Weave to a late pickup; if you keep it, pre-stealth 6s before the cage or skip the engage.",
+    "Re-route the old Shadow Weave slot into damage or Spirit Lifesteal.",
+    "Keep HVR as a cheap stat stick, not a range guarantee."
+   ],
+   "confidence": 0.45
+  },
+  {
+   "hero": "Shiv",
+   "verdict": "watch",
+   "one_liner": "Knife got better, his regen engine got gated — rebuild the sustain, don't abandon him.",
+   "direct": "Serrated Knives rage 3.5%->4% current HP and T3 +0.01 spirit scaling sharpen his anti-tank knife, offset by alt-fire damage per boon -5% and Killing Blow recast 16->12s. He wins the knife exchange but has a shorter execute window.",
+   "indirect": "Radiant Regeneration — in essentially every Shiv game — now only heals in combat with 65->40, boon 1.7->1.4 and spirit 0.35->0.25, so his pre-fight health buffer is gone. Healbane's heal-on-kill 275->170 taxes the same ramp, partly repaid by Torment Pulse's +4% melee resist.",
+   "build_adjustments": [
+    "Move Radiant Regeneration value into Juggernaut plus in-fight Spirit Lifesteal.",
+    "Treat Radiant as a combat heal only — stop using it to top off between camps.",
+    "Keep Torment Pulse; the melee resist helps him survive the current-HP ramp."
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Yamato",
+   "verdict": "watch",
+   "one_liner": "Engage range cut and ult delayed — the assassin has to walk further to start.",
+   "direct": "Flying Slash 26->23m with T3 +15->+8m removes roughly a quarter of her reach, and targets now see the mark on cast. Shadow Transformation 150->160s and moved to T2 delays the all-in; Power Slash +6% spirit scaling is the only offset.",
+   "indirect": "Hunter's Aura's LOS gate and Healbane's heal-on-kill cut both hit her late spirit line, while Torment Pulse's +4% melee resist helps her commit. The distance she used to buy with T3 range now has to be bought with stamina and route.",
+   "build_adjustments": [
+    "Close gaps with stamina and flank route, not the old T3 Flying Slash range.",
+    "Move Hunter's Aura down the order; keep Torment Pulse.",
+    "Plan the ult one tier earlier than before — it no longer arrives on the old timing."
+   ],
+   "confidence": 0.6
+  },
+  {
+   "hero": "Mina",
+   "verdict": "keep",
+   "one_liner": "Farms fine, but the tank line she cannot kill got better this patch.",
+   "direct": "No direct changes.",
+   "indirect": "Her grouped-camp AoE still suits the Haunt layout, but HP and damage +10% makes every rotation cost more, and Torment Pulse's +4% melee resist plus the rising frontline archetype worsen her single-target burst problem. Yamato's nerf does not hand her the mobile-burst slot.",
+   "build_adjustments": [],
+   "confidence": 0.4
+  },
+  {
+   "hero": "Paradox",
+   "verdict": "watch",
+   "one_liner": "More swaps, weaker picks — the carbine roamer traded burst for frequency.",
+   "direct": "Paradoxical Swap 110->95s is a genuine extra pick per fight cycle. That is the whole buff.",
+   "indirect": "Express Shot -5% secondary-fire damage cuts the crit burst her roamer identity converts, HVR 60->45% removes the max-range guarantee, and Steam Vents swapping invisibility for stamina deletes the pick-setup tool her identity leaned on. Echo Shard's shorter post-cast does not revive a line usage says is dead.",
+   "build_adjustments": [
+    "Shift toward the Ability burst line: Slowing Hex, Compress Cooldown, Tankbuster.",
+    "Delay High-Velocity Rounds; it is no longer a range guarantee.",
+    "Play the extra swap as tempo, not as a second pick attempt."
+   ],
+   "confidence": 0.5
+  },
+  {
+   "hero": "Mirage",
+   "verdict": "watch",
+   "one_liner": "Better base escape, worse channel — still meta-blocked, not note-blocked.",
+   "direct": "Traveler now carries the old T2 barrier at base (no scaling), but the channel goes 2->3s, interrupt-cancel 4->5s, and it now breaks to stuns/immobilizes/sleep/Slowing Hex. T2 becomes -65s cooldown and T3 makes it damage-uninterruptible with 0.8 spirit scaling.",
+   "indirect": "Healbane's heal-on-kill 275->170 taxes a core sustain slot while Toxic Bullets' 40% heal-cut buffs the same core. Souls still sit in corridors and objectives, though the new non-hero comeback gold and faster deficit-secure speed favor a slow scaler more than the 10-29 economy did.",
+   "build_adjustments": [
+    "Take Traveler to T2 for cooldown or T3 for the uninterruptible escape — the barrier is baseline now, so spend the point on the version you need.",
+    "Keep Toxic Bullets; it is the one item in his core that improved."
+   ],
+   "confidence": 0.45
+  },
+  {
+   "hero": "Infernus",
+   "verdict": "keep",
+   "one_liner": "Burn clear pays 10% more and his sustain items got buffed — Dashfernus quietly up.",
+   "direct": "Napalm T2 lifesteal 15%->20% pays the camp-route sustain his burn clear already wants, and Concussive Combustion T3 +0.4 spirit scaling lands on the Dashfernus line rather than the gun line.",
+   "indirect": "Spirit Lifesteal +2 spirit/+2% lifesteal, Toxic Bullets' 40% heal-cut, Bullet Lifesteal's buff and Haunt bounty/growth +10% all favor a one-cycle AoE clearer; the +10% Haunt damage barely costs a camp that dies in one pass. Tempo still ends games before a behind Infernus spikes.",
+   "build_adjustments": [
+    "Keep Spirit Lifesteal in both builds — it now substitutes for out-of-combat regen.",
+    "Treat Toxic Bullets as a damage slot into sustain comps, not filler.",
+    "Prioritize Dashfernus; his gun build lost the least and gained nothing."
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Holliday",
+   "verdict": "keep",
+   "one_liner": "Lasso assassin trades free angles for more dashes — same hero, same tier.",
+   "direct": "No direct changes.",
+   "indirect": "Steam Vents now grant +150% stamina regen instead of a free invisibility approach — a wash for a stamina-stacking diver who gains mid-fight dashes, but one fewer setup angle on her roams. Tunnels +70%->+50% movement lengthens flank rotations; none of her charge/spirit core moved.",
+   "build_adjustments": [
+    "If you were on the stamina hybrid, it is now the better half of her kit — vents are a dash battery, not a gank setup.",
+    "Budget one extra rotation tick for Tunnels flanks."
+   ],
+   "confidence": 0.45
+  },
+  {
+   "hero": "Drifter",
+   "verdict": "keep",
+   "one_liner": "Nothing flashy, but anti-heal stacking is a buff to the hero who already had it.",
+   "direct": "Base gun damage +3%, Bloodscent T3 +11%->+12% amp and Eternal Night T3 +2.5->2.75s all land on the lines he actually plays — small numbers on his melee-duel win condition.",
+   "indirect": "Toxic Bullets' 40% heal-cut now stacks with Healbane across sources, which compounds his built-in anti-heal, and Torment Pulse's +4% melee resist plus the rising frontline archetype make his brawls better. Heavy-melee access to Tough Crates is unchanged and still free income.",
+   "build_adjustments": [
+    "Run the anti-heal bruiser variant as a real comp answer — two sources now beat one strong healer.",
+    "Keep Melee Lifesteal/Stalker as the early spike."
+   ],
+   "confidence": 0.55
+  },
+  {
+   "hero": "Billy",
+   "verdict": "keep",
+   "one_liner": "Bigger HP window and a shorter dash cooldown — the lane bully is back a notch.",
+   "direct": "Rising Ram T3 +10%->+15% max HP for 16s->20s now outlasts most single-burst rotations, and Blasted 27->25s cooldown adds engage frequency. Both land on the all-in he actually plays.",
+   "indirect": "Torment Pulse's +4% melee resist and the harder Haunt camps reward his frontline presence, and his hardest lane — Shiv — ate Radiant Regeneration and Healbane cuts. Spirit Shielding's -3% spirit resist is the one thing that went against his variant.",
+   "build_adjustments": [
+    "Keep Spirit Shielding, but know it is 3% worse into spirit burst.",
+    "Play Rising Ram as a full-rotation tool now, not a disengage."
+   ],
+   "confidence": 0.5
+  }
+ ]
+}

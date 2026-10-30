@@ -1,0 +1,732 @@
+{
+ "items": [
+  {
+   "item": "High-Velocity Rounds",
+   "direction": "nerf",
+   "magnitude": "moderate",
+   "summary": "Velocity-only trim: the item keeps its slot but stops guaranteeing max-range hits land, so poke carries lose effective DPS without losing a build slot. The 15-point cut bites the heroes who buy it for range upkeep, not the brawlers buying it for cheap weapon stats at 2-3 minutes.",
+   "affected_heroes": [
+    {
+     "hero": "Vindicta",
+     "relationship": "core",
+     "effect": "down",
+     "why": "HVR is her gun-poke velocity backbone; at 60->45% she misses more max-range shots exactly where her new-roofs hub-poke value lives."
+    },
+    {
+     "hero": "Grey Talon",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Already C-tier with no camp or crate route; leading arrows at range got harder on top of the flyer tax."
+    },
+    {
+     "hero": "Warden",
+     "relationship": "core",
+     "effect": "down",
+     "why": "He buys it as a stat package, so the velocity loss is a small tax on a hero the tempo meta already kills."
+    },
+    {
+     "hero": "Victor",
+     "relationship": "core",
+     "effect": "neutral",
+     "why": "His 2.4-min buy is a lane last-hit stat-stick; bullet velocity is incidental to the spirit-sustain plan."
+    },
+    {
+     "hero": "Rat King",
+     "relationship": "core",
+     "effect": "neutral",
+     "why": "Monster Rounds -> HVR -> Opening Rounds is a lane package, and his damage is grenade/AoE, not leading shots."
+    }
+   ],
+   "build_shift": "It is still the only cheap velocity slot, but at 45% the brawlier T2s buffed this patch (Battle Vest, Bullet Lifesteal) compete harder for the same weapon slot."
+  },
+  {
+   "item": "Express Shot",
+   "direction": "nerf",
+   "magnitude": "minor",
+   "summary": "5% off secondary-fire damage and growth trims the carbine/crit burst of its three users without removing it from their builds; it is a pick-damage cut, not a DPS cut.",
+   "affected_heroes": [
+    {
+     "hero": "Paradox",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Express Shot rewards Kinetic Carbine crits, so the cut lands on the pick burst her whole roamer identity converts into kills."
+    },
+    {
+     "hero": "Deadman Danny",
+     "relationship": "situational",
+     "effect": "down",
+     "why": "His surviving gun skeleton already runs below his spirit build; a secondary-fire trim confirms spirit as the only path."
+    },
+    {
+     "hero": "Viscous",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Express Shot rides in the spirit-hybrid Splatter/Punch shell; small, but he has no other damage line to trade into."
+    }
+   ],
+   "build_shift": ""
+  },
+  {
+   "item": "Point Blank",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "Half a second more slow is worth more than the line reads because the air-drag ratio went 0.35->0.5 in the same patch: the same slow now bleeds more speed from anyone airborne, so close-range slow application is stickier than before. Low confidence on buyers — no KB usage.",
+   "affected_heroes": [
+    {
+     "hero": "Venator",
+     "relationship": "new_option",
+     "effect": "up",
+     "why": "Gun bruiser whose whole plan is standing in melee range; a longer close-range slow keeps targets inside his M1 window (not in his current KB core — inference only)."
+    }
+   ],
+   "build_shift": "Slows as a category got stronger via air drag, so any slow rider on a weapon item is priced higher than it was on 10-29."
+  },
+  {
+   "item": "Hunter's Aura",
+   "direction": "nerf",
+   "magnitude": "moderate",
+   "summary": "LOS gating converts the aura from a debuff you carried through walls into a frontline-only effect: it no longer pays until contact, which removes the pre-fight value of stacking it before you commit. That lands squarely on the melee-front archetype the patch otherwise lifted.",
+   "affected_heroes": [
+    {
+     "hero": "Abrams",
+     "relationship": "core",
+     "effect": "down",
+     "why": "His primary melee-brawler build buys it mid-game; Shoulder Charge/Siphon engages through geometry now lose the aura until he is literally on top of the target."
+    },
+    {
+     "hero": "Silver",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Gun tank wants the shred aura up while she walks in; LOS gating delays it by exactly the approach distance she pays tank stats to survive."
+    },
+    {
+     "hero": "Yamato",
+     "relationship": "situational",
+     "effect": "down",
+     "why": "Her late spirit-burst line uses it as a shred amplifier; fights started through walls or from stealth now begin without it."
+    }
+   ],
+   "build_shift": "Auras that require LOS compete worse against self-buffs (Battle Vest, Bullet Lifesteal) that never turn off."
+  },
+  {
+   "item": "Shadow Weave",
+   "direction": "rework",
+   "magnitude": "major",
+   "summary": "It stopped being a burst-window item and became a setup item: you lose fire rate and melee damage, gain +50% ambush weapon damage that only reaches full power after 6 seconds of stealth. Reactive stealth-then-hit use now gets a fraction of the payout, and the patch already handed every hero a vent-based approach, so Warden's exclusivity erodes further.",
+   "affected_heroes": [
+    {
+     "hero": "Warden",
+     "relationship": "core",
+     "effect": "down",
+     "why": "His cage-bruiser build bought it for the fire rate a gun carry wants and for an engage-on-demand; he now must pre-stealth 6s before landing Willpower, which tempo comps punish, and abilities breaking stealth gaining the bonus does not help a gun-first kit."
+    }
+   ],
+   "build_shift": "Ambush has a wind-up now, so the item rewards premeditated roams over reactive disengage — the same currency Steam Vents just repriced from free approach to stamina."
+  },
+  {
+   "item": "Toxic Bullets",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "40% anti-heal on the burn slot is the biggest single anti-heal number in the patch, and it stacks into Healbane's new multi-source reduction. With Radiant Regeneration and Healing Booster trimmed, the sustained anti-heal buyer is now the answer to the healing archetype rather than a counter-pick.",
+   "affected_heroes": [
+    {
+     "hero": "Infernus",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Burn + 40% heal cut is his best line into the sustain fronts and healing supports that survive his poke; his gun build's weakest slot gets a real reason to exist."
+    },
+    {
+     "hero": "Mirage",
+     "relationship": "core",
+     "effect": "up",
+     "why": "He buys it in the near-universal spirit-amp hybrid core; the deeper heal cut is the one thing on his item list that got better in a patch that buried him."
+    },
+    {
+     "hero": "Drifter",
+     "relationship": "situational",
+     "effect": "up",
+     "why": "Anti-heal bruiser variant layered on built-in anti-heal; stacking sources now composes instead of overwriting."
+    },
+    {
+     "hero": "Graves",
+     "relationship": "situational",
+     "effect": "up",
+     "why": "Her on-hit gun path uses it vs tanks; the deeper cut helps her lane but does not fix her scaling window."
+    }
+   ],
+   "build_shift": ""
+  },
+  {
+   "item": "Decay",
+   "direction": "nerf",
+   "magnitude": "minor",
+   "summary": "The notes' [nerf] tag points at the holder's side of the trade deepening (-50%->-55% incoming heal reduction) while the anti-heal it applies to enemies is untouched; if the number is actually the enemy-side debuff, flip the read. Either way it is a 5-point move on the default anti-heal slot, and Healbane now stacking means it is no longer the only answer.",
+   "affected_heroes": [
+    {
+     "hero": "Mo & Krill",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Scorn sustain plus his own incoming heals — the item's drawback costs him the most of any buyer."
+    },
+    {
+     "hero": "Shiv",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Regen-ramp bruiser whose entire survivability model is healing received; a deeper incoming-heal penalty cuts into the ramp."
+    },
+    {
+     "hero": "Lady Geist",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Her Soul Exchange/Life Drain plan already pays a regen tax from Radiant Regeneration trims; a second heal penalty stacks on the same stat."
+    },
+    {
+     "hero": "Abrams",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Siphon-based sustain buys Decay for anti-heal and eats the drawback on the same resource he fights with."
+    }
+   ],
+   "build_shift": "Anti-heal moves toward Healbane (now stacking) and Toxic Bullets, which carry no self-cost; Decay becomes the anti-heal of last resort."
+  },
+  {
+   "item": "Radiant Regeneration",
+   "direction": "nerf",
+   "magnitude": "major",
+   "summary": "Fourth cumulative trim, now structural: heal-on-cast only fires in combat, cut 65->40 with boon scaling 1.7->1.4 and spirit 0.35->0.25. The regen shell stops paying between fights — which is exactly the farm-route sustain the +10% Haunt damage now demands — so the regen-bruiser archetype loses its out-of-combat engine, not just some fight healing.",
+   "affected_heroes": [
+    {
+     "hero": "Baba",
+     "relationship": "core",
+     "effect": "down",
+     "why": "94% buy rate and her C-tier status rests on out-sustaining camp chip; the in-combat gate plus the 10-14 barrier cuts leave her with neither sustain nor burst."
+    },
+    {
+     "hero": "Lady Geist",
+     "relationship": "core",
+     "effect": "down",
+     "why": "98% of her games buy it; the trimmed spirit scaling hurts her Spirit Soul-Exchange variant most, since that build stacks the stat the item now scales with worst."
+    },
+    {
+     "hero": "Shiv",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Extended-fight regen is his win condition; losing cast-heals while rotating or clearing removes the health buffer he starts fights with."
+    },
+    {
+     "hero": "Celeste",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Regen-stacked sustain-burst core takes another hit on top of the air-drag tax, deepening her late-scaler problem."
+    },
+    {
+     "hero": "Kelvin",
+     "relationship": "core",
+     "effect": "down",
+     "why": "His Extra Regen/Healing Booster core is untouched, but he is still a heavy user — and his relative edge over rival sustain shrinks now that everyone's regen got worse."
+    }
+   ],
+   "build_shift": "It stays core by buy rate, but each point of spirit buys less healing, which quietly raises the value of Healbane/Decay and pre-ramp burst against every holder."
+  },
+  {
+   "item": "Silence Wave",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "+40 bonus health makes the silence slot less of a survivability gamble, which matters because the patch schedules forced hub fights and the dive class that punishes utility buys is up. No KB usage data — treat as a cheap utility option, low confidence.",
+   "affected_heroes": [],
+   "build_shift": ""
+  },
+  {
+   "item": "Torment Pulse",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "+4% melee resistance on an AoE aura is a direct tax on the melee-front meta (Shiv, Rat King, Billy, Drifter) prowling corridor and hub fights; small number, but it lands in exactly the fights this map forces and it stacks with the tank archetype already being up.",
+   "affected_heroes": [
+    {
+     "hero": "Mo & Krill",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Default spirit-bruiser front line that brawls in melee range; resist on his aura is free durability in the matchup he already wins."
+    },
+    {
+     "hero": "Victor",
+     "relationship": "core",
+     "effect": "up",
+     "why": "His sustain stack is designed to outlast divers; melee resist compounds with Spirit Lifesteal/Healing Booster sustain."
+    },
+    {
+     "hero": "Baba",
+     "relationship": "core",
+     "effect": "up",
+     "why": "One of the few things still going her way: her aura build takes less damage from the melee bruisers that beat her."
+    },
+    {
+     "hero": "Shiv",
+     "relationship": "core",
+     "effect": "up",
+     "why": "He fights other frontlines in melee; the resist helps him survive the current-HP knife ramp."
+    },
+    {
+     "hero": "Yamato",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Late spirit-burst build uses it as AoE shred and now as melee defence for her all-in."
+    },
+    {
+     "hero": "Celeste",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Her loss pattern is mobile melee closing the gap; the resist blunts exactly that burst window."
+    }
+   ],
+   "build_shift": ""
+  },
+  {
+   "item": "Echo Shard",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "Post-cast 0.5->0.2s narrows the punish window on the second cast. That matters only for combos where the doubled ability is the finisher, and it does nothing for the heroes whose Echo Shard line has already fallen out of usage.",
+   "affected_heroes": [
+    {
+     "hero": "Graves",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Her summoner/cooldown spirit build runs Echo Shard as the primary cluster; a shorter post-cast means the double Jar of Dead/Grasping Hands sequence is less punishable, which is the only tempo she owns."
+    },
+    {
+     "hero": "Paradox",
+     "relationship": "situational",
+     "effect": "up",
+     "why": "Her Echo Shard bomb line is historical per usage data; better timing does not bring it back."
+    },
+    {
+     "hero": "Bebop",
+     "relationship": "situational",
+     "effect": "up",
+     "why": "Hook-into-double-cast becomes safer, but his comp slot depends on CC landing, not on cast timing."
+    }
+   ],
+   "build_shift": ""
+  },
+  {
+   "item": "Focus Lens",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "The barrier fix is the real change, not the 45->40s cooldown: the repeat-damage stack now ramps through shields (Divine Barrier, Reactive Barrier), which is where standoff spirit-amp damage previously wasted its window. Still cleansable, so still situational.",
+   "affected_heroes": [],
+   "build_shift": ""
+  },
+  {
+   "item": "Lightning Scroll",
+   "direction": "rework",
+   "magnitude": "minor",
+   "summary": "Adding 0.35 spirit scaling turns a flat utility dash-slow into something spirit carries can scale, and -10->-12% dash-distance slow lands alongside the 0.35->0.5 air-drag ratio — dash denial is being priced as a real stat this patch. Low confidence: no KB buyers to anchor it.",
+   "affected_heroes": [],
+   "build_shift": ""
+  },
+  {
+   "item": "Rebuttal",
+   "direction": "neutral",
+   "magnitude": "minor",
+   "summary": "The wording reads as less parry cooldown reduction (1.75->1.25s) while the notes tag it a buff, so I will not pretend to know the direction; either way it is a small nudge to the parry economy and appears in no KB build. Skip it unless you run parry-centric dives.",
+   "affected_heroes": [],
+   "build_shift": ""
+  },
+  {
+   "item": "Battle Vest",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "18->22% weapon damage on a health-first front-line item tilts the cheap weapon pool toward brawling in the same patch that trimmed the poke items (HVR velocity, Express Shot). The buyer stands closer and trades longer, which is where the corridor economy now pays.",
+   "affected_heroes": [
+    {
+     "hero": "Venator",
+     "relationship": "core",
+     "effect": "up",
+     "why": "His gun-bruiser build is built to stand in melee range; the extra weapon damage is the only buff his item set got this patch."
+    }
+   ],
+   "build_shift": "Battle Vest plus Bullet Lifesteal now form a stronger early bruiser package than the velocity/poke openers."
+  },
+  {
+   "item": "Bullet Lifesteal",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "+4% weapon damage and +2% lifesteal compound on gun bruisers who fight to the death, but the sustain half is taxed by the patch's own anti-heal rise (Healbane stacking, Toxic Bullets 40%) — so it is a damage item now more than a sustain item.",
+   "affected_heroes": [
+    {
+     "hero": "Venator",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Frontline M1 build stacks it with Battle Vest/Berserker; both halves of the buff are exactly what that shell buys."
+    },
+    {
+     "hero": "Infernus",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Standard early gun lifesteal on a hero who otherwise lost ground this patch; small, but it is the sustain that keeps his low-HP kite alive."
+    }
+   ],
+   "build_shift": ""
+  },
+  {
+   "item": "Healbane",
+   "direction": "rework",
+   "magnitude": "major",
+   "summary": "Multi-source anti-heal now stacks with diminishing returns, converting the item from a personal slot into a team coverage plan: two anti-heal sources beat one strong healer, which is the patch's structural answer to Healing Snacks and the trimmed heal items. The heal-on-kill cut (275 -> 170 + 3/boon) instead taxes the frontline buyers' own sustain — those two halves pull in opposite directions on the same hero.",
+   "affected_heroes": [
+    {
+     "hero": "Mo & Krill",
+     "relationship": "core",
+     "effect": "down",
+     "why": "He buys it for anti-heal and lives on Scorn sustain; the kill-heal cut removes the self-sustain that made the slot free for him."
+    },
+    {
+     "hero": "Shiv",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Double duty as anti-heal and regen-ramp tool; the heal-on-kill nerf is a direct cut to a hero who wins by never leaving the fight."
+    },
+    {
+     "hero": "Kelvin",
+     "relationship": "core",
+     "effect": "down",
+     "why": "His entire kit sells healing; enemy anti-heal stacking now composes instead of overwriting, which is the single worst system change for a dedicated healer."
+    },
+    {
+     "hero": "Ivy",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Same story one tier down — tether heals are now reduced by stacked sources, and her own Healbane buy lost kill-heal."
+    },
+    {
+     "hero": "Seven",
+     "relationship": "core",
+     "effect": "up",
+     "why": "He is the one buyer who wants the enemy's sustain gone rather than his own sustain up; stacking lets him plus one teammate fully blank a healing comp."
+    },
+    {
+     "hero": "Apollo",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Locket/Healbane sustain package takes the kill-heal cut while his lane-bully model depends on never backing."
+    },
+    {
+     "hero": "Yamato",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Buys it to cut bruiser sustain through her burst window; the self-heal trim slightly worsens her all-in exit."
+    }
+   ],
+   "build_shift": "Anti-heal is now a team-level purchase rather than a slot: expect double anti-heal comps into Kelvin/Ivy/Rem instead of one Healbane plus damage."
+  },
+  {
+   "item": "Healing Booster",
+   "direction": "rework",
+   "magnitude": "moderate",
+   "summary": "Detaching it from Extra Regen and stripping the +3 flat regen turns a cheap value component into a standalone buy; +2 out-of-combat regen does not replace what it lost. Regen-stackers' early curve slows at the exact moment harder Haunts demand more sustain per camp.",
+   "affected_heroes": [
+    {
+     "hero": "Baba",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Regen wall build loses both this and Radiant Regeneration in the same patch; her farm-route identity is being dismantled item by item."
+    },
+    {
+     "hero": "Celeste",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Sustain-burst core is regen-first and both its regen pieces were cut."
+    },
+    {
+     "hero": "Victor",
+     "relationship": "core",
+     "effect": "down",
+     "why": "His A-tier status runs through Spirit Lifesteal + Healing Booster sustain; the component loss delays the shell even though Infuser/Spirit Lifesteal went up."
+    },
+    {
+     "hero": "Kelvin",
+     "relationship": "core",
+     "effect": "down",
+     "why": "73-81% buy rate item in his default support path; he now pays more for the same heal amplification."
+    },
+    {
+     "hero": "Rem",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Percent-max-HP heal support who buys it for heal amp; the regen loss matters less, the timing loss matters more."
+    }
+   ],
+   "build_shift": "Extra Regen no longer upgrades into it, so the classic Extra Regen -> Healing Booster opener becomes two separate purchases; Extra Regen's standalone value rises while Healing Booster drops a tier in priority."
+  },
+  {
+   "item": "Return Fire",
+   "direction": "buff",
+   "magnitude": "moderate",
+   "summary": "Returning Fixation damage gives tanks a functional anti-Haze slot, and the tooltip fix surfaces the 10% bullet resistance the item always had — buyers were undervaluing it and it now also answers the one gun carry the patch left untouched.",
+   "affected_heroes": [
+    {
+     "hero": "Haze",
+     "relationship": "situational",
+     "effect": "down",
+     "why": "Her signature damage now gets reflected by the defensive item frontline tanks were already buying; a real counter-slot exists where the item used to whiff."
+    }
+   ],
+   "build_shift": ""
+  },
+  {
+   "item": "Spirit Lifesteal",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "+2 spirit power and +2% lifesteal is a sustain buff in the patch that made Haunts hit 10% harder — for AoE spirit clearers this is the cheapest way to turn one-cycle clears into chain clears, and it sidesteps the regen items that were trimmed.",
+   "affected_heroes": [
+    {
+     "hero": "Seven",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Fastest camp clearer on the board; more spirit power speeds the one-cycle and the lifesteal pays the +10% Haunt damage, so his income lead compounds."
+    },
+    {
+     "hero": "Infernus",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Burn AoE clear plus lifesteal sustain on camps, the one line of his that nets positive in this patch."
+    },
+    {
+     "hero": "Victor",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Sustain-stack identity gets a direct buff while his competing regen items were cut."
+    },
+    {
+     "hero": "Warden",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Small sustain gain on a hero whose problem is tempo, not sustain — does not move his tier."
+    },
+    {
+     "hero": "Violet",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Cheap spirit item in her ramp, but it sits at her 46% baseline like everything else she buys."
+    }
+   ],
+   "build_shift": "In-fight lifesteal now substitutes for the out-of-combat regen that Radiant Regeneration and Healing Booster no longer provide."
+  },
+  {
+   "item": "Spirit Shielding",
+   "direction": "nerf",
+   "magnitude": "minor",
+   "summary": "3% spirit resist off the default anti-spirit pickup, in a patch where spirit burst is the main counter to the front-line archetype that buys it. It stays the slot; the number is just worse.",
+   "affected_heroes": [
+    {
+     "hero": "Silver",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Gun tank's only spirit mitigation in the primary build; her loss pattern is spirit burst (Celeste, Lash) and this makes it slightly worse."
+    },
+    {
+     "hero": "Celeste",
+     "relationship": "core",
+     "effect": "down",
+     "why": "She buys it to survive spirit trades she already loses to sustain; another small negative on a falling hero."
+    },
+    {
+     "hero": "Billy",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Spirit-shred/slow variant uses it as its defensive layer into caster comps."
+    },
+    {
+     "hero": "Vyper",
+     "relationship": "situational",
+     "effect": "down",
+     "why": "Minor for a mobile carry that rarely gets caught by spirit burst anyway."
+    }
+   ],
+   "build_shift": ""
+  },
+  {
+   "item": "Bullet Resilience",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "30->35% bullet resist plus doubled out-of-combat regen is a cheap answer to the gun-carry tier (Paige, Silver, Rat King, Venator) that the same patch buffed through Battle Vest and Bullet Lifesteal. No KB buyers yet, so it is a slot waiting to be discovered rather than a mover.",
+   "affected_heroes": [],
+   "build_shift": ""
+  },
+  {
+   "item": "Fury Trance",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "Weapon damage 6->10% plus a 1.5m active move speed turns a barely-bought steroid into a real chase/escape tool; the move speed is the part that matters in corridor fights where the exits are long.",
+   "affected_heroes": [],
+   "build_shift": "Active-steroid items (Fury Trance, Vampiric Burst) are being repriced as a tier; neither has KB usage to displace a core slot yet."
+  },
+  {
+   "item": "Healing Nova",
+   "direction": "rework",
+   "magnitude": "moderate",
+   "summary": "Spirit scaling instead of boon scaling moves the item from 'any support, any build' to 'spirit supports only' — it becomes a Kelvin/Rem item and quietly leaves gun-support builds. That is a real slot change, not a number tweak.",
+   "affected_heroes": [
+    {
+     "hero": "Kelvin",
+     "relationship": "core",
+     "effect": "up",
+     "why": "His default stacks spirit power (Extra/Improved Spirit), so 1.1 spirit scaling beats the flat boon number he used to get."
+    },
+    {
+     "hero": "Rem",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Spirit heal support stacks the exact stat the nova now scales with."
+    },
+    {
+     "hero": "Ivy",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Her real build is gun-first with little spirit power, so the nova is now a weak purchase for the hero who used to take it as a team-heal button."
+    }
+   ],
+   "build_shift": "Healing Nova now competes with spirit items for the same slot on spirit supports and loses its place on weapon supports."
+  },
+  {
+   "item": "Metal Skin",
+   "direction": "rework",
+   "magnitude": "minor",
+   "summary": "+20% gravity while active means the item no longer doubles as a vertical escape or hover tool — it now taxes the float-and-exit play right as air drag makes airborne escapes worse anyway. Low confidence: no KB buyers.",
+   "affected_heroes": [],
+   "build_shift": ""
+  },
+  {
+   "item": "Infuser",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "Spirit power 6->8 plus a 75% active lifesteal window make the burst-sustain active better on spirit frontlines — and the spirit power half pays even when the active is on cooldown, which is what separates it from the pure-lifesteal items.",
+   "affected_heroes": [
+    {
+     "hero": "Victor",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Sits in his spirit sustain bruiser core; both the spirit power and the active lifesteal feed the exact grind-down pattern that made him A-tier."
+    }
+   ],
+   "build_shift": ""
+  },
+  {
+   "item": "Juggernaut",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "Health regen +8->+15 nearly doubles the regen rider, making it the cheap regen buy at exactly the moment Radiant Regeneration and Healing Booster lost theirs. That is a redirect for regen-stackers, not a new core.",
+   "affected_heroes": [],
+   "build_shift": "Cheap regen value is being pushed down the item pool (Juggernaut, Bullet Resilience) as the T3/T4 regen items were trimmed."
+  },
+  {
+   "item": "Leech",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "28->30% on both lifesteal types does not fix its problem: it was already losing to cheaper lifesteal, and this patch buffed every one of those cheaper options (Bullet Lifesteal, Spirit Lifesteal, Infuser) by comparable margins. Relative position is flat.",
+   "affected_heroes": [],
+   "build_shift": ""
+  },
+  {
+   "item": "Vampiric Burst",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "Same package as Fury Trance — weapon damage 6->10%, lifesteal and active lifesteal up. The T3 active-steroid tier is being made buyable in a patch where fight-sustain beats regen, but no KB usage exists to say who takes it.",
+   "affected_heroes": [],
+   "build_shift": ""
+  },
+  {
+   "item": "Spellbreaker",
+   "direction": "rework",
+   "magnitude": "minor",
+   "summary": "Extending the reduction to all spirit damage in the same stack turns it from a single-hit shield into a counter to one-shot spirit combos and charged-shot/tankbuster stacks — a real anti-burst pick into the spirit-burst class the patch otherwise favours.",
+   "affected_heroes": [],
+   "build_shift": ""
+  },
+  {
+   "item": "Divine Barrier",
+   "direction": "nerf",
+   "magnitude": "moderate",
+   "summary": "45->55s on the save slot is a 22% cut in defensive uptime, and it lands in a patch that schedules more forced fights (Bell Tower, Sunken Plaza, container contests) — fewer barriers per fight cycle on a hero whose job is one save per fight.",
+   "affected_heroes": [
+    {
+     "hero": "Rem",
+     "relationship": "core",
+     "effect": "down",
+     "why": "It is the late payoff item of his vitality shell (45% buy, 55.8% WR) and his only burst-stop besides the cleanse; a 10s longer cooldown means the second hub fight happens without it."
+    },
+    {
+     "hero": "Solomon",
+     "relationship": "situational",
+     "effect": "neutral",
+     "why": "KB usage says Divine Barrier does not appear in his high-rank buys, so the nerf is theoretical for him."
+    }
+   ],
+   "build_shift": ""
+  },
+  {
+   "item": "Golden Goose Egg",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "Three points off the damage penalty does not rescue it: the economy now pays a losing team through tick souls and raised non-hero comeback gold, so buying a soul-generation item to close a deficit is the least necessary it has ever been.",
+   "affected_heroes": [],
+   "build_shift": ""
+  },
+  {
+   "item": "Armor Piercer",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "More reliable armor pierce lands in the same patch bullet resistance rose (Bullet Resilience 35%, Return Fire's 10% now visible on the tooltip) — a small counterweight for gun carries into frontline stat-stacking.",
+   "affected_heroes": [],
+   "build_shift": ""
+  },
+  {
+   "item": "Glass Cannon",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "80->85% weapon damage on the all-in gun item pairs awkwardly with the lifesteal buffs: if you can heal back the trade, the extra damage is free; if anti-heal is on you, the no-HP build dies faster than ever.",
+   "affected_heroes": [],
+   "build_shift": ""
+  },
+  {
+   "item": "Spiritual Overflow",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "A component spirit power bump 6->8 raises the floor for spirit-stacking users without restoring the on-hit proc package gutted on 09-16 — it is a stat patch on an item whose identity was removed.",
+   "affected_heroes": [
+    {
+     "hero": "Infernus",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Still in his listed core, but his KB build notes drop it for Swift Striker/Titanic; a spirit stat bump does not bring the proc line back."
+    },
+    {
+     "hero": "Warden",
+     "relationship": "situational",
+     "effect": "up",
+     "why": "Small gain on the late capstone his notes already say was nerfed out of his plan."
+    },
+    {
+     "hero": "Baba",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Marginal spirit power on a hero whose spirit stack just lost its healing scaling — the stat gain is offset by what spirit power now buys her."
+    }
+   ],
+   "build_shift": ""
+  },
+  {
+   "item": "Crippling Headshot",
+   "direction": "buff",
+   "magnitude": "minor",
+   "summary": "35->40% anti-heal adds another stacking source to the patch's defining answer (healing reduction), on a headshot weapon item — so the poke carries who buy it now contribute to composed multi-source anti-heal instead of a redundant debuff.",
+   "affected_heroes": [],
+   "build_shift": ""
+  }
+ ],
+ "notable_item_stories": [
+  "Anti-heal rose everywhere (Healbane now stacks, Toxic Bullets 40%, Crippling Headshot 40%) while the healing items were cut (Radiant Regeneration, Healing Booster, Healing Nova reworked) — drafting a sustain comp this patch means drafting into a multi-source counter.",
+  "The whole lifesteal cluster (Bullet/Spirit Lifesteal, Infuser, Leech, Vampiric Burst, Fury Trance) was buffed together, shifting survivability from out-of-combat regen (nerfed) into in-fight sustain — which is also the only reliable way to clear Haunts that now hit 10% harder.",
+  "Invisibility and ambush are being repriced at once: Shadow Weave now needs 6s of charged stealth while Steam Vents sell stamina instead of a free approach, and Hunter's Aura lost wall-piercing — pre-fight information and setup are worth less than contact value, which is why Battle Vest and Bullet Lifesteal rose as the poke/utility items fell."
+ ]
+}

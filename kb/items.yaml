@@ -8,8 +8,10 @@ Toxic Bullets:
   - Mirage
   slot: Weapon
   tier: 2
-  notes: '09-16: spirit scaling 0.005->0.006%. With Decay''s DPS cut, now the better
-    sustained anti-heal/burn option for hybrid and spirit-hybrid carries.'
+  notes: '10-30: 40% heal cut, the biggest anti-heal number in the patch, and it composes
+    with Healbane''s new multi-source stacking. With Radiant Regeneration and Healing
+    Booster trimmed, this is now the answer to the healing archetype rather than a
+    counter-pick.'
 Fortitude:
   name: Fortitude
   role: sustain vitality item
@@ -48,24 +50,28 @@ Bullet Lifesteal:
   - Venator
   slot: Weapon
   tier: 2
-  notes: Unchanged; standard early lifesteal on gun carries.
+  notes: '10-30: +4% weapon damage, +2% lifesteal. Compounds on gun bruisers who fight
+    to the death, but the sustain half is taxed by the patch''s own anti-heal rise
+    — treat it as a damage item first.'
 Decay:
   name: Decay
   role: anti-heal spirit item
   bought_by:
+  - Abrams
+  - Billy
+  - Drifter
   - Infernus
   - Lady Geist
-  - Abrams
   - Mo & Krill
+  - Rem
   - Shiv
   - Viscous
-  - Drifter
-  - Rem
-  - Billy
   slot: Spirit
   tier: 3
-  notes: '09-16: DPS -25% but duration +20%. Still the default anti-heal slot, now
-    better in drawn-out fights than bursting a heal window down.'
+  notes: '10-30: incoming-heal penalty deepens -50%->-55%; the [nerf] tag points at
+    the holder''s side, so if it is the enemy debuff the read flips. Either way anti-heal
+    has moved to Healbane (stacking) and Toxic Bullets, which carry no self-cost —
+    Decay is the anti-heal of last resort for sustain-dependent buyers.'
 Hollow Point:
   name: Hollow Point
   role: early weapon shred item
@@ -124,7 +130,9 @@ High-Velocity Rounds:
   - Warden
   slot: Weapon
   tier: 2
-  notes: No recent change.
+  notes: '10-30: velocity 60%->45%. Keeps the slot but stops guaranteeing max-range
+    hits land, so poke carries lose effective DPS without losing the buy; brawlier
+    T2s (Battle Vest, Bullet Lifesteal) now compete for the same weapon slot.'
 Long Range:
   name: Long Range
   role: poke weapon item
@@ -252,27 +260,27 @@ Echo Shard:
   name: Echo Shard
   role: ability reset item
   bought_by:
-  - Paradox
-  - Haze
   - Bebop
+  - Billy
   - Calico
+  - Celeste
+  - Graves
+  - Haze
   - Ivy
-  - Viscous
-  - Pocket
-  - Mirage
-  - Sinclair
   - Mina
+  - Mirage
+  - Paradox
+  - Pocket
+  - Sinclair
   - The Doorman
   - Victor
-  - Billy
-  - Graves
-  - Celeste
+  - Viscous
   - Yamato
   slot: Spirit
   tier: 4
-  notes: '07-28: post-cast 0.5s, lost +5% fire rate, cooldown now 30s + imbued ability
-    cd — a real cap on the double-cast cheese builds, though it remains the connective
-    tissue of the meta.'
+  notes: '10-30: post-cast 0.5->0.2s. Only matters where the doubled ability is the
+    finisher (Graves'' summon/cooldown cluster); it does not revive lines that already
+    fell out of usage.'
 Superior Cooldown:
   name: Superior Cooldown
   role: cooldown item
@@ -329,22 +337,22 @@ Radiant Regeneration:
   - Shiv
   slot: Spirit
   tier: 3
-  notes: 'Third cumulative trim to the regen shell: 08-22 heal on cast 70->65, 09-16
-    per-boon scaling 2->1.7, 10-14 spirit scaling 0.04->0.035. Still 94-98% buy on
-    holders, so it stays core, but each point of spirit power now buys less healing
-    — spirit-stacking users (Lady Geist Soul-Exchange, Shiv, Baba) feel it most. No
-    competing sustain item added, so nothing displaces it; the slot just shrinks in
-    value, quietly favouring anti-heal (Healbane, Decay) and pre-ramp burst.'
+  notes: '10-30, fourth and structural trim: heal-on-cast fires only in combat, 65->40
+    base, boon 1.7->1.4, spirit 0.35->0.25. It no longer pays between fights, which
+    is exactly the farm-route sustain that +10% Haunt damage now demands. Buy rate
+    will stay high but value has shifted to Juggernaut regen and in-fight Spirit/Bullet
+    Lifesteal.'
 Healing Nova:
   name: Healing Nova
   role: team heal item
   bought_by:
   - Kelvin
-  - Ivy
   - Rem
   slot: Vitality
   tier: 3
-  notes: No recent change; part of the support-sustain package.
+  notes: '10-30 rework: spirit scaling replaces boon scaling (1.1), so it is now a
+    spirit-support item and quietly leaves gun-support builds. Ivy''s gun-first build
+    should skip it.'
 Healbane:
   name: Healbane
   role: anti-heal vitality item
@@ -363,7 +371,12 @@ Healbane:
   - Yamato
   slot: Vitality
   tier: 2
-  notes: No recent change.
+  notes: '10-30 rework, the patch''s key system move: multi-source anti-heal now stacks
+    with diminishing returns, so two sources beat one strong healer — anti-heal is
+    a team coverage plan, not a slot. Heal-on-kill 275->170 (+3/boon) taxes frontline
+    buyers'' own sustain. Best-in-class for buyers who want the enemy''s healing gone
+    (Seven); worst for heroes who live on their own heals (Mo & Krill, Shiv, Kelvin,
+    Ivy).'
 Ricochet:
   name: Ricochet
   role: multi-target weapon item
@@ -546,9 +559,9 @@ Spiritual Overflow:
   - Warden
   slot: Spirit
   tier: 3
-  notes: '09-16: buildup 35% slower, spirit power 40->30, fire rate 30->25%. With
-    Mercurial Magnum''s nerf and Plated Armor''s fix, the on-hit spirit package is
-    weakened.'
+  notes: '10-30: component spirit power 6->8. A stat-floor patch on an item whose
+    on-hit identity was gutted 09-16; does not restore the proc line, and spirit power
+    buys Baba less healing than it used to.'
 Spirit Snatch:
   name: Spirit Snatch
   role: spirit steal item
@@ -662,7 +675,10 @@ Divine Barrier:
   - Solomon
   slot: Vitality
   tier: 3
-  notes: No recent change.
+  notes: '10-30: cooldown 45->55s, a ~22% cut in defensive uptime, landing in a patch
+    that schedules more forced fights at Bell Tower, Sunken Plaza and containers —
+    fewer saves per fight cycle. Rem''s late vitality payoff loses the most; Solomon
+    does not buy it at high rank.'
 Berserker:
   name: Berserker
   role: low-HP damage item
@@ -676,14 +692,15 @@ Berserker:
   notes: No recent change.
 Shadow Weave:
   name: Shadow Weave
-  role: invis weapon item
+  role: invis ambush weapon item
   bought_by:
   - Warden
   slot: Weapon
   tier: 3
-  notes: '09-16: now builds from Sprint Boots, sprint speed 1.5->2, cooldown 45->37s.
-    Inherits Veil Walker''s Sprint Boots path and disengage niche — a real invis-engage
-    option for gun carries and cage bruisers.'
+  notes: '10-30 rework: lost fire rate and melee damage, gained +50% ambush weapon
+    damage that needs ~6s of pre-stealth; abilities breaking stealth now get the bonus.
+    Reactive stealth-then-hit use pays a fraction. Warden must pre-stealth before
+    a Willpower cage engage, and Steam Vents no longer hand everyone a free approach.'
 Cultist Sacrifice:
   name: Cultist Sacrifice
   role: econ spirit item
@@ -720,8 +737,9 @@ Leech:
   bought_by: []
   slot: Vitality
   tier: 4
-  notes: '09-16: bullet+spirit lifesteal 25->28%. Still loses to cheaper lifesteal
-    in the slot; a small nudge, not core.'
+  notes: '10-30: bullet+spirit lifesteal 28%->30%. Still loses to cheaper lifesteal,
+    and every cheaper option (Bullet Lifesteal, Spirit Lifesteal, Infuser) was buffed
+    by a comparable margin — relative position is flat.'
 Plated Armor:
   name: Plated Armor
   role: on-hit defense item
@@ -737,16 +755,19 @@ Golden Goose Egg:
   bought_by: []
   slot: Vitality
   tier: 4
-  notes: '09-16: damage penalty -10->-15%, souls/min 90->80, stored souls now count
-    toward net worth — effectively unbuyable.'
+  notes: '10-30: damage penalty reduced by 3 points. Still effectively unbuyable:
+    the economy now pays a losing team via tick souls and raised non-hero comeback
+    gold, so buying soul generation to close a deficit is the least necessary it has
+    ever been.'
 Focus Lens:
   name: Focus Lens
   role: spirit amp item
   bought_by: []
   slot: Spirit
   tier: 3
-  notes: '09-16: damage 30->35%, cast range 20->25m. A standoff spirit-amp for setup
-    casters; still cleansable, so situational.'
+  notes: '10-30: cooldown 45->40s plus a barrier fix — the repeat-damage stack now
+    ramps through shields (Divine Barrier, Reactive Barrier), which is where standoff
+    spirit-amp damage used to waste its window. Still cleansable, still situational.'
 Crushing Fists:
   name: Crushing Fists
   role: melee weapon item
@@ -775,8 +796,9 @@ Fury Trance:
   bought_by: []
   slot: Weapon
   tier: 3
-  notes: '07-28: active grants +1m move speed and removes shooting move-speed penalty
-    (Fleetfoot-like).'
+  notes: '10-30: weapon damage 6%->10% and the active adds 1.5m move speed, turning
+    a barely-bought steroid into a chase/escape tool in corridor fights. The T3 active-steroid
+    tier is being made buyable while fight-sustain beats regen.'
 Slowing Bullets:
   name: Slowing Bullets
   role: slow weapon item
@@ -855,7 +877,7 @@ Improved Spirit:
   notes: ''
 Spirit Lifesteal:
   name: Spirit Lifesteal
-  role: ''
+  role: spirit sustain item
   bought_by:
   - Infernus
   - Seven
@@ -863,9 +885,12 @@ Spirit Lifesteal:
   - Violet
   - Warden
   - Wraith
-  slot: null
+  slot: Spirit
   tier: null
-  notes: ''
+  notes: '10-30: +2 spirit power, +2% lifesteal. The cheapest way to turn one-cycle
+    camp clears into chain clears under +10% Haunt damage, and it substitutes for
+    the out-of-combat regen that Radiant Regeneration and Healing Booster no longer
+    provide.'
 Mystic Vulnerability:
   name: Mystic Vulnerability
   role: ''
@@ -1118,14 +1143,17 @@ Melee Charge:
   notes: ''
 Hunter's Aura:
   name: Hunter's Aura
-  role: ''
+  role: shred aura weapon item
   bought_by:
   - Abrams
   - Silver
   - Yamato
-  slot: null
+  slot: Weapon
   tier: null
-  notes: ''
+  notes: '10-30: now LOS-gated — no shred through walls, so it pays only on contact.
+    Removes the pre-fight value of stacking it before you commit; melee-front buyers
+    should take it later or swap to self-buffs (Battle Vest, Bullet Lifesteal) that
+    never turn off.'
 Warp Stone:
   name: Warp Stone
   role: ''
@@ -1231,14 +1259,15 @@ Headshot Booster:
   notes: ''
 Express Shot:
   name: Express Shot
-  role: ''
+  role: secondary-fire damage item
   bought_by:
   - Deadman Danny
   - Paradox
   - Viscous
-  slot: null
+  slot: Weapon
   tier: null
-  notes: ''
+  notes: '10-30: secondary-fire damage -5% and growth trimmed. A pick-damage cut,
+    not a DPS cut — hurts carbine crit burst (Paradox) most.'
 Compress Cooldown:
   name: Compress Cooldown
   role: ''
@@ -1299,7 +1328,7 @@ Debuff Reducer:
   notes: ''
 Healing Booster:
   name: Healing Booster
-  role: ''
+  role: regen/heal-amp item
   bought_by:
   - Apollo
   - Baba
@@ -1309,9 +1338,12 @@ Healing Booster:
   - Rem
   - Solomon
   - Victor
-  slot: null
+  slot: Vitality
   tier: null
-  notes: ''
+  notes: '10-30 rework: detached from Extra Regen and lost the +3 flat regen, keeping
+    only +2 out-of-combat. It is now a standalone buy, not a cheap upgrade, so the
+    classic Extra Regen -> Healing Booster opener is two purchases and regen-stackers''
+    early curve slows exactly as harder Haunts demand more sustain.'
 Greater Expansion:
   name: Greater Expansion
   role: ''
@@ -1428,7 +1460,7 @@ Arctic Blast:
   notes: ''
 Torment Pulse:
   name: Torment Pulse
-  role: ''
+  role: melee AoE aura spirit item
   bought_by:
   - Baba
   - Celeste
@@ -1436,9 +1468,11 @@ Torment Pulse:
   - Shiv
   - Victor
   - Yamato
-  slot: null
+  slot: Spirit
   tier: null
-  notes: ''
+  notes: '10-30: +4% melee resistance. Small number on the exact fights the corridor/hub
+    map forces; a direct tax on the melee-front meta and free durability for aura
+    bruisers.'
 Majestic Leap:
   name: Majestic Leap
   role: ''
@@ -1471,31 +1505,37 @@ Grit:
   notes: ''
 Spirit Shielding:
   name: Spirit Shielding
-  role: ''
+  role: spirit resist item
   bought_by:
   - Billy
   - Celeste
   - Silver
   - Vyper
-  slot: null
+  slot: Vitality
   tier: null
-  notes: ''
+  notes: '10-30: -3% spirit resist on the default anti-spirit pickup, in a patch where
+    spirit burst is the main answer to the frontline archetype that buys it. Stays
+    the slot, the number is just worse.'
 Battle Vest:
   name: Battle Vest
-  role: ''
+  role: frontline weapon/vitality item
   bought_by:
   - Venator
-  slot: null
+  slot: Weapon
   tier: null
-  notes: ''
+  notes: '10-30: weapon damage 18%->22%. Tilts the cheap weapon pool toward brawling
+    in the same patch that trimmed the poke items — Battle Vest plus Bullet Lifesteal
+    is now the stronger early package than velocity openers.'
 Infuser:
   name: Infuser
-  role: ''
+  role: spirit sustain active item
   bought_by:
   - Victor
-  slot: null
+  slot: Spirit
   tier: null
-  notes: ''
+  notes: '10-30: spirit power 6->8 plus a 75% active lifesteal window. The passive
+    spirit half pays even on cooldown, which separates it from pure lifesteal items;
+    core for spirit grind-down bruisers.'
 Vortex Web:
   name: Vortex Web
   role: ''
@@ -1593,3 +1633,117 @@ Corrupted Items:
     it; a squad that scuttles to hunt an unadvertised merchant usually loses more
     tempo than the item returns. Not a rework of any existing item — no legacy entry
     to reconcile.'
+Point Blank:
+  name: Point Blank
+  role: close-range slow weapon item
+  bought_by:
+  - Venator
+  slot: Weapon
+  tier: null
+  notes: '10-30: slow duration +0.5s, and stickier than the number reads because air
+    drag went 0.35->0.5 in the same patch. Slows as a category got stronger.'
+Silence Wave:
+  name: Silence Wave
+  role: silence utility item
+  bought_by: []
+  slot: null
+  tier: null
+  notes: '10-30: +40 bonus health makes the silence slot less of a survivability gamble
+    in a patch that schedules forced hub fights. Low confidence — no KB usage.'
+Lightning Scroll:
+  name: Lightning Scroll
+  role: dash-slow utility item
+  bought_by: []
+  slot: null
+  tier: null
+  notes: '10-30: gains 0.35 spirit scaling and dash-distance slow -10%->-12%, landing
+    alongside air drag 0.35->0.5 — dash denial is being priced as a real stat. Low
+    confidence, no KB buyers.'
+Rebuttal:
+  name: Rebuttal
+  role: parry item
+  bought_by: []
+  slot: null
+  tier: null
+  notes: '10-30: parry cooldown line reads as 1.75->1.25s but is tagged a buff, so
+    direction is unresolved. Appears in no KB build; do not price it.'
+Return Fire:
+  name: Return Fire
+  role: defensive reflect item
+  bought_by: []
+  slot: Vitality
+  tier: null
+  notes: '10-30: now returns Fixation damage and the tooltip surfaces the 10% bullet
+    resistance it always had. This is the first functional anti-Haze slot for frontline
+    tanks; expect discovery by brawler builds.'
+Bullet Resilience:
+  name: Bullet Resilience
+  role: bullet resist item
+  bought_by: []
+  slot: Vitality
+  tier: null
+  notes: '10-30: bullet resist 30%->35% plus doubled out-of-combat regen — a cheap
+    answer to the gun-carry tier the same patch buffed via Battle Vest and Bullet
+    Lifesteal. No KB buyers yet; a slot waiting to be discovered.'
+Metal Skin:
+  name: Metal Skin
+  role: defensive active item
+  bought_by: []
+  slot: Vitality
+  tier: null
+  notes: '10-30: +20% gravity while active — no longer doubles as a vertical escape
+    or hover tool, and it taxes float-and-exit play right as air drag makes airborne
+    escapes worse. Low confidence, no KB buyers.'
+Juggernaut:
+  name: Juggernaut
+  role: cheap regen item
+  bought_by: []
+  slot: Vitality
+  tier: null
+  notes: '10-30: health regen +8->+15, nearly doubling the rider at the moment Radiant
+    Regeneration and Healing Booster lost theirs. The redirect for regen-stackers,
+    not a new core.'
+Vampiric Burst:
+  name: Vampiric Burst
+  role: active steroid item
+  bought_by: []
+  slot: Weapon
+  tier: 3
+  notes: '10-30: weapon damage 6%->10% plus lifesteal and active lifesteal up. Same
+    repricing as Fury Trance; no KB usage to say who takes it.'
+Spellbreaker:
+  name: Spellbreaker
+  role: spirit-damage reduction item
+  bought_by: []
+  slot: Vitality
+  tier: null
+  notes: '10-30 rework: the reduction extends to all spirit damage within the stack,
+    turning a single-hit shield into a counter to one-shot spirit combos and charged-shot/tankbuster
+    stacks. A real anti-burst pick into the class this patch favours.'
+Armor Piercer:
+  name: Armor Piercer
+  role: armor-pierce weapon item
+  bought_by: []
+  slot: Weapon
+  tier: null
+  notes: '10-30: more reliable armor pierce, landing in the same patch bullet resistance
+    rose (Bullet Resilience 35%, Return Fire''s 10% now visible). A small counterweight
+    for gun carries into frontline stat-stacking.'
+Glass Cannon:
+  name: Glass Cannon
+  role: all-in weapon item
+  bought_by: []
+  slot: Weapon
+  tier: null
+  notes: '10-30: weapon damage 80%->85%. Pairs awkwardly with the lifesteal buffs
+    — if you can heal the trade the damage is free, if anti-heal is on you the no-HP
+    build dies faster than ever.'
+Crippling Headshot:
+  name: Crippling Headshot
+  role: anti-heal headshot weapon item
+  bought_by: []
+  slot: Weapon
+  tier: null
+  notes: '10-30: anti-heal 35%->40%, adding another stacking source to the patch''s
+    defining answer on a headshot weapon item — poke carries who buy it now contribute
+    to composed multi-source anti-heal instead of a redundant debuff.'

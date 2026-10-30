@@ -1,0 +1,141 @@
+{
+ "hero_updates": {
+  "Mo & Krill": {
+   "tier": "B",
+   "trend": "falling",
+   "why": "Still the default sustained front line — Scorn/Burrow, Torment Pulse's +4% melee resist and an unchanged Combo keep him a lockdown tank — but Spirit per boon 1.1->0.6 and -10% spirit damage on every ability mean he now holds targets without threatening them.",
+   "last_changed_patch": "Halloween 2026 + Gameplay Update",
+   "notes": "Halloween 2026: spirit per boon 1.1->0.6 and -10% spirit damage on every ability; Combo untouched, bullet per boon +4% — move one slot to gun (Bullet Lifesteal/Battle Vest). Torment Pulse +4% melee resist up; Decay's deeper self-heal penalty and Healbane heal-on-kill 275->170 down.\nShh... This Won't Hurt a Bit. (10-20, indirect): harder Haunt camps and contested Buff Containers reward his sustained frontline; objective parries no longer reset, trimming the free Guardian-dive chain.\nPaint the Town: no direct change; the Haunt-camp/hub economy keeps him the default sustained front line, but objective parries no longer reset — the free dive chain is trimmed."
+  },
+  "Shiv": {
+   "tier": "B",
+   "trend": "falling",
+   "why": "The knife exchange got better (Serrated Knives rage 3.5%->4% current HP, +T3 spirit scaling) but his pre-fight health is gone: Radiant Regeneration now heals only in combat at 65->40 and Healbane's kill-heal was cut, so he starts fights smaller and executes in a shorter window.",
+   "last_changed_patch": "Halloween 2026 + Gameplay Update",
+   "core_items": [
+    "Mystic Regeneration",
+    "Extra Regen",
+    "Radiant Regeneration",
+    "Spirit Lifesteal",
+    "Healbane",
+    "Extra Charge",
+    "Mystic Vulnerability",
+    "Torment Pulse",
+    "Compress Cooldown",
+    "Escalating Exposure"
+   ],
+   "builds": [
+    {
+     "name": "Spirit sustain bruiser",
+     "damage": "spirit",
+     "core_items": [
+      "Mystic Regeneration",
+      "Extra Regen",
+      "Radiant Regeneration",
+      "Spirit Lifesteal",
+      "Healbane",
+      "Extra Charge"
+     ],
+     "popularity": "primary",
+     "notes": "Radiant Regeneration is now an in-combat heal only (65->40, boon 1.7->1.4, spirit 0.35->0.25), so it no longer pays for rotation/farm — stack in-fight Spirit Lifesteal and cheap Juggernaut regen (8->15) beside it rather than leaning on Radiant as an out-of-combat engine."
+    },
+    {
+     "name": "Cooldown spirit shred",
+     "damage": "spirit",
+     "core_items": [
+      "Mystic Vulnerability",
+      "Torment Pulse",
+      "Compress Cooldown",
+      "Escalating Exposure",
+      "Superior Cooldown"
+     ],
+     "popularity": "secondary",
+     "notes": "Late-game damage extension off the same regen core; Escalating Exposure (40% share) carries his best win rate at 59%, and Torment Pulse's +4% melee resist is the one piece of the front-line package that improved this patch."
+    }
+   ],
+   "notes": "Halloween 2026: Serrated Knives rage 3.5%->4% + T3 spirit scaling up, Killing Blow recast 16->12s, alt-fire per boon -5%; Radiant Regeneration went in-combat-only at 65->40 and Healbane kill-heal 275->170, so his pre-fight buffer is gone — Torment Pulse +4% melee resist is the offset.\nShh... This Won't Hurt a Bit. (10-20, indirect): harder camps reward his regen stack and the rising frontline feeds current-HP Serrated Knives, but vents hand divers a free approach before he ramps.\nPaint the Town: no direct change; harder Haunt camps reward his regen stack and the rising frontline feeds Serrated Knives, but a 43.4% snapshot WR keeps this soft."
+  },
+  "Ivy": {
+   "why": "Still the best peel in the game (Stone Form i-frame/stun) and a 53.7% WR support, but every piece of her heal path got worse in one patch — Healbane now stacks across sources to cut tethers, Healing Booster lost its Extra Regen link and Healing Nova went spirit-scaled — so her gun core is the only build worth funding.",
+   "notes": "Halloween 2026 (indirect, item-driven): Healbane now stacks across sources — the worst system change for tether healing — Healing Booster lost its Extra Regen upgrade and +3 flat regen, and Healing Nova moved to spirit scaling off her gun-first build. Skip the heal package.\nShh... This Won't Hurt a Bit. (10-20, indirect): Healing Snacks plus spread corridors cut the value of a grouped healer; districts pull her team apart, so tether a frontline bruiser sweeping corridors instead of a lane partner.\nCity Never Sleeps: no direct line; peercontent floats a small lift off camp-damage sustain, but the Healing Snack addition and trimmed heal items cut both ways for her (low confidence)."
+  },
+  "Warden": {
+   "trend": "stable",
+   "why": "The kit got real: Alchemical Flask travels 40% faster, Willpower +20% speed and Last Stand T2 is 50 DPS at -40s cooldown, so his debuff-and-cage window lands on reaction. But Shadow Weave now demands 6s of pre-stealth and HVR lost a quarter of its velocity, so he still has no answer to the clock that kills a late gun scaler.",
+   "last_changed_patch": "Halloween 2026 + Gameplay Update",
+   "builds": [
+    {
+     "name": "Gun carry",
+     "damage": "gun",
+     "core_items": [
+      "High-Velocity Rounds",
+      "Opening Rounds",
+      "Extended Magazine",
+      "Swift Striker",
+      "Titanic Magazine",
+      "Quicksilver Reload",
+      "Fleetfoot"
+     ],
+     "popularity": "primary",
+     "notes": "Stack weapon tiers to farm fast and stat-check into the mid-game spike; HVR keeps the slot as a cheap stat-stick but at 45% velocity it no longer guarantees max-range hits, so value it for stats, not poke."
+    },
+    {
+     "name": "Cage bruiser",
+     "damage": "hybrid",
+     "core_items": [
+      "Shadow Weave",
+      "Spirit Lifesteal",
+      "Enduring Speed",
+      "Sprint Boots"
+     ],
+     "popularity": "secondary",
+     "notes": "Shadow Weave is now a setup item: +50% ambush weapon damage only reaches full power after 6s of stealth and the fire rate is gone, so pre-commit the stealth before walking to the cage instead of reacting with it — and pair with Battle Vest/Bullet Lifesteal, which never turn off."
+    }
+   ],
+   "notes": "Halloween 2026: flask 40% faster travel (weapon damage -30% from -25%), Willpower +15->+20% speed, Last Stand T2 +40.5->50 DPS with -40s cooldown; Shadow Weave reworked into a 6s pre-stealth ambush item and HVR velocity 60->45% — kit up, items down, tier holds C.\nShh... This Won't Hurt a Bit. (10-20, indirect): Steam Vents give every hero the invis-engage he pays Shadow Weave for, flattening his one unique tool while tempo still ends games before his late gun spike.\nPaint the Town: no direct line; contested Soul Bags and earlier Bell Tower/Sunken Plaza objectives close games even faster, deepening the wait a late gun scaler cannot afford — no core item moved."
+  },
+  "Yamato": {
+   "tier": "B",
+   "trend": "falling",
+   "why": "Still the camp-clear and objective-path champion, but Flying Slash 26->23m (T3 +8m) and Shadow Transformation pushed to T2 at 160s cut the engage reach and the all-in speed a mobile burst assassin is bought for. She now has to buy the gap back with stamina routes instead of range.",
+   "last_changed_patch": "Halloween 2026 + Gameplay Update",
+   "notes": "Halloween 2026: Flying Slash 26->23m (T3 +15->+8m) with the mark visible on cast, Shadow Transformation 150->160s and moved to T2, Power Slash +6% spirit scaling. Hunter's Aura LOS gate and Healbane kill-heal 275->170 trim her late spirit line; Torment Pulse +4% melee resist helps her commit.\nShh... This Won't Hurt a Bit. (10-20): Flying Strike creates paths against solid targets (turrets, Shrines, objectives) for extra mobility/objective access; parry no longer resets on objectives, so her Shrine/Walker dive is one-shot.\nPaint the Town: no direct change; punch AoE is still the fastest clear for the new grouped, behavior-varied Haunt camps and Flying Strike paths open the separated Shrine/objective layout."
+  },
+  "Lash": {
+   "why": "Highest-pick S-tier initiator: his spirit stomp core is untouched, Grapple T3 now adds +4m jump velocity, and Steam Vents refill stamina at +150% instead of granting a stealth approach — the dive-and-re-enter loop he wins on got more fuel. Silver and air-drag slows remain the counter.",
+   "last_changed_patch": "Halloween 2026 + Gameplay Update",
+   "notes": "Halloween 2026: Grapple T3 adds +4m jump velocity; Steam Vents converted from an invisibility approach to +150% stamina regen, which feeds his dash-and-re-enter pattern rather than the set-up gankers who used to ride vents. Spirit stomp core untouched.\nShh... This Won't Hurt a Bit. (10-20, indirect): districts and Steam Vents extend his dive routes beyond three lanes, and hub fights at Bell Tower/Sunken Plaza concentrate teams into Ground Strike; objective parries no longer reset.\nPaint the Town: no direct change; new districts/Steam Vents extend his dive routes and the green-lane roof/tree keeps permanent lane high ground — still S."
+  },
+  "Viscous": {
+   "why": "Splatter T1 +36->+45 damage and +5% alt-fire growth give his lane poke real numbers, and Cube rescue gains from scheduled hub fights, but he is still a B enabler with no post-patch win rate proving the 09-16 cooldown/Cube trims are absorbed.",
+   "notes": "Halloween 2026: Splatter T1 +36->+45 damage and +5% alt-fire damage growth per boon, Goo Ball melee/Ethereal Shift exploit during cast delay fixed; Express Shot secondary-fire -5% sits in his core. Tier holds B.\nShh... This Won't Hurt a Bit. (10-20, indirect): Bell Tower's spread vaults and four corridors suit Goo Ball traversal, and harder camps plus forced hub fights raise Cube rescue value.\nCity Never Sleeps: no direct line; harder camps reward Cube sustain and spread-out vaults suit Goo Ball, but this is a low-confidence lift."
+  },
+  "Pocket": {
+   "trend": "rising",
+   "why": "The economy flipped in his favour: 30% non-hero comeback gold, tick souls to the two poorest and up to 50% faster secure when behind fund the slow Affliction ramp the last meta killed. Still folds to anything that out-ranges him (Celeste) or sticks to a low-HP caster (Warden, Drifter, Viscous).",
+   "notes": "Halloween 2026 (indirect): the comeback levers (non-hero comeback cap 26->30%, tick souls to the two poorest, deficit-scaled secure speed) reverse the premise of his B-falling read — the farm bail-out now arrives before his Affliction spike. No core item moved.\nChangelog: 09-16 - no direct line; 30-day usage shows no gun build (Monster Rounds 92%, Cultist Sacrifice 93%), so the spirit stack stands.\nOld entry's core (Boundless Spirit, Echo Shard, Fortitude) shows zero current usage — replaced with the spirit stack the data actually shows."
+  },
+  "Drifter": {
+   "why": "Blind-pickable spirit-melee bruiser whose roaming income got richer — Haunt bounty/growth +10% rewards his heavy-melee crate and Steam Vent routes, and stacking anti-heal (Toxic Bullets 40%, Healbane) composes with his built-in heal cut into a real answer against sustain comps. Still no hard CC or closing mobility, so lane bullies cap him at A.",
+   "last_changed_patch": "Halloween 2026 + Gameplay Update",
+   "notes": "Halloween 2026: base gun damage +3%, Bloodscent T3 +11%->+12% amp, Eternal Night T3 +2.5->2.75s; Haunt bounty/growth +10% raises his crate/vent roam income and multi-source anti-heal now composes with his built-in heal cut.\n10-20 Shh...: no direct change; Steam Vents, new hiding spots and heavy-melee Tough Crates extend his stealth-roam and give his melee core uncontestable crate income.\n09-29 City Never Sleeps: no direct change; new districts/Steam Vents and heavy-melee Tough-Crate routes fit his roam."
+  },
+  "Victor": {
+   "why": "Sustain frontline the patch actively fed: Spirit Lifesteal +2 spirit/+2% lifesteal, Infuser 6->8 spirit with a 75% active lifesteal window and Torment Pulse +4% melee resist all compound his grind-down shell, which is also the reliable answer to Haunts that now hit 10% harder. Healing Booster's rework delays the shell's early curve.",
+   "last_changed_patch": "Halloween 2026 + Gameplay Update",
+   "notes": "Halloween 2026: Aura of Suffering T3 +15%->+16%; Spirit Lifesteal, Infuser (6->8 spirit, 75% active lifesteal) and Torment Pulse +4% melee resist feed the grind-down core, while Healing Booster lost its Extra Regen link and +3 regen — buy it standalone, later.\n10-20 Shh...: no direct change; harder Haunt camps, longer PvE routes and Buff Container Bullet/Spirit Resist rolls feed his sustain stack — A held.\n09-29 City Never Sleeps: no direct change; hard Haunt camps fed his sustain stack, flipping him from fair B-baseline to A on the 56.4% snapshot WR."
+  }
+ },
+ "change_log": [
+  "Mo & Krill: tier A -> B, trend rising -> falling (spirit per boon 1.1->0.6, -10% spirit damage all abilities; Combo untouched)",
+  "Shiv: tier A -> B, trend rising -> falling (Radiant Regeneration in-combat-only 65->40, Healbane kill-heal 275->170); primary build swaps Radiant-as-rotation-heal for in-fight Spirit Lifesteal/Juggernaut, core_items updated",
+  "Ivy: why + notes updated (Healbane stacking cuts tethers, Healing Booster lost Extra Regen link, Healing Nova now spirit-scaled off her gun build); tier/trend unchanged",
+  "Warden: trend falling -> stable, why + notes updated (flask/Willpower/Last Stand T2 buffs offset by Shadow Weave 6s pre-stealth rework and HVR 60->45%); both builds' notes updated to pre-committed stealth and stat-stick HVR",
+  "Yamato: tier A -> B, trend rising -> falling (Flying Slash 26->23m with T3 +8m, Shadow Transformation 150->160s moved to T2)",
+  "Lash: why + notes updated (Grapple T3 +4m jump velocity, Steam Vents now +150% stamina regen instead of an invis approach); still S",
+  "Viscous: why + notes updated (Splatter T1 +45 damage, +5% alt-fire growth, Express Shot -5% secondary); still B",
+  "Pocket: trend falling -> rising, why + notes updated (comeback gold/tick souls/deficit-scaled secure fund his late Affliction ramp); no core item move",
+  "Drifter: why + notes updated (base gun +3%, Bloodscent/Eternal Night T3, Haunt bounty +10% on his crate routes, anti-heal stacking); still A rising",
+  "Victor: why + notes updated (Spirit Lifesteal, Infuser 6->8 + 75% active lifesteal, Torment Pulse melee resist up; Healing Booster reworked to a standalone late buy)"
+ ]
+}

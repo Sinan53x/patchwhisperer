@@ -1,0 +1,426 @@
+{
+ "meta_md": "# Meta state\nLast patch: Halloween 2026 + Gameplay Update (2026-10-30)\n\n## Thesis\nGames are won by converting a lead into Guardians/Walkers before the comeback economy catches up. Off-lane Haunt farm is still the income engine, but it now pays the trailing team too: Haunt bounty and growth are up, non-hero comeback gold is capped at 30%, tick souls feed the two poorest, and a team that is behind secures contested Haunt souls up to 50% faster. So the winners are one-cycle camp clearers who can also spend the lead fast, plus late scalers who now have a farm floor; teams that sit on an advantage bleed it into a jungle that keeps paying the loser.\n\n## Economy and systems\n- Comeback: non-hero comeback gold capped at 30% (was 26%), tick souls routed to the two lowest-econ players, deficit-scaled secure rate up to 50% faster on contested Haunt souls. Sitting on a lead is now a losing line.\n- Kill income stays contested: the Soul Bag must be last-hit after the kill.\n- Bounties: Guardian +10%, Walker +5%, objective share 30->25% (09-16, holds).\n- Objective parries no longer reset the parry cooldown — Guardian/Shrine dives are one-shot.\n- Respawn 38s at 20m. Global slows -20%; air drag ratio 0.5 (was 0.35) — airborne exits are slower, ground kiting stronger, flyers taxed harder.\n- Steam Vents no longer grant invisibility; they grant +150% stamina regen. Vents are a fight-mobility battery now, not a gank setup tool.\n- Broker spawns ~30 min then every ~15 min, off-map and relocating; Corrupted rolls are public and symmetric.\n- Cast-on-press holds; Healing Snacks 10% max HP unchanged.\n\n## Map\nLanes renamed; four districts plus off-lane corridors. All neutrals are one of nine Haunt types that group and chase — bounty and growth +10%, HP and damage +10%. Tough Crates (58 souls, Heavy Melee only), Barrel Mimics, Sinner's Sacrifice variants, and Buff Containers rolling permanent Move Speed, Bullet/Spirit Resist and ability range; a Halloween candy-cauldron layer rewards Heavy Melee. Hubs: Sunken Plaza (~5-8 min, stamina strip) and Bell Tower (8+, ~280 souls, one rope, three vaults, map-wide bell). Green lane holds a roof/tree above the bridge. Arch Mother's side owns Sunken Plaza plus the theater.\n\n## Archetype standing\n- AoE one-cycle camp clearers: up — richer Haunts barely cost them HP (Seven, Infernus, McGinnis, Mina, Yamato).\n- In-fight lifesteal bruisers: up — lifesteal cluster buffed while out-of-combat regen was cut (Victor, Infernus, Drifter).\n- Heavy-melee frontline/tanks: stable — Torment Pulse +4% melee resist, but Hunter's Aura is LOS-gated and Decay/Healbane tax self-heal (Abrams, Mo & Krill, Billy, Shiv).\n- Out-of-combat regen sustain: down — Radiant Regeneration is combat-only, Healing Booster delinked and trimmed (Baba, Shiv, Lady Geist, Celeste).\n- Dedicated healers: down — Healbane now stacks across sources (Kelvin, Ivy, Rem).\n- Max-range poke/gun carries: down — HVR velocity 60->45%, Express Shot -5%, worse air drag (Vindicta, Grey Talon, Paige).\n- Roamers/pick assassins: mixed — no free vent approach and Shadow Weave needs 6s setup, but stamina vents feed re-engages (Lash, Holliday, Paradox, Calico).\n- Lane bullies: slightly down — the comeback floor blunts snowball conversion (Paige, Apollo).\n- Late scalers: up — non-hero comeback gold and tick souls fund the slow curve (Pocket, Mirage, Warden).\n- Flyers: down — air drag 0.5 plus reliable grounding (Grey Talon, Celeste, Vindicta, Deadman Danny).\n\n## Watchlist\n- Average game length and share of games reaching the ~30-min Broker — if flat, comeback gold is going into fights, not items.\n- Steal rate on contested Haunt souls: does the jungle become a fight zone?\n- Radiant Regeneration buy rate and Juggernaut/lifesteal uptake — proxy for whether regen died or re-slotted into in-fight sustain.\n- Double anti-heal comps (Healbane + Toxic Bullets/Crippling Headshot) into Kelvin/Ivy/Rem.\n- Graves snapshot 56.5% WR / 40.9% PR still conflicts with the KB's 48.5% / 21% — recheck.\n- Rat King win rate against pick rate.\n\n## Recent history\n- Halloween 2026 + Gameplay Update (2026-10-30): comeback levers (30% non-hero cap, tick souls to the two poorest, faster secure when behind), Haunt bounty/growth and HP/damage +10%, Steam Vents become a stamina battery, ~30 item moves — regen out, in-fight lifesteal and stacked anti-heal in.\n- Shh... This Won't Hurt a Bit (2026-10-20): off-lane corridors and hub fights priced in; Haunt behaviors, Barrel Mimics, Steam Vents, Healing Snacks, instant casts; Graves gun destroys Venator traps; Corrupted items at the Broker.\n- Paint the Town (2026-10-16): nine Haunt camp types replace all neutrals, contested Soul Bags, objective-parry cooldown reset removed, permanent-stat Buff Containers, six vote-gated new heroes.\n- Minor Update - 10-14-2026: Baba frontline cut; Deadman Danny buff package; Radiant Regeneration third trim.\n- Minor Update - 10-05-2026: trooper-speed regression fixed; Rat King and Sinclair trimmed.\n",
+ "hero_updates": {},
+ "item_updates": {
+  "High-Velocity Rounds": {
+   "role": "utility weapon item",
+   "bought_by": [
+    "Baba",
+    "Celeste",
+    "Deadman Danny",
+    "Grey Talon",
+    "Paige",
+    "Paradox",
+    "Rat King",
+    "Rem",
+    "Sinclair",
+    "Solomon",
+    "Victor",
+    "Vindicta",
+    "Violet",
+    "Viscous",
+    "Warden"
+   ],
+   "slot": "Weapon",
+   "tier": "2",
+   "notes": "10-30: velocity 60%->45%. Keeps the slot but stops guaranteeing max-range hits land, so poke carries lose effective DPS without losing the buy; brawlier T2s (Battle Vest, Bullet Lifesteal) now compete for the same weapon slot."
+  },
+  "Express Shot": {
+   "role": "secondary-fire damage item",
+   "bought_by": [
+    "Deadman Danny",
+    "Paradox",
+    "Viscous"
+   ],
+   "slot": "Weapon",
+   "tier": null,
+   "notes": "10-30: secondary-fire damage -5% and growth trimmed. A pick-damage cut, not a DPS cut — hurts carbine crit burst (Paradox) most."
+  },
+  "Point Blank": {
+   "role": "close-range slow weapon item",
+   "bought_by": [
+    "Venator"
+   ],
+   "slot": "Weapon",
+   "tier": null,
+   "notes": "10-30: slow duration +0.5s, and stickier than the number reads because air drag went 0.35->0.5 in the same patch. Slows as a category got stronger."
+  },
+  "Hunter's Aura": {
+   "role": "shred aura weapon item",
+   "bought_by": [
+    "Abrams",
+    "Silver",
+    "Yamato"
+   ],
+   "slot": "Weapon",
+   "tier": null,
+   "notes": "10-30: now LOS-gated — no shred through walls, so it pays only on contact. Removes the pre-fight value of stacking it before you commit; melee-front buyers should take it later or swap to self-buffs (Battle Vest, Bullet Lifesteal) that never turn off."
+  },
+  "Shadow Weave": {
+   "role": "invis ambush weapon item",
+   "bought_by": [
+    "Warden"
+   ],
+   "slot": "Weapon",
+   "tier": "3",
+   "notes": "10-30 rework: lost fire rate and melee damage, gained +50% ambush weapon damage that needs ~6s of pre-stealth; abilities breaking stealth now get the bonus. Reactive stealth-then-hit use pays a fraction. Warden must pre-stealth before a Willpower cage engage, and Steam Vents no longer hand everyone a free approach."
+  },
+  "Toxic Bullets": {
+   "role": "anti-heal DoT weapon item",
+   "bought_by": [
+    "Drifter",
+    "Graves",
+    "Infernus",
+    "Mirage"
+   ],
+   "slot": "Weapon",
+   "tier": "2",
+   "notes": "10-30: 40% heal cut, the biggest anti-heal number in the patch, and it composes with Healbane's new multi-source stacking. With Radiant Regeneration and Healing Booster trimmed, this is now the answer to the healing archetype rather than a counter-pick."
+  },
+  "Decay": {
+   "role": "anti-heal spirit item",
+   "bought_by": [
+    "Abrams",
+    "Billy",
+    "Drifter",
+    "Infernus",
+    "Lady Geist",
+    "Mo & Krill",
+    "Rem",
+    "Shiv",
+    "Viscous"
+   ],
+   "slot": "Spirit",
+   "tier": "3",
+   "notes": "10-30: incoming-heal penalty deepens -50%->-55%; the [nerf] tag points at the holder's side, so if it is the enemy debuff the read flips. Either way anti-heal has moved to Healbane (stacking) and Toxic Bullets, which carry no self-cost — Decay is the anti-heal of last resort for sustain-dependent buyers."
+  },
+  "Radiant Regeneration": {
+   "role": "healing spirit item",
+   "bought_by": [
+    "Baba",
+    "Celeste",
+    "Kelvin",
+    "Lady Geist",
+    "Shiv"
+   ],
+   "slot": "Spirit",
+   "tier": "3",
+   "notes": "10-30, fourth and structural trim: heal-on-cast fires only in combat, 65->40 base, boon 1.7->1.4, spirit 0.35->0.25. It no longer pays between fights, which is exactly the farm-route sustain that +10% Haunt damage now demands. Buy rate will stay high but value has shifted to Juggernaut regen and in-fight Spirit/Bullet Lifesteal."
+  },
+  "Silence Wave": {
+   "role": "silence utility item",
+   "bought_by": [],
+   "slot": null,
+   "tier": null,
+   "notes": "10-30: +40 bonus health makes the silence slot less of a survivability gamble in a patch that schedules forced hub fights. Low confidence — no KB usage."
+  },
+  "Torment Pulse": {
+   "role": "melee AoE aura spirit item",
+   "bought_by": [
+    "Baba",
+    "Celeste",
+    "Mo & Krill",
+    "Shiv",
+    "Victor",
+    "Yamato"
+   ],
+   "slot": "Spirit",
+   "tier": null,
+   "notes": "10-30: +4% melee resistance. Small number on the exact fights the corridor/hub map forces; a direct tax on the melee-front meta and free durability for aura bruisers."
+  },
+  "Echo Shard": {
+   "role": "ability reset item",
+   "bought_by": [
+    "Bebop",
+    "Billy",
+    "Calico",
+    "Celeste",
+    "Graves",
+    "Haze",
+    "Ivy",
+    "Mina",
+    "Mirage",
+    "Paradox",
+    "Pocket",
+    "Sinclair",
+    "The Doorman",
+    "Victor",
+    "Viscous",
+    "Yamato"
+   ],
+   "slot": "Spirit",
+   "tier": "4",
+   "notes": "10-30: post-cast 0.5->0.2s. Only matters where the doubled ability is the finisher (Graves' summon/cooldown cluster); it does not revive lines that already fell out of usage."
+  },
+  "Focus Lens": {
+   "role": "spirit amp item",
+   "bought_by": [],
+   "slot": "Spirit",
+   "tier": "3",
+   "notes": "10-30: cooldown 45->40s plus a barrier fix — the repeat-damage stack now ramps through shields (Divine Barrier, Reactive Barrier), which is where standoff spirit-amp damage used to waste its window. Still cleansable, still situational."
+  },
+  "Lightning Scroll": {
+   "role": "dash-slow utility item",
+   "bought_by": [],
+   "slot": null,
+   "tier": null,
+   "notes": "10-30: gains 0.35 spirit scaling and dash-distance slow -10%->-12%, landing alongside air drag 0.35->0.5 — dash denial is being priced as a real stat. Low confidence, no KB buyers."
+  },
+  "Rebuttal": {
+   "role": "parry item",
+   "bought_by": [],
+   "slot": null,
+   "tier": null,
+   "notes": "10-30: parry cooldown line reads as 1.75->1.25s but is tagged a buff, so direction is unresolved. Appears in no KB build; do not price it."
+  },
+  "Battle Vest": {
+   "role": "frontline weapon/vitality item",
+   "bought_by": [
+    "Venator"
+   ],
+   "slot": "Weapon",
+   "tier": null,
+   "notes": "10-30: weapon damage 18%->22%. Tilts the cheap weapon pool toward brawling in the same patch that trimmed the poke items — Battle Vest plus Bullet Lifesteal is now the stronger early package than velocity openers."
+  },
+  "Bullet Lifesteal": {
+   "role": "sustain weapon item",
+   "bought_by": [
+    "Infernus",
+    "Venator"
+   ],
+   "slot": "Weapon",
+   "tier": "2",
+   "notes": "10-30: +4% weapon damage, +2% lifesteal. Compounds on gun bruisers who fight to the death, but the sustain half is taxed by the patch's own anti-heal rise — treat it as a damage item first."
+  },
+  "Healbane": {
+   "role": "anti-heal vitality item",
+   "bought_by": [
+    "Apollo",
+    "Drifter",
+    "Infernus",
+    "Ivy",
+    "Kelvin",
+    "McGinnis",
+    "Mirage",
+    "Mo & Krill",
+    "Seven",
+    "Shiv",
+    "Solomon",
+    "Yamato"
+   ],
+   "slot": "Vitality",
+   "tier": "2",
+   "notes": "10-30 rework, the patch's key system move: multi-source anti-heal now stacks with diminishing returns, so two sources beat one strong healer — anti-heal is a team coverage plan, not a slot. Heal-on-kill 275->170 (+3/boon) taxes frontline buyers' own sustain. Best-in-class for buyers who want the enemy's healing gone (Seven); worst for heroes who live on their own heals (Mo & Krill, Shiv, Kelvin, Ivy)."
+  },
+  "Healing Booster": {
+   "role": "regen/heal-amp item",
+   "bought_by": [
+    "Apollo",
+    "Baba",
+    "Celeste",
+    "Ivy",
+    "Kelvin",
+    "Rem",
+    "Solomon",
+    "Victor"
+   ],
+   "slot": "Vitality",
+   "tier": null,
+   "notes": "10-30 rework: detached from Extra Regen and lost the +3 flat regen, keeping only +2 out-of-combat. It is now a standalone buy, not a cheap upgrade, so the classic Extra Regen -> Healing Booster opener is two purchases and regen-stackers' early curve slows exactly as harder Haunts demand more sustain."
+  },
+  "Return Fire": {
+   "role": "defensive reflect item",
+   "bought_by": [],
+   "slot": "Vitality",
+   "tier": null,
+   "notes": "10-30: now returns Fixation damage and the tooltip surfaces the 10% bullet resistance it always had. This is the first functional anti-Haze slot for frontline tanks; expect discovery by brawler builds."
+  },
+  "Spirit Lifesteal": {
+   "role": "spirit sustain item",
+   "bought_by": [
+    "Infernus",
+    "Seven",
+    "Victor",
+    "Violet",
+    "Warden",
+    "Wraith"
+   ],
+   "slot": "Spirit",
+   "tier": null,
+   "notes": "10-30: +2 spirit power, +2% lifesteal. The cheapest way to turn one-cycle camp clears into chain clears under +10% Haunt damage, and it substitutes for the out-of-combat regen that Radiant Regeneration and Healing Booster no longer provide."
+  },
+  "Spirit Shielding": {
+   "role": "spirit resist item",
+   "bought_by": [
+    "Billy",
+    "Celeste",
+    "Silver",
+    "Vyper"
+   ],
+   "slot": "Vitality",
+   "tier": null,
+   "notes": "10-30: -3% spirit resist on the default anti-spirit pickup, in a patch where spirit burst is the main answer to the frontline archetype that buys it. Stays the slot, the number is just worse."
+  },
+  "Bullet Resilience": {
+   "role": "bullet resist item",
+   "bought_by": [],
+   "slot": "Vitality",
+   "tier": null,
+   "notes": "10-30: bullet resist 30%->35% plus doubled out-of-combat regen — a cheap answer to the gun-carry tier the same patch buffed via Battle Vest and Bullet Lifesteal. No KB buyers yet; a slot waiting to be discovered."
+  },
+  "Fury Trance": {
+   "role": "active steroid item",
+   "bought_by": [],
+   "slot": "Weapon",
+   "tier": "3",
+   "notes": "10-30: weapon damage 6%->10% and the active adds 1.5m move speed, turning a barely-bought steroid into a chase/escape tool in corridor fights. The T3 active-steroid tier is being made buyable while fight-sustain beats regen."
+  },
+  "Healing Nova": {
+   "role": "team heal item",
+   "bought_by": [
+    "Kelvin",
+    "Rem"
+   ],
+   "slot": "Vitality",
+   "tier": "3",
+   "notes": "10-30 rework: spirit scaling replaces boon scaling (1.1), so it is now a spirit-support item and quietly leaves gun-support builds. Ivy's gun-first build should skip it."
+  },
+  "Metal Skin": {
+   "role": "defensive active item",
+   "bought_by": [],
+   "slot": "Vitality",
+   "tier": null,
+   "notes": "10-30: +20% gravity while active — no longer doubles as a vertical escape or hover tool, and it taxes float-and-exit play right as air drag makes airborne escapes worse. Low confidence, no KB buyers."
+  },
+  "Infuser": {
+   "role": "spirit sustain active item",
+   "bought_by": [
+    "Victor"
+   ],
+   "slot": "Spirit",
+   "tier": null,
+   "notes": "10-30: spirit power 6->8 plus a 75% active lifesteal window. The passive spirit half pays even on cooldown, which separates it from pure lifesteal items; core for spirit grind-down bruisers."
+  },
+  "Juggernaut": {
+   "role": "cheap regen item",
+   "bought_by": [],
+   "slot": "Vitality",
+   "tier": null,
+   "notes": "10-30: health regen +8->+15, nearly doubling the rider at the moment Radiant Regeneration and Healing Booster lost theirs. The redirect for regen-stackers, not a new core."
+  },
+  "Leech": {
+   "role": "lifesteal item",
+   "bought_by": [],
+   "slot": "Vitality",
+   "tier": "4",
+   "notes": "10-30: bullet+spirit lifesteal 28%->30%. Still loses to cheaper lifesteal, and every cheaper option (Bullet Lifesteal, Spirit Lifesteal, Infuser) was buffed by a comparable margin — relative position is flat."
+  },
+  "Vampiric Burst": {
+   "role": "active steroid item",
+   "bought_by": [],
+   "slot": "Weapon",
+   "tier": "3",
+   "notes": "10-30: weapon damage 6%->10% plus lifesteal and active lifesteal up. Same repricing as Fury Trance; no KB usage to say who takes it."
+  },
+  "Spellbreaker": {
+   "role": "spirit-damage reduction item",
+   "bought_by": [],
+   "slot": "Vitality",
+   "tier": null,
+   "notes": "10-30 rework: the reduction extends to all spirit damage within the stack, turning a single-hit shield into a counter to one-shot spirit combos and charged-shot/tankbuster stacks. A real anti-burst pick into the class this patch favours."
+  },
+  "Divine Barrier": {
+   "role": "cleanse shield item",
+   "bought_by": [
+    "Rem",
+    "Solomon"
+   ],
+   "slot": "Vitality",
+   "tier": "3",
+   "notes": "10-30: cooldown 45->55s, a ~22% cut in defensive uptime, landing in a patch that schedules more forced fights at Bell Tower, Sunken Plaza and containers — fewer saves per fight cycle. Rem's late vitality payoff loses the most; Solomon does not buy it at high rank."
+  },
+  "Golden Goose Egg": {
+   "role": "econ item",
+   "bought_by": [],
+   "slot": "Vitality",
+   "tier": "4",
+   "notes": "10-30: damage penalty reduced by 3 points. Still effectively unbuyable: the economy now pays a losing team via tick souls and raised non-hero comeback gold, so buying soul generation to close a deficit is the least necessary it has ever been."
+  },
+  "Armor Piercer": {
+   "role": "armor-pierce weapon item",
+   "bought_by": [],
+   "slot": "Weapon",
+   "tier": null,
+   "notes": "10-30: more reliable armor pierce, landing in the same patch bullet resistance rose (Bullet Resilience 35%, Return Fire's 10% now visible). A small counterweight for gun carries into frontline stat-stacking."
+  },
+  "Glass Cannon": {
+   "role": "all-in weapon item",
+   "bought_by": [],
+   "slot": "Weapon",
+   "tier": null,
+   "notes": "10-30: weapon damage 80%->85%. Pairs awkwardly with the lifesteal buffs — if you can heal the trade the damage is free, if anti-heal is on you the no-HP build dies faster than ever."
+  },
+  "Spiritual Overflow": {
+   "role": "spirit proc/steroid item",
+   "bought_by": [
+    "Baba",
+    "Infernus",
+    "Warden"
+   ],
+   "slot": "Spirit",
+   "tier": "3",
+   "notes": "10-30: component spirit power 6->8. A stat-floor patch on an item whose on-hit identity was gutted 09-16; does not restore the proc line, and spirit power buys Baba less healing than it used to."
+  },
+  "Crippling Headshot": {
+   "role": "anti-heal headshot weapon item",
+   "bought_by": [],
+   "slot": "Weapon",
+   "tier": null,
+   "notes": "10-30: anti-heal 35%->40%, adding another stacking source to the patch's defining answer on a headshot weapon item — poke carries who buy it now contribute to composed multi-source anti-heal instead of a redundant debuff."
+  }
+ },
+ "change_log": [
+  "meta.md: rewrote Thesis — 'leads stick' reversed to 'convert or bleed'; comeback now flows through the jungle, not kill bounties",
+  "meta.md: Economy — added 30% non-hero comeback cap, tick souls to the two poorest, up-to-50% faster secure when behind, air drag 0.35->0.5, Steam Vents rework to +150% stamina regen",
+  "meta.md: Map — annotated Haunt bounty/growth +10% and HP/damage +10%, noted Halloween candy-cauldron Heavy Melee layer",
+  "meta.md: Archetype standing — regen sustain and dedicated healers moved down, in-fight lifesteal and late scalers up, poke carries and flyers down, roamers mixed",
+  "meta.md: Watchlist — replaced vent-gank check with soul-steal rate and anti-heal stacking; kept Graves and Rat King data flags",
+  "meta.md: Recent history — added Halloween 2026 line, dropped City Never Sleeps (6th oldest)",
+  "High-Velocity Rounds: notes updated (velocity 60->45%, no max-range guarantee)",
+  "Express Shot: role set, notes added (-5% secondary fire)",
+  "Point Blank: added to KB (slow +0.5s, compounds with air drag)",
+  "Hunter's Aura: added to KB (LOS-gated)",
+  "Shadow Weave: notes rewritten (6s ambush wind-up rework, lost fire rate)",
+  "Toxic Bullets: notes updated (40% heal cut, stacks with Healbane)",
+  "Decay: notes updated (-55% incoming heal, direction flagged unclear, demoted to last-resort anti-heal)",
+  "Radiant Regeneration: notes rewritten as fourth and structural trim (combat-only, 65->40, 1.7->1.4, 0.35->0.25)",
+  "Silence Wave: added to KB (+40 health, low confidence)",
+  "Torment Pulse: added to KB (+4% melee resist)",
+  "Echo Shard: notes updated (post-cast 0.5->0.2s)",
+  "Focus Lens: notes updated (45->40s, barrier fix)",
+  "Lightning Scroll: added to KB (0.35 spirit scaling, dash slow -12%)",
+  "Rebuttal: added to KB with direction flagged unresolved",
+  "Battle Vest: added to KB (18->22% weapon damage, bought_by Venator)",
+  "Bullet Lifesteal: notes updated (+4% weapon damage, +2% lifesteal)",
+  "Healbane: notes rewritten (multi-source stacking rework, heal-on-kill 275->170)",
+  "Healing Booster: added to KB (delinked from Extra Regen, -3 flat regen)",
+  "Return Fire: added to KB (returns Fixation damage, 10% bullet resist surfaced)",
+  "Spirit Lifesteal: notes updated (+2 spirit/+2% lifesteal, regen substitute)",
+  "Spirit Shielding: added to KB (-3% spirit resist)",
+  "Bullet Resilience: added to KB (30->35% + doubled OOC regen)",
+  "Fury Trance: notes updated (6->10% weapon damage, +1.5m move speed)",
+  "Healing Nova: notes rewritten (spirit scaling; bought_by trimmed to Kelvin/Rem, Ivy off)",
+  "Metal Skin: added to KB (+20% gravity)",
+  "Infuser: added to KB (spirit 6->8, 75% active lifesteal, bought_by Victor)",
+  "Juggernaut: added to KB (regen 8->15, cheap regen redirect)",
+  "Leech: notes updated (28->30%, relative position flat)",
+  "Vampiric Burst: added to KB (6->10% weapon damage)",
+  "Spellbreaker: added to KB (reduction extends to all spirit damage)",
+  "Divine Barrier: notes updated (45->55s cooldown)",
+  "Golden Goose Egg: notes updated (penalty trimmed, still unbuyable under new economy)",
+  "Armor Piercer: added to KB (reliable pierce into rising bullet resist)",
+  "Glass Cannon: added to KB (80->85%, anti-heal risk)",
+  "Spiritual Overflow: notes updated (component spirit 6->8)",
+  "Crippling Headshot: added to KB (anti-heal 35->40%)"
+ ]
+}

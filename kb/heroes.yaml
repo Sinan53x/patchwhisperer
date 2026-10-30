@@ -7,12 +7,13 @@ Infernus:
   - mobile assassin
   - late scaler
   tier: B
-  trend: stable
-  why: 'Burn carry whose AoE still clears the new behavior-varied Haunt types, but
-    this patch''s new levers all cut against him: Healing Snacks heal through burn
-    poke, permanent Spirit Resist container rolls are unstrippable, and Barrel Mimics
-    tax the crate walks he has no heavy melee for. Dashfernus stays his stronger line
-    and the tempo meta still ends games before a behind Infernus spikes.'
+  trend: rising
+  why: 'Burn carry and one of the patch''s few clean sustain winners: Haunt bounty/growth
+    +10% pays a one-cycle burn clear that barely eats the Haunt HP/damage increase,
+    and Spirit Lifesteal (+2 spirit/+2%), Toxic Bullets'' 40% heal-cut and Napalm
+    T2 lifesteal 15->20% all feed his farm-and-kite shell. He still folds to displacement-plus-burst
+    that negates low-HP kiting (Dynamo, Bebop), and the slower comeback economy means
+    his late spike now arrives on time more often.'
   core_items:
   - Extra Spirit
   - Improved Spirit
@@ -48,19 +49,20 @@ Infernus:
   - Yamato
   - Lash
   - tempo/snowball meta
-  last_changed_patch: null
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20, indirect): Healing Snacks heal through
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: 'Halloween 2026 + Gameplay Update (10-30, direct): Napalm T2 lifesteal 15->20
+    and Concussive Combustion T3 +0.4 spirit scaling lift the Dashfernus line; Spirit
+    Lifesteal +2 spirit/+2% lifesteal and Toxic Bullets'' 40% heal-cut pay his camp
+    route, and Haunt bounty/growth +10% is nearly free for a one-cycle burn clear.
+
+    Shh... This Won''t Hurt a Bit. (10-20, indirect): Healing Snacks heal through
     burn and Buff-Container Spirit Resist is permanent and unstrippable, so the camp-AoE
     gain no longer nets out positive; Barrel Mimics punish the crate walks he has
     no heavy melee for.
 
     Paint the Town (10-16, indirect): grouped Haunt camps suit his burn AoE and Buff
     Containers roll Ability Range/Move Speed for his spirit build; the tempo shift
-    still ends games before his late spike.
-
-    City Never Sleeps (09-29): burn AoE clears the grouped Haunt camps; an unverified
-    report that his global napalm team-damage amp was removed is not in the notes
-    — confirm via win rate.'
+    still ends games before his late spike.'
   builds:
   - name: Dashfernus (spirit dash)
     damage: spirit
@@ -117,12 +119,15 @@ Seven:
   archetypes:
   - spirit carry
   - late scaler
-  tier: A
+  tier: S
   trend: rising
-  why: 'Farm-first AoE carry and the clearest jungle winner on the board: nine behavior-varied
-    Haunt types make the fastest camp clear the largest income edge on the map, and
-    pre-announced Bell Tower/Sunken Plaza fights reward his AoE. He still converts
-    a lead only — the no-comeback economy leaves a behind Seven unable to brawl back.'
+  why: 'Jungle-payout carry: Haunt bounty and growth +10% lands squarely on the fastest
+    one-cycle clearer in the game, and the new comeback levers (30% non-hero cap,
+    tick souls to the two poorest) finally give a behind Seven a way back, removing
+    the ''lead-only'' cap that held him at A. The +10% Haunt HP/damage barely costs
+    a one-pass clear, and Static Charge T3 stun 0.9->1.1s adds lockdown to the ability
+    he uses to hold camps and fights — he still dies to dives and Hook CC-locks before
+    his AoE is up.'
   core_items:
   - Mystic Vulnerability
   - Escalating Exposure
@@ -148,17 +153,19 @@ Seven:
   - Holliday (mobile burst)
   - Bebop (Hook CC-lock)
   - tempo/invade meta
-  last_changed_patch: Minor Update - 08-12-2026
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20, indirect): nine behavior-varied Haunt
-    types (grouped/chasing) make the fastest camp clear the biggest income lever in
-    the game; he has no crate or Barrel Mimic route and does not need one.
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: 'Halloween 2026 + Gameplay Update (10-30, direct): Static Charge T3 stun
+    0.9->1.1s; Spirit Lifesteal +2/+2% and Healbane''s multi-source anti-heal stacking
+    are both core, and Haunt bounty/growth +10% is pure profit for the fastest one-cycle
+    clearer — the new comeback levers also drop the ''farm a lead only'' cap on a
+    behind Seven.
+
+    Shh... This Won''t Hurt a Bit. (10-20, indirect): nine behavior-varied Haunt types
+    (grouped/chasing) make the fastest camp clear the biggest income lever in the
+    game; he has no crate or Barrel Mimic route and does not need one.
 
     Paint the Town (10-16, indirect): fastest Haunt-camp clear plus telegraphed Plaza/Bell
-    Tower hub fights push him B->A; the no-comeback economy still caps a behind Seven.
-
-    City Never Sleeps (09-29, indirect): grouped Haunt camps + guaranteed Tough-Crate
-    routes reward his AoE farm-first line; the no-comeback valve still caps a behind
-    Seven.'
+    Tower hub fights push him B->A; the no-comeback economy still caps a behind Seven.'
   builds:
   - name: Spirit AoE carry
     damage: spirit
@@ -208,13 +215,13 @@ Vindicta:
   archetypes:
   - poke/siege
   - gun carry
-  tier: A
-  trend: rising
-  why: 'Max-range poke/siege carry and a structural winner of the map rework: new
-    roofs and high ground let her hold lanes and poke the telegraphed Sunken Plaza
-    (5-8 min) and Bell Tower (8+) fights, and the tempo economy still rewards lane
-    pressure. She still pays the flyer tax (Weighted Bola, air-drag slows), so she
-    holds A rather than S.'
+  tier: B
+  trend: falling
+  why: 'Max-range poke carry whose range guarantee is gone: High-Velocity Rounds velocity
+    60->45% means fewer max-range hits land, and air drag 0.35->0.5 slows every airborne
+    exit, so she still wants the roofs and telegraphed hub fights but now pays the
+    flyer tax twice. Her gun core is intact, so this is a weaker version of the same
+    hero rather than a dead one.'
   core_items:
   - High-Velocity Rounds
   - Opening Rounds
@@ -238,19 +245,22 @@ Vindicta:
   - High-Velocity Rounds / Sharpshooter gun-core
   countered_by:
   - Silver (Weighted Bola grounds flyers)
-  - global slows now hit air drag
+  - High-Velocity Rounds velocity 60->45% (no max-range guarantee)
+  - global slows and air drag 0.35->0.5 on airborne exits
   - Lash (mobile initiator)
   - dive/CC comps
   - Yamato (mobile burst assassin)
   last_changed_patch: Minor Update - 08-12-2026
-  notes: 'City Never Sleeps (09-29, indirect): new roofs/high ground and telegraphed
-    Plaza/Bell Tower hub fights favor her max-range poke; flyer tax unchanged.
+  notes: 'Halloween 2026 + Gameplay Update (10-30, indirect): High-Velocity Rounds
+    velocity 60->45% removes the max-range guarantee her gun core buys first and air
+    drag 0.35->0.5 taxes every airborne exit; the roofs and hub-fight value are unchanged,
+    the range is not.
+
+    City Never Sleeps (09-29, indirect): new roofs/high ground and telegraphed Plaza/Bell
+    Tower hub fights favor her max-range poke; flyer tax unchanged.
 
     09-16 (indirect): global slows now bite air drag and Silver''s Weighted Bola grounds
-    Flight — anti-flyer tax offsets her tempo gains, so she holds A.
-
-    heresy''s 09-17 ricochet/split-shot ult buff is unattributable; the 09-16 notes
-    give it to Venator — treat as uncertain.'
+    Flight — anti-flyer tax offsets her tempo gains, so she held A.'
   builds:
   - name: Gun poke
     damage: gun
@@ -305,13 +315,14 @@ Lady Geist:
   - tank/frontline
   - late scaler
   - spirit carry
-  tier: A
-  trend: stable
-  why: Regen frontline bruiser whose Extra Regen/Mystic Regeneration stack clears
-    the patch's sustain check — harder camps and Barrel Mimic fights chip but do not
-    break her — while permanent container Bullet/Spirit Resist is free frontline defense.
-    She still folds to the same dive assassins and the cumulative Radiant Regeneration
-    trims keep narrowing her regen window.
+  tier: B
+  trend: falling
+  why: 'Regen frontline whose engine lost its out-of-combat half: Radiant Regeneration
+    now heals only in combat at 65->40 base with boon 1.7->1.4 and spirit 0.35->0.25,
+    and she buys it in 98% of games, while Decay''s -55% incoming-heal penalty deepens
+    on her own sustain. The Essence Bomb 1.22->1.35 spirit buff is real but only pays
+    the Soul-Exchange variant, and the new tick-soul comeback softens her slow start
+    without replacing the regen she lost.'
   core_items:
   - Extra Regen
   - Monster Rounds
@@ -340,18 +351,19 @@ Lady Geist:
   - Yamato (S) burst assassin
   - Silver (S) gun tank that out-damages and out-tanks her
   - silence/burst before Soul Exchange
-  last_changed_patch: Minor Update - 09-16-2026
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20, indirect): harder camps plus Barrel
-    Mimic fights make farm a sustain check her regen stack passes, and container Bullet/Spirit
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: 'Halloween 2026 + Gameplay Update (10-30, direct): Essence Bomb 1.22->1.35
+    spirit scaling only pays the Soul-Exchange line; Radiant Regeneration becomes
+    in-combat-only at 65->40/1.7->1.4/0.35->0.25 on a 98%-buy slot, and Decay''s incoming-heal
+    penalty deepens -50->-55% on a core slot she fights out of.
+
+    Shh... This Won''t Hurt a Bit. (10-20, indirect): harder camps plus Barrel Mimic
+    fights make farm a sustain check her regen stack passes, and container Bullet/Spirit
     Resist rolls add free frontline stats; the same dive heroes still eat her.
 
     10-14: Radiant Regeneration spirit scaling 0.04->0.035 (third cumulative trim)
     narrows her ~98%-buy regen core; the Spirit Soul-Exchange variant, which stacks
-    the most spirit power, loses most.
-
-    City Never Sleeps (09-29, indirect): harder Haunt camps reward her sustain stack
-    and Buff-Container Spirit Resist adds free defense; the no-comeback economy still
-    caps her farm-then-scale pattern.'
+    the most spirit power, loses most.'
   builds:
   - name: Regen gun-bruiser
     damage: hybrid
@@ -360,12 +372,14 @@ Lady Geist:
     - Monster Rounds
     - Mystic Regeneration
     - Radiant Regeneration
+    - Juggernaut
     - Kinetic Dash
     - Berserker
     popularity: primary
-    notes: Buy regen first (Extra Regen 2.7m, Monster Rounds 3.1m) to survive a losing
-      lane, then Kinetic Dash + Berserker to frontline and gun-spam; Soul Exchange
-      is the finisher — the vegas '6000 HP fire-rate hero'.
+    notes: 'Regen-first opener still survives a losing lane, but the out-of-combat
+      half is gone: Radiant Regeneration only fires in combat now, so Juggernaut (+8->+15
+      regen) replaces the Healing Booster line as the cheap regen top-up; Soul Exchange
+      remains the finisher.'
   - name: Spirit Soul-Exchange
     damage: spirit
     core_items:
@@ -374,9 +388,11 @@ Lady Geist:
     - Mystic Burst
     - Bullet Resist Shredder
     - Spirit Resilience
+    - Spirit Lifesteal
     popularity: secondary
-    notes: Caster-leaning variant leaning on the buffed bomb/drain and a Spirit Resilience/Healing
-      Booster defensive layer; weaker lane, better burst and bigger ult finisher.
+    notes: Caster-leaning variant; Essence Bomb 1.22->1.35 buys the kill window, but
+      the trimmed spirit scaling on Radiant Regeneration (0.35->0.25) hits the variant
+      that stacks the most spirit hardest, so sustain shifts into Spirit Lifesteal.
   matchups:
     beats: []
     loses_to:
@@ -396,10 +412,13 @@ Abrams:
   - tank/frontline
   - initiator
   tier: B
-  trend: rising
-  why: Melee tank who owns the two farm routes ranged kits cannot contest — 58-soul
-    Tough Crates and now Barrel Mimics, which are a sustain check his Siphon/heavy-melee
-    core passes and low-HP gun clearers fail. Anti-heal stacking is still his ceiling.
+  trend: stable
+  why: 'Melee tank who still owns the routes ranged kits cannot contest — Tough Crates
+    and Barrel Mimics — and the patch''s in-fight props (Torment Pulse +4% melee resist,
+    Battle Vest 18->22%, Bullet Lifesteal) suit his brawl better than his old aura
+    did. Hunter''s Aura''s LOS gate is the cost: it no longer shreds through walls
+    on the Shoulder Charge approach, so his engage pays one window later than it used
+    to.'
   core_items:
   - Close Quarters
   - Monster Rounds
@@ -434,17 +453,20 @@ Abrams:
   - spirit burst (Celeste)
   - Shiv (anti-tank bruiser)
   - Ivy (peel/slow)
-  last_changed_patch: Minor Update - 09-16-2026
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20, indirect): Barrel Mimics convert
-    breakable-chaining into a sustain check his heavy-melee + Siphon core passes,
-    making the uncontestable crate route safer than it is for squishy gun clearers.
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: 'Halloween 2026 + Gameplay Update (10-30, direct): base gun damage +5% and
+    Siphon Life T3 +18->+22 DPS are small fight-length gains, but the Shoulder Charge
+    fix removes his free hold on enemies who never hit a wall; Hunter''s Aura is now
+    LOS-gated, so Battle Vest/Bullet Lifesteal (which never turn off) compete for
+    the same slot.
+
+    Shh... This Won''t Hurt a Bit. (10-20, indirect): Barrel Mimics convert breakable-chaining
+    into a sustain check his heavy-melee + Siphon core passes, making the uncontestable
+    crate route safer than it is for squishy gun clearers.
 
     Paint the Town (10-16, indirect): his melee core remains the cheap route into
     the Haunt/crate farm and the objective-parry change keeps dives on him risky;
-    frontline up, anti-tank Shiv his real counter.
-
-    City Never Sleeps (09-29, indirect): his melee core farms Tough Crates cheaply
-    and the parry-on-objective change punishes dives on him; frontline archetype up.'
+    frontline up, anti-tank Shiv his real counter.'
   builds:
   - name: Melee brawler (gun)
     damage: gun
@@ -454,12 +476,15 @@ Abrams:
     - Melee Lifesteal
     - Stalker
     - Melee Charge
+    - Battle Vest
     - Bullet Resist Shredder
     - Hunter's Aura
     popularity: primary
-    notes: 'The default at ~80-90% buy share: cheap Close Quarters/Monster Rounds
-      spike the early melee trade, then Hunter''s Aura and Stalker (which gates his
-      Shoulder Charge engage) carry it into mid.'
+    notes: 'Still the ~80-90% default: cheap Close Quarters/Monster Rounds spike the
+      early melee trade, then Battle Vest (18->22% weapon damage) carries the brawl
+      while Hunter''s Aura is taken later — its new LOS gate means it no longer pays
+      before contact, which is exactly the approach distance he buys tank stats to
+      survive.'
   - name: CC/sustain tank (spirit)
     damage: spirit
     core_items:
@@ -504,12 +529,12 @@ Wraith:
   - late scaler
   tier: B
   trend: falling
-  why: 'Wraith''s spirit on-hit identity was heavily weakened by 09-16: Card Trick
-    heal/scaling/resist/slow cuts plus the Mercurial Magnum nerf and Plated Armor''s
-    on-hit fix (which now blanks Full Auto''s spirit damage) push her toward a pure-gun
-    build. She keeps a high floor (~51% WR, near-50% PR) as a fire-rate M1/AoE-delete,
-    but is outclassed in her slot by tempo carries (Silver, Venator, Haze) and punished
-    by the dive the meta rewards.'
+  why: 'Fire-rate gun carry with a high floor and no growth path: the 09-16 spirit
+    on-hit gutting pushed her fully onto fire-rate M1, and this patch only trims her
+    Card Trick heal 60->45 and Project Mind (46->50s, initial cast 0.75->1s) without
+    touching the gun core. Cheap anti-gun defence got better in the same patch (Bullet
+    Resilience 30->35%, Return Fire''s 10% bullet resist now on the tooltip), so she
+    outclasses no one in her slot.'
   core_items:
   - Monster Rounds
   - Quicksilver Reload
@@ -534,18 +559,20 @@ Wraith:
   - Silver
   - Paige
   - Sinclair
-  last_changed_patch: Minor Update - 09-16-2026
-  notes: '09-16: Card Trick heal 75->60, heal scaling 0.75->0.5, resist shred -8->-7%
-    (T3 -5->-4%), T3 slow +20->+15%; Mercurial Magnum + Spiritual Overflow gutted
-    and Plated Armor now blanks Full Auto spirit damage — on-hit-spirit core weakened,
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: 'Halloween 2026 + Gameplay Update (10-30, direct): Card Trick heal 60->45
+    and Project Mind 46->50s with a slower 0.75->1s initial cast trim the only sustain
+    and the repositioning her survival plan runs on; her fire-rate gun core (Monster
+    Rounds/Quicksilver Reload/Rapid Rounds/Swift Striker/Ricochet) is untouched.
+
+    09-16: Card Trick heal 75->60, heal scaling 0.75->0.5, resist shred -8->-7% (T3
+    -5->-4%), T3 slow +20->+15%; Mercurial Magnum + Spiritual Overflow gutted and
+    Plated Armor now blanks Full Auto spirit damage — on-hit-spirit core weakened,
     lean pure gun.
 
     Creator-cited Capacitor/Slowing Hex appear in none of the top-15 item slots; usage
     says the real core was spirit on-hit (Quicksilver Reload 100%, Mercurial Magnum
-    93%) — Magnum now weakened.
-
-    Build clustering is medium-confidence: inferred from shares/buy_min, no ability
-    text.'
+    93%) — Magnum now weakened.'
   builds:
   - name: Gun carry (pure gun)
     damage: gun
@@ -600,11 +627,12 @@ McGinnis:
   - poke/siege
   - tank/frontline
   tier: B
-  trend: stable
-  why: Turret/wall zone controller who still wins the pre-announced hub fights, but
-    four off-lane corridors pull the map's fights away from her static setup, flattening
-    the Paint the Town gain. Turrets still farm grouped camps and Barrel Mimics from
-    cover; still useless into mobile dive + AoE.
+  trend: rising
+  why: 'Turret zone controller whose farm got cheaper and better paid: Mini Turret
+    50->65% vs troopers plus 9->10 HP per boon speeds lane and camp clearing on a
+    jungle that pays 10% more bounty and growth, and turrets clear grouped Haunts
+    from cover without ever taking the +10% Haunt damage. Her hub-fight zoning is
+    unchanged, so the gain is income and uptime, not fight impact.'
   core_items:
   - Intensifying Magazine
   - Monster Rounds
@@ -629,18 +657,19 @@ McGinnis:
   - mobile burst divers (Yamato, Holliday, Silver) that jump the wall and delete turrets
   - AoE spirit burst (Lady Geist, Celeste, Dynamo) that clears turret stacks
   - global -20% slow nerf, which weakens her wall/Suppressor zoning
-  last_changed_patch: Minor Update - 08-12-2026
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20, indirect): the map''s four off-lane
-    corridors spread fights away from her turret/wall setup, flattening the hub-fight
-    gain; turrets still clear grouped Haunt camps and Barrel Mimics from cover.
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: 'Halloween 2026 + Gameplay Update (10-30, direct): Mini Turret damage vs
+    troopers 50->65% and health per boon 9->10 speed her lane farm and turret uptime,
+    and Haunt bounty/growth +10% rewards a kit that clears grouped camps from cover
+    without eating the +10% Haunt damage.
+
+    Shh... This Won''t Hurt a Bit. (10-20, indirect): the map''s four off-lane corridors
+    spread fights away from her turret/wall setup, flattening the hub-fight gain;
+    turrets still clear grouped Haunt camps and Barrel Mimics from cover.
 
     Paint the Town (10-16, indirect): turrets clear the new grouped Haunt camps and
     zone the telegraphed Plaza/Bell Tower hubs, while the objective-parry change punishes
-    dives into her wall.
-
-    City Never Sleeps (09-29, indirect): telegraphed hub fights and the dive-punishing
-    parry change favor her turret/wall zoning, and turrets clear the grouped Haunt
-    camps.'
+    dives into her wall.'
   builds:
   - name: Gun turret
     damage: gun
@@ -695,10 +724,12 @@ Paradox:
   - initiator
   - poke/siege
   tier: B
-  trend: rising
-  why: 'Pick/sniper whose roamer identity keeps improving: Steam Vent invisibility,
-    more off-lane hiding spots and instant-cast combo timing tighten her carbine picks,
-    and Barrel Mimics leave low-HP crate clearers standing still to shoot. Anything
+  trend: stable
+  why: 'Carbine pick/sniper who traded pick quality for frequency: Paradoxical Swap
+    at 95s buys her an extra pick per fight cycle, but Express Shot -5% secondary
+    fire and HVR 60->45% velocity weaken the crit-carbine burst that pick converts,
+    and Steam Vents now sell stamina instead of the invisibility approach her roams
+    used. The ability-burst line gains relative value over the crit line; anything
     that closes distance still kills her.'
   core_items:
   - Restorative Shot
@@ -723,8 +754,8 @@ Paradox:
   - Dynamo
   - Mo & Krill
   - instant casts (carbine->swap combo fires on input, not the next window)
-  - new districts/hiding spots/Steam Vent invisibility (roamer pick setups; ahead
-    of Bebop)
+  - Paradoxical Swap cooldown 110->95s
+  - new districts/hiding spots (roamer pick setups; ahead of Bebop)
   countered_by:
   - Yamato
   - Lash
@@ -732,17 +763,20 @@ Paradox:
   - cleanse/dispel
   - Veil Walker
   - range denial
-  last_changed_patch: Minor Update - 09-16-2026
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20, indirect): instant casts tighten
-    her carbine->swap combo, and Barrel Mimics leave squishy crate clearers stationary
-    for picks; mobile divers still close on her.
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: 'Halloween 2026 + Gameplay Update (10-30, direct): Paradoxical Swap 110->95s
+    adds a pick per fight cycle; Express Shot -5% secondary-fire damage and HVR velocity
+    60->45% cut the carbine crit burst, and the Steam Vent rework (stamina regen instead
+    of invisibility) removes the approach her roams leaned on — ability burst (Slowing
+    Hex/Compress Cooldown/Tankbuster) now outranks the HVR/Express Shot crit line.
+
+    Shh... This Won''t Hurt a Bit. (10-20, indirect): instant casts tighten her carbine->swap
+    combo, and Barrel Mimics leave squishy crate clearers stationary for picks; mobile
+    divers still close on her.
 
     Paint the Town (10-16, indirect): new districts, more hiding spots and Steam-Vent
     invisibility sharpen her roamer pick setups and keep her ahead of Bebop in that
-    slot; the sniper line still folds to mobile divers.
-
-    City Never Sleeps (09-29, indirect): new districts/hiding spots/Steam Vents upgrade
-    her roamer pick setups and move her ahead of Bebop in that slot.'
+    slot; the sniper line still folds to mobile divers.'
   builds:
   - name: Carbine sniper
     damage: gun
@@ -992,13 +1026,12 @@ Haze:
   archetypes:
   - gun carry
   tier: B
-  trend: rising
-  why: 'Haze is a tempo gun carry: the Fixation buff (headshot stacks 2->3, higher
-    T3 weapon scaling) lifts exactly the early-mid damage that wins lane, and 09-16
-    gutted comeback souls so a won lane converts to a win. But her ceiling still sits
-    on weak T4 gun items (Ricochet/Capacitor) and the meta''s mobile divers and lane
-    bullies hunt her low-mobility frame, so a 49.8% WR caps her at B. Strong tempo
-    pick, not a top one.'
+  trend: stable
+  why: 'Tempo gun carry whose own damage is untouched — Fixation still decides her
+    games — but the answers to it got cheaper: Return Fire now returns Fixation damage
+    on frontline tanks who already bought it, Bullet Resilience is 30->35%, and Smoke
+    Bomb T3 no longer dispels undispellable debuffs. Same carry, one fewer escape
+    and a real counter-slot on the enemy front line.'
   core_items:
   - Extra Spirit
   - Rapid Rounds
@@ -1024,16 +1057,19 @@ Haze:
   - lane bullies (Paige, Apollo)
   - Celeste burst
   - weak T4 gun items (Ricochet/Capacitor)
-  last_changed_patch: Minor Update - 09-16-2026
-  notes: '09-16 (indirect): Plated Armor''s on-hit fix now blanks Tesla Bullets spirit
-    damage, weakening her Ricochet/Tesla late pivot.
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: 'Halloween 2026 + Gameplay Update (10-30, direct): Smoke Bomb T3 no longer
+    dispels undispellable debuffs (e.g. Specter Crash), and Return Fire now returns
+    Fixation damage plus shows its 10% bullet resist on the tooltip, handing frontline
+    tanks the anti-Haze slot they were already buying; Bullet Resilience 30->35% adds
+    a second cheap answer.
+
+    09-16 (indirect): Plated Armor''s on-hit fix now blanks Tesla Bullets spirit damage,
+    weakening her Ricochet/Tesla late pivot.
 
     Role reframed per reader: farm-carry is meta-dependent, not her identity — historically
     a Smoke Bomb roamer/ganker on isolated targets, and T4 weakness gates the late-scaler
-    label.
-
-    Changelog: Minor Update - 09-16-2026 — Fixation headshot stacks 2->3, higher T3
-    weapon scaling.'
+    label.'
   builds:
   - name: Gun carry (Fixation)
     damage: gun
@@ -1300,10 +1336,11 @@ Calico:
   - mobile assassin
   tier: A
   trend: rising
-  why: Tempo roamer whose district and Steam-Vent routes sharpen her gank angles,
-    but cat form still cannot heavy-melee Tough Crates, so her income stays kill-based.
-    The rising frontline (Abrams, Rat King) caps her at A — she cannot burst through
-    stacked HP.
+  why: Melee-spirit assassin whose burst window grew — Leaping Slash T3 +60->+90 and
+    Ava T3 6->8s — on a jungle that pays 10% more per camp she takes by kill rather
+    than clear. The Steam Vent rework removes one invisibility approach and the comeback
+    levers punish a snowball that stalls, so she is a sharper diver with less margin;
+    stacked-HP frontlines still cap her.
   core_items:
   - Melee Lifesteal
   - Stalker
@@ -1320,26 +1357,29 @@ Calico:
   - Spirit-shred scaling
   enabled_by:
   - tempo/early-snowball meta
-  - comeback-soul nerf (winning lane wins game)
   - off-map soul generation as a 3/4
   - Sprint Boots
   - mobile assassin archetype
+  - Leaping Slash T3 +60->+90 damage
+  - Ava T3 6->8s dive window
   countered_by:
   - CC/lockdown (Dynamo, Mo & Krill)
   - tank frontline she cannot burst (Abrams, Victor)
   - long-range kiting gun carries (Vyper, Warden)
   - burst vs low HP (Yamato)
-  last_changed_patch: Minor Update - 07-28-2026
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20, indirect): districts and vent invisibility
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: 'Halloween 2026 + Gameplay Update (10-30, direct): Leaping Slash T3 +60->+90
+    damage and Ava T3 6->8s sharpen her melee-spirit burst and second pick; the Steam
+    Vent rework (stamina regen instead of invisibility) trims one roam route, and
+    the raised non-hero comeback gold + tick souls punish a snowball that stalls.
+
+    Shh... This Won''t Hurt a Bit. (10-20, indirect): districts and vent invisibility
     extend her roam; cat form still can''t heavy-melee Tough Crates, and the frontline
     meta gives her more unburstable bodies.
 
     Paint the Town (10-16, indirect): tempo snowball plus new district/Steam-Vent
     routes suit her roam; cat form still cannot heavy-melee Tough Crates, so lean
-    kills/off-map souls.
-
-    10-14: Baba (beats her ~58%, her worst listed matchup) took a major nerf - eases
-    with no cost to her; no direct change.'
+    kills/off-map souls.'
   builds:
   - name: Melee spirit assassin
     damage: spirit
@@ -1502,12 +1542,12 @@ Mo & Krill:
   archetypes:
   - tank/frontline
   - initiator
-  tier: A
-  trend: rising
-  why: Default sustained front line for harder Haunt camps and contested Buff Containers;
-    Scorn/Burrow uptime plus T3 bullet resist let him commit. Objective parries no
-    longer reset, so his Guardian dive is one-shot, and ranged poke he cannot close
-    on still beats him.
+  tier: B
+  trend: falling
+  why: Still the default sustained front line — Scorn/Burrow, Torment Pulse's +4%
+    melee resist and an unchanged Combo keep him a lockdown tank — but Spirit per
+    boon 1.1->0.6 and -10% spirit damage on every ability mean he now holds targets
+    without threatening them.
   core_items:
   - Mystic Burst
   - Quicksilver Reload
@@ -1533,17 +1573,19 @@ Mo & Krill:
   - anti-heal (his Scorn sustain)
   - anti-tank bruisers (Billy, Shiv)
   - long-range gun carries (Vyper)
-  last_changed_patch: Minor Update - 07-28-2026
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20, indirect): harder Haunt camps and
-    contested Buff Containers reward his sustained frontline; objective parries no
-    longer reset, trimming the free Guardian-dive chain.
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: 'Halloween 2026: spirit per boon 1.1->0.6 and -10% spirit damage on every
+    ability; Combo untouched, bullet per boon +4% — move one slot to gun (Bullet Lifesteal/Battle
+    Vest). Torment Pulse +4% melee resist up; Decay''s deeper self-heal penalty and
+    Healbane heal-on-kill 275->170 down.
+
+    Shh... This Won''t Hurt a Bit. (10-20, indirect): harder Haunt camps and contested
+    Buff Containers reward his sustained frontline; objective parries no longer reset,
+    trimming the free Guardian-dive chain.
 
     Paint the Town: no direct change; the Haunt-camp/hub economy keeps him the default
     sustained front line, but objective parries no longer reset — the free dive chain
-    is trimmed. Ranged poke (Celeste, Vindicta) and rising Paige still beat him.
-
-    City Never Sleeps: camp/uptime meta plus Billy''s slide hand him the default sustained
-    front-line slot.'
+    is trimmed.'
   builds:
   - name: Spirit bruiser
     damage: spirit
@@ -1599,17 +1641,19 @@ Shiv:
   archetypes:
   - tank/frontline
   - mobile assassin
-  tier: A
-  trend: rising
-  why: Anti-tank bruiser the rising frontline feeds — current-HP Serrated Knives shred
-    Abrams/Mo & Krill/Billy and harder camps reward his regen stack. Steam Vents give
-    divers a free approach before regen ramps, so burst/hook CC still kills him.
+  tier: B
+  trend: falling
+  why: 'The knife exchange got better (Serrated Knives rage 3.5%->4% current HP, +T3
+    spirit scaling) but his pre-fight health is gone: Radiant Regeneration now heals
+    only in combat at 65->40 and Healbane''s kill-heal was cut, so he starts fights
+    smaller and executes in a shorter window.'
   core_items:
   - Mystic Regeneration
   - Extra Regen
-  - Extra Charge
   - Radiant Regeneration
+  - Spirit Lifesteal
   - Healbane
+  - Extra Charge
   - Mystic Vulnerability
   - Torment Pulse
   - Compress Cooldown
@@ -1629,17 +1673,19 @@ Shiv:
   - Yamato (burst)
   - Dynamo (CC)
   - Healbane / anti-heal
-  last_changed_patch: Minor Update - 09-16-2026
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20, indirect): harder camps reward his
-    regen stack and the rising frontline feeds current-HP Serrated Knives, but vents
-    hand divers a free approach before he ramps.
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: 'Halloween 2026: Serrated Knives rage 3.5%->4% + T3 spirit scaling up, Killing
+    Blow recast 16->12s, alt-fire per boon -5%; Radiant Regeneration went in-combat-only
+    at 65->40 and Healbane kill-heal 275->170, so his pre-fight buffer is gone — Torment
+    Pulse +4% melee resist is the offset.
+
+    Shh... This Won''t Hurt a Bit. (10-20, indirect): harder camps reward his regen
+    stack and the rising frontline feeds current-HP Serrated Knives, but vents hand
+    divers a free approach before he ramps.
 
     Paint the Town: no direct change; harder Haunt camps reward his regen stack and
     the rising frontline feeds Serrated Knives, but a 43.4% snapshot WR keeps this
-    soft.
-
-    10-14: Radiant Regeneration spirit scaling 0.04->0.035 chips his near-universal
-    regen core; kit untouched.'
+    soft.'
   builds:
   - name: Spirit sustain bruiser
     damage: spirit
@@ -1647,11 +1693,14 @@ Shiv:
     - Mystic Regeneration
     - Extra Regen
     - Radiant Regeneration
+    - Spirit Lifesteal
     - Healbane
     - Extra Charge
     popularity: primary
-    notes: Stack regen and cooldown so extended fights are unwinnable; Healbane doubles
-      as anti-heal against other sustain fronts.
+    notes: Radiant Regeneration is now an in-combat heal only (65->40, boon 1.7->1.4,
+      spirit 0.35->0.25), so it no longer pays for rotation/farm — stack in-fight
+      Spirit Lifesteal and cheap Juggernaut regen (8->15) beside it rather than leaning
+      on Radiant as an out-of-combat engine.
   - name: Cooldown spirit shred
     damage: spirit
     core_items:
@@ -1662,7 +1711,8 @@ Shiv:
     - Superior Cooldown
     popularity: secondary
     notes: Late-game damage extension off the same regen core; Escalating Exposure
-      (40% share) carries his best win rate at 59%.
+      (40% share) carries his best win rate at 59%, and Torment Pulse's +4% melee
+      resist is the one piece of the front-line package that improved this patch.
   matchups:
     beats:
     - Billy
@@ -1688,9 +1738,9 @@ Ivy:
   tier: A
   trend: falling
   why: Still the best peel in the game (Stone Form i-frame/stun) and a 53.7% WR support,
-    but Healing Snacks plus four spread corridors reduce the value of a grouped healer,
-    and districts pull her team apart. Tether a frontline bruiser sweeping corridors
-    rather than a lane partner.
+    but every piece of her heal path got worse in one patch — Healbane now stacks
+    across sources to cut tethers, Healing Booster lost its Extra Regen link and Healing
+    Nova went spirit-scaled — so her gun core is the only build worth funding.
   core_items:
   - Monster Rounds
   - Extended Magazine
@@ -1718,16 +1768,18 @@ Ivy:
   - silence
   - grounding / air-drag slow (hits Air Drop)
   last_changed_patch: Minor Update - 09-16-2026
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20, indirect): Healing Snacks plus spread
-    corridors cut the value of a grouped healer; districts pull her team apart, so
-    tether a frontline bruiser sweeping corridors instead of a lane partner.
+  notes: 'Halloween 2026 (indirect, item-driven): Healbane now stacks across sources
+    — the worst system change for tether healing — Healing Booster lost its Extra
+    Regen upgrade and +3 flat regen, and Healing Nova moved to spirit scaling off
+    her gun-first build. Skip the heal package.
+
+    Shh... This Won''t Hurt a Bit. (10-20, indirect): Healing Snacks plus spread corridors
+    cut the value of a grouped healer; districts pull her team apart, so tether a
+    frontline bruiser sweeping corridors instead of a lane partner.
 
     City Never Sleeps: no direct line; peercontent floats a small lift off camp-damage
     sustain, but the Healing Snack addition and trimmed heal items cut both ways for
-    her (low confidence).
-
-    Real build is gun-first (Extended/Titanic/Tesla 68-74%); creator heal-support
-    framing is stale.'
+    her (low confidence).'
   builds:
   - name: Gun Ivy (stat-check carry-support)
     damage: gun
@@ -1790,10 +1842,12 @@ Warden:
   - gun carry
   - late scaler
   tier: C
-  trend: falling
-  why: Late-scaling gun carry the tempo economy still refuses to wait for; Steam Vents
-    hand every hero the invis-engage he pays Shadow Weave for, so his one exclusivity
-    is gone. No item or system route slows the clock that kills his late spike.
+  trend: stable
+  why: 'The kit got real: Alchemical Flask travels 40% faster, Willpower +20% speed
+    and Last Stand T2 is 50 DPS at -40s cooldown, so his debuff-and-cage window lands
+    on reaction. But Shadow Weave now demands 6s of pre-stealth and HVR lost a quarter
+    of its velocity, so he still has no answer to the clock that kills a late gun
+    scaler.'
   core_items:
   - High-Velocity Rounds
   - Opening Rounds
@@ -1818,17 +1872,19 @@ Warden:
   - Mo & Krill / Victor (tank the cage, win the frontline)
   - Veil Walker nerf (lost Sprint Boots + movespeed-on-break)
   - weak T4 gun items (Mercurial Magnum / Spiritual Overflow class)
-  last_changed_patch: Minor Update - 09-16-2026
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20, indirect): Steam Vents give every
-    hero the invis-engage he pays Shadow Weave for, flattening his one unique tool
-    while tempo still ends games before his late gun spike.
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: 'Halloween 2026: flask 40% faster travel (weapon damage -30% from -25%),
+    Willpower +15->+20% speed, Last Stand T2 +40.5->50 DPS with -40s cooldown; Shadow
+    Weave reworked into a 6s pre-stealth ambush item and HVR velocity 60->45% — kit
+    up, items down, tier holds C.
+
+    Shh... This Won''t Hurt a Bit. (10-20, indirect): Steam Vents give every hero
+    the invis-engage he pays Shadow Weave for, flattening his one unique tool while
+    tempo still ends games before his late gun spike.
 
     Paint the Town: no direct line; contested Soul Bags and earlier Bell Tower/Sunken
     Plaza objectives close games even faster, deepening the wait a late gun scaler
-    cannot afford — no core item moved.
-
-    09-16: bullet dmg/boon, flask range/speed, Willpower T3 cut; Mercurial Magnum
-    + Spiritual Overflow nerfed, Veil Walker stripped.'
+    cannot afford — no core item moved.'
   builds:
   - name: Gun carry
     damage: gun
@@ -1841,9 +1897,9 @@ Warden:
     - Quicksilver Reload
     - Fleetfoot
     popularity: primary
-    notes: Stack weapon tiers to farm fast and stat-check, then play for the mid-game
-      spike before tempo closes; the old T4 capstone (Mercurial Magnum/Spiritual Overflow)
-      was nerfed this patch, so the late slot must be re-routed to another line.
+    notes: Stack weapon tiers to farm fast and stat-check into the mid-game spike;
+      HVR keeps the slot as a cheap stat-stick but at 45% velocity it no longer guarantees
+      max-range hits, so value it for stats, not poke.
   - name: Cage bruiser
     damage: hybrid
     core_items:
@@ -1852,9 +1908,10 @@ Warden:
     - Enduring Speed
     - Sprint Boots
     popularity: secondary
-    notes: Shadow Weave — now carrying Sprint Boots, faster sprint and a 37s cooldown
-      — replaces the stripped Veil Walker as the invis-engage shell for walking up
-      to land the silence cage.
+    notes: 'Shadow Weave is now a setup item: +50% ambush weapon damage only reaches
+      full power after 6s of stealth and the fire rate is gone, so pre-commit the
+      stealth before walking to the cage instead of reacting with it — and pair with
+      Battle Vest/Bullet Lifesteal, which never turn off.'
   matchups:
     beats:
     - Venator
@@ -1881,12 +1938,12 @@ Yamato:
   archetypes:
   - mobile assassin
   - burst caster
-  tier: A
-  trend: rising
-  why: 'Camp-clear champion: Flying Strike now paths off solid objectives/turrets
-    for a second mobility vector, and her punch AoE still clears grouped Haunts fastest.
-    Objective parries no longer reset, so her Shrine dive is one-shot — plan the exit
-    before committing.'
+  tier: B
+  trend: falling
+  why: Still the camp-clear and objective-path champion, but Flying Slash 26->23m
+    (T3 +8m) and Shadow Transformation pushed to T2 at 160s cut the engage reach and
+    the all-in speed a mobile burst assassin is bought for. She now has to buy the
+    gap back with stamina routes instead of range.
   core_items:
   - Spirit Strike
   - Spirit Snatch
@@ -1914,18 +1971,19 @@ Yamato:
   - Mo & Krill
   - Celeste
   - anti-heal (Healbane buyers)
-  last_changed_patch: Shh... This Won't Hurt a Bit.
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20): Flying Strike creates paths against
-    solid targets (turrets, Shrines, objectives) for extra mobility/objective access;
-    parry no longer resets on objectives, so her Shrine/Walker dive is one-shot.
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: 'Halloween 2026: Flying Slash 26->23m (T3 +15->+8m) with the mark visible
+    on cast, Shadow Transformation 150->160s and moved to T2, Power Slash +6% spirit
+    scaling. Hunter''s Aura LOS gate and Healbane kill-heal 275->170 trim her late
+    spirit line; Torment Pulse +4% melee resist helps her commit.
+
+    Shh... This Won''t Hurt a Bit. (10-20): Flying Strike creates paths against solid
+    targets (turrets, Shrines, objectives) for extra mobility/objective access; parry
+    no longer resets on objectives, so her Shrine/Walker dive is one-shot.
 
     Paint the Town: no direct change; punch AoE is still the fastest clear for the
     new grouped, behavior-varied Haunt camps and Flying Strike paths open the separated
-    Shrine/objective layout.
-
-    City Never Sleeps: Flying Strike creates paths against solid targets (turrets,
-    Shrines, objectives) — new mobility/objective access — and she was the camp-clear
-    champion vs grouped camps.'
+    Shrine/objective layout.'
   builds:
   - name: on-hit spirit proc
     damage: hybrid
@@ -1990,10 +2048,10 @@ Lash:
   - initiator
   tier: S
   trend: rising
-  why: 'Highest-pick S-tier initiator: districts and Steam Vents extend his dive routes,
-    and Bell Tower/Sunken Plaza concentrate teams into Ground Strike setups. The objective-parry
-    reset removal takes a free defensive out from the fights he starts; Silver/air-drag
-    remain the counter.'
+  why: 'Highest-pick S-tier initiator: his spirit stomp core is untouched, Grapple
+    T3 now adds +4m jump velocity, and Steam Vents refill stamina at +150% instead
+    of granting a stealth approach — the dive-and-re-enter loop he wins on got more
+    fuel. Silver and air-drag slows remain the counter.'
   core_items:
   - Mystic Burst
   - Extra Charge
@@ -2018,16 +2076,18 @@ Lash:
   - Air-drag slows (new global slow-vs-air change)
   - 'Zone/anti-dive control: Dynamo, McGinnis, Seven'
   - Flog heal nerf + healing-item trims (Radiant Regeneration, Restorative Locket)
-  last_changed_patch: Minor Update - 09-16-2026
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20, indirect): districts and Steam Vents
-    extend his dive routes beyond three lanes, and hub fights at Bell Tower/Sunken
-    Plaza concentrate teams into Ground Strike; objective parries no longer reset.
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: 'Halloween 2026: Grapple T3 adds +4m jump velocity; Steam Vents converted
+    from an invisibility approach to +150% stamina regen, which feeds his dash-and-re-enter
+    pattern rather than the set-up gankers who used to ride vents. Spirit stomp core
+    untouched.
+
+    Shh... This Won''t Hurt a Bit. (10-20, indirect): districts and Steam Vents extend
+    his dive routes beyond three lanes, and hub fights at Bell Tower/Sunken Plaza
+    concentrate teams into Ground Strike; objective parries no longer reset.
 
     Paint the Town: no direct change; new districts/Steam Vents extend his dive routes
-    and the green-lane roof/tree keeps permanent lane high ground — still S.
-
-    09-16: Ground Strike T3 scaling + per-meter damage up, gun falloff changed, Flog
-    heal nerfed.'
+    and the green-lane roof/tree keeps permanent lane high ground — still S.'
   builds:
   - name: Stomp spirit
     damage: spirit
@@ -2090,9 +2150,10 @@ Viscous:
   - support/healer
   tier: B
   trend: falling
-  why: Cube rescue gains value when fights are scheduled at Bell Tower and Buff Containers,
-    and harder camps reward Cube sustain while Goo Ball suits the spread vaults/corridors.
-    Still a B enabler until a post-patch WR shows the 09-16 trims are absorbed.
+  why: Splatter T1 +36->+45 damage and +5% alt-fire growth give his lane poke real
+    numbers, and Cube rescue gains from scheduled hub fights, but he is still a B
+    enabler with no post-patch win rate proving the 09-16 cooldown/Cube trims are
+    absorbed.
   core_items:
   - High-Velocity Rounds
   - Mystic Burst
@@ -2120,15 +2181,16 @@ Viscous:
   - tempo snowball meta
   - global slows (slow-as-CC)
   last_changed_patch: Minor Update - 09-16-2026
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20, indirect): Bell Tower''s spread vaults
+  notes: 'Halloween 2026: Splatter T1 +36->+45 damage and +5% alt-fire damage growth
+    per boon, Goo Ball melee/Ethereal Shift exploit during cast delay fixed; Express
+    Shot secondary-fire -5% sits in his core. Tier holds B.
+
+    Shh... This Won''t Hurt a Bit. (10-20, indirect): Bell Tower''s spread vaults
     and four corridors suit Goo Ball traversal, and harder camps plus forced hub fights
     raise Cube rescue value.
 
     City Never Sleeps: no direct line; harder camps reward Cube sustain and spread-out
-    vaults suit Goo Ball, but this is a low-confidence lift.
-
-    09-16: Cube cast range 26->20m, Puddle Punch cooldown 21->24s, Splatter/alt-fire
-    nerfs; cooldown-Cube shell lost Veil Walker''s Sprint Boots.'
+    vaults suit Goo Ball, but this is a low-confidence lift.'
   builds:
   - name: Spirit-hybrid Splatter/Punch
     damage: hybrid
@@ -2186,12 +2248,11 @@ Pocket:
   - late scaler
   - mobile assassin
   tier: B
-  trend: falling
-  why: 'Late-scaling Affliction burst carry with no comeback safety net: the gutted
-    comeback souls and the Cultist Sacrifice bounty trim (180->170%) removed the bail-out
-    his slow farm-and-scale line needed, so he stays popular at 46.2% WR but rarely
-    spikes before tempo ends the game. Beats squishy carries he can cloak onto; folds
-    to anything that out-ranges or sticks to him.'
+  trend: rising
+  why: 'The economy flipped in his favour: 30% non-hero comeback gold, tick souls
+    to the two poorest and up to 50% faster secure when behind fund the slow Affliction
+    ramp the last meta killed. Still folds to anything that out-ranges him (Celeste)
+    or sticks to a low-HP caster (Warden, Drifter, Viscous).'
   core_items:
   - Mystic Burst
   - Monster Rounds
@@ -2219,16 +2280,16 @@ Pocket:
   - roots/lockdown (Warden, Viscous slows)
   - burst that out-ranges him (Celeste)
   last_changed_patch: Minor Update - 07-28-2026
-  notes: 'Changelog: 09-16 - no direct line; tier stays B (falling) on the gutted
-    comeback economy + Cultist Sacrifice trim. Low confidence on whether Flying Cloak
-    counts as a flyer for the new air-drag slow rule.
+  notes: 'Halloween 2026 (indirect): the comeback levers (non-hero comeback cap 26->30%,
+    tick souls to the two poorest, deficit-scaled secure speed) reverse the premise
+    of his B-falling read — the farm bail-out now arrives before his Affliction spike.
+    No core item moved.
 
-    Creators'' ''7k on gun items'' claim is contradicted by 30-day usage: the only
-    weapons with real share are farm items (Monster Rounds 92%, Cultist Sacrifice
-    93%); there is no gun build. Data wins.
+    Changelog: 09-16 - no direct line; 30-day usage shows no gun build (Monster Rounds
+    92%, Cultist Sacrifice 93%), so the spirit stack stands.
 
     Old entry''s core (Boundless Spirit, Echo Shard, Fortitude) shows zero current
-    usage - replaced with the spirit stack the data actually shows.'
+    usage — replaced with the spirit stack the data actually shows.'
   builds:
   - name: Affliction spirit burst
     damage: spirit
@@ -2668,10 +2729,11 @@ Drifter:
   - tank/frontline
   tier: A
   trend: rising
-  why: 'Blind-pickable spirit-melee bruiser with a private income lane: heavy-melee
-    Tough Crates, Steam Vents and the new hiding spots all extend his stealth-reveal
-    roam. He still lacks hard CC and closing mobility, so Dynamo/Mo & Krill/Apollo
-    lane pressure caps him at A.'
+  why: Blind-pickable spirit-melee bruiser whose roaming income got richer — Haunt
+    bounty/growth +10% rewards his heavy-melee crate and Steam Vent routes, and stacking
+    anti-heal (Toxic Bullets 40%, Healbane) composes with his built-in heal cut into
+    a real answer against sustain comps. Still no hard CC or closing mobility, so
+    lane bullies cap him at A.
   core_items:
   - Melee Lifesteal
   - Stalker
@@ -2699,16 +2761,17 @@ Drifter:
   - Vyper
   - anti-heal stacking
   - CC/silence
-  last_changed_patch: null
-  notes: '10-20 Shh...: no direct change; Steam Vents, new hiding spots and heavy-melee
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: 'Halloween 2026: base gun damage +3%, Bloodscent T3 +11%->+12% amp, Eternal
+    Night T3 +2.5->2.75s; Haunt bounty/growth +10% raises his crate/vent roam income
+    and multi-source anti-heal now composes with his built-in heal cut.
+
+    10-20 Shh...: no direct change; Steam Vents, new hiding spots and heavy-melee
     Tough Crates extend his stealth-roam and give his melee core uncontestable crate
     income.
 
     09-29 City Never Sleeps: no direct change; new districts/Steam Vents and heavy-melee
-    Tough-Crate routes fit his roam.
-
-    KB core_items cleaned of Decay/Toxic Bullets/Fortitude — none in current 30-day
-    usage; the ''Toxic Bullets bot'' framing is a 2026-04 artifact.'
+    Tough-Crate routes fit his roam.'
   builds:
   - name: Spirit melee bruiser
     damage: spirit
@@ -2853,10 +2916,11 @@ Victor:
   - tank/frontline
   tier: A
   trend: rising
-  why: 'Sustain frontline the camp meta feeds: harder Haunt camps, longer PvE routes
-    and Buff Container resist rolls all reward his Spirit Lifesteal/Healing Booster
-    stack — 56.4% WR is still the board''s second-highest. Still the one tank burst
-    and anti-heal can delete, and he drops the mirror to Abrams/Mo & Krill.'
+  why: 'Sustain frontline the patch actively fed: Spirit Lifesteal +2 spirit/+2% lifesteal,
+    Infuser 6->8 spirit with a 75% active lifesteal window and Torment Pulse +4% melee
+    resist all compound his grind-down shell, which is also the reliable answer to
+    Haunts that now hit 10% harder. Healing Booster''s rework delays the shell''s
+    early curve.'
   core_items:
   - High-Velocity Rounds
   - Extra Regen
@@ -2882,15 +2946,17 @@ Victor:
   - ranged poke / flyers (Vindicta)
   - tank stat-checks (Abrams, Mo & Krill)
   - CC
-  last_changed_patch: Minor Update - 07-09-2026
-  notes: '10-20 Shh...: no direct change; harder Haunt camps, longer PvE routes and
-    Buff Container Bullet/Spirit Resist rolls feed his sustain stack — A held.
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: 'Halloween 2026: Aura of Suffering T3 +15%->+16%; Spirit Lifesteal, Infuser
+    (6->8 spirit, 75% active lifesteal) and Torment Pulse +4% melee resist feed the
+    grind-down core, while Healing Booster lost its Extra Regen link and +3 regen
+    — buy it standalone, later.
+
+    10-20 Shh...: no direct change; harder Haunt camps, longer PvE routes and Buff
+    Container Bullet/Spirit Resist rolls feed his sustain stack — A held.
 
     09-29 City Never Sleeps: no direct change; hard Haunt camps fed his sustain stack,
-    flipping him from fair B-baseline to A on the 56.4% snapshot WR.
-
-    Data disagrees with the 07-16 creator read: Refresher/Echo Shard appear in none
-    of his top-15 buys.'
+    flipping him from fair B-baseline to A on the 56.4% snapshot WR.'
   builds:
   - name: Spirit sustain bruiser
     damage: spirit
@@ -2945,11 +3011,12 @@ Paige:
   - support/healer
   - lane bully
   tier: S
-  trend: rising
-  why: Lane-winning support whose pressure now converts straight into the patch's
-    early crate routes and Healing Snacks; she wins lane, then snowballs a carry before
-    trimmed comeback souls can rescue the enemy. 52.7% WR / 29.2% PR, near-even into
-    Rem/Ivy caps her dominance.
+  trend: falling
+  why: Still the best lane-winning support, but her lane itself got thinner — base
+    bullet damage 35->32 is roughly a 9% lane cut — and the new economy (tick souls
+    to the two poorest, 30% non-hero comeback cap, deficit-scaled secure rate) now
+    rescues exactly the carry she used to snowball past. She wins lane; the conversion
+    is slower than on 10-20.
   core_items:
   - High-Velocity Rounds
   - Opening Rounds
@@ -2972,17 +3039,20 @@ Paige:
   - burst assassins (Yamato, Lash, Holliday)
   - Rem
   - Ivy
-  - anti-heal (healing-item trims)
-  last_changed_patch: Minor Update - 09-16-2026
-  notes: '10-20 Shh...: no direct change; Healing Snacks let her lane pressure stick
-    instead of resetting on a recall, and lane-adjacent crate routes from ~2:30 pay
-    the lane winner immediately — S held.
+  - stacking anti-heal (multi-source Healbane, Toxic Bullets 40%, Crippling Headshot
+    40%)
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: '10-30 Halloween + Gameplay Update: base bullet 35->32 (~9% lane cut; growth
+    0.52->0.61 pays back later) and Bookwyrm T2 trail +2s->+1s; HVR velocity 60->45
+    weakens her 1.2-min buy — Opening Rounds before HVR is now the safer opener, and
+    comeback gold blunts the lead she converts.
+
+    10-20 Shh...: no direct change; Healing Snacks let her lane pressure stick instead
+    of resetting on a recall, and lane-adjacent crate routes from ~2:30 pay the lane
+    winner immediately — S held.
 
     City Never Sleeps: no direct change; lane-adjacent crate routes and Healing Snacks
-    reward her lane pressure, and the contested hubs suit her carry-snowball.
-
-    09-16: heavy-melee spirit scaling 0.3->0.45, Captivating Read T1 -11->-14s / T3
-    +1m->+2m; Slowing Hex cd 27->29s a minor tax.'
+    reward her lane pressure, and the contested hubs suit her carry-snowball.'
   builds:
   - name: Tempo support
     damage: hybrid
@@ -3035,10 +3105,10 @@ The Doorman:
   - burst caster
   tier: B
   trend: stable
-  why: Popular but not-winning setup initiator (46.5% WR) whose delayed payoff the
-    tempo read still punishes - but Bell Tower's single rope and ~280-soul payout
-    hand his Doorway a real kidnap play on the new top objective. Reach still comes
-    late and early snowball beats him.
+  why: Popular but not-winning setup initiator (46.5% WR) whose Call Bell damage is
+    fine but whose engage still arrives late; Luggage Cart T2 wall impact 75->90 gives
+    the Bell Tower rope-kidnap real damage, yet tempo dive reaches him before the
+    door is placed.
   core_items:
   - Mystic Burst
   - Extra Charge
@@ -3062,16 +3132,18 @@ The Doorman:
   - Doorway range cut 70->65m (08-12)
   - 'tempo meta: early snowball beats his delayed payoff'
   - Vortex Web/Slowing Hex being low-WR bait items
-  last_changed_patch: Minor Update - 08-12-2026
-  notes: '10-20 Shh...: no direct change; Bell Tower''s single rope + ~280 souls keeps
-    the Doorway kidnap real — pre-place the door at the base before roping up.
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: '10-30 Halloween + Gameplay Update: Luggage Cart T2 wall impact 75->90 is
+    a real engage buff (T3 is tagged nerf while the number moves -15s->-18s — direction
+    unclear, treat as neutral); Shadow Weave''s 6s pre-stealth wind-up and Steam Vents''
+    invis->stamina swap both slow the invis-kidnap line, and neither helps his setup.
+
+    10-20 Shh...: no direct change; Bell Tower''s single rope + ~280 souls keeps the
+    Doorway kidnap real — pre-place the door at the base before roping up.
 
     Paint the Town: no direct change; Bell Tower''s single rope and ~280-soul payout
     give his Doorway a real kidnap objective play, but tempo dive still beats his
-    setup.
-
-    09-16: no direct line; loses his Veil Walker disengage (Sprint Boots + movespeed-on-break
-    removed).'
+    setup.'
   builds:
   - name: Bell carry (AoE spirit)
     damage: spirit
@@ -3122,10 +3194,12 @@ Billy:
   - tank/frontline
   - lane bully
   tier: A
-  trend: falling
-  why: Lane-bully frontline whose all-in fits the contested-Haunt economy worse than
-    sustained uptime; the front-line slot has moved to rising Mo & Krill and anti-tank
-    Shiv remains his worst lane, so he sits below S.
+  trend: stable
+  why: Lane-bully frontline whose all-in got a longer, bigger durability window (Rising
+    Ram T3 +10%->+15% max HP for 16s->20s) plus a 25s Blasted cooldown, and the melee-front
+    archetype is up on Torment Pulse's +4% melee resist; he still bleeds to anti-tank
+    Shiv and to ranged kiting, and the new tick-soul economy trims the lane lead he
+    snowballs.
   core_items:
   - Spirit Snatch
   - Stalker
@@ -3144,26 +3218,32 @@ Billy:
   - Spirit Snatch
   - untouched core tank/Vitality items
   - lane-bully meta
+  - Torment Pulse +4% melee resist (AoE aura gains in exactly the corridor/melee fights
+    he starts)
+  - anti-tank counter Shiv hit by Radiant Regeneration's in-combat gate and Healbane
+    kill-heal 275->170
   - Lifestrike melee-heal + flyer-dragging slow buff (low confidence - item sits outside
     his top-15 30-day buys)
   - Fortitude regen buff
   countered_by:
-  - anti-tank bruisers (Shiv)
-  - anti-heal
-  - kiting / sustained ranged gun (Warden, Seven)
+  - anti-tank bruisers (Shiv — softened by the Radiant Regeneration trim)
+  - stacking anti-heal (multi-source Healbane, Toxic Bullets 40%)
+  - kiting / sustained ranged gun (Seven; Warden's HVR velocity 60->45 and Shadow
+    Weave rework make that lane softer)
   - sustain-peel (Ivy)
-  last_changed_patch: Minor Update - 08-12-2026
-  notes: '10-20 Shh...: no direct change; harder Haunt camps reward sustained frontline
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: '10-30 Halloween + Gameplay Update: Rising Ram T3 +10%->+15% max HP for 16s->20s
+    and Blasted 27->25s; Torment Pulse +4% melee resist plus the Radiant Regeneration/Healbane
+    trims on Shiv help, but tick souls to the two poorest blunt the lane lead he converts
+    and Spirit Shielding''s -3% spirit resist taxes his shred build.
+
+    10-20 Shh...: no direct change; harder Haunt camps reward sustained frontline
     presence, but Mo & Krill still owns the front-line slot and ranged corridor clear
     beats his all-in.
 
     10-16 Paint the Town: no direct change; behavior-varied Haunt camps and contested
     soul sources reward sustained presence, so his lane-bully all-in fits the economy
-    less.
-
-    10-05: no direct change; the trooper-speed fix marginally helps his lane-bully
-    all-in, but his real slide (slot lost to Mo & Krill, anti-tank Shiv climbing)
-    is unchanged.'
+    less.'
   builds:
   - name: Melee-range hybrid bruiser
     damage: hybrid
@@ -3217,10 +3297,12 @@ Graves:
   - late scaler
   tier: B
   trend: rising
-  why: 'Trap-clearing gun carry who finally has a job: her gun deletes Venator''s
-    pre-placed traps, making her a real counter-pick into a high-pick hero. The economy
-    still denies her ~25-minute window — worst early game of any carry, no comeback
-    bail-out — and Barrel Mimics punish her crate chains.'
+  why: 'Trap-clearing gun carry who still deletes Venator''s pre-placed traps, and
+    the one archetype the new economy actually fixes: tick souls to the two poorest,
+    a 30% non-hero comeback cap and up-to-50% faster secure when behind fund the ~25-minute
+    window she previously never reached. The summoner/cooldown shell is her real path
+    (Echo Shard post-cast 0.5->0.2s); the on-hit gun variant is taxed by Bullet Resilience
+    30->35% and the now-visible 10% bullet resist on Return Fire.'
   core_items:
   - Restorative Shot
   - Mystic Shot
@@ -3246,19 +3328,25 @@ Graves:
   - dive
   - out-scaling gun carries (Haze, Silver, Wraith, Warden)
   - slows
-  - tempo/comeback-nerf meta
+  - anti-gun-carry defences (Bullet Resilience 30->35%, Return Fire's now-visible
+    10% bullet resist)
   - Barrel Mimics (crate chains while low HP)
-  last_changed_patch: Shh... This Won't Hurt a Bit.
-  notes: '10-20 Shh...: tier C->B, trend rising — trap-clearing into Venator is a
-    real draft lever, but Barrel Mimics punish her low-HP, two-stamina crate chains
-    and the corridor economy still taxes her scaling window.
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: '10-30 Halloween + Gameplay Update: her documented ''no comeback bail-out''
+    weakness is reversed — 30% non-hero comeback cap, tick souls to the two poorest
+    and faster deficit secure fund the ~25-min window; Echo Shard post-cast 0.5->0.2s
+    helps the summoner core and Toxic Bullets 40% helps the on-hit line, while Bullet
+    Resilience 30->35% taxes the gun variant. Her direct line was flagged in-notes
+    but not parsed by the batch analysis — direction unresolved; win/pick snapshot
+    56.5%/40.9% still conflicts with the KB''s 48.5%/21% and needs a recheck.
+
+    10-20 Shh...: tier C->B, trend rising — trap-clearing into Venator is a real draft
+    lever, but Barrel Mimics punish her low-HP, two-stamina crate chains and the corridor
+    economy still taxes her scaling window.
 
     10-16 Paint the Town: her gun destroys Venator''s traps - genuine utility into
     an A-tier hero - but the earlier, contested soul economy still deletes her ~25-min
-    scaling line.
-
-    09-16: comeback souls trimmed and Rift resist made per-minute (comeback path gone);
-    health/boon 33->35 + Jar of Dead buffs are small; Toxic Bullets scaling buff marginal.'
+    scaling line.'
   builds:
   - name: Summoner/cooldown spirit
     damage: spirit
@@ -4185,88 +4273,256 @@ Violet:
   - spirit carry
   - burst caster
   - initiator
-  tier: B
-  trend: rising
-  why: Cooldown-gated spirit zoner who now farms like a frontline - 116 heavy melee
-    on Tough Crates and grouped Haunt camps - and decides Bell Tower/container contests
-    with a vision-blocking silence; 710 HP with no dash means any dive assassin deletes
-    her before the zone lands.
+  - late scaler
+  tier: C
+  trend: stable
+  why: 'Her systems fit is genuine — AoE on grouped Haunts, 116 heavy melee on Tough
+    Crates, and scheduled Bell Tower/Plaza contests all pay a zone caster — but the
+    results are not there: 46.1% WR at a 70.9% pick rate, losing to the meta''s frontlines
+    (Rat King 41%, Mo & Krill 41%) and to its best poke (Vindicta 39%). Her build
+    only converts at the T3/T4 tail (Boundless Spirit 54.4%, Superior Cooldown 52.9%)
+    which lands at 24-28 min, after tempo has usually decided the lobby. Every cheap
+    spirit and regen item she buys sits at her 46% baseline, so the popular build
+    is a ramp with no payoff until the game is already lost.'
   core_items:
-  - Boundless Spirit
+  - Extra Spirit
+  - Mystic Regeneration
+  - Radiant Regeneration
+  - Extra Charge
+  - Improved Spirit
+  - Rapid Recharge
   - Superior Cooldown
-  - Escalating Exposure
+  - Boundless Spirit
+  - Healing Booster
+  - Tankbuster
   build_variants:
   - Spirit caster (lead)
-  - Charge/utility
-  - Gun / fire-rate
+  - Anti-bruiser sustain
+  - Mystic Shot poke
   enabled_by:
-  - Superior Cooldown / Extra Charge — the kit is cooldown-gated, so cycling Flow
-    State, ult and Still Life is the whole game
-  - Objective-hub teamfights (Sunken Plaza, Bell Tower, Buff Container contests) where
-    a vision-blocking silence zone decides the fight
-  - Her standard 116 heavy melee — she can farm Tough Crates and grouped Haunt camps
-    like a frontline
+  - Grouped, chasing Haunt camps — AoE spirit clear is the fastest income in the off-lane
+    corridor meta
+  - Tough Crates (58 souls, guaranteed) — opened on her standard 116 heavy melee without
+    committing to a gun build
+  - Scheduled hub fights at Bell Tower (~280 souls, one rope, three vaults) and Sunken
+    Plaza plus Buff Container rolls, where a vision-blocking silence zone decides
+    the contest
+  - Superior Cooldown + Boundless Spirit — the kit is cooldown-gated and those are
+    the only two purchases above her baseline (52.9% / 54.4%)
+  - Tankbuster — the meta's frontline density (Rat King, Mo & Krill, Victor, Shiv,
+    Silver) makes %-HP spirit damage her best mid-game slot
   countered_by:
-  - Dive assassins (Holliday, Calico, Yamato, Lash) — no escape, low HP
-  - Long-range poke (Vindicta, Grey Talon) that outranges her zones
-  - Silence Wave / Disarming Hex / Knockdown — interrupt or cancel the Still Life
+  - Dive assassins (Lash, Holliday, Calico, Yamato) — no dash, 710 HP, no escape once
+    the engage lands
+  - Vindicta — 39% WR, outranges the zone and flyers are the one ranged archetype
+    she does not beat
+  - Frontline HP stacks (Rat King, Mo & Krill, Baba — all 41%) that walk through the
+    DoT
+  - Healbane / anti-heal — Radiant Regeneration (96%), Mystic Regeneration (93%) and
+    Healing Booster (78%) are near-universal, so one anti-heal item taxes most of
+    her spend
+  - Silence Wave / Knockdown / Disarming Hex — interrupt or cancel the Still Life
     gaze
-  - Healbane / anti-heal — undercuts Still Life's regen talents and Healing Booster
-  - Spirit Resilience / Debuff Reducer — blunts her DoT and exit-silence
   last_changed_patch: Released 2026-10-16
-  notes: '10-20 Shh...: provisional read holds; corridor farm, Tough Crates and Bell
-    Tower/container contests are exactly her fight shape, but the dive class is up
-    and she is still a 710-HP caster with no escape - B pending data.
+  notes: '7-day check-in (2026-10-23): tier B -> C, WR 50%, PR 64% over 539876 matches.
 
-
-    Day-0 kit read (2026-10-16), provisional - data check-in due 2026-10-23. Confidence
-    low: no ranked data, no creator read, kit judged from tooltips. Still Life''s
-    permanent stat bank is the swing factor - if it snowballs in a tempo meta she
-    is A, if games end before it pays she is a B/C. Watch whether the spirit build''s
-    high WR holds and whether anyone plays the gun line at all.'
+    Data corrects the day-0 read: B/rising was a tooltip judgment, so C is a correction,
+    not a decline — 46.1% WR at 70.9% PR, and she loses to frontline brawlers rather
+    than punishing melee. Watch whether her WR climbs with reps; the tooltip read
+    also claimed Seven and the gun line as wins, but Seven is 49% over 170 and Living
+    Ink/HVR no longer appear in her item data at all. 10-20 Shh...: no Violet changes;
+    her position moves on systems (Haunt grouping, Tough Crates, hub fights) and on
+    the dive/frontline meta around her.'
   builds:
   - name: Spirit caster (lead)
     damage: spirit
     core_items:
-    - Boundless Spirit
+    - Extra Spirit
+    - Mystic Regeneration
+    - Extra Charge
+    - Radiant Regeneration
+    - Improved Spirit
+    - Rapid Recharge
     - Superior Cooldown
-    - Escalating Exposure
-    - Spirit Lifesteal
-    - Diviner's Kevlar
+    - Boundless Spirit
     popularity: primary
-    notes: Superior Cooldown (~76% WR) and Escalating Exposure (~80% WR) are the standout
-      win items; the kit is cooldown-gated and DoT-based, so both fit.
-  - name: Charge/utility
+    notes: Cooldown/regen ramp into T3-T4 spirit; only Superior Cooldown (52.9%) and
+      Boundless Spirit (54.4%) beat her 46% baseline, and both land after 24 min —
+      the early stack is mandatory filler, not edge.
+  - name: Anti-bruiser sustain
     damage: spirit
     core_items:
-    - Extra Charge
-    - Duration Extender
-    - Mystic Burst
+    - Extra Regen
+    - Grit
+    - Spirit Shielding
+    - Healing Booster
+    - Tankbuster
     popularity: secondary
-    notes: Extra Charge is the most-picked early item (87%) but sits at ~46% WR —
-      people feel charge-starved, not that charges win.
-  - name: Gun / fire-rate
-    damage: gun
+    notes: Vitality/regen shell plus Tankbuster (57% share, 49.7% WR, 24.4 min) to
+      chew the Rat King/Mo & Krill/Victor/Shiv frontlines — her best-converting mid
+      item, but the regen half dies to Healbane.
+  - name: Mystic Shot poke
+    damage: hybrid
     core_items:
-    - High-Velocity Rounds
-    - Swift Striker
-    - Living Ink (T3)
+    - Mystic Shot
+    - Mystic Burst
     popularity: niche
-    notes: High-Velocity Rounds at 28% WR says the Living Ink gun line is bait despite
-      the T3 bullet-damage multiplier.
+    notes: Mystic Shot (47% share, 46.9%) is the only weapon-side item left in her
+      data; the Living Ink / High-Velocity Rounds gun line from the day-0 read has
+      fallen out of usage entirely.
   matchups:
     beats:
-    - Drifter
-    - Abrams
-    - Seven
+    - Grey Talon
+    - Deadman Danny
+    - Mina
+    - Paradox
     loses_to:
-    - Holliday
-    - Yamato
     - Vindicta
-  matchup_notes: Her exit-silence zone and gaze-stun punish melee who commit (Drifter,
-    Abrams) and casters whose channel/ult she can silence (Seven). She has no dash
-    and 710 HP, so dive assassins (Holliday, Calico, Yamato, Lash) and anything that
-    outranges her (Vindicta, Grey Talon) kill her before a fight starts.
-  confidence: 0.35
+    - Baba
+    - Mo & Krill
+    - Wraith
+    - Rat King
+  matchup_notes: She beats the grounded marksman/flyer tier (Grey Talon 54%, Deadman
+    Danny 51%) — 35% air drag and vent-fed approaches force them into her zone — while
+    Vindicta at 39% is the exception because she pokes from outside it. She loses
+    to HP-stacking frontlines (Rat King 41%, Mo & Krill 41%) that outlast the DoT,
+    and to Wraith's single-target burst; 710 HP with no dash means the zone lands
+    after she's dead. The dive class (Lash, Holliday, Calico, Yamato) is the same
+    structural problem even where the sample is too thin to list.
+  confidence: 0.6
   released_on: '2026-10-16'
-  provisional: true
+  provisional: false
+Nurse Harrow:
+  name: Nurse Harrow
+  role: marksman-support hybrid
+  archetypes:
+  - gun carry
+  - support/healer
+  tier: B
+  trend: stable
+  why: 'Nurse Harrow converts firing uptime into healing, and the rising melee-frontline
+    meta (Shiv, Billy, Rat King, Victor) is exactly the fight shape she wins — her
+    best win rates run 55-59% against frontliners she can kite and DoT, and hub fights
+    at Bell Tower and Sunken Plaza keep those fights grouped. She loses the range
+    war: Baba, Celeste and Wraith all trade from outside the fear cone while 730 HP,
+    zero regen and no dash leave her no answer. B holds — 50.6% at a 75% pick rate
+    is her real level rather than release noise, and her item curve (T3 spirit at
+    23-24 min, Ricochet at 27) is the one thing the tempo patch punishes.'
+  core_items:
+  - Extra Regen
+  - Extended Magazine
+  - Titanic Magazine
+  - Extra Stamina
+  - Kinetic Dash
+  - Healing Booster
+  - Extra Spirit
+  - Arcane Surge
+  - Superior Cooldown
+  - Superior Duration
+  build_variants:
+  - Mag-dump sustain
+  - Cooldown/Duration spirit
+  - Ricochet gun carry
+  enabled_by:
+  - Sustain-bruiser / melee-frontline meta (Shiv, Billy, Rat King, Victor, Mo & Krill
+    all up) — the fights she wins are long, grouped and close-range, where cone DoT
+    and AoE heal both pay
+  - Hub scheduling at Bell Tower, Sunken Plaza and Buff Container spawns — the map
+    now forces grouped fights on her terms
+  - Cast-on-press (10-20) — Leech into Vapors into Needles resolves on input, so her
+    combo no longer drops a window
+  - Buff Container permanent rolls — Leech Therapy eats buff duration and T3 Needles
+    extends her team's, so contested containers hand her value
+  - Ricochet (38% share, 59.1% WR) — bounces feed her gun-damage charge economy in
+    precisely the stacked fights the map creates
+  countered_by:
+  - Long-range spirit burst and zone control (Baba 43%, Celeste 45%, Wraith 46%) —
+    none of it enters the fear cone, and no dash or regen means the fight ends before
+    Healing Needles pay
+  - Healbane / Decay / Toxic Bullets — anti-heal is the archetype answer to a healer,
+    and all her sustain is healing-based
+  - Silencer / Cursed Relic / Knockdown — Lurking Terrors is a channel and her survivability
+    is ability-based; Knockdown stops the channel outright
+  - Plated Armor — the needle charge economy runs on gun damage, and Armor Piercing
+    Rounds is the answer but eats a slot she needs for uptime
+  - Off-angle dives and hooks — the fear cone only covers the facing arc, and Dynamo's
+    45% shows what an AoE engage does to her
+  - Lane bullies at the top (Paige, Apollo at S) — 0 base regen and 730 HP mean she
+    loses the attrition lane she is supposed to win
+  last_changed_patch: Released 2026-10-20
+  notes: '7-day check-in (2026-10-27): tier B -> B, WR 51%, PR 63% over 607252 matches.
+
+    Data overrides the day-0 read: Swift Striker, High-Velocity Rounds and Active
+    Reload show no meaningful share (Titanic Magazine is the weapon core at 98% /
+    6.7m), and the 7-day spread contains none of the dash assassins the fear-cone
+    thesis predicted.
+
+    Extra Regen is not the trap the previous note called it — 97% at 2.1m with a baseline
+    win rate makes it a mandatory lane tax for 0 base regen, indifferent rather than
+    informative.
+
+    Changelog: released 2026-10-20 in Shh... This Won''t Hurt a Bit., first full-week
+    check (7.3k matches, no creator content); nearly every item WR sits at 50.5-51%,
+    so build-level signals are weak and confidence is capped.'
+  builds:
+  - name: Mag-dump sustain
+    damage: gun
+    core_items:
+    - Extra Regen
+    - Extended Magazine
+    - Titanic Magazine
+    - Extra Stamina
+    - Kinetic Dash
+    - Healing Booster
+    popularity: primary
+    notes: 'The entire build lands before 10 minutes and buys uptime, not damage:
+      Titanic Magazine (98%) is her fire-rate package now that Swift Striker shows
+      no meaningful share, and Kinetic Dash plus Extra Stamina buy the dash her kit
+      lacks.'
+  - name: Cooldown/Duration spirit
+    damage: spirit
+    core_items:
+    - Extra Spirit
+    - Arcane Surge
+    - Improved Spirit
+    - Duration Extender
+    - Superior Cooldown
+    - Superior Duration
+    popularity: secondary
+    notes: Every item she buys after ~18 minutes in these games is spirit, and Superior
+      Cooldown (52.7%) and Superior Duration (52.0%) are her two best non-luxury win
+      rates — ability uptime, not raw spirit, is the payload.
+  - name: Ricochet gun carry
+    damage: gun
+    core_items:
+    - Titanic Magazine
+    - Extended Magazine
+    - Healing Booster
+    - Kinetic Dash
+    - Ricochet
+    popularity: niche
+    notes: Ricochet's 59.1% is the sample's biggest outlier and the natural T4 for
+      a charge economy fed by gun damage, but a 27-minute buy time means part of that
+      win rate is 'already winning'.
+  matchups:
+    beats:
+    - Billy
+    - Mina
+    - Solomon
+    - Shiv
+    - Pocket
+    loses_to:
+    - Baba
+    - Dynamo
+    - Celeste
+    - Wraith
+    - Ivy
+  matchup_notes: 'Lurking Terrors does its job on melee frontlines — Billy 59%, Shiv
+    55%, Pocket 55% — but the day-0 claim that it taxes dash assassins is unproven:
+    Holliday, Calico, Yamato and Drifter do not appear as wins anywhere in the window.
+    Losses cluster at range and on AoE engage: Baba 43%, Celeste 45%, Wraith 46% all
+    trade from outside the cone, and Dynamo''s 45% is a grouped initiation beating
+    her single-target heal.'
+  confidence: 0.6
+  released_on: '2026-10-20'
+  provisional: false
