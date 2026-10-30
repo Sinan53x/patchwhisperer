@@ -95,6 +95,17 @@ def test_invalid_tier_dropped(kb, caplog):
     assert "invalid tier" in caplog.text
 
 
+def test_invalid_item_tier_dropped(kb, caplog):
+    before_tier = kb.load_items()["Veil Walker"].tier
+    update = KBUpdate(item_updates={"Veil Walker": {"tier": "B", "role": "new role"}})
+    with caplog.at_level("WARNING"):
+        apply_kb_update(kb, update)
+    items = kb.load_items()
+    assert items["Veil Walker"].tier == before_tier
+    assert items["Veil Walker"].role == "new role"
+    assert "dropping invalid" in caplog.text
+
+
 def test_hotfix_path(kb, fake_llm, entity_index):
     patch = parse_patch(load_post("08-22-2026"), entity_index)
     # 08-22 has 12 General changes -> not a hotfix by rule; craft a tiny one
