@@ -13,6 +13,7 @@ from patchwhisperer.analysis.schemas import (
     AnalysisBundle,
     ChangeRow,
     HeroAnalysis,
+    HeroAudit,
     ItemAnalysis,
     KBHeroUpdate,
     KBUpdate,
@@ -60,6 +61,10 @@ STAGE_SECONDS: dict[str, float] = {}
 _NUM_TOKEN = re.compile(r"[+-]?\d+(?:\.\d+)?[a-zA-Z%]*")
 
 
+def _has_number(token: str, haystack: str) -> bool:
+    return bool(re.search(rf"(?<![\d.]){re.escape(token)}(?![\d.])", haystack))
+
+
 def guard_rows(
     rows: list[ChangeRow], raw_lines: list[str], owner: str = ""
 ) -> list[ChangeRow]:
@@ -76,9 +81,7 @@ def guard_rows(
         missing = [
             t
             for t in _NUM_TOKEN.findall(fields)
-            if not re.search(
-                rf"(?<![\d.]){re.escape(t.lstrip('+-'))}(?![\d.])", haystack
-            )
+            if not _has_number(t.lstrip("+-"), haystack)
         ]
         if missing:
             log.warning(
@@ -89,9 +92,15 @@ def guard_rows(
             )
         else:
             kept.append(r)
-    if kept:
-        return kept
-    return [ChangeRow(label="Change", text=line) for line in raw_lines]
+    if not kept:
+        return [ChangeRow(label="Change", text=line) for line in raw_lines]
+    # a line whose numbers appear in no surviving row was silently dropped
+    covered = " ".join(x for r in kept for x in (r.old, r.new, r.text) if x)
+    for line in raw_lines:
+        numbers = [t.lstrip("+-") for t in _NUM_TOKEN.findall(line)]
+        if numbers and not any(_has_number(n, covered) for n in numbers):
+            kept.append(ChangeRow(label="Change", text=line))
+    return kept
 
 
 def _raw_lines(changes: list[Change]) -> dict[str, list[str]]:
@@ -189,6 +198,68 @@ def _run_stage(
     return result
 
 
+def apply_hero_fixes(
+    heroes: HeroAnalysis, audit: HeroAudit, raw: dict[str, list[str]]
+) -> HeroAnalysis:
+    by_name = {h.hero: h for h in heroes.heroes}
+    for fix in audit.fixes:
+        entry = by_name.get(fix.hero)
+        if entry is None:
+            log.warning("audit: ignoring fix for unknown hero %r", fix.hero)
+            continue
+        log.info("audit: %s: %s", fix.hero, fix.issue)
+        for field in ("change_kind", "change_size", "verdict", "one_liner"):
+            value = getattr(fix, field)
+            if value:
+                setattr(entry, field, value)
+        if fix.rows:
+            entry.rows = guard_rows(fix.rows, raw.get(fix.hero, []), owner=fix.hero)
+    return heroes
+
+
+def _audit_heroes(
+    llm,
+    kb: KBStore,
+    patch_id: str,
+    heroes: HeroAnalysis,
+    h_changes: list[Change],
+    common: dict,
+) -> HeroAnalysis:
+    """Second-reader pass over stage 3. It only improves accuracy, so a failed
+    call keeps the unaudited entries instead of losing the patch."""
+    changed = {c.entity_name for c in h_changes}
+    entries = [h for h in heroes.heroes if h.hero in changed]
+    raw = _raw_lines(h_changes)
+    size = config.STAGE3_HERO_BATCH
+    for i in range(0, len(entries), size):
+        batch = entries[i : i + size]
+        names = {h.hero for h in batch}
+        try:
+            audit = _run_stage(
+                llm,
+                kb,
+                patch_id,
+                3,
+                "stage3_audit",
+                HeroAudit,
+                tag=f"3a{i // size + 1}",
+                budget_key="3b",
+                **common,
+                hero_changes=ctx.format_changes(
+                    [c for c in h_changes if c.entity_name in names]
+                ),
+                entries_json=json.dumps(
+                    [h.model_dump(exclude={"indirect_reasons", "build_changes"}) for h in batch],
+                    indent=1,
+                ),
+            )
+        except Exception:
+            log.exception("stage 3 audit failed for batch %d", i // size + 1)
+            continue
+        apply_hero_fixes(heroes, audit, raw)
+    return heroes
+
+
 def _run_hero_analysis(
     llm,
     kb: KBStore,
@@ -205,7 +276,6 @@ def _run_hero_analysis(
     expected = ctx.expected_hero_names(kb, h_changes)
     changed = {c.entity_name for c in h_changes}
     raw_h = _raw_lines(h_changes)
-    corrections = kb.load_corrections()
 
     def call(names: list[str], tag: str) -> HeroAnalysis:
         kb_names = ctx.hero_names_with_matchups(kb, names)
@@ -225,7 +295,6 @@ def _run_hero_analysis(
             hero_changes=ctx.format_changes(h_changes),
             heroes_kb=ctx.heroes_kb_subset(kb, kb_names),
             snapshot=snap_txt,
-            corrections=corrections,
             batch_heroes=", ".join(names),
         )
 
@@ -242,6 +311,7 @@ def _run_hero_analysis(
         missing = uncovered_heroes(heroes, expected, changed)
     if missing:
         raise RuntimeError(f"stage 3 did not cover heroes: {missing}")
+    heroes = _audit_heroes(llm, kb, patch_id, heroes, h_changes, common)
     (pdir / "stage3.json").write_text(heroes.model_dump_json(indent=1))
     return heroes
 
@@ -268,6 +338,7 @@ def run_analysis(
         "patch_date": f"{patch.date:%Y-%m-%d}",
         "creator_sources": creator_sources or "(none)",
         "digest_summary": patch.digest_summary or "(n/a)",
+        "corrections": kb.load_corrections(),
     }
     sys_changes = ctx.system_changes(patch)
     it_changes = ctx.item_changes(patch)

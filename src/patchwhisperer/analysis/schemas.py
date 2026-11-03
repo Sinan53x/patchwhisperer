@@ -7,6 +7,7 @@ UpDown = Literal["up", "down", "neutral"]
 Tier = Literal["S", "A", "B", "C", "D"]
 Verdict = Literal["keep", "watch", "bench"]
 Effect = Literal["good", "bad", "neutral"]
+ChangeKind = Literal["buff", "nerf", "rework", "adjusted", "none"]
 
 
 class ChangeRow(BaseModel):
@@ -91,6 +92,23 @@ class HeroEntry(BaseModel):
     one_liner: str = ""
     verdict: Verdict | None = None
     rows: list[ChangeRow] = []
+    # what the notes did, kept apart from direction, which also weighs items and systems
+    change_kind: ChangeKind = "none"
+    change_size: Literal["none", "minor", "moderate", "major"] = "none"
+
+
+class HeroFix(BaseModel):
+    hero: str = Field(min_length=1)
+    issue: str = ""
+    change_kind: ChangeKind | None = None
+    change_size: Literal["minor", "moderate", "major"] | None = None
+    verdict: Verdict | None = None
+    one_liner: str | None = None
+    rows: list[ChangeRow] | None = None
+
+
+class HeroAudit(BaseModel):
+    fixes: list[HeroFix] = []
 
 
 class HeroAnalysis(BaseModel):

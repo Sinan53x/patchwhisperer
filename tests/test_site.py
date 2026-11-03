@@ -353,3 +353,17 @@ def test_picker_payload_is_json_safe(built):
     heroes = json.loads(payload)
     assert {h["slug"] for h in heroes} >= {"infernus", "abrams", "wraith"}
     assert "<" not in payload
+
+
+def test_board_follows_the_notes_kind_not_the_net_direction():
+    def buffed_but_hurt_by_items(analysis, patch):
+        h = next(h for h in analysis.heroes.heroes if h.hero == "Abrams")
+        h.direction = "down"
+        h.change_kind = "buff"
+        h.change_size = "moderate"
+
+    page = _fixture_page(buffed_but_hurt_by_items)
+    abrams = next(h for h in page.heroes if h.name == "Abrams")
+    assert abrams.board_group == "buff"
+    assert abrams.kind_word == "Buffed"
+    assert abrams.chevrons == 2

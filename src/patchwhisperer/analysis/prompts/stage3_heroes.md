@@ -75,6 +75,18 @@ Example (Mirage's Traveler):
 {"label": "Base ability", "text": "Now includes a barrier (no scaling)", "effect": "good", "ability": "Traveler"}
 ```
 
+## Reporting what the notes did
+
+`change_kind` and `change_size` describe **only the hero's own note lines**, never items, systems or the meta. Those belong in `direction`, `indirect_reasons`, `tier_after` and `verdict`.
+
+- `buff`: the lines clearly make the hero stronger. `nerf`: clearly weaker. `none`: no direct lines.
+- `rework`: an ability works differently, not just with different numbers. Crowd control changing type, a talent swapped for a different effect, or a new or removed mechanic is a rework even when numbers around it improve.
+- `adjusted`: trade-offs that roughly cancel, or only bug fixes.
+
+Judge mechanical changes by what the ability **can no longer do**. A stun becoming an immobilize loses the stun's ability to interrupt channels, so that row is `bad` and it leads the `one_liner`, however good the longer duration looks. Never call a hero buffed while a core mechanic was taken away.
+
+The `one_liner` leads with the biggest direct change. Any claim from items or systems names its cause. Do not state facts absent from the notes, the knowledge base or the corrections. A bug fix is `neutral` and labelled as a fix unless it clearly helps or hurts.
+
 ## Output schema
 
 {
@@ -92,6 +104,8 @@ Example (Mirage's Traveler):
       "tier_after": "S|A|B|C|D",
       "one_liner": "<= 20 words a player would actually say about this hero after the patch",
       "verdict": "keep|watch|bench",
+      "change_kind": "buff|nerf|rework|adjusted|none",
+      "change_size": "none|minor|moderate|major",
       "rows": [{"label": "1-3 words", "old": "before", "new": "after", "effect": "good|bad|neutral", "ability": "optional exact name"}]
     }
   ]

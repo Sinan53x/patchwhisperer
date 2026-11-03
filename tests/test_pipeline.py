@@ -12,6 +12,7 @@ from patchwhisperer.analysis.llm import (
 )
 from patchwhisperer.analysis.pipeline import (
     _merge_hero_analyses,
+    apply_hero_fixes,
     apply_kb_update,
     guard_rows,
     run_analysis,
@@ -20,7 +21,9 @@ from patchwhisperer.analysis.pipeline import (
 from patchwhisperer.analysis.schemas import (
     ChangeRow,
     HeroAnalysis,
+    HeroAudit,
     HeroEntry,
+    HeroFix,
     KBUpdate,
 )
 from patchwhisperer.kb.schema import HeroState
@@ -426,3 +429,46 @@ def test_written_patch_json_loads_back_without_the_raw_post(tmp_path):
         patch.model_dump_json(exclude={"raw_bbcode"})
     )
     assert reloaded.raw_bbcode == ""
+
+
+def test_audit_fix_replaces_the_mislabelled_fields_and_keeps_the_number_guard():
+    heroes = HeroAnalysis(
+        heroes=[
+            HeroEntry(
+                hero="Apollo",
+                direction="up",
+                one_liner="Big buff",
+                verdict="keep",
+                change_kind="buff",
+            )
+        ]
+    )
+    audit = HeroAudit(
+        fixes=[
+            HeroFix(
+                hero="Apollo",
+                issue="Stun became immobilize",
+                change_kind="rework",
+                one_liner="No longer stuns",
+                rows=[
+                    ChangeRow(label="Pommel Hit", old="Stun", new="Immobilize", effect="bad"),
+                    ChangeRow(label="Made up", old="1s", new="9s", effect="good"),
+                ],
+            ),
+            HeroFix(hero="Nobody", issue="ignored"),
+        ]
+    )
+    raw = {"Apollo": ["Pommel Hit changed from a stun to an immobilize"]}
+    entry = apply_hero_fixes(heroes, audit, raw).heroes[0]
+    assert entry.change_kind == "rework"
+    assert entry.one_liner == "No longer stuns"
+    assert entry.verdict == "keep"
+    assert [r.label for r in entry.rows] == ["Pommel Hit"]
+
+
+def test_guard_restores_a_numbered_line_no_row_mentions():
+    rows = [ChangeRow(label="Cooldown", old="20s", new="24s", effect="bad")]
+    lines = ["Cooldown increased from 20s to 24s", "Radius reduced from 8m to 6m"]
+    kept = guard_rows(rows, lines)
+    assert kept[-1].text == "Radius reduced from 8m to 6m"
+    assert len(kept) == 2

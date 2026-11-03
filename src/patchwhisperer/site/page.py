@@ -21,9 +21,16 @@ _CHEVRONS = {"major": 3, "moderate": 2, "minor": 1}
 _HERO_GROUPS = [
     ("buff", "Buffed", "▲"),
     ("nerf", "Nerfed", "▼"),
-    ("rework", "Mixed or reworked", "↻"),
+    ("rework", "Reworked", "↻"),
+    ("adjusted", "Adjusted", "≈"),
     ("indirect", "Not in the notes, still affected", "◆"),
 ]
+_KIND_WORD = {
+    "buff": "Buffed",
+    "nerf": "Nerfed",
+    "rework": "Reworked",
+    "adjusted": "Adjusted",
+}
 _TEMPO = {
     "toward_tempo": ("Games shift toward early tempo", -1),
     "toward_scaling": ("Games shift toward late scaling", 1),
@@ -70,6 +77,7 @@ class HeroCardView(BaseModel):
     build_changes: list[str] = []
     board_group: str | None = None
     chevrons: int = 0
+    kind_word: str = ""
 
 
 class HeroGroupView(BaseModel):
@@ -284,9 +292,11 @@ def _group_deltas(groups: list[RowGroupView]) -> list[DeltaView]:
     ]
 
 
-def _board_group(direct: bool, direction: str) -> str | None:
+def _board_group(direct: bool, kind: str, direction: str) -> str | None:
     if direct:
-        return {"up": "buff", "down": "nerf"}.get(direction, "rework")
+        if kind != "none":
+            return kind
+        return {"up": "buff", "down": "nerf"}.get(direction, "adjusted")
     return "indirect" if direction != "neutral" else None
 
 
@@ -347,8 +357,16 @@ def build_page_model(analysis: AnalysisBundle, patch: Patch, art) -> PatchPageMo
                     pool_rank=rank,
                     magnitude=entry.magnitude,
                     in_notes=entry.hero in direct,
-                    board_group=_board_group(entry.hero in direct, entry.direction),
-                    chevrons=_CHEVRONS.get(entry.magnitude, 0),
+                    board_group=_board_group(
+                        entry.hero in direct, entry.change_kind, entry.direction
+                    ),
+                    chevrons=_CHEVRONS.get(
+                        entry.change_size
+                        if entry.change_kind != "none"
+                        else entry.magnitude,
+                        0,
+                    ),
+                    kind_word=_KIND_WORD.get(entry.change_kind, ""),
                     one_liner=entry.one_liner,
                     tier_chip=tier_chip,
                     groups=groups,
@@ -356,7 +374,7 @@ def build_page_model(analysis: AnalysisBundle, patch: Patch, art) -> PatchPageMo
                     build_changes=entry.build_changes,
                 )
             )
-    heroes.sort(key=lambda h: (_MAGNITUDE_RANK.get(h.magnitude, 4), h.name))
+    heroes.sort(key=lambda h: (-h.chevrons, h.name))
 
     hero_groups = [
         HeroGroupView(

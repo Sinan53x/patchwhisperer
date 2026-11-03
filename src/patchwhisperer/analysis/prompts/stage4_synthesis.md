@@ -3,6 +3,10 @@
 Patch: {{patch_title}} ({{patch_date}})
 Change counts: {{change_counts}}
 
+## Reader corrections (authoritative, overrides the knowledge base)
+
+{{corrections}}
+
 ## Update summary
 
 {{digest_summary}}

@@ -11,7 +11,6 @@ Games are won by converting a lead into Guardians/Walkers before the comeback ec
 - Objective parries no longer reset the parry cooldown — Guardian/Shrine dives are one-shot.
 - Respawn 38s at 20m. Global slows -20%; air drag ratio 0.5 (was 0.35) — airborne exits are slower, ground kiting stronger, flyers taxed harder.
 - Steam Vents no longer grant invisibility; they grant +150% stamina regen. Vents are a fight-mobility battery now, not a gank setup tool.
-- Broker spawns ~30 min then every ~15 min, off-map and relocating; Corrupted rolls are public and symmetric.
 - Cast-on-press holds; Healing Snacks 10% max HP unchanged.
 
 ## Map
@@ -30,7 +29,7 @@ Lanes renamed; four districts plus off-lane corridors. All neutrals are one of n
 - Flyers: down — air drag 0.5 plus reliable grounding (Grey Talon, Celeste, Vindicta, Deadman Danny).
 
 ## Watchlist
-- Average game length and share of games reaching the ~30-min Broker — if flat, comeback gold is going into fights, not items.
+- Average game length: if flat, comeback gold is going into fights, not items.
 - Steal rate on contested Haunt souls: does the jungle become a fight zone?
 - Radiant Regeneration buy rate and Juggernaut/lifesteal uptake — proxy for whether regen died or re-slotted into in-fight sustain.
 - Double anti-heal comps (Healbane + Toxic Bullets/Crippling Headshot) into Kelvin/Ivy/Rem.

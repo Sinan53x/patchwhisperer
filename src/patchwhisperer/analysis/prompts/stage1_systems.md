@@ -2,6 +2,10 @@
 
 Patch: {{patch_title}} ({{patch_date}})
 
+## Reader corrections (authoritative, overrides the knowledge base)
+
+{{corrections}}
+
 ## Current meta thesis (knowledge base, written before this patch)
 
 {{meta_md}}

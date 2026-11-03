@@ -90,14 +90,14 @@
       <button type="button" data-view="pool" aria-pressed="false">My pool</button>
     </div>
   </div>
-  <p class="legend muted"><span class="dot v-keep"></span>Keep <span class="dot v-watch"></span>Watch <span class="dot v-bench"></span>Bench <span class="legend-sep">Arrows show how big the change is</span></p>
+  <p class="legend muted"><span class="dot v-keep"></span>Keep <span class="dot v-watch"></span>Watch <span class="dot v-bench"></span>Bench <span class="legend-sep">Ring is whether to keep playing them. Arrows show how big the change is</span></p>
   {%- for g in page.hero_groups %}
   <div class="hero-group g-{{ g.key }}" data-group>
     <h3 class="group-head"><span aria-hidden="true">{{ g.glyph }}</span> {{ g.label }} <span class="count" data-count>{{ g.heroes|length }}</span></h3>
     <div class="tile-grid">
       {%- for h in g.heroes %}
-      <a class="tile" href="#hero-{{ h.slug }}" data-sheet="hero-{{ h.slug }}" data-slug="{{ h.slug }}" data-verdict="{{ h.verdict or '' }}" aria-label="{{ h.name }}, {{ h.badge_word }}, {{ h.magnitude }} change">
-        <span class="tile-art">{{ face(h.name, h.initials, h.portrait, h.badge_class) }}{{ chev(h.chevrons, h.direction) }}</span>
+      <a class="tile" href="#hero-{{ h.slug }}" data-sheet="hero-{{ h.slug }}" data-slug="{{ h.slug }}" data-verdict="{{ h.verdict or '' }}" aria-label="{{ h.name }}, {{ h.kind_word or h.direction }}, verdict {{ h.badge_word }}">
+        <span class="tile-art">{{ face(h.name, h.initials, h.portrait, h.badge_class) }}{% if h.board_group == 'rework' %}<span class="dir-badge d-rework" aria-hidden="true">↻</span>{% else %}{{ chev(h.chevrons, {'buff': 'up', 'nerf': 'down'}.get(h.board_group, h.direction if h.board_group == 'indirect' else 'neutral')) }}{% endif %}</span>
         <span class="tile-name">{{ h.name }}</span>
       </a>
       {%- endfor %}
@@ -204,6 +204,7 @@
       {{ face(h.name, h.initials, h.portrait, h.badge_class) }}
       <div>
         <div class="hero-line"><h3>{{ h.name }}</h3>{% if h.tier_chip %}<span class="tier-chip">{{ h.tier_chip }}</span>{% endif %}<span class="badge {{ h.badge_class }}">{{ h.badge_word }}</span></div>
+        {%- if h.kind_word %}<p class="kind-line k-{{ h.board_group }}">{{ h.kind_word }} in this patch</p>{% elif not h.in_notes %}<p class="kind-line">Not in the notes</p>{% endif %}
         <p class="muted one-liner">{{ h.one_liner }}</p>
       </div>
     </header>

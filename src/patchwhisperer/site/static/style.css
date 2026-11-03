@@ -77,6 +77,7 @@ button { font: inherit; color: inherit; }
 .stat dd { font-size: 26px; line-height: 1.2; font-weight: 700; font-variant-numeric: tabular-nums; }
 .s-buff dd { color: var(--keep); }
 .s-nerf dd { color: var(--bench); }
+.s-rework dd { color: var(--accent); }
 .meta { margin-top: 18px; font-size: 13px; }
 
 /* sections */
@@ -182,7 +183,8 @@ button { font: inherit; color: inherit; }
 .count { margin-left: auto; font-size: 12px; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; }
 .g-buff .group-head { color: var(--keep); border-color: color-mix(in srgb, var(--keep) 45%, transparent); }
 .g-nerf .group-head { color: var(--bench); border-color: color-mix(in srgb, var(--bench) 45%, transparent); }
-.g-rework .group-head { color: var(--text); border-color: var(--line-strong); }
+.g-rework .group-head { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+.g-adjusted .group-head { color: var(--text); border-color: var(--line-strong); }
 .g-indirect .group-head { color: var(--muted); }
 
 .tile-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 18px 6px; }
@@ -236,6 +238,7 @@ button { font: inherit; color: inherit; }
   transition: transform 0.15s ease;
 }
 .item-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tile-art .dir-badge.d-rework { color: var(--accent); }
 .dir-badge {
   position: absolute;
   right: -5px;
@@ -361,6 +364,10 @@ button { font: inherit; color: inherit; }
 .sheet-head { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 18px; padding-left: 2px; padding-top: 2px; }
 .hero-line { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; }
 .hero-line h3 { font-size: 20px; line-height: 1.25; font-weight: 700; letter-spacing: -0.01em; }
+.kind-line { margin-top: 2px; font-size: 12px; font-weight: 700; color: var(--muted); }
+.k-buff { color: var(--keep); }
+.k-nerf { color: var(--bench); }
+.k-rework { color: var(--accent); }
 .one-liner { margin-top: 4px; font-size: 14px; line-height: 1.4; }
 .tier-chip {
   padding: 1px 8px;

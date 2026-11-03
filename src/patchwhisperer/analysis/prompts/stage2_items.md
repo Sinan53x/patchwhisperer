@@ -2,6 +2,10 @@
 
 Patch: {{patch_title}} ({{patch_date}})
 
+## Reader corrections (authoritative, overrides the knowledge base)
+
+{{corrections}}
+
 ## Systems analysis of this patch (already done)
 
 {{stage1_json}}
