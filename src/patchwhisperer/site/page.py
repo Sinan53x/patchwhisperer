@@ -172,7 +172,7 @@ def _fallback_groups(
             groups.append(group)
         group.rows.append(
             RowView(
-                label=key or "Change",
+                label=change.field or change.ability or "Note",
                 text=change.raw,
                 effect=_DIRECTION_EFFECT.get(change.direction, "neutral"),
             )
