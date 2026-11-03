@@ -138,6 +138,7 @@ def analyze(
     dry_run: bool = typer.Option(False, "--dry-run"),
     no_kb_update: bool = typer.Option(False, "--no-kb-update"),
     model: str = typer.Option("", "--model"),
+    kb_root: Annotated[Path, typer.Option("--kb-root")] = Path("kb"),
     notes: Annotated[Path | None, typer.Option("--notes")] = None,
     sources: bool = typer.Option(False, "--sources/--no-sources"),
     out: Annotated[Path | None, typer.Option("--out")] = None,
@@ -154,7 +155,7 @@ def analyze(
         )
         raise typer.Exit(0)
     index = EntityIndex.load()
-    kb = KBStore(KB_ROOT)
+    kb = KBStore(kb_root)
     llm = LLMClient(model=model or config.LLM_MODEL)
     patch = prepare_patch(
         post, index, kb, llm, notes=notes.read_text() if notes else None
@@ -184,7 +185,7 @@ def analyze(
         llm,
         update_kb=not no_kb_update,
         creator_sources=actx.creator_sources_since(
-            KB_ROOT / "sources", post.date.date()
+            kb_root / "sources", post.date.date()
         )
         if sources
         else "",
@@ -257,12 +258,27 @@ def demo(
     for stem, prompt_name in {
         "stage1": "stage1_systems",
         "stage2": "stage2_items",
-        "stage3": "stage3_heroes",
         "stage4": "stage4_synthesis",
         "stage5": "stage5_pool",
         "stage6": "stage6_kb_update",
     }.items():
         canned[stage_marker(prompt_name)] = [(src / f"{stem}.json").read_text()]
+    # stage 3 runs in batches now: split the recorded full analysis to match
+    s3_heroes = {
+        h["hero"]: h
+        for h in json.loads((src / "stage3.json").read_text())["heroes"]
+    }
+    expected = ctx.expected_hero_names(kb, ctx.hero_changes(patch))
+    canned[stage_marker("stage3_heroes")] = [
+        json.dumps(
+            {
+                "heroes": [
+                    s3_heroes[n] for n in expected[i : i + config.STAGE3_HERO_BATCH] if n in s3_heroes
+                ]
+            }
+        )
+        for i in range(0, len(expected), config.STAGE3_HERO_BATCH)
+    ]
     canned[stage_marker("stage6_kb_heroes")] = [
         (src / f"stage6h{i}.json").read_text() for i in range(1, 5)
     ]

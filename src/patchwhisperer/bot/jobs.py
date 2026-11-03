@@ -181,6 +181,12 @@ def analyze_and_post(
         )
         kb_updated = False
         patch_dir = kb.patch_dir(patch_id)
+        # publish the analysis artifacts now so a stage-6 failure cannot keep
+        # them off the website; the KB update commit below still lands later
+        try:
+            commit_fn(repo_root, [patch_dir], f"kb: {patch.title} (analysis)")
+        except Exception:
+            log.exception("early patch commit failed for %s", patch_id)
         if not hotfix:
             try:
                 kb_update = run_kb_update(patch, kb, bundle, llm)
