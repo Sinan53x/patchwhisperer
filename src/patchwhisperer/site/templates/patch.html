@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.headline }} · PatchWhisperer</title>
+<meta property="og:title" content="{{ page.headline }}">
+<meta property="og:description" content="{{ page.title }} patch analysis · {{ page.date_display }}">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="{{ rel }}style.css">
+</head>
+<body>
+<main class="wrap">
+<header class="card header">
+  <p class="eyebrow">{{ page.title }} · {{ page.date_display }}</p>
+  <h1>{{ page.headline }}</h1>
+  <p class="muted">{{ page.patch_size }} patch · <a href="{{ page.url }}" rel="noopener">official notes</a> · <a href="{{ rel }}patches/">all patches</a></p>
+</header>
+
+<section class="card" id="pool" aria-label="Your pool">
+  <div class="section-head">
+    <h2>Your pool</h2>
+    <button id="pool-edit" class="btn" type="button">Edit</button>
+  </div>
+  <p id="pool-empty" class="muted">Pick the heroes you play to pin their verdicts here.</p>
+  <div id="pool-grid" class="pool-grid"></div>
+</section>
+
+<dialog id="pool-picker" class="picker">
+  <div class="section-head">
+    <h2>Your pool</h2>
+    <button id="picker-done" class="btn" type="button">Done</button>
+  </div>
+  <p class="muted">Tap heroes to add or remove them.</p>
+  <div id="picker-grid" class="picker-grid"></div>
+</dialog>
+
+<section class="card" id="heroes" aria-label="All heroes">
+  <h2>All heroes</h2>
+  <div class="filters">
+    {% for chip in page.chips %}
+    <button class="chip{% if chip.key == 'all' %} active{% endif %}" type="button" data-filter="{{ chip.key }}">{{ chip.label }}</button>
+    {% endfor %}
+    <label class="chip toggle"><input type="checkbox" id="in-notes" checked> Only heroes in the notes</label>
+  </div>
+  <div id="hero-list">
+    {% for h in page.heroes %}
+    <details class="hero-card" id="hero-{{ h.slug }}" data-verdict="{{ h.verdict or '' }}" data-direction="{{ h.direction }}" data-in-notes="{{ '1' if h.in_notes else '0' }}">
+      <summary>
+        <span class="portrait {{ h.badge_class }}">
+          {%- if h.portrait %}<img src="{{ rel }}{{ h.portrait }}" alt="{{ h.name }}" loading="lazy" width="56" height="56">{%- else %}<span class="initials" aria-hidden="true">{{ h.initials }}</span>{%- endif %}
+        </span>
+        <span class="hero-head">
+          <span class="hero-line">
+            <span class="hero-name">{{ h.name }}</span>
+            {%- if h.tier_chip %} <span class="tier-chip">{{ h.tier_chip }}</span>{% endif %}
+            <span class="badge {{ h.badge_class }}">{{ h.badge_word }}</span>
+          </span>
+          <span class="one-liner muted">{{ h.one_liner }}</span>
+        </span>
+      </summary>
+      {%- if h.groups %}
+      <div class="rows">
+        {%- for g in h.groups %}
+        <div class="row-group">
+          {%- if g.ability %}
+          <h4 class="ability-head">{%- if g.icon %}<img src="{{ rel }}{{ g.icon }}" alt="" class="ability-icon" loading="lazy" width="20" height="20">{% endif %}{{ g.ability }}</h4>
+          {%- elif h.groups|length > 1 %}
+          <h4 class="ability-head">General</h4>
+          {%- endif %}
+          {%- for r in g.rows %}
+          <div class="row">
+            <span class="row-label">{{ r.label }}</span>
+            <span class="row-value e-{{ r.effect }}">
+              {%- if r.old and r.new %}<s class="old">{{ r.old }}</s> <span class="arrow" aria-hidden="true">→</span> <b>{{ r.new }}</b>{% else %}{{ r.text }}{% endif %}
+            </span>
+          </div>
+          {%- endfor %}
+        </div>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+      {%- if h.indirect_reasons %}
+      <h4 class="sub muted">Why it matters</h4>
+      <ul class="reasons">
+        {%- for r in h.indirect_reasons %}<li>{{ r }}</li>{% endfor %}
+      </ul>
+      {%- endif %}
+      {%- if h.build_changes %}
+      <h4 class="sub muted">Build changes</h4>
+      <ul class="reasons">
+        {%- for r in h.build_changes %}<li>{{ r }}</li>{% endfor %}
+      </ul>
+      {%- endif %}
+    </details>
+    {% endfor %}
+  </div>
+</section>
+
+{%- if page.item_groups %}
+<section class="card" id="items" aria-label="Items">
+  <h2>Items</h2>
+  {%- for g in page.item_groups %}
+  <h3 class="cat">{{ g.category }}</h3>
+  <div class="item-grid">
+    {%- for it in g.items %}
+    <details class="item-tile m-{{ it.magnitude }}">
+      <summary>
+        <span class="item-icon">
+          {%- if it.icon %}<img src="{{ rel }}{{ it.icon }}" alt="{{ it.name }}" loading="lazy" width="56" height="56">{%- else %}<span class="initials" aria-hidden="true">{{ it.initials }}</span>{%- endif %}
+          <span class="dir-badge d-{{ it.direction }}" aria-hidden="true">{%- if it.direction == 'buff' %}↑{%- elif it.direction == 'nerf' %}↓{%- elif it.direction == 'rework' %}↻{%- else %}·{% endif %}</span>
+        </span>
+        <span class="item-name">{{ it.name }}</span>
+      </summary>
+      <div class="item-detail">
+        <span class="sr-only">Direction: {{ it.direction }}. Magnitude: {{ it.magnitude }}.</span>
+        <p>{{ it.summary }}</p>
+        {%- if it.build_shift %}<p class="muted">{{ it.build_shift }}</p>{% endif %}
+        {%- if it.groups %}
+        <div class="rows">
+          {%- for g2 in it.groups %}
+          <div class="row-group">
+            {%- if g2.ability %}<h4 class="ability-head">{{ g2.ability }}</h4>{% endif %}
+            {%- for r in g2.rows %}
+            <div class="row">
+              <span class="row-label">{{ r.label }}</span>
+              <span class="row-value e-{{ r.effect }}">
+                {%- if r.old and r.new %}<s class="old">{{ r.old }}</s> <span class="arrow" aria-hidden="true">→</span> <b>{{ r.new }}</b>{% else %}{{ r.text }}{% endif %}
+              </span>
+            </div>
+            {%- endfor %}
+          </div>
+          {%- endfor %}
+        </div>
+        {%- endif %}
+      </div>
+    </details>
+    {%- endfor %}
+  </div>
+  {%- endfor %}
+</section>
+{%- endif %}
+
+{%- if page.systems or page.what_to_watch %}
+<section class="card" id="systems" aria-label="Systems">
+  <h2>Systems</h2>
+  {%- for s in page.systems %}
+  <div class="system">
+    <div class="system-head">
+      <h3>{{ s.name }}</h3>
+      <span class="mag m-{{ s.magnitude }}">{{ s.magnitude }}</span>
+    </div>
+    <p>{{ s.change_summary }}</p>
+    {%- if s.effect_on_play %}<p class="muted">{{ s.effect_on_play }}</p>{% endif %}
+  </div>
+  {%- endfor %}
+  {%- if page.what_to_watch %}
+  <h3 class="sub muted">What to watch</h3>
+  <ul class="reasons">
+    {%- for w in page.what_to_watch %}<li>{{ w }}</li>{% endfor %}
+  </ul>
+  {%- endif %}
+</section>
+{%- endif %}
+</main>
+
+<footer class="footer muted">
+  <p>Unofficial fan project, not affiliated with or endorsed by Valve. Deadlock and its art belong to Valve. Analysis is AI-generated and can be wrong; check the <a href="{{ page.url }}" rel="noopener">official notes</a>.</p>
+  <p><a href="https://github.com/Sinan53x/patchwhisperer" rel="noopener">GitHub</a></p>
+</footer>
+<script>window.PW_BASE = {{ rel|tojson }}; window.PW_POOL = {{ page.picker|tojson }};</script>
+<script src="{{ rel }}app.js"></script>
+</body>
+</html>

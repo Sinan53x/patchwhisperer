@@ -4,5 +4,7 @@ __pycache__/
 *.pyc
 state.db
 dist/
+site-dist/
+.tmp/
 *.egg-info/
 .DS_Store

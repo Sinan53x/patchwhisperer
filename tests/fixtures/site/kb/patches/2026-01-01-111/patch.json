@@ -1,0 +1,63 @@
+{
+ "gid": "111",
+ "title": "Fixture Update",
+ "date": "2026-01-01T12:00:00+00:00",
+ "url": "https://example.com/notes",
+ "author": "Yoshi",
+ "raw_bbcode": "",
+ "kind": "balance",
+ "changes": [
+  {
+   "section": "Heroes",
+   "entity_type": "hero",
+   "entity_name": "Abrams",
+   "ability": "Seismic Impact",
+   "tier": null,
+   "field": null,
+   "old": null,
+   "new": null,
+   "raw": "Seismic Impact cooldown increased from 20s to 24s",
+   "direction": "nerf",
+   "resolved": true
+  },
+  {
+   "section": "Heroes",
+   "entity_type": "hero",
+   "entity_name": "Abrams",
+   "ability": null,
+   "tier": null,
+   "field": null,
+   "old": null,
+   "new": null,
+   "raw": "Base health reduced from 800 to 750",
+   "direction": "nerf",
+   "resolved": true
+  },
+  {
+   "section": "Heroes",
+   "entity_type": "hero",
+   "entity_name": "Wraith",
+   "ability": "Full Auto",
+   "tier": null,
+   "field": null,
+   "old": null,
+   "new": null,
+   "raw": "Full Auto damage reduced from 52 to 48",
+   "direction": "nerf",
+   "resolved": true
+  },
+  {
+   "section": "Items",
+   "entity_type": "item",
+   "entity_name": "Kinetic Dash",
+   "ability": null,
+   "tier": null,
+   "field": null,
+   "old": null,
+   "new": null,
+   "raw": "Now also grants 15% move speed for 3s",
+   "direction": "buff",
+   "resolved": true
+  }
+ ]
+}
