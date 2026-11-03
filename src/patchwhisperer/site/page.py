@@ -6,7 +6,7 @@ from pydantic import BaseModel
 
 from patchwhisperer.analysis.schemas import AnalysisBundle, ChangeRow
 from patchwhisperer.kb.store import slugify
-from patchwhisperer.parse.models import Direction, EntityType, Patch
+from patchwhisperer.parse.models import Change, Direction, EntityType, Patch
 
 _MAGNITUDE_RANK = {"major": 0, "moderate": 1, "minor": 2, "none": 3}
 _VERDICT_RANK = {"keep": 0, "watch": 1, "bench": 2}
@@ -172,12 +172,19 @@ def _fallback_groups(
             groups.append(group)
         group.rows.append(
             RowView(
-                label=change.field or change.ability or "Note",
-                text=change.raw,
+                label="Change",
+                text=_note_text(change),
                 effect=_DIRECTION_EFFECT.get(change.direction, "neutral"),
             )
         )
     return groups
+
+
+def _note_text(change: Change) -> str:
+    text = change.raw.removeprefix(f"{change.entity_name}: ")
+    if change.ability:
+        text = text.removeprefix(f"{change.ability} - ")
+    return text
 
 
 def build_page_model(analysis: AnalysisBundle, patch: Patch, art) -> PatchPageModel:
