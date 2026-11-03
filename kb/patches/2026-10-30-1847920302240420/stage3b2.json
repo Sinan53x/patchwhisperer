@@ -1,0 +1,553 @@
+{
+ "heroes": [
+  {
+   "hero": "Bebop",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "The comeback package (non-hero gold cap 26%→30%, Haunted Souls up to 50% faster when behind, tick souls to the two poorest) directly softens the early lead his hook is supposed to convert.",
+    "Haunt bounty +10% pays camp clearers; Bebop has no AoE clear and no crate route, so his income gap widens against the farm heroes.",
+    "Steam Vents now grant +150% stamina regen instead of invisibility — a hooked target still gets a disengage tool, so his core problem is unchanged.",
+    "Echo Shard post-cast 0.5s→0.2s speeds his double-cast hook/bomb line, a small offset."
+   ],
+   "build_changes": [
+    "Echo Shard is now a more attractive situational slot for the hook-bomb combo than it was."
+   ],
+   "tier_before": "B",
+   "tier_after": "C",
+   "one_liner": "Still hooks, still can't punish a farm meta that now forgives losing teams.",
+   "verdict": "watch",
+   "rows": []
+  },
+  {
+   "hero": "Calico",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Steam Vents lose invisibility (now +150% stamina regen), removing the free roam approach the KB credits with extending her gank routes.",
+    "Tunnel move speed +70%→+50% slows the district-to-district rotations her kill-based income depends on.",
+    "The comeback package (gold cap 26%→30%, faster Haunted Souls when behind) blunts the tempo snowball she converts kills into.",
+    "Haunt bounty +10% is a real offset: camps are income she can take, unlike Tough Crates her cat form can't heavy-melee."
+   ],
+   "build_changes": [
+    "Lean harder on Haunt camp income between ganks now that vent invisibility is gone."
+   ],
+   "tier_before": "A",
+   "tier_after": "B",
+   "one_liner": "Lost her free approach and her snowball; still dives squishies, just slower to get there.",
+   "verdict": "watch",
+   "rows": []
+  },
+  {
+   "hero": "Grey Talon",
+   "in_notes": true,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [
+    "Charged Shot T2 now carries -2s charge delay, moving the charge-up talent a tier earlier for his lane poke.",
+    "Charged Shot T3 loses -3s charge delay but gains a one-bounce wall shot — a trade, not a gain.",
+    "Guided Owl now launches in the exact aim direction including steep downward angles, widening his execute angles."
+   ],
+   "indirect_reasons": [
+    "High-Velocity Rounds bullet velocity 60%→45% cuts his max-range lane poke in the first ten minutes.",
+    "Move slow to air-drag ratio 0.35→0.5 taxes him harder whenever he's slowed mid-flight.",
+    "Steam Vents losing invisibility removes the free roamer approach the KB flagged as his biggest structural problem — a genuine gain.",
+    "Violet's Still Life sketches now give him Spirit Power instead of Weapon Damage, trimming his gun-lane half."
+   ],
+   "build_changes": [
+    "Upgrade off base High-Velocity Rounds faster to recover velocity.",
+    "The T2 charge-delay access makes the spirit charge/burst line slightly cheaper to come online."
+   ],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Vents no longer hand divers a free kill, but his poke still lost bullet speed.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "T2",
+     "old": "No charge delay",
+     "new": "-2s charge delay",
+     "text": null,
+     "effect": "good",
+     "ability": "Charged Shot"
+    },
+    {
+     "label": "T3",
+     "old": "-3s charge delay",
+     "new": "Shot bounces once off wall",
+     "text": null,
+     "effect": "neutral",
+     "ability": "Charged Shot"
+    },
+    {
+     "label": "Launch angle",
+     "old": null,
+     "new": null,
+     "text": "Fires in exact aim direction",
+     "effect": "good",
+     "ability": "Guided Owl"
+    }
+   ]
+  },
+  {
+   "hero": "Mo & Krill",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.65,
+   "direct_reasons": [
+    "Spirit per boon 1.1→0.6 nearly halves his spirit scaling, the stat both his builds are built on.",
+    "Spirit damage on all abilities reduced 10% (base and growth) compounds the boon cut.",
+    "Bullet damage per boon +4% is a partial pivot toward gun, not a replacement for the spirit loss."
+   ],
+   "indirect_reasons": [
+    "Torment Pulse melee resistance 18%→22% and Decay heal cut -50%→-55% both buff his core bruiser slots.",
+    "Tank/frontline archetype up (Healing Snacks 10%→14%, Heavy Melee Cauldrons) and richer-but-tougher Haunts reward his sustained frontline.",
+    "Healbane rework keeps his anti-heal role but trims heal-on-kill 275→170+3/boon, cutting his self-sustain."
+   ],
+   "build_changes": [
+    "Shift value toward gun/utility (Quicksilver Reload, Trophy Collector) and away from spirit-stacking damage items.",
+    "Torment Pulse and Decay are now stronger relative buys in the same slots."
+   ],
+   "tier_before": "A",
+   "tier_after": "B",
+   "one_liner": "Still the default front line, but his damage just got a lot smaller.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Spirit per boon",
+     "old": "1.1",
+     "new": "0.6",
+     "text": null,
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "Spirit damage",
+     "old": null,
+     "new": null,
+     "text": "All abilities -10%",
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "Bullet per boon",
+     "old": null,
+     "new": null,
+     "text": "+4%",
+     "effect": "good",
+     "ability": null
+    }
+   ]
+  },
+  {
+   "hero": "Shiv",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Alt fire damage per boon -5% trims his ranged poke.",
+    "Serrated Knives rage damage 3.5%→4% current health plus T3 +0.01 spirit scaling strengthens his anti-tank identity.",
+    "Killing Blow recast window 16s→12s shortens his execute follow-up."
+   ],
+   "indirect_reasons": [
+    "Radiant Regeneration is gutted a fourth time (spirit-dmg regen 0.35→0.25, heal-on-cast 65→40, in-combat only) — it is in his near-universal regen core.",
+    "The patch's anti-heal stack (Decay 55%, Toxic Bullets 40%, Healbane now stacking) attacks the regen shell he wins extended fights with.",
+    "Torment Pulse melee resistance 18%→22% and Decay buff help his bruiser slots.",
+    "Tank/frontline archetype up and richer Haunt camps reward his sustain brawling."
+   ],
+   "build_changes": [
+    "Move sustain off Radiant Regeneration toward Spirit/Bullet Lifesteal and Leech, which were all buffed.",
+    "Keep Torment Pulse and Decay; they gained while his regen layer lost."
+   ],
+   "tier_before": "A",
+   "tier_after": "B",
+   "one_liner": "Knives hit tanks harder, but the regen shell that kept him alive got gutted.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Alt fire",
+     "old": null,
+     "new": null,
+     "text": "Damage per boon -5%",
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "Rage damage",
+     "old": "3.5% current HP",
+     "new": "4% current HP",
+     "text": null,
+     "effect": "good",
+     "ability": "Serrated Knives"
+    },
+    {
+     "label": "T3",
+     "old": null,
+     "new": null,
+     "text": "+0.01 rage spirit scaling",
+     "effect": "good",
+     "ability": "Serrated Knives"
+    },
+    {
+     "label": "Recast window",
+     "old": "16s",
+     "new": "12s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Killing Blow"
+    }
+   ]
+  },
+  {
+   "hero": "Ivy",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healing Booster loses its Extra Regen component and +3 flat regen, gutting the cheap upgrade path her heal/anti-heal build sits on.",
+    "Anti-heal is the patch's clearest theme (Decay 55%, Toxic Bullets 40%, Healbane stacking), which cuts directly into her tether healing.",
+    "Healing Snacks 10%→14% max HP cheapens the dedicated healing she sells.",
+    "Her actual primary gun core (Titanic Magazine, Tesla Bullets, Active Reload) is untouched, which caps the damage."
+   ],
+   "build_changes": [
+    "Buy Healing Booster standalone rather than as an Extra Regen upgrade, or drop it for buffed lifesteal in the heal build."
+   ],
+   "tier_before": "A",
+   "tier_after": "B",
+   "one_liner": "Best peel in the game, but every heal item she bought got worse.",
+   "verdict": "watch",
+   "rows": []
+  },
+  {
+   "hero": "Warden",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Alchemical Flask travels 40% faster and its weapon-damage reduction rises -25%→-30%, making his poke land and stick.",
+    "Willpower speed bonus +15%→+20% improves his walk-up to the silence cage.",
+    "Last Stand T2 goes +40.5→+50 DPS and -30s→-40s cooldown, a real mid-game power spike."
+   ],
+   "indirect_reasons": [
+    "Steam Vents lose invisibility, restoring Shadow Weave as the only invis-engage tool — the exclusivity the KB said he had lost.",
+    "Shadow Weave's rework (+50% ambush weapon damage, applies to the breaking ability) suits his gun-carry ambush more than the old melee/fire-rate version.",
+    "Tempo shift toward scaling plus the comeback package (gold cap 30%, faster Haunted Souls when behind) gives his late gun spike room to arrive.",
+    "High-Velocity Rounds velocity 60%→45% trims his early poke; Spirit Lifesteal +2 spirit/+2% lifesteal helps his sustain slot."
+   ],
+   "build_changes": [
+    "Shadow Weave is back to being a real core in the cage-bruiser line — but plan the 6s stealth buildup before engaging.",
+    "Upgrade off base High-Velocity Rounds faster to offset the velocity cut."
+   ],
+   "tier_before": "C",
+   "tier_after": "B",
+   "one_liner": "Got his invis-engage back and a real Last Stand spike; still waits on a clock.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Travel speed",
+     "old": null,
+     "new": null,
+     "text": "40% faster",
+     "effect": "good",
+     "ability": "Alchemical Flask"
+    },
+    {
+     "label": "Weapon dmg shred",
+     "old": "-25%",
+     "new": "-30%",
+     "text": null,
+     "effect": "good",
+     "ability": "Alchemical Flask"
+    },
+    {
+     "label": "Speed bonus",
+     "old": "+15%",
+     "new": "+20%",
+     "text": null,
+     "effect": "good",
+     "ability": "Willpower"
+    },
+    {
+     "label": "T2 DPS",
+     "old": "+40.5",
+     "new": "+50",
+     "text": null,
+     "effect": "good",
+     "ability": "Last Stand"
+    },
+    {
+     "label": "T2 cooldown",
+     "old": "-30s",
+     "new": "-40s",
+     "text": null,
+     "effect": "good",
+     "ability": "Last Stand"
+    }
+   ]
+  },
+  {
+   "hero": "Yamato",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [
+    "Flying Slash cast range 26m→23m and T3 +15m→+8m shorten her engage and escape reach.",
+    "Shadow Transformation cooldown 150s→160s (moved to T2) delays her fight-winning window.",
+    "Power Slash spirit scaling +6% is a small damage gain on her primary damage tool."
+   ],
+   "indirect_reasons": [
+    "Hunter's Aura now requires line of sight, removing the through-wall shred her late spirit-burst build buys it for.",
+    "Torment Pulse melee resistance 18%→22% buffs her late spirit build; Healbane rework is neutral for her.",
+    "Haunt bounty +10% and tougher camps reward her punch AoE, still the fastest grouped-camp clear in the game.",
+    "Mobile assassin archetype down (vents lose invisibility, tunnels +70%→+50%) trims the roam tempo she lives on."
+   ],
+   "build_changes": [
+    "Re-evaluate Hunter's Aura in the late spirit-burst line; it no longer shreds through walls in corridor fights."
+   ],
+   "tier_before": "A",
+   "tier_after": "B",
+   "one_liner": "Camp clear still elite, but her engage range and ult timer both got shorter.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Spirit scaling",
+     "old": null,
+     "new": null,
+     "text": "+6%",
+     "effect": "good",
+     "ability": "Power Slash"
+    },
+    {
+     "label": "Cast range",
+     "old": "26m",
+     "new": "23m",
+     "text": null,
+     "effect": "bad",
+     "ability": "Flying Slash"
+    },
+    {
+     "label": "T3 range",
+     "old": "+15m",
+     "new": "+8m",
+     "text": null,
+     "effect": "bad",
+     "ability": "Flying Slash"
+    },
+    {
+     "label": "Cooldown",
+     "old": "150s",
+     "new": "160s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Shadow Transformation"
+    }
+   ]
+  },
+  {
+   "hero": "Lash",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Grapple T3 now also grants +4m jump velocity — a small mobility gain on his engage.",
+    "Death Slam's cone-to-cylinder indicator is visual only."
+   ],
+   "indirect_reasons": [
+    "Steam Vents lose invisibility (now +150% stamina regen), removing the free dive approach the KB credits with extending his routes.",
+    "Tunnel move speed +70%→+50% slows the rotations that set up Ground Strike.",
+    "The comeback package (gold cap 26%→30%, faster Haunted Souls when behind, tick souls to the two poorest) blunts the early snowball an S-tier tempo initiator converts.",
+    "Haunt bounty +10% pays camp clearers; Lash has no AoE farm route to take it."
+   ],
+   "build_changes": [],
+   "tier_before": "S",
+   "tier_after": "A",
+   "one_liner": "Still the best dive in the game, but the map stopped handing him free entries.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "T3",
+     "old": null,
+     "new": null,
+     "text": "Also +4m jump velocity",
+     "effect": "good",
+     "ability": "Grapple"
+    },
+    {
+     "label": "Indicator",
+     "old": null,
+     "new": null,
+     "text": "Cone to cylinder (visual)",
+     "effect": "neutral",
+     "ability": "Death Slam"
+    }
+   ]
+  },
+  {
+   "hero": "Viscous",
+   "in_notes": true,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [
+    "Splatter T1 +36→+45 damage and alt-fire damage growth +5% per boon lift his primary poke shell.",
+    "Goo Ball fixes remove the heavy-melee/Ethereal Shift tech during cast delay — a small loss of outplay."
+   ],
+   "indirect_reasons": [
+    "Express Shot secondary fire damage and growth -5% and High-Velocity Rounds velocity 60%→45% both hit his spirit-hybrid Splatter/Punch core.",
+    "Decay heal cut -50%→-55% strengthens his anti-heal enabler slot.",
+    "Tank/frontline archetype up (Healing Snacks 10%→14%, Heavy Melee Cauldrons) and Steam Vents' stamina regen suit his Cube/Goo Ball sustain."
+   ],
+   "build_changes": [
+    "Upgrade off base High-Velocity Rounds sooner; Express Shot is now a weaker top-end."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Splatter hits a bit harder, his hybrid item shell a bit softer.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Alt fire growth",
+     "old": null,
+     "new": null,
+     "text": "+5% damage per boon",
+     "effect": "good",
+     "ability": null
+    },
+    {
+     "label": "T1",
+     "old": "+36 damage",
+     "new": "+45 damage",
+     "text": null,
+     "effect": "good",
+     "ability": "Splatter"
+    },
+    {
+     "label": "Cast delay",
+     "old": null,
+     "new": null,
+     "text": "No melee/Shift during it",
+     "effect": "bad",
+     "ability": "Goo Ball"
+    }
+   ]
+  },
+  {
+   "hero": "Pocket",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "The comeback package (non-hero gold cap 26%→30%, Haunted Souls up to 50% faster when behind, tick souls to the two poorest) restores the bail-out his farm-and-scale line lost — the KB's stated reason he rarely spikes.",
+    "Haunt bounty +10% rewards his Monster Rounds/Cultist Sacrifice farm route.",
+    "Echo Shard post-cast 0.5s→0.2s speeds reset combos, though usage data shows it near-zero on him.",
+    "Mobile assassin archetype down (vents lose invisibility) trims the roamers that dive him."
+   ],
+   "build_changes": [
+    "Farming from behind is now a legitimate path back — don't concede the camp route when losing lane."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Finally has a comeback valve for the slow Affliction line.",
+   "verdict": "watch",
+   "rows": []
+  },
+  {
+   "hero": "Mirage",
+   "in_notes": true,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [
+    "Traveler channel 2s→3s and cancel cooldown 4s→5s slow his rotation and escape.",
+    "Traveler now breaks on stun/immobilize/sleep/slowing hex, adding real interrupt windows against him.",
+    "Base Traveler gains the old T2 barrier (no scaling) and T3 adds 0.8 barrier spirit scaling plus damage-interrupt immunity — a genuine survivability gain."
+   ],
+   "indirect_reasons": [
+    "Toxic Bullets anti-heal 35%→40% buffs his spirit-amp hybrid core; Healbane rework is neutral for him.",
+    "Split pusher archetype down (breakables growth -10%, tunnels +70%→+50%) trims his map-play income.",
+    "The comeback package helps a late scaler, but his problem is income conversion, not catch-up."
+   ],
+   "build_changes": [
+    "Treat Traveler as a defensive/barrier tool rather than a free rotation — the 3s channel is punishable."
+   ],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Tankier Traveler, slower Traveler; the split-push economy still doesn't pay him.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Channel time",
+     "old": "2s",
+     "new": "3s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Traveler"
+    },
+    {
+     "label": "Cancel cooldown",
+     "old": "4s",
+     "new": "5s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Traveler"
+    },
+    {
+     "label": "New interrupts",
+     "old": null,
+     "new": null,
+     "text": "Stun/immobilize/sleep/slowing hex",
+     "effect": "bad",
+     "ability": "Traveler"
+    },
+    {
+     "label": "Base ability",
+     "old": null,
+     "new": null,
+     "text": "Gains old T2 barrier (no scaling)",
+     "effect": "good",
+     "ability": "Traveler"
+    },
+    {
+     "label": "T2",
+     "old": "400 barrier (spirit scaling)",
+     "new": "-65s cooldown",
+     "text": null,
+     "effect": "neutral",
+     "ability": "Traveler"
+    },
+    {
+     "label": "T3",
+     "old": "-90s cooldown",
+     "new": "Damage can't interrupt it",
+     "text": null,
+     "effect": "good",
+     "ability": "Traveler"
+    },
+    {
+     "label": "T3 barrier",
+     "old": null,
+     "new": null,
+     "text": "Adds 0.8 spirit scaling",
+     "effect": "good",
+     "ability": "Traveler"
+    }
+   ]
+  }
+ ]
+}

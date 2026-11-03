@@ -1,0 +1,958 @@
+{
+ "heroes": [
+  {
+   "hero": "Silver",
+   "in_notes": true,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [
+    "Base health regen 2.5→3 is trivial on a tank that already builds Restorative Shot/Melee Lifesteal.",
+    "Go For The Throat now counts Point Blank and Opening Rounds weapon damage, and Point Blank's slow went 2s→2.5s — that combo is now a real damage package, not a flex.",
+    "Both Entangling Bola fixes (Unstoppable flyers, Grey Talon during Rain of Arrows) make her grounding reliable, which matters into Vindicta/Grey Talon/Danny."
+   ],
+   "indirect_reasons": [
+    "Hunter's Aura now needs line of sight — the through-wall shred she bought it for in clumped fights is gone (core gun-tank slot).",
+    "Spirit Shielding 18%→15% spirit resist trims a core defensive layer into a spirit-burst patch.",
+    "Anti-heal is the patch's clearest theme (Decay/Toxic Bullets/Crippling Headshot up, Healbane stacking) and it attacks her Melee Lifesteal/Restorative Shot sustain directly.",
+    "Counter-side offsets: Rat King (62% vs her) ate a huge nerf, the mobile-assassin archetype is down (Steam Vents lose invis, tunnels +70%→+50%), and the tank/frontline archetype is up (Cauldrons, Healing Snacks 10%→14%)."
+   ],
+   "build_changes": [
+    "Buy Point Blank as a core slot: its slow extends and its weapon damage now feeds Go For The Throat.",
+    "Deliberately delay Hunter's Aura — it no longer shreds through walls, so it is an LOS-fight item only now."
+   ],
+   "tier_before": "S",
+   "tier_after": "A",
+   "one_liner": "Still fine, but Hunter's Aura no longer shreds through walls and the anti-heal patch bites her sustain.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Health regen",
+     "old": "2.5",
+     "new": "3",
+     "text": null,
+     "effect": "good",
+     "ability": null
+    },
+    {
+     "label": "Ult damage",
+     "old": null,
+     "new": null,
+     "text": "Counts Point Blank/Opening Rounds",
+     "effect": "good",
+     "ability": "Go For The Throat"
+    },
+    {
+     "label": "Grounding fixes",
+     "old": null,
+     "new": null,
+     "text": "Bola grounds flyers reliably",
+     "effect": "good",
+     "ability": "Entangling Bola"
+    }
+   ]
+  },
+  {
+   "hero": "Celeste",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "major",
+   "confidence": 0.65,
+   "direct_reasons": [
+    "Shining Wonder damage 140→125 is a straight cut to a kit already leaning on burst windows.",
+    "Torment Pulse's melee resist 18%→22% is the only direct-ish help, and it does not touch her problem."
+   ],
+   "indirect_reasons": [
+    "Radiant Regeneration's fourth and biggest trim (spirit regen scaling 0.35→0.25, heal-on-cast 65→40, boon scaling 1.7→1.4, in-combat only) guts her core sustain shell.",
+    "Healing Booster loses Extra Regen and +3 flat regen — the second leg of that same regen stack.",
+    "Spirit Shielding 18%→15% and HVR bullet velocity 60%→45% trim her defensive and early poke items.",
+    "Anti-heal buffs (Decay -50→-55%, Toxic Bullets 35→40%, Healbane stacking) land squarely on a regen-stacking flyer, and Metal Skin's +20% gravity punishes a flyer popping it mid-air."
+   ],
+   "build_changes": [
+    "Abandon the Radiant Regeneration + Healing Booster stack; pivot to the buffed Spirit Lifesteal (+2 spirit, +2% lifesteal) and Torment Pulse for in-fight sustain.",
+    "Witchmail (her highest-WR item) becomes more central now that slow/CC comps are stronger."
+   ],
+   "tier_before": "B",
+   "tier_after": "C",
+   "one_liner": "Both of her regen items got gutted and anti-heal is everywhere — the sustain-burst shell is gone.",
+   "verdict": "bench",
+   "rows": [
+    {
+     "label": "Damage",
+     "old": "140",
+     "new": "125",
+     "text": null,
+     "effect": "bad",
+     "ability": "Shining Wonder"
+    }
+   ]
+  },
+  {
+   "hero": "Rat King",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "major",
+   "confidence": 0.75,
+   "direct_reasons": [
+    "Base bullet damage -5% and bullet damage growth -20% cut the gun-bruiser economy he farms with.",
+    "Scrap Grenade loses damage (70→60, T2 +70→+60, T3 300→275) and radius (8m→6m, large explosion 14m→10m) — the camp-clear and teamfight AoE both shrink.",
+    "Rule, Ratannia! loses half its knockup, 20s cooldown (160→180), radius (20m→16m, T2 +8→+6m) and duration (12s→9s), and now goes on cooldown if he is stunned/slept before placing.",
+    "Fuse timers +0.1s give targets an extra beat to step out; only the new 0.4s minimum melee-fuse helps him."
+   ],
+   "indirect_reasons": [
+    "Haunt camps gained +10% HP and damage while his Scrap Grenade radius shrank — the AoE-clear income advantage he was rated S for is materially slower.",
+    "Richer-but-tougher Haunts plus the comeback package (gold cap 26%→30%, faster Haunted Souls when behind) soften the lead he converts from crate/camp tempo.",
+    "Offset: Heavy Melee Cauldrons hand his 116-heavy-melee frontline a new pickup, and Healing Snacks 10%→14% keeps his brawl sustain ticking."
+   ],
+   "build_changes": [
+    "Stop counting Scrap Grenade as a one-button camp clear; pull camps with melee first, then drop grenade on clumped mobs.",
+    "Superior/Compress Cooldown become mandatory again to cover the 180s banner cooldown."
+   ],
+   "tier_before": "S",
+   "tier_after": "A",
+   "one_liner": "Grenade radius and the banner ult both got hit hard — still a frontline, no longer an auto-win.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Base bullet damage",
+     "old": null,
+     "new": null,
+     "text": "-5%",
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "Bullet dmg growth",
+     "old": null,
+     "new": null,
+     "text": "-20%",
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "Damage",
+     "old": "70",
+     "new": "60",
+     "text": null,
+     "effect": "bad",
+     "ability": "Scrap Grenade"
+    },
+    {
+     "label": "T2 damage",
+     "old": "+70",
+     "new": "+60",
+     "text": null,
+     "effect": "bad",
+     "ability": "Scrap Grenade"
+    },
+    {
+     "label": "T3 damage",
+     "old": "300",
+     "new": "275",
+     "text": null,
+     "effect": "bad",
+     "ability": "Scrap Grenade"
+    },
+    {
+     "label": "Radius",
+     "old": "8m",
+     "new": "6m",
+     "text": null,
+     "effect": "bad",
+     "ability": "Scrap Grenade"
+    },
+    {
+     "label": "Large explosion",
+     "old": "14m",
+     "new": "10m",
+     "text": null,
+     "effect": "bad",
+     "ability": "Scrap Grenade"
+    },
+    {
+     "label": "Fuse timers",
+     "old": "0.8s/0.7s",
+     "new": "0.9s/0.8s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Scrap Grenade"
+    },
+    {
+     "label": "Melee fuse",
+     "old": null,
+     "new": null,
+     "text": "At least 0.4s before it explodes",
+     "effect": "neutral",
+     "ability": "Scrap Grenade"
+    },
+    {
+     "label": "Knockup",
+     "old": null,
+     "new": null,
+     "text": "Reduced by 50%",
+     "effect": "bad",
+     "ability": "Rule, Ratannia!"
+    },
+    {
+     "label": "Cooldown",
+     "old": "160s",
+     "new": "180s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Rule, Ratannia!"
+    },
+    {
+     "label": "Radius",
+     "old": "20m",
+     "new": "16m",
+     "text": null,
+     "effect": "bad",
+     "ability": "Rule, Ratannia!"
+    },
+    {
+     "label": "T2 radius",
+     "old": "+8m",
+     "new": "+6m",
+     "text": null,
+     "effect": "bad",
+     "ability": "Rule, Ratannia!"
+    },
+    {
+     "label": "Duration",
+     "old": "12s",
+     "new": "9s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Rule, Ratannia!"
+    },
+    {
+     "label": "Interrupt",
+     "old": null,
+     "new": null,
+     "text": "Goes on CD if stunned pre-place",
+     "effect": "bad",
+     "ability": "Rule, Ratannia!"
+    }
+   ]
+  },
+  {
+   "hero": "Baba",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "major",
+   "confidence": 0.65,
+   "direct_reasons": [
+    "Baba's Brew has no initial brew time but the order is now random each cast and the cycle went 1s→1.5s — she can no longer guarantee the silence/barrier she needs on demand, and silence dropped 3s→2.75s.",
+    "Spirit Resist scaling 0.1→0.07 plus Threadsap's spirit-steal duration 22s→16s (and cleanse now wipes the stolen spirit too) cut her durability and her signature steal.",
+    "Granny Long Legs heavy-melee slow 4s→2s and light-melee knockback 10m→8m trim her melee control; the 1.4s→1.2s heavy-melee cooldown is the only real gain.",
+    "Her Granny stomp now only hits the closest Rejuvenator, so she cannot sweep the new three-crystal Mid-Boss spread."
+   ],
+   "indirect_reasons": [
+    "Radiant Regeneration (94% buy) lost spirit-regeneration scaling 0.35→0.25, heal-on-cast 65→40 and in-fight availability — her regen wall is her identity.",
+    "Healing Booster lost Extra Regen and its +3 flat regen; Torment Pulse 18%→22% melee resist is nowhere near enough to offset.",
+    "Anti-heal is the patch's clearest item theme (Decay -55%, Healbane stacking, Toxic Bullets 40%) and it is aimed at exactly her archetype.",
+    "Offset: Heavy-Melee Cauldrons and Healing Snacks 10%→14% both suit her, and tougher Haunt camps reward her sustain clear."
+   ],
+   "build_changes": [
+    "Leave the regen bruiser shell — Radiant Regeneration and Healing Booster are both gutted; move to the cooldown-caster line (Superior Cooldown/Duration Extender) and buy Spirit Resilience earlier.",
+    "Since brew order is random, hold casting until the right brew cycles in rather than opening fights blind."
+   ],
+   "tier_before": "C",
+   "tier_after": "D",
+   "one_liner": "Random brew order plus two gutted regen items is her whole gameplan taken away.",
+   "verdict": "bench",
+   "rows": [
+    {
+     "label": "Spirit Resist scaling",
+     "old": "0.1",
+     "new": "0.07",
+     "text": null,
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "Spirit steal",
+     "old": "22s",
+     "new": "16s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Threadsap"
+    },
+    {
+     "label": "Cleanse",
+     "old": null,
+     "new": null,
+     "text": "Cleanse also removes her stolen spirit",
+     "effect": "bad",
+     "ability": "Threadsap"
+    },
+    {
+     "label": "Light melee knockback",
+     "old": "10m",
+     "new": "8m",
+     "text": null,
+     "effect": "bad",
+     "ability": "Granny Long Legs"
+    },
+    {
+     "label": "Heavy melee cooldown",
+     "old": "1.4s",
+     "new": "1.2s",
+     "text": null,
+     "effect": "good",
+     "ability": "Granny Long Legs"
+    },
+    {
+     "label": "Heavy melee slow",
+     "old": "4s",
+     "new": "2s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Granny Long Legs"
+    },
+    {
+     "label": "Rejuv stomp",
+     "old": null,
+     "new": null,
+     "text": "Only hits the closest Rejuvenator",
+     "effect": "bad",
+     "ability": "Granny Long Legs"
+    },
+    {
+     "label": "Initial brew time",
+     "old": null,
+     "new": null,
+     "text": "Removed",
+     "effect": "good",
+     "ability": "Baba's Brew"
+    },
+    {
+     "label": "Brew order",
+     "old": null,
+     "new": null,
+     "text": "Random each cast",
+     "effect": "bad",
+     "ability": "Baba's Brew"
+    },
+    {
+     "label": "Cycle time",
+     "old": "1s",
+     "new": "1.5s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Baba's Brew"
+    },
+    {
+     "label": "Silence",
+     "old": "3s",
+     "new": "2.75s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Baba's Brew"
+    }
+   ]
+  },
+  {
+   "hero": "Solomon",
+   "in_notes": true,
+   "direction": "neutral",
+   "magnitude": "moderate",
+   "confidence": 0.4,
+   "direct_reasons": [
+    "Base bullet damage 30→25 and -20% headshot damage hurt the HVR/Opening Rounds lane phase — a lane crutch he needed at a 46% win rate.",
+    "Rook Battery spirit scaling 1.3→0.9 is a real damage cut and the T3 cooldown trim softened (-12s→-10s).",
+    "Setup Bishop got the compensation: on-square spirit scaling 0.64→0.85, T1 slow +15%→+25%, T3 resist shred -2.5%→-5% per stack applied on impact, so his zone is now the damage.",
+    "Develop Queen: 210s→240s cooldown and 1s→1.2s stun-tile delay are bad, but checkmate under 100 HP is now in the base kit and T2 adds +150 threshold, plus Move Piece 50m→65m with better placement."
+   ],
+   "indirect_reasons": [
+    "Three of his five losing matchups got hit: Rat King (huge nerf package), Baba (brew/regen gutted) and Celeste (Shining Wonder + regen items).",
+    "The mobile-dive archetype he dies to is down (Steam Vents lose invisibility, tunnels +70%→+50%), and Yamato's Flying Slash range 26m→23m (T3 +15→+8m) shortens the dive that beat him 38%.",
+    "Divine Barrier 45s→55s cooldown trims his situational late item, and anti-heal stacking hurts any heal/sustain layer he buys."
+   ],
+   "build_changes": [
+    "Max Setup Bishop over Rook Battery — the bishop is now the damage (0.85 scaling, faster T3 shred).",
+    "Treat his gun line as a lane crutch only after the 30→25 bullet and -20% headshot cuts."
+   ],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "His zone got better and his counters got nerfed, but the gun and Rook Battery both lost real damage.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Base bullet damage",
+     "old": "30",
+     "new": "25",
+     "text": null,
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "Headshot damage",
+     "old": null,
+     "new": null,
+     "text": "-20%",
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "Square height",
+     "old": "4m",
+     "new": "1m",
+     "text": null,
+     "effect": "neutral",
+     "ability": "Setup Bishop"
+    },
+    {
+     "label": "On-square scaling",
+     "old": "0.64",
+     "new": "0.85",
+     "text": null,
+     "effect": "good",
+     "ability": "Setup Bishop"
+    },
+    {
+     "label": "T1 slow",
+     "old": "+15%",
+     "new": "+25%",
+     "text": null,
+     "effect": "good",
+     "ability": "Setup Bishop"
+    },
+    {
+     "label": "T3 shred",
+     "old": "-2.5%",
+     "new": "-5% per stack",
+     "text": null,
+     "effect": "good",
+     "ability": "Setup Bishop"
+    },
+    {
+     "label": "Damage scaling",
+     "old": "1.3",
+     "new": "0.9",
+     "text": null,
+     "effect": "bad",
+     "ability": "Rook Battery"
+    },
+    {
+     "label": "T3 cooldown",
+     "old": "-12s",
+     "new": "-10s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Rook Battery"
+    },
+    {
+     "label": "Cooldown",
+     "old": "210s",
+     "new": "240s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Develop Queen"
+    },
+    {
+     "label": "Damage scaling",
+     "old": "1.4",
+     "new": "1.6",
+     "text": null,
+     "effect": "good",
+     "ability": "Develop Queen"
+    },
+    {
+     "label": "Stun delay",
+     "old": "1s",
+     "new": "1.2s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Develop Queen"
+    },
+    {
+     "label": "Checkmate",
+     "old": null,
+     "new": null,
+     "text": "Base kit: heroes under 100 HP",
+     "effect": "good",
+     "ability": "Develop Queen"
+    },
+    {
+     "label": "T2 checkmate",
+     "old": null,
+     "new": null,
+     "text": "Threshold +150",
+     "effect": "good",
+     "ability": "Develop Queen"
+    },
+    {
+     "label": "Piece range",
+     "old": "50m",
+     "new": "65m",
+     "text": null,
+     "effect": "good",
+     "ability": "Move Piece"
+    }
+   ]
+  },
+  {
+   "hero": "Deadman Danny",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Chimera Mk1 dominates every change: jetpack unusable while cursed, cooldown reduction per boon -0.4s→-0.25s, and T3 refund on hit 50%→30% all cut his uptime.",
+    "Slows now cut the jetpack's in-air impulse more effectively — and even harder when movement abilities are silenced — which is the exact escape a dive-pick flyer needs.",
+    "Grounding pulls now work more reliably against him, so the Silver/Bola-and-slow layer lands consistently.",
+    "The Close The Deal damage bug fix (held through the ability) is the only real gain."
+   ],
+   "indirect_reasons": [
+    "High-Velocity Rounds 60%→45% bullet velocity hits his lone weapon staple in the early poke window.",
+    "Steam Vents lose invisibility, removing the free approach angle his pick play used; Shadow Weave is now the only invis-engage tool.",
+    "The global slow-to-air-drag ratio 0.35→0.5 taxes him every time he is slowed mid-flight.",
+    "Anti-heal stacking (Decay -55%, Toxic Bullets 40%) and tougher Haunt camps (+10% HP) punish a 730-HP diver who commits to clear."
+   ],
+   "build_changes": [
+    "Stop treating jetpack as the disengage — slows now bite it directly; lean Reactive Barrier/Grit and only fly in when the slow is on cooldown.",
+    "Express Shot value drops with the 5% secondary-fire trim; the HVR velocity cut pushes upgrades earlier."
+   ],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Slows now eat his jetpack and Steam Vents lost invisibility — his escape got taxed twice.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Cursed",
+     "old": null,
+     "new": null,
+     "text": "Jetpack unusable while cursed",
+     "effect": "bad",
+     "ability": "Chimera Mk1"
+    },
+    {
+     "label": "CDR per boon",
+     "old": "-0.4s",
+     "new": "-0.25s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Chimera Mk1"
+    },
+    {
+     "label": "T3 refund",
+     "old": "50%",
+     "new": "30%",
+     "text": null,
+     "effect": "bad",
+     "ability": "Chimera Mk1"
+    },
+    {
+     "label": "Slows",
+     "old": null,
+     "new": null,
+     "text": "Slows cut jetpack impulse more",
+     "effect": "bad",
+     "ability": "Chimera Mk1"
+    },
+    {
+     "label": "Grounding",
+     "old": null,
+     "new": null,
+     "text": "Pulls to ground land more reliably",
+     "effect": "bad",
+     "ability": "Chimera Mk1"
+    },
+    {
+     "label": "Close The Deal",
+     "old": null,
+     "new": null,
+     "text": "Damage now works when held",
+     "effect": "good",
+     "ability": "Close The Deal"
+    }
+   ]
+  },
+  {
+   "hero": "Violet",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.55,
+   "direct_reasons": [
+    "Abstract Landscape is nerfed across the board: 165s→180s cooldown, 6s→5s duration, spirit scaling 0.04→0.01, ends early if she dies, 0.5s→0.75s re-apply cooldown, and T3 no longer keeps ink alive.",
+    "Still Life loses reliability: stun 1.0s→0.9s, line of sight required at channel end even in the grace period, T1 regen only while drawing and scaling 0.25→0.15.",
+    "T3 stun +0.35s→+0.45s and the sketch-buff reshuffle are the only ups."
+   ],
+   "indirect_reasons": [
+    "Spirit Lifesteal 6→8 spirit power and 13%→15% lifesteal is a real buff to her primary spirit-caster shell.",
+    "Anti-heal stacking (Decay -55%, Healbane stacks, Toxic Bullets 40%) directly undercuts Still Life's regen talents and any Healing Booster she buys.",
+    "The dive archetype that deletes her is down (Steam Vents lose invisibility, tunnel speed +70%→+50%), which partially offsets; Holliday/Vindicta are untouched."
+   ],
+   "build_changes": [
+    "Stop leaning on Still Life T1 regen as lane sustain — it only ticks while drawing now; put the points elsewhere.",
+    "Keep Superior Cooldown + Escalating Exposure (untouched); add buffed Spirit Lifesteal for the sustain the regen talents lost."
+   ],
+   "tier_before": "B",
+   "tier_after": "C",
+   "one_liner": "Her ult got cut on every axis at once — the zone is still good, the cooldown is not.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Stun duration",
+     "old": "1.0s",
+     "new": "0.9s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Still Life"
+    },
+    {
+     "label": "Line of sight",
+     "old": null,
+     "new": null,
+     "text": "Required at channel end",
+     "effect": "bad",
+     "ability": "Still Life"
+    },
+    {
+     "label": "T1 regen",
+     "old": null,
+     "new": null,
+     "text": "Only while drawing",
+     "effect": "bad",
+     "ability": "Still Life"
+    },
+    {
+     "label": "T1 regen scaling",
+     "old": "0.25",
+     "new": "0.15",
+     "text": null,
+     "effect": "bad",
+     "ability": "Still Life"
+    },
+    {
+     "label": "T3 stun",
+     "old": "+0.35s",
+     "new": "+0.45s",
+     "text": null,
+     "effect": "good",
+     "ability": "Still Life"
+    },
+    {
+     "label": "Cooldown",
+     "old": "165s",
+     "new": "180s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Abstract Landscape"
+    },
+    {
+     "label": "Duration",
+     "old": "6s",
+     "new": "5s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Abstract Landscape"
+    },
+    {
+     "label": "Duration scaling",
+     "old": "0.04",
+     "new": "0.01",
+     "text": null,
+     "effect": "bad",
+     "ability": "Abstract Landscape"
+    },
+    {
+     "label": "On death",
+     "old": null,
+     "new": null,
+     "text": "Ends early if Violet dies",
+     "effect": "bad",
+     "ability": "Abstract Landscape"
+    },
+    {
+     "label": "Re-apply cooldown",
+     "old": "0.5s",
+     "new": "0.75s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Abstract Landscape"
+    },
+    {
+     "label": "T3",
+     "old": null,
+     "new": null,
+     "text": "No longer keeps ink alive",
+     "effect": "bad",
+     "ability": "Abstract Landscape"
+    }
+   ]
+  },
+  {
+   "hero": "Mid-Boss",
+   "in_notes": true,
+   "direction": "neutral",
+   "magnitude": "moderate",
+   "confidence": 0.35,
+   "direct_reasons": [
+    "Bounty halved to 1500 (+25/min) while health and health-per-minute both rise 20% and resist reductions are only 50% effective — a tankier, less rewarding kill.",
+    "Roar moved to 25% HP means the fight's dangerous phase comes later and lasts longer.",
+    "The Rejuvenator now splits into three crystals around the pit, each broken by one heavy melee, each granting a full heal and a 500 (+9/min) bounty to the breaker.",
+    "Bigger pit with more cover plus a 6s→7.5s drop time makes the payout a spread, contestable pickup rather than one centre crystal."
+   ],
+   "indirect_reasons": [
+    "The crystal bounty rewards whichever frontline reaches it first — heavy-melee bruisers (Rat King, Abrams, Drifter, Baba) get paid for doing what they already do.",
+    "The halved resist-reduction effectiveness taxes armour-shred item lines against the objective, favouring raw sustained DPS and AoE comps over shred builds."
+   ],
+   "build_changes": [
+    "Assign a heavy-melee frontline to crystals before the Mid-Boss dies — 500 +9/min per crystal is now the real payout."
+   ],
+   "tier_before": "?",
+   "tier_after": "C",
+   "one_liner": "Bounty halved, HP up, and the Rejuvenator is now three crystals the frontline has to chase.",
+   "verdict": "keep",
+   "rows": [
+    {
+     "label": "Health",
+     "old": null,
+     "new": null,
+     "text": "+20%",
+     "effect": "neutral",
+     "ability": null
+    },
+    {
+     "label": "Health growth",
+     "old": null,
+     "new": null,
+     "text": "+20% per minute",
+     "effect": "neutral",
+     "ability": null
+    },
+    {
+     "label": "Resist shred",
+     "old": null,
+     "new": null,
+     "text": "Only 50% as effective",
+     "effect": "neutral",
+     "ability": null
+    },
+    {
+     "label": "Roar",
+     "old": null,
+     "new": null,
+     "text": "Now at 25% HP",
+     "effect": "neutral",
+     "ability": null
+    },
+    {
+     "label": "Bounty",
+     "old": "3000 (+50/min)",
+     "new": "1500 (+25/min)",
+     "text": null,
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "Rejuvenator",
+     "old": null,
+     "new": null,
+     "text": "3 crystals around the pit",
+     "effect": "neutral",
+     "ability": null
+    },
+    {
+     "label": "Crystal break",
+     "old": null,
+     "new": null,
+     "text": "One heavy melee each",
+     "effect": "good",
+     "ability": null
+    },
+    {
+     "label": "Crystal bounty",
+     "old": null,
+     "new": null,
+     "text": "500 +9/min to the breaker",
+     "effect": "good",
+     "ability": null
+    },
+    {
+     "label": "Drop time",
+     "old": "6s",
+     "new": "7.5s",
+     "text": null,
+     "effect": "neutral",
+     "ability": null
+    },
+    {
+     "label": "Terrain",
+     "old": null,
+     "new": null,
+     "text": "Bigger pit, more cover",
+     "effect": "neutral",
+     "ability": null
+    }
+   ]
+  },
+  {
+   "hero": "Haunts - Past Dues",
+   "in_notes": true,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.3,
+   "direct_reasons": [
+    "Past Dues now channels its special attack into a ground sleep aura that stacks sleep on heroes standing in it; killing the channeler clears the aura.",
+    "Sleep turns a slow camp clear into a free gank window — a slept farmer is a stationary target for the patch's richer, more contested jungle."
+   ],
+   "indirect_reasons": [
+    "Camps also gained 10% HP and damage and 10% bounty, so clear-speed heroes that kill the channeler instantly (AoE burst, grouped-camp clearers) pull further ahead of single-target clearers who eat the channel.",
+    "Apollo got two sleep-specific buffs (Itani Lo Sahn no longer interrupted by Sleep, Flawless Advance refunds the stab when slept), so he is the cleanest answer to the aura."
+   ],
+   "build_changes": [
+    "Kill the channeling creature first on every Past Dues camp — the aura dies with it.",
+    "Clear camps with AoE burst rather than single-target chip; standing in the aura is what sleeps you."
+   ],
+   "tier_before": "?",
+   "tier_after": "C",
+   "one_liner": "Stay in the camp too long and you get slept — kill the channeler or get ganked.",
+   "verdict": "keep",
+   "rows": [
+    {
+     "label": "Special attack",
+     "old": null,
+     "new": null,
+     "text": "Channels a ground sleep aura",
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "Counterplay",
+     "old": null,
+     "new": null,
+     "text": "Kill the channeler to clear it",
+     "effect": "neutral",
+     "ability": null
+    }
+   ]
+  },
+  {
+   "hero": "Nurse Harrow",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.4,
+   "direct_reasons": [
+    "Lurking Terrors is gutted: fear buildup 1.3s→2s, duration 7s→5s, T3 duration +3s→+2s, T3 immunity → 50% damage reduction while channelling, and no fear builds when she is more than 50 degrees above or below the target's view.",
+    "Base gun damage -10% and Healing Needles heal-per-shot 25→22 (T2 +20→+16) cut her throughput; only the spirit scaling 0.2→0.24 and Wretched Vapors T3 +15%→+20% rush speed go up.",
+    "Leech Therapy fed-leech ground duration drops from a flat 180s to 120s + 3s/min and leeches clear on round reset, trimming her pre-placed map presence."
+   ],
+   "indirect_reasons": [
+    "Anti-heal is the patch's headline: Decay -50%→-55%, Toxic Bullets 35%→40%, Crippling Headshot -35%→-40% and Healbane now stacking — every one of them cuts a dedicated healer's output.",
+    "Healing Snacks 10%→14% max HP and the tank/frontline archetype rising cheapen the dedicated healing she sells.",
+    "Violet's Still Life sketches now grant +2% healing amp specifically from her (and Kelvin/Ivy/Dynamo/Paige/Rem), a small team-side nudge."
+   ],
+   "build_changes": [
+    "Lean on the Healing Needles spirit scaling (0.2→0.24) rather than stacking flat heal-per-shot, which just got trimmed twice.",
+    "Treat Lurking Terrors as a 5s lockdown, not a 7s one — do not channel it from odd vertical angles, fear no longer builds there."
+   ],
+   "tier_before": "?",
+   "tier_after": "B",
+   "one_liner": "Her ult lost duration, immunity and buildup speed in a patch where anti-heal is everywhere.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Base gun damage",
+     "old": null,
+     "new": null,
+     "text": "-10%",
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "Heal per shot",
+     "old": "25",
+     "new": "22",
+     "text": null,
+     "effect": "bad",
+     "ability": "Healing Needles"
+    },
+    {
+     "label": "T2 heal",
+     "old": "+20",
+     "new": "+16",
+     "text": null,
+     "effect": "bad",
+     "ability": "Healing Needles"
+    },
+    {
+     "label": "Spirit scaling",
+     "old": "0.2",
+     "new": "0.24",
+     "text": null,
+     "effect": "good",
+     "ability": "Healing Needles"
+    },
+    {
+     "label": "T3 rush speed",
+     "old": "+15%",
+     "new": "+20%",
+     "text": null,
+     "effect": "good",
+     "ability": "Wretched Vapors"
+    },
+    {
+     "label": "Fear buildup",
+     "old": "1.3s",
+     "new": "2s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Lurking Terrors"
+    },
+    {
+     "label": "Duration",
+     "old": "7s",
+     "new": "5s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Lurking Terrors"
+    },
+    {
+     "label": "T3 duration",
+     "old": "+3s",
+     "new": "+2s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Lurking Terrors"
+    },
+    {
+     "label": "T3 channel",
+     "old": "Immune to damage",
+     "new": "50% reduced damage",
+     "text": null,
+     "effect": "bad",
+     "ability": "Lurking Terrors"
+    },
+    {
+     "label": "Fear angle",
+     "old": null,
+     "new": null,
+     "text": "No fear >50° above/below view",
+     "effect": "bad",
+     "ability": "Lurking Terrors"
+    },
+    {
+     "label": "Fed leech duration",
+     "old": "180s",
+     "new": "120s + 3s/min",
+     "text": null,
+     "effect": "bad",
+     "ability": "Leech Therapy"
+    },
+    {
+     "label": "Round reset",
+     "old": null,
+     "new": null,
+     "text": "Ground leeches removed",
+     "effect": "bad",
+     "ability": "Leech Therapy"
+    }
+   ]
+  }
+ ]
+}

@@ -7,137 +7,120 @@ Patch: Halloween 2026 + Gameplay Update (2026-10-30)
 {
  "systems_changed": [
   {
-   "system": "Jungle / Haunt camps",
-   "change_summary": "Haunt base bounty and growth +10%, but Haunt HP and damage +10%. Camps pay more at every stage of the game and hit back harder, so clear speed and sustain become the real gate on jungle income.",
+   "system": "Jungle / Haunt camps (economy + difficulty)",
+   "change_summary": "Haunt base bounty and growth rise 10% while Haunt HP and damage also rise 10%, making camps both richer and more punishing to clear.",
    "driving_changes": [
     "Haunts base bounty and growth increased by 10%",
     "Haunts HP and Damage output increased by 10%"
    ],
    "magnitude": "major",
-   "effect_on_play": "AoE/sustain clearers bank faster and chain camps without backing; slow or single-target clearers lose HP per camp and start skipping camps, and the gap between the two widens every minute. Jungle income is now a clear-quality test, not a routing test."
+   "effect_on_play": "Off-lane farm is now the highest-value income on the map, but only for comps that clear grouped, chasing camps without bleeding HP. Weak-clear/single-target heroes fall further behind the AoE/sustain clearers, widening the coverage gap the KB already flagged."
   },
   {
-   "system": "Comeback economy (non-hero souls)",
-   "change_summary": "Comeback gold from non-hero sources caps at 30% (was 26%), and the behind-multiplier now also boosts tick souls for the two poorest players. The trailing team gets paid continuously off farm, not only on kills.",
+   "system": "Comeback economy",
+   "change_summary": "A three-part anti-snowball package: non-hero comeback gold cap rises 26%→30%, Haunted Souls secure up to 50% faster when behind (max at 20% NW gap), and the behind-multiplier now also feeds tick souls to the two poorest players.",
    "driving_changes": [
     "Comeback gold from non-hero sources increased from a max of 26% to 30% (when behind by ~20% Net Worth)",
+    "Haunted Souls secure rate is now up to 50% faster than baseline based on how far behind you are in Net Worth compared to the enemy team's average (max rate at a 20% Net Worth gap)",
     "The bonus NPC souls multiplier when behind now also increases tick souls for the 2 poorest players"
    ],
    "magnitude": "major",
-   "effect_on_play": "A losing econ now compounds instead of stagnating, so the KB's 'leads stick' premise is reversed. A team that is ahead must convert into Guardians/Walkers fast, because the losing team's item floor keeps rising while they farm."
+   "effect_on_play": "This directly reverses the KB's 'leads stick' read: losing teams now convert camp souls more reliably and get passive tick catch-up, so a farm lead is a soft lead. It rewards teams that keep farming from behind instead of conceding, and lengthens games."
   },
   {
-   "system": "Haunted Souls securing",
-   "change_summary": "Secure rate is 25% slower at baseline but up to 50% faster scaled to net-worth deficit, maxing at a 20% gap. Contested farm souls favor the team that is behind and are harder for the leader to lock down.",
+   "system": "Haunted Souls secure mechanic",
+   "change_summary": "Baseline secure rate is 25% slower, but scales up to 50% faster than baseline the further behind you are in net worth.",
    "driving_changes": [
     "Haunted Souls secure rate is now 25% slower",
     "Haunted Souls secure rate is now up to 50% faster than baseline based on how far behind you are in Net Worth compared to the enemy team's average (max rate at a 20% Net Worth gap)"
    ],
-   "magnitude": "major",
-   "effect_on_play": "Camp contests turn into a lever for the losing side: a diver who is behind can steal the Haunt soul the leader is channelling. Leaders must kill and secure in one clean pass rather than drag out camp fights."
+   "magnitude": "moderate",
+   "effect_on_play": "Contested camp souls become a skill/timing check for the leader (slower baseline secure = easier to steal) and a gift for the trailing team. It makes camp contests less of a straight stat-check and more of a comeback lever."
   },
   {
-   "system": "Breakables / crate economy",
-   "change_summary": "Breakable growth values cut 10% and the box-respawn stall bug fixed. Crates stay the guaranteed-souls floor but no longer scale into the mid game.",
+   "system": "Breakables / crate economy + Halloween Cauldrons",
+   "change_summary": "Breakables growth values drop 10%, while new Halloween Cauldrons (broken with Heavy Melee) drop Candy granting a temporary Sugar Rush buff.",
    "driving_changes": [
     "Breakables growth values reduced by 10%",
-    "Fixed some boxes taking longer to respawn if another box's or powerup's pickup was left on the ground"
+    "With a Heavy Melee, break the cauldron to pick up a piece of Candy and stash it in your pocket for later... consume the candy to grant yourself a boost of energy with the temporary Sugar Rush buff"
    ],
    "magnitude": "moderate",
-   "effect_on_play": "Heavy-melee crate routing is a lane-phase income tool now, not a 20-minute side stream; crate openers must graduate to Haunt camps or fights to keep pace."
+   "effect_on_play": "Crate scaling is trimmed, so Heavy Melee crate routes pay slightly less late, but Cauldrons add a fresh Heavy Melee-gated pickup that rewards the same frontline/tank kits with a stashed tempo buff. Heavy Melee access stays a real economy skill."
   },
   {
-   "system": "Halloween Cauldrons / Candy (Sugar Rush)",
-   "change_summary": "New Heavy-Melee-breakable cauldrons drop Candy stashed in the player's pocket, consumed later for a temporary Sugar Rush buff. Event runs through Nov 2, so it is a timed layer on the map, not a permanent one.",
+   "system": "Sustain pickups",
+   "change_summary": "Healing Snacks heal rises from 10% to 14% max HP.",
    "driving_changes": [
-    "With a Heavy Melee, break the cauldron to pick up a piece of Candy and stash it in your pocket for later",
-    "you can consume the candy to grant yourself a boost of energy with the temporary Sugar Rush buff",
-    "The Halloween festivities are available in-game now through November 2nd, 2026."
+    "Healing Snacks heal increased from 10% Max HP to 14%"
    ],
    "magnitude": "minor",
-   "effect_on_play": "Heavy Melee gains a second detour reason alongside crates, and fights can be pre-loaded with a stored buff instead of bought from a shop. Sugar Rush's exact stats are unclear from the notes; treat it as a tempo consumable, not a build item."
+   "effect_on_play": "Camps and extended off-lane routes are more survivable, reinforcing sustain bruisers and tanks who already clear Haunts; it slightly lowers the cost of contesting hubs and Buff Containers."
   },
   {
-   "system": "Steam Vents / movement utility",
-   "change_summary": "Steam Vents now grant +150% stamina regeneration, reworking the stealth-roam role the KB had priced in. Vents become a stamina battery rather than a free approach.",
+   "system": "Movement / Steam Vents / tunnels / air drag",
+   "change_summary": "Steam Vents are reworked to grant +150% stamina regen (from the KB's invisibility roams), tunnel move speed drops +70%→+50%, and the slow-to-air-drag ratio rises 0.35→0.5.",
    "driving_changes": [
-    "Steam Vents now increase stamina regeneration by 150%"
-   ],
-   "magnitude": "moderate",
-   "effect_on_play": "Vent play converts from invisibility ganks into extra dashes mid-fight or mid-rotation, which helps stamina-hungry divers and tanks more than it helps gankers; the KB's 'vent gank' discipline test loses its main driver."
-  },
-  {
-   "system": "Air drag / slows",
-   "change_summary": "Move-slow-to-air-drag ratio 0.35 -> 0.5, so slows bite harder on airborne movement.",
-   "driving_changes": [
+    "Steam Vents now increase stamina regeneration by 150%",
+    "Move speed in tunnels reduced from +70% to +50%",
     "Move slow to air drag ratio increased from 0.35 to 0.5"
    ],
    "magnitude": "moderate",
-   "effect_on_play": "Flyers and airborne escapes bleed more speed under a slow, so slow application gets stronger and grounded kiting harder to escape. This deepens the flyer tax; heroes that live in the air need a slow cleanse or a different exit."
+   "effect_on_play": "Vents shift from a stealth-gank tool to a stamina/kiting tool, cutting the free approach angle roamers had; tunnel rotations slow, tightening map tempo; and the higher air-drag ratio taxes flyers harder whenever they're slowed."
   },
   {
-   "system": "Tunnels",
-   "change_summary": "Tunnel move speed +70% -> +50%. The fastest corridor rotation on the map is slower.",
-   "driving_changes": [
-    "Move speed in tunnels reduced from +70% to +50%"
-   ],
-   "magnitude": "minor",
-   "effect_on_play": "Flank and respawn-to-hub timings lengthen by a beat; teams already staged at Bell Tower/Sunken Plaza get a small edge over teams rotating through tunnels."
-  },
-  {
-   "system": "Ranked draft / new-hero eligibility",
-   "change_summary": "The latest six heroes lose the 'new' flag: normal unlock requirements in ranked, and they can now be banned.",
+   "system": "Ranked roster / bans",
+   "change_summary": "The latest six heroes lose 'new' status, gaining normal ranked unlock requirements and becoming bannable.",
    "driving_changes": [
     "Latest 6 heroes are no longer categorized as \"new\" anymore. This means they have normal hero unlocking requirements for ranked and can now be banned."
    ],
-   "magnitude": "moderate",
-   "effect_on_play": "Their pick rates get capped by bans and their win rates regress toward the field; the vote-gated six stop being a free pick and enter normal draft counterplay, which disproportionately hits whichever of the six the snapshot shows as overtuned."
+   "magnitude": "minor",
+   "effect_on_play": "Ranked draft can now suppress the strongest of the recent six, so their pick/win rates should compress toward the field; it also raises the barrier to entry on those kits in ranked."
   }
  ],
  "tempo_shift": {
   "direction": "toward_scaling",
   "confidence": 0.6,
-  "why": "Three coordinated comeback levers (30% non-hero comeback cap, tick souls to the two poorest, 25%-to-50% faster secure when behind) attack the lead-holding pattern the KB called out, and Haunt bounty/growth +10% gives the trailing team a compounding farm floor toward the ~30-min Broker. The opposing pull (Haunts hit +10% harder, faster clearers snowball harder) is real but narrower in scope."
+  "why": "The comeback package (non-hero comeback gold 26%→30%, Haunted Souls securing up to 50% faster when behind, tick souls to the two poorest) plus trimmed breakable growth directly softens leads the KB said were sticking, giving trailing teams a farm-based path back. Richer-but-tougher Haunts reward sustained farming over early lane tempo."
  },
  "archetype_effects": [
   {
    "archetype": "tank/frontline",
    "direction": "up",
    "magnitude": "moderate",
-   "why": "Haunt damage +10% and Healing Snacks 10%->14% max HP pay regen and HP stacking, and Heavy Melee now opens both crates and candy cauldrons."
-  },
-  {
-   "archetype": "spirit carry",
-   "direction": "up",
-   "magnitude": "moderate",
-   "why": "Haunt bounty and growth +10% is pure profit for AoE camp clearers, who dodge most of the Haunt HP +10% cost because they one-cycle the camp."
+   "why": "Heavy Melee Cauldrons add a new candy/Sugar Rush pickup and Healing Snacks 10%→14% makes camp chip damage cheaper to absorb."
   },
   {
    "archetype": "late scaler",
    "direction": "up",
    "magnitude": "moderate",
-   "why": "30% non-hero comeback gold plus tick souls to the two poorest gives a trailing scaler a guaranteed item floor to reach the ~30-min Broker, which the KB called the only real late spike."
-  },
-  {
-   "archetype": "lane bully",
-   "direction": "down",
-   "magnitude": "minor",
-   "why": "Breakables growth -10% trims the guaranteed crate souls that converted early lane pressure, while the lane itself is untouched and Haunt income rose relative to it."
+   "why": "Comeback gold 26%→30%, faster Haunted Souls secure when behind, and tick souls to the poorest give trailing scalers a real catch-up route."
   },
   {
    "archetype": "mobile assassin",
+   "direction": "down",
+   "magnitude": "moderate",
+   "why": "Steam Vents reworked from invisibility to stamina regen removes the free approach, and tunnels +70%→+50% slows rotations."
+  },
+  {
+   "archetype": "poke/siege",
+   "direction": "down",
+   "magnitude": "minor",
+   "why": "Higher air-drag ratio (0.35→0.5) taxes flyers harder under slows, and slower tunnel speed blunts long-range repositioning."
+  },
+  {
+   "archetype": "lane bully",
    "direction": "neutral",
    "magnitude": "minor",
-   "why": "Steam Vents trade stealth approach for +150% stamina regen (more dashes in-fight) while tunnels drop +70%->+50% and the air-drag ratio 0.35->0.5 taxes airborne exits — gankers gain fight mobility, lose the free angle."
+   "why": "Breakables growth -10% trims crate scaling, offset by Cauldron Heavy Melee value; net roughly flat."
   },
   {
    "archetype": "split pusher",
    "direction": "down",
    "magnitude": "minor",
-   "why": "Breakables growth -10% and slower tunnel rotations both cut the side-lane payout and rotation speed that split pushing was converting into income."
+   "why": "Breakables growth -10% and slower tunnel rotations reduce the value of shoving-and-rotating over farming Haunts."
   }
  ],
- "intent_read": "Valve is removing the structural reason leads were unbreakable: instead of a kill-bounty comeback, the comeback valve now sits inside farm itself (secure rate for the trailing side, tick souls to the two poorest, 30% non-hero comeback gold). At the same time, Haunt HP/damage +10% keeps the off-lane map the skill test — income still comes from the jungle, but the jungle now actively redistributes it toward the team that is behind."
+ "intent_read": "Valve is deliberately re-opening the comeback valve it closed in prior patches: the multi-pronged behind-team package (gold cap, Haunted Souls secure, tick souls) plus trimmed breakable growth targets the 'leads stick' problem the KB flagged. The Haunt bounty/HP bump and Cauldrons push income further off-lane and toward Heavy Melee/AoE clearers, while the Steam Vent and tunnel changes pull back the free-roam gank tempo that made corridors so strong."
 }
 
 ## Item changes in this patch (grouped by item)
@@ -3642,263 +3625,6 @@ Deadman Danny:
   confidence: 0.55
   released_on: '2026-10-13'
   provisional: false
-Violet:
-  name: Violet
-  role: spirit zone-control caster
-  archetypes:
-  - spirit carry
-  - burst caster
-  - initiator
-  - late scaler
-  tier: C
-  trend: stable
-  why: "Her systems fit is genuine \u2014 AoE on grouped Haunts, 116 heavy melee on\
-    \ Tough Crates, and scheduled Bell Tower/Plaza contests all pay a zone caster\
-    \ \u2014 but the results are not there: 46.1% WR at a 70.9% pick rate, losing\
-    \ to the meta's frontlines (Rat King 41%, Mo & Krill 41%) and to its best poke\
-    \ (Vindicta 39%). Her build only converts at the T3/T4 tail (Boundless Spirit\
-    \ 54.4%, Superior Cooldown 52.9%) which lands at 24-28 min, after tempo has usually\
-    \ decided the lobby. Every cheap spirit and regen item she buys sits at her 46%\
-    \ baseline, so the popular build is a ramp with no payoff until the game is already\
-    \ lost."
-  core_items:
-  - Extra Spirit
-  - Mystic Regeneration
-  - Radiant Regeneration
-  - Extra Charge
-  - Improved Spirit
-  - Rapid Recharge
-  - Superior Cooldown
-  - Boundless Spirit
-  - Healing Booster
-  - Tankbuster
-  build_variants:
-  - Spirit caster (lead)
-  - Anti-bruiser sustain
-  - Mystic Shot poke
-  enabled_by:
-  - "Grouped, chasing Haunt camps \u2014 AoE spirit clear is the fastest income in\
-    \ the off-lane corridor meta"
-  - "Tough Crates (58 souls, guaranteed) \u2014 opened on her standard 116 heavy melee\
-    \ without committing to a gun build"
-  - Scheduled hub fights at Bell Tower (~280 souls, one rope, three vaults) and Sunken
-    Plaza plus Buff Container rolls, where a vision-blocking silence zone decides
-    the contest
-  - "Superior Cooldown + Boundless Spirit \u2014 the kit is cooldown-gated and those\
-    \ are the only two purchases above her baseline (52.9% / 54.4%)"
-  - "Tankbuster \u2014 the meta's frontline density (Rat King, Mo & Krill, Victor,\
-    \ Shiv, Silver) makes %-HP spirit damage her best mid-game slot"
-  countered_by:
-  - "Dive assassins (Lash, Holliday, Calico, Yamato) \u2014 no dash, 710 HP, no escape\
-    \ once the engage lands"
-  - "Vindicta \u2014 39% WR, outranges the zone and flyers are the one ranged archetype\
-    \ she does not beat"
-  - "Frontline HP stacks (Rat King, Mo & Krill, Baba \u2014 all 41%) that walk through\
-    \ the DoT"
-  - "Healbane / anti-heal \u2014 Radiant Regeneration (96%), Mystic Regeneration (93%)\
-    \ and Healing Booster (78%) are near-universal, so one anti-heal item taxes most\
-    \ of her spend"
-  - "Silence Wave / Knockdown / Disarming Hex \u2014 interrupt or cancel the Still\
-    \ Life gaze"
-  last_changed_patch: Released 2026-10-16
-  notes: "7-day check-in (2026-10-23): tier B -> C, WR 50%, PR 64% over 539876 matches.\n\
-    Data corrects the day-0 read: B/rising was a tooltip judgment, so C is a correction,\
-    \ not a decline \u2014 46.1% WR at 70.9% PR, and she loses to frontline brawlers\
-    \ rather than punishing melee. Watch whether her WR climbs with reps; the tooltip\
-    \ read also claimed Seven and the gun line as wins, but Seven is 49% over 170\
-    \ and Living Ink/HVR no longer appear in her item data at all. 10-20 Shh...: no\
-    \ Violet changes; her position moves on systems (Haunt grouping, Tough Crates,\
-    \ hub fights) and on the dive/frontline meta around her."
-  builds:
-  - name: Spirit caster (lead)
-    damage: spirit
-    core_items:
-    - Extra Spirit
-    - Mystic Regeneration
-    - Extra Charge
-    - Radiant Regeneration
-    - Improved Spirit
-    - Rapid Recharge
-    - Superior Cooldown
-    - Boundless Spirit
-    popularity: primary
-    notes: "Cooldown/regen ramp into T3-T4 spirit; only Superior Cooldown (52.9%)\
-      \ and Boundless Spirit (54.4%) beat her 46% baseline, and both land after 24\
-      \ min \u2014 the early stack is mandatory filler, not edge."
-  - name: Anti-bruiser sustain
-    damage: spirit
-    core_items:
-    - Extra Regen
-    - Grit
-    - Spirit Shielding
-    - Healing Booster
-    - Tankbuster
-    popularity: secondary
-    notes: "Vitality/regen shell plus Tankbuster (57% share, 49.7% WR, 24.4 min) to\
-      \ chew the Rat King/Mo & Krill/Victor/Shiv frontlines \u2014 her best-converting\
-      \ mid item, but the regen half dies to Healbane."
-  - name: Mystic Shot poke
-    damage: hybrid
-    core_items:
-    - Mystic Shot
-    - Mystic Burst
-    popularity: niche
-    notes: Mystic Shot (47% share, 46.9%) is the only weapon-side item left in her
-      data; the Living Ink / High-Velocity Rounds gun line from the day-0 read has
-      fallen out of usage entirely.
-  matchups:
-    beats:
-    - Grey Talon
-    - Deadman Danny
-    - Mina
-    - Paradox
-    loses_to:
-    - Vindicta
-    - Baba
-    - Mo & Krill
-    - Wraith
-    - Rat King
-  matchup_notes: "She beats the grounded marksman/flyer tier (Grey Talon 54%, Deadman\
-    \ Danny 51%) \u2014 35% air drag and vent-fed approaches force them into her zone\
-    \ \u2014 while Vindicta at 39% is the exception because she pokes from outside\
-    \ it. She loses to HP-stacking frontlines (Rat King 41%, Mo & Krill 41%) that\
-    \ outlast the DoT, and to Wraith's single-target burst; 710 HP with no dash means\
-    \ the zone lands after she's dead. The dive class (Lash, Holliday, Calico, Yamato)\
-    \ is the same structural problem even where the sample is too thin to list."
-  confidence: 0.6
-  released_on: '2026-10-16'
-  provisional: false
-Nurse Harrow:
-  name: Nurse Harrow
-  role: marksman-support hybrid
-  archetypes:
-  - gun carry
-  - support/healer
-  tier: B
-  trend: stable
-  why: "Nurse Harrow converts firing uptime into healing, and the rising melee-frontline\
-    \ meta (Shiv, Billy, Rat King, Victor) is exactly the fight shape she wins \u2014\
-    \ her best win rates run 55-59% against frontliners she can kite and DoT, and\
-    \ hub fights at Bell Tower and Sunken Plaza keep those fights grouped. She loses\
-    \ the range war: Baba, Celeste and Wraith all trade from outside the fear cone\
-    \ while 730 HP, zero regen and no dash leave her no answer. B holds \u2014 50.6%\
-    \ at a 75% pick rate is her real level rather than release noise, and her item\
-    \ curve (T3 spirit at 23-24 min, Ricochet at 27) is the one thing the tempo patch\
-    \ punishes."
-  core_items:
-  - Extra Regen
-  - Extended Magazine
-  - Titanic Magazine
-  - Extra Stamina
-  - Kinetic Dash
-  - Healing Booster
-  - Extra Spirit
-  - Arcane Surge
-  - Superior Cooldown
-  - Superior Duration
-  build_variants:
-  - Mag-dump sustain
-  - Cooldown/Duration spirit
-  - Ricochet gun carry
-  enabled_by:
-  - "Sustain-bruiser / melee-frontline meta (Shiv, Billy, Rat King, Victor, Mo & Krill\
-    \ all up) \u2014 the fights she wins are long, grouped and close-range, where\
-    \ cone DoT and AoE heal both pay"
-  - "Hub scheduling at Bell Tower, Sunken Plaza and Buff Container spawns \u2014 the\
-    \ map now forces grouped fights on her terms"
-  - "Cast-on-press (10-20) \u2014 Leech into Vapors into Needles resolves on input,\
-    \ so her combo no longer drops a window"
-  - "Buff Container permanent rolls \u2014 Leech Therapy eats buff duration and T3\
-    \ Needles extends her team's, so contested containers hand her value"
-  - "Ricochet (38% share, 59.1% WR) \u2014 bounces feed her gun-damage charge economy\
-    \ in precisely the stacked fights the map creates"
-  countered_by:
-  - "Long-range spirit burst and zone control (Baba 43%, Celeste 45%, Wraith 46%)\
-    \ \u2014 none of it enters the fear cone, and no dash or regen means the fight\
-    \ ends before Healing Needles pay"
-  - "Healbane / Decay / Toxic Bullets \u2014 anti-heal is the archetype answer to\
-    \ a healer, and all her sustain is healing-based"
-  - "Silencer / Cursed Relic / Knockdown \u2014 Lurking Terrors is a channel and her\
-    \ survivability is ability-based; Knockdown stops the channel outright"
-  - "Plated Armor \u2014 the needle charge economy runs on gun damage, and Armor Piercing\
-    \ Rounds is the answer but eats a slot she needs for uptime"
-  - "Off-angle dives and hooks \u2014 the fear cone only covers the facing arc, and\
-    \ Dynamo's 45% shows what an AoE engage does to her"
-  - "Lane bullies at the top (Paige, Apollo at S) \u2014 0 base regen and 730 HP mean\
-    \ she loses the attrition lane she is supposed to win"
-  last_changed_patch: Released 2026-10-20
-  notes: "7-day check-in (2026-10-27): tier B -> B, WR 51%, PR 63% over 607252 matches.\n\
-    Data overrides the day-0 read: Swift Striker, High-Velocity Rounds and Active\
-    \ Reload show no meaningful share (Titanic Magazine is the weapon core at 98%\
-    \ / 6.7m), and the 7-day spread contains none of the dash assassins the fear-cone\
-    \ thesis predicted.\nExtra Regen is not the trap the previous note called it \u2014\
-    \ 97% at 2.1m with a baseline win rate makes it a mandatory lane tax for 0 base\
-    \ regen, indifferent rather than informative.\nChangelog: released 2026-10-20\
-    \ in Shh... This Won't Hurt a Bit., first full-week check (7.3k matches, no creator\
-    \ content); nearly every item WR sits at 50.5-51%, so build-level signals are\
-    \ weak and confidence is capped."
-  builds:
-  - name: Mag-dump sustain
-    damage: gun
-    core_items:
-    - Extra Regen
-    - Extended Magazine
-    - Titanic Magazine
-    - Extra Stamina
-    - Kinetic Dash
-    - Healing Booster
-    popularity: primary
-    notes: 'The entire build lands before 10 minutes and buys uptime, not damage:
-      Titanic Magazine (98%) is her fire-rate package now that Swift Striker shows
-      no meaningful share, and Kinetic Dash plus Extra Stamina buy the dash her kit
-      lacks.'
-  - name: Cooldown/Duration spirit
-    damage: spirit
-    core_items:
-    - Extra Spirit
-    - Arcane Surge
-    - Improved Spirit
-    - Duration Extender
-    - Superior Cooldown
-    - Superior Duration
-    popularity: secondary
-    notes: "Every item she buys after ~18 minutes in these games is spirit, and Superior\
-      \ Cooldown (52.7%) and Superior Duration (52.0%) are her two best non-luxury\
-      \ win rates \u2014 ability uptime, not raw spirit, is the payload."
-  - name: Ricochet gun carry
-    damage: gun
-    core_items:
-    - Titanic Magazine
-    - Extended Magazine
-    - Healing Booster
-    - Kinetic Dash
-    - Ricochet
-    popularity: niche
-    notes: Ricochet's 59.1% is the sample's biggest outlier and the natural T4 for
-      a charge economy fed by gun damage, but a 27-minute buy time means part of that
-      win rate is 'already winning'.
-  matchups:
-    beats:
-    - Billy
-    - Mina
-    - Solomon
-    - Shiv
-    - Pocket
-    loses_to:
-    - Baba
-    - Dynamo
-    - Celeste
-    - Wraith
-    - Ivy
-  matchup_notes: "Lurking Terrors does its job on melee frontlines \u2014 Billy 59%,\
-    \ Shiv 55%, Pocket 55% \u2014 but the day-0 claim that it taxes dash assassins\
-    \ is unproven: Holliday, Calico, Yamato and Drifter do not appear as wins anywhere\
-    \ in the window. Losses cluster at range and on AoE engage: Baba 43%, Celeste\
-    \ 45%, Wraith 46% all trade from outside the cone, and Dynamo's 45% is a grouped\
-    \ initiation beating her single-target heal."
-  confidence: 0.6
-  released_on: '2026-10-20'
-  provisional: false
 
 
 ## What to do
@@ -3908,6 +3634,24 @@ For each changed item, decide the net direction and magnitude, then trace the co
 Group multiple lines for the same item into one entry. Skip pure bug fixes unless the fix meaningfully changes an interaction (then say which heroes it affects).
 
 Magnitude guide: minor = tuning that will not change who buys it; moderate = changes timing or priority in builds; major = adds or removes the item from core builds, or changes what it does.
+
+## Change rows
+
+`rows` is a list of scannable one-line changes for a phone screen. Give rows for **every item**.
+
+- `label`: 1-3 plain words naming what changed ("Channel time", "T3", "New interrupts", "Teamplay").
+- Prefer `old` + `new` when the note gives before/after values; otherwise `text` of at most 8 words. Never both.
+- `effect`: judged for the player who buys this item: "good", "bad", or "neutral". A longer channel time is bad.
+- `ability`: the exact ability name when the change applies to one.
+- Merge lines that say the same thing. Keep every gameplay-relevant change. Never add anything not in the notes; every number in a row must come from the notes verbatim.
+
+Example (Mirage's Traveler):
+
+```json
+{"label": "Channel time", "old": "2s", "new": "3s", "effect": "bad", "ability": "Traveler"}
+{"label": "T3", "old": "-90s cooldown", "new": "Damage can't interrupt it", "effect": "good", "ability": "Traveler"}
+{"label": "Base ability", "text": "Now includes a barrier (no scaling)", "effect": "good", "ability": "Traveler"}
+```
 
 ## Output schema
 
@@ -3921,7 +3665,8 @@ Magnitude guide: minor = tuning that will not change who buys it; moderate = cha
       "affected_heroes": [
         {"hero": "hero name", "relationship": "core|situational|new_option", "effect": "up|down|neutral", "why": "1 sentence"}
       ],
-      "build_shift": "optional 1 sentence on component/slot/competition changes, or empty string"
+      "build_shift": "optional 1 sentence on component/slot/competition changes, or empty string",
+      "rows": [{"label": "1-3 words", "old": "before", "new": "after", "effect": "good|bad|neutral", "ability": "optional exact name"}]
     }
   ],
   "notable_item_stories": ["0-3 one-sentence cross-item stories, e.g. 'invisibility items were buffed together, expect Shadow Weave on more gun carries'"]

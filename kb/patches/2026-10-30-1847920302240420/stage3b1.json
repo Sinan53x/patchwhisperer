@@ -1,0 +1,419 @@
+{
+ "heroes": [
+  {
+   "hero": "Infernus",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.62,
+   "direct_reasons": [
+    "Napalm T2 lifesteal 15%→20% directly feeds the Dashfernus sustain loop that already posts his better win rate.",
+    "Concussive Combustion T3 now adds +0.4 spirit scaling, a real damage bump for the spirit build rather than a cosmetic talent."
+   ],
+   "indirect_reasons": [
+    "Toxic Bullets anti-heal 35%→40% and Decay -50%→-55% strengthen the anti-heal package he already buys, and the patch's anti-heal theme punishes the sustain fronts his burn out-ranges.",
+    "Spirit Lifesteal 13%→15% and Bullet Lifesteal buffs land on his sustain slots exactly as regen items (Radiant Regeneration, Healing Booster) are gutted — his build is on the winning side of the sustain shift.",
+    "Spiritual Overflow's +2 spirit is a token recovery; he dropped it post-09-16 and this does not restore it."
+   ],
+   "build_changes": [
+    "Keep Toxic Bullets and Spirit Lifesteal as fixed slots — both were buffed this patch.",
+    "Take Napalm T2 earlier in the Dashfernus line; the 20% lifesteal is now a genuine lane-sustain talent."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Burn carry quietly gained: anti-heal and lifesteal both moved his way.",
+   "verdict": "keep",
+   "rows": [
+    {
+     "label": "T2 lifesteal",
+     "old": "15%",
+     "new": "20%",
+     "text": null,
+     "effect": "good",
+     "ability": "Napalm"
+    },
+    {
+     "label": "T3",
+     "old": null,
+     "new": null,
+     "text": "Adds +0.4 spirit scaling",
+     "effect": "good",
+     "ability": "Concussive Combustion"
+    }
+   ]
+  },
+  {
+   "hero": "Seven",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Haunt bounty and growth +10% on the camps he clears fastest is the single largest income lever in the patch, and his AoE clear converts it better than anyone.",
+    "Haunt HP and damage +10% is the offset — but Spirit Lifesteal 13%→15% and Decay -50%→-55% both buff his exact core slots, so he absorbs the harder camps better than most clearers.",
+    "The comeback package (non-hero gold 26%→30%, faster Haunted Souls when behind, tick souls to the two poorest) directly reverses the KB's 'a behind Seven cannot brawl back' cap — he now has a farm route from behind."
+   ],
+   "build_changes": [
+    "Spirit Lifesteal is now a stronger second-item commitment against the tougher camps.",
+    "Decay is a better slot into the sustain comps the anti-heal patch encourages."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Richer camps plus a real comeback route — the farm carry got both ends fixed.",
+   "verdict": "keep",
+   "rows": []
+  },
+  {
+   "hero": "Vindicta",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "High-Velocity Rounds base bullet velocity 60%→45% trims her opening max-range poke — the exact window her gun build buys it for.",
+    "Move slow to air-drag ratio 0.35→0.5 taxes her harder whenever she is slowed mid-flight, compounding the existing flyer tax.",
+    "Steam Vents losing invisibility removes a free-approach tool from the roamers that dive her, which partly offsets the above."
+   ],
+   "build_changes": [
+    "Upgrade off base High-Velocity Rounds faster to recover velocity rather than sitting on the T2."
+   ],
+   "tier_before": "A",
+   "tier_after": "B",
+   "one_liner": "Slower bullets and heavier air drag on a 48.7% flyer — the A was already generous.",
+   "verdict": "watch",
+   "rows": []
+  },
+  {
+   "hero": "Lady Geist",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.65,
+   "direct_reasons": [
+    "Essence Bomb spirit scaling 1.22→1.35 is a genuine buff to the Spirit Soul-Exchange variant's burst."
+   ],
+   "indirect_reasons": [
+    "Radiant Regeneration is gutted — spirit-damage regen 0.35→0.25, heal-on-cast 65→40, boon scaling 1.7→1.4, and the heal now only fires in combat — on an item she buys in ~98% of games.",
+    "Healing Booster loses its Extra Regen component and +3 flat regen, gutting the second leg of her regen shell.",
+    "Decay -50%→-55% and Healbane stacking help her anti-heal slot, but they cut against her own sustain identity as much as they help her kill other fronts."
+   ],
+   "build_changes": [
+    "Shift sustain weight from Radiant Regeneration/Healing Booster toward Spirit Lifesteal (13%→15%) and Bullet Lifesteal.",
+    "The Spirit Soul-Exchange variant now has the better damage line (Essence Bomb 1.35) but the weaker sustain line — commit to burst, not grind."
+   ],
+   "tier_before": "A",
+   "tier_after": "B",
+   "one_liner": "Her regen shell took its fourth and biggest hit; the bomb buff does not cover it.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Spirit scaling",
+     "old": "1.22",
+     "new": "1.35",
+     "text": null,
+     "effect": "good",
+     "ability": "Essence Bomb"
+    }
+   ]
+  },
+  {
+   "hero": "Abrams",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Base gun damage +5% and Siphon Life T3 +18→+22 DPS both nudge his brawl damage without changing his role.",
+    "The Shoulder Charge fix removes the extra hold he got from not hitting a wall — a small real loss to his engage."
+   ],
+   "indirect_reasons": [
+    "Hunter's Aura now requires line of sight, removing the through-wall shred that made his melee-brawler core a stat-check in clumped fights — his single biggest item hit.",
+    "Healing Snacks 10%→14% max HP and the new Heavy-Melee Cauldrons (Candy/Sugar Rush) reward exactly the frontline kit that already owns the crate route.",
+    "Decay -50%→-55% buffs his anti-heal answer to enemy fronts; Point Blank's slow 2s→2.5s is a small new stick option."
+   ],
+   "build_changes": [
+    "Hunter's Aura is now a fight-only item — stop valuing it as a corridor/objective shred and consider a competing slot.",
+    "Point Blank is a live option for holding targets in melee range."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Frontline economy and Cauldrons help; Hunter's Aura losing through-wall shred hurts.",
+   "verdict": "keep",
+   "rows": [
+    {
+     "label": "Base gun damage",
+     "old": null,
+     "new": null,
+     "text": "+5%",
+     "effect": "good",
+     "ability": null
+    },
+    {
+     "label": "T3",
+     "old": "+18 DPS",
+     "new": "+22 DPS",
+     "text": null,
+     "effect": "good",
+     "ability": "Siphon Life"
+    },
+    {
+     "label": "Shoulder Charge",
+     "old": null,
+     "new": null,
+     "text": "No longer holds enemies in place",
+     "effect": "bad",
+     "ability": "Shoulder Charge"
+    }
+   ]
+  },
+  {
+   "hero": "Wraith",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.62,
+   "direct_reasons": [
+    "Card Trick heal 60→45 cuts the self-sustain that keeps her alive through the dive she already loses to.",
+    "Project Mind cooldown 46s→50s and initial cast time 0.75s→1s make her escape/rotate tool slower on both ends."
+   ],
+   "indirect_reasons": [
+    "Spirit Lifesteal 13%→15% is a small lift to her situational sustain-gun variant, but it does not offset three direct nerfs.",
+    "The patch's anti-heal theme (Decay, Toxic Bullets, Healbane stacking) further devalues the Card Trick heal she just lost."
+   ],
+   "build_changes": [
+    "Lean harder into the pure-gun fire-rate line; the on-hit spirit package is already weakened and the heal is now worse."
+   ],
+   "tier_before": "B",
+   "tier_after": "C",
+   "one_liner": "Heal cut and a slower escape on a hero already sliding — the floor is thinner.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Heal",
+     "old": "60",
+     "new": "45",
+     "text": null,
+     "effect": "bad",
+     "ability": "Card Trick"
+    },
+    {
+     "label": "Cooldown",
+     "old": "46s",
+     "new": "50s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Project Mind"
+    },
+    {
+     "label": "Cast time",
+     "old": "0.75s",
+     "new": "1s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Project Mind"
+    }
+   ]
+  },
+  {
+   "hero": "McGinnis",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [
+    "Mini Turret damage vs troopers 50%→65% speeds her lane push and camp-adjacent farm.",
+    "Mini Turret health per boon 9→10 makes turret stacks survive dive and camp chip slightly longer."
+   ],
+   "indirect_reasons": [
+    "Haunt bounty +10% rewards turrets clearing grouped camps from cover, though the +10% camp damage chips the turrets themselves.",
+    "Breakables growth -10% trims the crate income her static setup does not contest anyway — a wash."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Turrets farm and push a bit better; still a low-pick niche controller.",
+   "verdict": "keep",
+   "rows": [
+    {
+     "label": "Turret vs troopers",
+     "old": "50%",
+     "new": "65%",
+     "text": null,
+     "effect": "good",
+     "ability": "Mini Turret"
+    },
+    {
+     "label": "Turret HP/boon",
+     "old": "9",
+     "new": "10",
+     "text": null,
+     "effect": "good",
+     "ability": "Mini Turret"
+    }
+   ]
+  },
+  {
+   "hero": "Paradox",
+   "in_notes": true,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [
+    "Paradoxical Swap cooldown 110s→95s is a real uptime gain on her pick tool."
+   ],
+   "indirect_reasons": [
+    "High-Velocity Rounds base velocity 60%→45% and Express Shot secondary fire -5% both hit her carbine-sniper core, trimming the max-range picks the swap buff is meant to set up.",
+    "Steam Vents losing invisibility removes the roamer approach the KB credits for her rising pick setups — a direct hit to her identity.",
+    "Echo Shard post-cast 0.5s→0.2s speeds her niche bomb combo, but usage data already had it outside her top 15."
+   ],
+   "build_changes": [
+    "Upgrade off base High-Velocity Rounds sooner; the velocity cut bites the early lane-poke window hardest."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Swap comes up more often, but her poke items and vent invis both got trimmed.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Cooldown",
+     "old": "110s",
+     "new": "95s",
+     "text": null,
+     "effect": "good",
+     "ability": "Paradoxical Swap"
+    }
+   ]
+  },
+  {
+   "hero": "Dynamo",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Mid-Boss pit is bigger with more cover and the Rejuvenator now drops as 3 spread crystals — more cover blunts Singularity setup and splitting for three crystals punishes the grouped-up comp he wants.",
+    "The comeback package lengthens games, which is mildly against a tempo initiator whose value is converting early hub fights.",
+    "No core item of his moved; Quantum Entanglement's AoE dispel is untouched."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Nothing moved for him directly; the Mid-Boss rework is a small setup tax.",
+   "verdict": "keep",
+   "rows": []
+  },
+  {
+   "hero": "Kelvin",
+   "in_notes": true,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [
+    "Frozen Shelter T2 now also applies -20% enemy fire rate and T3 regen 65→75, both real buffs to the dome.",
+    "Base cooldown 185s→190s is offset by T1 -20s→-30s, so the talented dome is actually 5s faster."
+   ],
+   "indirect_reasons": [
+    "Healing Booster losing its Extra Regen component and +3 flat regen guts the backbone of his sustain shell — the bigger hit than the dome buffs.",
+    "Radiant Regeneration's major trim also removes a sustain layer he stacks.",
+    "Healing Nova switching from boon scaling to 1.1 spirit scaling rewards his spirit-stacked build; Healing Snacks 10%→14% caps what dedicated healing he can sell."
+   ],
+   "build_changes": [
+    "Rebuild the sustain layer around Spirit Lifesteal (13%→15%) and Healing Nova's spirit scaling instead of Healing Booster.",
+    "Frozen Shelter T2 is now worth taking earlier as an anti-carry tool."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Dome got better, his regen shell got worse — roughly a wash on a 53.9% hero.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Cooldown",
+     "old": "185s",
+     "new": "190s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Frozen Shelter"
+    },
+    {
+     "label": "T1",
+     "old": "-20s cooldown",
+     "new": "-30s cooldown",
+     "text": null,
+     "effect": "good",
+     "ability": "Frozen Shelter"
+    },
+    {
+     "label": "T2",
+     "old": null,
+     "new": null,
+     "text": "Also -20% enemy fire rate",
+     "effect": "good",
+     "ability": "Frozen Shelter"
+    },
+    {
+     "label": "T3 regen",
+     "old": "+65",
+     "new": "+75",
+     "text": null,
+     "effect": "good",
+     "ability": "Frozen Shelter"
+    }
+   ]
+  },
+  {
+   "hero": "Haze",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [
+    "Smoke Bomb T3 no longer dispels undispellable debuffs — a small trim to her escape/cleanse window."
+   ],
+   "indirect_reasons": [
+    "Return Fire now reflects Fixation damage, handing tanks a targeted counter-item into her stacking DoT.",
+    "The patch's anti-heal and lifesteal shift does nothing for her weak T4 gun items, which the KB already flags as her scaling ceiling."
+   ],
+   "build_changes": [
+    "Expect Return Fire on enemy fronts — do not rely on Fixation stacks alone to close kills into tanks."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "A counter-item now exists for Fixation; her ceiling is unchanged and still low.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "T3",
+     "old": null,
+     "new": null,
+     "text": "No longer dispels undispellable debuffs",
+     "effect": "neutral",
+     "ability": "Smoke Bomb"
+    }
+   ]
+  },
+  {
+   "hero": "Holliday",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Steam Vents reworked from invisibility to +150% stamina regen removes the free roam approach the KB credits for her pick routes.",
+    "Tunnel move speed +70%→+50% slows the rotations her lasso picks depend on.",
+    "The comeback package lengthens games and softens lane leads — directly against a tempo assassin sitting at 46.3% WR."
+   ],
+   "build_changes": [
+    "Lean on the stamina hybrid line (Sprint Boots, Extra Stamina, Recharging Rush) now that vents give stamina rather than stealth."
+   ],
+   "tier_before": "A",
+   "tier_after": "B",
+   "one_liner": "Her two roam tools — vent invis and fast tunnels — both got pulled back.",
+   "verdict": "watch",
+   "rows": []
+  }
+ ]
+}

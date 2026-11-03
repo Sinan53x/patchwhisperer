@@ -1,0 +1,471 @@
+{
+ "heroes": [
+  {
+   "hero": "Vyper",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Her two worst lanes both moved against her: Warden got flask travel speed, -30% weapon-damage reduction and Willpower +20%, and Billy got Rising Ram T3 +15%/20s and Blasted 27s->25s.",
+    "Two other counters softened: Mo & Krill's spirit damage on all abilities -10% blunts the Combo that lifts her, and Wraith lost Card Trick heal 60->45 and Project Mind cooldown 46s->50s.",
+    "Bullet Resilience 30%->35% bullet resist is a small tax on a pure-gun kit, partly offset by Glass Cannon 80%->85%."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No direct change; Warden and Billy got stronger, M&K and Wraith weaker - roughly flat.",
+   "verdict": "watch",
+   "rows": []
+  },
+  {
+   "hero": "Sinclair",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "High-Velocity Rounds bullet velocity 60%->45% hits the ~79% HVR/Opening Rounds lane opener that is his only real lane pressure.",
+    "His dive counters got direct buffs: Drifter base gun damage +3% and Eternal Night T3 +2.75s, Calico Leaping Slash T3 +90 and Ava T3 8s.",
+    "Lightning Scroll now scales 0.35 off spirit power, giving his duration/cooldown spirit shell a poke option it did not have."
+   ],
+   "build_changes": [
+    "Delay the HVR lane opener or accept weaker max-range poke; consider Lightning Scroll as a spirit-scaling poke slot in the duration build."
+   ],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "HVR lane package nerfed and his dive counters buffed; still a coin-flip C.",
+   "verdict": "watch",
+   "rows": []
+  },
+  {
+   "hero": "Mina",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Haunt bounty +10% rewards her grouped-camp AoE clear, and the comeback package (gold cap 26%->30%, faster Haunted Souls when behind) helps a 44.8% WR hero.",
+    "Steam Vents losing invisibility removes the free dive approach the KB credited her, and tunnels +70%->+50% slows her roam.",
+    "Her worst lane Ivy lost Healing Booster's Extra Regen component and flat +3 regen, but Victor gained Spirit Lifesteal, Infuser and Torment Pulse buffs and Billy got Rising Ram T3 +15%/20s."
+   ],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "AoE camp clear pays more, but vents lost invis and her tank counters got tankier.",
+   "verdict": "watch",
+   "rows": []
+  },
+  {
+   "hero": "Drifter",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [
+    "Base gun damage +3% and Bloodscent T3 +11%->+12% amplified damage sharpen the melee-proc trade he already wins early.",
+    "Eternal Night T3 +2.5s->+2.75s extends his ult window slightly."
+   ],
+   "indirect_reasons": [
+    "Decay heal cut -50%->-55% strengthens his anti-heal bruiser variant, and Healbane now stacking makes team anti-heal a real lever.",
+    "Healing Snacks 10%->14% max HP and the new Heavy-Melee Cauldrons reward his melee core and camp-chip sustain.",
+    "Mo & Krill's spirit damage -10% softens one of his listed counters; Apollo's Riposte is now an immobilize rather than a stun, so it no longer fully locks his dive."
+   ],
+   "build_changes": [
+    "Anti-heal bruiser variant gains: Decay is now a stronger slot into sustain comps."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Small gun/T3 buffs plus Decay and anti-heal stacking - still a blind-pick bruiser.",
+   "verdict": "keep",
+   "rows": [
+    {
+     "label": "Base gun damage",
+     "old": null,
+     "new": null,
+     "text": "Increased by 3%",
+     "effect": "good",
+     "ability": null
+    },
+    {
+     "label": "T3",
+     "old": "+11% amplified",
+     "new": "+12% amplified",
+     "text": null,
+     "effect": "good",
+     "ability": "Bloodscent"
+    },
+    {
+     "label": "T3",
+     "old": "+2.5s duration",
+     "new": "+2.75s duration",
+     "text": null,
+     "effect": "good",
+     "ability": "Eternal Night"
+    }
+   ]
+  },
+  {
+   "hero": "Venator",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [
+    "Ira Domini blessed stake damage 115->95 but boon scaling 3->3.6: a weaker early stake that overtakes the old value later, so his lane poke is trimmed and his mid-game is not.",
+    "Battle Vest weapon damage 18%->22% and Bullet Lifesteal 6%->10% weapon damage / 13%->15% lifesteal both buff his gun-bruiser primary shell."
+   ],
+   "indirect_reasons": [
+    "Graves - his hard counter whose gun deletes his traps - took move speed 7->6.7, bullet damage per boon -4% and a slower Grasping Hands deploy.",
+    "High-Velocity Rounds 60%->45% does not touch him (he opens Restorative Shot/Close Quarters/Monster Rounds), while it does hit Vindicta, another listed counter.",
+    "Warden (flask, Willpower, Last Stand T2) and Abrams (base gun damage +5%, Siphon T3 +22) both got stronger, and both are losing lanes for him."
+   ],
+   "build_changes": [
+    "Lean harder into Battle Vest + Bullet Lifesteal as the lane-sustain spine; treat Ira Domini as a mid-game spike rather than an early bully tool."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Battle Vest and Bullet Lifesteal buffs offset a weaker early stake; Graves nerf helps.",
+   "verdict": "keep",
+   "rows": [
+    {
+     "label": "Stake damage",
+     "old": "115",
+     "new": "95",
+     "text": null,
+     "effect": "bad",
+     "ability": "Ira Domini"
+    },
+    {
+     "label": "Stake boon scaling",
+     "old": "3",
+     "new": "3.6",
+     "text": null,
+     "effect": "good",
+     "ability": "Ira Domini"
+    }
+   ]
+  },
+  {
+   "hero": "Victor",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [
+    "Aura of Suffering T3 +15%->+16% damage is a token bump on his grind-down frontline."
+   ],
+   "indirect_reasons": [
+    "Three of his core sustain items were buffed: Spirit Lifesteal 6->8 spirit / 13%->15%, Infuser 70%->75% active lifesteal and 6->8 spirit, Torment Pulse 18%->22% melee resist.",
+    "Healing Booster lost its Extra Regen component and flat +3 regen, which is a real hit to his sustain stack - the buffs above roughly cancel it.",
+    "Harder Haunt camps (bounty and HP both +10%) and Healing Snacks 10%->14% both reward his camp-grinding sustain line; Ivy, his worst lane, lost the same healing items."
+   ],
+   "build_changes": [
+    "Shift sustain weight from Healing Booster to Spirit Lifesteal/Infuser; keep Torment Pulse as the frontline layer."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Spirit Lifesteal/Infuser/Torment Pulse buffs beat the Healing Booster trim - still A.",
+   "verdict": "keep",
+   "rows": [
+    {
+     "label": "T3",
+     "old": "+15% damage",
+     "new": "+16% damage",
+     "text": null,
+     "effect": "good",
+     "ability": "Aura of Suffering"
+    }
+   ]
+  },
+  {
+   "hero": "Paige",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Base bullet damage 35->32 is a ~9% cut to the level-1 lane pressure that is her entire identity; the growth buff 0.52->0.61 only breaks even around boon 33, so she is weaker at every realistic point.",
+    "Bookwyrm T2 trail duration +2s->+1s trims her zone control."
+   ],
+   "indirect_reasons": [
+    "High-Velocity Rounds bullet velocity 60%->45% hits her 1.2-minute lane opener directly.",
+    "The comeback package (non-hero gold cap 26%->30%, Haunted Souls up to 50% faster when behind, tick souls to the two poorest) directly attacks the lane-win-then-snowball conversion that made her S.",
+    "Breakables growth -10% trims the lane-adjacent crate routes she converts lane pressure into; Healing Snacks 10%->14% partly offsets by letting her lane pressure stick."
+   ],
+   "build_changes": [
+    "Do not sit on base HVR for max-range poke; upgrade it faster or open Opening Rounds first. Expect to win lane by less and convert through crate routes rather than a kill snowball."
+   ],
+   "tier_before": "S",
+   "tier_after": "A",
+   "one_liner": "Lane damage cut and comeback souls restored - her snowball converts less.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Base bullet damage",
+     "old": "35",
+     "new": "32",
+     "text": null,
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "Bullet damage growth",
+     "old": "0.52",
+     "new": "0.61",
+     "text": null,
+     "effect": "good",
+     "ability": null
+    },
+    {
+     "label": "T2",
+     "old": "+2s trail duration",
+     "new": "+1s trail duration",
+     "text": null,
+     "effect": "bad",
+     "ability": "Bookwyrm"
+    }
+   ]
+  },
+  {
+   "hero": "The Doorman",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [
+    "Luggage Cart T2 wall-impact damage +75->+90 and T3 cooldown -15s->-18s are both straight buffs to his setup tool."
+   ],
+   "indirect_reasons": [
+    "The comeback package helps a 45.4% WR hero that loses to tempo rather than to numbers.",
+    "His listed counters Yamato (Power Slash spirit scaling +6%) and Lash (Grapple T3 +4m jump velocity) both got small buffs, so the dive that beats his setup did not get slower."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Luggage Cart buffs are real but small; still a setup initiator in a tempo meta.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "T2",
+     "old": "+75 wall impact",
+     "new": "+90 wall impact",
+     "text": null,
+     "effect": "good",
+     "ability": "Luggage Cart"
+    },
+    {
+     "label": "T3",
+     "old": "-15s cooldown",
+     "new": "-18s cooldown",
+     "text": null,
+     "effect": "good",
+     "ability": "Luggage Cart"
+    }
+   ]
+  },
+  {
+   "hero": "Billy",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [
+    "Rising Ram T3 +10% max health for 16s -> +15% for 20s is a real frontline durability buff on his engage.",
+    "Blasted cooldown 27s->25s gives slightly more uptime on his all-in."
+   ],
+   "indirect_reasons": [
+    "Spirit Shielding 18%->15% spirit resist trims his spirit shred/slow variant's defensive layer.",
+    "Decay -50%->-55% heal cut strengthens his anti-heal frontline role in a patch that pushes anti-heal hard.",
+    "His worst lane Shiv is roughly flat (Serrated Knives rage 3.5%->4% current HP up, alt-fire per boon -5% and Killing Blow recast 16s->12s down), while Warden and Seven both got small buffs against him."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Rising Ram T3 and Blasted buffs, but Warden and Shiv still out-sustain him.",
+   "verdict": "keep",
+   "rows": [
+    {
+     "label": "T3",
+     "old": "+10% max HP / 16s",
+     "new": "+15% max HP / 20s",
+     "text": null,
+     "effect": "good",
+     "ability": "Rising Ram"
+    },
+    {
+     "label": "Cooldown",
+     "old": "27s",
+     "new": "25s",
+     "text": null,
+     "effect": "good",
+     "ability": "Blasted"
+    }
+   ]
+  },
+  {
+   "hero": "Graves",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Move speed 7->6.7 and bullet damage per boon -4% cut both her kiting and her damage on a hero with the worst early game of any carry.",
+    "Grasping Hands deploy 0.6s->0.8s and now more easily double-jumped over removes a chunk of the zoning that keeps divers off her.",
+    "Borrowed Decree T2 loses -0.3s spawn time and T3 gains it - a straight delay to her summon tempo."
+   ],
+   "indirect_reasons": [
+    "Echo Shard post-cast 0.5s->0.2s buffs her summoner/cooldown primary build's double-cast execution.",
+    "The comeback package (gold cap 26%->30%, faster Haunted Souls when behind, tick souls to the two poorest) is the bail-out her ~25-minute window never had.",
+    "Her counters split: Warden buffed (flask, Willpower, Last Stand T2) and Calico buffed (Leaping Slash T3 +90, Ava T3 8s), but Wraith nerfed (Card Trick heal 60->45, Project Mind 46s->50s)."
+   ],
+   "build_changes": [
+    "Echo Shard is now a faster, more reliable core in the summoner build; lean on it rather than on Grasping Hands zoning for safety."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Top win rate ate a broad nerf; Echo Shard buff and comeback souls soften it.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Move speed",
+     "old": "7",
+     "new": "6.7",
+     "text": null,
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "Bullet damage per boon",
+     "old": null,
+     "new": null,
+     "text": "Reduced by 4%",
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "Deploy time",
+     "old": "0.6s",
+     "new": "0.8s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Grasping Hands"
+    },
+    {
+     "label": "Counterplay",
+     "old": null,
+     "new": null,
+     "text": "Easier to double jump over",
+     "effect": "bad",
+     "ability": "Grasping Hands"
+    },
+    {
+     "label": "T2/T3",
+     "old": null,
+     "new": null,
+     "text": "Spawn time cut moved T2->T3",
+     "effect": "neutral",
+     "ability": "Borrowed Decree"
+    }
+   ]
+  },
+  {
+   "hero": "Apollo",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "moderate",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Riposte Pommel Hit disable 0.8s->1.5s (T2 +0.4s->+0.6s) nearly doubles his lockdown window, even though it is now an immobilize plus parry disable rather than a stun.",
+    "Riposte dash fixes stop the counterattack whiffing on moving, cornered or displaced targets - reliability he did not have.",
+    "Flawless Advance now refunds the stab and keeps remaining recasts when stunned or slept, and Itani Lo Sahn is no longer interrupted by Sleep - two hard removals of his worst punish windows."
+   ],
+   "indirect_reasons": [
+    "Healing Booster losing its Extra Regen component and flat +3 regen thins the sustain shell his spirit bruiser build leans on.",
+    "Healbane now stacking is a team anti-heal gain but its heal-on-kill 275->170+3/boon is a personal sustain loss - roughly neutral for him.",
+    "His losing lanes split: Warden and Abrams both buffed, but Wraith (Card Trick heal, Project Mind cooldown) and Mo & Krill (spirit damage -10%) both nerfed."
+   ],
+   "build_changes": [
+    "Re-weight sustain toward Restorative Locket/Dispel Magic rather than Healing Booster; the longer Riposte disable makes pick-oriented spirit burst better than the old tank-and-outlast line."
+   ],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Riposte is now a 1.5s immobilize and Flawless Advance refunds on CC - big pick buff.",
+   "verdict": "keep",
+   "rows": [
+    {
+     "label": "Pommel Hit",
+     "old": null,
+     "new": null,
+     "text": "Stun -> immobilize + parry disable",
+     "effect": "neutral",
+     "ability": "Riposte"
+    },
+    {
+     "label": "Disable duration",
+     "old": "0.8s",
+     "new": "1.5s",
+     "text": null,
+     "effect": "good",
+     "ability": "Riposte"
+    },
+    {
+     "label": "T2",
+     "old": "+0.4s disable",
+     "new": "+0.6s disable",
+     "text": null,
+     "effect": "good",
+     "ability": "Riposte"
+    },
+    {
+     "label": "Dash reliability",
+     "old": null,
+     "new": null,
+     "text": "No longer misses moving/displaced targets",
+     "effect": "good",
+     "ability": "Riposte"
+    },
+    {
+     "label": "CC refund",
+     "old": null,
+     "new": null,
+     "text": "Stun/sleep refunds the stab",
+     "effect": "good",
+     "ability": "Flawless Advance"
+    },
+    {
+     "label": "Sleep",
+     "old": null,
+     "new": null,
+     "text": "No longer interrupted by Sleep",
+     "effect": "good",
+     "ability": "Itani Lo Sahn"
+    }
+   ]
+  },
+  {
+   "hero": "Rem",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healing Booster no longer builds from Extra Regen and loses its flat +3 regen - the backbone of his sustain layer is gone.",
+    "Divine Barrier cooldown 45s->55s cuts a cast window per fight off his best-WR late item.",
+    "Decay -50%->-55% heal cut is a small gain on his anti-heal slot, and the comeback package helps a 45.1% WR hero; his worst lane Ivy lost the same healing items."
+   ],
+   "build_changes": [
+    "Stop treating Healing Booster as a cheap Extra Regen upgrade; buy it standalone or route the slot into Spirit Lifesteal, which was buffed."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Healing Booster and Divine Barrier both trimmed; his sustain shell is thinner.",
+   "verdict": "watch",
+   "rows": []
+  }
+ ]
+}

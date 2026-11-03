@@ -52,7 +52,8 @@ Lanes renamed; four districts plus off-lane corridors. Every neutral camp is one
 ## Changes in the General / systems sections of this patch
 
 General:
-  - [rework] [img src="{STEAM_CLAN_LOC_IMAGE}/45164767/8f3f37511f3fd3bed3fe173f3d0f6bf8809b41a4.png"]As Halloween draws near, the residents of The Cursed Apple have put out some decorations to celebrate their favorite holiday. The Hideout gains a spooky new look, our heroes don masks, and NYC is now littered with pumpkins and curious Halloween Cauldrons that grant willing trick-or-treaters delicious candy.
+  - [neutral] {STEAM_CLAN_LOC_IMAGE}/45164767/6073862c8be5bfb374b9d02531bd64d50c1db8c5.png
+  - [rework] As Halloween draws near, the residents of The Cursed Apple have put out some decorations to celebrate their favorite holiday. The Hideout gains a spooky new look, our heroes don masks, and NYC is now littered with pumpkins and curious Halloween Cauldrons that grant willing trick-or-treaters delicious candy.
   - [neutral] [img src="{STEAM_CLAN_LOC_IMAGE}/45164767/74c75f698993f653082fa1bfed91b2f9f5ce25d4.png"]As you walk down the streets of Manhattan during a match, you'll come across bubbling cauldrons boasting a tempting display of treats. With a Heavy Melee, break the cauldron to pick up a piece of Candy and stash it in your pocket for later. When you're feeling a bit snacky, you can consume the candy to grant yourself a boost of energy with the temporary Sugar Rush buff. - Who said candy is bad for you?
   - [rework] The Halloween festivities are available in-game now through November 2nd, 2026. Happy Haunting!
   - [neutral] -------------------------------
