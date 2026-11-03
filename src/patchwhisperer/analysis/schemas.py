@@ -5,6 +5,26 @@ from pydantic import BaseModel, Field, model_validator
 Magnitude = Literal["minor", "moderate", "major"]
 UpDown = Literal["up", "down", "neutral"]
 Tier = Literal["S", "A", "B", "C", "D"]
+Verdict = Literal["keep", "watch", "bench"]
+Effect = Literal["good", "bad", "neutral"]
+
+
+class ChangeRow(BaseModel):
+    """One visual line of a change: either old -> new, or a plain statement."""
+
+    label: str = Field(min_length=1)
+    old: str | None = None
+    new: str | None = None
+    text: str | None = None
+    effect: Effect = "neutral"
+    ability: str | None = None
+
+    @model_validator(mode="after")
+    def _delta_or_text(self):
+        has_delta = bool(self.old and self.new)
+        if has_delta == bool(self.text):
+            raise ValueError("ChangeRow needs old and new, or text, not both")
+        return self
 
 
 class SystemChange(BaseModel):
@@ -49,6 +69,7 @@ class ItemEntry(BaseModel):
     summary: str = ""
     affected_heroes: list[AffectedHero] = []
     build_shift: str = ""
+    rows: list[ChangeRow] = []
 
 
 class ItemAnalysis(BaseModel):
@@ -57,7 +78,7 @@ class ItemAnalysis(BaseModel):
 
 
 class HeroEntry(BaseModel):
-    hero: str = ""
+    hero: str = Field(min_length=1)
     in_notes: bool = False
     direction: UpDown = "neutral"
     magnitude: Literal["none", "minor", "moderate", "major"] = "none"
@@ -68,6 +89,8 @@ class HeroEntry(BaseModel):
     tier_before: Literal["S", "A", "B", "C", "D", "?"] = "?"
     tier_after: Tier | Literal["?"] = "?"
     one_liner: str = ""
+    verdict: Verdict | None = None
+    rows: list[ChangeRow] = []
 
 
 class HeroAnalysis(BaseModel):
@@ -110,7 +133,7 @@ class Synthesis(BaseModel):
 
 class PoolVerdict(BaseModel):
     hero: str = ""
-    verdict: Literal["keep", "watch", "bench"] = "watch"
+    verdict: Verdict = "watch"
     one_liner: str = ""
     direct: str = ""
     indirect: str = ""
