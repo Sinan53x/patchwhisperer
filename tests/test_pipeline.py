@@ -11,6 +11,7 @@ from patchwhisperer.analysis.llm import (
     stage_marker,
 )
 from patchwhisperer.analysis.pipeline import (
+    _merge_hero_analyses,
     apply_kb_update,
     guard_rows,
     run_analysis,
@@ -395,3 +396,17 @@ def test_guard_rows_rejects_number_that_is_only_a_substring_of_a_note_number():
     rows = [ChangeRow(label="Cooldown", old="5s", new="9s", effect="bad")]
     kept = guard_rows(rows, ["Cooldown increased from 15s to 19s"], owner="X")
     assert all(r.old != "5s" for r in kept)
+
+
+def test_guard_rows_accepts_sign_added_to_an_unsigned_note_number():
+    rows = [ChangeRow(label="Gravity", text="+20% while active", effect="bad")]
+    assert guard_rows(rows, ["Now increases your gravity by 20% while active"]) == rows
+
+
+def test_merge_lets_a_retry_replace_an_incomplete_entry():
+    blank = HeroEntry(hero="Seven", direction="up", one_liner="")
+    full = HeroEntry(hero="Seven", direction="up", one_liner="Better", verdict="keep")
+    merged = _merge_hero_analyses(
+        [HeroAnalysis(heroes=[blank]), HeroAnalysis(heroes=[full])], ["Seven"]
+    )
+    assert merged.heroes[0].one_liner == "Better"

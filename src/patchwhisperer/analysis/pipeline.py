@@ -72,10 +72,13 @@ def guard_rows(
     kept = []
     for r in rows:
         fields = " ".join(x for x in (r.old, r.new, r.text) if x)
+        # compare unsigned: notes say "increased by 5%", rows may render "+5%"
         missing = [
             t
             for t in _NUM_TOKEN.findall(fields)
-            if not re.search(rf"(?<![\d.]){re.escape(t)}(?![\d.])", haystack)
+            if not re.search(
+                rf"(?<![\d.]){re.escape(t.lstrip('+-'))}(?![\d.])", haystack
+            )
         ]
         if missing:
             log.warning(
@@ -141,13 +144,11 @@ def _merge_hero_analyses(
 ) -> HeroAnalysis:
     expected_set = set(expected)
     entries: dict[str, object] = {}
+    # later analyses win so a retry can replace an incomplete entry
     for a in analyses:
         for h in a.heroes:
             if h.hero not in expected_set:
                 log.warning("stage 3: ignoring entry for unexpected hero %r", h.hero)
-                continue
-            if h.hero in entries:
-                log.warning("stage 3: ignoring duplicate entry for %r", h.hero)
                 continue
             entries[h.hero] = h
     return HeroAnalysis(heroes=[entries[n] for n in expected if n in entries])
