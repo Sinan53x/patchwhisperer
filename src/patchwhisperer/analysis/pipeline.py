@@ -72,7 +72,11 @@ def guard_rows(
     kept = []
     for r in rows:
         fields = " ".join(x for x in (r.old, r.new, r.text) if x)
-        missing = [t for t in _NUM_TOKEN.findall(fields) if t not in haystack]
+        missing = [
+            t
+            for t in _NUM_TOKEN.findall(fields)
+            if not re.search(rf"(?<![\d.]){re.escape(t)}(?![\d.])", haystack)
+        ]
         if missing:
             log.warning(
                 "%s: dropping row with number(s) not in the notes %s: %r",

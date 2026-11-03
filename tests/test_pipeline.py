@@ -389,3 +389,9 @@ def test_pool_verdict_matches_stage3(tmp_path):
         update_kb=False,
     )
     assert bundle.pool.verdicts[0].verdict == "bench"
+
+
+def test_guard_rows_rejects_number_that_is_only_a_substring_of_a_note_number():
+    rows = [ChangeRow(label="Cooldown", old="5s", new="9s", effect="bad")]
+    kept = guard_rows(rows, ["Cooldown increased from 15s to 19s"], owner="X")
+    assert all(r.old != "5s" for r in kept)
