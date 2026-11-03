@@ -399,7 +399,6 @@ def run_analysis(
     if update_kb and not patch.is_hotfix():
         bundle.kb_update = run_kb_update(patch, kb, bundle, llm)
         bundle.usage = {**llm.usage, "stage_seconds": dict(STAGE_SECONDS)}
-    pdir = kb.patch_dir(patch_id)
     (pdir / "analysis.json").write_text(bundle.model_dump_json(indent=1))
     return bundle
 
