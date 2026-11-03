@@ -92,7 +92,7 @@
   </div>
   <p class="legend muted"><span class="dot v-keep"></span>Keep <span class="dot v-watch"></span>Watch <span class="dot v-bench"></span>Bench <span class="legend-sep">Ring is whether to keep playing them. Arrows show how big the change is</span></p>
   {%- for g in page.hero_groups %}
-  <div class="hero-group g-{{ g.key }}" data-group>
+  <div class="hero-group g-{{ g.key }}" data-group{% if g.key == 'unchanged' %} data-pool-only{% endif %}>
     <h3 class="group-head"><span aria-hidden="true">{{ g.glyph }}</span> {{ g.label }} <span class="count" data-count>{{ g.heroes|length }}</span></h3>
     <div class="tile-grid">
       {%- for h in g.heroes %}
@@ -184,7 +184,6 @@
 
 <footer class="footer muted">
   <p>Unofficial fan project, not affiliated with or endorsed by Valve. Deadlock and its art belong to Valve. Analysis is AI-generated and can be wrong; check the <a href="{{ page.url }}" rel="noopener">official notes</a>.</p>
-  <p><a href="https://github.com/Sinan53x/patchwhisperer" rel="noopener">GitHub</a></p>
 </footer>
 
 <dialog id="sheet" class="sheet" aria-label="Details">

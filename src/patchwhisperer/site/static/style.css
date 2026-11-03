@@ -185,7 +185,7 @@ button { font: inherit; color: inherit; }
 .g-nerf .group-head { color: var(--bench); border-color: color-mix(in srgb, var(--bench) 45%, transparent); }
 .g-rework .group-head { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
 .g-adjusted .group-head { color: var(--text); border-color: var(--line-strong); }
-.g-indirect .group-head { color: var(--muted); }
+.g-indirect .group-head, .g-unchanged .group-head { color: var(--muted); }
 
 .tile-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 18px 6px; }
 .tile-grid.items { grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); gap: 14px 4px; }
@@ -194,8 +194,8 @@ button { font: inherit; color: inherit; }
 .tile:hover .portrait, .tile:hover .item-icon { transform: translateY(-2px); }
 .tile-art { position: relative; display: inline-flex; }
 .tile-name { font-size: 12.5px; line-height: 1.25; }
-.g-indirect .portrait { width: 52px; height: 52px; }
-.g-indirect .tile-name { color: var(--muted); }
+.g-indirect .portrait, .g-unchanged .portrait { width: 52px; height: 52px; }
+.g-indirect .tile-name, .g-unchanged .tile-name { color: var(--muted); }
 
 .chev {
   position: absolute;

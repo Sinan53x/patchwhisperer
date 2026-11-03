@@ -24,6 +24,7 @@ _HERO_GROUPS = [
     ("rework", "Reworked", "↻"),
     ("adjusted", "Adjusted", "≈"),
     ("indirect", "Not in the notes, still affected", "◆"),
+    ("unchanged", "No direct or major changes", "·"),
 ]
 _KIND_WORD = {
     "buff": "Buffed",
@@ -292,12 +293,12 @@ def _group_deltas(groups: list[RowGroupView]) -> list[DeltaView]:
     ]
 
 
-def _board_group(direct: bool, kind: str, direction: str) -> str | None:
+def _board_group(direct: bool, kind: str, direction: str) -> str:
     if direct:
         if kind != "none":
             return kind
         return {"up": "buff", "down": "nerf"}.get(direction, "adjusted")
-    return "indirect" if direction != "neutral" else None
+    return "indirect" if direction != "neutral" else "unchanged"
 
 
 def _watch(line: str) -> WatchView:

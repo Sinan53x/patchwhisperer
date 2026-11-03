@@ -367,3 +367,17 @@ def test_board_follows_the_notes_kind_not_the_net_direction():
     assert abrams.board_group == "buff"
     assert abrams.kind_word == "Buffed"
     assert abrams.chevrons == 2
+
+
+def test_unchanged_hero_gets_a_pool_only_group_and_site_has_no_owner_link(built):
+    page = _fixture_page(_mark_unchanged)
+    mina = next(h for h in page.heroes if h.name == "Infernus")
+    assert mina.board_group == "unchanged"
+    out, _ = built
+    assert "github.com" not in all_html(out).lower()
+    assert "sinan" not in all_html(out).lower()
+
+
+def _mark_unchanged(analysis, patch):
+    h = next(h for h in analysis.heroes.heroes if h.hero == "Infernus")
+    h.direction = "neutral"

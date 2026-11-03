@@ -76,6 +76,14 @@ the token limit.
 - `sources/` — distilled creator transcripts used to seed the KB
 - `patches/<patch_id>/` — every run's prompts, raw model output, and parsed JSON
 
+## Patch website
+
+`pw site build --out site-dist` turns each analyzed patch into a static page. On a push
+to `master` that touches `kb/patches/` or the site code, `.github/workflows/site.yml`
+builds it and deploys to Cloudflare. It needs the `CLOUDFLARE_API_TOKEN` and
+`CLOUDFLARE_ACCOUNT_ID` repository secrets, and skips the deploy without them. Set
+`SITE_URL` in `.env` to add the page link to Discord posts.
+
 ## Discord commands
 
 | Command | What it does |

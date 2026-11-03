@@ -153,8 +153,8 @@
       var any = false;
       section.querySelectorAll("[data-group]").forEach(function (g) {
         var n = g.querySelectorAll(".tile:not([hidden])").length;
-        g.hidden = n === 0;
-        any = any || n > 0;
+        g.hidden = n === 0 || (!mine && g.hasAttribute("data-pool-only"));
+        any = any || (n > 0 && !g.hidden);
         var c = g.querySelector("[data-count]");
         if (c) c.textContent = n;
       });

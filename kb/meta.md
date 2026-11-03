@@ -38,7 +38,7 @@ Lanes renamed; four districts plus off-lane corridors. All neutrals are one of n
 
 ## Recent history
 - Halloween 2026 + Gameplay Update (2026-10-30): comeback levers (30% non-hero cap, tick souls to the two poorest, faster secure when behind), Haunt bounty/growth and HP/damage +10%, Steam Vents become a stamina battery, ~30 item moves — regen out, in-fight lifesteal and stacked anti-heal in.
-- Shh... This Won't Hurt a Bit (2026-10-20): off-lane corridors and hub fights priced in; Haunt behaviors, Barrel Mimics, Steam Vents, Healing Snacks, instant casts; Graves gun destroys Venator traps; Corrupted items at the Broker.
+- Shh... This Won't Hurt a Bit (2026-10-20): off-lane corridors and hub fights priced in; Haunt behaviors, Barrel Mimics, Steam Vents, Healing Snacks, instant casts; Graves gun destroys Venator traps.
 - Paint the Town (2026-10-16): nine Haunt camp types replace all neutrals, contested Soul Bags, objective-parry cooldown reset removed, permanent-stat Buff Containers, six vote-gated new heroes.
 - Minor Update - 10-14-2026: Baba frontline cut; Deadman Danny buff package; Radiant Regeneration third trim.
 - Minor Update - 10-05-2026: trooper-speed regression fixed; Rat King and Sinclair trimmed.

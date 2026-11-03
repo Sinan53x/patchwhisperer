@@ -1553,22 +1553,6 @@ Guardian Ward:
   slot: null
   tier: null
   notes: ''
-Corrupted items:
-  name: Corrupted items
-  role: Late-game merchant tier unlocked by The Broker (~30 min, then ~every 15 min);
-    not a buildable slot — you convert a finished high-tier item for extra stats plus
-    match-wide random negative attributes. Street Brawl's Round 5 grant imports the
-    same tier into draft-mode mid-game.
-  bought_by: []
-  slot: Merchant shipment (The Broker) — no Vitality/Weapon/Spirit slot.
-  tier: null
-  notes: Rolls are symmetric and match-wide, so the tier adds between-match variance,
-    not an edge to whoever reaches The Broker first. It only activates at ~30 min
-    and pays teams that bank and stall, running counter to this patch's earlier, contested
-    soul economy (Bell Tower, Sunken Plaza, Soul Bags) — expect it to idle in the
-    tempo lobbies Paint the Town is pushing. A bad negative roll can brick a core
-    item, so hold a spare high-tier slot or delay past the first shipment rather than
-    buying greedily into an unknown roll.
 Extra Health:
   name: Extra Health
   role: ''
@@ -1611,28 +1595,6 @@ Reactive Barrier:
   slot: null
   tier: null
   notes: ''
-Corrupted Items:
-  name: Corrupted Items
-  role: Late-game gold sink via item exchange with the Broker — not a build slot and
-    not an early-path component.
-  bought_by:
-  - Graves
-  - Warden
-  - Celeste
-  - Vyper
-  slot: Replaces an item already owned (sixth-slot compression), competing with counter-item
-    purchases rather than adding a slot.
-  tier: null
-  notes: 'Post-2026-10-20 read, low confidence: no numbers and no per-item detail
-    exist, so bought_by is inferred from who can afford to bank souls for the ~30-min
-    Broker and whose build tolerates the public negative roll — late gun/spirit scalers
-    who lack another spike, not tempo heroes who should be spending and rotating.
-    The negative attribute roll is symmetric and visible to both teams, so value goes
-    to the player whose build cares least about the degraded stat, and corrupted upgrades
-    widen a lead more than they close a gap. Calico-style tempo roamers should skip
-    it; a squad that scuttles to hunt an unadvertised merchant usually loses more
-    tempo than the item returns. Not a rework of any existing item — no legacy entry
-    to reconcile.'
 Point Blank:
   name: Point Blank
   role: close-range slow weapon item

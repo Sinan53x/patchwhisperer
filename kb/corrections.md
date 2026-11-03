@@ -32,7 +32,8 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
 ## 2026-11-03
 
 - The Broker is gone from the game. It was a limited-time feature of City Never Sleeps.
-  Never mention it, its 30-minute spawn or its shop as a current mechanic.
+  Never mention it, its 30-minute spawn or its shop as a current mechanic. Corrupted
+  items came from the Broker and no longer exist, so never suggest them.
 - Apollo (10-30): Riposte's Pommel Hit went from a stun to an immobilize and parry
   disable. That is a rework and a real loss, since it can no longer interrupt channels.
 - General: crowd control changing type is never a plain buff, even when its duration rises.
