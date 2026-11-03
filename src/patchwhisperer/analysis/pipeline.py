@@ -1,5 +1,6 @@
 import json
 import logging
+import re
 import time
 from pathlib import Path
 
@@ -10,6 +11,7 @@ from patchwhisperer.analysis import context as ctx
 from patchwhisperer.analysis.llm import SYSTEM_PROMPT, render_prompt
 from patchwhisperer.analysis.schemas import (
     AnalysisBundle,
+    ChangeRow,
     HeroAnalysis,
     ItemAnalysis,
     KBHeroUpdate,
@@ -20,7 +22,7 @@ from patchwhisperer.analysis.schemas import (
 )
 from patchwhisperer.kb.schema import Build, ItemState, Matchups
 from patchwhisperer.kb.store import KBStore
-from patchwhisperer.parse.models import Patch
+from patchwhisperer.parse.models import Change, Patch
 
 log = logging.getLogger(__name__)
 
@@ -55,6 +57,98 @@ def patch_id_of(patch: Patch) -> str:
 STAGE_SECONDS: dict[str, float] = {}
 
 
+_NUM_TOKEN = re.compile(r"[+-]?\d+(?:\.\d+)?[a-zA-Z%]*")
+
+
+def guard_rows(
+    rows: list[ChangeRow], raw_lines: list[str], owner: str = ""
+) -> list[ChangeRow]:
+    """Drop rows whose numbers do not appear verbatim in the entity's raw note
+    lines. If every row is dropped, fall back to the raw lines themselves so a
+    real change is never lost to a hallucinated number."""
+    if not rows:
+        return rows
+    haystack = "\n".join(raw_lines)
+    kept = []
+    for r in rows:
+        fields = " ".join(x for x in (r.old, r.new, r.text) if x)
+        missing = [t for t in _NUM_TOKEN.findall(fields) if t not in haystack]
+        if missing:
+            log.warning(
+                "%s: dropping row with number(s) not in the notes %s: %r",
+                owner,
+                missing,
+                r.label,
+            )
+        else:
+            kept.append(r)
+    if kept:
+        return kept
+    return [ChangeRow(label="Change", text=line) for line in raw_lines]
+
+
+def _raw_lines(changes: list[Change]) -> dict[str, list[str]]:
+    out: dict[str, list[str]] = {}
+    for c in changes:
+        out.setdefault(c.entity_name, []).append(c.raw)
+    return out
+
+
+def _guard_item_rows(items: ItemAnalysis, raw: dict[str, list[str]]):
+    for it in items.items:
+        it.rows = guard_rows(it.rows, raw.get(it.item, []), owner=it.item)
+    return items
+
+
+def _guard_hero_rows(heroes: HeroAnalysis, raw: dict[str, list[str]]):
+    for h in heroes.heroes:
+        h.rows = guard_rows(h.rows, raw.get(h.hero, []), owner=h.hero)
+    return heroes
+
+
+def uncovered_heroes(
+    analysis: HeroAnalysis, expected: list[str], changed: set[str]
+) -> list[str]:
+    """Expected heroes with no usable entry. An entry only counts when its
+    name matches and, for heroes with direct changes, `one_liner` and
+    `verdict` are non-empty. Duplicates and foreign names are ignored."""
+    expected_set = set(expected)
+    entries: dict[str, object] = {}
+    for h in analysis.heroes:
+        if h.hero not in expected_set:
+            log.warning("stage 3: ignoring entry for unexpected hero %r", h.hero)
+            continue
+        if h.hero in entries:
+            log.warning("stage 3: ignoring duplicate entry for %r", h.hero)
+            continue
+        entries[h.hero] = h
+    out = []
+    for name in expected:
+        e = entries.get(name)
+        if e is None or (
+            name in changed and (not e.one_liner.strip() or e.verdict is None)
+        ):
+            out.append(name)
+    return out
+
+
+def _merge_hero_analyses(
+    analyses: list[HeroAnalysis], expected: list[str]
+) -> HeroAnalysis:
+    expected_set = set(expected)
+    entries: dict[str, object] = {}
+    for a in analyses:
+        for h in a.heroes:
+            if h.hero not in expected_set:
+                log.warning("stage 3: ignoring entry for unexpected hero %r", h.hero)
+                continue
+            if h.hero in entries:
+                log.warning("stage 3: ignoring duplicate entry for %r", h.hero)
+                continue
+            entries[h.hero] = h
+    return HeroAnalysis(heroes=[entries[n] for n in expected if n in entries])
+
+
 def _run_stage(
     llm,
     kb: KBStore,
@@ -66,6 +160,7 @@ def _run_stage(
     tag: str | None = None,
     budget_key=None,
     prefix: str = "stage",
+    post=None,
     **values,
 ):
     tag = tag or str(n)
@@ -79,12 +174,71 @@ def _run_stage(
         max_tokens=config.STAGE_MAX_TOKENS[budget_key if budget_key is not None else n],
         raw_path=pdir / f"{prefix}{tag}.raw.txt",
     )
+    if post is not None:
+        result = post(result)
     elapsed = time.time() - t0
     STAGE_SECONDS[tag] = elapsed
     log.info("stage %s (%s) done in %.1fs", tag, name, elapsed)
     (pdir / f"{prefix}{tag}.prompt.md").write_text(prompt)
     (pdir / f"{prefix}{tag}.json").write_text(result.model_dump_json(indent=1))
     return result
+
+
+def _run_hero_analysis(
+    llm,
+    kb: KBStore,
+    patch_id: str,
+    h_changes: list[Change],
+    s1: str,
+    s2: str,
+    snap_txt: str,
+    common: dict,
+) -> HeroAnalysis:
+    """Stage 3 in sequential hero batches, then a coverage gate: one retry for
+    heroes the model omitted, and a raise if any remain uncovered."""
+    pdir = kb.patch_dir(patch_id)
+    expected = ctx.expected_hero_names(kb, h_changes)
+    changed = {c.entity_name for c in h_changes}
+    raw_h = _raw_lines(h_changes)
+    corrections = kb.load_corrections()
+
+    def call(names: list[str], tag: str) -> HeroAnalysis:
+        kb_names = ctx.hero_names_with_matchups(kb, names)
+        return _run_stage(
+            llm,
+            kb,
+            patch_id,
+            3,
+            "stage3_heroes",
+            HeroAnalysis,
+            tag=tag,
+            budget_key="3b",
+            post=lambda r: _guard_hero_rows(r, raw_h),
+            **common,
+            stage1_json=s1,
+            stage2_json=s2,
+            hero_changes=ctx.format_changes(h_changes),
+            heroes_kb=ctx.heroes_kb_subset(kb, kb_names),
+            snapshot=snap_txt,
+            corrections=corrections,
+            batch_heroes=", ".join(names),
+        )
+
+    batch_size = config.STAGE3_HERO_BATCH
+    parts = [
+        call(expected[i : i + batch_size], f"3b{i // batch_size + 1}")
+        for i in range(0, len(expected), batch_size)
+    ]
+    heroes = _merge_hero_analyses(parts, expected)
+    missing = uncovered_heroes(heroes, expected, changed)
+    if missing:
+        log.warning("stage 3: %d heroes uncovered, retrying: %s", len(missing), missing)
+        heroes = _merge_hero_analyses([heroes, call(missing, "3r")], expected)
+        missing = uncovered_heroes(heroes, expected, changed)
+    if missing:
+        raise RuntimeError(f"stage 3 did not cover heroes: {missing}")
+    (pdir / "stage3.json").write_text(heroes.model_dump_json(indent=1))
+    return heroes
 
 
 def run_analysis(
@@ -99,6 +253,10 @@ def run_analysis(
 ) -> AnalysisBundle:
     STAGE_SECONDS.clear()
     patch_id = patch_id_of(patch)
+    pdir = kb.patch_dir(patch_id)
+    (pdir / "patch.json").write_text(
+        patch.model_dump_json(indent=1, exclude={"raw_bbcode"})
+    )
     meta_md = kb.load_meta() if kb.meta_path.exists() else "(empty)"
     common = {
         "patch_title": patch.title,
@@ -111,6 +269,7 @@ def run_analysis(
     h_changes = ctx.hero_changes(patch)
     changed_items = sorted({c.entity_name for c in it_changes})
     changed_heroes = sorted({c.entity_name for c in h_changes})
+    raw_item_lines = _raw_lines(it_changes)
     snap_txt = ctx.snapshot_table(snapshot) if snapshot else "(no snapshot)"
 
     if patch.is_hotfix():
@@ -157,6 +316,7 @@ def run_analysis(
                 2,
                 "stage2_items",
                 ItemAnalysis,
+                post=lambda r: _guard_item_rows(r, raw_item_lines),
                 **common,
                 stage1_json=s1,
                 item_changes=ctx.format_changes(it_changes),
@@ -169,20 +329,8 @@ def run_analysis(
             s2 = '{"items": [], "notable_item_stories": []}'
             STAGE_SECONDS["2"] = 0.0
 
-        heroes = _run_stage(
-            llm,
-            kb,
-            patch_id,
-            3,
-            "stage3_heroes",
-            HeroAnalysis,
-            **common,
-            stage1_json=s1,
-            stage2_json=s2,
-            hero_changes=ctx.format_changes(h_changes),
-            heroes_kb=ctx.heroes_kb(kb),
-            snapshot=snap_txt,
-            corrections=kb.load_corrections(),
+        heroes = _run_hero_analysis(
+            llm, kb, patch_id, h_changes, s1, s2, snap_txt, common
         )
         s3m = ctx.stage3_movers_json(heroes)
 
@@ -221,6 +369,21 @@ def run_analysis(
             heroes_kb_pool=ctx.heroes_kb_pool(kb, pool),
             pool=", ".join(pool),
         )
+
+    # stage 3 owns the per-hero verdict; keep the pool copy identical so
+    # Discord and the site can never disagree
+    if pool_verdicts and heroes:
+        by_hero = {h.hero: h for h in heroes.heroes}
+        rewritten = False
+        for v in pool_verdicts.verdicts:
+            src = by_hero.get(v.hero)
+            if src is not None and src.verdict is not None and src.verdict != v.verdict:
+                v.verdict = src.verdict
+                rewritten = True
+        if rewritten:
+            (pdir / "stage5.json").write_text(
+                pool_verdicts.model_dump_json(indent=1)
+            )
 
     bundle = AnalysisBundle(
         patch_id=patch_id,

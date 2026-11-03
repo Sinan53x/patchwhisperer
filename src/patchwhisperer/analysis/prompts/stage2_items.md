@@ -26,6 +26,24 @@ Group multiple lines for the same item into one entry. Skip pure bug fixes unles
 
 Magnitude guide: minor = tuning that will not change who buys it; moderate = changes timing or priority in builds; major = adds or removes the item from core builds, or changes what it does.
 
+## Change rows
+
+`rows` is a list of scannable one-line changes for a phone screen. Give rows for **every item**.
+
+- `label`: 1-3 plain words naming what changed ("Channel time", "T3", "New interrupts", "Teamplay").
+- Prefer `old` + `new` when the note gives before/after values; otherwise `text` of at most 8 words. Never both.
+- `effect`: judged for the player who buys this item: "good", "bad", or "neutral". A longer channel time is bad.
+- `ability`: the exact ability name when the change applies to one.
+- Merge lines that say the same thing. Keep every gameplay-relevant change. Never add anything not in the notes; every number in a row must come from the notes verbatim.
+
+Example (Mirage's Traveler):
+
+```json
+{"label": "Channel time", "old": "2s", "new": "3s", "effect": "bad", "ability": "Traveler"}
+{"label": "T3", "old": "-90s cooldown", "new": "Damage can't interrupt it", "effect": "good", "ability": "Traveler"}
+{"label": "Base ability", "text": "Now includes a barrier (no scaling)", "effect": "good", "ability": "Traveler"}
+```
+
 ## Output schema
 
 {
@@ -38,7 +56,8 @@ Magnitude guide: minor = tuning that will not change who buys it; moderate = cha
       "affected_heroes": [
         {"hero": "hero name", "relationship": "core|situational|new_option", "effect": "up|down|neutral", "why": "1 sentence"}
       ],
-      "build_shift": "optional 1 sentence on component/slot/competition changes, or empty string"
+      "build_shift": "optional 1 sentence on component/slot/competition changes, or empty string",
+      "rows": [{"label": "1-3 words", "old": "before", "new": "after", "effect": "good|bad|neutral", "ability": "optional exact name"}]
     }
   ],
   "notable_item_stories": ["0-3 one-sentence cross-item stories, e.g. 'invisibility items were buffed together, expect Shadow Weave on more gun carries'"]

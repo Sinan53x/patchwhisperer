@@ -1,4 +1,4 @@
-# Task: per-hero analysis (all heroes)
+# Task: per-hero analysis (hero batch)
 
 Patch: {{patch_title}} ({{patch_date}})
 
@@ -14,7 +14,7 @@ Patch: {{patch_title}} ({{patch_date}})
 
 {{hero_changes}}
 
-## Knowledge base: current state of every hero (pre-patch)
+## Knowledge base: the heroes in this batch plus their matchup partners (pre-patch)
 
 {{heroes_kb}}
 
@@ -22,9 +22,13 @@ Patch: {{patch_title}} ({{patch_date}})
 
 {{snapshot}}
 
+## Heroes to analyze in this call
+
+{{batch_heroes}}
+
 ## What to do
 
-Produce an entry for **every hero in the knowledge base**, including heroes with no direct changes. For each hero combine:
+Produce an entry for **each hero listed above, and only those heroes**. For each hero combine:
 
 - direct changes (kit, stats, talents) and their magnitude relative to how the hero is actually played (a nerf to an ability nobody maxes is minor);
 - indirect effects from the item analysis (core items buffed/nerfed, build paths changed) and from the systems analysis (archetype up/down, tempo shift);
@@ -47,6 +51,30 @@ For heroes with nothing relevant (no direct changes, no affected core items, arc
 
 `tier_after` is your call on the post-patch tier (S/A/B/C/D); keep `tier_before` from the KB (use "?" if unknown). Only move a tier when the reasons justify it. `confidence` reflects how sure you are about the direction, 0-1.
 
+`verdict` answers one question for every hero: should someone who plays this hero keep playing them after this patch?
+
+- `keep`: still a good pick; direct + indirect effects are neutral or positive, or negative but minor relative to the hero's standing.
+- `watch`: real change in either direction whose size is uncertain; play but adapt (usually a build or timing change).
+- `bench`: the hero lost what made them good (core build gutted, archetype hard-countered by a systems change, major kit nerf on a hero that was not over-performing).
+
+## Change rows
+
+`rows` is a list of scannable one-line changes for a phone screen. Give rows for **every hero with direct changes**; leave it empty for heroes without.
+
+- `label`: 1-3 plain words naming what changed ("Channel time", "T3", "New interrupts", "Teamplay").
+- Prefer `old` + `new` when the note gives before/after values; otherwise `text` of at most 8 words. Never both.
+- `effect`: judged for the player of this hero: "good", "bad", or "neutral". A longer channel time is bad.
+- `ability`: the exact ability name when the change applies to one.
+- Merge lines that say the same thing. Keep every gameplay-relevant change. Never add anything not in the notes; every number in a row must come from the notes verbatim.
+
+Example (Mirage's Traveler):
+
+```json
+{"label": "Channel time", "old": "2s", "new": "3s", "effect": "bad", "ability": "Traveler"}
+{"label": "T3", "old": "-90s cooldown", "new": "Damage can't interrupt it", "effect": "good", "ability": "Traveler"}
+{"label": "Base ability", "text": "Now includes a barrier (no scaling)", "effect": "good", "ability": "Traveler"}
+```
+
 ## Output schema
 
 {
@@ -62,7 +90,9 @@ For heroes with nothing relevant (no direct changes, no affected core items, arc
       "build_changes": ["concrete build advice: swap X for Y, delay Z, new core W; empty if none"],
       "tier_before": "S|A|B|C|D|?",
       "tier_after": "S|A|B|C|D",
-      "one_liner": "<= 20 words a player would actually say about this hero after the patch"
+      "one_liner": "<= 20 words a player would actually say about this hero after the patch",
+      "verdict": "keep|watch|bench",
+      "rows": [{"label": "1-3 words", "old": "before", "new": "after", "effect": "good|bad|neutral", "ability": "optional exact name"}]
     }
   ]
 }
