@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All patches · PatchWhisperer</title>
+<meta property="og:title" content="All patches · PatchWhisperer">
+<meta property="og:description" content="Archive of analyzed Deadlock patches">
+<link rel="stylesheet" href="{{ rel }}style.css">
+</head>
+<body>
+<main class="wrap">
+<header class="card header">
+  <p class="eyebrow">PatchWhisperer</p>
+  <h1>All patches</h1>
+  <p class="muted"><a href="{{ rel }}../">latest patch</a></p>
+</header>
+<section class="card">
+  <ul class="archive">
+    {%- for e in entries %}
+    <li>
+      <a href="{{ e.patch_id }}/">
+        <span class="archive-date muted">{{ e.date_display }} · {{ e.patch_size }}</span>
+        <span class="archive-title">{{ e.title }}</span>
+        <span class="archive-head muted">{{ e.headline }}</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+</main>
+<footer class="footer muted">
+  <p>Unofficial fan project, not affiliated with or endorsed by Valve. Deadlock and its art belong to Valve. Analysis is AI-generated and can be wrong; check the official notes.</p>
+  <p><a href="https://github.com/Sinan53x/patchwhisperer" rel="noopener">GitHub</a></p>
+</footer>
+</body>
+</html>
