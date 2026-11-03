@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 
+from patchwhisperer import config
 from patchwhisperer.analysis.schemas import AnalysisBundle, NewHeroCard
 from patchwhisperer.kb.schema import HeroState
 
@@ -131,6 +132,10 @@ def render_discord(bundle: AnalysisBundle) -> DiscordPost:
     if bundle.pool:
         for v in bundle.pool.verdicts:
             tldr_lines.append(f"{v.hero} — {v.verdict.upper()} — {v.one_liner}")
+    if config.SITE_URL:
+        tldr_lines.append(
+            f"{config.SITE_URL.rstrip('/')}/patches/{bundle.patch_id}/"
+        )
     tldr = "\n".join(tldr_lines)
 
     full = render_markdown(bundle)
