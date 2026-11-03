@@ -410,3 +410,19 @@ def test_merge_lets_a_retry_replace_an_incomplete_entry():
         [HeroAnalysis(heroes=[blank]), HeroAnalysis(heroes=[full])], ["Seven"]
     )
     assert merged.heroes[0].one_liner == "Better"
+
+
+def test_written_patch_json_loads_back_without_the_raw_post(tmp_path):
+    patch = Patch(
+        gid="1",
+        title="T",
+        date="2026-10-30T00:00:00Z",
+        url="u",
+        author="a",
+        raw_bbcode="secret",
+        changes=[],
+    )
+    reloaded = Patch.model_validate_json(
+        patch.model_dump_json(exclude={"raw_bbcode"})
+    )
+    assert reloaded.raw_bbcode == ""

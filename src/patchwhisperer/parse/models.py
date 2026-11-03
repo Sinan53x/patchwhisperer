@@ -42,7 +42,7 @@ class Patch(BaseModel):
     date: datetime
     url: str
     author: str
-    raw_bbcode: str
+    raw_bbcode: str = ""
     changes: list[Change]
     kind: PostKind = PostKind.balance
     digest_summary: str = ""
