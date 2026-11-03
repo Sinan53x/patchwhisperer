@@ -3,9 +3,10 @@ from pathlib import Path
 
 import pytest
 
-from patchwhisperer.parse.models import Patch
+from patchwhisperer.analysis.schemas import HeroEntry
+from patchwhisperer.parse.models import Change, Direction, EntityType, Patch
 from patchwhisperer.site.build import build_site, load_analysis
-from patchwhisperer.site.page import build_page_model
+from patchwhisperer.site.page import _driving_deltas, build_page_model
 
 FIXTURES = Path(__file__).parent / "fixtures" / "site"
 KB = FIXTURES / "kb"
@@ -118,8 +119,8 @@ def test_subpath_safe_relative_links(built):
 def test_null_verdict_falls_back_to_direction(built):
     out, _ = built
     html = patch_html(out)
-    wraith = html.split('id="hero-wraith"', 1)[1].split("</details>", 1)[0]
-    assert 'data-verdict=""' in wraith
+    assert 'data-slug="wraith" data-verdict=""' in html
+    wraith = html.split('id="sheet-hero-wraith"', 1)[1].split("</article>", 1)[0]
     assert 'badge v-bench">down<' in wraith
 
 
@@ -146,7 +147,7 @@ def test_pool_data_never_published(built):
 def test_empty_rows_fall_back_to_patch_changes(built):
     out, _ = built
     html = patch_html(out)
-    abrams = html.split('id="hero-abrams"', 1)[1].split("</details>", 1)[0]
+    abrams = html.split('id="sheet-hero-abrams"', 1)[1].split("</article>", 1)[0]
     assert "Seismic Impact cooldown increased from 20s to 24s" in abrams
     assert "e-bad" in abrams
 
@@ -186,28 +187,97 @@ def test_rebuild_is_idempotent(tmp_path):
     assert snapshot1.keys() == snapshot2.keys()
 
 
-def test_page_model_hero_sort_and_chips():
+class FakeArt:
+    def hero_portrait(self, name):
+        return "assets/p.png"
+
+    def ability_icon(self, hero, ability):
+        return "assets/a.png" if ability else None
+
+    def item_icon(self, name):
+        return "assets/i.png"
+
+    def item_category(self, name):
+        return "weapon"
+
+
+def _fixture_page(mutate=None):
     analysis = load_analysis(PATCH_DIR / "analysis.json")
     patch = Patch.model_validate_json((PATCH_DIR / "patch.json").read_text())
+    if mutate:
+        mutate(analysis, patch)
+    return build_page_model(analysis, patch, FakeArt())
 
-    class FakeArt:
-        def hero_portrait(self, name):
-            return "assets/p.png"
 
-        def ability_icon(self, hero, ability):
-            return "assets/a.png" if ability else None
+def test_unresolved_note_entity_is_a_system_not_a_hero():
+    def add_mid_boss(analysis, patch):
+        patch.changes.append(
+            Change(
+                section="General",
+                entity_type=EntityType.unknown,
+                entity_name="Mid-Boss",
+                raw="Mid-Boss: Health increased by 20%",
+                direction=Direction.neutral,
+                resolved=False,
+            )
+        )
+        analysis.heroes.heroes.append(
+            HeroEntry(hero="Mid-Boss", direction="up", magnitude="major", one_liner="Tougher")
+        )
 
-        def item_icon(self, name):
-            return "assets/i.png"
+    page = _fixture_page(add_mid_boss)
+    assert "Mid-Boss" not in {h.name for h in page.heroes}
+    assert "mid-boss" not in {h["slug"] for h in page.picker}
+    mid_boss = next(s for s in page.systems if s.name == "Mid-Boss")
+    assert mid_boss.change_summary == "Tougher"
 
-        def item_category(self, name):
-            return "weapon"
 
-    page = build_page_model(analysis, patch, FakeArt())
+def test_board_groups_come_from_the_notes_not_the_model_flag():
+    def lie(analysis, patch):
+        for h in analysis.heroes.heroes:
+            h.in_notes = not h.in_notes
+
+    page = _fixture_page(lie)
+    direct = {
+        c.entity_name
+        for c in Patch.model_validate_json((PATCH_DIR / "patch.json").read_text()).changes
+        if c.entity_type == EntityType.hero
+    }
+    for h in page.heroes:
+        assert h.in_notes == (h.name in direct)
+        if h.in_notes:
+            assert h.board_group in {"buff", "nerf", "rework"}
+
+
+def test_system_deltas_read_the_numbers_out_of_note_lines():
+    deltas = _driving_deltas(
+        [
+            "Haunts base bounty and growth increased by 10%",
+            "Comeback gold from non-hero sources increased from a max of 26% to 30% (when behind)",
+            "Breakables growth reduced by 10%",
+            "Steam Vents now grant stamina",
+        ]
+    )
+    assert [(d.label, d.value, d.direction) for d in deltas] == [
+        ("Haunts base bounty and growth", "+10%", "up"),
+        ("Comeback gold from non-hero sources", "26% → 30%", "up"),
+        ("Breakables growth", "-10%", "down"),
+    ]
+
+
+def test_item_detail_is_not_rendered_inside_the_grid(built):
+    out, _ = built
+    html = patch_html(out)
+    grid = html.split('id="items"', 1)[1].split("</section>", 1)[0]
+    assert "<details" not in grid
+    assert 'data-sheet="item-' in grid
+    assert 'id="sheet-item-' in html
+
+
+def test_page_model_hero_sort():
+    page = _fixture_page()
     assert page.headline == "Comeback gold moves to the jungle."
     assert page.heroes[0].name == "Infernus"  # major magnitude first
-    keys = [c.key for c in page.chips]
-    assert keys == ["all", "keep", "watch", "bench", "up", "down"]
     infernus = page.heroes[0]
     assert infernus.tier_chip == "A → S"
     assert {c for g in infernus.groups for c in (g.ability,)} == {

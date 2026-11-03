@@ -8,14 +8,16 @@
 <meta property="og:description" content="Archive of analyzed Deadlock patches">
 <link rel="stylesheet" href="{{ rel }}style.css">
 </head>
-<body>
+<body class="archive-page">
+<nav class="topbar" aria-label="Sections">
+  <span class="wordmark">PatchWhisperer</span>
+  <span class="topnav"><a href="{{ rel }}../">Latest patch</a></span>
+</nav>
 <main class="wrap">
-<header class="card header">
-  <p class="eyebrow">PatchWhisperer</p>
+<header class="lede">
   <h1>All patches</h1>
-  <p class="muted"><a href="{{ rel }}../">latest patch</a></p>
 </header>
-<section class="card">
+<section>
   <ul class="archive">
     {%- for e in entries %}
     <li>

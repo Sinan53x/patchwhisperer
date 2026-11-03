@@ -1,5 +1,6 @@
 """Pure page-model construction: analysis + patch + art -> template-ready views."""
 
+import re
 from functools import partial
 
 from pydantic import BaseModel
@@ -16,6 +17,24 @@ _DIRECTION_EFFECT = {
     Direction.nerf: "bad",
 }
 _CATEGORY_ORDER = ["weapon", "spirit", "vitality", "other"]
+_CHEVRONS = {"major": 3, "moderate": 2, "minor": 1}
+_HERO_GROUPS = [
+    ("buff", "Buffed", "▲"),
+    ("nerf", "Nerfed", "▼"),
+    ("rework", "Mixed or reworked", "↻"),
+    ("indirect", "Not in the notes, still affected", "◆"),
+]
+_TEMPO = {
+    "toward_tempo": ("Games shift toward early tempo", -1),
+    "toward_scaling": ("Games shift toward late scaling", 1),
+    "neutral": ("No clear shift in game pace", 0),
+}
+_DELTA_RE = re.compile(
+    r"^(?P<label>.+?)\s+(?P<verb>increased|reduced|decreased|lowered|raised|rises?|drops?)\s+"
+    r"(?:from\s+(?:a max of\s+)?(?P<old>\S+)\s+to\s+(?P<new>\S+)|by\s+(?P<by>\S+))",
+    re.IGNORECASE,
+)
+_UP_VERBS = ("increased", "raised", "rise", "rises")
 
 
 class RowView(BaseModel):
@@ -49,6 +68,24 @@ class HeroCardView(BaseModel):
     groups: list[RowGroupView] = []
     indirect_reasons: list[str] = []
     build_changes: list[str] = []
+    board_group: str | None = None
+    chevrons: int = 0
+
+
+class HeroGroupView(BaseModel):
+    key: str
+    label: str
+    glyph: str
+    heroes: list[HeroCardView] = []
+
+
+class AffectedHeroView(BaseModel):
+    slug: str
+    name: str
+    initials: str
+    portrait: str | None = None
+    effect: str = "neutral"
+    why: str = ""
 
 
 class ItemCardView(BaseModel):
@@ -61,6 +98,9 @@ class ItemCardView(BaseModel):
     summary: str = ""
     build_shift: str = ""
     groups: list[RowGroupView] = []
+    chevrons: int = 0
+    affected: list[AffectedHeroView] = []
+    hero_slugs: str = ""
 
 
 class ItemGroupView(BaseModel):
@@ -68,16 +108,40 @@ class ItemGroupView(BaseModel):
     items: list[ItemCardView] = []
 
 
+class DeltaView(BaseModel):
+    label: str
+    value: str
+    direction: str = "neutral"
+
+
 class SystemView(BaseModel):
+    slug: str
     name: str
     change_summary: str = ""
     effect_on_play: str = ""
     magnitude: str = "minor"
+    chevrons: int = 0
+    deltas: list[DeltaView] = []
+    lines: list[str] = []
+    groups: list[RowGroupView] = []
 
 
-class ChipView(BaseModel):
-    key: str
+class ArchetypeView(BaseModel):
+    name: str
+    direction: str
+    chevrons: int = 0
+    why: str = ""
+
+
+class TempoView(BaseModel):
     label: str
+    position: int = 50
+    why: str = ""
+
+
+class WatchView(BaseModel):
+    lead: str
+    rest: str = ""
 
 
 class PatchPageModel(BaseModel):
@@ -88,12 +152,14 @@ class PatchPageModel(BaseModel):
     headline: str
     patch_size: str
     size_why: str = ""
-    chips: list[ChipView] = []
+    hero_groups: list[HeroGroupView] = []
     heroes: list[HeroCardView] = []
     picker: list[dict] = []  # plain dicts so Jinja's tojson can serialize safely
     item_groups: list[ItemGroupView] = []
     systems: list[SystemView] = []
-    what_to_watch: list[str] = []
+    tempo: TempoView | None = None
+    archetypes: list[ArchetypeView] = []
+    what_to_watch: list[WatchView] = []
 
 
 class ArchiveEntry(BaseModel):
@@ -187,10 +253,73 @@ def _note_text(change: Change) -> str:
     return text
 
 
+def _driving_deltas(lines: list[str]) -> list[DeltaView]:
+    deltas = []
+    for line in lines:
+        m = _DELTA_RE.match(line)
+        if not m:
+            continue
+        up = m["verb"].lower() in _UP_VERBS
+        if m["old"]:
+            value = f"{m['old']} → {m['new'].rstrip('.,;')}"
+        else:
+            by = m["by"].rstrip(".,;")
+            value = by if by[0] in "+-" else f"{'+' if up else '-'}{by}"
+        deltas.append(
+            DeltaView(
+                label=re.sub(r"\s*\(.*?\)", "", m["label"]),
+                value=value,
+                direction="up" if up else "down",
+            )
+        )
+    return deltas
+
+
+def _group_deltas(groups: list[RowGroupView]) -> list[DeltaView]:
+    return [
+        DeltaView(label=r.label, value=f"{r.old} → {r.new}")
+        for g in groups
+        for r in g.rows
+        if r.old and r.new
+    ]
+
+
+def _board_group(direct: bool, direction: str) -> str | None:
+    if direct:
+        return {"up": "buff", "down": "nerf"}.get(direction, "rework")
+    return "indirect" if direction != "neutral" else None
+
+
+def _watch(line: str) -> WatchView:
+    lead, sep, rest = line.partition(" — ")
+    return WatchView(lead=lead, rest=rest if sep else "")
+
+
 def build_page_model(analysis: AnalysisBundle, patch: Patch, art) -> PatchPageModel:
     heroes: list[HeroCardView] = []
+    non_hero_systems: list[SystemView] = []
+    direct = {c.entity_name for c in patch.changes if c.entity_type == EntityType.hero}
+    not_heroes = {
+        c.entity_name for c in patch.changes if c.entity_type == EntityType.unknown
+    } - direct
     if analysis.heroes:
         for entry in analysis.heroes.heroes:
+            if entry.hero in not_heroes:
+                groups = _row_groups(entry.rows, _no_icon) or _fallback_groups(
+                    entry.hero, EntityType.unknown, patch, _no_icon
+                )
+                non_hero_systems.append(
+                    SystemView(
+                        slug=slugify(entry.hero),
+                        name=entry.hero,
+                        change_summary=entry.one_liner,
+                        magnitude=entry.magnitude,
+                        chevrons=_CHEVRONS.get(entry.magnitude, 0),
+                        deltas=_group_deltas(groups),
+                        groups=groups,
+                    )
+                )
+                continue
             word, css, rank = _badge(entry.verdict, entry.direction)
             icon_for = partial(art.ability_icon, entry.hero)
             groups = _row_groups(entry.rows, icon_for)
@@ -217,7 +346,9 @@ def build_page_model(analysis: AnalysisBundle, patch: Patch, art) -> PatchPageMo
                     badge_class=css,
                     pool_rank=rank,
                     magnitude=entry.magnitude,
-                    in_notes=entry.in_notes,
+                    in_notes=entry.hero in direct,
+                    board_group=_board_group(entry.hero in direct, entry.direction),
+                    chevrons=_CHEVRONS.get(entry.magnitude, 0),
                     one_liner=entry.one_liner,
                     tier_chip=tier_chip,
                     groups=groups,
@@ -227,14 +358,17 @@ def build_page_model(analysis: AnalysisBundle, patch: Patch, art) -> PatchPageMo
             )
     heroes.sort(key=lambda h: (_MAGNITUDE_RANK.get(h.magnitude, 4), h.name))
 
-    chips = [ChipView(key="all", label="All")]
-    for verdict in ("keep", "watch", "bench"):
-        if any(h.verdict == verdict for h in heroes):
-            chips.append(ChipView(key=verdict, label=verdict.capitalize()))
-    if any(h.direction == "up" for h in heroes):
-        chips.append(ChipView(key="up", label="Buffed"))
-    if any(h.direction == "down" for h in heroes):
-        chips.append(ChipView(key="down", label="Nerfed"))
+    hero_groups = [
+        HeroGroupView(
+            key=key,
+            label=label,
+            glyph=glyph,
+            heroes=[h for h in heroes if h.board_group == key],
+        )
+        for key, label, glyph in _HERO_GROUPS
+    ]
+    hero_groups = [g for g in hero_groups if g.heroes]
+    by_name = {h.name: h for h in heroes}
 
     picker = [
         {
@@ -261,6 +395,18 @@ def build_page_model(analysis: AnalysisBundle, patch: Patch, art) -> PatchPageMo
             category = art.item_category(entry.item)
             if category not in _CATEGORY_ORDER:
                 category = "other"
+            affected = [
+                AffectedHeroView(
+                    slug=by_name[a.hero].slug,
+                    name=a.hero,
+                    initials=by_name[a.hero].initials,
+                    portrait=by_name[a.hero].portrait,
+                    effect=a.effect,
+                    why=a.why,
+                )
+                for a in entry.affected_heroes
+                if a.hero in by_name
+            ]
             card = ItemCardView(
                 slug=slugify(entry.item),
                 name=entry.item,
@@ -271,6 +417,9 @@ def build_page_model(analysis: AnalysisBundle, patch: Patch, art) -> PatchPageMo
                 summary=entry.summary,
                 build_shift=entry.build_shift,
                 groups=groups,
+                chevrons=_CHEVRONS.get(entry.magnitude, 0),
+                affected=affected,
+                hero_slugs=" ".join(a.slug for a in affected),
             )
             by_cat.setdefault(category, []).append(card)
         for category in _CATEGORY_ORDER:
@@ -283,17 +432,47 @@ def build_page_model(analysis: AnalysisBundle, patch: Patch, art) -> PatchPageMo
                     ItemGroupView(category=category, items=cards)
                 )
 
-    systems = []
+    systems: list[SystemView] = list(non_hero_systems)
+    tempo = None
+    archetypes: list[ArchetypeView] = []
     if analysis.systems:
-        systems = [
+        systems += [
             SystemView(
+                slug=slugify(s.system),
                 name=s.system,
                 change_summary=s.change_summary,
                 effect_on_play=s.effect_on_play,
                 magnitude=s.magnitude,
+                chevrons=_CHEVRONS.get(s.magnitude, 0),
+                deltas=_driving_deltas(s.driving_changes),
+                lines=s.driving_changes,
             )
             for s in analysis.systems.systems_changed
         ]
+        shift = analysis.systems.tempo_shift
+        label, sign = _TEMPO[shift.direction]
+        tempo = TempoView(
+            label=label,
+            position=round(50 + sign * 45 * max(shift.confidence, 0.2)),
+            why=shift.why,
+        )
+        archetypes = [
+            ArchetypeView(
+                name=a.archetype,
+                direction=a.direction,
+                chevrons=_CHEVRONS.get(a.magnitude, 0),
+                why=a.why,
+            )
+            for a in sorted(
+                analysis.systems.archetype_effects,
+                key=lambda a: (
+                    _DIRECTION_RANK.get(a.direction, 1),
+                    _MAGNITUDE_RANK.get(a.magnitude, 4),
+                ),
+            )
+            if a.direction != "neutral"
+        ]
+    systems.sort(key=lambda s: _MAGNITUDE_RANK.get(s.magnitude, 4))
 
     return PatchPageModel(
         patch_id=analysis.patch_id,
@@ -303,10 +482,12 @@ def build_page_model(analysis: AnalysisBundle, patch: Patch, art) -> PatchPageMo
         headline=analysis.synthesis.headline,
         patch_size=analysis.synthesis.patch_size,
         size_why=analysis.synthesis.size_why,
-        chips=chips,
+        hero_groups=hero_groups,
+        tempo=tempo,
+        archetypes=archetypes,
         heroes=heroes,
         picker=picker,
         item_groups=item_groups,
         systems=systems,
-        what_to_watch=analysis.synthesis.what_to_watch,
+        what_to_watch=[_watch(w) for w in analysis.synthesis.what_to_watch],
     )

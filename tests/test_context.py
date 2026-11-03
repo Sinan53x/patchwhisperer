@@ -1,6 +1,7 @@
 from conftest import load_post
 
 from patchwhisperer.analysis import context as ctx
+from patchwhisperer.parse.models import Change, Direction, EntityType, Patch
 from patchwhisperer.parse.patch_parser import parse_patch
 
 
@@ -55,3 +56,17 @@ def test_heroes_kb_omits_empty_fields(tmp_path):
     assert "enabled_by" not in out
     assert "tier: A" in out
     assert "name: Wraith" in out
+
+
+def test_unresolved_general_entity_goes_to_systems_not_heroes():
+    mid_boss = Change(
+        section="General",
+        entity_type=EntityType.unknown,
+        entity_name="Mid-Boss",
+        raw="Mid-Boss: Health increased by 20%",
+        direction=Direction.neutral,
+        resolved=False,
+    )
+    patch = Patch(gid="1", title="T", date="2026-10-30T00:00:00Z", url="u", author="a", changes=[mid_boss])
+    assert ctx.hero_changes(patch) == []
+    assert ctx.system_changes(patch) == [mid_boss]

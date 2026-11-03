@@ -27,7 +27,8 @@ def system_changes(patch: Patch) -> list[Change]:
     changes = [
         c
         for c in patch.changes
-        if c.section not in ("Heroes", "Items") and c.entity_type == EntityType.system
+        if c.section not in ("Heroes", "Items")
+        and c.entity_type in (EntityType.system, EntityType.unknown)
     ]
     # Map lines (major content updates) come first in the stage-1 input
     return sorted(changes, key=lambda c: c.section != "Map")
@@ -49,8 +50,7 @@ def hero_changes(patch: Patch) -> list[Change]:
     return [
         c
         for c in patch.changes
-        if c.section == "Heroes"
-        or c.entity_type in (EntityType.hero, EntityType.unknown)
+        if c.section == "Heroes" or c.entity_type == EntityType.hero
     ]
 
 
