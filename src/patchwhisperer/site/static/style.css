@@ -238,13 +238,14 @@ dialog.picker:not([open]) { display: none; }
 .ability-icon { border-radius: 4px; display: block; }
 .row {
   display: grid;
-  grid-template-columns: minmax(96px, 150px) 1fr;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
   gap: 10px;
   padding: 7px 0;
   border-top: 1px solid var(--border);
   font-size: 13px;
 }
 .row-label { color: var(--text); }
+.row-value { overflow-wrap: anywhere; min-width: 0; }
 .row-value s.old { color: var(--muted); }
 .row-value .arrow { color: var(--muted); margin: 0 4px; }
 .row-value.e-good b, .row-value.e-good { color: var(--good); }
