@@ -68,7 +68,8 @@
    "build_changes": [],
    "tier_before": "A",
    "tier_after": "A",
-   "one_liner": "Bomb and drain got better, but her regen stack and comeback pattern took hits."
+   "one_liner": "Bomb and drain got better, but her regen stack and comeback pattern took hits.",
+   "verdict": "keep"
   },
   {
    "hero": "Abrams",
@@ -86,7 +87,8 @@
    "build_changes": [],
    "tier_before": "B",
    "tier_after": "B",
-   "one_liner": "Healthy frontline in a brawl patch; a touch more resilience, a touch less ult."
+   "one_liner": "Healthy frontline in a brawl patch; a touch more resilience, a touch less ult.",
+   "verdict": "keep"
   },
   {
    "hero": "Wraith",
@@ -106,7 +108,8 @@
    ],
    "tier_before": "B",
    "tier_after": "C",
-   "one_liner": "On-hit spirit Wraith gutted: Magnum cut and Plated Armor now blanks Full Auto."
+   "one_liner": "On-hit spirit Wraith gutted: Magnum cut and Plated Armor now blanks Full Auto.",
+   "verdict": "watch"
   },
   {
    "hero": "McGinnis",
@@ -141,7 +144,8 @@
    ],
    "tier_before": "B",
    "tier_after": "B",
-   "one_liner": "Quick-scope carbine gutted; only the max-range sniper path survives."
+   "one_liner": "Quick-scope carbine gutted; only the max-range sniper path survives.",
+   "verdict": "watch"
   },
   {
    "hero": "Dynamo",
@@ -176,7 +180,8 @@
    "build_changes": [],
    "tier_before": "B",
    "tier_after": "B",
-   "one_liner": "Dome now scales with spirit; cheap early sustain is worth more."
+   "one_liner": "Dome now scales with spirit; cheap early sustain is worth more.",
+   "verdict": "keep"
   },
   {
    "hero": "Haze",
@@ -194,7 +199,8 @@
    "build_changes": [],
    "tier_before": "B",
    "tier_after": "B",
-   "one_liner": "Fixation buff is real; weak T4 gun items still cap her ceiling."
+   "one_liner": "Fixation buff is real; weak T4 gun items still cap her ceiling.",
+   "verdict": "keep"
   },
   {
    "hero": "Holliday",
@@ -214,7 +220,8 @@
    ],
    "tier_before": "A",
    "tier_after": "A",
-   "one_liner": "Tempo and longer lasso picks suit her, but her Veil Walker bail-out is gone."
+   "one_liner": "Tempo and longer lasso picks suit her, but her Veil Walker bail-out is gone.",
+   "verdict": "keep"
   },
   {
    "hero": "Bebop",
@@ -295,7 +302,8 @@
    "build_changes": [],
    "tier_before": "A",
    "tier_after": "A",
-   "one_liner": "Knives and alt-fire buffed into the tank wave, but his regen items were trimmed."
+   "one_liner": "Knives and alt-fire buffed into the tank wave, but his regen items were trimmed.",
+   "verdict": "keep"
   },
   {
    "hero": "Ivy",
@@ -312,7 +320,8 @@
    "build_changes": [],
    "tier_before": "A",
    "tier_after": "A",
-   "one_liner": "Cosmetic Stone Form trims, but the tempo patch makes her weak lane hurt."
+   "one_liner": "Cosmetic Stone Form trims, but the tempo patch makes her weak lane hurt.",
+   "verdict": "watch"
   },
   {
    "hero": "Warden",
@@ -332,7 +341,8 @@
    ],
    "tier_before": "B",
    "tier_after": "C",
-   "one_liner": "Patch's clearest casualty: gun stats, flask, cage and T4 items all cut."
+   "one_liner": "Patch's clearest casualty: gun stats, flask, cage and T4 items all cut.",
+   "verdict": "watch"
   },
   {
    "hero": "Yamato",
@@ -349,7 +359,8 @@
    "build_changes": [],
    "tier_before": "A",
    "tier_after": "A",
-   "one_liner": "Light-melee and heal scaling up; mobile burst assassin stays A."
+   "one_liner": "Light-melee and heal scaling up; mobile burst assassin stays A.",
+   "verdict": "keep"
   },
   {
    "hero": "Lash",
@@ -369,7 +380,8 @@
    ],
    "tier_before": "S",
    "tier_after": "S",
-   "one_liner": "Stomp build buffed and still the lobby default, but Silver grounds his engage."
+   "one_liner": "Stomp build buffed and still the lobby default, but Silver grounds his engage.",
+   "verdict": "keep"
   },
   {
    "hero": "Viscous",
@@ -386,7 +398,8 @@
    "build_changes": [],
    "tier_before": "B",
    "tier_after": "C",
-   "one_liner": "Cube range and Punch cooldown cut; tempo punishes the scaling enabler."
+   "one_liner": "Cube range and Punch cooldown cut; tempo punishes the scaling enabler.",
+   "verdict": "watch"
   },
   {
    "hero": "Pocket",
@@ -438,7 +451,8 @@
    ],
    "tier_before": "A",
    "tier_after": "B",
-   "one_liner": "Her Magnum capstone gutted and Plated Armor hard-counters the splice."
+   "one_liner": "Her Magnum capstone gutted and Plated Armor hard-counters the splice.",
+   "verdict": "watch"
   },
   {
    "hero": "Sinclair",
@@ -504,7 +518,8 @@
    "build_changes": [],
    "tier_before": "A",
    "tier_after": "A",
-   "one_liner": "Ult now chains Ricochet and triple-bolts; the better gun-carry slot over Haze."
+   "one_liner": "Ult now chains Ricochet and triple-bolts; the better gun-carry slot over Haze.",
+   "verdict": "keep"
   },
   {
    "hero": "Victor",
@@ -535,7 +550,8 @@
    "build_changes": [],
    "tier_before": "S",
    "tier_after": "S",
-   "one_liner": "Lane-winning support the new economy is built for; talents buffed."
+   "one_liner": "Lane-winning support the new economy is built for; talents buffed.",
+   "verdict": "keep"
   },
   {
    "hero": "The Doorman",
@@ -585,7 +601,8 @@
    "build_changes": [],
    "tier_before": "C",
    "tier_after": "C",
-   "one_liner": "Small HP buff, but losing the comeback net hurts the game's worst early carry."
+   "one_liner": "Small HP buff, but losing the comeback net hurts the game's worst early carry.",
+   "verdict": "watch"
   },
   {
    "hero": "Apollo",
@@ -610,7 +627,7 @@
    "magnitude": "minor",
    "confidence": 0.5,
    "direct_reasons": [
-    "Only a Lil Helpers target-UI change and a breakable-spawn bug fix — no balance effect."
+    "Only a Lil Helpers target-UI change and a breakable-spawn bug fix \u2014 no balance effect."
    ],
    "indirect_reasons": [
     "Healing-item trims slightly weaken his heal niche, and Ivy outclasses his support slot."
@@ -618,7 +635,8 @@
    "build_changes": [],
    "tier_before": "B",
    "tier_after": "B",
-   "one_liner": "No real change; a heal support in a patch that trims healing items."
+   "one_liner": "No real change; a heal support in a patch that trims healing items.",
+   "verdict": "keep"
   },
   {
    "hero": "Silver",
@@ -636,7 +654,8 @@
    "build_changes": [],
    "tier_before": "S",
    "tier_after": "S",
-   "one_liner": "Tempo gun-tank with a new anti-air bola; the patch is built for her."
+   "one_liner": "Tempo gun-tank with a new anti-air bola; the patch is built for her.",
+   "verdict": "keep"
   },
   {
    "hero": "Celeste",
@@ -656,7 +675,8 @@
    ],
    "tier_before": "B",
    "tier_after": "C",
-   "one_liner": "Seven nerfs plus item and flyer hits drop the late-scaling spirit burst carry."
+   "one_liner": "Seven nerfs plus item and flyer hits drop the late-scaling spirit burst carry.",
+   "verdict": "watch"
   }
  ]
 }

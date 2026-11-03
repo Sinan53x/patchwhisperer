@@ -17,7 +17,31 @@
    ],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": "Card Trick got shaved and Veil Walker is gone."
+   "one_liner": "Card Trick got shaved and Veil Walker is gone.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Heart heal",
+     "old": "75",
+     "new": "60",
+     "effect": "bad",
+     "ability": "Card Trick"
+    },
+    {
+     "label": "Heal scaling",
+     "old": "0.75",
+     "new": "0.5",
+     "effect": "bad",
+     "ability": "Card Trick"
+    },
+    {
+     "label": "Spirit scaling",
+     "old": "0.03",
+     "new": "0.045",
+     "effect": "good",
+     "ability": "Full Auto"
+    }
+   ]
   },
   {
    "hero": "Warden",
@@ -32,7 +56,28 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": "Small scaling cuts; still playable."
+   "one_liner": "Small scaling cuts; still playable.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Bullet damage",
+     "old": "0.28",
+     "new": "0.25",
+     "effect": "bad"
+    },
+    {
+     "label": "Fire rate scaling",
+     "old": "0.25",
+     "new": "0.21",
+     "effect": "bad"
+    },
+    {
+     "label": "Projectile",
+     "text": "Range and speed reduced by 30%",
+     "effect": "bad",
+     "ability": "Alchemical Flask"
+    }
+   ]
   },
   {
    "hero": "Abrams",
@@ -45,7 +90,24 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": "Mixed T3 tuning."
+   "one_liner": "Mixed T3 tuning.",
+   "verdict": "keep",
+   "rows": [
+    {
+     "label": "T3",
+     "old": "+8%",
+     "new": "+9%",
+     "effect": "good",
+     "ability": "Infernal Resilience"
+    },
+    {
+     "label": "T3",
+     "old": "6s",
+     "new": "5s",
+     "effect": "bad",
+     "ability": "Seismic Impact"
+    }
+   ]
   },
   {
    "hero": "Infernus",
@@ -58,7 +120,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Seven",
@@ -71,7 +135,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Vindicta",
@@ -84,7 +150,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Lady Geist",
@@ -97,7 +165,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Tuning pass this patch.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "McGinnis",
@@ -110,7 +180,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Paradox",
@@ -123,7 +195,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Tuning pass this patch.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Dynamo",
@@ -136,7 +210,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Kelvin",
@@ -149,7 +225,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Tuning pass this patch.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Haze",
@@ -162,7 +240,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Tuning pass this patch.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Holliday",
@@ -175,7 +255,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Tuning pass this patch.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Bebop",
@@ -188,7 +270,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Calico",
@@ -201,7 +285,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Grey Talon",
@@ -214,7 +300,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Mo & Krill",
@@ -227,7 +315,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Shiv",
@@ -240,7 +330,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Tuning pass this patch.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Ivy",
@@ -253,7 +345,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Tuning pass this patch.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Yamato",
@@ -266,7 +360,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Tuning pass this patch.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Lash",
@@ -279,7 +375,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Tuning pass this patch.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Viscous",
@@ -292,7 +390,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Tuning pass this patch.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Pocket",
@@ -305,7 +405,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Mirage",
@@ -318,7 +420,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Vyper",
@@ -331,7 +435,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Tuning pass this patch.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Sinclair",
@@ -344,7 +450,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Mina",
@@ -357,7 +465,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Drifter",
@@ -370,7 +480,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Venator",
@@ -383,7 +495,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Tuning pass this patch.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Victor",
@@ -396,7 +510,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Paige",
@@ -409,7 +525,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Tuning pass this patch.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "The Doorman",
@@ -422,7 +540,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Billy",
@@ -435,7 +555,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Graves",
@@ -448,7 +570,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Tuning pass this patch.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Apollo",
@@ -461,7 +585,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Rem",
@@ -474,7 +600,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Tuning pass this patch.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Silver",
@@ -487,7 +615,9 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Tuning pass this patch.",
+   "verdict": "keep",
+   "rows": []
   },
   {
    "hero": "Celeste",
@@ -500,7 +630,99 @@
    "build_changes": [],
    "tier_before": "?",
    "tier_after": "B",
-   "one_liner": ""
+   "one_liner": "Tuning pass this patch.",
+   "verdict": "keep",
+   "rows": []
+  },
+  {
+   "hero": "Rat King",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "?",
+   "tier_after": "?",
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
+  },
+  {
+   "hero": "Baba",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "?",
+   "tier_after": "?",
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
+  },
+  {
+   "hero": "Solomon",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "?",
+   "tier_after": "?",
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
+  },
+  {
+   "hero": "Deadman Danny",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "?",
+   "tier_after": "?",
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
+  },
+  {
+   "hero": "Violet",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "?",
+   "tier_after": "?",
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
+  },
+  {
+   "hero": "Nurse Harrow",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "?",
+   "tier_after": "?",
+   "one_liner": "Not in the notes.",
+   "verdict": "keep",
+   "rows": []
   }
  ]
 }

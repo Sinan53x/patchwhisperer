@@ -119,9 +119,11 @@ def test_analyze_and_post(env, tmp_path):
     assert seen["kind"] == "analyzed"
     rec = state.post_get(result.patch_id, env["db"])
     assert rec["thread_id"] == "200"
-    # git commit invoked once with KB files + the patch dir
+    # git commit invoked twice: early patch-dir publish, then KB files + dir
     assert result.kb_updated is True
-    commit.assert_called_once()
+    assert commit.call_count == 2
+    early = commit.call_args_list[0]
+    assert early[0][1] == [env["kb"].patch_dir(result.patch_id)]
     paths = commit.call_args[0][1]
     assert env["kb"].patch_dir(result.patch_id) in paths
     assert env["kb"].heroes_path in paths
@@ -156,7 +158,7 @@ def test_hotfix_no_thread(env, tmp_path, entity_index):
     )
     assert result.kind == "hotfix"
     assert channel.messages[0].thread is None
-    commit.assert_called_once()
+    assert commit.call_count == 2
     assert commit.call_args[0][1] == [env["kb"].patch_dir(result.patch_id)]
     assert commit.call_args[0][2].endswith("(analysis artifacts only)")
     assert state.seen_get("hf1", env["db"])["kind"] == "hotfix"
@@ -233,7 +235,7 @@ def test_kb_update_failure_still_posts(env, tmp_path, monkeypatch):
     seen = state.seen_get(env["post"].gid, env["db"])
     assert seen["kind"] == "analyzed"
     assert seen["attempts"] == 0
-    commit.assert_called_once()
+    assert commit.call_count == 2
     assert commit.call_args[0][1] == [env["kb"].patch_dir(result.patch_id)]
     assert commit.call_args[0][2].endswith("(analysis artifacts only)")
 
@@ -318,7 +320,7 @@ def test_commit_failure_still_returns(env, tmp_path):
     )
     assert result.kind == "analyzed"
     assert result.kb_updated is True
-    commit.assert_called_once()
+    assert commit.call_count == 2
     assert state.seen_get(env["post"].gid, env["db"])["kind"] == "analyzed"
 
 

@@ -147,7 +147,6 @@ def test_demo_bundle_tldr_covers_pool():
     for stem, name in {
         "stage1": "stage1_systems",
         "stage2": "stage2_items",
-        "stage3": "stage3_heroes",
         "stage4": "stage4_synthesis",
         "stage5": "stage5_pool",
     }.items():
@@ -156,14 +155,51 @@ def test_demo_bundle_tldr_covers_pool():
 
     kb_dir = Path(tempfile.mkdtemp()) / "kb"
     shutil.copytree(demo / "kb", kb_dir)
+    kb_store = KBStore(kb_dir)
+    # stage 3 runs in batches: split the recorded analysis to match
+    from patchwhisperer import config
+    from patchwhisperer.analysis import context as ctx
+
+    s3_heroes = {
+        h["hero"]: h
+        for h in json.loads((demo / "stage3.json").read_text())["heroes"]
+    }
+    expected = ctx.expected_hero_names(kb_store, ctx.hero_changes(patch))
+    canned[stage_marker("stage3_heroes")] = [
+        json.dumps(
+            {
+                "heroes": [
+                    s3_heroes[n]
+                    for n in expected[i : i + config.STAGE3_HERO_BATCH]
+                    if n in s3_heroes
+                ]
+            }
+        )
+        for i in range(0, len(expected), config.STAGE3_HERO_BATCH)
+    ]
     bundle = run_analysis(
-        patch, KBStore(kb_dir), {}, pool, ReplayLLMClient(canned),
+        patch, kb_store, {}, pool, ReplayLLMClient(canned),
         update_kb=False,
     )
     post_render = render_discord(bundle)
     chunks = [post_render.tldr] + post_render.tldr_extra
     assert all(len(c) <= DISCORD_LIMIT for c in chunks)
     assert "Billy" in "\n".join(chunks)
+
+
+def test_tldr_site_link(monkeypatch):
+    from patchwhisperer import config
+
+    bundle = _bundle()
+    monkeypatch.setattr(config, "SITE_URL", "https://pw.example.com")
+    post = render_discord(bundle)
+    assert (
+        post.tldr.splitlines()[-1]
+        == "https://pw.example.com/patches/2026-09-16-x/"
+    )
+    monkeypatch.setattr(config, "SITE_URL", "")
+    post = render_discord(bundle)
+    assert "pw.example.com" not in post.tldr
 
 
 def test_discord_split_under_limit():
