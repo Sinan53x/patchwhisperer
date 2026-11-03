@@ -94,7 +94,8 @@ class HeroEntry(BaseModel):
 
 
 class HeroAnalysis(BaseModel):
-    heroes: list[HeroEntry] = Field(min_length=30)
+    # no minimum: coverage against the KB roster is checked in the pipeline
+    heroes: list[HeroEntry] = []
 
     def movers(self) -> list[HeroEntry]:
         return [h for h in self.heroes if h.direction != "neutral"]

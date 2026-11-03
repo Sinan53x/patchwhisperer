@@ -58,6 +58,34 @@ def _non_empty(model: dict) -> dict:
     return {k: v for k, v in model.items() if v not in (None, "", [], {})}
 
 
+def expected_hero_names(kb: KBStore, changes: list[Change]) -> list[str]:
+    """Every hero stage 3 must cover: the KB roster (in order) plus any hero
+    named in the direct changes that the KB does not know yet."""
+    names = list(kb.load_heroes())
+    seen = set(names)
+    for c in changes:
+        if c.entity_name not in seen:
+            seen.add(c.entity_name)
+            names.append(c.entity_name)
+    return names
+
+
+def hero_names_with_matchups(kb: KBStore, names: list[str]) -> list[str]:
+    """`names` plus the heroes they list in their KB matchups, deduped."""
+    heroes = kb.load_heroes()
+    out = list(dict.fromkeys(names))
+    seen = set(out)
+    for n in names:
+        h = heroes.get(n)
+        if h is None:
+            continue
+        for m in h.matchups.beats + h.matchups.loses_to:
+            if m not in seen:
+                seen.add(m)
+                out.append(m)
+    return out
+
+
 def heroes_kb(kb: KBStore) -> str:
     heroes = kb.load_heroes()
     return yaml.safe_dump(
