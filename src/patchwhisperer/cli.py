@@ -771,6 +771,22 @@ def roster_post_sync() -> None:
     typer.echo(r)
 
 
+site_app = typer.Typer(help="Build the static patch site.")
+app.add_typer(site_app, name="site")
+
+
+@site_app.command("build")
+def site_build(
+    out: Annotated[Path, typer.Option("--out")] = Path("site-dist"),
+    kb: Annotated[Path, typer.Option("--kb")] = KB_ROOT,
+) -> None:
+    """Build the static site from kb/patches containing analysis+patch JSON."""
+    from patchwhisperer.site.build import build_site
+
+    n = build_site(kb=kb, out=out)
+    typer.echo(f"built {n} patch page(s) -> {out}")
+
+
 def main() -> None:
     import logging
 
