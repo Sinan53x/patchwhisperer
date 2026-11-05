@@ -44,6 +44,17 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
   disable. That is a rework and a real loss, since it can no longer interrupt channels.
 - General: crowd control changing type is never a plain buff, even when its duration rises.
 
+## 2026-11-04
+
+- Steam Vents still grant invisibility. Halloween only added +150% stamina regen on top.
+  Never say they lost invisibility.
+- General: an added effect is not a replacement. Say something was removed only when the
+  notes say so.
+- Lines under a "Street Brawl" header apply only to that mode. Never present them as
+  main-game changes.
+- Tiers come from measured match data, not from the notes. A heavily nerfed hero can still
+  be the strongest hero: Baba took big nerfs on 10-30 and still has the top win rate.
+
 
 ## Systems analysis of this patch (already done)
 
@@ -51,11 +62,11 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
  "systems_changed": [],
  "tempo_shift": {
   "direction": "neutral",
-  "confidence": 0.85,
-  "why": "No systems changes: the patch touches only one item (Healbane) and seven heroes, with no economy, objective, respawn, movement, slow, parry, reload, or map/jungle edits. The 10-30 comeback-and-Haunt framework stands unchanged, so tempo direction is inherited, not shifted."
+  "confidence": 0.9,
+  "why": "No systems changes: the General/systems sections are empty, and the only non-hero change is an item (Healbane), which moves builds rather than soul income, fight locations, or timers. Tempo therefore inherits the 10-30 state — comeback levers plus richer Haunts — unchanged."
  },
  "archetype_effects": [],
- "intent_read": "This is a maintenance/micro patch, not a systems patch: Valve is trimming individual outliers (Apollo, Baba, Celeste, Deadman Danny, Mo & Krill, Nurse Harrow, Rat King) and adjusting Healbane rather than reshaping how souls are earned or where fights happen. Any archetype movement here comes from hero and item numbers, not from systems, so it belongs in the hero/item analysis stage, not this one."
+ "intent_read": "A hero-and-item micro-patch on top of the 10-30 gameplay update: the hero list (Apollo, Baba, Celeste, Deadman Danny, Mo & Krill, Nurse Harrow, Rat King) plus Healbane reads as targeted cleanup of outliers from that update rather than a new systemic direction. Valve is not touching economy, comeback, map or objectives, so the 10-30 thesis — leads must be converted fast, the jungle keeps paying the trailing team — still stands. Any movement this patch comes from individual kits and anti-heal itemization, not from how the game generates souls or where fights happen."
 }
 
 ## Item changes in this patch (grouped by item)
@@ -219,11 +230,10 @@ Seven:
   trend: rising
   why: "Jungle-payout carry: Haunt bounty and growth +10% lands squarely on the fastest\
     \ one-cycle clearer in the game, and the new comeback levers (30% non-hero cap,\
-    \ tick souls to the two poorest) finally give a behind Seven a way back, removing\
-    \ the 'lead-only' cap that held him at A. The +10% Haunt HP/damage barely costs\
-    \ a one-pass clear, and Static Charge T3 stun 0.9->1.1s adds lockdown to the ability\
-    \ he uses to hold camps and fights \u2014 he still dies to dives and Hook CC-locks\
-    \ before his AoE is up."
+    \ tick souls to the two poorest) finally give a behind Seven a way back. The +10%\
+    \ Haunt HP/damage barely costs a one-pass clear, and Static Charge T3 stun 0.9->1.1s\
+    \ adds lockdown to the ability he uses to hold camps and fights \u2014 he still\
+    \ dies to dives and Hook CC-locks before his AoE is up."
   core_items:
   - Mystic Vulnerability
   - Escalating Exposure
@@ -309,7 +319,7 @@ Kelvin:
   archetypes:
   - support/healer
   - late scaler
-  tier: B
+  tier: S
   trend: rising
   why: Support/healer whose dome is now an objective-fight tool at Bell Tower/Sunken
     Plaza and whose Extra Regen/Healing Booster core the Radiant Regeneration trims
@@ -498,7 +508,7 @@ Shiv:
   archetypes:
   - tank/frontline
   - mobile assassin
-  tier: B
+  tier: D
   trend: falling
   why: 'The knife exchange got better (Serrated Knives rage 3.5%->4% current HP, +T3
     spirit scaling) but his pre-fight health is gone: Radiant Regeneration now heals
@@ -693,7 +703,7 @@ Yamato:
   archetypes:
   - mobile assassin
   - burst caster
-  tier: B
+  tier: D
   trend: falling
   why: Still the camp-clear and objective-path champion, but Flying Slash 26->23m
     (T3 +8m) and Shadow Transformation pushed to T2 at 160s cut the engage reach and
@@ -802,7 +812,7 @@ Mirage:
   - gun carry
   - split pusher
   - late scaler
-  tier: C
+  tier: D
   trend: falling
   why: 'Split-push hybrid the patch buried: souls moved off the lanes into corridors
     and shared objectives, so sidelane pressure converts to less income, and Steam-Vent
@@ -904,7 +914,7 @@ Drifter:
   archetypes:
   - mobile assassin
   - tank/frontline
-  tier: A
+  tier: B
   trend: rising
   why: "Blind-pickable spirit-melee bruiser whose roaming income got richer \u2014\
     \ Haunt bounty/growth +10% rewards his heavy-melee crate and Steam Vent routes,\
@@ -999,7 +1009,7 @@ Apollo:
   - lane bully
   - initiator
   - tank/frontline
-  tier: S
+  tier: C
   trend: stable
   why: "S-tier lane bully whose Riposte now lands reliably (dash fixes, CC refunds\
     \ on Flawless Advance/Itani Lo Sahn) for a 1.5s disable instead of a 0.8s stun\

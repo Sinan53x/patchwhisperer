@@ -5,17 +5,17 @@
    "in_notes": false,
    "direction": "neutral",
    "magnitude": "minor",
-   "confidence": 0.55,
+   "confidence": 0.5,
    "direct_reasons": [],
    "indirect_reasons": [
-    "Healbane's lower multi-source cap (4-stack 82.2%→72%) eases the anti-heal tax on her Melee Lifesteal/Restorative Shot sustain.",
-    "Rat King's buffs (bullet 5.7→5.8, ammo 24→26, T1 -25s) sharpen a hero who already beats her 62%, offsetting the Healbane relief."
+    "Rat King's bullet damage 5.7->5.8, ammo 24->26 and Rule, Ratannia! T1 -25s cooldown strengthen the hero who beats her 62% — a real cost in her worst lane.",
+    "Healbane's stacked heal-cut ceiling 82.2%->72% makes her Melee Lifesteal/Restorative Shot sustain harder to fully suppress, a small offset."
    ],
    "build_changes": [],
-   "tier_before": "A",
-   "tier_after": "A",
-   "one_liner": "Nothing direct; Healbane relief and a stronger Rat King roughly cancel.",
-   "verdict": "keep",
+   "tier_before": "D",
+   "tier_after": "D",
+   "one_liner": "Nothing for her directly; Rat King got better and anti-heal got worse, roughly a wash at 46%.",
+   "verdict": "watch",
    "rows": [],
    "change_kind": "none",
    "change_size": "none"
@@ -24,23 +24,24 @@
    "hero": "Celeste",
    "in_notes": true,
    "direction": "down",
-   "magnitude": "major",
+   "magnitude": "moderate",
    "confidence": 0.7,
    "direct_reasons": [
-    "Dazzling Trick T3 silence +1.25s→+0.75s cuts her lockdown window.",
-    "Radiant Daggers cast range 30m→25m and spirit amp +7%→+6% per stack trim her poke and scaling.",
-    "Shining Wonder slow -32%→-28%, cooldown 160s→170s, bounce 15.5m→15m, T1 -16%→-14%, T2 +90→+80 hit every axis of her ult."
+    "Dazzling Trick T3 silence +1.25s->+0.75s cuts her pick window by 40% on the ability that sets up her burst.",
+    "Radiant Daggers cast range 30m->25m forces her closer, and the spirit amp per stack 7%->6% trims the payoff of the same ability.",
+    "Shining Wonder nerfed on every axis: slow -32%->-28%, cooldown 160s->170s, bounce 15.5m->15m, T1 slow -16%->-14%, T2 damage +90->+80."
    ],
    "indirect_reasons": [
-    "Healbane's lower stacking cap gives her regen shell slight relief, but the direct cuts dominate."
+    "Healbane's stacked ceiling 82.2%->72% slightly relieves her Spirit Lifesteal/Torment Pulse sustain, but she never bought the item herself so the gain is one-sided and small."
    ],
    "build_changes": [
-    "De-emphasize the ult-slow pick setup; the shorter silence and range make her dive window thinner — value Spirit Lifesteal/Torment Pulse sustain over committing on Shining Wonder."
+    "Shining Wonder at 170s is a fight-defining cast, not a rotation tool — stop valuing ult uptime and buy damage/uptime elsewhere.",
+    "Silence T3 1.25->0.75s weakens the pick setup; lean on Spirit Lifesteal + Torment Pulse as the sustain layer rather than the gutted regen shell."
    ],
    "tier_before": "C",
    "tier_after": "D",
-   "one_liner": "Every ability got trimmed at once — silence, range, ult slow and cooldown all down.",
-   "verdict": "bench",
+   "one_liner": "Every tool she picks with got shorter: silence, cast range, ult slow and ult cooldown all down.",
+   "verdict": "watch",
    "rows": [
     {
      "label": "Silence T3",
@@ -60,16 +61,16 @@
     },
     {
      "label": "Spirit amp",
-     "old": "+7%",
-     "new": "+6%",
+     "old": "+7% per stack",
+     "new": "+6% per stack",
      "text": null,
      "effect": "bad",
      "ability": "Radiant Daggers"
     },
     {
      "label": "Slow",
-     "old": "-32%",
-     "new": "-28%",
+     "old": "-32% (T1 -16%)",
+     "new": "-28% (T1 -14%)",
      "text": null,
      "effect": "bad",
      "ability": "Shining Wonder"
@@ -91,14 +92,6 @@
      "ability": "Shining Wonder"
     },
     {
-     "label": "T1 slow",
-     "old": "-16%",
-     "new": "-14%",
-     "text": null,
-     "effect": "bad",
-     "ability": "Shining Wonder"
-    },
-    {
      "label": "T2 damage",
      "old": "+90",
      "new": "+80",
@@ -108,28 +101,30 @@
     }
    ],
    "change_kind": "nerf",
-   "change_size": "major"
+   "change_size": "moderate"
   },
   {
    "hero": "Rat King",
    "in_notes": true,
    "direction": "up",
-   "magnitude": "minor",
-   "confidence": 0.6,
+   "magnitude": "moderate",
+   "confidence": 0.7,
    "direct_reasons": [
-    "Rule, Ratannia! T1 now adds -25s cooldown, partly restoring the banner uptime cut on 10-30.",
-    "Bullet damage 5.7→5.8, ammo 24→26 and +3m→+4m move speed are small stat gains.",
-    "Scrap Grenade melee fuse extension 0.4s→0.25s is a minor loss to his grenade-clear combo."
+    "Rule, Ratannia! T1 now also cuts 25s of cooldown, directly buying back part of the 180s ult timer that was his post-10-30 problem.",
+    "Bullet damage 5.7->5.8 and ammo 24->26 feed the Monster Rounds/HVR gun-bruiser core that is his primary build.",
+    "Rule, Ratannia! move speed +3m->+4m improves the banner window he uses to force hub fights."
    ],
    "indirect_reasons": [
-    "Healbane's lower multi-source cap trims anti-heal pressure on his regen stack."
+    "Healbane's stacked heal-cut ceiling 82.2%->72% makes his regen/Fortitude frontline harder to fully suppress — the anti-heal answer to him is weaker.",
+    "Baba's spirit-resist scaling 0.7->0.5 and melee damage -10% remove pressure from a fellow S-tier frontline contesting the same crates and hubs."
    ],
    "build_changes": [
-    "Superior/Compress Cooldown are less mandatory now that T1 covers -25s on the banner — you can spend a slot elsewhere."
+    "Take Rule, Ratannia! T1 earlier — the -25s cooldown is now the cheapest fix for the 180s ult, ahead of Superior/Compress Cooldown.",
+    "Scrap Grenade fuse-extension 0.4s->0.25s makes the melee-the-fuse trick less reliable; pull camps with melee first, then grenade the clump."
    ],
-   "tier_before": "A",
-   "tier_after": "A",
-   "one_liner": "Small stat bumps plus a -25s banner cooldown talent restore some ult uptime.",
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Buffs land on the exact spots 10-30 hit: ammo, bullet damage, banner speed and a 25s ult cooldown cut.",
    "verdict": "keep",
    "rows": [
     {
@@ -149,6 +144,14 @@
      "ability": null
     },
     {
+     "label": "Fuse extension",
+     "old": "0.4s",
+     "new": "0.25s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Scrap Grenade"
+    },
+    {
      "label": "Move speed",
      "old": "+3m",
      "new": "+4m",
@@ -160,21 +163,13 @@
      "label": "T1",
      "old": null,
      "new": null,
-     "text": "Adds -25s cooldown",
+     "text": "Also -25s cooldown",
      "effect": "good",
      "ability": "Rule, Ratannia!"
-    },
-    {
-     "label": "Fuse extension",
-     "old": "0.4s",
-     "new": "0.25s",
-     "text": null,
-     "effect": "bad",
-     "ability": "Scrap Grenade"
     }
    ],
    "change_kind": "buff",
-   "change_size": "minor"
+   "change_size": "moderate"
   },
   {
    "hero": "Baba",
@@ -183,23 +178,25 @@
    "magnitude": "moderate",
    "confidence": 0.65,
    "direct_reasons": [
-    "Spirit Resistance scaling 0.7→0.5 and melee damage per boon -10% cut her bruiser durability and damage.",
-    "Baba's Brew cooldown 27s→28s, burn spirit scaling 0.15→0.13 and cycle 1.5s→1.6s all worsen her core ability.",
-    "Granny Long Legs melee resist 30%→25% and debuff resist 30%→25% thin her frontline shell."
+    "Spirit Resistance scaling 0.7->0.5 is a ~29% cut to the resist wall her regen bruiser build stands behind.",
+    "Melee damage per boon -10% and Granny Long Legs melee/debuff resist 30%->25% trim both her heavy-melee crate clear and her brawl durability.",
+    "Baba's Brew cooldown 27s->28s, cycle 1.5s->1.6s and burn spirit scaling 0.15->0.13 slow the random-order brew she already cannot control."
    ],
    "indirect_reasons": [
-    "Healbane's lower 4-stack cap is a small relief for her regen wall, but the kit cuts dominate."
+    "Healbane's stacked ceiling 82.2%->72% is a small relief for a regen-wall hero, but single-source anti-heal is untouched so the counter still works.",
+    "Rat King's bullet damage, ammo and ult-cooldown buffs strengthen the frontline she competes with for crates and hub space."
    ],
    "build_changes": [
-    "The resist-scaling cut makes the regen/bruiser shell weaker — lean further into the cooldown caster line and treat her as a caster, not a frontline."
+    "Spirit Resistance scaling 0.7->0.5 makes resist-stacking slots worse — put the spend into cooldown/duration (Compress Cooldown, Superior Cooldown) instead.",
+    "Melee damage -10% per boon weakens the Granny Long Legs crate route; still open Tough Crates, but stop treating melee as a damage source."
    ],
-   "tier_before": "D",
-   "tier_after": "D",
-   "one_liner": "Resist scaling, melee damage and Brew all trimmed — the bruiser shell is thinner.",
-   "verdict": "watch",
+   "tier_before": "S",
+   "tier_after": "A",
+   "one_liner": "Resist scaling and melee both cut again, but 54.4% win rate says she is still a top frontline.",
+   "verdict": "keep",
    "rows": [
     {
-     "label": "Spirit resist",
+     "label": "Spirit resist scaling",
      "old": "0.7",
      "new": "0.5",
      "text": null,
@@ -239,15 +236,7 @@
      "ability": "Baba's Brew"
     },
     {
-     "label": "Melee resist",
-     "old": "30%",
-     "new": "25%",
-     "text": null,
-     "effect": "bad",
-     "ability": "Granny Long Legs"
-    },
-    {
-     "label": "Debuff resist",
+     "label": "Melee/debuff resist",
      "old": "30%",
      "new": "25%",
      "text": null,
@@ -261,19 +250,19 @@
   {
    "hero": "Solomon",
    "in_notes": false,
-   "direction": "neutral",
+   "direction": "up",
    "magnitude": "minor",
-   "confidence": 0.5,
+   "confidence": 0.45,
    "direct_reasons": [],
    "indirect_reasons": [
-    "Baba and Celeste — two of his three worst lanes — both ate broad nerfs.",
-    "Rat King, his worst lane, got buffed (bullet 5.7→5.8, T1 -25s), offsetting that relief."
+    "Two of his three worst lanes were nerfed in the same patch — Baba (spirit resist scaling 0.7->0.5, melee -10%) and Celeste (silence, cast range, ult) — while Rat King, his other loss, was buffed.",
+    "Healbane's stacked ceiling 82.2%->72% does nothing for him: his usage data shows no Healbane, so the anti-heal change is neutral here."
    ],
    "build_changes": [],
-   "tier_before": "C",
-   "tier_after": "C",
-   "one_liner": "Two bad matchups weakened, one strengthened — net roughly flat.",
-   "verdict": "keep",
+   "tier_before": "D",
+   "tier_after": "D",
+   "one_liner": "His two worst matchups got nerfed, but a 46.5% floor and a buffed Rat King keep him at D.",
+   "verdict": "watch",
    "rows": [],
    "change_kind": "none",
    "change_size": "none"
@@ -283,21 +272,23 @@
    "in_notes": true,
    "direction": "down",
    "magnitude": "moderate",
-   "confidence": 0.65,
+   "confidence": 0.7,
    "direct_reasons": [
-    "Close The Deal bonus damage to under-half targets +75%→+55% cuts his execute.",
-    "Strix Salvo spirit scaling -8% lowers his mark damage.",
-    "Chimera Mk1 T2 heal 150→125 and heal spirit scaling 2.0→1.7 trim his dive sustain."
+    "Close The Deal bonus damage to under-half targets +75%->+55% cuts the execute that defines his dive-pick identity by a fifth.",
+    "Strix Salvo spirit scaling -8% hits the ability his primary spirit-mark build scales everything into.",
+    "Chimera Mk1 T2 heal-on-hit 150->125 and heal spirit scaling 2.0->1.7 remove sustain from a 730-HP flyer who has to commit to every dive."
    ],
    "indirect_reasons": [
-    "Healbane's lower stacking cap is minor relief for a flyer with no real sustain shell."
+    "Healbane's stacked ceiling 82.2%->72% does not help him — his problem is incoming burst, not suppressed healing.",
+    "Rat King's buffs are irrelevant to him; his real counters (Kelvin, Paige, Celeste, Vyper) are unchanged or, for Celeste, nerfed on the ult rather than the burst that kills him."
    ],
    "build_changes": [
-    "With the execute and mark scaling down, the spirit mark-burst line loses payoff — value the defensive glue (Reactive Barrier, Grit) more and pick fights only on already-chipped targets."
+    "Chimera Mk1 T2 heal 150->125 with 2.0->1.7 scaling makes heal-on-hit a weaker talent — Reactive Barrier and Grit carry the dive instead.",
+    "With the execute at +55%, stop diving targets above half HP expecting the mark to finish them; commit only on already-chipped targets."
    ],
-   "tier_before": "C",
-   "tier_after": "C",
-   "one_liner": "Execute and mark damage both cut — his dive converts fewer kills.",
+   "tier_before": "A",
+   "tier_after": "B",
+   "one_liner": "Execute cut to +55%, Salvo scaling down 8% and the jetpack heal trimmed — the dive pays less.",
    "verdict": "watch",
    "rows": [
     {
@@ -325,7 +316,7 @@
      "ability": "Chimera Mk1"
     },
     {
-     "label": "T2 heal scaling",
+     "label": "Heal scaling",
      "old": "2.0",
      "new": "1.7",
      "text": null,
@@ -341,17 +332,16 @@
    "in_notes": false,
    "direction": "up",
    "magnitude": "minor",
-   "confidence": 0.5,
+   "confidence": 0.45,
    "direct_reasons": [],
    "indirect_reasons": [
-    "Healbane's lower multi-source cap eases the anti-heal tax on her Radiant/Mystic Regeneration shell.",
-    "Baba, a 41% loss for her, was nerfed across her kit.",
-    "Rat King, another 41% loss, got buffed — offsets the relief."
+    "Healbane's stacked heal-cut ceiling 82.2%->72% protects the regen stack she actually buys (Radiant Regeneration 96%, Mystic Regeneration 93%, Healing Booster 78%) from multi-source anti-heal.",
+    "Baba's spirit-resist scaling 0.7->0.5 and melee -10% soften one of her 41% losing lanes; Rat King's buffs worsen the other."
    ],
    "build_changes": [],
-   "tier_before": "C",
-   "tier_after": "C",
-   "one_liner": "Healbane relief and a weaker Baba help her regen shell slightly.",
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Anti-heal stacking got weaker, which is the one thing her regen-heavy build needed; still 50.8%.",
    "verdict": "keep",
    "rows": [],
    "change_kind": "none",
@@ -364,18 +354,21 @@
    "magnitude": "minor",
    "confidence": 0.6,
    "direct_reasons": [
-    "Bullet damage +8% lifts the gun-damage charge economy her sustain build runs on.",
-    "Lurking Terrors fear buildup 2s→1.75s and vertical angle 50%→65% widen and speed the fear cone."
+    "Bullet damage +8% is a straight gain for a hero whose primary build is Titanic Magazine mag-dump uptime.",
+    "Lurking Terrors fear buildup 2s->1.75s makes her lockdown land a quarter-second sooner, tightening the channel window she wins fights in.",
+    "Lurking Terrors vertical angle 50%->65% widens the cone so off-angle targets above and below her now get feared."
    ],
    "indirect_reasons": [
-    "Healbane's lower stacking cap slightly relieves anti-heal on her healing-based sustain."
+    "Healbane's stacked ceiling 82.2%->72% is a small relief for a dedicated healer whose entire sustain is healing-based, though single-source anti-heal still answers her.",
+    "Rat King's buffs put more of the frontline she beats (59% into Billy-class brawlers) into lobbies, which suits her cone."
    ],
    "build_changes": [
-    "The wider, faster fear cone rewards the mag-dump gun line more than before — keep Titanic Magazine core and lean into the gun-damage charge."
+    "Bullet damage +8% reinforces Titanic Magazine as the weapon core — no reason to revisit HVR/Active Reload.",
+    "Fear buildup 2s->1.75s makes Lurking Terrors a reliable opener rather than a follow-up; lead with it."
    ],
-   "tier_before": "B",
-   "tier_after": "B",
-   "one_liner": "Gun damage up and a faster, wider fear cone — small but real gains.",
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Faster fear, wider cone and +8% bullet damage — small buffs that steady a falling A-tier.",
    "verdict": "keep",
    "rows": [
     {

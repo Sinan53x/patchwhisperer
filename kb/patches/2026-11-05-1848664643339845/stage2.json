@@ -3,74 +3,62 @@
   {
    "item": "Healbane",
    "direction": "nerf",
-   "magnitude": "moderate",
-   "summary": "The 10-30 anti-heal coverage plan gets trimmed: one Healbane is unchanged, but a second source adds less and a fourth caps at 72% instead of 82%. That is a soft buff to dedicated healers and a soft nerf to teams stacking Healbane as a team slot.",
+   "magnitude": "minor",
+   "summary": "Only the stacking curve moved: one source of anti-heal is exactly as strong, so nobody's single purchase decision changes. But the second-through-fourth sources pay less (4-stack ceiling 82.2%->72%), which quietly reverses part of the 10-30 'anti-heal is a team coverage plan' move and restores relative value to kit-based sustain.",
    "affected_heroes": [
     {
      "hero": "Seven",
      "relationship": "core",
      "effect": "down",
-     "why": "His Healbane is the team's anti-sustain coverage; the lower 4-stack cap reduces the payoff when allies also buy it."
+     "why": "Healbane is his answer to sustain comps; the payoff for adding it on top of a teammate's heal-cut is now materially smaller, so his counter-build is less of a hard counter."
     },
     {
      "hero": "Infernus",
      "relationship": "core",
-     "effect": "down",
-     "why": "Healbane plus Toxic Bullets was his anti-heal package into healer comps; harsher multi-source diminishing returns trims that combo."
+     "effect": "neutral",
+     "why": "His Toxic Bullets 40% heal-cut plus Healbane is exactly the two-source case trimmed 57.8%->54.7%, but the same change leaves his Spirit Lifesteal/Napalm sustain less punished by enemy stacked anti-heal — roughly a wash."
     },
     {
      "hero": "Drifter",
      "relationship": "situational",
      "effect": "down",
-     "why": "His built-in heal cut plus Healbane/Toxic Bullets was a real anti-sustain answer; the stacking nerf weakens that composition."
-    },
-    {
-     "hero": "Yamato",
-     "relationship": "core",
-     "effect": "down",
-     "why": "Healbane is a bruiser-sustain cut in her on-hit core; it loses value mainly when the team stacks anti-heal."
-    },
-    {
-     "hero": "Mirage",
-     "relationship": "core",
-     "effect": "neutral",
-     "why": "Healbane is a sustain/anti-heal slot in his spirit-amp core; single-source use is unchanged."
-    },
-    {
-     "hero": "Apollo",
-     "relationship": "situational",
-     "effect": "up",
-     "why": "He buys Healbane in the utility build, but as a Locket/heal-sustain hero he benefits more from enemy anti-heal stacking being weaker."
+     "why": "The anti-heal bruiser variant's whole selling point was built-in heal cut stacking with Healbane/Toxic Bullets; that composition is the nerfed case, so his edge into healer comps shrinks."
     },
     {
      "hero": "Kelvin",
      "relationship": "core",
      "effect": "up",
-     "why": "Dome/regen sustain is his win condition; weaker stacked anti-heal lets his heals survive coordinated Healbane buys."
+     "why": "He still buys Healbane for self/team anti-heal, but the dome and Healing Booster throughput he sells is now harder for a team to fully shut down with multiple anti-heal sources."
     },
     {
      "hero": "Ivy",
      "relationship": "situational",
      "effect": "up",
-     "why": "Tether healing was the main casualty of 10-30 anti-heal stacking; this patch gives it some relief."
-    },
-    {
-     "hero": "Mo & Krill",
-     "relationship": "core",
-     "effect": "up",
-     "why": "Scorn sustain gets more value when enemy anti-heal caps lower; his own Healbane is secondary."
+     "why": "The 10-30 stack system was the worst change for her tether heals; capping the stack ceiling partially un-does that, though her gun core remains the correct build."
     },
     {
      "hero": "Shiv",
      "relationship": "core",
      "effect": "up",
-     "why": "His regen/sustain shell was taxed by stacked anti-heal; the lower 4-stack cap helps him start fights healthier."
+     "why": "He buys Healbane himself, but more importantly his post-10-30 problem was starting fights small — a weaker anti-heal ceiling on his regen stack buys back some of the buffer Radiant Regeneration lost."
+    },
+    {
+     "hero": "Mo & Krill",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Scorn sustain is his survive-the-fight engine; less effective stacked anti-heal on him is the one item-side gain for a tank whose spirit damage was gutted on 10-30."
+    },
+    {
+     "hero": "Apollo",
+     "relationship": "situational",
+     "effect": "up",
+     "why": "Restorative Locket carries his sustain after Healing Booster was gutted, and that heal is now harder to fully suppress with stacked anti-heal."
     }
    ],
-   "build_shift": "No component or slot change: Healbane remains a Vitality T2. The shift is strategic — one Healbane is still the same, but a second or third buyer now adds less, so teams should stop treating it as a coverage slot and let one dedicated buyer hold it.",
+   "build_shift": "No component or slot change — it stays a Vitality T2 — but its marginal value collapses for a team's second and third buyer, so on a comp that already has one Healbane the slot now competes with any other Vitality item instead of reading as free coverage.",
    "rows": [
     {
-     "label": "2 stacks",
+     "label": "2-stack heal cut",
      "old": "57.8%",
      "new": "54.7%",
      "text": null,
@@ -78,10 +66,18 @@
      "ability": null
     },
     {
-     "label": "4 stacks",
+     "label": "4-stack heal cut",
      "old": "82.2%",
      "new": "72%",
      "text": null,
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "Stack decay",
+     "old": null,
+     "new": null,
+     "text": "Stacks diminish 20% more aggressively",
      "effect": "bad",
      "ability": null
     }
@@ -89,7 +85,7 @@
   }
  ],
  "notable_item_stories": [
-  "Healbane is the patch's only item move, so the item meta is otherwise frozen; the change mainly rebalances sustain comps against anti-heal comps.",
-  "Expect fewer double-Healbane buys in coordinated play: one dedicated buyer is enough, and over-stacking anti-heal is now less efficient."
+  "Anti-heal is back to being a slot you buy rather than a coverage plan you draft: single-source Healbane is untouched, so expect fewer triple-Healbane comps and a small rebound for kit healers (Kelvin, Ivy) and self-sustain bruisers (Shiv, Mo & Krill).",
+  "The losers are the heroes who used Healbane as a second layer over their own heal-cut (Infernus with Toxic Bullets, Drifter's built-in cut, Seven into sustain comps) — that specific stack is now worth about 3 points less at two sources and far less at four."
  ]
 }

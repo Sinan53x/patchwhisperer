@@ -37,3 +37,22 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
 - Apollo (10-30): Riposte's Pommel Hit went from a stun to an immobilize and parry
   disable. That is a rework and a real loss, since it can no longer interrupt channels.
 - General: crowd control changing type is never a plain buff, even when its duration rises.
+
+## 2026-11-04
+
+- Steam Vents still grant invisibility. Halloween only added +150% stamina regen on top.
+  Never say they lost invisibility.
+- General: an added effect is not a replacement. Say something was removed only when the
+  notes say so.
+- Lines under a "Street Brawl" header apply only to that mode. Never present them as
+  main-game changes.
+- Tiers come from measured match data, not from the notes. A heavily nerfed hero can still
+  be the strongest hero: Baba took big nerfs on 10-30 and still has the top win rate.
+
+## 2026-11-05: Minor Update 11-04 fact-check
+
+- Apollo's Riposte stopped interrupting channels on 10-30. The 11-04 notes do not touch channels.
+- Measured counter data, 30 days at Ascendant and up: Holliday, Ivy, Yamato and Vyper all win their Mo & Krill matchup. Billy loses to Mo & Krill.
+- Healbane's 72% is its 4-stack value, not a cap.
+- Sand Blast T2 going to -28% is a small buff on both axes. The parser's direction tag is a guess, not a note from Valve.
+- Celeste's Radiant Daggers range bonus moved to T2, so 30m is still reachable with that upgrade.

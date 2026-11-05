@@ -1,0 +1,726 @@
+{
+ "generated_at": 1793827015,
+ "patch_unix": 1793393509,
+ "bands": [
+  {
+   "key": "ranked",
+   "label": "All ranks",
+   "post_patch": true,
+   "matches": 113459,
+   "heroes": {
+    "Infernus": {
+     "tier": "C",
+     "prev_tier": "C",
+     "win_rate": 0.47816530950493624,
+     "matches": 55508,
+     "pick_rate": 0.48923327775778364,
+     "delta": -0.005005954367491294
+    },
+    "Seven": {
+     "tier": "S",
+     "prev_tier": "S",
+     "win_rate": 0.5338140295386925,
+     "matches": 37307,
+     "pick_rate": 0.3288143311470353,
+     "delta": 0.00605467788178371
+    },
+    "Vindicta": {
+     "tier": "A",
+     "prev_tier": "B",
+     "win_rate": 0.5108805737278624,
+     "matches": 36533,
+     "pick_rate": 0.3219924936283979,
+     "delta": 0.010429338602880756
+    },
+    "Lady Geist": {
+     "tier": "A",
+     "prev_tier": "B",
+     "win_rate": 0.5135429978493283,
+     "matches": 32083,
+     "pick_rate": 0.2827713347680149,
+     "delta": 0.021636601593478078
+    },
+    "Abrams": {
+     "tier": "S",
+     "prev_tier": "A",
+     "win_rate": 0.5364991617200598,
+     "matches": 44138,
+     "pick_rate": 0.3890210134336141,
+     "delta": 0.01868153643826631
+    },
+    "Wraith": {
+     "tier": "B",
+     "prev_tier": "S",
+     "win_rate": 0.5035071728620115,
+     "matches": 50468,
+     "pick_rate": 0.44481201019456335,
+     "delta": -0.025123571310373682
+    },
+    "McGinnis": {
+     "tier": "B",
+     "prev_tier": "C",
+     "win_rate": 0.5051020408163265,
+     "matches": 17248,
+     "pick_rate": 0.1520194489941315,
+     "delta": 0.0273708094195676
+    },
+    "Paradox": {
+     "tier": "D",
+     "prev_tier": "D",
+     "win_rate": 0.46714108732605375,
+     "matches": 34709,
+     "pick_rate": 0.3059162253674229,
+     "delta": 0.016296524790468225
+    },
+    "Dynamo": {
+     "tier": "A",
+     "prev_tier": "A",
+     "win_rate": 0.5137466850179596,
+     "matches": 29789,
+     "pick_rate": 0.2625526070318984,
+     "delta": -0.0020748262004728346
+    },
+    "Kelvin": {
+     "tier": "S",
+     "prev_tier": "S",
+     "win_rate": 0.5484317718940936,
+     "matches": 24550,
+     "pick_rate": 0.2163774044994161,
+     "delta": 0.005114812669058444
+    },
+    "Haze": {
+     "tier": "A",
+     "prev_tier": "A",
+     "win_rate": 0.5217784730529739,
+     "matches": 65202,
+     "pick_rate": 0.5746737078684695,
+     "delta": 0.0020912119293506892
+    },
+    "Holliday": {
+     "tier": "B",
+     "prev_tier": "C",
+     "win_rate": 0.49785544645705576,
+     "matches": 28211,
+     "pick_rate": 0.24864451968769968,
+     "delta": 0.01632581644872988
+    },
+    "Bebop": {
+     "tier": "C",
+     "prev_tier": "D",
+     "win_rate": 0.47759750333071743,
+     "matches": 54793,
+     "pick_rate": 0.48293145110943,
+     "delta": 0.0035307097111257346
+    },
+    "Calico": {
+     "tier": "B",
+     "prev_tier": "B",
+     "win_rate": 0.5088426527958387,
+     "matches": 23070,
+     "pick_rate": 0.20333306402450219,
+     "delta": 0.012512785204974064
+    },
+    "Grey Talon": {
+     "tier": "D",
+     "prev_tier": "D",
+     "win_rate": 0.45901386153905555,
+     "matches": 25899,
+     "pick_rate": 0.2282671445674288,
+     "delta": 0.009691502045920064
+    },
+    "Mo & Krill": {
+     "tier": "D",
+     "prev_tier": "B",
+     "win_rate": 0.45945055397668766,
+     "matches": 24279,
+     "pick_rate": 0.21398887999353658,
+     "delta": -0.04864156101912076
+    },
+    "Shiv": {
+     "tier": "D",
+     "prev_tier": "D",
+     "win_rate": 0.46008930363235,
+     "matches": 39864,
+     "pick_rate": 0.35135107344051825,
+     "delta": 0.0033711055498691356
+    },
+    "Ivy": {
+     "tier": "S",
+     "prev_tier": "S",
+     "win_rate": 0.5305738476011289,
+     "matches": 31890,
+     "pick_rate": 0.28107028226013764,
+     "delta": -0.005417380816683748
+    },
+    "Warden": {
+     "tier": "B",
+     "prev_tier": "D",
+     "win_rate": 0.4968718053567778,
+     "matches": 24455,
+     "pick_rate": 0.21554009886082365,
+     "delta": 0.056010843718173386
+    },
+    "Yamato": {
+     "tier": "C",
+     "prev_tier": "C",
+     "win_rate": 0.4840817911220396,
+     "matches": 30908,
+     "pick_rate": 0.27241518608016096,
+     "delta": -0.0038756581466197204
+    },
+    "Lash": {
+     "tier": "A",
+     "prev_tier": "A",
+     "win_rate": 0.5173591463907525,
+     "matches": 49484,
+     "pick_rate": 0.4361392865274585,
+     "delta": 0.00669444071941061
+    },
+    "Viscous": {
+     "tier": "C",
+     "prev_tier": "D",
+     "win_rate": 0.47715645449137417,
+     "matches": 16810,
+     "pick_rate": 0.14815902931304212,
+     "delta": 0.017717528241338987
+    },
+    "Pocket": {
+     "tier": "D",
+     "prev_tier": "D",
+     "win_rate": 0.4519543973941368,
+     "matches": 24560,
+     "pick_rate": 0.2164655419350574,
+     "delta": -0.0007551841937264436
+    },
+    "Mirage": {
+     "tier": "D",
+     "prev_tier": "D",
+     "win_rate": 0.4104199893673578,
+     "matches": 13167,
+     "pick_rate": 0.1160505615089129,
+     "delta": -0.015532209694084975
+    },
+    "Vyper": {
+     "tier": "B",
+     "prev_tier": "B",
+     "win_rate": 0.5059978908515687,
+     "matches": 15172,
+     "pick_rate": 0.13372211735499556,
+     "delta": -0.0032620589334015904
+    },
+    "Sinclair": {
+     "tier": "D",
+     "prev_tier": "D",
+     "win_rate": 0.46167541229385306,
+     "matches": 10672,
+     "pick_rate": 0.09406027131640604,
+     "delta": -0.0023905692818561586
+    },
+    "Mina": {
+     "tier": "D",
+     "prev_tier": "D",
+     "win_rate": 0.4548710783691096,
+     "matches": 39365,
+     "pick_rate": 0.34695301540201684,
+     "delta": -0.003619959265682926
+    },
+    "Drifter": {
+     "tier": "A",
+     "prev_tier": "B",
+     "win_rate": 0.5198321618132262,
+     "matches": 55768,
+     "pick_rate": 0.4915248510844577,
+     "delta": 0.01524207639772368
+    },
+    "Venator": {
+     "tier": "D",
+     "prev_tier": "D",
+     "win_rate": 0.4697258101065035,
+     "matches": 44130,
+     "pick_rate": 0.3889505034851011,
+     "delta": -0.0042582385072451046
+    },
+    "Victor": {
+     "tier": "S",
+     "prev_tier": "S",
+     "win_rate": 0.5382178994870644,
+     "matches": 35677,
+     "pick_rate": 0.31444792913750175,
+     "delta": 0.007177754036784445
+    },
+    "Paige": {
+     "tier": "S",
+     "prev_tier": "S",
+     "win_rate": 0.5490155912142939,
+     "matches": 43935,
+     "pick_rate": 0.38723182349009555,
+     "delta": 0.015249069889862743
+    },
+    "The Doorman": {
+     "tier": "D",
+     "prev_tier": "D",
+     "win_rate": 0.45993224514936865,
+     "matches": 16235,
+     "pick_rate": 0.1430911267636668,
+     "delta": 0.0032647318143420034
+    },
+    "Billy": {
+     "tier": "B",
+     "prev_tier": "C",
+     "win_rate": 0.5077096546863988,
+     "matches": 35475,
+     "pick_rate": 0.3126675529375473,
+     "delta": 0.01926714306660593
+    },
+    "Graves": {
+     "tier": "S",
+     "prev_tier": "S",
+     "win_rate": 0.5511131402730672,
+     "matches": 45996,
+     "pick_rate": 0.40539694897576956,
+     "delta": -0.0005620193356716818
+    },
+    "Apollo": {
+     "tier": "B",
+     "prev_tier": "A",
+     "win_rate": 0.5064460175331676,
+     "matches": 21331,
+     "pick_rate": 0.1880059639664784,
+     "delta": -0.010963363672987447
+    },
+    "Deadman Danny": {
+     "tier": "S",
+     "prev_tier": "C",
+     "win_rate": 0.5413397410749313,
+     "matches": 20392,
+     "pick_rate": 0.1797298587597594,
+     "delta": 0.06028254870058125
+    },
+    "Rem": {
+     "tier": "D",
+     "prev_tier": "D",
+     "win_rate": 0.45060785225536437,
+     "matches": 30106,
+     "pick_rate": 0.26534656374172794,
+     "delta": -0.004313148844450554
+    },
+    "Silver": {
+     "tier": "C",
+     "prev_tier": "C",
+     "win_rate": 0.48419488146161094,
+     "matches": 27586,
+     "pick_rate": 0.2431359299601178,
+     "delta": 0.006653156612884292
+    },
+    "Celeste": {
+     "tier": "C",
+     "prev_tier": "B",
+     "win_rate": 0.48244536282065603,
+     "matches": 26859,
+     "pick_rate": 0.23672833838899457,
+     "delta": -0.007853097352970462
+    },
+    "Rat King": {
+     "tier": "B",
+     "prev_tier": "S",
+     "win_rate": 0.5067969725916672,
+     "matches": 27218,
+     "pick_rate": 0.2398924723285176,
+     "delta": -0.040010025747310496
+    },
+    "Solomon": {
+     "tier": "C",
+     "prev_tier": "D",
+     "win_rate": 0.4888030888030888,
+     "matches": 9065,
+     "pick_rate": 0.07989658540884753,
+     "delta": 0.0304969074588326
+    },
+    "Violet": {
+     "tier": "D",
+     "prev_tier": "B",
+     "win_rate": 0.4540475128972677,
+     "matches": 15701,
+     "pick_rate": 0.13838458770042086,
+     "delta": -0.042478973394651454
+    },
+    "Nurse Harrow": {
+     "tier": "D",
+     "prev_tier": "B",
+     "win_rate": 0.4737777777777778,
+     "matches": 15750,
+     "pick_rate": 0.13881646113506327,
+     "delta": -0.029072678440278443
+    },
+    "Baba": {
+     "tier": "S",
+     "prev_tier": "S",
+     "win_rate": 0.5789007092198581,
+     "matches": 10152,
+     "pick_rate": 0.08947712466305792,
+     "delta": 0.021620022694894714
+    }
+   }
+  },
+  {
+   "key": "high",
+   "label": "High rank",
+   "post_patch": true,
+   "matches": 7298,
+   "heroes": {
+    "Infernus": {
+     "tier": "C",
+     "prev_tier": "B",
+     "win_rate": 0.47783251231527096,
+     "matches": 2233,
+     "pick_rate": 0.30593581239225,
+     "delta": -0.01447184493597553
+    },
+    "Seven": {
+     "tier": "S",
+     "prev_tier": "A",
+     "win_rate": 0.5399622404027691,
+     "matches": 1589,
+     "pick_rate": 0.21770354047975154,
+     "delta": 0.028658431173905652
+    },
+    "Vindicta": {
+     "tier": "B",
+     "prev_tier": "B",
+     "win_rate": 0.5070422535211268,
+     "matches": 2272,
+     "pick_rate": 0.3112790710950255,
+     "delta": 0.009212392410015646
+    },
+    "Lady Geist": {
+     "tier": "C",
+     "prev_tier": "B",
+     "win_rate": 0.4659498207885305,
+     "matches": 837,
+     "pick_rate": 0.11467455215956705,
+     "delta": -0.030426990805672405
+    },
+    "Abrams": {
+     "tier": "S",
+     "prev_tier": "A",
+     "win_rate": 0.5381562881562881,
+     "matches": 3276,
+     "pick_rate": 0.44883373103314417,
+     "delta": 0.02673522488561908
+    },
+    "Wraith": {
+     "tier": "A",
+     "prev_tier": "S",
+     "win_rate": 0.5220883534136547,
+     "matches": 3984,
+     "pick_rate": 0.5458344274835306,
+     "delta": -0.011824202640156933
+    },
+    "McGinnis": {
+     "tier": "S",
+     "prev_tier": "C",
+     "win_rate": 0.5401069518716578,
+     "matches": 935,
+     "pick_rate": 0.12810120223320812,
+     "delta": 0.0574982562194839
+    },
+    "Paradox": {
+     "tier": "C",
+     "prev_tier": "D",
+     "win_rate": 0.4728819567529245,
+     "matches": 2821,
+     "pick_rate": 0.3864957128340964,
+     "delta": 0.013830232614993443
+    },
+    "Dynamo": {
+     "tier": "A",
+     "prev_tier": "B",
+     "win_rate": 0.5235849056603774,
+     "matches": 1272,
+     "pick_rate": 0.17427243769052483,
+     "delta": 0.015928447604452
+    },
+    "Kelvin": {
+     "tier": "S",
+     "prev_tier": "S",
+     "win_rate": 0.5336322869955157,
+     "matches": 1784,
+     "pick_rate": 0.24441983399362918,
+     "delta": -0.006883646236654273
+    },
+    "Haze": {
+     "tier": "B",
+     "prev_tier": "B",
+     "win_rate": 0.5026675945256321,
+     "matches": 4311,
+     "pick_rate": 0.5906355966068023,
+     "delta": -0.005504905243506331
+    },
+    "Holliday": {
+     "tier": "B",
+     "prev_tier": "A",
+     "win_rate": 0.506578947368421,
+     "matches": 2128,
+     "pick_rate": 0.2915501158847774,
+     "delta": -0.006090340530224725
+    },
+    "Bebop": {
+     "tier": "B",
+     "prev_tier": "B",
+     "win_rate": 0.5030674846625767,
+     "matches": 3749,
+     "pick_rate": 0.5136378686334729,
+     "delta": -0.00003218152721828904
+    },
+    "Calico": {
+     "tier": "A",
+     "prev_tier": "B",
+     "win_rate": 0.5125748502994012,
+     "matches": 1670,
+     "pick_rate": 0.22880107778551612,
+     "delta": 0.007717623334432155
+    },
+    "Grey Talon": {
+     "tier": "D",
+     "prev_tier": "D",
+     "win_rate": 0.45330578512396696,
+     "matches": 2420,
+     "pick_rate": 0.3315560528388916,
+     "delta": 0.0016491294370845622
+    },
+    "Mo & Krill": {
+     "tier": "D",
+     "prev_tier": "A",
+     "win_rate": 0.447714949651433,
+     "matches": 1291,
+     "pick_rate": 0.17687556372521035,
+     "delta": -0.06381217810034379
+    },
+    "Shiv": {
+     "tier": "C",
+     "prev_tier": "C",
+     "win_rate": 0.4801962846126884,
+     "matches": 2853,
+     "pick_rate": 0.39087992510304037,
+     "delta": -0.0005222180879773664
+    },
+    "Ivy": {
+     "tier": "S",
+     "prev_tier": "S",
+     "win_rate": 0.5316901408450704,
+     "matches": 2840,
+     "pick_rate": 0.3890988388687819,
+     "delta": -0.00865935846771182
+    },
+    "Warden": {
+     "tier": "C",
+     "prev_tier": "D",
+     "win_rate": 0.48723186925434114,
+     "matches": 1958,
+     "pick_rate": 0.2682589882060123,
+     "delta": 0.032454799190646866
+    },
+    "Yamato": {
+     "tier": "B",
+     "prev_tier": "A",
+     "win_rate": 0.49413667610190054,
+     "matches": 2473,
+     "pick_rate": 0.3388174044093301,
+     "delta": -0.026978987308121483
+    },
+    "Lash": {
+     "tier": "A",
+     "prev_tier": "B",
+     "win_rate": 0.5164628410159925,
+     "matches": 3189,
+     "pick_rate": 0.4369141539269526,
+     "delta": 0.011519239846238927
+    },
+    "Viscous": {
+     "tier": "B",
+     "prev_tier": "C",
+     "win_rate": 0.4967682363804247,
+     "matches": 1083,
+     "pick_rate": 0.14837818397707422,
+     "delta": 0.010340440506374782
+    },
+    "Pocket": {
+     "tier": "D",
+     "prev_tier": "D",
+     "win_rate": 0.45105462412114655,
+     "matches": 1849,
+     "pick_rate": 0.2533252651649217,
+     "delta": -0.011106783306946144
+    },
+    "Mirage": {
+     "tier": "D",
+     "prev_tier": "D",
+     "win_rate": 0.42516268980477223,
+     "matches": 922,
+     "pick_rate": 0.1263201159989496,
+     "delta": -0.026108496635905754
+    },
+    "Vyper": {
+     "tier": "A",
+     "prev_tier": "S",
+     "win_rate": 0.5223395613322502,
+     "matches": 1231,
+     "pick_rate": 0.1686551657209403,
+     "delta": -0.010782355510596808
+    },
+    "Sinclair": {
+     "tier": "D",
+     "prev_tier": "D",
+     "win_rate": 0.4510135135135135,
+     "matches": 592,
+     "pick_rate": 0.08110792697546439,
+     "delta": -0.015410224123134086
+    },
+    "Mina": {
+     "tier": "D",
+     "prev_tier": "D",
+     "win_rate": 0.46892039258451473,
+     "matches": 2751,
+     "pick_rate": 0.37690524849578133,
+     "delta": 0.004876773368481746
+    },
+    "Drifter": {
+     "tier": "B",
+     "prev_tier": "B",
+     "win_rate": 0.5091093117408907,
+     "matches": 3952,
+     "pick_rate": 0.5414502152145866,
+     "delta": 0.008075643696000001
+    },
+    "Venator": {
+     "tier": "C",
+     "prev_tier": "C",
+     "win_rate": 0.4832294449391511,
+     "matches": 3369,
+     "pick_rate": 0.46157534793976274,
+     "delta": 0.0036598124439866653
+    },
+    "Victor": {
+     "tier": "B",
+     "prev_tier": "B",
+     "win_rate": 0.4981729598051157,
+     "matches": 1642,
+     "pick_rate": 0.22496489205019007,
+     "delta": -0.00016748590375104122
+    },
+    "Paige": {
+     "tier": "S",
+     "prev_tier": "A",
+     "win_rate": 0.5281536446966391,
+     "matches": 2291,
+     "pick_rate": 0.313882197129711,
+     "delta": 0.014136824512418045
+    },
+    "The Doorman": {
+     "tier": "B",
+     "prev_tier": "D",
+     "win_rate": 0.4901685393258427,
+     "matches": 712,
+     "pick_rate": 0.09754872298400447,
+     "delta": 0.04466336828367884
+    },
+    "Billy": {
+     "tier": "B",
+     "prev_tier": "D",
+     "win_rate": 0.5002331002331002,
+     "matches": 2145,
+     "pick_rate": 0.2938792286526539,
+     "delta": 0.030337812274985
+    },
+    "Graves": {
+     "tier": "A",
+     "prev_tier": "A",
+     "win_rate": 0.5231707317073171,
+     "matches": 1640,
+     "pick_rate": 0.2246908787833811,
+     "delta": 0.0060345814725752955
+    },
+    "Apollo": {
+     "tier": "A",
+     "prev_tier": "B",
+     "win_rate": 0.5249813571961223,
+     "matches": 1341,
+     "pick_rate": 0.18372589539543538,
+     "delta": 0.03377702702020885
+    },
+    "Deadman Danny": {
+     "tier": "B",
+     "prev_tier": "D",
+     "win_rate": 0.49700996677740866,
+     "matches": 1505,
+     "pick_rate": 0.2061949832737735,
+     "delta": 0.0471786757101027
+    },
+    "Rem": {
+     "tier": "D",
+     "prev_tier": "D",
+     "win_rate": 0.4237442922374429,
+     "matches": 1095,
+     "pick_rate": 0.15002226357792822,
+     "delta": -0.045910236240614966
+    },
+    "Silver": {
+     "tier": "B",
+     "prev_tier": "B",
+     "win_rate": 0.48877374784110533,
+     "matches": 1737,
+     "pick_rate": 0.23798052222361765,
+     "delta": -0.001363952196110907
+    },
+    "Celeste": {
+     "tier": "B",
+     "prev_tier": "S",
+     "win_rate": 0.49343065693430654,
+     "matches": 2055,
+     "pick_rate": 0.2815486316462489,
+     "delta": -0.04838752488387532
+    },
+    "Rat King": {
+     "tier": "C",
+     "prev_tier": "A",
+     "win_rate": 0.48124428179322964,
+     "matches": 1093,
+     "pick_rate": 0.1497482503111192,
+     "delta": -0.039302634291211835
+    },
+    "Solomon": {
+     "tier": "B",
+     "prev_tier": "D",
+     "win_rate": 0.5080058224163028,
+     "matches": 687,
+     "pick_rate": 0.09412355714889195,
+     "delta": 0.03757627271719505
+    },
+    "Violet": {
+     "tier": "D",
+     "prev_tier": "C",
+     "win_rate": 0.44676616915422884,
+     "matches": 1005,
+     "pick_rate": 0.13769166657152315,
+     "delta": -0.03991859351908933
+    },
+    "Nurse Harrow": {
+     "tier": "C",
+     "prev_tier": "B",
+     "win_rate": 0.47731888964116453,
+     "matches": 1477,
+     "pick_rate": 0.2023587975384475,
+     "delta": -0.03269319390794645
+    },
+    "Baba": {
+     "tier": "S",
+     "prev_tier": "S",
+     "win_rate": 0.6086387434554974,
+     "matches": 1528,
+     "pick_rate": 0.209346135842077,
+     "delta": 0.0273672119803956
+    }
+   }
+  }
+ ]
+}

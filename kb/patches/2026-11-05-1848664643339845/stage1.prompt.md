@@ -44,6 +44,17 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
   disable. That is a rework and a real loss, since it can no longer interrupt channels.
 - General: crowd control changing type is never a plain buff, even when its duration rises.
 
+## 2026-11-04
+
+- Steam Vents still grant invisibility. Halloween only added +150% stamina regen on top.
+  Never say they lost invisibility.
+- General: an added effect is not a replacement. Say something was removed only when the
+  notes say so.
+- Lines under a "Street Brawl" header apply only to that mode. Never present them as
+  main-game changes.
+- Tiers come from measured match data, not from the notes. A heavily nerfed hero can still
+  be the strongest hero: Baba took big nerfs on 10-30 and still has the top win rate.
+
 
 ## Current meta thesis (knowledge base, written before this patch)
 
@@ -59,7 +70,7 @@ Games are won by converting a lead into Guardians/Walkers before the comeback ec
 - Bounties: Guardian +10%, Walker +5%, objective share 30->25% (09-16, holds).
 - Objective parries no longer reset the parry cooldown — Guardian/Shrine dives are one-shot.
 - Respawn 38s at 20m. Global slows -20%; air drag ratio 0.5 (was 0.35) — airborne exits are slower, ground kiting stronger, flyers taxed harder.
-- Steam Vents no longer grant invisibility; they grant +150% stamina regen. Vents are a fight-mobility battery now, not a gank setup tool.
+- Steam Vents keep their invisibility and now also add +150% stamina regen.
 - Cast-on-press holds; Healing Snacks 10% max HP unchanged.
 
 ## Map
@@ -72,7 +83,7 @@ Lanes renamed; four districts plus off-lane corridors. All neutrals are one of n
 - Out-of-combat regen sustain: down — Radiant Regeneration is combat-only, Healing Booster delinked and trimmed (Baba, Shiv, Lady Geist, Celeste).
 - Dedicated healers: down — Healbane now stacks across sources (Kelvin, Ivy, Rem).
 - Max-range poke/gun carries: down — HVR velocity 60->45%, Express Shot -5%, worse air drag (Vindicta, Grey Talon, Paige).
-- Roamers/pick assassins: mixed — no free vent approach and Shadow Weave needs 6s setup, but stamina vents feed re-engages (Lash, Holliday, Paradox, Calico).
+- Roamers/pick assassins: mixed — slower tunnels and Shadow Weave needs 6s setup, but stamina vents feed re-engages (Lash, Holliday, Paradox, Calico).
 - Lane bullies: slightly down — the comeback floor blunts snowball conversion (Paige, Apollo).
 - Late scalers: up — non-hero comeback gold and tick souls fund the slow curve (Pocket, Mirage, Warden).
 - Flyers: down — air drag 0.5 plus reliable grounding (Grey Talon, Celeste, Vindicta, Deadman Danny).
@@ -86,7 +97,7 @@ Lanes renamed; four districts plus off-lane corridors. All neutrals are one of n
 - Rat King win rate against pick rate.
 
 ## Recent history
-- Halloween 2026 + Gameplay Update (2026-10-30): comeback levers (30% non-hero cap, tick souls to the two poorest, faster secure when behind), Haunt bounty/growth and HP/damage +10%, Steam Vents become a stamina battery, ~30 item moves — regen out, in-fight lifesteal and stacked anti-heal in.
+- Halloween 2026 + Gameplay Update (2026-10-30): comeback levers (30% non-hero cap, tick souls to the two poorest, faster secure when behind), Haunt bounty/growth and HP/damage +10%, Steam Vents add +150% stamina regen, ~30 item moves — regen out, in-fight lifesteal and stacked anti-heal in.
 - Shh... This Won't Hurt a Bit (2026-10-20): off-lane corridors and hub fights priced in; Haunt behaviors, Barrel Mimics, Steam Vents, Healing Snacks, instant casts; Graves gun destroys Venator traps.
 - Paint the Town (2026-10-16): nine Haunt camp types replace all neutrals, contested Soul Bags, objective-parry cooldown reset removed, permanent-stat Buff Containers, six vote-gated new heroes.
 - Minor Update - 10-14-2026: Baba frontline cut; Deadman Danny buff package; Radiant Regeneration third trim.

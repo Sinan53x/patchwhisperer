@@ -367,19 +367,18 @@ Healbane:
   - Mo & Krill
   - Seven
   - Shiv
-  - Solomon
   - Yamato
   slot: Vitality
   tier: 2
-  notes: '11-04-2026 capped the 10-30 stacking rework: one source is unchanged, 2
-    sources 54.7% (was 57.8%), 4 sources 72% (was 82.2%). Anti-heal is now a single-buyer
-    slot, not a team coverage plan — a second or third buyer adds little, so coordinated
-    teams should designate one holder. Heal-on-kill 275->170 (+3/boon) still taxes
-    frontline buyers'' own sustain. Best for heroes who want the enemy''s healing
-    gone and don''t live on their own heals (Seven, Infernus, Yamato); worst for heroes
-    whose win condition is their own healing (Kelvin, Ivy, Rem, Mo & Krill, Shiv),
-    who now gain more from the enemy''s anti-heal being capped than they lose on the
-    giving side.'
+  notes: '11-04 trimmed only the stacking curve: one source of anti-heal is exactly
+    as strong as before, but the 2-source case falls 57.8->54.7%, the 4-source ceiling
+    82.2->72%, and stacks decay 20% faster. This partially reverses the 10-30 ''anti-heal
+    is a team coverage plan'' move — the first purchase is still correct, the second
+    and third are now worth roughly any other Vitality slot. Buyers who stacked it
+    over their own heal-cut (Infernus with Toxic Bullets, Drifter''s built-in cut,
+    Seven into sustain comps) lose the most; kit healers and self-sustain bruisers
+    (Kelvin, Ivy, Rem, Shiv, Mo & Krill) get a relative refund. Solomon dropped from
+    the buyer list — no Healbane in his usage.'
 Ricochet:
   name: Ricochet
   role: multi-target weapon item

@@ -91,6 +91,17 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
   disable. That is a rework and a real loss, since it can no longer interrupt channels.
 - General: crowd control changing type is never a plain buff, even when its duration rises.
 
+## 2026-11-04
+
+- Steam Vents still grant invisibility. Halloween only added +150% stamina regen on top.
+  Never say they lost invisibility.
+- General: an added effect is not a replacement. Say something was removed only when the
+  notes say so.
+- Lines under a "Street Brawl" header apply only to that mode. Never present them as
+  main-game changes.
+- Tiers come from measured match data, not from the notes. A heavily nerfed hero can still
+  be the strongest hero: Baba took big nerfs on 10-30 and still has the top win rate.
+
 
 ## Entries to check
 
@@ -100,14 +111,16 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
   "in_notes": true,
   "direction": "up",
   "magnitude": "minor",
-  "confidence": 0.6,
+  "confidence": 0.65,
   "direct_reasons": [
-   "Scorn heal from heroes 1.2x\u21921.3x and Combo health per kill 40\u219250 both extend his grind-down frontline.",
-   "Burrow damage radius +0.5m widens the lockdown hitbox; Sand Blast T2 trades a weaker dash cut (-26%\u2192-28% is a smaller relative reduction) for a stronger slow (-24%\u2192-28%), roughly a wash."
+   "Scorn heal from heroes 1.2x->1.3x raises the sustain that is his survive-the-fight engine.",
+   "Burrow damage radius +0.5m makes the AoE his camp clear and dive both wider.",
+   "Combo health per kill 40->50, so finishing the grab pays more than it did.",
+   "Sand Blast T2 re-tunes the slow/dash cut to a flat -28% (from -24% slow / -26% dash): tagged a nerf in the notes, but the numbers read as a wash."
   ],
   "tier_before": "B",
   "tier_after": "B",
-  "one_liner": "Small Scorn and Combo buffs plus softer anti-heal make him a slightly better frontline.",
+  "one_liner": "More Scorn healing, a bigger Burrow, +10 HP per grab \u2014 the tank holds targets and now survives doing it.",
   "verdict": "keep",
   "rows": [
    {
@@ -127,15 +140,15 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
     "ability": "Burrow"
    },
    {
-    "label": "Sand Blast T2",
+    "label": "T2 slow",
     "old": "-24% slow / -26% dash",
-    "new": "-28% both",
+    "new": "-28% for both",
     "text": null,
     "effect": "neutral",
     "ability": "Sand Blast"
    },
    {
-    "label": "Combo HP/kill",
+    "label": "Combo HP",
     "old": "40",
     "new": "50",
     "text": null,
@@ -150,31 +163,31 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
   "hero": "Apollo",
   "in_notes": true,
   "direction": "up",
-  "magnitude": "minor",
-  "confidence": 0.55,
+  "magnitude": "moderate",
+  "confidence": 0.5,
   "direct_reasons": [
-   "Riposte Pommel Hit now also disarms the target, adding a new trade-winning tool to his lane-bully kit.",
-   "Riposte Pummel now ends any preexisting parry on the target, stripping a defensive answer.",
-   "Riposte T2 duration +0.6s\u2192+0.7s and Itani Lo Sahn T3 bonus damage +50%\u2192+60%."
+   "Riposte Pommel Hit now also disarms, turning his parry punish into a hard shutdown of a gun carry's M1 window on top of the existing immobilize.",
+   "Riposte T2 duration +0.6s->+0.7s and Itani Lo Sahn T3 +50%->+60% bonus damage both lengthen or strengthen the pick he already converts.",
+   "Pummel hit now ends a preexisting parry on the target \u2014 the least clear line (it strips the enemy's parry state rather than Apollo's), so treat one edge of this kit as unresolved."
   ],
-  "tier_before": "S",
-  "tier_after": "S",
-  "one_liner": "Riposte now disarms and breaks parries \u2014 a sharper lane bully, still S.",
+  "tier_before": "C",
+  "tier_after": "B",
+  "one_liner": "Riposte now disarms, holds 0.1s longer, and Itani Lo Sahn T3 hits harder \u2014 his pick punish finally has teeth.",
   "verdict": "keep",
   "rows": [
    {
     "label": "Disarm",
     "old": null,
     "new": null,
-    "text": "Pommel Hit now disarms",
+    "text": "Pommel Hit now also disarms",
     "effect": "good",
     "ability": "Riposte"
    },
    {
-    "label": "Parry break",
+    "label": "Parry strip",
     "old": null,
     "new": null,
-    "text": "Pummel ends preexisting parry",
+    "text": "Pummel hit ends target's preexisting parry",
     "effect": "good",
     "ability": "Riposte"
    },
@@ -195,24 +208,24 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
     "ability": "Itani Lo Sahn"
    }
   ],
-  "change_kind": "rework",
-  "change_size": "minor"
+  "change_kind": "buff",
+  "change_size": "moderate"
  },
  {
   "hero": "Celeste",
   "in_notes": true,
   "direction": "down",
-  "magnitude": "major",
+  "magnitude": "moderate",
   "confidence": 0.7,
   "direct_reasons": [
-   "Dazzling Trick T3 silence +1.25s\u2192+0.75s cuts her lockdown window.",
-   "Radiant Daggers cast range 30m\u219225m and spirit amp +7%\u2192+6% per stack trim her poke and scaling.",
-   "Shining Wonder slow -32%\u2192-28%, cooldown 160s\u2192170s, bounce 15.5m\u219215m, T1 -16%\u2192-14%, T2 +90\u2192+80 hit every axis of her ult."
+   "Dazzling Trick T3 silence +1.25s->+0.75s cuts her pick window by 40% on the ability that sets up her burst.",
+   "Radiant Daggers cast range 30m->25m forces her closer, and the spirit amp per stack 7%->6% trims the payoff of the same ability.",
+   "Shining Wonder nerfed on every axis: slow -32%->-28%, cooldown 160s->170s, bounce 15.5m->15m, T1 slow -16%->-14%, T2 damage +90->+80."
   ],
   "tier_before": "C",
   "tier_after": "D",
-  "one_liner": "Every ability got trimmed at once \u2014 silence, range, ult slow and cooldown all down.",
-  "verdict": "bench",
+  "one_liner": "Every tool she picks with got shorter: silence, cast range, ult slow and ult cooldown all down.",
+  "verdict": "watch",
   "rows": [
    {
     "label": "Silence T3",
@@ -232,16 +245,16 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
    },
    {
     "label": "Spirit amp",
-    "old": "+7%",
-    "new": "+6%",
+    "old": "+7% per stack",
+    "new": "+6% per stack",
     "text": null,
     "effect": "bad",
     "ability": "Radiant Daggers"
    },
    {
     "label": "Slow",
-    "old": "-32%",
-    "new": "-28%",
+    "old": "-32% (T1 -16%)",
+    "new": "-28% (T1 -14%)",
     "text": null,
     "effect": "bad",
     "ability": "Shining Wonder"
@@ -263,14 +276,6 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
     "ability": "Shining Wonder"
    },
    {
-    "label": "T1 slow",
-    "old": "-16%",
-    "new": "-14%",
-    "text": null,
-    "effect": "bad",
-    "ability": "Shining Wonder"
-   },
-   {
     "label": "T2 damage",
     "old": "+90",
     "new": "+80",
@@ -280,22 +285,22 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
    }
   ],
   "change_kind": "nerf",
-  "change_size": "major"
+  "change_size": "moderate"
  },
  {
   "hero": "Rat King",
   "in_notes": true,
   "direction": "up",
-  "magnitude": "minor",
-  "confidence": 0.6,
+  "magnitude": "moderate",
+  "confidence": 0.7,
   "direct_reasons": [
-   "Rule, Ratannia! T1 now adds -25s cooldown, partly restoring the banner uptime cut on 10-30.",
-   "Bullet damage 5.7\u21925.8, ammo 24\u219226 and +3m\u2192+4m move speed are small stat gains.",
-   "Scrap Grenade melee fuse extension 0.4s\u21920.25s is a minor loss to his grenade-clear combo."
+   "Rule, Ratannia! T1 now also cuts 25s of cooldown, directly buying back part of the 180s ult timer that was his post-10-30 problem.",
+   "Bullet damage 5.7->5.8 and ammo 24->26 feed the Monster Rounds/HVR gun-bruiser core that is his primary build.",
+   "Rule, Ratannia! move speed +3m->+4m improves the banner window he uses to force hub fights."
   ],
-  "tier_before": "A",
-  "tier_after": "A",
-  "one_liner": "Small stat bumps plus a -25s banner cooldown talent restore some ult uptime.",
+  "tier_before": "S",
+  "tier_after": "S",
+  "one_liner": "Buffs land on the exact spots 10-30 hit: ammo, bullet damage, banner speed and a 25s ult cooldown cut.",
   "verdict": "keep",
   "rows": [
    {
@@ -315,6 +320,14 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
     "ability": null
    },
    {
+    "label": "Fuse extension",
+    "old": "0.4s",
+    "new": "0.25s",
+    "text": null,
+    "effect": "bad",
+    "ability": "Scrap Grenade"
+   },
+   {
     "label": "Move speed",
     "old": "+3m",
     "new": "+4m",
@@ -326,21 +339,13 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
     "label": "T1",
     "old": null,
     "new": null,
-    "text": "Adds -25s cooldown",
+    "text": "Also -25s cooldown",
     "effect": "good",
     "ability": "Rule, Ratannia!"
-   },
-   {
-    "label": "Fuse extension",
-    "old": "0.4s",
-    "new": "0.25s",
-    "text": null,
-    "effect": "bad",
-    "ability": "Scrap Grenade"
    }
   ],
   "change_kind": "buff",
-  "change_size": "minor"
+  "change_size": "moderate"
  },
  {
   "hero": "Baba",
@@ -349,17 +354,17 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
   "magnitude": "moderate",
   "confidence": 0.65,
   "direct_reasons": [
-   "Spirit Resistance scaling 0.7\u21920.5 and melee damage per boon -10% cut her bruiser durability and damage.",
-   "Baba's Brew cooldown 27s\u219228s, burn spirit scaling 0.15\u21920.13 and cycle 1.5s\u21921.6s all worsen her core ability.",
-   "Granny Long Legs melee resist 30%\u219225% and debuff resist 30%\u219225% thin her frontline shell."
+   "Spirit Resistance scaling 0.7->0.5 is a ~29% cut to the resist wall her regen bruiser build stands behind.",
+   "Melee damage per boon -10% and Granny Long Legs melee/debuff resist 30%->25% trim both her heavy-melee crate clear and her brawl durability.",
+   "Baba's Brew cooldown 27s->28s, cycle 1.5s->1.6s and burn spirit scaling 0.15->0.13 slow the random-order brew she already cannot control."
   ],
-  "tier_before": "D",
-  "tier_after": "D",
-  "one_liner": "Resist scaling, melee damage and Brew all trimmed \u2014 the bruiser shell is thinner.",
-  "verdict": "watch",
+  "tier_before": "S",
+  "tier_after": "A",
+  "one_liner": "Resist scaling and melee both cut again, but 54.4% win rate says she is still a top frontline.",
+  "verdict": "keep",
   "rows": [
    {
-    "label": "Spirit resist",
+    "label": "Spirit resist scaling",
     "old": "0.7",
     "new": "0.5",
     "text": null,
@@ -399,15 +404,7 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
     "ability": "Baba's Brew"
    },
    {
-    "label": "Melee resist",
-    "old": "30%",
-    "new": "25%",
-    "text": null,
-    "effect": "bad",
-    "ability": "Granny Long Legs"
-   },
-   {
-    "label": "Debuff resist",
+    "label": "Melee/debuff resist",
     "old": "30%",
     "new": "25%",
     "text": null,
@@ -423,15 +420,15 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
   "in_notes": true,
   "direction": "down",
   "magnitude": "moderate",
-  "confidence": 0.65,
+  "confidence": 0.7,
   "direct_reasons": [
-   "Close The Deal bonus damage to under-half targets +75%\u2192+55% cuts his execute.",
-   "Strix Salvo spirit scaling -8% lowers his mark damage.",
-   "Chimera Mk1 T2 heal 150\u2192125 and heal spirit scaling 2.0\u21921.7 trim his dive sustain."
+   "Close The Deal bonus damage to under-half targets +75%->+55% cuts the execute that defines his dive-pick identity by a fifth.",
+   "Strix Salvo spirit scaling -8% hits the ability his primary spirit-mark build scales everything into.",
+   "Chimera Mk1 T2 heal-on-hit 150->125 and heal spirit scaling 2.0->1.7 remove sustain from a 730-HP flyer who has to commit to every dive."
   ],
-  "tier_before": "C",
-  "tier_after": "C",
-  "one_liner": "Execute and mark damage both cut \u2014 his dive converts fewer kills.",
+  "tier_before": "A",
+  "tier_after": "B",
+  "one_liner": "Execute cut to +55%, Salvo scaling down 8% and the jetpack heal trimmed \u2014 the dive pays less.",
   "verdict": "watch",
   "rows": [
    {
@@ -459,7 +456,7 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
     "ability": "Chimera Mk1"
    },
    {
-    "label": "T2 heal scaling",
+    "label": "Heal scaling",
     "old": "2.0",
     "new": "1.7",
     "text": null,
@@ -477,12 +474,13 @@ the KB enrichment and the per-hero analysis stage. Keep entries short; date them
   "magnitude": "minor",
   "confidence": 0.6,
   "direct_reasons": [
-   "Bullet damage +8% lifts the gun-damage charge economy her sustain build runs on.",
-   "Lurking Terrors fear buildup 2s\u21921.75s and vertical angle 50%\u219265% widen and speed the fear cone."
+   "Bullet damage +8% is a straight gain for a hero whose primary build is Titanic Magazine mag-dump uptime.",
+   "Lurking Terrors fear buildup 2s->1.75s makes her lockdown land a quarter-second sooner, tightening the channel window she wins fights in.",
+   "Lurking Terrors vertical angle 50%->65% widens the cone so off-angle targets above and below her now get feared."
   ],
-  "tier_before": "B",
-  "tier_after": "B",
-  "one_liner": "Gun damage up and a faster, wider fear cone \u2014 small but real gains.",
+  "tier_before": "A",
+  "tier_after": "A",
+  "one_liner": "Faster fear, wider cone and +8% bullet damage \u2014 small buffs that steady a falling A-tier.",
   "verdict": "keep",
   "rows": [
    {

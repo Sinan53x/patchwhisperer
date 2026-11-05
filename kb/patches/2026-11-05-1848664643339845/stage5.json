@@ -1,129 +1,22 @@
 {
  "verdicts": [
   {
-   "hero": "Venator",
-   "verdict": "keep",
-   "one_liner": "Untouched gun-bruiser; nothing in this patch moves his slot.",
-   "direct": "No direct changes.",
-   "indirect": "No meaningful indirect effects — Healbane's cap only matters to teams stacking it, and his grenade anti-heal is single-source. Graves' 56.5% snapshot is still unresolved and unpatchable here.",
-   "build_adjustments": [],
-   "confidence": 0.55
-  },
-  {
-   "hero": "Haze",
-   "verdict": "keep",
-   "one_liner": "Celeste's nerfs soften her worst matchup; her own ceiling is unchanged.",
-   "direct": "No direct changes.",
-   "indirect": "Celeste (42%, her worst listed matchup) loses silence duration, dagger range and ult slow/cooldown, so the burst that kills her pre-Fixation is weaker. Bullet Resilience and Return Fire still cap her.",
-   "build_adjustments": [],
-   "confidence": 0.4
-  },
-  {
    "hero": "Wraith",
    "verdict": "keep",
-   "one_liner": "Flat slot; Celeste relief is the only movement.",
+   "one_liner": "Untouched gun core; one bad lane softened, one sharpened — net flat.",
    "direct": "No direct changes.",
-   "indirect": "Celeste (42%) takes a full-kit trim, easing the burst that beats her to the punch. No item or system touches her fire-rate gun core, and she still has no growth path.",
-   "build_adjustments": [],
-   "confidence": 0.35
-  },
-  {
-   "hero": "Warden",
-   "verdict": "watch",
-   "one_liner": "Paige's lane cut helps; buffed M&K and Victor still tank his cage.",
-   "direct": "No direct changes.",
-   "indirect": "Paige's base bullet 35→32 (~9%) softens his worst lane at 47%. Mo & Krill's Scorn 1.2x→1.3x and Combo 40→50 deepen the durable-frontline losses that already cap him.",
+   "indirect": "Celeste's silence/slow/range cuts (Dazzling Trick +1.25s->+0.75s, Radiant Daggers 30m->25m) ease a listed losing lane, but Ivy — also a loss for Wraith — benefits from Healbane's stacked cut dropping 82.2%->72%, so her sustain is harder to suppress. The two roughly cancel; nothing touches fire-rate M1 or her core items.",
    "build_adjustments": [],
    "confidence": 0.5
   },
   {
-   "hero": "Shiv",
-   "verdict": "watch",
-   "one_liner": "Softer stacked anti-heal gives his regen shell room, but his worst matchups didn't move.",
-   "direct": "No direct changes.",
-   "indirect": "Healbane's 4-stack cap 82.2%→72% eases the anti-heal tax on his sustain shell. Yamato (42%) and Drifter (44%), his two worst matchups, are untouched, so the gain is small.",
-   "build_adjustments": [
-    "Keep Healbane as a single dedicated buy — don't ask an ally to stack it."
-   ],
-   "confidence": 0.55
-  },
-  {
-   "hero": "Yamato",
-   "verdict": "watch",
-   "one_liner": "Her Healbane slot is worth less and Mo & Krill got harder to burst.",
-   "direct": "No direct changes.",
-   "indirect": "The 4-stack anti-heal cap trims the team value of her Healbane slot in the on-hit spirit core. Mo & Krill's Scorn 1.2x→1.3x makes her worst tank matchup (42%) harder to close out.",
-   "build_adjustments": [
-    "Treat Healbane as single-buyer; don't count on allies stacking it to open burst windows."
-   ],
-   "confidence": 0.55
-  },
-  {
-   "hero": "Mina",
+   "hero": "Warden",
    "verdict": "keep",
-   "one_liner": "Untouched; still can't kill the tank front line.",
+   "one_liner": "No changes to him; his two worst fronts got slightly worse to fight.",
    "direct": "No direct changes.",
-   "indirect": "No meaningful indirect effects — the Healbane cap doesn't touch her burst, and the tanks she loses to (Billy, M&K, Victor) only got marginally better.",
+   "indirect": "Mo & Krill — a listed loss who tanks the cage — took Scorn heal 1.2x->1.3x, Burrow radius +0.5m and Combo HP 40->50, and the weaker stacked anti-heal makes Ivy's 48% sustain matchup harder to grind down. Both are small; his late-gun clock problem is unchanged.",
    "build_adjustments": [],
-   "confidence": 0.6
-  },
-  {
-   "hero": "Paradox",
-   "verdict": "keep",
-   "one_liner": "Celeste's nerfs help a little; the divers that actually beat her didn't move.",
-   "direct": "No direct changes.",
-   "indirect": "Celeste (43%) loses silence duration, dagger range 30m→25m and ult slow/cooldown. Yamato, Lash and Holliday — the real reason she sits at 46% — are unchanged.",
-   "build_adjustments": [],
-   "confidence": 0.4
-  },
-  {
-   "hero": "Mirage",
-   "verdict": "watch",
-   "one_liner": "Mo & Krill's buffs deepen his worst matchup; his own core is flat.",
-   "direct": "No direct changes.",
-   "indirect": "Scorn 1.2x→1.3x and Combo 40→50 sharpen the silence/combo lock that already beats him at 40%. His Healbane is single-source, so the item patch gives him nothing back.",
-   "build_adjustments": [],
-   "confidence": 0.55
-  },
-  {
-   "hero": "Infernus",
-   "verdict": "keep",
-   "one_liner": "Anti-heal package trimmed, but his own lifesteal gains roughly cancel it.",
-   "direct": "No direct changes.",
-   "indirect": "Healbane's multi-source cap cuts the value of his Healbane + Toxic Bullets package when allies also buy it — but the same change cuts enemy anti-heal against his Spirit Lifesteal and Napalm T2. Celeste's nerfs ease a matchup he already wins.",
-   "build_adjustments": [
-    "Keep Healbane as one dedicated buy in Dashfernus; don't double-buy it."
-   ],
-   "confidence": 0.45
-  },
-  {
-   "hero": "Holliday",
-   "verdict": "keep",
-   "one_liner": "A-tier pick; Mo & Krill's buffs make one bad matchup slightly worse.",
-   "direct": "No direct changes.",
-   "indirect": "Mo & Krill — a listed losing matchup — gets Scorn 1.2x→1.3x, Burrow radius +0.5m and Combo 40→50, making the lockdown frontline that punishes her commit harder to burst. Her pick targets (Haze, Paradox, Wraith, Mina) are all flat.",
-   "build_adjustments": [],
-   "confidence": 0.4
-  },
-  {
-   "hero": "Drifter",
-   "verdict": "keep",
-   "one_liner": "Anti-heal stacking got weaker; his spirit melee core is untouched.",
-   "direct": "No direct changes.",
-   "indirect": "The 4-stack anti-heal cap trims the payoff of his Healbane + built-in heal-cut composition. His spirit melee core and his winning matchups (Pocket, Holliday, Shiv) are unchanged.",
-   "build_adjustments": [
-    "Lean on the spirit melee core; keep Healbane single-source rather than a team slot."
-   ],
-   "confidence": 0.6
-  },
-  {
-   "hero": "Billy",
-   "verdict": "keep",
-   "one_liner": "Frontline sustain gets a small lift from weaker anti-heal stacking.",
-   "direct": "No direct changes.",
-   "indirect": "The multi-source anti-heal cap (4 stacks 82.2%→72%) eases pressure on his Rising Ram/Lifestrike sustain, which was his listed counter. Shiv, his worst lane, is untouched.",
-   "build_adjustments": [],
-   "confidence": 0.55
+   "confidence": 0.5
   }
  ]
 }

@@ -1,101 +1,151 @@
 {
  "patch_size": "minor",
- "size_why": "One item (Healbane) and seven hero kits, zero systems, economy, map or objective changes — the 10-30 framework is untouched. The tier list moves at the bottom (Celeste C→D, Baba and Deadman Danny trimmed) but nothing about how souls are earned or where fights happen changes.",
- "headline": "The anti-heal arms race that 10-30 started gets capped: one Healbane per team is now correct, and sustain comps quietly win the patch.",
+ "size_why": "Thirty-six lines but zero systems, economy, map or objective changes — it is all hero kit tuning plus one item curve. The tier list moves a little; how souls are made and where fights happen does not move at all.",
+ "headline": "A cleanup pass on the 10-30 outliers: Valve trims the strong (Baba, Celeste, Deadman Danny), feeds the weak (Rat King, Apollo, Mo & Krill) and quietly shrinks stacked anti-heal.",
  "meta_thesis": {
-  "previous": "Convert a lead into Guardians/Walkers before the comeback economy catches up, off the back of one-cycle Haunt camp clearers and late scalers who now have a farm floor.",
-  "new": "Same economy, same farm routes, same objective clock — but the 10-30 answer to sustain (stack Healbane across the team) is now inefficient, so heal-and-grind frontlines hold ground they previously lost and burst-pick comps lose their coverage slot.",
+  "previous": "Leads must be converted into Guardians and Walkers fast because the 10-30 comeback levers and richer Haunts keep paying the trailing team, so one-cycle camp clearers who spend the lead early and late scalers with a farm floor are the winners.",
+  "new": "Identical economy, identical map: the game is still won by farming Haunts and converting before comeback gold arrives. What changed is who survives the mid-fight — stacked anti-heal is weaker, so kit healers and self-sustain bruisers hold longer, and the outlier frontlines from 10-30 were trimmed.",
   "relationship": "continuation",
-  "why": "No systems moved, so tempo and farm logic are inherited wholesale; the only meta-wide lever is Healbane's 4-stack cap falling 82.2%→72%, which re-prices anti-heal as a single-buyer slot rather than a team tax."
+  "why": "The General/systems sections are empty and the only non-hero change is Healbane's stacking curve. Every mover here comes from individual kits and one item's diminishing returns, not from soul income or objective timers."
  },
  "winners": [
   {
-   "hero": "Mo & Krill",
-   "why": "Scorn heal 1.2x→1.3x, Combo HP/kill 40→50, Burrow radius +0.5m and a stronger Sand Blast T2 slow — the patch's biggest direct kit gain, and the softer Healbane cap protects the Scorn sustain that funds it.",
+   "hero": "Rat King",
+   "why": "Buffs land exactly where 10-30 hurt: bullet damage 5.7->5.8, ammo 24->26, and Rule, Ratannia! T1 now cuts 25s off the 180s ult.",
    "indirect": false
   },
   {
    "hero": "Kelvin",
-   "why": "Dome and heal throughput were the main casualty of stacked anti-heal; the 4-stack cap cut is a direct reprieve, and his own Healbane is single-source so he loses nothing on the giving side.",
-   "indirect": true
-  },
-  {
-   "hero": "Ivy",
-   "why": "Tether healing was the most exposed heal to multi-buyer Healbane and her losing matchups (Vyper, Yamato, Dynamo, Mo & Krill) took no buffs — uncontested relief.",
+   "why": "The multi-source anti-heal that blanked Frozen Shelter caps at 72% (was 82.2%), so the best healer is harder to fully shut off.",
    "indirect": true
   },
   {
    "hero": "Apollo",
-   "why": "Riposte now disarms and Pummel strips a pre-existing parry, plus T2 duration and Itani Lo Sahn T3 damage up — he wins trades he previously only stalled.",
+   "why": "Riposte Pommel Hit now disarms and T2 holds 0.6s->0.7s, turning his parry into a gun-carry shutdown — though it is still an immobilize, not a stun, so channels no longer break.",
    "indirect": false
   },
   {
-   "hero": "Nurse Harrow",
-   "why": "Bullet damage +8% and a faster, wider fear cone (2s→1.75s buildup, 50%→65% vertical) reward the mag-dump gun line her sustain build already runs.",
+   "hero": "Mo & Krill",
+   "why": "Scorn heal 1.2x->1.3x, Burrow radius +0.5m and Combo HP per kill 40->50 give the tank more of the thing he does; the anti-heal cap compounds it.",
    "indirect": false
+  },
+  {
+   "hero": "Ivy",
+   "why": "The 10-30 stack system that crushed tether healing is partially reversed (4-stack 82.2%->72%), and her gun core is untouched.",
+   "indirect": true
   }
  ],
  "losers": [
   {
    "hero": "Celeste",
-   "why": "Silence, cast range, spirit amp, ult slow, ult cooldown, bounce, T1 and T2 all cut at once — a full-kit trim on a hero already sitting at C, which is a burial rather than an outlier correction.",
-   "indirect": false
-  },
-  {
-   "hero": "Baba",
-   "why": "Spirit resist scaling 0.7→0.5, melee damage -10% per boon, Brew cooldown/burn/cycle all worse and Granny Long Legs resists 30%→25% — the bruiser shell that was her identity is thinner on every axis.",
+   "why": "Every pick tool shrank at once: silence T3 +1.25s->+0.75s, Radiant Daggers 30m->25m, Shining Wonder slow -32%->-28% and cooldown 160s->170s.",
    "indirect": false
   },
   {
    "hero": "Deadman Danny",
-   "why": "Close The Deal +75%→+55%, Strix Salvo spirit scaling -8%, Chimera Mk1 heal 150→125 and 2.0→1.7 — his dive converts fewer kills and he has no sustain shell to fall back on.",
+   "why": "Close The Deal execute +75%->+55%, Strix Salvo spirit scaling -8% and Chimera Mk1 T2 heal 150->125 gut the dive-pick identity on a hero who must commit.",
+   "indirect": false
+  },
+  {
+   "hero": "Baba",
+   "why": "Spirit Resistance scaling 0.7->0.5 plus melee damage -10% per boon cuts the resist wall her regen bruiser build stands behind.",
    "indirect": false
   },
   {
    "hero": "Drifter",
-   "why": "His anti-heal bruiser build paired Healbane with a built-in heal cut; the 4-stack cap cut trims exactly that composition while his spirit melee core is untouched.",
+   "why": "His anti-heal bruiser variant stacked built-in heal cut on Healbane/Toxic Bullets — exactly the two-source case trimmed 57.8%->54.7% — and Apollo's rework sharpens a listed loss.",
    "indirect": true
   },
   {
-   "hero": "Bebop",
-   "why": "Softer stacked anti-heal makes the sustain archetype that already erases his hook combo (Kelvin, his worst matchup at 42%) harder to burst through, and he got nothing back.",
+   "hero": "Mina",
+   "why": "Both worst matchups got harder: Mo & Krill's Scorn/Burrow buffs and Ivy's rebound from the anti-heal cap, while her single-target rotation gains nothing.",
    "indirect": true
   }
  ],
  "non_obvious_calls": [
   {
-   "claim": "The Healbane change is a stealth buff to dedicated healers, not a nerf to any individual buyer — single-source anti-heal is unchanged, so only coordinated double-buys lose value.",
-   "why": "2 stacks 57.8%→54.7% and 4 stacks 82.2%→72% while one source is flat; the losers are teams treating Healbane as a coverage slot, the winners are Kelvin/Ivy/Rem/Mo & Krill.",
-   "confidence": 0.7
+   "claim": "Healbane was not nerfed — single-source anti-heal is identical, so this is a tax on redundant buyers, not a nerf to the item.",
+   "why": "Only the 2-stack (57.8%->54.7%) and 4-stack (82.2%->72%) curves moved; the first purchase decision is unchanged and triple-Healbane comps are the actual target.",
+   "confidence": 0.8
   },
   {
-   "claim": "Mo & Krill's buffs ripple across the frontline matchup chart more than his own tier suggests — Holliday, Viscous, Mirage and Yamato all list him as a losing lane.",
-   "why": "Scorn 1.2x→1.3x plus Combo 40→50 makes the lockdown frontline harder to burst for every commit-heavy diver that already struggled into him.",
+   "claim": "Baba is still a top frontline despite the nerf stack.",
+   "why": "Tiers come from measured data, not notes: 54.4% win rate after every resist and melee cut, same shape as her 10-30 nerfs that left her top of the table.",
+   "confidence": 0.65
+  },
+  {
+   "claim": "Rat King's real buff is a talent line, not the stat bumps.",
+   "why": "Rule, Ratannia! T1 adding -25s cooldown is the cheapest answer to the 180s ult that 10-30 left as his problem — earlier than any Cooldown item.",
    "confidence": 0.6
   },
   {
-   "claim": "Apollo's Riposte buff is real but does not undo the 10-30 loss — a disarm wins trades, it does not restore channel interruption.",
-   "why": "Pommel Hit's stun became an immobilize plus parry disable on 10-30; adding disarm and parry-break sharpens his lane bullying without giving back the interrupt.",
-   "confidence": 0.6
-  },
-  {
-   "claim": "Rat King's T1 -25s banner cooldown partially reverts the 10-30 uptime cut and frees a build slot.",
-   "why": "Superior/Compress Cooldown were near-mandatory to keep the banner up; T1 now covers that, so the slot can go to damage or defence.",
+   "claim": "Apollo's Riposte is a rework, not a straight buff.",
+   "why": "Pommel Hit is an immobilize plus parry disable, so it can no longer interrupt channels; the added disarm pays into gun carries only, and the Pummel parry-strip wording stays unresolved.",
    "confidence": 0.55
   }
  ],
  "uncertainties": [
-  "Whether teams actually stop double-buying Healbane — the doctrine change is the whole patch, and habit may hold buy rates flat for a week.",
-  "Celeste's nerf is large enough to be a burial, but she was already C-tier; whether she falls out of pick consideration entirely or just becomes a niche counterpick is unclear.",
-  "Baba's resist-scaling cut may push her to a pure cooldown-caster build rather than killing her — the KB does not tell me how much of her win rate came from the bruiser shell.",
-  "The Graves snapshot (56.5% WR / 40.9% PR vs KB 48.5% / 21%) is still unresolved and nothing in this patch touches her, so I cannot place her.",
-  "Calico: the hero analysis reads her down off Victor/Abrams sustain, but the standing reader note says she gains from tempo — I am not confident which dominates with no systems change."
+  "The Pummel 'ends a preexisting parry' line: whether it strips the target's parry state or Apollo's own is unclear, and it decides how strong his duel is.",
+  "Baba's tier: 54.4% win rate argues S, but a ~29% resist-scaling cut is structural — she may drift a tier by week two rather than immediately.",
+  "Graves' 57.5% win rate still conflicts with the KB's 48.5%/21% snapshot; nothing here touches her kit, so the number cannot be validated by this patch.",
+  "Whether Celeste's nerfs actually cost her a tier outside the losing lanes she already dominated, since her burst numbers were untouched."
  ],
  "what_to_watch": [
-  "Healbane buys per team per game — if the double-buy rate does not fall, the patch's only meta lever did nothing.",
-  "Kelvin, Ivy and Rem win rates in the first week — the cleanest read on whether the anti-heal cap actually restored healer value.",
-  "Mo & Krill pick rate against win rate — his buffs are the largest single-hero gain and should show up as a pick-rate bump before a win-rate one.",
-  "Celeste pick rate — a C→D nerf should show as a near-total disappearance, not a dip.",
-  "Average game length — with no systems change it should stay flat; if it rises, sustain comps are stalling out the comeback clock."
+  "Healbane purchases per team — if the average drops toward one, the anti-heal coverage plan is dead and kit healers rebound further.",
+  "Kelvin, Ivy and Rem win rates: the cleanest read on whether the stacking cap is worth three points of heal throughput.",
+  "Deadman Danny's pick rate and win rate — a fifth off the execute should show fast on a dive hero.",
+  "Mo & Krill pick rate into frontline-heavy lobbies, as the answer to Baba and Viscous.",
+  "Celeste's T3 talent pick rate: if players abandon the silence talent, her pick identity shifted, not just her numbers."
+ ],
+ "biggest_changes": [
+  {
+   "kind": "item",
+   "subject": "Healbane",
+   "title": "Second and third anti-heal copies are much weaker",
+   "why": "4-stack heal cut 82.2%->72% with 20% faster decay; one source is unchanged.",
+   "effect": "down"
+  },
+  {
+   "kind": "hero",
+   "subject": "Celeste",
+   "title": "Silence, cast range and ult all shortened",
+   "why": "Dazzling Trick silence +1.25s->+0.75s and Radiant Daggers 30m->25m cut her pick window 40%.",
+   "effect": "down"
+  },
+  {
+   "kind": "hero",
+   "subject": "Rat King",
+   "title": "Ult cooldown talent and gun stats buffed",
+   "why": "Rule, Ratannia! T1 adds -25s cooldown and ammo goes 24->26.",
+   "effect": "up"
+  },
+  {
+   "kind": "hero",
+   "subject": "Baba",
+   "title": "Resist wall and melee damage cut again",
+   "why": "Spirit Resistance scaling 0.7->0.5 and melee damage -10% per boon.",
+   "effect": "down"
+  },
+  {
+   "kind": "hero",
+   "subject": "Deadman Danny",
+   "title": "Execute and dive sustain both trimmed",
+   "why": "Close The Deal bonus damage +75%->+55% and Chimera Mk1 T2 heal 150->125.",
+   "effect": "down"
+  },
+  {
+   "kind": "hero",
+   "subject": "Apollo",
+   "title": "Parry now disarms gun carries",
+   "why": "Pommel Hit adds a disarm and Riposte T2 duration goes +0.6s->+0.7s — but it no longer interrupts channels.",
+   "effect": "up"
+  },
+  {
+   "kind": "hero",
+   "subject": "Mo & Krill",
+   "title": "More Scorn healing, bigger Burrow, healthier grab",
+   "why": "Scorn heal 1.2x->1.3x, Burrow damage radius +0.5m, Combo HP per kill 40->50.",
+   "effect": "up"
+  }
  ]
 }

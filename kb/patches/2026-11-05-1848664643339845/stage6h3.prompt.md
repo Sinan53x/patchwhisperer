@@ -6,103 +6,153 @@ Patch: Minor Update - 11-04-2026 (2026-11-05)
 
 {
  "patch_size": "minor",
- "size_why": "One item (Healbane) and seven hero kits, zero systems, economy, map or objective changes — the 10-30 framework is untouched. The tier list moves at the bottom (Celeste C→D, Baba and Deadman Danny trimmed) but nothing about how souls are earned or where fights happen changes.",
- "headline": "The anti-heal arms race that 10-30 started gets capped: one Healbane per team is now correct, and sustain comps quietly win the patch.",
+ "size_why": "Thirty-six lines but zero systems, economy, map or objective changes — it is all hero kit tuning plus one item curve. The tier list moves a little; how souls are made and where fights happen does not move at all.",
+ "headline": "A cleanup pass on the 10-30 outliers: Valve trims the strong (Baba, Celeste, Deadman Danny), feeds the weak (Rat King, Apollo, Mo & Krill) and quietly shrinks stacked anti-heal.",
  "meta_thesis": {
-  "previous": "Convert a lead into Guardians/Walkers before the comeback economy catches up, off the back of one-cycle Haunt camp clearers and late scalers who now have a farm floor.",
-  "new": "Same economy, same farm routes, same objective clock — but the 10-30 answer to sustain (stack Healbane across the team) is now inefficient, so heal-and-grind frontlines hold ground they previously lost and burst-pick comps lose their coverage slot.",
+  "previous": "Leads must be converted into Guardians and Walkers fast because the 10-30 comeback levers and richer Haunts keep paying the trailing team, so one-cycle camp clearers who spend the lead early and late scalers with a farm floor are the winners.",
+  "new": "Identical economy, identical map: the game is still won by farming Haunts and converting before comeback gold arrives. What changed is who survives the mid-fight — stacked anti-heal is weaker, so kit healers and self-sustain bruisers hold longer, and the outlier frontlines from 10-30 were trimmed.",
   "relationship": "continuation",
-  "why": "No systems moved, so tempo and farm logic are inherited wholesale; the only meta-wide lever is Healbane's 4-stack cap falling 82.2%→72%, which re-prices anti-heal as a single-buyer slot rather than a team tax."
+  "why": "The General/systems sections are empty and the only non-hero change is Healbane's stacking curve. Every mover here comes from individual kits and one item's diminishing returns, not from soul income or objective timers."
  },
  "winners": [
   {
-   "hero": "Mo & Krill",
-   "why": "Scorn heal 1.2x→1.3x, Combo HP/kill 40→50, Burrow radius +0.5m and a stronger Sand Blast T2 slow — the patch's biggest direct kit gain, and the softer Healbane cap protects the Scorn sustain that funds it.",
+   "hero": "Rat King",
+   "why": "Buffs land exactly where 10-30 hurt: bullet damage 5.7->5.8, ammo 24->26, and Rule, Ratannia! T1 now cuts 25s off the 180s ult.",
    "indirect": false
   },
   {
    "hero": "Kelvin",
-   "why": "Dome and heal throughput were the main casualty of stacked anti-heal; the 4-stack cap cut is a direct reprieve, and his own Healbane is single-source so he loses nothing on the giving side.",
-   "indirect": true
-  },
-  {
-   "hero": "Ivy",
-   "why": "Tether healing was the most exposed heal to multi-buyer Healbane and her losing matchups (Vyper, Yamato, Dynamo, Mo & Krill) took no buffs — uncontested relief.",
+   "why": "The multi-source anti-heal that blanked Frozen Shelter caps at 72% (was 82.2%), so the best healer is harder to fully shut off.",
    "indirect": true
   },
   {
    "hero": "Apollo",
-   "why": "Riposte now disarms and Pummel strips a pre-existing parry, plus T2 duration and Itani Lo Sahn T3 damage up — he wins trades he previously only stalled.",
+   "why": "Riposte Pommel Hit now disarms and T2 holds 0.6s->0.7s, turning his parry into a gun-carry shutdown — though it is still an immobilize, not a stun, so channels no longer break.",
    "indirect": false
   },
   {
-   "hero": "Nurse Harrow",
-   "why": "Bullet damage +8% and a faster, wider fear cone (2s→1.75s buildup, 50%→65% vertical) reward the mag-dump gun line her sustain build already runs.",
+   "hero": "Mo & Krill",
+   "why": "Scorn heal 1.2x->1.3x, Burrow radius +0.5m and Combo HP per kill 40->50 give the tank more of the thing he does; the anti-heal cap compounds it.",
    "indirect": false
+  },
+  {
+   "hero": "Ivy",
+   "why": "The 10-30 stack system that crushed tether healing is partially reversed (4-stack 82.2%->72%), and her gun core is untouched.",
+   "indirect": true
   }
  ],
  "losers": [
   {
    "hero": "Celeste",
-   "why": "Silence, cast range, spirit amp, ult slow, ult cooldown, bounce, T1 and T2 all cut at once — a full-kit trim on a hero already sitting at C, which is a burial rather than an outlier correction.",
-   "indirect": false
-  },
-  {
-   "hero": "Baba",
-   "why": "Spirit resist scaling 0.7→0.5, melee damage -10% per boon, Brew cooldown/burn/cycle all worse and Granny Long Legs resists 30%→25% — the bruiser shell that was her identity is thinner on every axis.",
+   "why": "Every pick tool shrank at once: silence T3 +1.25s->+0.75s, Radiant Daggers 30m->25m, Shining Wonder slow -32%->-28% and cooldown 160s->170s.",
    "indirect": false
   },
   {
    "hero": "Deadman Danny",
-   "why": "Close The Deal +75%→+55%, Strix Salvo spirit scaling -8%, Chimera Mk1 heal 150→125 and 2.0→1.7 — his dive converts fewer kills and he has no sustain shell to fall back on.",
+   "why": "Close The Deal execute +75%->+55%, Strix Salvo spirit scaling -8% and Chimera Mk1 T2 heal 150->125 gut the dive-pick identity on a hero who must commit.",
+   "indirect": false
+  },
+  {
+   "hero": "Baba",
+   "why": "Spirit Resistance scaling 0.7->0.5 plus melee damage -10% per boon cuts the resist wall her regen bruiser build stands behind.",
    "indirect": false
   },
   {
    "hero": "Drifter",
-   "why": "His anti-heal bruiser build paired Healbane with a built-in heal cut; the 4-stack cap cut trims exactly that composition while his spirit melee core is untouched.",
+   "why": "His anti-heal bruiser variant stacked built-in heal cut on Healbane/Toxic Bullets — exactly the two-source case trimmed 57.8%->54.7% — and Apollo's rework sharpens a listed loss.",
    "indirect": true
   },
   {
-   "hero": "Bebop",
-   "why": "Softer stacked anti-heal makes the sustain archetype that already erases his hook combo (Kelvin, his worst matchup at 42%) harder to burst through, and he got nothing back.",
+   "hero": "Mina",
+   "why": "Both worst matchups got harder: Mo & Krill's Scorn/Burrow buffs and Ivy's rebound from the anti-heal cap, while her single-target rotation gains nothing.",
    "indirect": true
   }
  ],
  "non_obvious_calls": [
   {
-   "claim": "The Healbane change is a stealth buff to dedicated healers, not a nerf to any individual buyer — single-source anti-heal is unchanged, so only coordinated double-buys lose value.",
-   "why": "2 stacks 57.8%→54.7% and 4 stacks 82.2%→72% while one source is flat; the losers are teams treating Healbane as a coverage slot, the winners are Kelvin/Ivy/Rem/Mo & Krill.",
-   "confidence": 0.7
+   "claim": "Healbane was not nerfed — single-source anti-heal is identical, so this is a tax on redundant buyers, not a nerf to the item.",
+   "why": "Only the 2-stack (57.8%->54.7%) and 4-stack (82.2%->72%) curves moved; the first purchase decision is unchanged and triple-Healbane comps are the actual target.",
+   "confidence": 0.8
   },
   {
-   "claim": "Mo & Krill's buffs ripple across the frontline matchup chart more than his own tier suggests — Holliday, Viscous, Mirage and Yamato all list him as a losing lane.",
-   "why": "Scorn 1.2x→1.3x plus Combo 40→50 makes the lockdown frontline harder to burst for every commit-heavy diver that already struggled into him.",
+   "claim": "Baba is still a top frontline despite the nerf stack.",
+   "why": "Tiers come from measured data, not notes: 54.4% win rate after every resist and melee cut, same shape as her 10-30 nerfs that left her top of the table.",
+   "confidence": 0.65
+  },
+  {
+   "claim": "Rat King's real buff is a talent line, not the stat bumps.",
+   "why": "Rule, Ratannia! T1 adding -25s cooldown is the cheapest answer to the 180s ult that 10-30 left as his problem — earlier than any Cooldown item.",
    "confidence": 0.6
   },
   {
-   "claim": "Apollo's Riposte buff is real but does not undo the 10-30 loss — a disarm wins trades, it does not restore channel interruption.",
-   "why": "Pommel Hit's stun became an immobilize plus parry disable on 10-30; adding disarm and parry-break sharpens his lane bullying without giving back the interrupt.",
-   "confidence": 0.6
-  },
-  {
-   "claim": "Rat King's T1 -25s banner cooldown partially reverts the 10-30 uptime cut and frees a build slot.",
-   "why": "Superior/Compress Cooldown were near-mandatory to keep the banner up; T1 now covers that, so the slot can go to damage or defence.",
+   "claim": "Apollo's Riposte is a rework, not a straight buff.",
+   "why": "Pommel Hit is an immobilize plus parry disable, so it can no longer interrupt channels; the added disarm pays into gun carries only, and the Pummel parry-strip wording stays unresolved.",
    "confidence": 0.55
   }
  ],
  "uncertainties": [
-  "Whether teams actually stop double-buying Healbane — the doctrine change is the whole patch, and habit may hold buy rates flat for a week.",
-  "Celeste's nerf is large enough to be a burial, but she was already C-tier; whether she falls out of pick consideration entirely or just becomes a niche counterpick is unclear.",
-  "Baba's resist-scaling cut may push her to a pure cooldown-caster build rather than killing her — the KB does not tell me how much of her win rate came from the bruiser shell.",
-  "The Graves snapshot (56.5% WR / 40.9% PR vs KB 48.5% / 21%) is still unresolved and nothing in this patch touches her, so I cannot place her.",
-  "Calico: the hero analysis reads her down off Victor/Abrams sustain, but the standing reader note says she gains from tempo — I am not confident which dominates with no systems change."
+  "The Pummel 'ends a preexisting parry' line: whether it strips the target's parry state or Apollo's own is unclear, and it decides how strong his duel is.",
+  "Baba's tier: 54.4% win rate argues S, but a ~29% resist-scaling cut is structural — she may drift a tier by week two rather than immediately.",
+  "Graves' 57.5% win rate still conflicts with the KB's 48.5%/21% snapshot; nothing here touches her kit, so the number cannot be validated by this patch.",
+  "Whether Celeste's nerfs actually cost her a tier outside the losing lanes she already dominated, since her burst numbers were untouched."
  ],
  "what_to_watch": [
-  "Healbane buys per team per game — if the double-buy rate does not fall, the patch's only meta lever did nothing.",
-  "Kelvin, Ivy and Rem win rates in the first week — the cleanest read on whether the anti-heal cap actually restored healer value.",
-  "Mo & Krill pick rate against win rate — his buffs are the largest single-hero gain and should show up as a pick-rate bump before a win-rate one.",
-  "Celeste pick rate — a C→D nerf should show as a near-total disappearance, not a dip.",
-  "Average game length — with no systems change it should stay flat; if it rises, sustain comps are stalling out the comeback clock."
+  "Healbane purchases per team — if the average drops toward one, the anti-heal coverage plan is dead and kit healers rebound further.",
+  "Kelvin, Ivy and Rem win rates: the cleanest read on whether the stacking cap is worth three points of heal throughput.",
+  "Deadman Danny's pick rate and win rate — a fifth off the execute should show fast on a dive hero.",
+  "Mo & Krill pick rate into frontline-heavy lobbies, as the answer to Baba and Viscous.",
+  "Celeste's T3 talent pick rate: if players abandon the silence talent, her pick identity shifted, not just her numbers."
+ ],
+ "biggest_changes": [
+  {
+   "kind": "item",
+   "subject": "Healbane",
+   "title": "Second and third anti-heal copies are much weaker",
+   "why": "4-stack heal cut 82.2%->72% with 20% faster decay; one source is unchanged.",
+   "effect": "down"
+  },
+  {
+   "kind": "hero",
+   "subject": "Celeste",
+   "title": "Silence, cast range and ult all shortened",
+   "why": "Dazzling Trick silence +1.25s->+0.75s and Radiant Daggers 30m->25m cut her pick window 40%.",
+   "effect": "down"
+  },
+  {
+   "kind": "hero",
+   "subject": "Rat King",
+   "title": "Ult cooldown talent and gun stats buffed",
+   "why": "Rule, Ratannia! T1 adds -25s cooldown and ammo goes 24->26.",
+   "effect": "up"
+  },
+  {
+   "kind": "hero",
+   "subject": "Baba",
+   "title": "Resist wall and melee damage cut again",
+   "why": "Spirit Resistance scaling 0.7->0.5 and melee damage -10% per boon.",
+   "effect": "down"
+  },
+  {
+   "kind": "hero",
+   "subject": "Deadman Danny",
+   "title": "Execute and dive sustain both trimmed",
+   "why": "Close The Deal bonus damage +75%->+55% and Chimera Mk1 T2 heal 150->125.",
+   "effect": "down"
+  },
+  {
+   "kind": "hero",
+   "subject": "Apollo",
+   "title": "Parry now disarms gun carries",
+   "why": "Pommel Hit adds a disarm and Riposte T2 duration goes +0.6s->+0.7s — but it no longer interrupts channels.",
+   "effect": "up"
+  },
+  {
+   "kind": "hero",
+   "subject": "Mo & Krill",
+   "title": "More Scorn healing, bigger Burrow, healthier grab",
+   "why": "Scorn heal 1.2x->1.3x, Burrow damage radius +0.5m, Combo HP per kill 40->50.",
+   "effect": "up"
+  }
  ]
 }
 
@@ -113,74 +163,62 @@ Patch: Minor Update - 11-04-2026 (2026-11-05)
   {
    "item": "Healbane",
    "direction": "nerf",
-   "magnitude": "moderate",
-   "summary": "The 10-30 anti-heal coverage plan gets trimmed: one Healbane is unchanged, but a second source adds less and a fourth caps at 72% instead of 82%. That is a soft buff to dedicated healers and a soft nerf to teams stacking Healbane as a team slot.",
+   "magnitude": "minor",
+   "summary": "Only the stacking curve moved: one source of anti-heal is exactly as strong, so nobody's single purchase decision changes. But the second-through-fourth sources pay less (4-stack ceiling 82.2%->72%), which quietly reverses part of the 10-30 'anti-heal is a team coverage plan' move and restores relative value to kit-based sustain.",
    "affected_heroes": [
     {
      "hero": "Seven",
      "relationship": "core",
      "effect": "down",
-     "why": "His Healbane is the team's anti-sustain coverage; the lower 4-stack cap reduces the payoff when allies also buy it."
+     "why": "Healbane is his answer to sustain comps; the payoff for adding it on top of a teammate's heal-cut is now materially smaller, so his counter-build is less of a hard counter."
     },
     {
      "hero": "Infernus",
      "relationship": "core",
-     "effect": "down",
-     "why": "Healbane plus Toxic Bullets was his anti-heal package into healer comps; harsher multi-source diminishing returns trims that combo."
+     "effect": "neutral",
+     "why": "His Toxic Bullets 40% heal-cut plus Healbane is exactly the two-source case trimmed 57.8%->54.7%, but the same change leaves his Spirit Lifesteal/Napalm sustain less punished by enemy stacked anti-heal — roughly a wash."
     },
     {
      "hero": "Drifter",
      "relationship": "situational",
      "effect": "down",
-     "why": "His built-in heal cut plus Healbane/Toxic Bullets was a real anti-sustain answer; the stacking nerf weakens that composition."
-    },
-    {
-     "hero": "Yamato",
-     "relationship": "core",
-     "effect": "down",
-     "why": "Healbane is a bruiser-sustain cut in her on-hit core; it loses value mainly when the team stacks anti-heal."
-    },
-    {
-     "hero": "Mirage",
-     "relationship": "core",
-     "effect": "neutral",
-     "why": "Healbane is a sustain/anti-heal slot in his spirit-amp core; single-source use is unchanged."
-    },
-    {
-     "hero": "Apollo",
-     "relationship": "situational",
-     "effect": "up",
-     "why": "He buys Healbane in the utility build, but as a Locket/heal-sustain hero he benefits more from enemy anti-heal stacking being weaker."
+     "why": "The anti-heal bruiser variant's whole selling point was built-in heal cut stacking with Healbane/Toxic Bullets; that composition is the nerfed case, so his edge into healer comps shrinks."
     },
     {
      "hero": "Kelvin",
      "relationship": "core",
      "effect": "up",
-     "why": "Dome/regen sustain is his win condition; weaker stacked anti-heal lets his heals survive coordinated Healbane buys."
+     "why": "He still buys Healbane for self/team anti-heal, but the dome and Healing Booster throughput he sells is now harder for a team to fully shut down with multiple anti-heal sources."
     },
     {
      "hero": "Ivy",
      "relationship": "situational",
      "effect": "up",
-     "why": "Tether healing was the main casualty of 10-30 anti-heal stacking; this patch gives it some relief."
-    },
-    {
-     "hero": "Mo & Krill",
-     "relationship": "core",
-     "effect": "up",
-     "why": "Scorn sustain gets more value when enemy anti-heal caps lower; his own Healbane is secondary."
+     "why": "The 10-30 stack system was the worst change for her tether heals; capping the stack ceiling partially un-does that, though her gun core remains the correct build."
     },
     {
      "hero": "Shiv",
      "relationship": "core",
      "effect": "up",
-     "why": "His regen/sustain shell was taxed by stacked anti-heal; the lower 4-stack cap helps him start fights healthier."
+     "why": "He buys Healbane himself, but more importantly his post-10-30 problem was starting fights small — a weaker anti-heal ceiling on his regen stack buys back some of the buffer Radiant Regeneration lost."
+    },
+    {
+     "hero": "Mo & Krill",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Scorn sustain is his survive-the-fight engine; less effective stacked anti-heal on him is the one item-side gain for a tank whose spirit damage was gutted on 10-30."
+    },
+    {
+     "hero": "Apollo",
+     "relationship": "situational",
+     "effect": "up",
+     "why": "Restorative Locket carries his sustain after Healing Booster was gutted, and that heal is now harder to fully suppress with stacked anti-heal."
     }
    ],
-   "build_shift": "No component or slot change: Healbane remains a Vitality T2. The shift is strategic — one Healbane is still the same, but a second or third buyer now adds less, so teams should stop treating it as a coverage slot and let one dedicated buyer hold it.",
+   "build_shift": "No component or slot change — it stays a Vitality T2 — but its marginal value collapses for a team's second and third buyer, so on a comp that already has one Healbane the slot now competes with any other Vitality item instead of reading as free coverage.",
    "rows": [
     {
-     "label": "2 stacks",
+     "label": "2-stack heal cut",
      "old": "57.8%",
      "new": "54.7%",
      "text": null,
@@ -188,10 +226,18 @@ Patch: Minor Update - 11-04-2026 (2026-11-05)
      "ability": null
     },
     {
-     "label": "4 stacks",
+     "label": "4-stack heal cut",
      "old": "82.2%",
      "new": "72%",
      "text": null,
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "Stack decay",
+     "old": null,
+     "new": null,
+     "text": "Stacks diminish 20% more aggressively",
      "effect": "bad",
      "ability": null
     }
@@ -199,8 +245,8 @@ Patch: Minor Update - 11-04-2026 (2026-11-05)
   }
  ],
  "notable_item_stories": [
-  "Healbane is the patch's only item move, so the item meta is otherwise frozen; the change mainly rebalances sustain comps against anti-heal comps.",
-  "Expect fewer double-Healbane buys in coordinated play: one dedicated buyer is enough, and over-stacking anti-heal is now less efficient."
+  "Anti-heal is back to being a slot you buy rather than a coverage plan you draft: single-source Healbane is untouched, so expect fewer triple-Healbane comps and a small rebound for kit healers (Kelvin, Ivy) and self-sustain bruisers (Shiv, Mo & Krill).",
+  "The losers are the heroes who used Healbane as a second layer over their own heal-cut (Infernus with Toxic Bullets, Drifter's built-in cut, Seven into sustain comps) — that specific stack is now worth about 3 points less at two sources and far less at four."
  ]
 }
 
@@ -208,132 +254,20 @@ Patch: Minor Update - 11-04-2026 (2026-11-05)
 
 [
  {
-  "hero": "Victor",
-  "in_notes": false,
-  "direction": "up",
-  "magnitude": "minor",
-  "confidence": 0.55,
-  "direct_reasons": [],
-  "indirect_reasons": [
-   "Weaker stacked anti-heal (Healbane 4-stack 82.2%\u219272%) lets his Spirit Lifesteal/regen grind-down shell survive coordinated anti-heal buys."
-  ],
-  "build_changes": [],
-  "tier_before": "A",
-  "tier_after": "A",
-  "one_liner": "Sustain shell gets a small lift from weaker anti-heal stacking.",
-  "verdict": "keep",
-  "rows": [],
-  "change_kind": "none",
-  "change_size": "none"
- },
- {
-  "hero": "Paige",
-  "in_notes": false,
-  "direction": "up",
-  "magnitude": "minor",
-  "confidence": 0.55,
-  "direct_reasons": [],
-  "indirect_reasons": [
-   "Stacked anti-heal is weaker (Healbane 4-stack 82.2%\u219272%), so her Plot Armor heals survive multi-buyer anti-heal better."
-  ],
-  "build_changes": [],
-  "tier_before": "S",
-  "tier_after": "S",
-  "one_liner": "Lane bully unchanged; her heals dodge a bit more of the anti-heal tax.",
-  "verdict": "keep",
-  "rows": [],
-  "change_kind": "none",
-  "change_size": "none"
- },
- {
-  "hero": "Billy",
-  "in_notes": false,
-  "direction": "up",
-  "magnitude": "minor",
-  "confidence": 0.55,
-  "direct_reasons": [],
-  "indirect_reasons": [
-   "Multi-source anti-heal cap drops (Healbane 4-stack 82.2%\u219272%), easing the anti-heal pressure on his Rising Ram/Lifestrike sustain."
-  ],
-  "build_changes": [],
-  "tier_before": "A",
-  "tier_after": "A",
-  "one_liner": "Frontline sustain gets a small lift from weaker anti-heal stacking.",
-  "verdict": "keep",
-  "rows": [],
-  "change_kind": "none",
-  "change_size": "none"
- },
- {
-  "hero": "Apollo",
-  "in_notes": true,
-  "direction": "up",
-  "magnitude": "minor",
-  "confidence": 0.55,
-  "direct_reasons": [
-   "Riposte Pommel Hit now also disarms the target, adding a new trade-winning tool to his lane-bully kit.",
-   "Riposte Pummel now ends any preexisting parry on the target, stripping a defensive answer.",
-   "Riposte T2 duration +0.6s\u2192+0.7s and Itani Lo Sahn T3 bonus damage +50%\u2192+60%."
-  ],
-  "indirect_reasons": [
-   "Healbane's multi-source anti-heal cap drops (4-stack 82.2%\u219272%), which helps his Locket/heal sustain more than it hurts his own Healbane slot."
-  ],
-  "build_changes": [],
-  "tier_before": "S",
-  "tier_after": "S",
-  "one_liner": "Riposte now disarms and breaks parries \u2014 a sharper lane bully, still S.",
-  "verdict": "keep",
-  "rows": [
-   {
-    "label": "Disarm",
-    "old": null,
-    "new": null,
-    "text": "Pommel Hit now disarms",
-    "effect": "good",
-    "ability": "Riposte"
-   },
-   {
-    "label": "Parry break",
-    "old": null,
-    "new": null,
-    "text": "Pummel ends preexisting parry",
-    "effect": "good",
-    "ability": "Riposte"
-   },
-   {
-    "label": "T2 duration",
-    "old": "+0.6s",
-    "new": "+0.7s",
-    "text": null,
-    "effect": "good",
-    "ability": "Riposte"
-   },
-   {
-    "label": "T3 damage",
-    "old": "+50%",
-    "new": "+60%",
-    "text": null,
-    "effect": "good",
-    "ability": "Itani Lo Sahn"
-   }
-  ],
-  "change_kind": "rework",
-  "change_size": "minor"
- },
- {
   "hero": "Rem",
   "in_notes": false,
   "direction": "up",
   "magnitude": "minor",
-  "confidence": 0.55,
+  "confidence": 0.45,
   "direct_reasons": [],
   "indirect_reasons": [
-   "Weaker stacked anti-heal (Healbane 4-stack 82.2%\u219272%) lets his percent-max-HP heal land closer to full value against multi-buyer anti-heal."
+   "His percent-max-HP kit heal is exactly what the Healbane stacking cut protects \u2014 2-source 57.8%->54.7% and decay 20% more aggressive means fewer full-strength heal cuts land.",
+   "Ivy, the support who owns his slot in the heal duel, gains from the same change, so the item-side lift doesn't win him the pick."
   ],
   "build_changes": [],
-  "tier_before": "B",
-  "tier_after": "B",
-  "one_liner": "Heal support gets a small lift from weaker anti-heal stacking.",
+  "tier_before": "D",
+  "tier_after": "D",
+  "one_liner": "Anti-heal stacking got weaker, which is worth more to a percent-HP healer than anything else in this patch.",
   "verdict": "keep",
   "rows": [],
   "change_kind": "none",
@@ -343,23 +277,24 @@ Patch: Minor Update - 11-04-2026 (2026-11-05)
   "hero": "Celeste",
   "in_notes": true,
   "direction": "down",
-  "magnitude": "major",
+  "magnitude": "moderate",
   "confidence": 0.7,
   "direct_reasons": [
-   "Dazzling Trick T3 silence +1.25s\u2192+0.75s cuts her lockdown window.",
-   "Radiant Daggers cast range 30m\u219225m and spirit amp +7%\u2192+6% per stack trim her poke and scaling.",
-   "Shining Wonder slow -32%\u2192-28%, cooldown 160s\u2192170s, bounce 15.5m\u219215m, T1 -16%\u2192-14%, T2 +90\u2192+80 hit every axis of her ult."
+   "Dazzling Trick T3 silence +1.25s->+0.75s cuts her pick window by 40% on the ability that sets up her burst.",
+   "Radiant Daggers cast range 30m->25m forces her closer, and the spirit amp per stack 7%->6% trims the payoff of the same ability.",
+   "Shining Wonder nerfed on every axis: slow -32%->-28%, cooldown 160s->170s, bounce 15.5m->15m, T1 slow -16%->-14%, T2 damage +90->+80."
   ],
   "indirect_reasons": [
-   "Healbane's lower stacking cap gives her regen shell slight relief, but the direct cuts dominate."
+   "Healbane's stacked ceiling 82.2%->72% slightly relieves her Spirit Lifesteal/Torment Pulse sustain, but she never bought the item herself so the gain is one-sided and small."
   ],
   "build_changes": [
-   "De-emphasize the ult-slow pick setup; the shorter silence and range make her dive window thinner \u2014 value Spirit Lifesteal/Torment Pulse sustain over committing on Shining Wonder."
+   "Shining Wonder at 170s is a fight-defining cast, not a rotation tool \u2014 stop valuing ult uptime and buy damage/uptime elsewhere.",
+   "Silence T3 1.25->0.75s weakens the pick setup; lean on Spirit Lifesteal + Torment Pulse as the sustain layer rather than the gutted regen shell."
   ],
   "tier_before": "C",
   "tier_after": "D",
-  "one_liner": "Every ability got trimmed at once \u2014 silence, range, ult slow and cooldown all down.",
-  "verdict": "bench",
+  "one_liner": "Every tool she picks with got shorter: silence, cast range, ult slow and ult cooldown all down.",
+  "verdict": "watch",
   "rows": [
    {
     "label": "Silence T3",
@@ -379,16 +314,16 @@ Patch: Minor Update - 11-04-2026 (2026-11-05)
    },
    {
     "label": "Spirit amp",
-    "old": "+7%",
-    "new": "+6%",
+    "old": "+7% per stack",
+    "new": "+6% per stack",
     "text": null,
     "effect": "bad",
     "ability": "Radiant Daggers"
    },
    {
     "label": "Slow",
-    "old": "-32%",
-    "new": "-28%",
+    "old": "-32% (T1 -16%)",
+    "new": "-28% (T1 -14%)",
     "text": null,
     "effect": "bad",
     "ability": "Shining Wonder"
@@ -410,14 +345,6 @@ Patch: Minor Update - 11-04-2026 (2026-11-05)
     "ability": "Shining Wonder"
    },
    {
-    "label": "T1 slow",
-    "old": "-16%",
-    "new": "-14%",
-    "text": null,
-    "effect": "bad",
-    "ability": "Shining Wonder"
-   },
-   {
     "label": "T2 damage",
     "old": "+90",
     "new": "+80",
@@ -427,28 +354,30 @@ Patch: Minor Update - 11-04-2026 (2026-11-05)
    }
   ],
   "change_kind": "nerf",
-  "change_size": "major"
+  "change_size": "moderate"
  },
  {
   "hero": "Rat King",
   "in_notes": true,
   "direction": "up",
-  "magnitude": "minor",
-  "confidence": 0.6,
+  "magnitude": "moderate",
+  "confidence": 0.7,
   "direct_reasons": [
-   "Rule, Ratannia! T1 now adds -25s cooldown, partly restoring the banner uptime cut on 10-30.",
-   "Bullet damage 5.7\u21925.8, ammo 24\u219226 and +3m\u2192+4m move speed are small stat gains.",
-   "Scrap Grenade melee fuse extension 0.4s\u21920.25s is a minor loss to his grenade-clear combo."
+   "Rule, Ratannia! T1 now also cuts 25s of cooldown, directly buying back part of the 180s ult timer that was his post-10-30 problem.",
+   "Bullet damage 5.7->5.8 and ammo 24->26 feed the Monster Rounds/HVR gun-bruiser core that is his primary build.",
+   "Rule, Ratannia! move speed +3m->+4m improves the banner window he uses to force hub fights."
   ],
   "indirect_reasons": [
-   "Healbane's lower multi-source cap trims anti-heal pressure on his regen stack."
+   "Healbane's stacked heal-cut ceiling 82.2%->72% makes his regen/Fortitude frontline harder to fully suppress \u2014 the anti-heal answer to him is weaker.",
+   "Baba's spirit-resist scaling 0.7->0.5 and melee damage -10% remove pressure from a fellow S-tier frontline contesting the same crates and hubs."
   ],
   "build_changes": [
-   "Superior/Compress Cooldown are less mandatory now that T1 covers -25s on the banner \u2014 you can spend a slot elsewhere."
+   "Take Rule, Ratannia! T1 earlier \u2014 the -25s cooldown is now the cheapest fix for the 180s ult, ahead of Superior/Compress Cooldown.",
+   "Scrap Grenade fuse-extension 0.4s->0.25s makes the melee-the-fuse trick less reliable; pull camps with melee first, then grenade the clump."
   ],
-  "tier_before": "A",
-  "tier_after": "A",
-  "one_liner": "Small stat bumps plus a -25s banner cooldown talent restore some ult uptime.",
+  "tier_before": "S",
+  "tier_after": "S",
+  "one_liner": "Buffs land on the exact spots 10-30 hit: ammo, bullet damage, banner speed and a 25s ult cooldown cut.",
   "verdict": "keep",
   "rows": [
    {
@@ -468,6 +397,14 @@ Patch: Minor Update - 11-04-2026 (2026-11-05)
     "ability": null
    },
    {
+    "label": "Fuse extension",
+    "old": "0.4s",
+    "new": "0.25s",
+    "text": null,
+    "effect": "bad",
+    "ability": "Scrap Grenade"
+   },
+   {
     "label": "Move speed",
     "old": "+3m",
     "new": "+4m",
@@ -479,21 +416,13 @@ Patch: Minor Update - 11-04-2026 (2026-11-05)
     "label": "T1",
     "old": null,
     "new": null,
-    "text": "Adds -25s cooldown",
+    "text": "Also -25s cooldown",
     "effect": "good",
     "ability": "Rule, Ratannia!"
-   },
-   {
-    "label": "Fuse extension",
-    "old": "0.4s",
-    "new": "0.25s",
-    "text": null,
-    "effect": "bad",
-    "ability": "Scrap Grenade"
    }
   ],
   "change_kind": "buff",
-  "change_size": "minor"
+  "change_size": "moderate"
  },
  {
   "hero": "Baba",
@@ -502,23 +431,25 @@ Patch: Minor Update - 11-04-2026 (2026-11-05)
   "magnitude": "moderate",
   "confidence": 0.65,
   "direct_reasons": [
-   "Spirit Resistance scaling 0.7\u21920.5 and melee damage per boon -10% cut her bruiser durability and damage.",
-   "Baba's Brew cooldown 27s\u219228s, burn spirit scaling 0.15\u21920.13 and cycle 1.5s\u21921.6s all worsen her core ability.",
-   "Granny Long Legs melee resist 30%\u219225% and debuff resist 30%\u219225% thin her frontline shell."
+   "Spirit Resistance scaling 0.7->0.5 is a ~29% cut to the resist wall her regen bruiser build stands behind.",
+   "Melee damage per boon -10% and Granny Long Legs melee/debuff resist 30%->25% trim both her heavy-melee crate clear and her brawl durability.",
+   "Baba's Brew cooldown 27s->28s, cycle 1.5s->1.6s and burn spirit scaling 0.15->0.13 slow the random-order brew she already cannot control."
   ],
   "indirect_reasons": [
-   "Healbane's lower 4-stack cap is a small relief for her regen wall, but the kit cuts dominate."
+   "Healbane's stacked ceiling 82.2%->72% is a small relief for a regen-wall hero, but single-source anti-heal is untouched so the counter still works.",
+   "Rat King's bullet damage, ammo and ult-cooldown buffs strengthen the frontline she competes with for crates and hub space."
   ],
   "build_changes": [
-   "The resist-scaling cut makes the regen/bruiser shell weaker \u2014 lean further into the cooldown caster line and treat her as a caster, not a frontline."
+   "Spirit Resistance scaling 0.7->0.5 makes resist-stacking slots worse \u2014 put the spend into cooldown/duration (Compress Cooldown, Superior Cooldown) instead.",
+   "Melee damage -10% per boon weakens the Granny Long Legs crate route; still open Tough Crates, but stop treating melee as a damage source."
   ],
-  "tier_before": "D",
-  "tier_after": "D",
-  "one_liner": "Resist scaling, melee damage and Brew all trimmed \u2014 the bruiser shell is thinner.",
-  "verdict": "watch",
+  "tier_before": "S",
+  "tier_after": "A",
+  "one_liner": "Resist scaling and melee both cut again, but 54.4% win rate says she is still a top frontline.",
+  "verdict": "keep",
   "rows": [
    {
-    "label": "Spirit resist",
+    "label": "Spirit resist scaling",
     "old": "0.7",
     "new": "0.5",
     "text": null,
@@ -558,15 +489,7 @@ Patch: Minor Update - 11-04-2026 (2026-11-05)
     "ability": "Baba's Brew"
    },
    {
-    "label": "Melee resist",
-    "old": "30%",
-    "new": "25%",
-    "text": null,
-    "effect": "bad",
-    "ability": "Granny Long Legs"
-   },
-   {
-    "label": "Debuff resist",
+    "label": "Melee/debuff resist",
     "old": "30%",
     "new": "25%",
     "text": null,
@@ -578,25 +501,47 @@ Patch: Minor Update - 11-04-2026 (2026-11-05)
   "change_size": "moderate"
  },
  {
+  "hero": "Solomon",
+  "in_notes": false,
+  "direction": "up",
+  "magnitude": "minor",
+  "confidence": 0.45,
+  "direct_reasons": [],
+  "indirect_reasons": [
+   "Two of his three worst lanes were nerfed in the same patch \u2014 Baba (spirit resist scaling 0.7->0.5, melee -10%) and Celeste (silence, cast range, ult) \u2014 while Rat King, his other loss, was buffed.",
+   "Healbane's stacked ceiling 82.2%->72% does nothing for him: his usage data shows no Healbane, so the anti-heal change is neutral here."
+  ],
+  "build_changes": [],
+  "tier_before": "D",
+  "tier_after": "D",
+  "one_liner": "His two worst matchups got nerfed, but a 46.5% floor and a buffed Rat King keep him at D.",
+  "verdict": "watch",
+  "rows": [],
+  "change_kind": "none",
+  "change_size": "none"
+ },
+ {
   "hero": "Deadman Danny",
   "in_notes": true,
   "direction": "down",
   "magnitude": "moderate",
-  "confidence": 0.65,
+  "confidence": 0.7,
   "direct_reasons": [
-   "Close The Deal bonus damage to under-half targets +75%\u2192+55% cuts his execute.",
-   "Strix Salvo spirit scaling -8% lowers his mark damage.",
-   "Chimera Mk1 T2 heal 150\u2192125 and heal spirit scaling 2.0\u21921.7 trim his dive sustain."
+   "Close The Deal bonus damage to under-half targets +75%->+55% cuts the execute that defines his dive-pick identity by a fifth.",
+   "Strix Salvo spirit scaling -8% hits the ability his primary spirit-mark build scales everything into.",
+   "Chimera Mk1 T2 heal-on-hit 150->125 and heal spirit scaling 2.0->1.7 remove sustain from a 730-HP flyer who has to commit to every dive."
   ],
   "indirect_reasons": [
-   "Healbane's lower stacking cap is minor relief for a flyer with no real sustain shell."
+   "Healbane's stacked ceiling 82.2%->72% does not help him \u2014 his problem is incoming burst, not suppressed healing.",
+   "Rat King's buffs are irrelevant to him; his real counters (Kelvin, Paige, Celeste, Vyper) are unchanged or, for Celeste, nerfed on the ult rather than the burst that kills him."
   ],
   "build_changes": [
-   "With the execute and mark scaling down, the spirit mark-burst line loses payoff \u2014 value the defensive glue (Reactive Barrier, Grit) more and pick fights only on already-chipped targets."
+   "Chimera Mk1 T2 heal 150->125 with 2.0->1.7 scaling makes heal-on-hit a weaker talent \u2014 Reactive Barrier and Grit carry the dive instead.",
+   "With the execute at +55%, stop diving targets above half HP expecting the mark to finish them; commit only on already-chipped targets."
   ],
-  "tier_before": "C",
-  "tier_after": "C",
-  "one_liner": "Execute and mark damage both cut \u2014 his dive converts fewer kills.",
+  "tier_before": "A",
+  "tier_after": "B",
+  "one_liner": "Execute cut to +55%, Salvo scaling down 8% and the jetpack heal trimmed \u2014 the dive pays less.",
   "verdict": "watch",
   "rows": [
    {
@@ -624,7 +569,7 @@ Patch: Minor Update - 11-04-2026 (2026-11-05)
     "ability": "Chimera Mk1"
    },
    {
-    "label": "T2 heal scaling",
+    "label": "Heal scaling",
     "old": "2.0",
     "new": "1.7",
     "text": null,
@@ -640,429 +585,83 @@ Patch: Minor Update - 11-04-2026 (2026-11-05)
   "in_notes": false,
   "direction": "up",
   "magnitude": "minor",
-  "confidence": 0.5,
+  "confidence": 0.45,
   "direct_reasons": [],
   "indirect_reasons": [
-   "Healbane's lower multi-source cap eases the anti-heal tax on her Radiant/Mystic Regeneration shell.",
-   "Baba, a 41% loss for her, was nerfed across her kit.",
-   "Rat King, another 41% loss, got buffed \u2014 offsets the relief."
+   "Healbane's stacked heal-cut ceiling 82.2%->72% protects the regen stack she actually buys (Radiant Regeneration 96%, Mystic Regeneration 93%, Healing Booster 78%) from multi-source anti-heal.",
+   "Baba's spirit-resist scaling 0.7->0.5 and melee -10% soften one of her 41% losing lanes; Rat King's buffs worsen the other."
   ],
   "build_changes": [],
-  "tier_before": "C",
-  "tier_after": "C",
-  "one_liner": "Healbane relief and a weaker Baba help her regen shell slightly.",
+  "tier_before": "B",
+  "tier_after": "B",
+  "one_liner": "Anti-heal stacking got weaker, which is the one thing her regen-heavy build needed; still 50.8%.",
   "verdict": "keep",
   "rows": [],
   "change_kind": "none",
   "change_size": "none"
+ },
+ {
+  "hero": "Nurse Harrow",
+  "in_notes": true,
+  "direction": "up",
+  "magnitude": "minor",
+  "confidence": 0.6,
+  "direct_reasons": [
+   "Bullet damage +8% is a straight gain for a hero whose primary build is Titanic Magazine mag-dump uptime.",
+   "Lurking Terrors fear buildup 2s->1.75s makes her lockdown land a quarter-second sooner, tightening the channel window she wins fights in.",
+   "Lurking Terrors vertical angle 50%->65% widens the cone so off-angle targets above and below her now get feared."
+  ],
+  "indirect_reasons": [
+   "Healbane's stacked ceiling 82.2%->72% is a small relief for a dedicated healer whose entire sustain is healing-based, though single-source anti-heal still answers her.",
+   "Rat King's buffs put more of the frontline she beats (59% into Billy-class brawlers) into lobbies, which suits her cone."
+  ],
+  "build_changes": [
+   "Bullet damage +8% reinforces Titanic Magazine as the weapon core \u2014 no reason to revisit HVR/Active Reload.",
+   "Fear buildup 2s->1.75s makes Lurking Terrors a reliable opener rather than a follow-up; lead with it."
+  ],
+  "tier_before": "A",
+  "tier_after": "A",
+  "one_liner": "Faster fear, wider cone and +8% bullet damage \u2014 small buffs that steady a falling A-tier.",
+  "verdict": "keep",
+  "rows": [
+   {
+    "label": "Bullet damage",
+    "old": null,
+    "new": null,
+    "text": "+8%",
+    "effect": "good",
+    "ability": null
+   },
+   {
+    "label": "Fear buildup",
+    "old": "2s",
+    "new": "1.75s",
+    "text": null,
+    "effect": "good",
+    "ability": "Lurking Terrors"
+   },
+   {
+    "label": "Vertical angle",
+    "old": "50%",
+    "new": "65%",
+    "text": null,
+    "effect": "good",
+    "ability": "Lurking Terrors"
+   }
+  ],
+  "change_kind": "buff",
+  "change_size": "minor"
  }
 ]
 
 ## Current hero entries (this batch only)
 
-Victor:
-  name: Victor
-  role: tank/frontline
-  archetypes:
-  - tank/frontline
-  tier: A
-  trend: rising
-  why: 'Sustain frontline the patch actively fed: Spirit Lifesteal +2 spirit/+2% lifesteal,
-    Infuser 6->8 spirit with a 75% active lifesteal window and Torment Pulse +4% melee
-    resist all compound his grind-down shell, which is also the reliable answer to
-    Haunts that now hit 10% harder. Healing Booster''s rework delays the shell''s
-    early curve.'
-  core_items:
-  - High-Velocity Rounds
-  - Extra Regen
-  - Extra Spirit
-  - Opening Rounds
-  - Torment Pulse
-  - Healing Booster
-  - Enduring Speed
-  - Spirit Lifesteal
-  - Mystic Vulnerability
-  - Infuser
-  - Escalating Exposure
-  build_variants:
-  - Spirit sustain bruiser
-  - Weapon-tempo start
-  enabled_by:
-  - harder Haunt camps reward regen/sustain
-  - Spirit Lifesteal + Healing Booster sustain stack
-  - melee-diver meta he outlasts (Mina, Calico, Lash)
-  countered_by:
-  - burst vs low HP-per-boon (Yamato, Holliday)
-  - anti-heal and trimmed healing items
-  - ranged poke / flyers (Vindicta)
-  - tank stat-checks (Abrams, Mo & Krill)
-  - CC
-  last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: "Halloween 2026: Aura of Suffering T3 +15%->+16%; Spirit Lifesteal, Infuser\
-    \ (6->8 spirit, 75% active lifesteal) and Torment Pulse +4% melee resist feed\
-    \ the grind-down core, while Healing Booster lost its Extra Regen link and +3\
-    \ regen \u2014 buy it standalone, later.\n10-20 Shh...: no direct change; harder\
-    \ Haunt camps, longer PvE routes and Buff Container Bullet/Spirit Resist rolls\
-    \ feed his sustain stack \u2014 A held.\n09-29 City Never Sleeps: no direct change;\
-    \ hard Haunt camps fed his sustain stack, flipping him from fair B-baseline to\
-    \ A on the 56.4% snapshot WR."
-  builds:
-  - name: Spirit sustain bruiser
-    damage: spirit
-    core_items:
-    - Extra Regen
-    - Extra Spirit
-    - Torment Pulse
-    - Healing Booster
-    - Enduring Speed
-    - Spirit Lifesteal
-    - Mystic Vulnerability
-    - Infuser
-    - Escalating Exposure
-    popularity: primary
-    notes: 'Default build: stack regen through lane, then spirit DoT (Torment Pulse,
-      Mystic Vulnerability, Escalating Exposure) to grind fights down while outlasting
-      them.'
-  - name: Weapon-tempo start
-    damage: hybrid
-    core_items:
-    - High-Velocity Rounds
-    - Opening Rounds
-    popularity: secondary
-    notes: Very early weapon items (~2.4 and 5.1 min) to win the lane last-hit/deny
-      war before pivoting into the spirit build; 40% share and the best WR of any
-      cluster item.
-  matchups:
-    beats:
-    - Mina
-    - Calico
-    - Bebop
-    - Haze
-    - Lash
-    loses_to:
-    - Ivy
-    - Vindicta
-    - Mo & Krill
-    - Abrams
-    - Drifter
-  matchup_notes: "He beats divers who must enter his Aura of Suffering (Mina 56%,\
-    \ Calico 55%, Lash 53%) \u2014 his DoT sustain outlasts their burst. He loses\
-    \ to a kiting healer (Ivy 43%) and a ranged flyer (Vindicta 45%) he cannot reach\
-    \ or finish, and drops the tank mirror (Abrams 47%, Mo & Krill 47%) where low\
-    \ HP-per-boon leaves him out-stat."
-  confidence: 0.6
-  released_on: null
-  provisional: false
-Paige:
-  name: Paige
-  role: lane-winning support
-  archetypes:
-  - support/healer
-  - lane bully
-  tier: S
-  trend: falling
-  why: "Still the best lane-winning support, but her lane itself got thinner \u2014\
-    \ base bullet damage 35->32 is roughly a 9% lane cut \u2014 and the new economy\
-    \ (tick souls to the two poorest, 30% non-hero comeback cap, deficit-scaled secure\
-    \ rate) now rescues exactly the carry she used to snowball past. She wins lane;\
-    \ the conversion is slower than on 10-20."
-  core_items:
-  - High-Velocity Rounds
-  - Opening Rounds
-  - Extra Charge
-  - Slowing Hex
-  - Mystic Expansion
-  - Knockdown
-  - Superior Cooldown
-  - Greater Expansion
-  build_variants:
-  - Tempo support
-  - CC lockdown
-  enabled_by:
-  - 09-16 buffs (heavy melee spirit scaling; Captivating Read talents)
-  - tempo / lane-wins meta
-  - anti-flyer shifts (air-drag slows, Silver's Weighted Bola)
-  - Billy/Abrams frontline partners
-  - guaranteed crate routes from ~2:30 + Healing Snacks
-  countered_by:
-  - burst assassins (Yamato, Lash, Holliday)
-  - Rem
-  - Ivy
-  - stacking anti-heal (multi-source Healbane, Toxic Bullets 40%, Crippling Headshot
-    40%)
-  last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: "10-30 Halloween + Gameplay Update: base bullet 35->32 (~9% lane cut; growth\
-    \ 0.52->0.61 pays back later) and Bookwyrm T2 trail +2s->+1s; HVR velocity 60->45\
-    \ weakens her 1.2-min buy \u2014 Opening Rounds before HVR is now the safer opener,\
-    \ and comeback gold blunts the lead she converts.\n10-20 Shh...: no direct change;\
-    \ Healing Snacks let her lane pressure stick instead of resetting on a recall,\
-    \ and lane-adjacent crate routes from ~2:30 pay the lane winner immediately \u2014\
-    \ S held.\nCity Never Sleeps: no direct change; lane-adjacent crate routes and\
-    \ Healing Snacks reward her lane pressure, and the contested hubs suit her carry-snowball."
-  builds:
-  - name: Tempo support
-    damage: hybrid
-    core_items:
-    - High-Velocity Rounds
-    - Opening Rounds
-    - Extra Charge
-    - Slowing Hex
-    - Mystic Expansion
-    - Superior Cooldown
-    - Greater Expansion
-    popularity: primary
-    notes: Cheap weapon T1/T2 win the lane (HVR 1.2m, Opening Rounds 4.6m), then spirit
-      charges/cooldown/range spam Captivating Read and Plot Armor to snowball a carry.
-  - name: CC lockdown
-    damage: spirit
-    core_items:
-    - Slowing Hex
-    - Knockdown
-    popularity: secondary
-    notes: Adds anti-mobility lockdown for pick comps; creator-flagged 'CC-slop,'
-      and Knockdown's 50.8% WR (below her 52.7%) marks it as the weaker path.
-  matchups:
-    beats:
-    - Wraith
-    - Paradox
-    - Haze
-    - Mina
-    - Warden
-    loses_to:
-    - Rem
-    - Ivy
-    - Dynamo
-    - Billy
-    - Vindicta
-  matchup_notes: "The real edges are vs falling gun carries/initiators \u2014 Wraith\
-    \ 57%, Paradox 57%, Haze 55% \u2014 where her lane pressure and Plot Armor heals\
-    \ blunt the picks and scaling windows those archetypes need. She is only even\
-    \ (49%) into Rem and Ivy, fitting the creator read that she is a weaker Rem: both\
-    \ out-heal and out-escape her. Dynamo at 49% contradicts the old 'counters Dynamo\
-    \ ult' line \u2014 treat that as stale."
-  confidence: 0.6
-  released_on: null
-  provisional: false
-Billy:
-  name: Billy
-  role: tank/frontline
-  archetypes:
-  - tank/frontline
-  - lane bully
-  tier: A
-  trend: stable
-  why: Lane-bully frontline whose all-in got a longer, bigger durability window (Rising
-    Ram T3 +10%->+15% max HP for 16s->20s) plus a 25s Blasted cooldown, and the melee-front
-    archetype is up on Torment Pulse's +4% melee resist; he still bleeds to anti-tank
-    Shiv and to ranged kiting, and the new tick-soul economy trims the lane lead he
-    snowballs.
-  core_items:
-  - Spirit Snatch
-  - Stalker
-  - Close Quarters
-  - Monster Rounds
-  - Grit
-  - Spirit Shielding
-  - Spirit Strike
-  - Bullet Resist Shredder
-  - Slowing Hex
-  build_variants:
-  - Melee-range hybrid bruiser
-  - Spirit shred/slow bruiser
-  enabled_by:
-  - 09-16 tempo patch (lane leads snowball)
-  - Spirit Snatch
-  - untouched core tank/Vitality items
-  - lane-bully meta
-  - Torment Pulse +4% melee resist (AoE aura gains in exactly the corridor/melee fights
-    he starts)
-  - anti-tank counter Shiv hit by Radiant Regeneration's in-combat gate and Healbane
-    kill-heal 275->170
-  - Lifestrike melee-heal + flyer-dragging slow buff (low confidence - item sits outside
-    his top-15 30-day buys)
-  - Fortitude regen buff
-  countered_by:
-  - "anti-tank bruisers (Shiv \u2014 softened by the Radiant Regeneration trim)"
-  - stacking anti-heal (multi-source Healbane, Toxic Bullets 40%)
-  - kiting / sustained ranged gun (Seven; Warden's HVR velocity 60->45 and Shadow
-    Weave rework make that lane softer)
-  - sustain-peel (Ivy)
-  last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: '10-30 Halloween + Gameplay Update: Rising Ram T3 +10%->+15% max HP for 16s->20s
-    and Blasted 27->25s; Torment Pulse +4% melee resist plus the Radiant Regeneration/Healbane
-    trims on Shiv help, but tick souls to the two poorest blunt the lane lead he converts
-    and Spirit Shielding''s -3% spirit resist taxes his shred build.
-
-    10-20 Shh...: no direct change; harder Haunt camps reward sustained frontline
-    presence, but Mo & Krill still owns the front-line slot and ranged corridor clear
-    beats his all-in.
-
-    10-16 Paint the Town: no direct change; behavior-varied Haunt camps and contested
-    soul sources reward sustained presence, so his lane-bully all-in fits the economy
-    less.'
-  builds:
-  - name: Melee-range hybrid bruiser
-    damage: hybrid
-    core_items:
-    - Close Quarters
-    - Monster Rounds
-    - Grit
-    - Stalker
-    - Spirit Snatch
-    popularity: primary
-    notes: Closes distance early and brawls with point-blank gun + melee, then Spirit
-      Snatch (95% buy) converts lane kills into the HP buffer that lets him front-line.
-  - name: Spirit shred/slow bruiser
-    damage: spirit
-    core_items:
-    - Spirit Shielding
-    - Spirit Strike
-    - Bullet Resist Shredder
-    - Slowing Hex
-    - Spirit Snatch
-    popularity: secondary
-    notes: Spirit-damage variant that shreds and slows to stay glued to squishy carries;
-      pick it when the enemy frontline, not their backline, is the problem.
-  matchups:
-    beats:
-    - Dynamo
-    - Bebop
-    - Mina
-    - Paradox
-    - Pocket
-    loses_to:
-    - Shiv
-    - Ivy
-    - Warden
-    - Seven
-    - Vindicta
-  matchup_notes: "He farms squishy, low-mobility heroes who can't escape a melee bruiser\
-    \ that out-stats them \u2014 Dynamo, Bebop, Paradox, Pocket and Mina all sit at\
-    \ 55-58%. He bleeds to anti-tank and sustain: Shiv's execute kit is his worst\
-    \ lane (43%) and Shiv is rising, while Ivy and Warden out-sustain/out-range his\
-    \ all-in (45% each) and Seven/Vindicta poke the big slow body from range (48%)."
-  confidence: 0.58
-  released_on: null
-  provisional: false
-Apollo:
-  name: Apollo
-  role: lane bully initiator
-  archetypes:
-  - lane bully
-  - initiator
-  - tank/frontline
-  tier: S
-  trend: stable
-  why: "S-tier lane bully whose Riposte now lands reliably (dash fixes, CC refunds\
-    \ on Flawless Advance/Itani Lo Sahn) for a 1.5s disable instead of a 0.8s stun\
-    \ \u2014 longer lockdown for picks, but no longer an interrupt for channeled ults,\
-    \ and Healing Booster's gutting thins the sustain shell his spirit bruiser build\
-    \ leans on."
-  core_items:
-  - Extra Regen
-  - Mystic Burst
-  - Extra Spirit
-  - Mystic Expansion
-  - Spirit Strike
-  - Improved Spirit
-  - Spirit Snatch
-  - Boundless Spirit
-  - Tankbuster
-  - Restorative Locket
-  - Healbane
-  - Dispel Magic
-  build_variants:
-  - Spirit bruiser
-  - Spirit support/utility
-  - Cooldown scaling
-  enabled_by:
-  - economy/tempo patch (09-16)
-  - comeback-soul gutting
-  - early-Rift resist nerf
-  - Riposte reliability + 1.5s disable (dash fixes, CC refunds)
-  - spirit item pool untouched
-  - tower-dive still open with T3 bullet resist vs the parry-cooldown change
-  countered_by:
-  - Lash
-  - Abrams
-  - Mo & Krill
-  - Warden
-  - anti-heal vs his Locket/heal sustain
-  last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: "10-30 Halloween + Gameplay Update: Riposte Pommel Hit is now an immobilize\
-    \ + parry disable, not a stun \u2014 0.8->1.5s (T2 +0.4->+0.6s) with dash reliability\
-    \ fixes and CC refunds on Flawless Advance/Itani Lo Sahn. He loses the channel\
-    \ interrupt (Seven/Bebop/Harrow ults) and Healing Booster's gutting thins his\
-    \ sustain; S held, trend rising -> stable.\n10-20 Shh...: no direct change; lane\
-    \ pressure converts into lane-adjacent crate routes and Healing Snacks, but the\
-    \ objective-parry change makes the Guardian dive a one-shot decision \u2014 S\
-    \ held.\n10-16 Paint the Town: no direct change; the objective-parry cooldown-reset\
-    \ removal trims the T3-bullet-resist Guardian-dive chain, but the crate-and-Haunt\
-    \ economy keeps him S."
-  builds:
-  - name: Spirit bruiser
-    damage: spirit
-    core_items:
-    - Extra Regen
-    - Mystic Burst
-    - Extra Spirit
-    - Mystic Expansion
-    - Spirit Strike
-    - Improved Spirit
-    - Restorative Locket
-    - Spirit Snatch
-    - Boundless Spirit
-    - Tankbuster
-    popularity: primary
-    notes: Lane-phase spirit poke into flat spirit burst; Healing Booster is out of
-      the shell now that it lost Extra Regen and its +3 flat regen, so Restorative
-      Locket carries the sustain instead. Boundless Spirit and Tankbuster are late-game
-      luxuries (buy_min 22+), not lane items.
-  - name: Spirit support/utility
-    damage: spirit
-    core_items:
-    - Restorative Locket
-    - Healbane
-    - Dispel Magic
-    popularity: secondary
-    notes: Team-fight sustain and debuff-clear package that matches the older 'unkillable
-      with Locket + Dispel' read; buy when fights are extended or the enemy has debuffs/heal
-      to answer.
-  - name: Cooldown scaling
-    damage: spirit
-    core_items:
-    - Compress Cooldown
-    - Superior Cooldown
-    popularity: niche
-    notes: Late CDR pivot; these have the best item WRs on the board (Superior Cooldown
-      55.6%) but low share, so it is a win-more when games run long.
-  matchups:
-    beats:
-    - Mina
-    - Vindicta
-    - Drifter
-    - Haze
-    - Calico
-    loses_to:
-    - Warden
-    - Abrams
-    - Lash
-    - Wraith
-    - Mo & Krill
-  matchup_notes: "He beats burst squishies he can dive before they scale: Mina (55%),\
-    \ Vindicta/Haze (~52%), whose range his lane pressure and Riposte punish. He loses\
-    \ to frontline that out-sustains his burst (Abrams 44%, Mo & Krill 46%) and to\
-    \ Lash (44%), whose mobility out-positions his melee range \u2014 the vegas line\
-    \ that Riposte 'cancels Lash' reads as dated, the data has him losing that pairing."
-  confidence: 0.6
-  released_on: null
-  provisional: false
 Rem:
   name: Rem
   role: support/healer
   archetypes:
   - support/healer
-  tier: B
+  tier: D
   trend: rising
   why: Coin-flip support whose percent-max-HP heal and cleanse gain value as harder
     Haunt camps reward sustain and Bell Tower's three spread vaults stretch the map.
@@ -1278,12 +877,12 @@ Rat King:
   archetypes:
   - tank/frontline
   - lane bully
-  tier: A
+  tier: S
   trend: falling
   why: Still a 116-heavy-melee frontline who opens Tough Crates and wants the forced
-    hub fights, but Scrap Grenade's radius (8m->6m, large 14m->10m) and the banner
-    ult's knockup/radius/duration cuts end his one-button camp clear and his teamfight
-    reset, right as Haunt camps gained +10% HP.
+    hub fights, but Scrap Grenade's damage cuts and the banner ult's knockup and cooldown
+    nerfs dent his one-button camp clear and his teamfight reset, right as Haunt camps
+    gained +10% HP.
   core_items:
   - Monster Rounds
   - High-Velocity Rounds
@@ -1314,10 +913,10 @@ Rat King:
   - Anti-heal (Healbane, Decay) against his regen stacking
   last_changed_patch: Halloween 2026 + Gameplay Update
   notes: '10-30 Halloween + Gameplay Update: S -> A. Scrap Grenade 70->60 (T2 +70->+60,
-    T3 300->275), radius 8m->6m / large 14m->10m, fuse +0.1s; Rule, Ratannia! knockup
-    halved, 160->180s, 20m->16m, 12s->9s and now goes on cooldown if he is stunned
-    before placing; base bullet -5% and growth -20%. Haunt camps +10% HP finish the
-    one-button clear. Offsets: Heavy-Melee Cauldrons, Healing Snacks 10->14%.
+    T3 300->275), fuse +0.1s; Rule, Ratannia! knockup halved, 160->180s and now goes
+    on cooldown if he is stunned before placing; base bullet -5% and growth -20%.
+    Haunt camps +10% HP finish the one-button clear. Offsets: Heavy-Melee Cauldrons,
+    Healing Snacks 10->14%.
 
     10-20 Shh...: no direct change; Tough Crates, grouped chasing Haunts, forced Bell
     Tower/Sunken Plaza hubs and Barrel Mimics all point at heavy-melee camp-clear
@@ -1341,9 +940,8 @@ Rat King:
     popularity: primary
     notes: "Near-universal core \u2014 Monster Rounds + HVR at ~3 min into Opening\
       \ Rounds; Rat Swarm strips bullet resist so the Spreadshot/grenade window does\
-      \ the work. Scrap Grenade is no longer a one-button camp clear (radius 8m->6m,\
-      \ large 14m->10m, fuse +0.1s): pull camps with melee first, then grenade the\
-      \ clump."
+      \ the work. Scrap Grenade is no longer a one-button camp clear (fuse +0.1s):\
+      \ pull camps with melee first, then grenade the clump."
   - name: Vitality frontline
     damage: hybrid
     core_items:
@@ -1394,7 +992,7 @@ Baba:
   - tank/frontline
   - lane bully
   - initiator
-  tier: D
+  tier: S
   trend: falling
   why: 'Grounded regen bruiser whose identity was removed twice over: Baba''s Brew
     is now random-order on a 1.5s cycle so she cannot guarantee the silence or barrier
@@ -1495,6 +1093,123 @@ Baba:
   confidence: 0.55
   released_on: '2026-10-06'
   provisional: false
+Solomon:
+  name: Solomon
+  role: zone-control support
+  archetypes:
+  - support/healer
+  - initiator
+  - poke/siege
+  tier: D
+  trend: stable
+  why: "Zone-control support whose Bishop is now the damage (0.85 on-square scaling,\
+    \ T3 shred -5%/stack on impact) while Rook Battery 1.3->0.9 and base bullet 30->25\
+    \ gut the gun lane \u2014 and his three worst matchups (Rat King, Baba, Celeste)\
+    \ all ate major nerfs, so the floor rises even as his own numbers fall."
+  core_items:
+  - Extra Spirit
+  - Mystic Expansion
+  - Improved Spirit
+  - Superior Cooldown
+  - Greater Expansion
+  - Compress Cooldown
+  - Mystic Burst
+  - High-Velocity Rounds
+  - Opening Rounds
+  build_variants:
+  - Spirit cooldown control
+  - Gun lane
+  - Vitality/sustain
+  enabled_by:
+  - Hub-fight meta (Sunken Plaza ~5-8 min, Bell Tower 8+) rewarding telegraphed zone
+    control
+  - "Cooldown stacking \u2014 Superior Cooldown (84%), Greater Expansion (81%), Compress\
+    \ Cooldown (73%)"
+  - 'Heavy melee 116 opening Tough Crates: not a camp-clearer, so income rides on
+    guaranteed 58-soul routes and team souls'
+  - "Front-line-heavy lobbies \u2014 beats Abrams, Mo & Krill, Shiv"
+  countered_by:
+  - 'Burst mobility landing before the self-cast Knight''s invuln: Lash (S), Holliday,
+    Calico, Yamato (all A/S, rising)'
+  - Silence (Silencer, Silence Wave) denying the cooldown loop
+  - Unstoppable ignoring rook immobilize; Knockdown on the cast
+  - Rat King (A, stable) and Celeste spirit burst closing into his zone (35% losses)
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: '10-30 Halloween + Gameplay Update: base bullet 30->25 and -20% headshot
+    gut the HVR/Opening Rounds lane crutch, Rook Battery 1.3->0.9 scaling is a real
+    damage cut, Develop Queen 210->240s; Setup Bishop is now the damage (0.64->0.85
+    on-square, T1 slow +25%, T3 shred -5%/stack on impact) and checkmate is base kit.
+    Max Bishop over Rook Battery. Three losing matchups (Rat King, Baba, Celeste)
+    ate major nerfs. C held.
+
+    7-day check-in (2026-10-16): tier B -> C, WR 45%, PR 61% over 329000 matches.
+    Usage overrides the day-0 ''Barrier support'' and full-gun builds: Divine Barrier/Healbane/Healing
+    Booster/Superior Duration and Swift Striker do not appear in high-rank item data.
+    Vindicta now reads 48% (even), not the day-0 loss; Baba still 36% despite the
+    10-14 front-line cut (her barrier 1.2->0.7, -7% bullet resist, B->C).
+
+    10-14: no direct change; one week old and the empty Develop Queen tooltip leaves
+    his ult and its Checkmate (200/5) threshold the biggest unknown.'
+  builds:
+  - name: Spirit cooldown control
+    damage: spirit
+    core_items:
+    - Extra Spirit
+    - Mystic Expansion
+    - Improved Spirit
+    - Mystic Burst
+    - Compress Cooldown
+    - Superior Cooldown
+    - Greater Expansion
+    - Boundless Spirit
+    popularity: primary
+    notes: Stacks spirit power + cooldown reduction (Superior Cooldown 84% at 20:00,
+      Greater Expansion 81%, Compress Cooldown 73%) to spam Bishop/Rook; the only
+      shell where single items beat his 42.6% baseline (Mystic Burst 44.6%, Boundless
+      Spirit 49.3%).
+  - name: Gun lane
+    damage: gun
+    core_items:
+    - High-Velocity Rounds
+    - Opening Rounds
+    popularity: secondary
+    notes: "HVR (86% at 2:42) and Opening Rounds (83% at 5:06) are near-universal\
+      \ early buys but sit at the ~43% baseline \u2014 the day-0 full-weapon path\
+      \ (Swift Striker, Extended Magazine) never shows up in usage, so treat this\
+      \ as a lane crutch, not a carry build."
+  - name: Vitality/sustain
+    damage: spirit
+    core_items:
+    - Grit
+    - Extra Stamina
+    - Guardian Ward
+    - Stamina Mastery
+    popularity: niche
+    notes: Stamina/HP fillers (Extra Stamina 68%, Grit 53%) to survive dive-heavy
+      lobbies; the day-0 'Barrier support' shell (Divine Barrier, Healbane, Healing
+      Booster, Superior Duration) is absent from high-rank usage.
+  matchups:
+    beats:
+    - Deadman Danny
+    - Mo & Krill
+    - Abrams
+    - Vindicta
+    - Shiv
+    loses_to:
+    - Celeste
+    - Rat King
+    - Baba
+    - Holliday
+    - Yamato
+  matchup_notes: "Bishop tiles + rook immobilize zone anything that must physically\
+    \ hold hub space, so he beats front-line bodies (Deadman Danny 61%; Shiv/Mo &\
+    \ Krill/Abrams ~even) \u2014 note Vindicta now reads 48% (even), not the loss\
+    \ the day-0 entry claimed. He dies to burst mobility that lands before his self-cast\
+    \ Knight's invuln (Holliday 37%, Yamato 38%) and to Rat King/Celeste closing inside\
+    \ his zone."
+  confidence: 0.4
+  released_on: '2026-10-09'
+  provisional: false
 Deadman Danny:
   name: Deadman Danny
   role: Flying spirit marksman / dive-pick
@@ -1502,12 +1217,11 @@ Deadman Danny:
   - spirit carry
   - mobile assassin
   - burst caster
-  tier: C
+  tier: A
   trend: stable
-  why: 'Spirit mark-burster whose dive got taxed twice: slows now cut jetpack impulse
-    and Steam Vents lost invisibility, so the free approach and the escape are both
-    gone; the Close The Deal damage fix is the only gain on a 730-HP flyer with the
-    air-drag tax intact.'
+  why: 'Spirit mark-burster whose dive got taxed twice: slows now cut jetpack impulse,
+    so the escape got worse; the Close The Deal damage fix is the only gain on a 730-HP
+    flyer with the air-drag tax intact.'
   core_items:
   - High-Velocity Rounds
   - Extra Spirit
@@ -1545,12 +1259,11 @@ Deadman Danny:
     game usually ends'
   last_changed_patch: Halloween 2026 + Gameplay Update
   notes: "10-30 Halloween + Gameplay Update: Chimera Mk1 nerfed across the board \u2014\
-    \ jetpack unusable while cursed, CDR per boon -0.4->-0.25s, T3 refund 50->30%,\
-    \ slows now cut jetpack impulse harder (worse under movement-ability silence),\
-    \ grounding pulls land more reliably. Steam Vents lose invisibility and HVR 60->45%\
-    \ velocity hits his lone weapon staple; the Close The Deal damage fix is the only\
-    \ gain. C held, trend rising -> stable.\n7-day check-in (2026-10-20): tier C ->\
-    \ C, WR 45%, PR 69% over 446352 matches. Corrected: the usage data kills the 'shred/mark\
+    \ jetpack unusable while cursed, slows now cut jetpack impulse harder (worse under\
+    \ movement-ability silence), grounding pulls land more reliably. HVR 60->45% velocity\
+    \ hits his lone weapon staple; the Close The Deal damage fix is the only gain.\
+    \ C held, trend rising -> stable.\n7-day check-in (2026-10-20): tier C -> C, WR\
+    \ 45%, PR 69% over 446352 matches. Corrected: the usage data kills the 'shred/mark\
     \ gun' identity - Bullet Resist Shredder does not appear at all, and the real\
     \ build is spirit (Extra/Improved Spirit, Mystic Burst at 79-90%) with HV Rounds\
     \ as the lone weapon staple. The old beats list was inverted - Celeste (33%) and\
@@ -1623,7 +1336,7 @@ Violet:
   - burst caster
   - initiator
   - late scaler
-  tier: C
+  tier: B
   trend: falling
   why: "Zone caster whose ult was cut on every axis at once (180s cooldown, 5s duration,\
     \ 0.04->0.01 scaling, ends on death, ink destructible again) and whose Still Life\
@@ -1669,18 +1382,18 @@ Violet:
     \ Life gaze"
   last_changed_patch: Halloween 2026 + Gameplay Update
   notes: "10-30 Halloween + Gameplay Update: B -> C. Abstract Landscape 165->180s,\
-    \ 6->5s duration, 0.04->0.01 scaling, ends on death, 0.5->0.75s re-apply and T3\
-    \ ink destructible again; Still Life stun 1.0->0.9s, LOS required at channel end,\
-    \ T1 regen only while drawing (0.25->0.15). Spirit Lifesteal 6->8 spirit / 13->15%\
-    \ is the replacement sustain; anti-heal stacking taxes the rest.\n7-day check-in\
-    \ (2026-10-23): tier B -> C, WR 50%, PR 64% over 539876 matches. Data corrects\
-    \ the day-0 read: B/rising was a tooltip judgment, so C is a correction, not a\
-    \ decline \u2014 46.1% WR at 70.9% PR, and she loses to frontline brawlers rather\
-    \ than punishing melee. Watch whether her WR climbs with reps; the tooltip read\
-    \ also claimed Seven and the gun line as wins, but Seven is 49% over 170 and Living\
-    \ Ink/HVR no longer appear in her item data at all. 10-20 Shh...: no Violet changes;\
-    \ her position moves on systems (Haunt grouping, Tough Crates, hub fights) and\
-    \ on the dive/frontline meta around her."
+    \ 0.04->0.01 duration scaling, ends on death, 0.5->0.75s re-apply and T3 ink destructible\
+    \ again; Still Life stun 1.0->0.9s, LOS required at channel end, T1 regen only\
+    \ while drawing (0.25->0.15). Spirit Lifesteal 6->8 spirit / 13->15% is the replacement\
+    \ sustain; anti-heal stacking taxes the rest.\n7-day check-in (2026-10-23): tier\
+    \ B -> C, WR 50%, PR 64% over 539876 matches. Data corrects the day-0 read: B/rising\
+    \ was a tooltip judgment, so C is a correction, not a decline \u2014 46.1% WR\
+    \ at 70.9% PR, and she loses to frontline brawlers rather than punishing melee.\
+    \ Watch whether her WR climbs with reps; the tooltip read also claimed Seven and\
+    \ the gun line as wins, but Seven is 49% over 170 and Living Ink/HVR no longer\
+    \ appear in her item data at all. 10-20 Shh...: no Violet changes; her position\
+    \ moves on systems (Haunt grouping, Tough Crates, hub fights) and on the dive/frontline\
+    \ meta around her."
   builds:
   - name: Spirit caster (lead)
     damage: spirit
@@ -1740,6 +1453,137 @@ Violet:
     \ is the same structural problem even where the sample is too thin to list."
   confidence: 0.6
   released_on: '2026-10-16'
+  provisional: false
+Nurse Harrow:
+  name: Nurse Harrow
+  role: marksman-support hybrid
+  archetypes:
+  - gun carry
+  - support/healer
+  tier: A
+  trend: falling
+  why: Marksman-healer whose Lurking Terrors is now a 5s lockdown with 2s fear buildup
+    and 50% damage reduction instead of immunity, in a patch where Decay, Toxic Bullets
+    and stacking Healbane all cut her healing; the 0.2->0.24 spirit scaling on Healing
+    Needles is the pivot, not a replacement.
+  core_items:
+  - Extra Regen
+  - Extended Magazine
+  - Titanic Magazine
+  - Extra Stamina
+  - Kinetic Dash
+  - Extra Spirit
+  - Arcane Surge
+  - Superior Cooldown
+  - Superior Duration
+  build_variants:
+  - Mag-dump sustain
+  - Cooldown/Duration spirit
+  - Ricochet gun carry
+  enabled_by:
+  - "Sustain-bruiser / melee-frontline meta (Shiv, Billy, Rat King, Victor, Mo & Krill\
+    \ all up) \u2014 the fights she wins are long, grouped and close-range, where\
+    \ cone DoT and AoE heal both pay"
+  - "Hub scheduling at Bell Tower, Sunken Plaza and Buff Container spawns \u2014 the\
+    \ map now forces grouped fights on her terms"
+  - "Cast-on-press (10-20) \u2014 Leech into Vapors into Needles resolves on input,\
+    \ so her combo no longer drops a window"
+  - "Buff Container permanent rolls \u2014 Leech Therapy eats buff duration and T3\
+    \ Needles extends her team's, so contested containers hand her value"
+  - "Ricochet (38% share, 59.1% WR) \u2014 bounces feed her gun-damage charge economy\
+    \ in precisely the stacked fights the map creates"
+  countered_by:
+  - "Long-range spirit burst and zone control (Baba 43%, Celeste 45%, Wraith 46%)\
+    \ \u2014 none of it enters the fear cone, and no dash or regen means the fight\
+    \ ends before Healing Needles pay"
+  - "Healbane / Decay / Toxic Bullets \u2014 anti-heal is the archetype answer to\
+    \ a healer, and all her sustain is healing-based"
+  - "Silencer / Cursed Relic / Knockdown \u2014 Lurking Terrors is a channel and her\
+    \ survivability is ability-based; Knockdown stops the channel outright"
+  - "Plated Armor \u2014 the needle charge economy runs on gun damage, and Armor Piercing\
+    \ Rounds is the answer but eats a slot she needs for uptime"
+  - "Off-angle dives and hooks \u2014 the fear cone only covers the facing arc, and\
+    \ Dynamo's 45% shows what an AoE engage does to her"
+  - "Lane bullies at the top (Paige, Apollo at S) \u2014 0 base regen and 730 HP mean\
+    \ she loses the attrition lane she is supposed to win"
+  last_changed_patch: Halloween 2026 + Gameplay Update
+  notes: "10-30 Halloween + Gameplay Update: Lurking Terrors fear buildup 1.3->2s,\
+    \ T3 immunity -> 50% damage reduction, no fear from >50\xB0 above/below the target's\
+    \ view; base gun damage -10%, Healing Needles 25->22 (T2 +20->+16) but spirit\
+    \ scaling 0.2->0.24; Leech Therapy ground leeches 180s -> 120s + 3s/min and cleared\
+    \ on round reset. Anti-heal buffs land on a dedicated healer. B held, trend stable\
+    \ -> falling.\n7-day check-in (2026-10-27): tier B -> B, WR 51%, PR 63% over 607252\
+    \ matches. Data overrides the day-0 read: Swift Striker, High-Velocity Rounds\
+    \ and Active Reload show no meaningful share (Titanic Magazine is the weapon core\
+    \ at 98% / 6.7m), and the 7-day spread contains none of the dash assassins the\
+    \ fear-cone thesis predicted. Extra Regen is not the trap the previous note called\
+    \ it \u2014 97% at 2.1m with a baseline win rate makes it a mandatory lane tax\
+    \ for 0 base regen, indifferent rather than informative. Changelog: released 2026-10-20\
+    \ in Shh... This Won't Hurt a Bit., first full-week check (7.3k matches, no creator\
+    \ content); nearly every item WR sits at 50.5-51%, so build-level signals are\
+    \ weak and confidence is capped."
+  builds:
+  - name: Mag-dump sustain
+    damage: gun
+    core_items:
+    - Extra Regen
+    - Extended Magazine
+    - Titanic Magazine
+    - Extra Stamina
+    - Kinetic Dash
+    popularity: primary
+    notes: 'The build lands before 10 minutes and buys uptime, not damage: Titanic
+      Magazine (98%) is her fire-rate package and Kinetic Dash plus Extra Stamina
+      buy the dash her kit lacks. Healing Booster is out now that it lost Extra Regen
+      and +3 flat regen, so Extra Regen carries the lane alone.'
+  - name: Cooldown/Duration spirit
+    damage: spirit
+    core_items:
+    - Extra Spirit
+    - Arcane Surge
+    - Improved Spirit
+    - Duration Extender
+    - Superior Cooldown
+    - Superior Duration
+    popularity: secondary
+    notes: "Every item she buys after ~18 minutes in these games is spirit, and Superior\
+      \ Cooldown (52.7%) and Superior Duration (52.0%) are her two best non-luxury\
+      \ win rates \u2014 ability uptime, not raw spirit, is the payload. Lean on Healing\
+      \ Needles' 0.2->0.24 spirit scaling rather than flat heal-per-shot, which was\
+      \ trimmed twice."
+  - name: Ricochet gun carry
+    damage: gun
+    core_items:
+    - Titanic Magazine
+    - Extended Magazine
+    - Healing Booster
+    - Kinetic Dash
+    - Ricochet
+    popularity: niche
+    notes: Ricochet's 59.1% is the sample's biggest outlier and the natural T4 for
+      a charge economy fed by gun damage, but a 27-minute buy time means part of that
+      win rate is 'already winning'.
+  matchups:
+    beats:
+    - Billy
+    - Mina
+    - Solomon
+    - Shiv
+    - Pocket
+    loses_to:
+    - Baba
+    - Dynamo
+    - Celeste
+    - Wraith
+    - Ivy
+  matchup_notes: "Lurking Terrors does its job on melee frontlines \u2014 Billy 59%,\
+    \ Shiv 55%, Pocket 55% \u2014 but the day-0 claim that it taxes dash assassins\
+    \ is unproven: Holliday, Calico, Yamato and Drifter do not appear as wins anywhere\
+    \ in the window. Losses cluster at range and on AoE engage: Baba 43%, Celeste\
+    \ 45%, Wraith 46% all trade from outside the cone, and Dynamo's 45% is a grouped\
+    \ initiation beating her single-target heal."
+  confidence: 0.6
+  released_on: '2026-10-20'
   provisional: false
 
 

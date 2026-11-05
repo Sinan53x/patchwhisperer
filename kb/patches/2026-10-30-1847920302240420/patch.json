@@ -468,7 +468,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 3077079169,
    "entity_name": "High-Velocity Rounds",
@@ -482,7 +482,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 690458959,
    "entity_name": "Express Shot",
@@ -496,7 +496,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 2095565695,
    "entity_name": "Point Blank",
@@ -510,7 +510,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 2481177645,
    "entity_name": "Hunter's Aura",
@@ -524,7 +524,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1798666702,
    "entity_name": "Shadow Weave",
@@ -538,7 +538,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1798666702,
    "entity_name": "Shadow Weave",
@@ -552,7 +552,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1798666702,
    "entity_name": "Shadow Weave",
@@ -566,7 +566,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1798666702,
    "entity_name": "Shadow Weave",
@@ -580,7 +580,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 3696726732,
    "entity_name": "Toxic Bullets",
@@ -594,7 +594,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 673001892,
    "entity_name": "Armor Piercer",
@@ -608,7 +608,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 365620721,
    "entity_name": "Glass Cannon",
@@ -622,7 +622,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 2226497419,
    "entity_name": "Spiritual Overflow",
@@ -636,7 +636,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 3884003354,
    "entity_name": "Crippling Headshot",
@@ -650,7 +650,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 2462046703,
    "entity_name": "Golden Goose Egg",
@@ -664,7 +664,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1219329868,
    "entity_name": "Spirit Sap",
@@ -678,7 +678,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1219329868,
    "entity_name": "Spirit Sap",
@@ -692,7 +692,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1102081447,
    "entity_name": "Mystic Slow",
@@ -706,7 +706,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 3144988365,
    "entity_name": "Decay",
@@ -720,7 +720,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 2947183272,
    "entity_name": "Radiant Regeneration",
@@ -734,7 +734,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 2947183272,
    "entity_name": "Radiant Regeneration",
@@ -748,7 +748,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 2947183272,
    "entity_name": "Radiant Regeneration",
@@ -762,7 +762,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 2947183272,
    "entity_name": "Radiant Regeneration",
@@ -776,7 +776,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 619484391,
    "entity_name": "Silence Wave",
@@ -790,7 +790,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 395944548,
    "entity_name": "Torment Pulse",
@@ -804,7 +804,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 630839635,
    "entity_name": "Echo Shard",
@@ -818,7 +818,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 2142980412,
    "entity_name": "Focus Lens",
@@ -832,7 +832,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 2142980412,
    "entity_name": "Focus Lens",
@@ -846,7 +846,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 493591231,
    "entity_name": "Lightning Scroll",
@@ -860,7 +860,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 493591231,
    "entity_name": "Lightning Scroll",
@@ -874,7 +874,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 4204808176,
    "entity_name": "Rebuttal",
@@ -888,7 +888,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1235347618,
    "entity_name": "Battle Vest",
@@ -902,7 +902,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 499683006,
    "entity_name": "Bullet Lifesteal",
@@ -916,7 +916,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 499683006,
    "entity_name": "Bullet Lifesteal",
@@ -930,7 +930,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 2603935618,
    "entity_name": "Healbane",
@@ -944,7 +944,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 2603935618,
    "entity_name": "Healbane",
@@ -958,7 +958,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 2566692615,
    "entity_name": "Healing Booster",
@@ -972,7 +972,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 2566692615,
    "entity_name": "Healing Booster",
@@ -986,7 +986,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 2566692615,
    "entity_name": "Healing Booster",
@@ -1000,7 +1000,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 3361075077,
    "entity_name": "Return Fire",
@@ -1014,7 +1014,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 3361075077,
    "entity_name": "Return Fire",
@@ -1028,7 +1028,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 876563814,
    "entity_name": "Spirit Lifesteal",
@@ -1042,7 +1042,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 876563814,
    "entity_name": "Spirit Lifesteal",
@@ -1056,7 +1056,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 112198670,
    "entity_name": "Spirit Shielding",
@@ -1070,7 +1070,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 3140772621,
    "entity_name": "Bullet Resilience",
@@ -1084,7 +1084,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 3140772621,
    "entity_name": "Bullet Resilience",
@@ -1098,7 +1098,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1409190604,
    "entity_name": "Fury Trance",
@@ -1112,7 +1112,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1409190604,
    "entity_name": "Fury Trance",
@@ -1126,7 +1126,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1409190604,
    "entity_name": "Fury Trance",
@@ -1140,7 +1140,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 2956256701,
    "entity_name": "Healing Nova",
@@ -1154,7 +1154,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1378931225,
    "entity_name": "Metal Skin",
@@ -1168,7 +1168,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1797283378,
    "entity_name": "Infuser",
@@ -1182,7 +1182,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1797283378,
    "entity_name": "Infuser",
@@ -1196,7 +1196,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1797283378,
    "entity_name": "Infuser",
@@ -1210,7 +1210,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1250307611,
    "entity_name": "Juggernaut",
@@ -1224,7 +1224,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 865846625,
    "entity_name": "Leech",
@@ -1238,7 +1238,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 865846625,
    "entity_name": "Leech",
@@ -1252,7 +1252,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1055679805,
    "entity_name": "Vampiric Burst",
@@ -1266,7 +1266,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1055679805,
    "entity_name": "Vampiric Burst",
@@ -1280,7 +1280,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1055679805,
    "entity_name": "Vampiric Burst",
@@ -1294,7 +1294,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1955841979,
    "entity_name": "Spellbreaker",
@@ -1308,7 +1308,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "item",
    "entity_id": 1662311306,
    "entity_name": "Divine Barrier",
@@ -1322,7 +1322,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Items",
    "entity_type": "system",
    "entity_id": null,
    "entity_name": "General",
@@ -1336,7 +1336,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 6,
    "entity_name": "Abrams",
@@ -1350,7 +1350,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 6,
    "entity_name": "Abrams",
@@ -1364,7 +1364,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 6,
    "entity_name": "Abrams",
@@ -1378,7 +1378,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 77,
    "entity_name": "Apollo",
@@ -1392,7 +1392,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 77,
    "entity_name": "Apollo",
@@ -1406,7 +1406,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 77,
    "entity_name": "Apollo",
@@ -1420,7 +1420,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 77,
    "entity_name": "Apollo",
@@ -1434,7 +1434,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 77,
    "entity_name": "Apollo",
@@ -1448,7 +1448,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 77,
    "entity_name": "Apollo",
@@ -1462,7 +1462,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 77,
    "entity_name": "Apollo",
@@ -1476,7 +1476,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 88,
    "entity_name": "Baba",
@@ -1490,7 +1490,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 88,
    "entity_name": "Baba",
@@ -1504,7 +1504,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 88,
    "entity_name": "Baba",
@@ -1518,7 +1518,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 88,
    "entity_name": "Baba",
@@ -1532,7 +1532,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 88,
    "entity_name": "Baba",
@@ -1546,7 +1546,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 88,
    "entity_name": "Baba",
@@ -1560,7 +1560,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 88,
    "entity_name": "Baba",
@@ -1574,7 +1574,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 88,
    "entity_name": "Baba",
@@ -1588,7 +1588,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 88,
    "entity_name": "Baba",
@@ -1602,7 +1602,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 88,
    "entity_name": "Baba",
@@ -1616,7 +1616,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 88,
    "entity_name": "Baba",
@@ -1630,7 +1630,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 88,
    "entity_name": "Baba",
@@ -1644,7 +1644,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 72,
    "entity_name": "Billy",
@@ -1658,7 +1658,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 72,
    "entity_name": "Billy",
@@ -1672,7 +1672,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 16,
    "entity_name": "Calico",
@@ -1686,7 +1686,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 16,
    "entity_name": "Calico",
@@ -1700,7 +1700,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 81,
    "entity_name": "Celeste",
@@ -1714,7 +1714,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 78,
    "entity_name": "Deadman Danny",
@@ -1728,7 +1728,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 78,
    "entity_name": "Deadman Danny",
@@ -1742,7 +1742,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 78,
    "entity_name": "Deadman Danny",
@@ -1756,7 +1756,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 78,
    "entity_name": "Deadman Danny",
@@ -1770,7 +1770,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 78,
    "entity_name": "Deadman Danny",
@@ -1784,7 +1784,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 69,
    "entity_name": "The Doorman",
@@ -1798,7 +1798,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 69,
    "entity_name": "The Doorman",
@@ -1812,7 +1812,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 64,
    "entity_name": "Drifter",
@@ -1826,7 +1826,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 64,
    "entity_name": "Drifter",
@@ -1840,7 +1840,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 64,
    "entity_name": "Drifter",
@@ -1854,7 +1854,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 76,
    "entity_name": "Graves",
@@ -1868,7 +1868,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 76,
    "entity_name": "Graves",
@@ -1882,7 +1882,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 76,
    "entity_name": "Graves",
@@ -1896,7 +1896,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 76,
    "entity_name": "Graves",
@@ -1910,7 +1910,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 76,
    "entity_name": "Graves",
@@ -1924,7 +1924,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 76,
    "entity_name": "Graves",
@@ -1938,7 +1938,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 17,
    "entity_name": "Grey Talon",
@@ -1952,7 +1952,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 17,
    "entity_name": "Grey Talon",
@@ -1966,7 +1966,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 17,
    "entity_name": "Grey Talon",
@@ -1980,7 +1980,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 17,
    "entity_name": "Grey Talon",
@@ -1994,7 +1994,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 1,
    "entity_name": "Infernus",
@@ -2008,7 +2008,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 1,
    "entity_name": "Infernus",
@@ -2022,7 +2022,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 13,
    "entity_name": "Haze",
@@ -2036,7 +2036,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 12,
    "entity_name": "Kelvin",
@@ -2050,7 +2050,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 12,
    "entity_name": "Kelvin",
@@ -2064,7 +2064,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 12,
    "entity_name": "Kelvin",
@@ -2078,7 +2078,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 12,
    "entity_name": "Kelvin",
@@ -2092,7 +2092,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 4,
    "entity_name": "Lady Geist",
@@ -2106,7 +2106,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 31,
    "entity_name": "Lash",
@@ -2120,7 +2120,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 31,
    "entity_name": "Lash",
@@ -2134,7 +2134,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 8,
    "entity_name": "McGinnis",
@@ -2148,7 +2148,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 8,
    "entity_name": "McGinnis",
@@ -2162,7 +2162,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 52,
    "entity_name": "Mirage",
@@ -2176,7 +2176,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 52,
    "entity_name": "Mirage",
@@ -2190,7 +2190,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 52,
    "entity_name": "Mirage",
@@ -2204,7 +2204,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 52,
    "entity_name": "Mirage",
@@ -2218,7 +2218,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 52,
    "entity_name": "Mirage",
@@ -2232,7 +2232,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 52,
    "entity_name": "Mirage",
@@ -2246,7 +2246,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 52,
    "entity_name": "Mirage",
@@ -2260,7 +2260,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 52,
    "entity_name": "Mirage",
@@ -2274,7 +2274,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 52,
    "entity_name": "Mirage",
@@ -2288,7 +2288,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 52,
    "entity_name": "Mirage",
@@ -2302,7 +2302,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 18,
    "entity_name": "Mo & Krill",
@@ -2316,7 +2316,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 18,
    "entity_name": "Mo & Krill",
@@ -2330,7 +2330,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 18,
    "entity_name": "Mo & Krill",
@@ -2344,7 +2344,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 87,
    "entity_name": "Nurse Harrow",
@@ -2358,7 +2358,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 87,
    "entity_name": "Nurse Harrow",
@@ -2372,7 +2372,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 87,
    "entity_name": "Nurse Harrow",
@@ -2386,7 +2386,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 87,
    "entity_name": "Nurse Harrow",
@@ -2400,7 +2400,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 87,
    "entity_name": "Nurse Harrow",
@@ -2414,7 +2414,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 87,
    "entity_name": "Nurse Harrow",
@@ -2428,7 +2428,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 87,
    "entity_name": "Nurse Harrow",
@@ -2442,7 +2442,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 87,
    "entity_name": "Nurse Harrow",
@@ -2456,7 +2456,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 87,
    "entity_name": "Nurse Harrow",
@@ -2470,7 +2470,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 87,
    "entity_name": "Nurse Harrow",
@@ -2484,7 +2484,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 87,
    "entity_name": "Nurse Harrow",
@@ -2498,7 +2498,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 67,
    "entity_name": "Paige",
@@ -2512,7 +2512,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 67,
    "entity_name": "Paige",
@@ -2526,7 +2526,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 10,
    "entity_name": "Paradox",
@@ -2540,7 +2540,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 84,
    "entity_name": "Rat King",
@@ -2554,7 +2554,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 84,
    "entity_name": "Rat King",
@@ -2568,7 +2568,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 84,
    "entity_name": "Rat King",
@@ -2582,7 +2582,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 84,
    "entity_name": "Rat King",
@@ -2596,7 +2596,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 84,
    "entity_name": "Rat King",
@@ -2610,7 +2610,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 84,
    "entity_name": "Rat King",
@@ -2624,7 +2624,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 84,
    "entity_name": "Rat King",
@@ -2638,7 +2638,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 84,
    "entity_name": "Rat King",
@@ -2652,7 +2652,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 84,
    "entity_name": "Rat King",
@@ -2666,7 +2666,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 84,
    "entity_name": "Rat King",
@@ -2680,7 +2680,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 2,
    "entity_name": "Seven",
@@ -2694,7 +2694,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 19,
    "entity_name": "Shiv",
@@ -2708,7 +2708,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 19,
    "entity_name": "Shiv",
@@ -2722,7 +2722,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 19,
    "entity_name": "Shiv",
@@ -2736,7 +2736,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 19,
    "entity_name": "Shiv",
@@ -2750,7 +2750,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 19,
    "entity_name": "Shiv",
@@ -2764,7 +2764,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 19,
    "entity_name": "Shiv",
@@ -2778,7 +2778,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 80,
    "entity_name": "Silver",
@@ -2792,7 +2792,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 80,
    "entity_name": "Silver",
@@ -2806,7 +2806,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 80,
    "entity_name": "Silver",
@@ -2820,7 +2820,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 80,
    "entity_name": "Silver",
@@ -2834,7 +2834,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -2848,7 +2848,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -2862,7 +2862,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -2876,7 +2876,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -2890,7 +2890,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -2904,7 +2904,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -2918,7 +2918,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -2932,7 +2932,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -2946,7 +2946,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -2960,7 +2960,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -2974,7 +2974,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -2988,7 +2988,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -3002,7 +3002,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -3016,7 +3016,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -3030,7 +3030,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -3044,7 +3044,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -3058,7 +3058,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -3072,7 +3072,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -3086,7 +3086,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 85,
    "entity_name": "Solomon",
@@ -3100,7 +3100,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 65,
    "entity_name": "Venator",
@@ -3114,7 +3114,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 65,
    "entity_name": "Venator",
@@ -3128,7 +3128,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 66,
    "entity_name": "Victor",
@@ -3142,7 +3142,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 86,
    "entity_name": "Violet",
@@ -3156,7 +3156,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 86,
    "entity_name": "Violet",
@@ -3170,7 +3170,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 86,
    "entity_name": "Violet",
@@ -3184,7 +3184,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 86,
    "entity_name": "Violet",
@@ -3198,7 +3198,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 86,
    "entity_name": "Violet",
@@ -3212,7 +3212,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 86,
    "entity_name": "Violet",
@@ -3226,7 +3226,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 86,
    "entity_name": "Violet",
@@ -3240,7 +3240,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 86,
    "entity_name": "Violet",
@@ -3254,7 +3254,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 86,
    "entity_name": "Violet",
@@ -3268,7 +3268,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 86,
    "entity_name": "Violet",
@@ -3282,7 +3282,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 86,
    "entity_name": "Violet",
@@ -3296,7 +3296,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 86,
    "entity_name": "Violet",
@@ -3310,7 +3310,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 86,
    "entity_name": "Violet",
@@ -3324,7 +3324,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 86,
    "entity_name": "Violet",
@@ -3338,7 +3338,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 35,
    "entity_name": "Viscous",
@@ -3352,7 +3352,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 35,
    "entity_name": "Viscous",
@@ -3366,7 +3366,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 35,
    "entity_name": "Viscous",
@@ -3380,7 +3380,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 35,
    "entity_name": "Viscous",
@@ -3394,7 +3394,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 25,
    "entity_name": "Warden",
@@ -3408,7 +3408,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 25,
    "entity_name": "Warden",
@@ -3422,7 +3422,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 25,
    "entity_name": "Warden",
@@ -3436,7 +3436,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 25,
    "entity_name": "Warden",
@@ -3450,7 +3450,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 25,
    "entity_name": "Warden",
@@ -3464,7 +3464,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 7,
    "entity_name": "Wraith",
@@ -3478,7 +3478,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 7,
    "entity_name": "Wraith",
@@ -3492,7 +3492,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 7,
    "entity_name": "Wraith",
@@ -3506,7 +3506,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 27,
    "entity_name": "Yamato",
@@ -3520,7 +3520,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 27,
    "entity_name": "Yamato",
@@ -3534,7 +3534,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 27,
    "entity_name": "Yamato",
@@ -3548,7 +3548,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 27,
    "entity_name": "Yamato",
@@ -3562,7 +3562,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Heroes",
    "entity_type": "hero",
    "entity_id": 27,
    "entity_name": "Yamato",
@@ -3576,21 +3576,7 @@
    "resolved": true
   },
   {
-   "section": "General",
-   "entity_type": "system",
-   "entity_id": null,
-   "entity_name": "General",
-   "ability": null,
-   "tier": null,
-   "field": null,
-   "old": null,
-   "new": null,
-   "raw": "Street Brawl:",
-   "direction": "neutral",
-   "resolved": true
-  },
-  {
-   "section": "General",
+   "section": "Street Brawl",
    "entity_type": "hero",
    "entity_id": 78,
    "entity_name": "Deadman Danny",
@@ -3604,7 +3590,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Street Brawl",
    "entity_type": "hero",
    "entity_id": 78,
    "entity_name": "Deadman Danny",
@@ -3618,7 +3604,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Street Brawl",
    "entity_type": "hero",
    "entity_id": 87,
    "entity_name": "Nurse Harrow",
@@ -3632,7 +3618,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Street Brawl",
    "entity_type": "hero",
    "entity_id": 87,
    "entity_name": "Nurse Harrow",
@@ -3646,7 +3632,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Street Brawl",
    "entity_type": "hero",
    "entity_id": 87,
    "entity_name": "Nurse Harrow",
@@ -3660,7 +3646,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Street Brawl",
    "entity_type": "hero",
    "entity_id": 67,
    "entity_name": "Paige",
@@ -3674,7 +3660,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Street Brawl",
    "entity_type": "hero",
    "entity_id": 84,
    "entity_name": "Rat King",
@@ -3688,7 +3674,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Street Brawl",
    "entity_type": "hero",
    "entity_id": 84,
    "entity_name": "Rat King",
@@ -3702,7 +3688,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Street Brawl",
    "entity_type": "hero",
    "entity_id": 84,
    "entity_name": "Rat King",
@@ -3716,7 +3702,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Street Brawl",
    "entity_type": "hero",
    "entity_id": 84,
    "entity_name": "Rat King",
@@ -3730,7 +3716,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Street Brawl",
    "entity_type": "hero",
    "entity_id": 84,
    "entity_name": "Rat King",
@@ -3744,7 +3730,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Street Brawl",
    "entity_type": "hero",
    "entity_id": 86,
    "entity_name": "Violet",
@@ -3758,7 +3744,7 @@
    "resolved": true
   },
   {
-   "section": "General",
+   "section": "Street Brawl",
    "entity_type": "hero",
    "entity_id": 86,
    "entity_name": "Violet",

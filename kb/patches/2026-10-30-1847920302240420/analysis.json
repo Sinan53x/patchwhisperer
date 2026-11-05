@@ -36,7 +36,7 @@
    },
    {
     "system": "Breakables / crate economy + Halloween Cauldrons",
-    "change_summary": "Breakables growth values drop 10%, while new Halloween Cauldrons (broken with Heavy Melee) drop Candy granting a temporary Sugar Rush buff.",
+    "change_summary": "Breakables growth values drop 10%, while new Halloween Cauldrons (broken with Heavy Melee) drop Candy granting a temporary Sugar Rush buff. The Cauldrons were limited to the Halloween event, which ended November 2.",
     "driving_changes": [
      "Breakables growth values reduced by 10%",
      "With a Heavy Melee, break the cauldron to pick up a piece of Candy and stash it in your pocket for later... consume the candy to grant yourself a boost of energy with the temporary Sugar Rush buff"
@@ -55,14 +55,14 @@
    },
    {
     "system": "Movement / Steam Vents / tunnels / air drag",
-    "change_summary": "Steam Vents are reworked to grant +150% stamina regen (from the KB's invisibility roams), tunnel move speed drops +70%\u2192+50%, and the slow-to-air-drag ratio rises 0.35\u21920.5.",
+    "change_summary": "Steam Vents keep their invisibility and now also add +150% stamina regen; tunnel move speed drops +70%\u2192+50%, and the slow-to-air-drag ratio rises 0.35\u21920.5.",
     "driving_changes": [
      "Steam Vents now increase stamina regeneration by 150%",
      "Move speed in tunnels reduced from +70% to +50%",
      "Move slow to air drag ratio increased from 0.35 to 0.5"
     ],
     "magnitude": "moderate",
-    "effect_on_play": "Vents shift from a stealth-gank tool to a stamina/kiting tool, cutting the free approach angle roamers had; tunnel rotations slow, tightening map tempo; and the higher air-drag ratio taxes flyers harder whenever they're slowed."
+    "effect_on_play": "Vents are now a stamina stop as well as a stealth approach; tunnel rotations slow, tightening map tempo; and the higher air-drag ratio taxes flyers harder whenever they're slowed."
    },
    {
     "system": "Ranked roster / bans",
@@ -84,7 +84,7 @@
     "archetype": "tank/frontline",
     "direction": "up",
     "magnitude": "moderate",
-    "why": "Heavy Melee Cauldrons add a new candy/Sugar Rush pickup and Healing Snacks 10%\u219214% makes camp chip damage cheaper to absorb."
+    "why": "Healing Snacks 10%\u219214% makes camp chip damage cheaper to absorb."
    },
    {
     "archetype": "late scaler",
@@ -95,8 +95,8 @@
    {
     "archetype": "mobile assassin",
     "direction": "down",
-    "magnitude": "moderate",
-    "why": "Steam Vents reworked from invisibility to stamina regen removes the free approach, and tunnels +70%\u2192+50% slows rotations."
+    "magnitude": "minor",
+    "why": "Tunnels +70%\u2192+50% slows the rotations roamers depend on."
    },
    {
     "archetype": "poke/siege",
@@ -117,7 +117,7 @@
     "why": "Breakables growth -10% and slower tunnel rotations reduce the value of shoving-and-rotating over farming Haunts."
    }
   ],
-  "intent_read": "Valve is deliberately re-opening the comeback valve it closed in prior patches: the multi-pronged behind-team package (gold cap, Haunted Souls secure, tick souls) plus trimmed breakable growth targets the 'leads stick' problem the KB flagged. The Haunt bounty/HP bump and Cauldrons push income further off-lane and toward Heavy Melee/AoE clearers, while the Steam Vent and tunnel changes pull back the free-roam gank tempo that made corridors so strong."
+  "intent_read": "Valve is deliberately re-opening the comeback valve it closed in prior patches: the multi-pronged behind-team package (gold cap, Haunted Souls secure, tick souls) plus trimmed breakable growth targets the 'leads stick' problem the KB flagged. The Haunt bounty/HP bump and Cauldrons push income further off-lane and toward Heavy Melee/AoE clearers, while the tunnel change pulls back the free-roam gank tempo that made corridors so strong."
  },
  "items": {
   "items": [
@@ -275,13 +275,13 @@
     "item": "Shadow Weave",
     "direction": "rework",
     "magnitude": "moderate",
-    "summary": "Trades fire rate and melee damage for a bigger +50% ambush weapon-damage amp that needs 6s stealthed to charge and now applies to the ability that breaks stealth \u2014 a slower, burstier ambush. With Steam Vents losing invisibility this patch, Shadow Weave is again the only invis-engage tool, partly offsetting the tempo cost.",
+    "summary": "Trades fire rate and melee damage for a bigger +50% ambush weapon-damage amp that needs 6s stealthed to charge and now applies to the ability that breaks stealth \u2014 a slower, burstier ambush.",
     "affected_heroes": [
      {
       "hero": "Warden",
       "relationship": "core",
       "effect": "neutral",
-      "why": "Bigger ambush amp but the 6s buildup slows his walk-up cage; regains exclusivity as vents lose invis."
+      "why": "Bigger ambush amp but the 6s buildup slows his walk-up cage."
      }
     ],
     "build_shift": "Becomes a pure gun-carry ambush item rather than a melee/cage tool.",
@@ -842,7 +842,7 @@
     "item": "Rebuttal",
     "direction": "nerf",
     "magnitude": "minor",
-    "summary": "Parry cooldown reduction drops from -1.75s to -1.25s, so you parry less often \u2014 a straight trim to the parry-utility item despite the buff tag.",
+    "summary": "Parry cooldown reduction drops from -1.75s to -1.25s, so you parry less often \u2014 a straight trim to the parry-utility item.",
     "affected_heroes": [],
     "build_shift": "",
     "rows": [
@@ -1491,8 +1491,7 @@
   ],
   "notable_item_stories": [
    "Anti-heal is the patch's clearest theme: Decay, Toxic Bullets and Crippling Headshot buffed and Healbane now stacking, while Radiant Regeneration and Healing Booster are gutted \u2014 sustain is attacked from both sides.",
-   "Regen is out, lifesteal is in: Radiant Regeneration and Healing Booster nerfed while Bullet/Spirit Lifesteal, Leech, Infuser and Vampiric Burst all buffed, shifting sustain from regen stacking to in-fight lifesteal.",
-   "Invisibility consolidates: Steam Vents lose invisibility and Shadow Weave is reworked into the sole invis-engage tool, restoring Warden's exclusivity even as the item's ambush pattern slows."
+   "Regen is out, lifesteal is in: Radiant Regeneration and Healing Booster nerfed while Bullet/Spirit Lifesteal, Leech, Infuser and Vampiric Burst all buffed, shifting sustain from regen stacking to in-fight lifesteal."
   ]
  },
  "heroes": {
@@ -1543,7 +1542,7 @@
    },
    {
     "hero": "Seven",
-    "in_notes": false,
+    "in_notes": true,
     "direction": "up",
     "magnitude": "moderate",
     "confidence": 0.6,
@@ -1583,15 +1582,14 @@
     "direct_reasons": [],
     "indirect_reasons": [
      "High-Velocity Rounds base bullet velocity 60%\u219245% trims her opening max-range poke \u2014 the exact window her gun build buys it for.",
-     "Move slow to air-drag ratio 0.35\u21920.5 taxes her harder whenever she is slowed mid-flight, compounding the existing flyer tax.",
-     "Steam Vents losing invisibility removes a free-approach tool from the roamers that dive her, which partly offsets the above."
+     "Move slow to air-drag ratio 0.35\u21920.5 taxes her harder whenever she is slowed mid-flight, compounding the existing flyer tax."
     ],
     "build_changes": [
      "Upgrade off base High-Velocity Rounds faster to recover velocity rather than sitting on the T2."
     ],
     "tier_before": "A",
     "tier_after": "B",
-    "one_liner": "Slower bullets and heavier air drag on a 48.7% flyer \u2014 the A was already generous.",
+    "one_liner": "Slower bullets and heavier air drag on a flyer.",
     "verdict": "watch",
     "rows": []
    },
@@ -1783,7 +1781,6 @@
     ],
     "indirect_reasons": [
      "High-Velocity Rounds base velocity 60%\u219245% and Express Shot secondary fire -5% both hit her carbine-sniper core, trimming the max-range picks the swap buff is meant to set up.",
-     "Steam Vents losing invisibility removes the roamer approach the KB credits for her rising pick setups \u2014 a direct hit to her identity.",
      "Echo Shard post-cast 0.5s\u21920.2s speeds her niche bomb combo, but usage data already had it outside her top 15."
     ],
     "build_changes": [
@@ -1791,7 +1788,7 @@
     ],
     "tier_before": "B",
     "tier_after": "B",
-    "one_liner": "Swap comes up more often, but her poke items and vent invis both got trimmed.",
+    "one_liner": "Swap comes up more often, but her poke items got trimmed.",
     "verdict": "watch",
     "rows": [
      {
@@ -1926,16 +1923,13 @@
     "confidence": 0.6,
     "direct_reasons": [],
     "indirect_reasons": [
-     "Steam Vents reworked from invisibility to +150% stamina regen removes the free roam approach the KB credits for her pick routes.",
      "Tunnel move speed +70%\u2192+50% slows the rotations her lasso picks depend on.",
      "The comeback package lengthens games and softens lane leads \u2014 directly against a tempo assassin sitting at 46.3% WR."
     ],
-    "build_changes": [
-     "Lean on the stamina hybrid line (Sprint Boots, Extra Stamina, Recharging Rush) now that vents give stamina rather than stealth."
-    ],
+    "build_changes": [],
     "tier_before": "A",
-    "tier_after": "B",
-    "one_liner": "Her two roam tools \u2014 vent invis and fast tunnels \u2014 both got pulled back.",
+    "tier_after": "A",
+    "one_liner": "Slower tunnels cost the rotations her lasso picks depend on.",
     "verdict": "watch",
     "rows": []
    },
@@ -1949,7 +1943,6 @@
     "indirect_reasons": [
      "The comeback package (non-hero gold cap 26%\u219230%, Haunted Souls up to 50% faster when behind, tick souls to the two poorest) directly softens the early lead his hook is supposed to convert.",
      "Haunt bounty +10% pays camp clearers; Bebop has no AoE clear and no crate route, so his income gap widens against the farm heroes.",
-     "Steam Vents now grant +150% stamina regen instead of invisibility \u2014 a hooked target still gets a disengage tool, so his core problem is unchanged.",
      "Echo Shard post-cast 0.5s\u21920.2s speeds his double-cast hook/bomb line, a small offset."
     ],
     "build_changes": [
@@ -1963,23 +1956,20 @@
    },
    {
     "hero": "Calico",
-    "in_notes": false,
-    "direction": "down",
+    "in_notes": true,
+    "direction": "neutral",
     "magnitude": "moderate",
     "confidence": 0.6,
     "direct_reasons": [],
     "indirect_reasons": [
-     "Steam Vents lose invisibility (now +150% stamina regen), removing the free roam approach the KB credits with extending her gank routes.",
      "Tunnel move speed +70%\u2192+50% slows the district-to-district rotations her kill-based income depends on.",
      "The comeback package (gold cap 26%\u219230%, faster Haunted Souls when behind) blunts the tempo snowball she converts kills into.",
      "Haunt bounty +10% is a real offset: camps are income she can take, unlike Tough Crates her cat form can't heavy-melee."
     ],
-    "build_changes": [
-     "Lean harder on Haunt camp income between ganks now that vent invisibility is gone."
-    ],
+    "build_changes": [],
     "tier_before": "A",
-    "tier_after": "B",
-    "one_liner": "Both T3s got stronger, but Steam Vents no longer give her a free approach.",
+    "tier_after": "A",
+    "one_liner": "Both T3s got stronger; slower tunnels are the only drag on her roams.",
     "verdict": "watch",
     "rows": [
      {
@@ -2016,7 +2006,6 @@
     "indirect_reasons": [
      "High-Velocity Rounds bullet velocity 60%\u219245% cuts his max-range lane poke in the first ten minutes.",
      "Move slow to air-drag ratio 0.35\u21920.5 taxes him harder whenever he's slowed mid-flight.",
-     "Steam Vents losing invisibility removes the free roamer approach the KB flagged as his biggest structural problem \u2014 a genuine gain.",
      "Violet's Still Life sketches now give him Spirit Power instead of Weapon Damage, trimming his gun-lane half."
     ],
     "build_changes": [
@@ -2205,7 +2194,6 @@
      "Last Stand T2 goes +40.5\u2192+50 DPS and -30s\u2192-40s cooldown, a real mid-game power spike."
     ],
     "indirect_reasons": [
-     "Steam Vents lose invisibility, restoring Shadow Weave as the only invis-engage tool \u2014 the exclusivity the KB said he had lost.",
      "Shadow Weave's rework (+50% ambush weapon damage, applies to the breaking ability) suits his gun-carry ambush more than the old melee/fire-rate version.",
      "Tempo shift toward scaling plus the comeback package (gold cap 30%, faster Haunted Souls when behind) gives his late gun spike room to arrive.",
      "High-Velocity Rounds velocity 60%\u219245% trims his early poke; Spirit Lifesteal +2 spirit/+2% lifesteal helps his sustain slot."
@@ -2215,8 +2203,8 @@
      "Upgrade off base High-Velocity Rounds faster to offset the velocity cut."
     ],
     "tier_before": "C",
-    "tier_after": "B",
-    "one_liner": "Got his invis-engage back and a real Last Stand spike; still waits on a clock.",
+    "tier_after": "C",
+    "one_liner": "A real Last Stand spike and a faster flask; still waits on a clock.",
     "verdict": "watch",
     "rows": [
      {
@@ -2278,7 +2266,7 @@
      "Hunter's Aura now requires line of sight, removing the through-wall shred her late spirit-burst build buys it for.",
      "Torment Pulse melee resistance 18%\u219222% buffs her late spirit build; Healbane rework is neutral for her.",
      "Haunt bounty +10% and tougher camps reward her punch AoE, still the fastest grouped-camp clear in the game.",
-     "Mobile assassin archetype down (vents lose invisibility, tunnels +70%\u2192+50%) trims the roam tempo she lives on."
+     "Mobile assassin archetype down (tunnels +70%\u2192+50%) trims the roam tempo she lives on."
     ],
     "build_changes": [
      "Re-evaluate Hunter's Aura in the late spirit-burst line; it no longer shreds through walls in corridor fights."
@@ -2335,7 +2323,7 @@
    {
     "hero": "Lash",
     "in_notes": true,
-    "direction": "down",
+    "direction": "neutral",
     "magnitude": "moderate",
     "confidence": 0.6,
     "direct_reasons": [
@@ -2343,15 +2331,14 @@
      "Death Slam's cone-to-cylinder indicator is visual only."
     ],
     "indirect_reasons": [
-     "Steam Vents lose invisibility (now +150% stamina regen), removing the free dive approach the KB credits with extending his routes.",
      "Tunnel move speed +70%\u2192+50% slows the rotations that set up Ground Strike.",
      "The comeback package (gold cap 26%\u219230%, faster Haunted Souls when behind, tick souls to the two poorest) blunts the early snowball an S-tier tempo initiator converts.",
      "Haunt bounty +10% pays camp clearers; Lash has no AoE farm route to take it."
     ],
     "build_changes": [],
     "tier_before": "S",
-    "tier_after": "A",
-    "one_liner": "Small Grapple buff in the notes; Steam Vents losing invisibility is what costs him.",
+    "tier_after": "S",
+    "one_liner": "Small Grapple buff in the notes; slower tunnels are the main cost.",
     "verdict": "watch",
     "rows": [
      {
@@ -2436,7 +2423,7 @@
      "The comeback package (non-hero gold cap 26%\u219230%, Haunted Souls up to 50% faster when behind, tick souls to the two poorest) restores the bail-out his farm-and-scale line lost \u2014 the KB's stated reason he rarely spikes.",
      "Haunt bounty +10% rewards his Monster Rounds/Cultist Sacrifice farm route.",
      "Echo Shard post-cast 0.5s\u21920.2s speeds reset combos, though usage data shows it near-zero on him.",
-     "Mobile assassin archetype down (vents lose invisibility) trims the roamers that dive him."
+     "Mobile assassin archetype down trims the roamers that dive him."
     ],
     "build_changes": [
      "Farming from behind is now a legitimate path back \u2014 don't concede the camp route when losing lane."
@@ -2588,13 +2575,12 @@
     "direct_reasons": [],
     "indirect_reasons": [
      "Haunt bounty +10% rewards her grouped-camp AoE clear, and the comeback package (gold cap 26%->30%, faster Haunted Souls when behind) helps a 44.8% WR hero.",
-     "Steam Vents losing invisibility removes the free dive approach the KB credited her, and tunnels +70%->+50% slows her roam.",
      "Her worst lane Ivy lost Healing Booster's Extra Regen component and flat +3 regen, but Victor gained Spirit Lifesteal, Infuser and Torment Pulse buffs and Billy got Rising Ram T3 +15%/20s."
     ],
     "build_changes": [],
     "tier_before": "C",
     "tier_after": "C",
-    "one_liner": "AoE camp clear pays more, but vents lost invis and her tank counters got tankier.",
+    "one_liner": "AoE camp clear pays more, but slower tunnels and tankier counters offset it.",
     "verdict": "watch",
     "rows": []
    },
@@ -2733,8 +2719,7 @@
     "magnitude": "moderate",
     "confidence": 0.6,
     "direct_reasons": [
-     "Base bullet damage 35->32 is a ~9% cut to the level-1 lane pressure that is her entire identity; the growth buff 0.52->0.61 only breaks even around boon 33, so she is weaker at every realistic point.",
-     "Bookwyrm T2 trail duration +2s->+1s trims her zone control."
+     "Base bullet damage 35->32 is a ~9% cut to the level-1 lane pressure that is her entire identity; the growth buff 0.52->0.61 only breaks even around boon 33, so she is weaker at every realistic point."
     ],
     "indirect_reasons": [
      "High-Velocity Rounds bullet velocity 60%->45% hits her 1.2-minute lane opener directly.",
@@ -2764,14 +2749,6 @@
       "text": null,
       "effect": "good",
       "ability": null
-     },
-     {
-      "label": "T2",
-      "old": "+2s trail duration",
-      "new": "+1s trail duration",
-      "text": null,
-      "effect": "bad",
-      "ability": "Bookwyrm"
      }
     ],
     "change_kind": "adjusted",
@@ -3038,7 +3015,7 @@
      "Hunter's Aura now needs line of sight \u2014 the through-wall shred she bought it for in clumped fights is gone (core gun-tank slot).",
      "Spirit Shielding 18%\u219215% spirit resist trims a core defensive layer into a spirit-burst patch.",
      "Anti-heal is the patch's clearest theme (Decay/Toxic Bullets/Crippling Headshot up, Healbane stacking) and it attacks her Melee Lifesteal/Restorative Shot sustain directly.",
-     "Counter-side offsets: Rat King (62% vs her) ate a huge nerf, the mobile-assassin archetype is down (Steam Vents lose invis, tunnels +70%\u2192+50%), and the tank/frontline archetype is up (Cauldrons, Healing Snacks 10%\u219214%)."
+     "Counter-side offsets: Rat King (62% vs her) ate a huge nerf, the mobile-assassin archetype is down (tunnels +70%\u2192+50%), and the tank/frontline archetype is up (Cauldrons, Healing Snacks 10%\u219214%)."
     ],
     "build_changes": [
      "Buy Point Blank as a core slot: its slow extends and its weapon damage now feeds Go For The Throat.",
@@ -3122,8 +3099,8 @@
     "confidence": 0.75,
     "direct_reasons": [
      "Base bullet damage -5% and bullet damage growth -20% cut the gun-bruiser economy he farms with.",
-     "Scrap Grenade loses damage (70\u219260, T2 +70\u2192+60, T3 300\u2192275) and radius (8m\u21926m, large explosion 14m\u219210m) \u2014 the camp-clear and teamfight AoE both shrink.",
-     "Rule, Ratannia! loses half its knockup, 20s cooldown (160\u2192180), radius (20m\u219216m, T2 +8\u2192+6m) and duration (12s\u21929s), and now goes on cooldown if he is stunned/slept before placing.",
+     "Scrap Grenade loses damage (70\u219260, T2 +70\u2192+60, T3 300\u2192275) and fuse timers stretch +0.1s, so camp clear and fight AoE both weaken.",
+     "Rule, Ratannia! loses half its knockup and 20s of cooldown (160s\u2192180s), and now goes on cooldown if he is stunned or slept before placing it.",
      "Fuse timers +0.1s give targets an extra beat to step out; only the new 0.4s minimum melee-fuse helps him."
     ],
     "indirect_reasons": [
@@ -3137,7 +3114,7 @@
     ],
     "tier_before": "S",
     "tier_after": "A",
-    "one_liner": "Grenade radius and the banner ult both got hit hard \u2014 still a frontline, no longer an auto-win.",
+    "one_liner": "Grenade damage and the banner ult (knockup, cooldown, stun-cancels) got cut; still a frontline.",
     "verdict": "watch",
     "rows": [
      {
@@ -3181,22 +3158,6 @@
       "ability": "Scrap Grenade"
      },
      {
-      "label": "Radius",
-      "old": "8m",
-      "new": "6m",
-      "text": null,
-      "effect": "bad",
-      "ability": "Scrap Grenade"
-     },
-     {
-      "label": "Large explosion",
-      "old": "14m",
-      "new": "10m",
-      "text": null,
-      "effect": "bad",
-      "ability": "Scrap Grenade"
-     },
-     {
       "label": "Fuse timers",
       "old": "0.8s/0.7s",
       "new": "0.9s/0.8s",
@@ -3224,30 +3185,6 @@
       "label": "Cooldown",
       "old": "160s",
       "new": "180s",
-      "text": null,
-      "effect": "bad",
-      "ability": "Rule, Ratannia!"
-     },
-     {
-      "label": "Radius",
-      "old": "20m",
-      "new": "16m",
-      "text": null,
-      "effect": "bad",
-      "ability": "Rule, Ratannia!"
-     },
-     {
-      "label": "T2 radius",
-      "old": "+8m",
-      "new": "+6m",
-      "text": null,
-      "effect": "bad",
-      "ability": "Rule, Ratannia!"
-     },
-     {
-      "label": "Duration",
-      "old": "12s",
-      "new": "9s",
       "text": null,
       "effect": "bad",
       "ability": "Rule, Ratannia!"
@@ -3288,7 +3225,7 @@
     ],
     "tier_before": "C",
     "tier_after": "D",
-    "one_liner": "Random brew order plus two gutted regen items is her whole gameplan taken away.",
+    "one_liner": "Random brew order and regen item cuts hurt, but she still wins more than anyone.",
     "verdict": "bench",
     "rows": [
      {
@@ -3397,7 +3334,7 @@
     ],
     "indirect_reasons": [
      "Three of his five losing matchups got hit: Rat King (huge nerf package), Baba (brew/regen gutted) and Celeste (Shining Wonder + regen items).",
-     "The mobile-dive archetype he dies to is down (Steam Vents lose invisibility, tunnels +70%\u2192+50%), and Yamato's Flying Slash range 26m\u219223m (T3 +15\u2192+8m) shortens the dive that beat him 38%.",
+     "The mobile-dive archetype he dies to is down (tunnels +70%\u2192+50%), and Yamato's Flying Slash range 26m\u219223m (T3 +15\u2192+8m) shortens the dive that beat him 38%.",
      "Divine Barrier 45s\u219255s cooldown trims his situational late item, and anti-heal stacking hurts any heal/sustain layer he buys."
     ],
     "build_changes": [
@@ -3548,14 +3485,13 @@
     "magnitude": "moderate",
     "confidence": 0.6,
     "direct_reasons": [
-     "Chimera Mk1 dominates every change: jetpack unusable while cursed, cooldown reduction per boon -0.4s\u2192-0.25s, and T3 refund on hit 50%\u219230% all cut his uptime.",
+     "Chimera Mk1 dominates the changes: jetpack unusable while cursed, slows cut its in-air impulse, and grounding pulls land reliably.",
      "Slows now cut the jetpack's in-air impulse more effectively \u2014 and even harder when movement abilities are silenced \u2014 which is the exact escape a dive-pick flyer needs.",
      "Grounding pulls now work more reliably against him, so the Silver/Bola-and-slow layer lands consistently.",
      "The Close The Deal damage bug fix (held through the ability) is the only real gain."
     ],
     "indirect_reasons": [
      "High-Velocity Rounds 60%\u219245% bullet velocity hits his lone weapon staple in the early poke window.",
-     "Steam Vents lose invisibility, removing the free approach angle his pick play used; Shadow Weave is now the only invis-engage tool.",
      "The global slow-to-air-drag ratio 0.35\u21920.5 taxes him every time he is slowed mid-flight.",
      "Anti-heal stacking (Decay -55%, Toxic Bullets 40%) and tougher Haunt camps (+10% HP) punish a 730-HP diver who commits to clear."
     ],
@@ -3565,7 +3501,7 @@
     ],
     "tier_before": "C",
     "tier_after": "C",
-    "one_liner": "Slows now eat his jetpack and Steam Vents lost invisibility \u2014 his escape got taxed twice.",
+    "one_liner": "Slows now eat his jetpack, so his escape got taxed.",
     "verdict": "watch",
     "rows": [
      {
@@ -3573,22 +3509,6 @@
       "old": null,
       "new": null,
       "text": "Jetpack unusable while cursed",
-      "effect": "bad",
-      "ability": "Chimera Mk1"
-     },
-     {
-      "label": "CDR per boon",
-      "old": "-0.4s",
-      "new": "-0.25s",
-      "text": null,
-      "effect": "bad",
-      "ability": "Chimera Mk1"
-     },
-     {
-      "label": "T3 refund",
-      "old": "50%",
-      "new": "30%",
-      "text": null,
       "effect": "bad",
       "ability": "Chimera Mk1"
      },
@@ -3627,14 +3547,14 @@
     "magnitude": "moderate",
     "confidence": 0.55,
     "direct_reasons": [
-     "Abstract Landscape is nerfed across the board: 165s\u2192180s cooldown, 6s\u21925s duration, spirit scaling 0.04\u21920.01, ends early if she dies, 0.5s\u21920.75s re-apply cooldown, and T3 no longer keeps ink alive.",
+     "Abstract Landscape is nerfed across the board: 165s\u2192180s cooldown, duration spirit scaling 0.04\u21920.01, ends early if she dies, 0.5s\u21920.75s re-apply cooldown, and T3 no longer keeps ink alive.",
      "Still Life loses reliability: stun 1.0s\u21920.9s, line of sight required at channel end even in the grace period, T1 regen only while drawing and scaling 0.25\u21920.15.",
      "T3 stun +0.35s\u2192+0.45s and the sketch-buff reshuffle are the only ups."
     ],
     "indirect_reasons": [
      "Spirit Lifesteal 6\u21928 spirit power and 13%\u219215% lifesteal is a real buff to her primary spirit-caster shell.",
      "Anti-heal stacking (Decay -55%, Healbane stacks, Toxic Bullets 40%) directly undercuts Still Life's regen talents and any Healing Booster she buys.",
-     "The dive archetype that deletes her is down (Steam Vents lose invisibility, tunnel speed +70%\u2192+50%), which partially offsets; Holliday/Vindicta are untouched."
+     "The dive archetype that deletes her is down (tunnel speed +70%\u2192+50%), which partially offsets; Holliday/Vindicta are untouched."
     ],
     "build_changes": [
      "Stop leaning on Still Life T1 regen as lane sustain \u2014 it only ticks while drawing now; put the points elsewhere.",
@@ -3697,14 +3617,6 @@
       "label": "Cooldown",
       "old": "165s",
       "new": "180s",
-      "text": null,
-      "effect": "bad",
-      "ability": "Abstract Landscape"
-     },
-     {
-      "label": "Duration",
-      "old": "6s",
-      "new": "5s",
       "text": null,
       "effect": "bad",
       "ability": "Abstract Landscape"
@@ -3899,9 +3811,9 @@
     "magnitude": "moderate",
     "confidence": 0.4,
     "direct_reasons": [
-     "Lurking Terrors is gutted: fear buildup 1.3s\u21922s, duration 7s\u21925s, T3 duration +3s\u2192+2s, T3 immunity \u2192 50% damage reduction while channelling, and no fear builds when she is more than 50 degrees above or below the target's view.",
+     "Lurking Terrors is gutted: fear buildup 1.3s\u21922s, T3 immunity \u2192 50% damage reduction while channelling, and no fear builds when she is more than 50 degrees above or below the target's view.",
      "Base gun damage -10% and Healing Needles heal-per-shot 25\u219222 (T2 +20\u2192+16) cut her throughput; only the spirit scaling 0.2\u21920.24 and Wretched Vapors T3 +15%\u2192+20% rush speed go up.",
-     "Leech Therapy fed-leech ground duration drops from a flat 180s to 120s + 3s/min and leeches clear on round reset, trimming her pre-placed map presence."
+     "Leech Therapy fed-leech ground duration drops from a flat 180s to 120s + 3s/min, trimming her pre-placed map presence."
     ],
     "indirect_reasons": [
      "Anti-heal is the patch's headline: Decay -50%\u2192-55%, Toxic Bullets 35%\u219240%, Crippling Headshot -35%\u2192-40% and Healbane now stacking \u2014 every one of them cuts a dedicated healer's output.",
@@ -3914,7 +3826,7 @@
     ],
     "tier_before": "?",
     "tier_after": "B",
-    "one_liner": "Her ult lost duration, immunity and buildup speed in a patch where anti-heal is everywhere.",
+    "one_liner": "Her ult lost full immunity and builds fear slower in a patch where anti-heal is everywhere.",
     "verdict": "watch",
     "rows": [
      {
@@ -3966,22 +3878,6 @@
       "ability": "Lurking Terrors"
      },
      {
-      "label": "Duration",
-      "old": "7s",
-      "new": "5s",
-      "text": null,
-      "effect": "bad",
-      "ability": "Lurking Terrors"
-     },
-     {
-      "label": "T3 duration",
-      "old": "+3s",
-      "new": "+2s",
-      "text": null,
-      "effect": "bad",
-      "ability": "Lurking Terrors"
-     },
-     {
       "label": "T3 channel",
       "old": "Immune to damage",
       "new": "50% reduced damage",
@@ -4004,14 +3900,6 @@
       "text": null,
       "effect": "bad",
       "ability": "Leech Therapy"
-     },
-     {
-      "label": "Round reset",
-      "old": null,
-      "new": null,
-      "text": "Ground leeches removed",
-      "effect": "bad",
-      "ability": "Leech Therapy"
      }
     ],
     "change_kind": "nerf",
@@ -4027,7 +3915,7 @@
    "previous": "Souls sit off-lane in a coverage problem no five-man can solve; AoE clearers and Heavy Melee crate openers bank first, lane bullies convert pressure, leads stick, and tempo usually closes the lobby before a late spike.",
    "new": "Off-lane farm is richer but a farm lead is now a soft lead: trailing teams secure contested Haunted Souls faster, get tick souls to their two poorest, and can farm their way back, so games run longer and sustained-farm carries and late spikes get a real window. Sustain itself migrates from regen stacking to in-fight lifesteal, because anti-heal is everywhere.",
    "relationship": "reversal",
-   "why": "The KB's core economic read ('comeback bounties trimmed, extra souls reroute to the two lowest-econ players, leads stick') is directly undone by non-hero comeback gold 26%\u219230%, Haunted Souls securing up to 50% faster at a 20% net-worth gap, and tick souls now feeding the two poorest \u2014 while the tempo assassins who converted early leads lose Steam Vent invisibility and tunnel speed +70%\u2192+50%."
+   "why": "The KB's core economic read ('comeback bounties trimmed, extra souls reroute to the two lowest-econ players, leads stick') is directly undone by non-hero comeback gold 26%\u219230%, Haunted Souls securing up to 50% faster at a 20% net-worth gap, and tick souls now feeding the two poorest \u2014 while tunnel speed +70%\u2192+50% slows the tempo assassins who converted early leads."
   },
   "winners": [
    {
@@ -4037,7 +3925,7 @@
    },
    {
     "hero": "Warden",
-    "why": "Flask travel +40% and shred -25%\u2192-30%, Willpower +15%\u2192+20%, and Last Stand T2 +40.5\u2192+50 DPS with -30s\u2192-40s cooldown \u2014 and Steam Vents losing invisibility hands Shadow Weave back its exclusivity as the only invis-engage tool.",
+    "why": "Flask travel +40% and shred -25%\u2192-30%, Willpower +15%\u2192+20%, and Last Stand T2 +40.5\u2192+50 DPS with -30s\u2192-40s cooldown.",
     "indirect": false
    },
    {
@@ -4059,7 +3947,7 @@
   "losers": [
    {
     "hero": "Rat King",
-    "why": "Scrap Grenade damage and radius (8m\u21926m, 14m\u219210m) and Rule, Ratannia! (half knockup, 160s\u2192180s, 20m\u219216m, 12s\u21929s, CD if stunned pre-place) are gutted exactly as Haunt camps gain +10% HP \u2014 his one-button clear stops being one-button.",
+    "why": "Scrap Grenade damage and fuse timing plus Rule, Ratannia! (half knockup, 160s\u2192180s, cooldown if stunned before placing) are cut exactly as Haunt camps gain +10% HP.",
     "indirect": false
    },
    {
@@ -4095,11 +3983,6 @@
     "confidence": 0.7
    },
    {
-    "claim": "The Steam Vent rework is a targeted nerf to the roam-assassin class that the last two patches had just promoted.",
-    "why": "Vents go from invisibility to +150% stamina regen and tunnels +70%\u2192+50% speed, hitting Holliday, Calico, Lash and Bebop \u2014 heroes who bank on free approach and fast rotations \u2014 right as the comeback package blunts the early leads they convert.",
-    "confidence": 0.6
-   },
-   {
     "claim": "Return Fire reflecting Fixation is a Haze nerf disguised as a tank item buff.",
     "why": "Her stacking DoT is her only real scaling line, and the KB already flags her T4 gun items as the ceiling; putting a targeted counter-item on every frontline means she can no longer close kills into tanks alone.",
     "confidence": 0.55
@@ -4109,7 +3992,7 @@
    "Whether the comeback package actually flips leads or just lengthens games \u2014 the KB's prior comeback bounties were trimmed because they didn't move the needle.",
    "Net effect of Haunt bounty +10% against HP and damage +10%: richer camps may still net-lose income for weak clearers, widening the coverage gap the KB already flagged rather than narrowing it.",
    "How strong the new Halloween Cauldron Candy/Sugar Rush buff is \u2014 no numbers were given, so the frontline value is a guess.",
-   "Nurse Harrow's KB entry is thin and I have no prior tier, so my C-lean read is low confidence.",
+   "Nurse Harrow's KB entry is thin and I have no prior tier, so my read is low confidence.",
    "Whether the Rat King and Baba nerfs overshoot: both were tuned down in prior patches, so stacking another cut could bench them outright."
   ],
   "what_to_watch": [
@@ -4117,9 +4000,52 @@
    "Win rate of teams down 5k+ net worth at 15 minutes, before and after \u2014 that single number settles the comeback debate.",
    "Radiant Regeneration and Healing Booster pick rates versus Bullet/Spirit Lifesteal and Leech \u2014 the build-family migration in one chart.",
    "Rat King and Baba win rates at their new tiers: if they stay near 50%, the nerfs were cosmetic; if they crater, the regen-stack removal was the real killer.",
-   "Post-rework Steam Vent kill participation and tunnel-rotation frequency \u2014 did removing invisibility actually reduce gank rate, or did stamina regen replace it?",
    "Per-Haunt-type bounty and clear time: if one camp type dominates now that bounties are up 10%, farm routes re-converge and the no-memorization intent fails.",
    "High-MMR anti-heal item purchase rate (Decay/Toxic Bullets/Healbane) \u2014 a spike confirms sustain comps are being punished structurally, not just on paper."
+  ],
+  "biggest_changes": [
+   {
+    "kind": "system",
+    "subject": "Comeback economy",
+    "title": "Losing teams now farm their way back in",
+    "why": "Non-hero comeback gold cap 26%\u219230%, Haunted Souls secure up to 50% faster when behind, and tick souls now feed the two poorest players.",
+    "effect": "up"
+   },
+   {
+    "kind": "item",
+    "subject": "Radiant Regeneration",
+    "title": "Regen stacking is dead; heal only in combat",
+    "why": "Spirit-damage regen 0.35\u21920.25, heal-on-cast 65\u219240, boon scaling 1.7\u21921.4, and the heal now only fires in combat.",
+    "effect": "down"
+   },
+   {
+    "kind": "system",
+    "subject": "Jungle / Haunt camps (economy + difficulty)",
+    "title": "Camps pay 10% more and hit 10% harder",
+    "why": "Haunt base bounty and growth +10% alongside Haunt HP and damage +10% \u2014 richer farm, but only for comps that clear without bleeding.",
+    "effect": "up"
+   },
+   {
+    "kind": "system",
+    "subject": "Mid-Boss",
+    "title": "Rejuvenator is now three heavy-melee crystals",
+    "why": "Bounty halved to 1500 (+25/min) but three crystals each pay 500 (+9/min) to whoever breaks them with a heavy melee.",
+    "effect": "neutral"
+   },
+   {
+    "kind": "hero",
+    "subject": "Baba",
+    "title": "Nerfed again, but still the strongest hero",
+    "why": "Brew order is now random and silence drops 3s\u21922.75s, yet she has the highest win rate in ranked since the patch.",
+    "effect": "neutral"
+   },
+   {
+    "kind": "hero",
+    "subject": "Rat King",
+    "title": "Grenade damage and banner ult both cut",
+    "why": "Scrap Grenade damage 70\u219260, and Rule, Ratannia! loses half its knockup and 20s of cooldown (160s\u2192180s).",
+    "effect": "down"
+   }
   ]
  },
  "pool": {
@@ -4140,9 +4066,9 @@
    {
     "hero": "Warden",
     "verdict": "watch",
-    "one_liner": "Got his invis-engage back and a real Last Stand spike; the slower meta finally fits him.",
+    "one_liner": "A real Last Stand spike and a faster flask; the slower meta finally fits him.",
     "direct": "Flask travel +40% and shred -25%\u2192-30% make his poke land and stick, Willpower +15%\u2192+20% speeds the walk-up to the cage, and Last Stand T2 +40.5\u2192+50 DPS with -40s cooldown is a genuine mid-game spike.",
-    "indirect": "Steam Vents losing invisibility hands Shadow Weave back its exclusivity as the only invis-engage, and the comeback package (30% gold, faster Haunted Souls from behind) plus longer games give a late gun scaler the clock he never got.",
+    "indirect": "The comeback package (30% gold, faster Haunted Souls from behind) plus longer games give a late gun scaler the clock he never got.",
     "build_adjustments": [
      "Rekey Shadow Weave as a core in the cage-bruiser line \u2014 and plan the 6s stealthed buildup before you engage.",
      "Upgrade off base High-Velocity Rounds early; velocity 60%\u219245% trims his poke.",

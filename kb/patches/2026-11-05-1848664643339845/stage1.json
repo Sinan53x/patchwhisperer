@@ -2,9 +2,9 @@
  "systems_changed": [],
  "tempo_shift": {
   "direction": "neutral",
-  "confidence": 0.85,
-  "why": "No systems changes: the patch touches only one item (Healbane) and seven heroes, with no economy, objective, respawn, movement, slow, parry, reload, or map/jungle edits. The 10-30 comeback-and-Haunt framework stands unchanged, so tempo direction is inherited, not shifted."
+  "confidence": 0.9,
+  "why": "No systems changes: the General/systems sections are empty, and the only non-hero change is an item (Healbane), which moves builds rather than soul income, fight locations, or timers. Tempo therefore inherits the 10-30 state — comeback levers plus richer Haunts — unchanged."
  },
  "archetype_effects": [],
- "intent_read": "This is a maintenance/micro patch, not a systems patch: Valve is trimming individual outliers (Apollo, Baba, Celeste, Deadman Danny, Mo & Krill, Nurse Harrow, Rat King) and adjusting Healbane rather than reshaping how souls are earned or where fights happen. Any archetype movement here comes from hero and item numbers, not from systems, so it belongs in the hero/item analysis stage, not this one."
+ "intent_read": "A hero-and-item micro-patch on top of the 10-30 gameplay update: the hero list (Apollo, Baba, Celeste, Deadman Danny, Mo & Krill, Nurse Harrow, Rat King) plus Healbane reads as targeted cleanup of outliers from that update rather than a new systemic direction. Valve is not touching economy, comeback, map or objectives, so the 10-30 thesis — leads must be converted fast, the jungle keeps paying the trailing team — still stands. Any movement this patch comes from individual kits and anti-heal itemization, not from how the game generates souls or where fights happen."
 }

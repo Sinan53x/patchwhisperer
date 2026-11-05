@@ -2,11 +2,11 @@
  "fixes": [
   {
    "hero": "Mo & Krill",
-   "issue": "Sand Blast T2 is not a wash: both the slow (-24%→-28%) and the dash-distance cut (-26%→-28%) got stronger, so the row effect should be good, and the one_liner cites 'softer anti-heal' which appears nowhere in the notes.",
+   "issue": "The Sand Blast T2 row is marked neutral and called a wash, but both halves got stronger for Mo & Krill (-24% slow to -28%, -26% dash-distance cut to -28%), so it is a buff, not a wash.",
    "change_kind": null,
    "change_size": null,
    "verdict": null,
-   "one_liner": "Scorn and Combo buffs plus a stronger Sand Blast T2 slow make him a slightly better frontline.",
+   "one_liner": null,
    "rows": [
     {
      "label": "Scorn heal",
@@ -25,15 +25,15 @@
      "ability": "Burrow"
     },
     {
-     "label": "Sand Blast T2",
+     "label": "T2 slow",
      "old": "-24% slow / -26% dash",
-     "new": "-28% both",
+     "new": "-28% for both",
      "text": null,
      "effect": "good",
      "ability": "Sand Blast"
     },
     {
-     "label": "Combo HP/kill",
+     "label": "Combo HP",
      "old": "40",
      "new": "50",
      "text": null,

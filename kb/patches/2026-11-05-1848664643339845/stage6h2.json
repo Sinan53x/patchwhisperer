@@ -1,61 +1,76 @@
 {
  "hero_updates": {
-  "Mo & Krill": {
-   "trend": "stable",
-   "why": "Still the default sustained front line, and the 11-04 buffs give it teeth again: Scorn heal 1.3x, Combo 50 HP/kill and a wider Burrow make his grind-down lockdown convert, while the Healbane 4-stack cap cut protects that sustain from coordinated anti-heal.",
-   "last_changed_patch": "Minor Update - 11-04-2026",
-   "notes": "Minor Update 11-04: Scorn heal 1.2x->1.3x, Combo HP/kill 40->50, Burrow radius +0.5m, Sand Blast T2 slow -24%->-28%; Healbane 4-stack cap 82.2%->72% protects Scorn sustain.\nHalloween 2026: spirit per boon 1.1->0.6 and -10% spirit damage on every ability; Combo untouched, bullet per boon +4% — move one slot to gun (Bullet Lifesteal/Battle Vest). Torment Pulse +4% melee resist up; Decay's deeper self-heal penalty and Healbane heal-on-kill 275->170 down.\nShh... This Won't Hurt a Bit. (10-20, indirect): harder Haunt camps and contested Buff Containers reward his sustained frontline; objective parries no longer reset, trimming the free Guardian-dive chain."
-  },
-  "Ivy": {
-   "trend": "stable",
-   "why": "Still the best peel in the game (Stone Form i-frame/stun) and a 53.7% WR support; the Healbane 4-stack cap cut (82.2%->72%) gives tether healing room back, but the gun core is still the only build worth funding after the Halloween heal-item trims.",
-   "notes": "Minor Update 11-04 (indirect): Healbane 4-stack cap 82.2%->72% eases the anti-heal tax on tether healing; gun core remains the funded path.\nHalloween 2026 (indirect, item-driven): Healbane now stacks across sources — the worst system change for tether healing — Healing Booster lost its Extra Regen upgrade and +3 flat regen, and Healing Nova moved to spirit scaling off her gun-first build. Skip the heal package.\nShh... This Won't Hurt a Bit. (10-20, indirect): Healing Snacks plus spread corridors cut the value of a grouped healer; districts pull her team apart, so tether a frontline bruiser sweeping corridors instead of a lane partner."
-  },
   "Yamato": {
-   "why": "Still the camp-clear and objective-path champion, but Flying Slash 26->23m and Shadow Transformation at T2/160s cut her engage reach; the Healbane 4-stack cap cut trims the team value of her anti-sustain slot, and Mo & Krill's Scorn buff makes her worst tank matchup harder.",
-   "notes": "Minor Update 11-04 (indirect): Healbane 4-stack cap 82.2%->72% trims the team value of her anti-sustain slot; Mo & Krill Scorn 1.2x->1.3x sharpens her 42% matchup.\nHalloween 2026: Flying Slash 26->23m (T3 +15->+8m) with the mark visible on cast, Shadow Transformation 150->160s and moved to T2, Power Slash +6% spirit scaling. Hunter's Aura LOS gate and Healbane kill-heal 275->170 trim her late spirit line; Torment Pulse +4% melee resist helps her commit.\nShh... This Won't Hurt a Bit. (10-20): Flying Strike creates paths against solid targets (turrets, Shrines, objectives) for extra mobility/objective access; parry no longer resets on objectives, so her Shrine/Walker dive is one-shot."
-  },
-  "Shiv": {
    "trend": "stable",
-   "why": "The knife exchange is still good (Serrated Knives 4% current HP) and the Healbane 4-stack cap cut eases the anti-heal tax on his regen shell, but Radiant Regeneration is still in-combat-only at 40, so he starts fights smaller than before Halloween.",
-   "notes": "Minor Update 11-04 (indirect): Healbane 4-stack cap 82.2%->72% eases the anti-heal tax on his regen shell; Yamato and Drifter, his worst matchups, untouched.\nHalloween 2026: Serrated Knives rage 3.5%->4% + T3 spirit scaling up, Killing Blow recast 16->12s, alt-fire per boon -5%; Radiant Regeneration went in-combat-only at 65->40 and Healbane kill-heal 275->170, so his pre-fight buffer is gone — Torment Pulse +4% melee resist is the offset.\nShh... This Won't Hurt a Bit. (10-20, indirect): harder camps reward his regen stack and the rising frontline feeds current-HP Serrated Knives, but vents hand divers a free approach before he ramps."
-  },
-  "Grey Talon": {
-   "why": "Sub-50% poke carry with no camp or crate route; Lash (36%) is his worst lane and took no nerf, so the patch is pure drift against a 47.4% baseline.",
-   "notes": "Minor Update 11-04 (indirect): no changes; Lash keeps Grapple T3 and remains his worst lane at 36%, and no camp/crate/objective lever moved for a hero with no farm route.\nShh... This Won't Hurt a Bit. (10-20, indirect): Steam Vents give roamers a free approach on an immobile flyer, and Healing Snacks blunt the poke he turns into lane leads; no camp or crate route suits him.\nPaint the Town (10-16, indirect): flyer tax unchanged (air-drag slows, Silver's Weighted Bola) and rising Lash (36% for Grey Talon) is his worst lane — stays C."
-  },
-  "Lash": {
-   "why": "Highest-pick S-tier initiator: spirit stomp core untouched, Grapple T3 +4m jump velocity, and Steam Vents refill stamina at +150% — the dive-and-re-enter loop got more fuel. Paige's base bullet 35->32 removes pressure from one of his few losing lanes.",
-   "notes": "Minor Update 11-04 (indirect): Paige base bullet 35->32 (~9% lane cut) softens one of his five losing matchups; spirit stomp core and Grapple T3 untouched.\nHalloween 2026: Grapple T3 adds +4m jump velocity; Steam Vents converted from an invisibility approach to +150% stamina regen, which feeds his dash-and-re-enter pattern rather than the set-up gankers who used to ride vents. Spirit stomp core untouched.\nShh... This Won't Hurt a Bit. (10-20, indirect): districts and Steam Vents extend his dive routes beyond three lanes, and hub fights at Bell Tower/Sunken Plaza concentrate teams into Ground Strike; objective parries no longer reset."
+   "why": "Still the camp-clear and objective-path champion, but Flying Slash 26->23m and Shadow Transformation at T2/160s cap her engage reach; Celeste's nerfs open one lane while Mo & Krill's Scorn/Burrow buffs keep the sustain tank that outlasts her burst.",
+   "notes": "11-04: no direct change; Celeste's silence/range/ult nerfs soften her worst lane, but Mo & Krill's Scorn/Burrow buffs keep the sustain tank that outlasts her burst.\nHalloween 2026: Flying Slash 26->23m (T3 +15->+8m) with the mark visible on cast, Shadow Transformation 150->160s and moved to T2, Power Slash +6% spirit scaling. Hunter's Aura LOS gate and Healbane kill-heal 275->170 trim her late spirit line; Torment Pulse +4% melee resist helps her commit.\nShh... This Won't Hurt a Bit. (10-20): Flying Strike creates paths against solid targets (turrets, Shrines, objectives) for extra mobility/objective access; parry no longer resets on objectives, so her Shrine/Walker dive is one-shot."
   },
   "Viscous": {
-   "why": "Splatter T1 +45 damage and +5% alt-fire growth give his lane poke real numbers, but Mo & Krill's Scorn 1.3x and Combo 50 HP/kill sharpen his worst matchup (43%), and the Healbane cap cut helps the sustain frontlines that already out-trade his Cube shell.",
-   "notes": "Minor Update 11-04 (indirect): Mo & Krill Scorn 1.2x->1.3x and Combo 40->50 sharpen his 43% matchup; Healbane 4-stack cap cut helps sustain frontlines that out-trade Cube.\nHalloween 2026: Splatter T1 +36->+45 damage and +5% alt-fire damage growth per boon, Goo Ball melee/Ethereal Shift exploit during cast delay fixed; Express Shot secondary-fire -5% sits in his core. Tier holds B.\nShh... This Won't Hurt a Bit. (10-20, indirect): Bell Tower's spread vaults and four corridors suit Goo Ball traversal, and harder camps plus forced hub fights raise Cube rescue value."
+   "why": "Splatter T1 and alt-fire growth give his lane poke real numbers, and Cube rescue gains from scheduled hub fights, but Mo & Krill's Scorn/Burrow/Combo buffs harden the frontline he already loses to and no post-patch win rate proves the 09-16 cooldown/Cube trims are absorbed.",
+   "notes": "11-04: no direct change; Mo & Krill's Scorn 1.2x->1.3x, Burrow radius +0.5m and Combo HP 40->50 harden the frontline he already loses to.\nHalloween 2026: Splatter T1 +36->+45 damage and +5% alt-fire damage growth per boon, Goo Ball melee/Ethereal Shift exploit during cast delay fixed; Express Shot secondary-fire -5% sits in his core. Tier holds B.\nShh... This Won't Hurt a Bit. (10-20, indirect): Bell Tower's spread vaults and four corridors suit Goo Ball traversal, and harder camps plus forced hub fights raise Cube rescue value."
   },
   "Pocket": {
-   "why": "The economy still funds his slow Affliction ramp, and Celeste's Dazzling Trick silence (+1.25s->+0.75s) and Shining Wonder nerfs soften his worst matchup at 39%; he still folds to anything that out-ranges or sticks to a low-HP caster.",
-   "notes": "Minor Update 11-04 (indirect): Celeste silence +1.25s->+0.75s and Shining Wonder nerfs soften his 39% worst matchup; Healbane cap cut helps sustain heroes that outlast Affliction, which cuts both ways.\nHalloween 2026 (indirect): the comeback levers (non-hero comeback cap 26->30%, tick souls to the two poorest, deficit-scaled secure speed) reverse the premise of his B-falling read — the farm bail-out now arrives before his Affliction spike. No core item moved.\nChangelog: 09-16 - no direct line; 30-day usage shows no gun build (Monster Rounds 92%, Cultist Sacrifice 93%), so the spirit stack stands."
+   "why": "The economy flipped in his favour: comeback gold and deficit-scaled secure fund the slow Affliction ramp. Celeste's silence/range/ult nerfs soften his worst lane, but he still folds to anything that out-ranges or sticks to a low-HP caster.",
+   "notes": "11-04: no direct change; Celeste's silence T3 +1.25->+0.75s, Radiant Daggers 30->25m and Shining Wonder 160->170s soften his worst lane.\nHalloween 2026 (indirect): the comeback levers (non-hero comeback cap 26->30%, tick souls to the two poorest, deficit-scaled secure speed) reverse the premise of his B-falling read — the farm bail-out now arrives before his Affliction spike. No core item moved.\nChangelog: 09-16 - no direct line; 30-day usage shows no gun build (Monster Rounds 92%, Cultist Sacrifice 93%), so the spirit stack stands."
   },
   "Mirage": {
-   "why": "Split-push hybrid the patch buried: souls moved off the lanes into corridors and shared objectives, so sidelane pressure converts to less income, and Mo & Krill's Scorn 1.3x/Combo 50 HP deepens his 40% matchup; farm corridors instead.",
-   "notes": "Minor Update 11-04 (indirect): Mo & Krill Scorn 1.2x->1.3x and Combo 40->50 deepen his 40% matchup; Healbane single-source value unchanged, so his core slot gains nothing.\nShh... This Won't Hurt a Bit. (10-20, indirect): souls moved off the lanes into corridors and shared objectives, so split-push converts to less income; Steam Vents give roamers a free approach on his map-play.\nPaint the Town: no direct change; contested Soul Bags and earlier hub objectives worsen a slow split-pusher, and rising M&K/Lash dive him off his map-play — beaten by the meta, not the notes."
+   "why": "Split-push hybrid the patch buried: souls moved off lanes into corridors and shared objectives, so sidelane pressure converts to less income, and Mo & Krill's Scorn/Burrow/Combo buffs strengthen the silence-lock tank he already loses to. Farm corridors instead; Djinn's Mark picks isolated camp clearers.",
+   "notes": "11-04: no direct change; Mo & Krill's Scorn/Burrow/Combo buffs strengthen the silence-lock tank he already loses to; keep one Healbane, not two.\nShh... This Won't Hurt a Bit. (10-20, indirect): souls moved off the lanes into corridors and shared objectives, so split-push converts to less income; Steam Vents give roamers a free approach on his map-play.\nPaint the Town: no direct change; contested Soul Bags and earlier hub objectives worsen a slow split-pusher, and rising M&K/Lash dive him off his map-play — beaten by the meta, not the notes."
+  },
+  "Vyper": {
+   "why": "Pure-gun carry whose spirit-amp splice is already gutted; Buff Containers' permanent Bullet Resist rolls tax her damage type and Barrel Mimics punish crate chains she cannot disengage from. Mo & Krill's Scorn/Burrow buffs make the lift/combo dive on her cleaner.",
+   "notes": "11-04: no direct change; Mo & Krill's Scorn 1.2x->1.3x and Burrow radius +0.5m make the lift/combo dive on her cleaner.\n10-20 Shh...: no direct change; Bullet Resist container rolls tax her gun all game and Barrel Mimics punish crate chains she cannot disengage from.\n09-16: Slither T3 barrier 5->4s / Petrifying Bola cd 105->115s are cosmetic; the real hit is indirect (Mercurial Magnum gut + Plated Armor on-hit fix), tier A->B, build pivots to pure gun."
+  },
+  "Mina": {
+   "why": "Mobile burst assassin with good farm shape, but her single-target rotation still cannot kill the tank front line, and both worst matchups got harder: Mo & Krill's Scorn/Burrow buffs and Ivy's rebound from the anti-heal cap. Yamato still owns the mobile-burst niche.",
+   "notes": "11-04: no direct change; Mo & Krill's Scorn/Burrow buffs and Ivy's rebound from the anti-heal cap harden her two worst matchups.\n10-20 Shh...: no direct change; grouped Haunt camps and new districts suit her AoE clear and dive routes, but the tank frontline she cannot kill got better.\n09-29 City Never Sleeps: no direct change; camp/uptime patch rewards grouped-camp AoE clear and new-district mobility, but her damage gap is unchanged."
   },
   "Drifter": {
    "trend": "stable",
-   "why": "Blind-pickable spirit-melee bruiser whose roaming income is still rich, but the Healbane 4-stack cap cut (82.2%->72%) trims the anti-heal bruiser composition that paired it with his built-in heal cut; the spirit melee core is untouched.",
-   "notes": "Minor Update 11-04 (indirect): Healbane 4-stack cap 82.2%->72% trims the payoff of his anti-heal bruiser build; spirit melee core untouched.\nHalloween 2026: base gun damage +3%, Bloodscent T3 +11%->+12% amp, Eternal Night T3 +2.5->2.75s; Haunt bounty/growth +10% raises his crate/vent roam income and multi-source anti-heal now composes with his built-in heal cut.\n10-20 Shh...: no direct change; Steam Vents, new hiding spots and heavy-melee Tough Crates extend his stealth-roam and give his melee core uncontestable crate income."
+   "why": "Blind-pickable spirit-melee bruiser whose roaming income got richer, but the anti-heal bruiser variant lost its edge with Healbane's 2-source cut 57.8->54.7%, and Apollo's Riposte disarm plus Mo & Krill's Scorn buff harden two losing lanes. Still no hard CC or closing mobility, so lane bullies cap him at B.",
+   "countered_by": [
+    "Dynamo",
+    "Mo & Krill",
+    "Apollo",
+    "Vyper",
+    "anti-heal (single-source Healbane, Toxic Bullets)",
+    "CC/silence"
+   ],
+   "notes": "11-04: Healbane 2-source cut 57.8->54.7% devalues the anti-heal bruiser variant; Apollo's Riposte disarm and Mo & Krill's Scorn 1.2x->1.3x harden two losing lanes.\nHalloween 2026: base gun damage +3%, Bloodscent T3 +11%->+12% amp, Eternal Night T3 +2.5->2.75s; Haunt bounty/growth +10% raises his crate/vent roam income and multi-source anti-heal now composes with his built-in heal cut.\n10-20 Shh...: no direct change; Steam Vents, new hiding spots and heavy-melee Tough Crates extend his stealth-roam and give his melee core uncontestable crate income."
+  },
+  "Victor": {
+   "why": "Sustain frontline the patch fed: Spirit Lifesteal, Infuser and Torment Pulse compound his grind-down shell, and Healbane's stacked ceiling falling 82.2->72% makes the anti-heal that counters him weaker. Healing Booster's rework still delays his early curve.",
+   "notes": "11-04: no direct change; Healbane's 4-stack ceiling 82.2->72% weakens the stacked anti-heal that counters his sustain shell.\nHalloween 2026: Aura of Suffering T3 +15%->+16%; Spirit Lifesteal, Infuser (6->8 spirit, 75% active lifesteal) and Torment Pulse +4% melee resist feed the grind-down core, while Healing Booster lost its Extra Regen link and +3 regen — buy it standalone, later.\n10-20 Shh...: no direct change; harder Haunt camps, longer PvE routes and Buff Container Bullet/Spirit Resist rolls feed his sustain stack — A held."
+  },
+  "Paige": {
+   "trend": "stable",
+   "why": "Still the best lane-winning support, but base bullet 35->32 is roughly a 9% lane cut and the comeback economy rescues the carry she used to snowball past. Healbane's multi-source cut weakens the stacked anti-heal teams used to answer her heals, so the conversion is less punished than on 10-30.",
+   "countered_by": [
+    "burst assassins (Yamato, Lash, Holliday)",
+    "Rem",
+    "Ivy",
+    "anti-heal (single-source Healbane, Toxic Bullets 40%, Crippling Headshot 40%)"
+   ],
+   "notes": "11-04: no direct change; multi-source Healbane cut (2-stack 57.8->54.7%, 4-stack 82.2->72%) weakens the anti-heal answer to her heal shell.\n10-30 Halloween + Gameplay Update: base bullet 35->32 (~9% lane cut; growth 0.52->0.61 pays back later); HVR velocity 60->45 weakens her 1.2-min buy — Opening Rounds before HVR is now the safer opener, and comeback gold blunts the lead she converts.\n10-20 Shh...: no direct change; Healing Snacks let her lane pressure stick instead of resetting on a recall, and lane-adjacent crate routes from ~2:30 pay the lane winner immediately — S held."
+  },
+  "Apollo": {
+   "tier": "B",
+   "trend": "rising",
+   "why": "Riposte now disarms gun carries and holds 0.1s longer, so his parry punish converts picks instead of just interrupting; Itani Lo Sahn T3 +60% adds burst. Still an immobilize, not a stun, so channeled ults no longer break.",
+   "last_changed_patch": "Minor Update - 11-04-2026",
+   "notes": "11-04: Riposte Pommel Hit adds a disarm, T2 +0.6->+0.7s; Itani Lo Sahn T3 +50->+60%; Pummel ends the target's preexisting parry (wording unclear). Still an immobilize, not a stun.\n10-30 Halloween + Gameplay Update: Riposte Pommel Hit is now an immobilize + parry disable, not a stun — 0.8->1.5s (T2 +0.4->+0.6s) with dash reliability fixes and CC refunds on Flawless Advance/Itani Lo Sahn. He loses the channel interrupt (Seven/Bebop/Harrow ults) and Healing Booster's gutting thins his sustain; S held, trend rising -> stable.\n10-20 Shh...: no direct change; lane pressure converts into lane-adjacent crate routes and Healing Snacks, but the objective-parry change makes the Guardian dive a one-shot decision — S held."
   }
  },
  "change_log": [
-  "Mo & Krill: trend falling -> stable; why/notes updated (Scorn 1.3x, Combo 50 HP/kill, Burrow radius, Healbane cap relief); last_changed_patch set",
-  "Ivy: trend falling -> stable; why/notes updated (Healbane 4-stack cap cut eases tether healing)",
-  "Yamato: why/notes updated (Healbane team value trimmed, Mo & Krill Scorn buff sharpens 42% matchup)",
-  "Shiv: trend falling -> stable; why/notes updated (Healbane cap cut eases regen-shell anti-heal tax)",
-  "Grey Talon: why/notes updated (no changes; Lash untouched at 36%)",
-  "Lash: why/notes updated (Paige base bullet nerf softens a losing lane)",
-  "Viscous: why/notes updated (Mo & Krill buffs deepen 43% matchup)",
-  "Pocket: why/notes updated (Celeste silence/Shining Wonder nerfs soften 39% matchup)",
-  "Mirage: why/notes updated (Mo & Krill buffs deepen 40% matchup)",
-  "Drifter: trend rising -> stable; why/notes updated (Healbane stacking nerf trims anti-heal bruiser build)"
+  "Yamato: trend falling -> stable; why/notes updated (Celeste nerfs soften worst lane, Mo & Krill buffs offset)",
+  "Viscous: why/notes updated (Mo & Krill Scorn/Burrow/Combo buffs harden losing frontline)",
+  "Pocket: why/notes updated (Celeste silence/range/ult nerfs soften worst lane)",
+  "Mirage: why/notes updated (Mo & Krill buffs strengthen silence-lock tank; keep one Healbane)",
+  "Vyper: why/notes updated (Mo & Krill Scorn/Burrow buffs make lift/combo dive cleaner)",
+  "Mina: why/notes updated (Mo & Krill buffs and Ivy anti-heal rebound harden worst matchups)",
+  "Drifter: trend rising -> stable; why/notes/countered_by updated (Healbane 2-source cut devalues anti-heal variant; Apollo/M&K buffs)",
+  "Victor: why/notes updated (Healbane 4-stack ceiling cut weakens anti-heal counter to sustain shell)",
+  "Paige: trend falling -> stable; why/notes/countered_by updated (multi-source Healbane cut weakens stacked anti-heal answer)",
+  "Apollo: tier C -> B, trend stable -> rising; why/notes/last_changed_patch updated (Riposte disarm, T2/T3 buffs)"
  ]
 }
