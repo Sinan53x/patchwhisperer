@@ -40,3 +40,11 @@ def test_list_markup_handled() -> None:
     )
     assert ("Heroes", "Abrams: x") in lines
     assert ("Heroes", "Wraith: y") in lines
+
+
+def test_plain_label_headers_start_a_new_section():
+    contents = "[p]\n[b]Heroes:[/b]\n- Abrams: Base HP up\n\n[b]Street Brawl:[/b]\n- Abrams: Base HP down\n[/p]"
+    assert bbcode_to_lines(contents) == [
+        ("Heroes", "Abrams: Base HP up"),
+        ("Street Brawl", "Abrams: Base HP down"),
+    ]

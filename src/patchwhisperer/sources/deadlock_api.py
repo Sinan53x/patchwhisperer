@@ -54,8 +54,14 @@ class DeadlockAPI:
         min_unix: int,
         max_unix: int | None = None,
         min_average_badge: int | None = None,
+        match_mode: str | None = None,
+        max_average_badge: int | None = None,
     ) -> list[dict]:
         params: dict = {"min_unix_timestamp": min_unix}
+        if match_mode is not None:
+            params["match_mode"] = match_mode
+        if max_average_badge is not None:
+            params["max_average_badge"] = max_average_badge
         if max_unix is not None:
             params["max_unix_timestamp"] = max_unix
         if min_average_badge is not None:

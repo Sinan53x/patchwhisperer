@@ -21,6 +21,7 @@ from patchwhisperer.analysis.schemas import (
     Synthesis,
     SystemsAnalysis,
 )
+from patchwhisperer.analysis.tiers import sync_kb_tiers
 from patchwhisperer.kb.schema import Build, ItemState, Matchups
 from patchwhisperer.kb.store import KBStore
 from patchwhisperer.parse.models import Change, Patch
@@ -32,7 +33,6 @@ HOTFIX_SKIPPED = "(hotfix: stage skipped)"
 _HERO_FIELDS = {
     "role",
     "archetypes",
-    "tier",
     "trend",
     "why",
     "core_items",
@@ -47,7 +47,6 @@ _HERO_FIELDS = {
     "confidence",
 }
 _ITEM_FIELDS = {"role", "bought_by", "slot", "tier", "notes"}
-_TIERS = {"S", "A", "B", "C", "D", "?"}
 _TRENDS = {"rising", "stable", "falling", "?"}
 
 
@@ -327,6 +326,7 @@ def run_analysis(
     creator_sources: str = "",
 ) -> AnalysisBundle:
     STAGE_SECONDS.clear()
+    sync_kb_tiers(kb, snapshot)
     patch_id = patch_id_of(patch)
     pdir = kb.patch_dir(patch_id)
     (pdir / "patch.json").write_text(
@@ -550,9 +550,6 @@ def apply_kb_update(kb: KBStore, update: KBUpdate) -> list[Path]:
             for key, value in fields.items():
                 if key not in _HERO_FIELDS:
                     log.warning("hero %s: dropping unknown field %r", name, key)
-                    continue
-                if key == "tier" and value not in _TIERS:
-                    log.warning("hero %s: dropping invalid tier %r", name, value)
                     continue
                 if key == "trend" and value not in _TRENDS:
                     log.warning("hero %s: dropping invalid trend %r", name, value)

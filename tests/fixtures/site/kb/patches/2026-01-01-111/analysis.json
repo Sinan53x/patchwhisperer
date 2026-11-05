@@ -11,6 +11,15 @@
     ],
     "magnitude": "major",
     "effect_on_play": "Clear speed gates income."
+   },
+   {
+    "system": "Steam Vents",
+    "change_summary": "Vents now refill stamina instead of hiding you.",
+    "driving_changes": [
+     "Steam Vents grant +150% stamina regeneration"
+    ],
+    "magnitude": "minor",
+    "effect_on_play": "Rotations cost less stamina."
    }
   ],
   "tempo_shift": {
@@ -58,6 +67,15 @@
     "direction": "buff",
     "magnitude": "minor",
     "summary": "Also grants move speed now.",
+    "affected_heroes": [],
+    "build_shift": "",
+    "rows": []
+   },
+   {
+    "item": "Fleetfoot",
+    "direction": "buff",
+    "magnitude": "moderate",
+    "summary": "Move speed bonus up.",
     "affected_heroes": [],
     "build_shift": "",
     "rows": []
@@ -295,6 +313,43 @@
   "what_to_watch": [
    "Whether double-jungling returns",
    "Walkers may fall earlier"
+  ],
+  "biggest_changes": [
+   {
+    "kind": "hero",
+    "subject": "Infernus",
+    "title": "Infernus takes over",
+    "why": "Buffed hard and jumped to S tier.",
+    "effect": "up"
+   },
+   {
+    "kind": "item",
+    "subject": "Cultist Sacrifice",
+    "title": "Cultist Sacrifice reworked",
+    "why": "Now drains health to fuel its burst.",
+    "effect": "neutral"
+   },
+   {
+    "kind": "system",
+    "subject": "Jungle camps",
+    "title": "Jungle pays more",
+    "why": "Camp bounty up 10%.",
+    "effect": "up"
+   },
+   {
+    "kind": "item",
+    "subject": "Abrams",
+    "title": "Abrams slipped",
+    "why": "Listed as an item but resolves to the hero.",
+    "effect": "down"
+   },
+   {
+    "kind": "hero",
+    "subject": "Not A Real Hero",
+    "title": "Unresolved subject",
+    "why": "Matches nothing on the page.",
+    "effect": "neutral"
+   }
   ]
  },
  "pool": {

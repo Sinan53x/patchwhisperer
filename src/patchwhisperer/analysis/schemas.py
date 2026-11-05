@@ -138,6 +138,14 @@ class NonObviousCall(BaseModel):
     confidence: float = 0.0
 
 
+class BigChange(BaseModel):
+    kind: Literal["hero", "item", "system"] = "system"
+    subject: str = Field(min_length=1)
+    title: str = Field(min_length=1)
+    why: str = ""
+    effect: UpDown = "neutral"
+
+
 class Synthesis(BaseModel):
     patch_size: Literal["major", "significant", "minor", "hotfix"] = "minor"
     size_why: str = ""
@@ -148,6 +156,7 @@ class Synthesis(BaseModel):
     non_obvious_calls: list[NonObviousCall] = []
     uncertainties: list[str] = []
     what_to_watch: list[str] = []
+    biggest_changes: list[BigChange] = []
 
 
 class PoolVerdict(BaseModel):

@@ -2,6 +2,7 @@ import re
 
 _TAG_RE = re.compile(r"\[/?[a-zA-Z][a-zA-Z0-9*]*(?:=[^\]]*)?\]")
 _HEADER_RE = re.compile(r"^\[\s*(?P<section>.+?)\s*\]$")
+_LABEL_HEADER_RE = re.compile(r"^(?P<section>[A-Z][A-Za-z &]{2,30}):$")
 
 
 def _strip_tags(text: str) -> str:
@@ -46,6 +47,10 @@ def bbcode_to_lines(contents: str) -> list[tuple[str, str]]:
         for raw_line in text.split("\n"):
             line = raw_line.strip()
             if not line:
+                continue
+            label = _LABEL_HEADER_RE.match(line)
+            if label:
+                section = label.group("section")
                 continue
             continuation = not line.startswith("- ") and (
                 line[0].islower() or line[0] in "),"

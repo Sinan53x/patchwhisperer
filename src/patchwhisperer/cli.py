@@ -787,6 +787,21 @@ def roster_post_sync() -> None:
     typer.echo(r)
 
 
+tiers_app = typer.Typer(help="Measured hero tiers from public match data.")
+app.add_typer(tiers_app, name="tiers")
+
+
+@tiers_app.command("refresh")
+def tiers_refresh(
+    kb: Annotated[Path, typer.Option("--kb")] = KB_ROOT,
+) -> None:
+    """Write tiers.json for the latest analyzed patch."""
+    from patchwhisperer.analysis.tiers import refresh_latest
+
+    path = refresh_latest(KBStore(kb), DeadlockAPI())
+    typer.echo(f"wrote {path}")
+
+
 site_app = typer.Typer(help="Build the static patch site.")
 app.add_typer(site_app, name="site")
 

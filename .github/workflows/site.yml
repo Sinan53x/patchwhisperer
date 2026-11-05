@@ -6,6 +6,8 @@ on:
     paths:
       - "kb/patches/**"
       - "src/patchwhisperer/site/**"
+  schedule:
+    - cron: "17 */6 * * *"
   workflow_dispatch:
 
 permissions:
@@ -26,6 +28,9 @@ jobs:
       - uses: astral-sh/setup-uv@v5
         with:
           enable-cache: true
+      - name: Refresh measured tiers
+        continue-on-error: true
+        run: uv run pw tiers refresh
       - run: uv run pw site build --out site-dist
       - name: Deploy to Cloudflare
         if: env.CLOUDFLARE_API_TOKEN != ''

@@ -1,5 +1,6 @@
 """Build the static site from kb/patches directories."""
 
+import hashlib
 import json
 import shutil
 from pathlib import Path
@@ -8,11 +9,18 @@ from jinja2 import Environment, PackageLoader
 from pydantic import ValidationError
 
 from patchwhisperer.analysis.schemas import AnalysisBundle, HeroEntry
+from patchwhisperer.analysis.tiers import load_tiers
 from patchwhisperer.parse.models import Patch
 from patchwhisperer.site.art import DEFAULT_CACHE_DIR, SiteArt
 from patchwhisperer.site.page import ArchiveEntry, build_page_model
 
 STATIC_DIR = "static"
+
+
+def _asset_version(name: str) -> str:
+    """Short content hash of a bundled static asset, for cache busting."""
+    data = (Path(__file__).parent / STATIC_DIR / name).read_bytes()
+    return hashlib.sha256(data).hexdigest()[:8]
 
 
 def _env() -> Environment:
@@ -93,6 +101,7 @@ def build_site(
     env = _env()
     patch_tpl = env.get_template("patch.html")
     archive_tpl = env.get_template("archive.html")
+    asset_v = {"css_v": _asset_version("style.css"), "js_v": _asset_version("app.js")}
 
     for name in (STATIC_DIR,):
         src = Path(__file__).parent / name
@@ -116,10 +125,10 @@ def build_site(
     )
     archive_entries: list[ArchiveEntry] = []
     for patch_dir, analysis, patch in dated:
-        page = build_page_model(analysis, patch, art)
+        page = build_page_model(analysis, patch, art, load_tiers(patch_dir))
         dest = out / "patches" / patch_dir.name
         dest.mkdir(parents=True, exist_ok=True)
-        html = patch_tpl.render(page=page, rel="../../")
+        html = patch_tpl.render(page=page, rel="../../", **asset_v)
         (dest / "index.html").write_text(html)
         archive_entries.append(
             ArchiveEntry(
@@ -131,11 +140,15 @@ def build_site(
             )
         )
 
-    _, latest_analysis, latest_patch = dated[0]
-    latest_page = build_page_model(latest_analysis, latest_patch, art)
-    (out / "index.html").write_text(patch_tpl.render(page=latest_page, rel=""))
+    latest_dir, latest_analysis, latest_patch = dated[0]
+    latest_page = build_page_model(
+        latest_analysis, latest_patch, art, load_tiers(latest_dir)
+    )
+    (out / "index.html").write_text(
+        patch_tpl.render(page=latest_page, rel="", **asset_v)
+    )
 
     (out / "patches" / "index.html").write_text(
-        archive_tpl.render(entries=archive_entries, rel="../")
+        archive_tpl.render(entries=archive_entries, rel="../", **asset_v)
     )
     return len(entries)

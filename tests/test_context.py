@@ -1,3 +1,5 @@
+from datetime import UTC, datetime
+
 from conftest import load_post
 
 from patchwhisperer.analysis import context as ctx
@@ -70,3 +72,24 @@ def test_unresolved_general_entity_goes_to_systems_not_heroes():
     patch = Patch(gid="1", title="T", date="2026-10-30T00:00:00Z", url="u", author="a", changes=[mid_boss])
     assert ctx.hero_changes(patch) == []
     assert ctx.system_changes(patch) == [mid_boss]
+
+
+def test_mode_only_lines_stay_out_of_main_game_stages():
+    def change(section, entity_type, name):
+        return Change(
+            section=section, entity_type=entity_type, entity_name=name,
+            raw=f"{name}: x", direction=Direction.nerf, resolved=True,
+        )
+
+    patch = Patch(
+        gid="1", title="t", date=datetime(2026, 1, 1, tzinfo=UTC), url="u", author="a",
+        changes=[
+            change("Heroes", EntityType.hero, "Abrams"),
+            change("Street Brawl", EntityType.hero, "Baba"),
+            change("Street Brawl", EntityType.item, "Decay"),
+            change("Street Brawl", EntityType.system, "Souls"),
+        ],
+    )
+    assert [c.entity_name for c in ctx.hero_changes(patch)] == ["Abrams"]
+    assert ctx.item_changes(patch) == []
+    assert ctx.system_changes(patch) == []

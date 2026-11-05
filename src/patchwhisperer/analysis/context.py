@@ -28,6 +28,7 @@ def system_changes(patch: Patch) -> list[Change]:
         c
         for c in patch.changes
         if c.section not in ("Heroes", "Items")
+        and not c.mode_only
         and c.entity_type in (EntityType.system, EntityType.unknown)
     ]
     # Map lines (major content updates) come first in the stage-1 input
@@ -42,7 +43,8 @@ def item_changes(patch: Patch) -> list[Change]:
     return [
         c
         for c in patch.changes
-        if c.section == "Items" or c.entity_type == EntityType.item
+        if not c.mode_only
+        and (c.section == "Items" or c.entity_type == EntityType.item)
     ]
 
 
@@ -50,7 +52,8 @@ def hero_changes(patch: Patch) -> list[Change]:
     return [
         c
         for c in patch.changes
-        if c.section == "Heroes" or c.entity_type == EntityType.hero
+        if not c.mode_only
+        and (c.section == "Heroes" or c.entity_type == EntityType.hero)
     ]
 
 
@@ -129,7 +132,11 @@ def change_counts(patch: Patch) -> str:
 
 
 def stage3_movers_json(heroes_analysis) -> str:
-    movers = [h for h in heroes_analysis.heroes if h.direction != "neutral"]
+    movers = [
+        h
+        for h in heroes_analysis.heroes
+        if h.direction != "neutral" or h.magnitude != "minor" or h.change_size == "major"
+    ]
     return json.dumps([h.model_dump() for h in movers], indent=1)
 
 

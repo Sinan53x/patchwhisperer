@@ -21,6 +21,9 @@ class EntityType(str, Enum):
     unknown = "unknown"
 
 
+MODE_ONLY_SECTIONS = {"Street Brawl"}
+
+
 class Change(BaseModel):
     section: str
     entity_type: EntityType
@@ -34,6 +37,10 @@ class Change(BaseModel):
     raw: str
     direction: Direction
     resolved: bool
+
+    @property
+    def mode_only(self) -> bool:
+        return self.section in MODE_ONLY_SECTIONS
 
 
 class Patch(BaseModel):

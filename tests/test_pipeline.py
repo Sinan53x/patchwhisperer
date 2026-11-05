@@ -99,14 +99,30 @@ def test_kb_update_hero_batches(kb, fake_llm, entity_index, monkeypatch):
     assert "Wraith: tier update (batch)" in upd.change_log
 
 
+def test_analysis_starts_from_measured_tiers_not_stored_opinions(
+    kb, fake_llm, entity_index
+):
+    patch = parse_patch(load_post("09-16-2026"), entity_index)
+    heroes = list(kb.load_heroes())[:6]
+    snapshot = {
+        name: {"matches": 2000, "win_rate": wr, "pick_rate": 0.3}
+        for name, wr in zip(heroes, (0.60, 0.40, 0.50, 0.50, 0.50, 0.50))
+    }
+    run_analysis(patch, kb, snapshot, [], fake_llm, update_kb=False)
+    after = kb.load_heroes()
+    assert after[heroes[0]].tier == "S"
+    assert after[heroes[1]].tier == "D"
+
+
 def test_apply_kb_update(kb):
     update = KBUpdate.model_validate(
         json.loads((FIXTURES / "llm" / "stage6.json").read_text())
     )
+    before = kb.load_heroes()["Wraith"].tier
     changed = apply_kb_update(kb, update)
     assert kb.heroes_path in changed
     heroes = kb.load_heroes()
-    assert heroes["Wraith"].tier == "B"
+    assert heroes["Wraith"].tier == before
     assert heroes["Wraith"].trend == "falling"
     items = kb.load_items()
     assert items["Veil Walker"].role == "invis defensive"
@@ -114,13 +130,14 @@ def test_apply_kb_update(kb):
     assert "Last patch: Minor Update - 09-16-2026" in meta
 
 
-def test_invalid_tier_dropped(kb, caplog):
+def test_kb_update_cannot_overwrite_measured_tier(kb, caplog):
     before = kb.load_heroes()["Wraith"].tier
-    update = KBUpdate(hero_updates={"Wraith": {"tier": "SS", "bogus": 1}})
+    written = "D" if before != "D" else "S"
+    update = KBUpdate(hero_updates={"Wraith": {"tier": written, "bogus": 1}})
     with caplog.at_level("WARNING"):
         apply_kb_update(kb, update)
     assert kb.load_heroes()["Wraith"].tier == before
-    assert "invalid tier" in caplog.text
+    assert "dropping unknown field 'tier'" in caplog.text
 
 
 def test_invalid_item_tier_dropped(kb, caplog):

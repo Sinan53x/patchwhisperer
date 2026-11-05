@@ -1,12 +1,16 @@
+import hashlib
 import json
 from pathlib import Path
 
 import pytest
+from jinja2 import Environment, PackageLoader
 
-from patchwhisperer.analysis.schemas import HeroEntry
+from patchwhisperer.analysis.schemas import BigChange, HeroEntry
+from patchwhisperer.analysis.tiers import HeroTier, TierBand, TierSnapshot, build_band
+from patchwhisperer.kb.store import slugify
 from patchwhisperer.parse.models import Change, Direction, EntityType, Patch
 from patchwhisperer.site.build import build_site, load_analysis
-from patchwhisperer.site.page import _driving_deltas, build_page_model
+from patchwhisperer.site.page import _band_note, _driving_deltas, build_page_model
 
 FIXTURES = Path(__file__).parent / "fixtures" / "site"
 KB = FIXTURES / "kb"
@@ -103,14 +107,24 @@ def test_writes_static_assets(built):
     assert any((out / "assets").iterdir())
 
 
+def test_asset_urls_carry_content_hash(built):
+    out, _ = built
+    html = all_html(out)
+    css_v = hashlib.sha256((out / "style.css").read_bytes()).hexdigest()[:8]
+    js_v = hashlib.sha256((out / "app.js").read_bytes()).hexdigest()[:8]
+    assert f"style.css?v={css_v}" in html
+    assert f"app.js?v={js_v}" in html
+    assert 'href="style.css"' not in html and 'src="app.js"' not in html
+
+
 def test_subpath_safe_relative_links(built):
     out, _ = built
     index = (out / "index.html").read_text()
     page = patch_html(out)
-    assert 'href="style.css"' in index
-    assert 'src="app.js"' in index
-    assert 'href="../../style.css"' in page
-    assert 'src="../../app.js"' in page
+    assert 'href="style.css?v=' in index
+    assert 'src="app.js?v=' in index
+    assert 'href="../../style.css?v=' in page
+    assert 'src="../../app.js?v=' in page
     for html in (index, page):
         assert 'href="/' not in html
         assert 'src="/' not in html
@@ -265,13 +279,156 @@ def test_system_deltas_read_the_numbers_out_of_note_lines():
     ]
 
 
+def render(page):
+    env = Environment(
+        loader=PackageLoader("patchwhisperer.site", "templates"),
+        autoescape=True,
+    )
+    return env.get_template("patch.html").render(page=page, rel="")
+
+
 def test_item_detail_is_not_rendered_inside_the_grid(built):
     out, _ = built
     html = patch_html(out)
     grid = html.split('id="items"', 1)[1].split("</section>", 1)[0]
-    assert "<details" not in grid
+    assert 'id="sheet-item-' not in grid
     assert 'data-sheet="item-' in grid
     assert 'id="sheet-item-' in html
+
+
+def test_biggest_changes_resolve_in_order_and_render(built):
+    page = _fixture_page()
+    assert [c.sheet for c in page.biggest_changes] == [
+        "hero-infernus",
+        "item-cultist-sacrifice",
+        "sys-jungle-camps",
+        "hero-abrams",  # kind said "item" but the subject is a hero
+        None,  # unknown subject still renders
+    ]
+    assert [c.kind_label for c in page.biggest_changes] == [
+        "Hero", "Item", "Map & economy", "Hero", "Hero",
+    ]
+    assert page.biggest_changes[0].portrait == "assets/p.png"
+    assert page.biggest_changes[1].icon == "assets/i.png"
+    out, _ = built
+    biggest = patch_html(out).split('id="biggest"', 1)[1].split("</section>", 1)[0]
+    assert 'data-sheet="hero-infernus"' in biggest
+    assert 'data-sheet="sys-jungle-camps"' in biggest
+    card = biggest.split('<div class="big-card', 1)[1].split("</div>", 1)[0]
+    assert "Unresolved subject" in card
+    assert "data-sheet" not in card
+
+
+def test_biggest_cards_have_no_glyph_placeholder(built):
+    out, _ = built
+    biggest = patch_html(out).split('id="biggest"', 1)[1].split("</section>", 1)[0]
+    assert "big-glyph" not in biggest
+    assert "◆" not in biggest
+    hero = biggest.split('data-sheet="hero-infernus"', 1)[1].split("</a>", 1)[0]
+    assert "big-art" in hero
+    assert "<img" in hero
+    system = biggest.split('data-sheet="sys-jungle-camps"', 1)[1].split("</a>", 1)[0]
+    assert "big-art" not in system
+    for card in biggest.split('class="big-card')[1:]:
+        assert card.index("big-kind") < card.index("big-rank")
+        assert card.index("big-rank") < card.index("big-title")
+
+
+def test_biggest_section_omitted_when_empty():
+    def clear(analysis, patch):
+        analysis.synthesis.biggest_changes = []
+
+    page = _fixture_page(clear)
+    assert page.biggest_changes == []
+    assert 'id="biggest"' not in render(page)
+    assert "Biggest changes" not in render(page).split("</nav>", 1)[0]
+
+
+def test_tier_rows_order_moves_and_unrated():
+    page = _fixture_page()
+    assert [r.tier for r in page.tier_boards[0].rows] == ["S", "B", "C", "Unrated"]
+    infernus = page.tier_boards[0].rows[0].heroes[0]
+    assert (infernus.name, infernus.moved, infernus.was) == ("Infernus", "up", "A")
+    abrams = page.tier_boards[0].rows[1].heroes[0]
+    assert (abrams.name, abrams.moved, abrams.was) == ("Abrams", None, None)
+    wraith = page.tier_boards[0].rows[2].heroes[0]
+    assert (wraith.name, wraith.moved, wraith.was) == ("Wraith", "down", "B")
+    unrated = page.tier_boards[0].rows[-1]
+    assert "Vindicta" in {h.name for h in unrated.heroes}
+    assert all(h.moved is None for h in unrated.heroes)
+
+
+def test_tier_rows_exclude_non_heroes_and_sort_within_a_row():
+    def mutate(analysis, patch):
+        patch.changes.append(
+            Change(
+                section="General",
+                entity_type=EntityType.unknown,
+                entity_name="Mid-Boss",
+                raw="Mid-Boss: Health increased by 20%",
+                direction=Direction.neutral,
+                resolved=False,
+            )
+        )
+        analysis.heroes.heroes.append(
+            HeroEntry(
+                hero="Mid-Boss", direction="up", magnitude="major",
+                tier_after="A",
+            )
+        )
+        for name, before, after in [
+            ("Seven", "C", "B"),  # riser
+            ("Dynamo", "?", "B"),  # unmoved (before unknown)
+            ("Haze", "B", "B"),  # unmoved
+            ("Kelvin", "A", "B"),  # faller
+        ]:
+            h = next(x for x in analysis.heroes.heroes if x.hero == name)
+            h.tier_before, h.tier_after = before, after
+
+    page = _fixture_page(mutate)
+    b_row = next(r for r in page.tier_boards[0].rows if r.tier == "B")
+    assert [h.name for h in b_row.heroes] == [
+        "Seven", "Abrams", "Dynamo", "Haze", "Kelvin",
+    ]
+    tiered = {h.name for r in page.tier_boards[0].rows for h in r.heroes}
+    assert "Mid-Boss" not in tiered
+
+
+def test_minor_items_and_systems_land_in_small_lists(built):
+    page = _fixture_page()
+    assert {it.name for it in page.small_items} == {"Kinetic Dash"}
+    assert page.small_items[0].category == "weapon"  # FakeArt buckets all
+    assert "Kinetic Dash" not in {
+        it.name for g in page.item_groups for it in g.items
+    }
+    assert {g.category for g in page.item_groups} == {"weapon"}
+    assert [s.name for s in page.systems] == ["Jungle camps"]
+    assert [s.name for s in page.small_systems] == ["Steam Vents"]
+    out, _ = built
+    html = patch_html(out)
+    assert 'id="sheet-item-kinetic-dash"' in html
+    assert 'id="sheet-sys-steam-vents"' in html
+    items_sec = html.split('id="items"', 1)[1].split("</section>", 1)[0]
+    assert "Small item changes" in items_sec
+    systems_sec = html.split('id="systems"', 1)[1].split("</section>", 1)[0]
+    assert "Small map &amp; economy changes" in systems_sec
+
+
+def test_sections_render_in_priority_order(built):
+    out, _ = built
+    html = patch_html(out)
+    order = [
+        html.index(f'id="{s}"')
+        for s in ("biggest", "plan", "heroes", "items", "systems")
+    ]
+    assert order == sorted(order)
+
+
+def test_game_plan_and_counts_line():
+    page = _fixture_page()
+    assert page.game_plan == "Leads must convert."
+    # infernus is only indirectly affected, so "buffed" counts note-kind only
+    assert page.counts_line == "2 nerfed · 4 items · 2 map & economy"
 
 
 def test_page_model_hero_sort():
@@ -381,3 +538,84 @@ def test_unchanged_hero_gets_a_pool_only_group_and_site_has_no_owner_link(built)
 def _mark_unchanged(analysis, patch):
     h = next(h for h in analysis.heroes.heroes if h.hero == "Infernus")
     h.direction = "neutral"
+
+
+def test_biggest_change_with_a_shortened_system_name_still_links():
+    analysis = load_analysis(PATCH_DIR / "analysis.json")
+    patch = Patch.model_validate_json((PATCH_DIR / "patch.json").read_text())
+    system = analysis.systems.systems_changed[0]
+    short = system.system.split()[-1]
+    analysis.synthesis.biggest_changes = [
+        BigChange(kind="system", subject=short, title="t")
+    ]
+    page = build_page_model(analysis, patch, FakeArt())
+    assert page.biggest_changes[0].sheet == f"sys-{slugify(system.system)}"
+
+
+def _band(key, heroes):
+    return TierBand(key=key, label=key, post_patch=True, matches=9000, heroes=heroes)
+
+
+def test_measured_tiers_override_the_ai_read_everywhere():
+    analysis = load_analysis(PATCH_DIR / "analysis.json")
+    patch = Patch.model_validate_json((PATCH_DIR / "patch.json").read_text())
+    hero = analysis.heroes.heroes[0].hero
+    analysis.heroes.heroes[0].verdict = "bench"
+    tiers = TierSnapshot(
+        generated_at=1793400000,
+        patch_unix=1793390000,
+        bands=[
+            _band("ranked", {hero: HeroTier(
+                tier="S", prev_tier="B", win_rate=0.6, matches=1000,
+                pick_rate=0.2, delta=0.03,
+            )}),
+            _band("high", {hero: HeroTier(
+                tier="D", win_rate=0.4, matches=500, pick_rate=0.2,
+            )}),
+        ],
+    )
+    page = build_page_model(analysis, patch, FakeArt(), tiers)
+    ranked, high = page.tier_boards
+    top = ranked.rows[0]
+    assert (top.tier, top.heroes[0].name) == ("S", hero)
+    assert (top.heroes[0].moved, top.heroes[0].was) == ("up", "B")
+    assert top.heroes[0].win_rate == "60.0%"
+    assert high.rows[0].tier == "D"
+    card = next(h for h in page.heroes if h.name == hero)
+    assert card.verdict == "keep"
+    assert [s.tier for s in card.tier_stats] == ["S", "D"]
+    assert card.tier_stats[0].delta == "+3.0 since the patch"
+
+
+def test_too_few_post_patch_games_falls_back_to_pre_patch_data_and_says_so():
+    rows = [{"hero_id": i, "wins": 300, "matches": 600} for i in range(1, 13)]
+    band = build_band("ranked", "All", post=rows[:1], pre=rows, names={1: "Abrams"})
+    assert band.post_patch is False
+    assert band.heroes["Abrams"].prev_tier is None
+    assert "two weeks before" in _band_note(band, "Nov 4")
+
+
+def test_street_brawl_lines_are_kept_apart_from_main_game_changes():
+    analysis = load_analysis(PATCH_DIR / "analysis.json")
+    patch = Patch.model_validate_json((PATCH_DIR / "patch.json").read_text())
+    patch.changes.append(
+        Change(
+            section="Street Brawl", entity_type=EntityType.hero,
+            entity_name="Brawl Only Hero", raw="Brawl Only Hero: Radius down",
+            direction=Direction.nerf, resolved=True,
+        )
+    )
+    page = build_page_model(analysis, patch, FakeArt())
+    assert "Brawl Only Hero" not in {h.name for h in page.heroes}
+    brawl = next(s for s in page.small_systems if s.name == "Street Brawl only")
+    assert brawl.lines == ["Brawl Only Hero: Radius down"]
+
+
+def test_band_note_flags_an_early_post_patch_sample():
+    from patchwhisperer.analysis.tiers import TierBand
+    from patchwhisperer.site.page import _band_note
+
+    early = TierBand(key="ranked", label="All ranks", post_patch=True, matches=6049, heroes={})
+    settled = TierBand(key="ranked", label="All ranks", post_patch=True, matches=90000, heroes={})
+    assert "early sample" in _band_note(early, "Nov 5")
+    assert "early sample" not in _band_note(settled, "Nov 5")
