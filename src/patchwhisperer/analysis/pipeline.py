@@ -22,7 +22,7 @@ from patchwhisperer.analysis.schemas import (
     SystemsAnalysis,
 )
 from patchwhisperer.analysis.tiers import sync_kb_tiers
-from patchwhisperer.kb.schema import Build, ItemState, Matchups
+from patchwhisperer.kb.schema import Build, ItemState
 from patchwhisperer.kb.store import KBStore
 from patchwhisperer.parse.models import Change, Patch
 
@@ -42,8 +42,6 @@ _HERO_FIELDS = {
     "last_changed_patch",
     "notes",
     "builds",
-    "matchups",
-    "matchup_notes",
     "confidence",
 }
 _ITEM_FIELDS = {"role", "bought_by", "slot", "tier", "notes"}
@@ -559,12 +557,6 @@ def apply_kb_update(kb: KBStore, update: KBUpdate) -> list[Path]:
                         value = [Build(**b) for b in value]
                     except (TypeError, ValidationError) as e:
                         log.warning("hero %s: dropping invalid builds: %s", name, e)
-                        continue
-                if key == "matchups":
-                    try:
-                        value = Matchups(**value)
-                    except (TypeError, ValidationError) as e:
-                        log.warning("hero %s: dropping invalid matchups: %s", name, e)
                         continue
                 try:
                     setattr(hero, key, value)

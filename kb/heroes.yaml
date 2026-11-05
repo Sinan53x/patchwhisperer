@@ -95,21 +95,20 @@ Infernus:
       Swift Striker/Titanic Magazine — still his weaker-performing item set.
   matchups:
     beats:
-    - Shiv
-    - Pocket
-    - Drifter
-    - Seven
-    - Mina
-    loses_to:
-    - Dynamo
-    - Vyper
-    - Bebop
-    - Ivy
+    - Venator
     - Paradox
-  matchup_notes: 'He beats melee bruisers he can kite (Shiv 54%, Drifter 52%) and
-    squishies his burn out-ranges (Pocket 54%, Seven 51%). He loses to displacement-plus-burst
-    that negates his low-HP kite game: Dynamo 41% and Bebop 43% (initiations/hooks)
-    and Vyper 42%, a straight gun duel his HP cap can''t win.'
+    - Warden
+    - Pocket
+    - Calico
+    loses_to:
+    - Apollo
+    - Baba
+    - Kelvin
+    - Celeste
+    - Graves
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Venator
+    54%, Paradox 54%, Warden 54%, Pocket 53%, Calico 52%. Worst: Apollo 40%, Baba
+    42%, Kelvin 42%, Celeste 43%, Graves 44%.'
   confidence: 0.6
   released_on: null
   provisional: false
@@ -191,22 +190,20 @@ Seven:
       core.
   matchups:
     beats:
-    - Paradox
-    - Lash
-    - Vindicta
+    - Mina
+    - Grey Talon
     - Billy
-    - Drifter
+    - Deadman Danny
+    - Shiv
     loses_to:
-    - Calico
-    - Abrams
-    - Ivy
-    - Bebop
-    - Infernus
-  matchup_notes: Beats grouped/initiating S-tiers — Paradox and Lash (both 58%) get
-    punished by his AoE and out-ranged on engage, and Vindicta's 53% edge grows as
-    the patch grounds flyers. Loses to Calico (42%), who dives the immobile farmer
-    before his AoE is up, and to Abrams/Bebop, who either out-tank his burst or Hook
-    him out of Storm Cloud range.
+    - Baba
+    - Wraith
+    - Vindicta
+    - Yamato
+    - Victor
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Mina 60%,
+    Grey Talon 59%, Billy 59%, Deadman Danny 59%, Shiv 58%. Worst: Baba 43%, Wraith
+    48%, Vindicta 48%, Yamato 49%, Victor 49%.'
   confidence: 0.52
   released_on: null
   provisional: false
@@ -290,22 +287,20 @@ Vindicta:
       game even on the gun build.
   matchups:
     beats:
-    - Venator
-    - Mirage
-    - Victor
-    - Bebop
-    - Abrams
-    loses_to:
-    - Vyper
-    - Lash
-    - Celeste
-    - Wraith
-    - Ivy
+    - Warden
     - Silver
-  matchup_notes: Out-ranges and out-snipes other gun carries who want to stand and
-    trade (Venator 61%, Mirage 55%) and punishes immobile fronts (Victor 55%, Bebop
-    54%, Abrams 53%). Folds to mobile divers and burst that close the gap before she
-    can kite — Lash 46%, Vyper 45%, Celeste 46% — the classic low-HP flyer weakness.
+    - Grey Talon
+    - Pocket
+    - Shiv
+    loses_to:
+    - Baba
+    - Apollo
+    - Rat King
+    - Ivy
+    - Abrams
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Warden
+    59%, Silver 58%, Grey Talon 57%, Pocket 55%, Shiv 53%. Worst: Baba 42%, Apollo
+    45%, Rat King 45%, Ivy 45%, Abrams 45%.'
   confidence: 0.63
   released_on: null
   provisional: false
@@ -395,14 +390,21 @@ Lady Geist:
       the trimmed spirit scaling on Radiant Regeneration (0.35->0.25) hits the variant
       that stacks the most spirit hardest, so sustain shifts into Spirit Lifesteal.
   matchups:
-    beats: []
+    beats:
+    - Mina
+    - Bebop
+    - Shiv
+    - Violet
+    - Deadman Danny
     loses_to:
-    - Lash
+    - Rat King
+    - Wraith
     - Drifter
-  matchup_notes: The sample lists Lash (41%) and Drifter (45%) under both beats and
-    loses_to; both are sub-50%, so treat both as losses and beats as empty. Lash (S-tier)
-    throws/dives her before she scales, Drifter (A) wins the melee duel on tempo,
-    and she has no positive matchup sample — low confidence.
+    - Haze
+    - Venator
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Mina 59%,
+    Bebop 51%, Shiv 51%, Violet 51%, Deadman Danny 51%. Worst: Rat King 42%, Wraith
+    46%, Drifter 47%, Haze 47%, Venator 48%.'
   confidence: 0.55
   released_on: null
   provisional: false
@@ -502,23 +504,20 @@ Abrams:
       via Warp Stone/Phantom Strike; the answer to being kited and anti-healed.
   matchups:
     beats:
-    - Venator
-    - Yamato
-    - Apollo
-    - Mirage
-    - Mina
-    loses_to:
-    - Ivy
-    - Vyper
-    - Celeste
-    - Wraith
+    - Solomon
+    - Grey Talon
+    - Calico
     - Paige
-  matchup_notes: 'He wins any trade he can force: Venator (62%), Yamato (58%) and
-    Apollo (56%) are squishier carries whose burst Infernal Resilience + Siphon out-sustain
-    once he closes — note this directly contradicts the prior entry''s claim that
-    Venator counters him. He loses to disengage and spirit burst: Ivy (41%) peels/slows
-    his engage, while Vyper (45%), Wraith (45%) and Celeste (45%) out-range or out-burst
-    a static frontline.'
+    - Silver
+    loses_to:
+    - Baba
+    - Graves
+    - Celeste
+    - Seven
+    - Wraith
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Solomon
+    58%, Grey Talon 58%, Calico 56%, Paige 56%, Silver 56%. Worst: Baba 43%, Graves
+    45%, Celeste 47%, Seven 47%, Wraith 47%.'
   confidence: 0.7
   released_on: null
   provisional: false
@@ -603,21 +602,19 @@ Wraith:
       you're free-hitting.
   matchups:
     beats:
-    - Grey Talon
-    - McGinnis
+    - Rem
     - Mirage
-    - Graves
-    - Apollo
-    loses_to:
-    - Paige
     - Sinclair
+    - Grey Talon
+    - Deadman Danny
+    loses_to:
+    - Baba
+    - Kelvin
+    - Vyper
     - Celeste
-    - Dynamo
-    - Ivy
-  matchup_notes: 'Card Trick''s homing spirit damage plus Full Auto''s AoE delete
-    squishy poke/siege heroes who cannot dodge — Grey Talon (60%), McGinnis (56%),
-    Mirage (56%). She folds to CC-and-dive she can''t out-range: Paige''s lane pressure
-    (43%), Dynamo''s initiation (46%), Sinclair''s burst (46%).'
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Rem 66%,
+    Mirage 58%, Sinclair 58%, Grey Talon 57%, Deadman Danny 57%. Worst: Baba 43%,
+    Kelvin 49%, Vyper 50%, Celeste 50%.'
   confidence: 0.6
   released_on: null
   provisional: false
@@ -705,15 +702,14 @@ McGinnis:
       Suppressor applies her slow, Medicinal Specter covers extended fights.
   matchups:
     beats:
-    - Lash
-    - Drifter
+    - Shiv
+    - Haze
     loses_to:
+    - Drifter
+    - Nurse Harrow
     - Wraith
-  matchup_notes: 'She beats melee divers who must walk into her zone — Lash 56%, Drifter
-    52% — because Spectral Wall cuts their approach and turrets punish the dive. She
-    loses to Wraith (44%, i.e. Wraith wins 56%): a ranged gun carry who out-ranges
-    and bursts her before the wall matters. Small samples (150-230 games), so treat
-    as directional.'
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Shiv 56%,
+    Haze 52%. Worst: Drifter 45%, Nurse Harrow 47%, Wraith 49%.'
   confidence: 0.55
   released_on: null
   provisional: false
@@ -809,21 +805,18 @@ Paradox:
       in the top 15, so treat this as a personal-choice line, not the mainstream path.
   matchups:
     beats:
-    - Grey Talon
-    - Venator
-    - Infernus
-    - Pocket
-    - Apollo
+    - Silver
+    - Solomon
+    - Deadman Danny
     loses_to:
-    - Seven
-    - Yamato
-    - Lash
-    - Celeste
-    - Holliday
-  matchup_notes: 'She out-ranges and pins immobile poke/gun carries — Grey Talon (59%)
-    and Venator (57%) cannot contest Kinetic Carbine/Time Wall range. She folds to
-    anything that closes distance or dumps burst on her small HP pool: Yamato (43%),
-    Lash (43%) and Holliday (43%) all dive her, and Celeste (43%) out-trades her outright.'
+    - Baba
+    - Apollo
+    - Kelvin
+    - Ivy
+    - Victor
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Silver
+    55%, Solomon 51%, Deadman Danny 50%. Worst: Baba 37%, Apollo 40%, Kelvin 40%,
+    Ivy 41%, Victor 41%.'
   confidence: 0.72
   released_on: null
   provisional: false
@@ -910,22 +903,20 @@ Dynamo:
       Superior Cooldown 56.6%).
   matchups:
     beats:
-    - Infernus
-    - Calico
-    - Drifter
+    - Shiv
     - Lash
     - Bebop
+    - Deadman Danny
+    - Venator
     loses_to:
-    - Billy
-    - Mo & Krill
-    - Warden
+    - Baba
+    - Celeste
+    - Rat King
     - Abrams
-    - Paige
-  matchup_notes: 'Quantum Entanglement''s AoE dispel is why he beats Infernus (59%)
-    and DOT/dive heroes — one cast strips burn and setup, and Calico/Drifter/Lash/Bebop
-    fold to AoE CC when they commit on him. He loses to durable frontline (Billy 42%,
-    Mo & Krill 45%, Abrams 49%): they eat Singularity, can''t be repositioned, and
-    outlast the cooldown, while Paige (51%) simply wins the lane in front of him.'
+    - Ivy
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Shiv 59%,
+    Lash 58%, Bebop 57%, Deadman Danny 56%, Venator 54%. Worst: Baba 35%, Celeste
+    46%, Rat King 48%, Abrams 48%, Ivy 48%.'
   confidence: 0.72
   released_on: null
   provisional: false
@@ -1010,16 +1001,19 @@ Kelvin:
       rather than core.
   matchups:
     beats:
-    - Bebop
-    - Wraith
+    - Mina
+    - Grey Talon
+    - Paradox
+    - Pocket
+    - Yamato
     loses_to:
-    - Lash
-    - Drifter
-  matchup_notes: 'Bebop (58%) and Wraith (51%) are his best: their spirit burst is
-    fully answered by dome + heal, so he simply out-sustains their damage windows.
-    Lash (45%) and Drifter (46%) are his worst — mobile melee initiators that reach
-    and burst him before the dome lands, and his low mobility can''t disengage. Paradox
-    (50%) is a coin flip; a pick initiator can swap him out of position.'
+    - Baba
+    - Abrams
+    - Holliday
+    - Haze
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Mina 62%,
+    Grey Talon 61%, Paradox 60%, Pocket 59%, Yamato 58%. Worst: Baba 44%, Abrams 46%,
+    Holliday 49%, Haze 49%.'
   confidence: 0.55
   released_on: null
   provisional: false
@@ -1099,23 +1093,20 @@ Haze:
       is a fallback when the game stretches, not a win condition.
   matchups:
     beats:
-    - Lady Geist
-    - Grey Talon
-    - Silver
-    - Paradox
+    - Rem
     - Pocket
+    - Grey Talon
+    - Mirage
+    - Solomon
     loses_to:
-    - Celeste
-    - Ivy
-    - Victor
+    - Baba
     - Vyper
-    - Paige
-  matchup_notes: 'She out-tempos immobile, kit-dependent heroes — Lady Geist (57%)
-    and Grey Talon (56%) cannot punish her lane before their tools scale, and Silver
-    (56%) is a slow gun tank she pokes out on Fixation. Her losses are the meta''s
-    strong mobile/lane heroes: Celeste (42%) out-bursts her before stacks build, Vyper
-    (45%) and Ivy (43%) dive or out-sustain her low-mobility frame, and Paige (46%)
-    wins the lane outright.'
+    - Holliday
+    - Ivy
+    - Calico
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Rem 59%,
+    Pocket 59%, Grey Talon 57%, Mirage 57%, Solomon 56%. Worst: Baba 43%, Vyper 44%,
+    Holliday 45%, Ivy 46%, Calico 46%.'
   confidence: 0.68
   released_on: null
   provisional: false
@@ -1210,22 +1201,20 @@ Holliday:
       in the data.
   matchups:
     beats:
-    - Haze
-    - Paradox
-    - Mina
-    - Calico
-    - Wraith
+    - Apollo
+    - Deadman Danny
+    - Pocket
+    - Silver
+    - Infernus
     loses_to:
-    - Drifter
-    - Bebop
-    - Warden
+    - Baba
+    - Yamato
+    - Abrams
+    - Ivy
     - Lash
-    - Mo & Krill
-  matchup_notes: 'She farms squishy, immobile poke/gun carries (Haze 57%, Wraith,
-    Paradox) by closing with bounce-pad and lassoing them out of position. She loses
-    to point-blank lockdown and anti-mobility: Drifter''s melee bruiser pressure (42%),
-    Bebop''s hook, and Mo & Krill/Lash ults punish a low-HP assassin who has to commit
-    on entry.'
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Apollo
+    56%, Deadman Danny 56%, Pocket 56%, Silver 55%, Infernus 55%. Worst: Baba 40%,
+    Yamato 45%, Abrams 47%, Ivy 47%, Lash 47%.'
   confidence: 0.6
   released_on: null
   provisional: false
@@ -1317,22 +1306,20 @@ Bebop:
       and it only scales late off Siphon Bullets (28.5 min), so few commit to it.
   matchups:
     beats:
-    - Holliday
-    - Infernus
+    - Rem
+    - Victor
+    - Mina
     - Venator
-    - Sinclair
-    - Shiv
+    - Pocket
     loses_to:
-    - Kelvin
-    - Billy
-    - Celeste
+    - Baba
     - Dynamo
-    - Vyper
-  matchup_notes: 'Bebop''s hook punishes squishy carries that must stand their ground
-    to deal damage (Infernus 57%, Venator 56%) and out-picks mobile assassins like
-    Holliday (57%). He folds to anything that ignores a single-target combo: burst-proof
-    tanks (Billy 43%), sustain that erases the burst (Kelvin 42%), and a better initiator
-    dictating fights (Dynamo 44%).'
+    - Solomon
+    - Drifter
+    - Kelvin
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Rem 57%,
+    Victor 56%, Mina 56%, Venator 55%, Pocket 55%. Worst: Baba 43%, Dynamo 43%, Solomon
+    45%, Drifter 46%, Kelvin 46%.'
   confidence: 0.6
   released_on: null
   provisional: false
@@ -1412,23 +1399,20 @@ Calico:
       deciding lanes.
   matchups:
     beats:
-    - Seven
-    - Pocket
-    - Shiv
-    - Infernus
-    - Grey Talon
+    - Mina
+    - Haze
+    - Deadman Danny
+    - Vindicta
+    - Drifter
     loses_to:
-    - Warden
-    - Vyper
-    - Dynamo
-    - Victor
     - Abrams
-  matchup_notes: She beats squishy spirit/gun carries she can dive and burst before
-    they kite — Seven (58%), Pocket (56%), Grey Talon (54%), even against a flyer
-    the anti-air patch doesn't save. She loses to gun carries who out-range her (Warden
-    42%, Vyper 42%) and to CC/tank frontline she cannot burst through the health pool
-    (Dynamo 43%, Victor 45%, Abrams 46%) — the same 'no kill through HP' problem creators
-    flagged in April.
+    - Baba
+    - Celeste
+    - Graves
+    - Nurse Harrow
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Mina 57%,
+    Haze 54%, Deadman Danny 52%, Vindicta 52%, Drifter 52%. Worst: Abrams 44%, Baba
+    44%, Celeste 44%, Graves 46%, Nurse Harrow 48%.'
   confidence: 0.62
   released_on: null
   provisional: false
@@ -1524,20 +1508,18 @@ Grey Talon:
       is free and the enemy can't close distance, which is rare at high rank.
   matchups:
     beats:
-    - Warden
-    - Vindicta
-    - Drifter
     - Calico
+    - Mina
+    - Pocket
     loses_to:
-    - Lash
-    - Wraith
-    - Paradox
-    - Haze
-  matchup_notes: 'His ''wins'' are even at best — 49% into Warden and Vindicta (the
-    latter a fellow flyer also hurt by anti-air) — while he kites melee bruisers like
-    Drifter/Calico with pure range. He hard-loses to mobile initiators and closers:
-    Lash (36%) dashes past his poke and bursts him before the Owl lands, and Wraith/Paradox/Haze
-    shut the same gap. Bebop sits at 46% both ways — treated as even.'
+    - Baba
+    - Billy
+    - Kelvin
+    - Seven
+    - Victor
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Calico
+    52%, Mina 51%, Pocket 50%. Worst: Baba 33%, Billy 38%, Kelvin 39%, Seven 41%,
+    Victor 41%.'
   confidence: 0.55
   released_on: null
   provisional: false
@@ -1623,22 +1605,20 @@ Mo & Krill:
       is won on tempo.'
   matchups:
     beats:
-    - Mirage
-    - Yamato
-    - Viscous
-    - Mina
-    - Haze
+    - Paradox
+    - Grey Talon
+    - Pocket
+    - Infernus
+    - Victor
     loses_to:
-    - Celeste
-    - Vindicta
-    - Billy
-    - Paige
-    - Vyper
-  matchup_notes: 'Combo (grab/suppress) plus Torment Pulse punishes short-range divers
-    who have to commit into him: Mirage (60%), Yamato (58%), Mina/Haze. He loses to
-    ranged kiting he can never close on — Celeste (46%) and Vindicta (47%) — and to
-    S-tier frontline Billy (47%), who simply out-brawls him, and lane-winning Paige
-    (47%).'
+    - Silver
+    - Baba
+    - Ivy
+    - Yamato
+    - Seven
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Paradox
+    56%, Grey Talon 55%, Pocket 55%, Infernus 55%, Victor 54%. Worst: Silver 34%,
+    Baba 38%, Ivy 44%, Yamato 45%, Seven 45%.'
   confidence: 0.7
   released_on: null
   provisional: false
@@ -1723,18 +1703,20 @@ Shiv:
       resist is the one piece of the front-line package that improved this patch.
   matchups:
     beats:
-    - Billy
-    - Mina
-    - Haze
+    - Grey Talon
+    - Rem
+    - Mirage
+    - Pocket
+    - Silver
     loses_to:
-    - Yamato
-    - Drifter
-    - Bebop
-  matchup_notes: 'Current-HP Serrated Knives make him a direct counter to S-tier tanks
-    — Billy (57%) and the big-HP frontlines tempo keeps alive are free food for him,
-    and he out-sustains carries like Haze (54%). He loses to burst and CC that land
-    before his regen ramps: Yamato''s burst (42%), Drifter''s melee duel (44%), and
-    Bebop''s hook (46%).'
+    - Baba
+    - Dynamo
+    - Seven
+    - Victor
+    - Wraith
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Grey Talon
+    55%, Rem 54%, Mirage 54%, Pocket 53%, Silver 52%. Worst: Baba 37%, Dynamo 41%,
+    Seven 42%, Victor 42%, Wraith 43%.'
   confidence: 0.6
   released_on: null
   provisional: false
@@ -1825,23 +1807,18 @@ Ivy:
       buy only when fights are clumped and you already have the gun core.
   matchups:
     beats:
+    - Pocket
+    - Paradox
+    - Grey Talon
     - Mina
-    - Haze
-    - Abrams
-    - Rem
-    - Victor
+    - Billy
     loses_to:
-    - Vyper
-    - Yamato
-    - Dynamo
-    - Mo & Krill
-    - Viscous
-  matchup_notes: 'She beats committed, immobile damage and frontline — Haze (59%)
-    and Abrams (59%) cannot punish the Stone Form i-frame/stun, and Kudzu Connection
-    out-sustains their chip while she out-ranges tanks. She loses to mobile burst
-    and displacement: Vyper (44%) and Yamato (47%) kill through her low-HP heal before
-    tether matters, while Dynamo and Mo & Krill (48%) displace her out of tether range
-    and stun past the Form window.'
+    - Baba
+    - Kelvin
+    - Victor
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Pocket
+    62%, Paradox 59%, Grey Talon 58%, Mina 58%, Billy 57%. Worst: Baba 46%, Kelvin
+    46%, Victor 49%.'
   confidence: 0.62
   released_on: null
   provisional: false
@@ -1924,21 +1901,19 @@ Warden:
       Battle Vest/Bullet Lifesteal, which never turn off.'
   matchups:
     beats:
+    - Paradox
+    - Grey Talon
+    - Shiv
     - Venator
-    - Mirage
-    - Apollo
-    - Pocket
-    - Graves
     loses_to:
-    - Paige
-    - Ivy
-    - Seven
-    - Victor
-    - Mo & Krill
-  matchup_notes: 'The 61% into Venator/Mirage is the class mirror: Warden out-stats
-    and out-scales other gun carries, and cage shuts ability-reliant ones (Pocket
-    59%). He loses to lane bullies (Paige 47%), sustain (Ivy 48%), and durable fronts
-    (Mo & Krill/Victor 50%) that tank the cage and out-tempo him before he scales.'
+    - Vindicta
+    - Lash
+    - Abrams
+    - Wraith
+    - Infernus
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Paradox
+    55%, Grey Talon 53%, Shiv 51%, Venator 51%. Worst: Vindicta 41%, Lash 44%, Abrams
+    45%, Wraith 46%, Infernus 46%.'
   confidence: 0.6
   released_on: null
   provisional: false
@@ -2031,22 +2006,20 @@ Yamato:
       so treat it as situational, not standard.'
   matchups:
     beats:
-    - Shiv
-    - Paradox
-    - Mina
-    - Pocket
-    - Wraith
-    loses_to:
-    - Celeste
+    - Deadman Danny
+    - Grey Talon
+    - Silver
     - Mo & Krill
-    - Warden
+    - Holliday
+    loses_to:
+    - Baba
+    - Kelvin
+    - Wraith
     - Abrams
-    - Haze
-  matchup_notes: She point-clicks squishy mobile and late-scaler carries before they
-    can answer (Shiv 58%, Paradox 57%, Mina 55%, Wraith 53% — Wraith is a falling
-    late scaler with no instant answer). She loses to sustain tanks that outlast her
-    burst (Mo & Krill 42%, Abrams 42%) and to Celeste/Warden (41-42%) who outrange
-    or CC her approach, while Counterspell and Dispel Magic delete the engage outright.
+    - Drifter
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Deadman
+    Danny 58%, Grey Talon 56%, Silver 56%, Mo & Krill 55%, Holliday 55%. Worst: Baba
+    40%, Kelvin 42%, Wraith 45%, Abrams 46%, Drifter 47%.'
   confidence: 0.62
   released_on: null
   provisional: false
@@ -2130,23 +2103,20 @@ Lash:
       a shared defensive layer over either damage path, not a standalone build.
   matchups:
     beats:
+    - Warden
+    - Deadman Danny
     - Grey Talon
-    - Lady Geist
-    - Paradox
-    - Venator
-    - Mirage
+    - Infernus
+    - Mina
     loses_to:
-    - Seven
     - Dynamo
-    - McGinnis
+    - Baba
+    - Kelvin
     - Vyper
-    - Paige
-  matchup_notes: Talon (64%) is his best lane — an immobile poke carry Lash grapples
-    onto and closes before he can kite, and Talon also eats the new air-drag/slow
-    change; Lady Geist (59%) is a slow bruiser with no answer to the dive. He loses
-    lane-to-late vs Seven (42%) and McGinnis (44%) — sustained AoE, turret/wall zoning
-    and stuns punish his engage — while Dynamo (44%) simply out-initiates him in the
-    5v5.
+    - Apollo
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Warden
+    56%, Deadman Danny 56%, Grey Talon 56%, Infernus 55%, Mina 55%. Worst: Dynamo
+    42%, Baba 43%, Kelvin 44%, Vyper 46%, Apollo 46%.'
   confidence: 0.6
   released_on: null
   provisional: false
@@ -2227,23 +2197,15 @@ Viscous:
     notes: Cooldown-stacking enabler shell that maximizes Cube uptime and Goo Ball
       resets for coordinated rescue plays.
   matchups:
-    beats:
-    - Pocket
-    - Haze
-    - Calico
-    - Abrams
-    - Vindicta
+    beats: []
     loses_to:
-    - Mo & Krill
-    - Lash
-    - Drifter
-    - Warden
+    - Nurse Harrow
+    - Ivy
+    - Venator
+    - Haze
     - Wraith
-  matchup_notes: 'Beats Pocket/Haze/Calico because Cube nullifies their burst windows
-    and his tanky frontline out-trades squishy carries; Abrams is a sustain-vs-sustain
-    grind he edges. Loses to Mo & Krill (43%) and Lash (46%): Lash''s mobility and
-    displacement punish a slow enabler, and Mo & Krill''s tank-sustain plus combo
-    out-trades him; Drifter''s melee bruiser kit does the same.'
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: . Worst:
+    Nurse Harrow 41%, Ivy 44%, Venator 47%, Haze 47%, Wraith 49%.'
   confidence: 0.55
   released_on: null
   provisional: false
@@ -2325,22 +2287,15 @@ Pocket:
       Sacrifice to clear camps, Majestic Leap and Dispel Magic to engage or bail out;
       taken when the enemy comp punishes the all-in.
   matchups:
-    beats:
-    - Venator
-    - Apollo
-    - Mirage
-    - Abrams
-    - Wraith
+    beats: []
     loses_to:
+    - Ivy
     - Celeste
-    - Warden
-    - Drifter
+    - Baba
     - Haze
-    - Viscous
-  matchup_notes: 'Beats squishy carries he can cloak onto and burst before they scale
-    (Venator 54%, Apollo 53%, Mirage 52%). Loses to anything that out-ranges or sticks
-    to a low-HP caster: Celeste out-trades at range (39%), Warden''s root and gun
-    pressure catch the dive (41%), and Drifter/Viscous stay glued to him (41%/44%).'
+    - Kelvin
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: . Worst:
+    Ivy 38%, Celeste 39%, Baba 41%, Haze 41%, Kelvin 41%.'
   confidence: 0.58
   released_on: null
   provisional: false
@@ -2429,24 +2384,15 @@ Mirage:
     notes: The summer-2026 S-tier double-tornado build; 30-day high-rank usage shows
       it near-zero, so treat it as historical rather than a live option.
   matchups:
-    beats:
-    - Calico
-    - Infernus
-    - Paradox
-    - Bebop
-    - Haze
+    beats: []
     loses_to:
-    - Warden
-    - Mo & Krill
-    - Lash
     - Wraith
-    - Abrams
-  matchup_notes: 'He farms immobile carries and squishy divers — 53% into Infernus
-    and Calico — because Djinn''s Mark plus Fire Scarab spirit-amp bursts low-HP targets
-    while Dust Devil''s knock-up and untargetability blunt a dive. He folds to CC-frontline
-    and ranged gun pressure: 39% vs Warden (poke he cannot close), 40% vs Mo & Krill
-    (silence/combo locks a slow caster), 44% vs Lash (S-tier dive displaces him off
-    split-push).'
+    - Haze
+    - Drifter
+    - Shiv
+    - Venator
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: . Worst:
+    Wraith 42%, Haze 43%, Drifter 45%, Shiv 46%, Venator 47%.'
   confidence: 0.6
   released_on: null
   provisional: false
@@ -2523,23 +2469,19 @@ Vyper:
       now that her spirit-amp damage is gone.
   matchups:
     beats:
+    - Deadman Danny
     - Mina
-    - Calico
-    - Infernus
     - Haze
-    - Ivy
+    - Victor
+    - Venator
     loses_to:
-    - Dynamo
-    - Warden
-    - Billy
-    - Mo & Krill
-    - Wraith
-  matchup_notes: 'Data beats CC-light squishies - Mina (60%), Calico (58%), Infernus
-    (58%) can''t trade into her gun and have no hard interrupt to stop the dive. The
-    genuine losing lanes are initiation/CC: Dynamo (46%) and Mo & Krill lift/combo
-    her out of the fight and Warden''s (48%) cage/trap punishes the dive. Note the
-    creator-flagged counters (Billy 50%, Silver/Venator) do NOT show in data - so
-    treat ''she loses to CC'' as a comp-level problem, not a specific-hero counter.'
+    - Paige
+    - Bebop
+    - Baba
+    - Ivy
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Deadman
+    Danny 61%, Mina 59%, Haze 56%, Victor 56%, Venator 55%. Worst: Paige 47%, Bebop
+    48%, Baba 49%, Ivy 50%.'
   confidence: 0.6
   released_on: null
   provisional: false
@@ -2619,17 +2561,14 @@ Sinclair:
       Rounds.
   matchups:
     beats:
-    - Wraith
-    - Paradox
+    - Violet
     loses_to:
-    - Drifter
+    - Wraith
+    - Haze
     - Bebop
-    - Calico
-    - Lash
-  matchup_notes: 'His only real wins are Wraith (54%) and Paradox (51%) — falling
-    squishy carries he can burst before they scale. He loses to Drifter (43%), Bebop
-    (44%) and rising divers Lash/Calico (47%): gap-closers, hooks and dive punish
-    his low HP and his inability to pick a favourable setup without draft.'
+    - Nurse Harrow
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Violet
+    51%. Worst: Wraith 42%, Haze 46%, Bebop 48%, Nurse Harrow 49%.'
   confidence: 0.42
   released_on: null
   provisional: false
@@ -2711,22 +2650,20 @@ Mina:
       it still loses the tank matchup.
   matchups:
     beats:
-    - Mirage
     - Pocket
-    - Haze
-    - Venator
-    - Vindicta
+    - Infernus
+    - Warden
+    - Deadman Danny
+    - Dynamo
     loses_to:
-    - Ivy
+    - Kelvin
+    - Baba
+    - Seven
+    - Lady Geist
     - Vyper
-    - Billy
-    - Mo & Krill
-    - Victor
-  matchup_notes: She beats the squishy carries she can dive and burst — Mirage, Pocket,
-    Haze (52-53%) — where her mobility converts a kill before they can react. She
-    loses hard to tanks and bruisers with CC/sustain (Billy 43%, Mo & Krill 43%, Victor
-    44%) and to Ivy (40%), who out-heals her burst. Single-target burst into heroes
-    that survive the first rotation is the whole story.
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Pocket
+    56%, Infernus 52%, Warden 51%, Deadman Danny 51%, Dynamo 51%. Worst: Kelvin 38%,
+    Baba 38%, Seven 40%, Lady Geist 41%, Vyper 41%.'
   confidence: 0.7
   released_on: null
   provisional: false
@@ -2806,21 +2743,20 @@ Drifter:
       into healing comps and tanky fronts.
   matchups:
     beats:
-    - Pocket
-    - Holliday
-    - Sinclair
-    - Venator
-    - Shiv
+    - Rem
+    - Grey Talon
+    - Paradox
+    - Mirage
+    - McGinnis
     loses_to:
-    - Dynamo
-    - Vyper
-    - Celeste
-    - Mo & Krill
-    - Apollo
-  matchup_notes: Beats squishy burst/carry targets he can close and delete — Pocket,
-    Venator, Holliday, Sinclair (57-59%). Loses the front-line/CC war to Dynamo and
-    Mo & Krill (44-48%), who out-sustain his dive and lock him down, and to rising
-    lane bullies Apollo and Vyper who never let him start.
+    - Baba
+    - Kelvin
+    - Violet
+    - Paige
+    - Graves
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Rem 60%,
+    Grey Talon 58%, Paradox 58%, Mirage 55%, McGinnis 55%. Worst: Baba 41%, Kelvin
+    44%, Violet 46%, Paige 46%, Graves 46%.'
   confidence: 0.72
   released_on: null
   provisional: false
@@ -2899,22 +2835,20 @@ Venator:
       Metal Skin.
   matchups:
     beats:
-    - Infernus
-    - Haze
-    - Wraith
-    - Mo & Krill
+    - Mina
+    - Victor
+    - Viscous
+    - Mirage
+    - Paradox
     loses_to:
-    - Abrams
-    - Warden
-    - Vindicta
-    - Drifter
-    - Lash
-    - Graves
-  matchup_notes: Beats fellow gun carries by out-tanking and out-sustaining them —
-    Haze 48% and Wraith 47% match the reader note that he is the better pick in that
-    slot. Loses to gap-closing frontline CC (Abrams 38%, Lash 43%) that locks him
-    out of his own range. Vindicta's 39% is likely a lagging pre-patch number — she
-    is falling and flyers were hurt this patch.
+    - Baba
+    - Kelvin
+    - Wraith
+    - Vyper
+    - Bebop
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Mina 56%,
+    Victor 54%, Viscous 53%, Mirage 53%, Paradox 53%. Worst: Baba 39%, Kelvin 42%,
+    Wraith 44%, Vyper 45%, Bebop 45%.'
   confidence: 0.6
   released_on: null
   provisional: false
@@ -2993,22 +2927,20 @@ Victor:
       cluster item.
   matchups:
     beats:
-    - Mina
-    - Calico
-    - Bebop
-    - Haze
-    - Lash
+    - Paradox
+    - Grey Talon
+    - Shiv
+    - Pocket
+    - Deadman Danny
     loses_to:
-    - Ivy
-    - Vindicta
-    - Mo & Krill
-    - Abrams
-    - Drifter
-  matchup_notes: He beats divers who must enter his Aura of Suffering (Mina 56%, Calico
-    55%, Lash 53%) — his DoT sustain outlasts their burst. He loses to a kiting healer
-    (Ivy 43%) and a ranged flyer (Vindicta 45%) he cannot reach or finish, and drops
-    the tank mirror (Abrams 47%, Mo & Krill 47%) where low HP-per-boon leaves him
-    out-stat.
+    - Baba
+    - Bebop
+    - Vyper
+    - Venator
+    - Yamato
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Paradox
+    59%, Grey Talon 59%, Shiv 58%, Pocket 54%, Deadman Danny 54%. Worst: Baba 40%,
+    Bebop 44%, Vyper 44%, Venator 46%, Yamato 46%.'
   confidence: 0.6
   released_on: null
   provisional: false
@@ -3082,23 +3014,20 @@ Paige:
       and Knockdown's 50.8% WR (below her 52.7%) marks it as the weaker path.
   matchups:
     beats:
-    - Wraith
-    - Paradox
-    - Haze
+    - Grey Talon
     - Mina
-    - Warden
+    - Pocket
+    - Drifter
+    - Mo & Krill
     loses_to:
-    - Rem
-    - Ivy
-    - Dynamo
-    - Billy
-    - Vindicta
-  matchup_notes: 'The real edges are vs falling gun carries/initiators — Wraith 57%,
-    Paradox 57%, Haze 55% — where her lane pressure and Plot Armor heals blunt the
-    picks and scaling windows those archetypes need. She is only even (49%) into Rem
-    and Ivy, fitting the creator read that she is a weaker Rem: both out-heal and
-    out-escape her. Dynamo at 49% contradicts the old ''counters Dynamo ult'' line
-    — treat that as stale.'
+    - Baba
+    - Abrams
+    - Apollo
+    - Kelvin
+    - Celeste
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Grey Talon
+    57%, Mina 55%, Pocket 54%, Drifter 54%, Mo & Krill 54%. Worst: Baba 41%, Abrams
+    44%, Apollo 44%, Kelvin 47%, Celeste 47%.'
   confidence: 0.6
   released_on: null
   provisional: false
@@ -3178,17 +3107,9 @@ The Doorman:
       'kidnap build is the noob trap' claim; Shadow Weave is the nominal invis replacement
       but he gains far less from it than a gun carry.
   matchups:
-    beats:
-    - Silver
-    loses_to:
-    - Yamato
-    - Lash
-    - Apollo
-  matchup_notes: 'No enemy pair cleared the sample threshold, so this is inference
-    - low confidence. Doorway still isolates a carry, so he keeps a real answer to
-    Silver, the meta''s top gun tank. He loses to dive tempo (Yamato, Lash, Apollo):
-    they reach a squishy caster before Luggage Cart/Doorway set up - the same ''tempo
-    beats setup'' pattern the 09-16 patch rewards.'
+    beats: []
+    loses_to: []
+  matchup_notes: Too few high-rank games to measure matchups right now.
   confidence: 0.55
   released_on: null
   provisional: false
@@ -3274,22 +3195,20 @@ Billy:
       pick it when the enemy frontline, not their backline, is the problem.
   matchups:
     beats:
-    - Dynamo
-    - Bebop
+    - Grey Talon
     - Mina
-    - Paradox
-    - Pocket
+    - Mo & Krill
+    - Infernus
+    - Haze
     loses_to:
-    - Shiv
-    - Ivy
-    - Warden
+    - Baba
+    - Graves
     - Seven
-    - Vindicta
-  matchup_notes: 'He farms squishy, low-mobility heroes who can''t escape a melee
-    bruiser that out-stats them — Dynamo, Bebop, Paradox, Pocket and Mina all sit
-    at 55-58%. He bleeds to anti-tank and sustain: Shiv''s execute kit is his worst
-    lane (43%) and Shiv is rising, while Ivy and Warden out-sustain/out-range his
-    all-in (45% each) and Seven/Vindicta poke the big slow body from range (48%).'
+    - Rat King
+    - Nurse Harrow
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Grey Talon
+    62%, Mina 56%, Mo & Krill 53%, Infernus 53%, Haze 53%. Worst: Baba 35%, Graves
+    39%, Seven 41%, Rat King 41%, Nurse Harrow 43%.'
   confidence: 0.58
   released_on: null
   provisional: false
@@ -3374,18 +3293,20 @@ Graves:
       Bullets vs tanks, but she lacks the scaling to out-carry a real gun carry.
   matchups:
     beats:
-    - Paradox
-    - Bebop
-    - Venator
+    - Billy
+    - Grey Talon
+    - Infernus
+    - Deadman Danny
+    - Pocket
     loses_to:
-    - Warden
+    - Baba
     - Wraith
-    - Calico
-  matchup_notes: 'Beats Paradox (53%) and Bebop (52%): both stand still to channel
-    or duel, so Grasping Hands and summon pressure land easily. Loses to Warden (42%)
-    and Wraith (44%) — gun carries that out-range and out-scale her, Warden''s Binding
-    Word pinning her immobile frame. Calico/Lash/Drifter are near-even but all mobile
-    dive, so they reach her before she scales.'
+    - Celeste
+    - Nurse Harrow
+    - Yamato
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Billy
+    61%, Grey Talon 58%, Infernus 56%, Deadman Danny 56%, Pocket 55%. Worst: Baba
+    42%, Wraith 45%, Celeste 46%, Nurse Harrow 47%, Yamato 47%.'
   confidence: 0.6
   released_on: null
   provisional: false
@@ -3484,22 +3405,20 @@ Apollo:
       55.6%) but low share, so it is a win-more when games run long.
   matchups:
     beats:
-    - Mina
-    - Vindicta
-    - Drifter
-    - Haze
-    - Calico
+    - Paradox
+    - Infernus
+    - Grey Talon
+    - Pocket
+    - Paige
     loses_to:
-    - Warden
-    - Abrams
-    - Lash
+    - Baba
+    - Holliday
+    - Nurse Harrow
     - Wraith
-    - Mo & Krill
-  matchup_notes: 'He beats burst squishies he can dive before they scale: Mina (55%),
-    Vindicta/Haze (~52%), whose range his lane pressure and Riposte punish. He loses
-    to frontline that out-sustains his burst (Abrams 44%, Mo & Krill 46%) and to Lash
-    (44%), whose mobility out-positions his melee range — the vegas line that Riposte
-    ''cancels Lash'' reads as dated, the data has him losing that pairing.'
+    - Rat King
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Paradox
+    60%, Infernus 60%, Grey Talon 57%, Pocket 56%, Paige 56%. Worst: Baba 39%, Holliday
+    44%, Nurse Harrow 44%, Wraith 44%, Rat King 46%.'
   confidence: 0.6
   released_on: null
   provisional: false
@@ -3596,22 +3515,17 @@ Rem:
       a carry build.
   matchups:
     beats:
-    - Paradox
-    - Wraith
-    - Paige
-    - Vindicta
-    - Haze
+    - Venator
+    - Violet
     loses_to:
-    - Ivy
-    - Warden
-    - Lash
+    - Wraith
     - Drifter
-    - Mo & Krill
-  matchup_notes: Cleanse plus percent-max-HP heal erases pick/burst setups (Paradox)
-    and out-lasts gun carries (Wraith, Haze) in extended fights. Loses to Ivy, who
-    does the same heal job with a tankier body and a shorter-cooldown ult, and to
-    dive/initiators Lash, Drifter and Mo & Krill that reach a low-HP support before
-    the heal lands.
+    - Haze
+    - Bebop
+    - Rat King
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Venator
+    53%, Violet 51%. Worst: Wraith 34%, Drifter 40%, Haze 41%, Bebop 43%, Rat King
+    44%.'
   confidence: 0.6
   released_on: null
   provisional: false
@@ -3701,16 +3615,21 @@ Silver:
       you must survive the frontline — Unstoppable (42% share, 49.5% WR) and Debuff
       Reducer are the highest-WR items on her.
   matchups:
-    beats: []
+    beats:
+    - Mo & Krill
+    - Mina
+    - Celeste
+    - Venator
+    - Grey Talon
     loses_to:
-    - Lash
-    - Drifter
-  matchup_notes: 'The only two qualified pairs are both 45% — Lash and Drifter, mobile
-    melee bruisers who can stick to her and out-trade; Silver has no positive matchup
-    with enough games. That is a ceiling note, not a floor: she wins through tempo
-    and pick pressure (15.1% PR) rather than countering specific heroes. Weighted
-    Bola''s ground/interrupt should now help her against flyers (Vindicta, Grey Talon),
-    but that is inference, not data.'
+    - Baba
+    - Violet
+    - Vindicta
+    - Rat King
+    - Yamato
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Mo & Krill
+    66%, Mina 57%, Celeste 56%, Venator 54%, Grey Talon 54%. Worst: Baba 39%, Violet
+    39%, Vindicta 42%, Rat King 43%, Yamato 44%.'
   confidence: 0.62
   released_on: null
   provisional: false
@@ -3805,21 +3724,19 @@ Celeste:
   matchups:
     beats:
     - Pocket
-    - Yamato
-    - Haze
-    - Paradox
-    - Bebop
-    loses_to:
-    - Ivy
-    - Warden
-    - Lash
+    - Infernus
+    - Grey Talon
     - Calico
-    - Mina
-    - Deadman Danny
-  matchup_notes: She wins the burst race vs squishy close-range threats — 61% vs Pocket
-    and 59% vs Yamato (S-tier, but she lands her damage before he closes). Sustained
-    healers out-last her damage window (Ivy 47%), while mobile initiators/bruisers
-    who survive the first burst and close the gap (Lash, Calico) beat her 52-53%.
+    - Nurse Harrow
+    loses_to:
+    - Baba
+    - Silver
+    - Seven
+    - Kelvin
+    - Ivy
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Pocket
+    61%, Infernus 57%, Grey Talon 57%, Calico 56%, Nurse Harrow 56%. Worst: Baba 41%,
+    Silver 44%, Seven 45%, Kelvin 45%, Ivy 46%.'
   confidence: 0.6
   released_on: null
   provisional: false
@@ -3917,22 +3834,20 @@ Rat King:
       shred item shows in usage — under-built and data-thin.
   matchups:
     beats:
-    - Venator
+    - Billy
+    - Lady Geist
     - Paradox
-    - Silver
-    - Rem
     - Grey Talon
+    - Silver
     loses_to:
-    - Ivy
-    - Kelvin
+    - Baba
+    - Bebop
     - Celeste
-    - Dynamo
-    - Paige
-  matchup_notes: Royal Pestments' bullet deflect plus Rat Swarm's bullet-resist shred
-    make him a gun-carry killer — Venator 64%, Silver 62%, Paradox 62%. His losses
-    cluster on sustain/support comps that out-heal a single damage window (Ivy 44%,
-    Kelvin 48%, Paige 51%, Dynamo 51%) and on spirit burst that ignores his anti-bullet
-    barrier (Celeste 48%); Rem, another support, is the exception he beats at 61%.
+    - Ivy
+    - Vyper
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Billy
+    59%, Lady Geist 58%, Paradox 58%, Grey Talon 57%, Silver 57%. Worst: Baba 41%,
+    Bebop 47%, Celeste 47%, Ivy 47%, Vyper 47%.'
   confidence: 0.55
   released_on: '2026-10-02'
   provisional: false
@@ -4026,23 +3941,14 @@ Baba:
       -55%, Healbane) now cuts straight through it.
   matchups:
     beats:
-    - Solomon
-    - Apollo
-    - Calico
     - Grey Talon
-    - Mina
-    loses_to:
-    - Kelvin
     - Dynamo
-    - Paige
-    - Holliday
-    - Wraith
-  matchup_notes: She beats telegraphed control/spirit heroes she can silence and out-sustain
-    — Solomon (67%) and Apollo (59%), plus Calico (58%), who cannot heavy-melee the
-    crate economy so Baba out-farms the tempo assassin. She loses to sustain that
-    matches her regen — Kelvin (39%) and Dynamo (41%) — and to S-tier lane support
-    Paige (43%) and mobile gun pressure Holliday (44%)/Wraith (45%) she cannot out-poke
-    before the channel lands.
+    - Deadman Danny
+    - Billy
+    - Solomon
+    loses_to: []
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Grey Talon
+    67%, Dynamo 65%, Deadman Danny 65%, Billy 65%, Solomon 63%. Worst: .'
   confidence: 0.55
   released_on: '2026-10-06'
   provisional: false
@@ -4145,22 +4051,19 @@ Solomon:
       Booster, Superior Duration) is absent from high-rank usage.
   matchups:
     beats:
-    - Deadman Danny
-    - Mo & Krill
-    - Abrams
-    - Vindicta
-    - Shiv
+    - Mina
+    - Bebop
+    - Paige
+    - Violet
     loses_to:
-    - Celeste
-    - Rat King
     - Baba
-    - Holliday
-    - Yamato
-  matchup_notes: Bishop tiles + rook immobilize zone anything that must physically
-    hold hub space, so he beats front-line bodies (Deadman Danny 61%; Shiv/Mo & Krill/Abrams
-    ~even) — note Vindicta now reads 48% (even), not the loss the day-0 entry claimed.
-    He dies to burst mobility that lands before his self-cast Knight's invuln (Holliday
-    37%, Yamato 38%) and to Rat King/Celeste closing inside his zone.
+    - Abrams
+    - Nurse Harrow
+    - Rat King
+    - Wraith
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Mina 58%,
+    Bebop 55%, Paige 52%, Violet 52%. Worst: Baba 37%, Abrams 42%, Nurse Harrow 43%,
+    Rat King 44%, Wraith 44%.'
   confidence: 0.4
   released_on: '2026-10-09'
   provisional: false
@@ -4269,23 +4172,20 @@ Deadman Danny:
       builds, not a separate archetype.
   matchups:
     beats:
-    - Violet
+    - Silver
+    - Vindicta
+    - Solomon
+    - Pocket
     - Grey Talon
-    - Calico
-    - Paradox
     loses_to:
-    - Kelvin
+    - Baba
     - Vyper
-    - Graves
-    - Celeste
-    - Paige
-  matchup_notes: 'Nothing on the roster is actually favourable — Violet at 49% is
-    his ceiling, so ''beats'' means least-bad. The genuine losses are sustain-plus-slow:
-    Kelvin (29%) heals through the mark-to-execute window and his slow stacks with
-    the 35% air drag, while Paige (33%) out-lanes him and converts the ~2:30 crate/hub
-    timing before his kit is online. Celeste and Vyper (33/32%) simply out-burst a
-    730-HP flyer who has to commit to a dive; Silver (unsampled) is the theoretical
-    floor via Weighted Bola.'
+    - Seven
+    - Yamato
+    - Wraith
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Silver
+    55%, Vindicta 53%, Solomon 53%, Pocket 52%, Grey Talon 52%. Worst: Baba 35%, Vyper
+    39%, Seven 41%, Yamato 42%, Wraith 43%.'
   confidence: 0.55
   released_on: '2026-10-13'
   provisional: false
@@ -4403,23 +4303,20 @@ Violet:
       fallen out of usage entirely.
   matchups:
     beats:
+    - Silver
+    - Pocket
     - Grey Talon
     - Deadman Danny
-    - Mina
-    - Paradox
+    - Drifter
     loses_to:
-    - Vindicta
     - Baba
-    - Mo & Krill
+    - Ivy
+    - Seven
     - Wraith
-    - Rat King
-  matchup_notes: She beats the grounded marksman/flyer tier (Grey Talon 54%, Deadman
-    Danny 51%) — 35% air drag and vent-fed approaches force them into her zone — while
-    Vindicta at 39% is the exception because she pokes from outside it. She loses
-    to HP-stacking frontlines (Rat King 41%, Mo & Krill 41%) that outlast the DoT,
-    and to Wraith's single-target burst; 710 HP with no dash means the zone lands
-    after she's dead. The dive class (Lash, Holliday, Calico, Yamato) is the same
-    structural problem even where the sample is too thin to list.
+    - Abrams
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Silver
+    61%, Pocket 58%, Grey Talon 57%, Deadman Danny 55%, Drifter 54%. Worst: Baba 44%,
+    Ivy 44%, Seven 45%, Wraith 46%, Abrams 47%.'
   confidence: 0.6
   released_on: '2026-10-16'
   provisional: false
@@ -4540,23 +4437,20 @@ Nurse Harrow:
       win rate is 'already winning'.
   matchups:
     beats:
-    - Billy
+    - Viscous
     - Mina
+    - Billy
     - Solomon
-    - Shiv
     - Pocket
     loses_to:
     - Baba
-    - Dynamo
     - Celeste
     - Wraith
-    - Ivy
-  matchup_notes: 'Lurking Terrors does its job on melee frontlines — Billy 59%, Shiv
-    55%, Pocket 55% — but the day-0 claim that it taxes dash assassins is unproven:
-    Holliday, Calico, Yamato and Drifter do not appear as wins anywhere in the window.
-    Losses cluster at range and on AoE engage: Baba 43%, Celeste 45%, Wraith 46% all
-    trade from outside the cone, and Dynamo''s 45% is a grouped initiation beating
-    her single-target heal.'
+    - Kelvin
+    - Dynamo
+  matchup_notes: 'Measured win rate over 14 days at Ascendant and up. Best: Viscous
+    59%, Mina 58%, Billy 57%, Solomon 57%, Pocket 56%. Worst: Baba 42%, Celeste 44%,
+    Wraith 47%, Kelvin 48%, Dynamo 48%.'
   confidence: 0.6
   released_on: '2026-10-20'
   provisional: false

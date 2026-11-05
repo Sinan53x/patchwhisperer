@@ -135,8 +135,7 @@ def test_apply_kb_update_builds(tmp_path):
     )
     apply_kb_update(kb, upd)
     h = kb.load_heroes()["Haze"]
-    # invalid damage entry dropped wholesale (whole builds field dropped on error)
-    assert h.matchups.beats == ["Wraith"]
+    assert h.matchups.beats == []  # matchups are measured, never written here
 
 
 def test_merge_enrichment():

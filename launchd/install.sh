@@ -3,7 +3,7 @@
 set -eu
 
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
-LABEL=com.patchwhisperer
+LABEL=com.patchwhisperer.watch
 DEST="$HOME/Library/LaunchAgents/$LABEL.plist"
 LOGS="$HOME/Library/Logs/patchwhisperer"
 

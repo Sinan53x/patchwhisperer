@@ -40,9 +40,9 @@ _MOVED_RANK = {"up": 0, None: 1, "down": 2}
 _BIG_KIND_LABEL = {"hero": "Hero", "item": "Item", "system": "Map & economy"}
 _SHEET_PREFIX = {"hero": "hero", "item": "item", "system": "sys"}
 _TEMPO = {
-    "toward_tempo": ("Games shift toward early tempo", -1),
-    "toward_scaling": ("Games shift toward late scaling", 1),
-    "neutral": ("No clear shift in game pace", 0),
+    "toward_tempo": "Games shift toward early tempo",
+    "toward_scaling": "Games shift toward late scaling",
+    "neutral": "No clear shift in game pace",
 }
 _DELTA_RE = re.compile(
     r"^(?P<label>.+?)\s+(?P<verb>increased|reduced|decreased|lowered|raised|rises?|drops?)\s+"
@@ -164,7 +164,14 @@ class ArchetypeView(BaseModel):
 
 class TempoView(BaseModel):
     label: str
-    position: int = 50
+    direction: str = "neutral"
+
+
+class ImpactHeroView(BaseModel):
+    name: str
+    slug: str
+    portrait: str | None = None
+    initials: str = ""
     why: str = ""
 
 
@@ -233,6 +240,8 @@ class PatchPageModel(BaseModel):
     archetypes: list[ArchetypeView] = []
     what_to_watch: list[WatchView] = []
     game_plan: str = ""
+    helped: list[ImpactHeroView] = []
+    hurt: list[ImpactHeroView] = []
     counts_line: str = ""
 
 
@@ -519,6 +528,21 @@ def _lookup_subject(lookup: dict, subject_slug: str):
     )
 
 
+def _impact_heroes(movers: list, heroes: list[HeroCardView]) -> list[ImpactHeroView]:
+    by_name = {h.name: h for h in heroes}
+    return [
+        ImpactHeroView(
+            name=h.name,
+            slug=h.slug,
+            portrait=h.portrait,
+            initials=h.initials,
+            why=m.why,
+        )
+        for m in movers
+        if (h := by_name.get(m.hero))
+    ]
+
+
 def _big_changes(
     analysis: AnalysisBundle,
     heroes: list[HeroCardView],
@@ -787,12 +811,7 @@ def build_page_model(
             for s in analysis.systems.systems_changed
         ]
         shift = analysis.systems.tempo_shift
-        label, sign = _TEMPO[shift.direction]
-        tempo = TempoView(
-            label=label,
-            position=round(50 + sign * 45 * max(shift.confidence, 0.2)),
-            why=shift.why,
-        )
+        tempo = TempoView(label=_TEMPO[shift.direction], direction=shift.direction)
         archetypes = [
             ArchetypeView(
                 name=a.archetype,
@@ -836,6 +855,8 @@ def build_page_model(
         small_systems=small_systems,
         what_to_watch=[_watch(w) for w in analysis.synthesis.what_to_watch],
         game_plan=analysis.synthesis.meta_thesis.new,
+        helped=_impact_heroes(analysis.synthesis.winners, heroes),
+        hurt=_impact_heroes(analysis.synthesis.losers, heroes),
         counts_line=_counts_line(
             heroes, item_groups, small_items, systems, small_systems
         ),

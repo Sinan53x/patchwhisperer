@@ -19,6 +19,7 @@ from patchwhisperer.analysis.llm import (
     render_prompt,
     stage_marker,
 )
+from patchwhisperer.analysis.matchups import sync_kb_matchups
 from patchwhisperer.analysis.pipeline import (
     apply_kb_update,
     run_analysis,
@@ -174,6 +175,7 @@ def analyze(
         }
         for s in stats
     }
+    sync_kb_matchups(kb, api)
     pool_list = [
         p.strip() for p in (pool or config.DEFAULT_POOL).split(",") if p.strip()
     ]
@@ -590,6 +592,23 @@ def bot() -> None:
     run()
 
 
+@app.command()
+def watch() -> None:
+    """Analyze new patches and publish them to the site. Posts nothing to Discord."""
+    import logging
+
+    from patchwhisperer.bot import jobs, poller
+
+    logging.basicConfig(level=logging.INFO)
+
+    def job(gid: str) -> None:
+        jobs.analyze_and_post(
+            gid, on_hero_release=lambda post: jobs.run_roster_sync(release_post=post)
+        )
+
+    asyncio.run(poller.poll_loop(job, roster_job=jobs.run_roster_sync))
+
+
 def _with_channel(fn):
     """Run async fn(channel, loop) inside a minimal Discord client."""
     import discord
@@ -789,6 +808,14 @@ def roster_post_sync() -> None:
 
 tiers_app = typer.Typer(help="Measured hero tiers from public match data.")
 app.add_typer(tiers_app, name="tiers")
+
+
+@app.command("matchups")
+def matchups_refresh(
+    kb: Annotated[Path, typer.Option("--kb")] = KB_ROOT,
+) -> None:
+    """Replace KB matchups with measured ones."""
+    sync_kb_matchups(KBStore(kb), DeadlockAPI())
 
 
 @tiers_app.command("refresh")

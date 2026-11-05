@@ -5,6 +5,7 @@ from pathlib import Path
 
 from patchwhisperer.analysis.digest import prepare_patch
 from patchwhisperer.analysis.llm import LLMClient
+from patchwhisperer.analysis.matchups import sync_kb_matchups
 from patchwhisperer.analysis.pipeline import (
     apply_kb_update,
     patch_id_of,
@@ -145,6 +146,7 @@ def analyze_and_post(
         hotfix = patch.is_hotfix()
         api = api or DeadlockAPI()
         snapshot = _snapshot_for(post.date.timestamp(), api)
+        sync_kb_matchups(kb, api)
         if pool is None:
             pool = state.pool_all(db)
 

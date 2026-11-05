@@ -5,7 +5,7 @@ from pathlib import Path
 import pytest
 from jinja2 import Environment, PackageLoader
 
-from patchwhisperer.analysis.schemas import BigChange, HeroEntry
+from patchwhisperer.analysis.schemas import BigChange, HeroEntry, Mover
 from patchwhisperer.analysis.tiers import HeroTier, TierBand, TierSnapshot, build_band
 from patchwhisperer.kb.store import slugify
 from patchwhisperer.parse.models import Change, Direction, EntityType, Patch
@@ -619,3 +619,15 @@ def test_band_note_flags_an_early_post_patch_sample():
     settled = TierBand(key="ranked", label="All ranks", post_patch=True, matches=90000, heroes={})
     assert "early sample" in _band_note(early, "Nov 5")
     assert "early sample" not in _band_note(settled, "Nov 5")
+
+
+def test_game_plan_shows_heroes_the_patch_helps_and_hurts():
+    def mutate(analysis, patch):
+        hero = analysis.heroes.heroes[0].hero
+        analysis.synthesis.winners = [Mover(hero=hero, why="stronger"), Mover(hero="Nobody")]
+        analysis.synthesis.losers = []
+
+    page = _fixture_page(mutate)
+    assert [h.why for h in page.helped] == ["stronger"]
+    assert page.helped[0].slug == slugify(page.helped[0].name)
+    assert page.hurt == []

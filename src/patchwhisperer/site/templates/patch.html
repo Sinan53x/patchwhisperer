@@ -163,25 +163,41 @@
 <section class="board" id="plan" aria-label="Game plan">
   <div class="section-head"><h2>Game plan</h2></div>
   {%- if page.game_plan %}<p class="plan-text">{{ page.game_plan }}</p>{% endif %}
-  {%- if page.tempo %}
-  <div class="pace">
-    <div class="pace-gauge">
-      <p class="pace-label">{{ page.tempo.label }}</p>
-      <div class="gauge" role="img" aria-label="{{ page.tempo.label }}"><span class="gauge-mark" style="left: {{ page.tempo.position }}%"></span></div>
-      <div class="gauge-ends muted"><span>Early tempo</span><span>Late scaling</span></div>
-    </div>
-    {%- if page.archetypes %}
-    <div class="arche">
-      <p class="pace-label">Who it favors</p>
+  <div class="plan-grid">
+    {%- if page.tempo %}
+    <div class="plan-panel">
+      <p class="pace-label">Game pace</p>
+      <div class="pace-steps" role="img" aria-label="{{ page.tempo.label }}">
+        <span class="pace-step early{% if page.tempo.direction == 'toward_tempo' %} on{% endif %}">Faster, early fights</span>
+        <span class="pace-step even{% if page.tempo.direction == 'neutral' %} on{% endif %}">No change</span>
+        <span class="pace-step late{% if page.tempo.direction == 'toward_scaling' %} on{% endif %}">Longer, late scaling</span>
+      </div>
+      {%- if page.archetypes %}
+      <p class="pace-label arche-label">Who it favors</p>
       <div class="arche-list">
         {%- for a in page.archetypes %}
         <span class="arche-chip d-{{ a.direction }}" title="{{ a.why }}">{{ chev(a.chevrons, a.direction) }}{{ a.name }}</span>
         {%- endfor %}
       </div>
+      {%- endif %}
     </div>
     {%- endif %}
+    {%- for label, css, arrow, group in [("Patch helps", "up", "▲", page.helped), ("Patch hurts", "down", "▼", page.hurt)] %}
+    {%- if group %}
+    <div class="plan-panel">
+      <p class="pace-label impact-{{ css }}">{{ arrow }} {{ label }}</p>
+      <div class="impact-list">
+        {%- for h in group %}
+        <a class="impact-hero" href="#hero-{{ h.slug }}" data-sheet="hero-{{ h.slug }}" title="{{ h.why }}">
+          <span class="portrait impact-{{ css }}">{%- if h.portrait %}<img src="{{ rel }}{{ h.portrait }}" alt="" width="64" height="64" loading="lazy">{% else %}<span class="initials" aria-hidden="true">{{ h.initials }}</span>{% endif %}</span>
+          <span class="impact-name">{{ h.name }}</span>
+        </a>
+        {%- endfor %}
+      </div>
+    </div>
+    {%- endif %}
+    {%- endfor %}
   </div>
-  {%- endif %}
 </section>
 {%- endif %}
 

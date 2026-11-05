@@ -37,6 +37,8 @@ Produce an entry for **each hero listed above, and only those heroes**. For each
 - **builds, not just kits**: judge a change against the hero's actual `builds` (gun vs spirit, primary vs niche). A nerf to an item only the niche build buys is minor; a nerf to the primary build's core item is not.
 - **map and objectives**: for content/map updates, judge how the kit interacts with the new soul sources and fight locations (camp clear speed and AoE vs grouped Haunts, heavy melee for Tough Crates, mobility between districts, verticality for Bell Tower, stamina for Sunken Plaza, sustain vs harder camps, invisibility/vision for Steam Vents, split-push vs more spread-out objectives).
 
+`matchups` and `matchup_notes` are measured. Quote a matchup win rate only if it appears there, and never say a hero loses a matchup that is not in `loses_to`. Write for players: say "loses to", not "listed loss".
+
 New heroes listed under direct changes but absent from the knowledge base: include them with `tier_before` "?", `in_notes` true, low `confidence`, and say the read is provisional.
 
 ## Reader corrections (authoritative)
