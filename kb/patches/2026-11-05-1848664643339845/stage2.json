@@ -1,0 +1,95 @@
+{
+ "items": [
+  {
+   "item": "Healbane",
+   "direction": "nerf",
+   "magnitude": "moderate",
+   "summary": "The 10-30 anti-heal coverage plan gets trimmed: one Healbane is unchanged, but a second source adds less and a fourth caps at 72% instead of 82%. That is a soft buff to dedicated healers and a soft nerf to teams stacking Healbane as a team slot.",
+   "affected_heroes": [
+    {
+     "hero": "Seven",
+     "relationship": "core",
+     "effect": "down",
+     "why": "His Healbane is the team's anti-sustain coverage; the lower 4-stack cap reduces the payoff when allies also buy it."
+    },
+    {
+     "hero": "Infernus",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Healbane plus Toxic Bullets was his anti-heal package into healer comps; harsher multi-source diminishing returns trims that combo."
+    },
+    {
+     "hero": "Drifter",
+     "relationship": "situational",
+     "effect": "down",
+     "why": "His built-in heal cut plus Healbane/Toxic Bullets was a real anti-sustain answer; the stacking nerf weakens that composition."
+    },
+    {
+     "hero": "Yamato",
+     "relationship": "core",
+     "effect": "down",
+     "why": "Healbane is a bruiser-sustain cut in her on-hit core; it loses value mainly when the team stacks anti-heal."
+    },
+    {
+     "hero": "Mirage",
+     "relationship": "core",
+     "effect": "neutral",
+     "why": "Healbane is a sustain/anti-heal slot in his spirit-amp core; single-source use is unchanged."
+    },
+    {
+     "hero": "Apollo",
+     "relationship": "situational",
+     "effect": "up",
+     "why": "He buys Healbane in the utility build, but as a Locket/heal-sustain hero he benefits more from enemy anti-heal stacking being weaker."
+    },
+    {
+     "hero": "Kelvin",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Dome/regen sustain is his win condition; weaker stacked anti-heal lets his heals survive coordinated Healbane buys."
+    },
+    {
+     "hero": "Ivy",
+     "relationship": "situational",
+     "effect": "up",
+     "why": "Tether healing was the main casualty of 10-30 anti-heal stacking; this patch gives it some relief."
+    },
+    {
+     "hero": "Mo & Krill",
+     "relationship": "core",
+     "effect": "up",
+     "why": "Scorn sustain gets more value when enemy anti-heal caps lower; his own Healbane is secondary."
+    },
+    {
+     "hero": "Shiv",
+     "relationship": "core",
+     "effect": "up",
+     "why": "His regen/sustain shell was taxed by stacked anti-heal; the lower 4-stack cap helps him start fights healthier."
+    }
+   ],
+   "build_shift": "No component or slot change: Healbane remains a Vitality T2. The shift is strategic — one Healbane is still the same, but a second or third buyer now adds less, so teams should stop treating it as a coverage slot and let one dedicated buyer hold it.",
+   "rows": [
+    {
+     "label": "2 stacks",
+     "old": "57.8%",
+     "new": "54.7%",
+     "text": null,
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "4 stacks",
+     "old": "82.2%",
+     "new": "72%",
+     "text": null,
+     "effect": "bad",
+     "ability": null
+    }
+   ]
+  }
+ ],
+ "notable_item_stories": [
+  "Healbane is the patch's only item move, so the item meta is otherwise frozen; the change mainly rebalances sustain comps against anti-heal comps.",
+  "Expect fewer double-Healbane buys in coordinated play: one dedicated buyer is enough, and over-stacking anti-heal is now less efficient."
+ ]
+}

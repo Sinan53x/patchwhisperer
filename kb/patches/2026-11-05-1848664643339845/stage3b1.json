@@ -1,0 +1,251 @@
+{
+ "heroes": [
+  {
+   "hero": "Infernus",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's multi-source cap drops (4 stacks 82.2%->72%), so his Healbane + Toxic Bullets anti-heal package is worth less when allies also buy it.",
+    "The same change cuts enemy anti-heal stacking against his Spirit Lifesteal and Napalm T2 lifesteal, roughly cancelling the loss.",
+    "Celeste's kit nerfs (Dazzling Trick T3 silence +1.25s->+0.75s, Shining Wonder slow/cooldown) ease a burst matchup he already wins."
+   ],
+   "build_changes": [
+    "Keep Healbane as a single dedicated buy in Dashfernus; do not ask a second ally to stack it."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Healbane stacking nerf trims his anti-heal package but his own lifesteal gains a little.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Seven",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's 4-stack anti-heal cap falls 82.2%->72%, and his Healbane is the team's anti-sustain coverage slot — the payoff drops when allies also buy it.",
+    "Single-source Healbane is unchanged, so his own sustain and clear are untouched; the S-tier farm engine is intact."
+   ],
+   "build_changes": [
+    "One Healbane buyer per team is now correct; stop treating it as a coverage slot."
+   ],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Team anti-heal stacking got worse, but his single Healbane and farm engine are untouched.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Vindicta",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Celeste — one of her listed losing matchups (46%) — loses Dazzling Trick T3 silence duration, Radiant Daggers cast range 30m->25m and Shining Wonder slow/cooldown, so a burst threat that closes on her is weaker.",
+    "Nothing in the patch touches her gun core or the flyer tax (air drag, Weighted Bola), so this is relief, not a fix."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No direct change; Celeste's nerfs are the only thing easing her worst matchup.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Lady Geist",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's stacked anti-heal cap drops 82.2%->72%, and anti-heal stacking is her listed counter — her regen shell gets real relief in coordinated games.",
+    "Celeste, a rival spirit caster she was already out-scaling, loses silence duration, cast range and ult slow/damage."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Weaker stacked anti-heal gives her regen frontline a bit of its engine back.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Abrams",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's 4-stack cap falls 82.2%->72%, softening the anti-heal stacking that taxes his Siphon Life sustain.",
+    "Celeste (a listed losing matchup at 45%) loses Dazzling Trick T3 silence and Shining Wonder slow/cooldown, reducing the spirit burst that out-ranges his engage."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Anti-heal stacking is weaker and Celeste got trimmed — small tailwinds for the brawl.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Wraith",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.35,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Celeste — her worst listed matchup (42%) — loses Dazzling Trick T3 silence duration, Radiant Daggers cast range and Shining Wonder slow/cooldown, so the burst that beats her to the punch is weaker.",
+    "No item or system in this patch touches her fire-rate gun core; she still has no growth path of her own."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Untouched herself; Celeste's nerfs are the only relief in a still-flat slot.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "McGinnis",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane only appears in her niche zoning-utility build (39-47% share), so the 4-stack cap cut 82.2%->72% barely touches her.",
+    "Her listed matchups (beats Lash/Drifter, loses to Wraith) involve no hero changed in this patch."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Nothing landed on her; the Healbane nerf only grazes her niche utility build.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Paradox",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Celeste (43% for Paradox) loses Dazzling Trick T3 silence +1.25s->+0.75s, Radiant Daggers range 30m->25m and Shining Wonder slow/cooldown — one burst caster that out-trades her is weaker.",
+    "Her actual killers — Yamato, Lash, Holliday — are unchanged, so the dive problem that holds her at 46% WR is untouched."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Celeste's nerfs help a little, but the divers that actually beat her didn't move.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Dynamo",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's 4-stack cap falls 82.2%->72%, a small buff to Rejuvenating Aurora's team heal against coordinated anti-heal buys.",
+    "Mo & Krill — a listed losing matchup (45%) — gets Scorn heal 1.2x->1.3x, Burrow radius +0.5m and Combo health per kill 40->50, deepening the durable-frontline problem that eats Singularity."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Aurora gains slightly from weaker anti-heal stacking; Mo & Krill's buffs cost more.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Kelvin",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's 4-stack anti-heal cap drops 82.2%->72% while single-source is unchanged — the coordinated anti-heal that was his listed counter now caps lower, so dome and heal throughput survive team-wide buys.",
+    "His own Healbane (73-81% buy) is a single source, so he loses almost nothing on the giving side."
+   ],
+   "build_changes": [
+    "Keep Healbane as a single-source buy; the value is now in being the only buyer, not in stacking it."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Stacked anti-heal is weaker, so his dome and heals get real relief in team fights.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Haze",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Celeste — her worst listed matchup (42%) — loses Dazzling Trick T3 silence duration, Radiant Daggers cast range 30m->25m and Shining Wonder slow/cooldown, so the burst that kills her before Fixation stacks is weaker.",
+    "Nothing in the patch touches her gun core or the anti-gun defences (Bullet Resilience, Return Fire) that already cap her."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Untouched; Celeste's nerfs soften her worst matchup but her scaling ceiling is the same.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Holliday",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Mo & Krill — a listed losing matchup — gets Scorn heal 1.2x->1.3x, Burrow damage radius +0.5m and Combo health per kill 40->50, making the lockdown frontline that punishes her commit-heavy entry harder to burst.",
+    "Her pick targets (Haze, Paradox, Wraith, Mina, Calico) are all unchanged, so the upside half of her game is flat."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Mo & Krill's buffs make the frontline that already locks her down a bit tougher.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  }
+ ]
+}

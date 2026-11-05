@@ -1,0 +1,288 @@
+{
+ "heroes": [
+  {
+   "hero": "Bebop",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's 4-stack cap cut (82.2%→72%) makes enemy sustain comps harder to burst through, and Kelvin — his worst matchup at 42% — is exactly that archetype.",
+    "Celeste's Dazzling Trick silence and Shining Wonder nerfs remove one of his losing matchups, a small offset."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; softer anti-heal helps the sustain heroes that already erase his hook combo.",
+   "verdict": "watch",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Calico",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Victor (A, rising) and Abrams both got fed by Spirit Lifesteal/Infuser/Torment Pulse buffs plus the softer Healbane cap — both are her losing matchups (45%/46%).",
+    "Healbane's lower multi-source cap rewards the stacked-HP frontlines her burst cannot kill, the exact problem flagged in her KB."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "B",
+   "one_liner": "No changes; the sustain frontlines she can't burst got better while she stood still.",
+   "verdict": "watch",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Grey Talon",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Lash (S) keeps his Grapple T3 mobility and is Grey Talon's worst lane at 36% — no relief from the hero who dives past his poke.",
+    "No camp, crate or objective lever moved for a hero with no farm route, so the patch is pure drift against a 47.4% baseline."
+   ],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "No changes; his worst lane (Lash) is untouched and nothing in the patch helps him.",
+   "verdict": "watch",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Mo & Krill",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Scorn heal from heroes 1.2x→1.3x and Combo health per kill 40→50 both extend his grind-down frontline.",
+    "Burrow damage radius +0.5m widens the lockdown hitbox; Sand Blast T2 trades a weaker dash cut (-26%→-28% is a smaller relative reduction) for a stronger slow (-24%→-28%), roughly a wash."
+   ],
+   "indirect_reasons": [
+    "Healbane's 4-stack cap 82.2%→72% lets Scorn sustain survive coordinated anti-heal buys.",
+    "Celeste (46% matchup) and Paige (47%) both took direct nerfs, softening two of his five losing lanes."
+   ],
+   "build_changes": [
+    "Healbane is now a better self-sustain slot than a team anti-heal slot — keep one buyer, stop stacking it."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Small Scorn and Combo buffs plus softer anti-heal make him a slightly better frontline.",
+   "verdict": "keep",
+   "rows": [
+    {
+     "label": "Scorn heal",
+     "old": "1.2x",
+     "new": "1.3x",
+     "text": null,
+     "effect": "good",
+     "ability": "Scorn"
+    },
+    {
+     "label": "Burrow radius",
+     "old": null,
+     "new": null,
+     "text": "Damage radius +0.5m",
+     "effect": "good",
+     "ability": "Burrow"
+    },
+    {
+     "label": "Sand Blast T2",
+     "old": "-24% slow / -26% dash",
+     "new": "-28% both",
+     "text": null,
+     "effect": "neutral",
+     "ability": "Sand Blast"
+    },
+    {
+     "label": "Combo HP/kill",
+     "old": "40",
+     "new": "50",
+     "text": null,
+     "effect": "good",
+     "ability": "Combo"
+    }
+   ],
+   "change_kind": "buff",
+   "change_size": "minor"
+  },
+  {
+   "hero": "Shiv",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's 4-stack cap 82.2%→72% eases the anti-heal tax on the regen shell his primary build runs.",
+    "Yamato (42%) and Drifter (44%), his two worst matchups, were untouched — the gain is real but small."
+   ],
+   "build_changes": [
+    "Healbane stays core for the heal cut, but its team-stacking value drops — don't double-buy it."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; softer stacked anti-heal gives his regen shell a little room back.",
+   "verdict": "watch",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Ivy",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's multi-source cap cut (82.2%→72% at 4 stacks) is a direct buff to tether healing — the exact item change her heal path was most exposed to.",
+    "Her losing matchups (Vyper, Yamato, Dynamo, Mo & Krill) took no direct buffs, so the relief is uncontested."
+   ],
+   "build_changes": [
+    "The heal/anti-heal support package is marginally more viable again, but the gun core is still the better-funded path."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "No changes; the Healbane stacking nerf is a straight gift to her tether healing.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Warden",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Paige's base bullet 35→32 (~9% lane cut) softens his worst lane at 47%.",
+    "Mo & Krill's Scorn 1.2x→1.3x and Combo 40→50, plus Victor's sustain stack, deepen the durable-frontline losses that already cap him."
+   ],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "No changes; Paige's lane cut helps, but buffed M&K and Victor still tank his cage.",
+   "verdict": "watch",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Yamato",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's 4-stack cap 82.2%→72% trims the team value of her anti-sustain slot in the on-hit spirit core.",
+    "Mo & Krill's Scorn heal 1.2x→1.3x makes her worst tank matchup (42%) harder to burst through."
+   ],
+   "build_changes": [
+    "Healbane is now a single-buyer slot — don't count on allies stacking it to open her burst windows."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; her Healbane slot is worth less and Mo & Krill got harder to kill.",
+   "verdict": "watch",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Lash",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Paige's base bullet 35→32 (~9% lane cut) removes pressure from one of his five losing matchups.",
+    "His spirit stomp core and Grapple T3 mobility are untouched, and Healbane's nerf doesn't touch his damage path."
+   ],
+   "build_changes": [],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "No changes; Paige's lane nerf removes one of the few lanes that beat him.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Viscous",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Mo & Krill's Scorn heal 1.2x→1.3x and Combo health per kill 40→50 sharpen his worst matchup (43%).",
+    "Healbane's lower 4-stack cap helps the sustain frontlines that already out-trade his Cube shell."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; Mo & Krill's buffs deepen the frontline matchup that already beats him.",
+   "verdict": "watch",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Pocket",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Celeste's Dazzling Trick silence (+1.25s→+0.75s) and Shining Wonder nerfs soften his worst matchup at 39%.",
+    "Healbane's 4-stack cap cut helps the sustain heroes that outlast his Affliction window, which cuts both ways."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; Celeste's nerfs open up the burst matchup that was killing him.",
+   "verdict": "watch",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Mirage",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Mo & Krill's Scorn 1.2x→1.3x and Combo 40→50 deepen his 40% matchup — the silence/combo lock that already beats him.",
+    "Healbane's single-source value is unchanged, so his core slot gains nothing from the item patch."
+   ],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "No changes; Mo & Krill's buffs and a flat item patch leave him at the bottom.",
+   "verdict": "watch",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  }
+ ]
+}

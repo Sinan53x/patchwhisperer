@@ -1,0 +1,259 @@
+{
+ "heroes": [
+  {
+   "hero": "Vyper",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Untouched; still a gun carry that folds to hard CC.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Sinclair",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Untouched; still a coin-flip kit-steal pick at C.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Mina",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Untouched; still can't kill the tank front line.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Drifter",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's multi-source anti-heal cap drops (4 stacks 82.2%→72%), trimming the payoff of his anti-heal bruiser build that pairs it with his built-in heal cut."
+   ],
+   "build_changes": [
+    "Anti-heal bruiser build loses some edge; lean on the spirit melee core and treat Healbane as single-source only."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Anti-heal stacking got weaker; his Healbane build loses a little edge.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Venator",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Untouched; still out-tanks gun carries but loses to gap-closers.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Victor",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Weaker stacked anti-heal (Healbane 4-stack 82.2%→72%) lets his Spirit Lifesteal/regen grind-down shell survive coordinated anti-heal buys."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Sustain shell gets a small lift from weaker anti-heal stacking.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Paige",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Stacked anti-heal is weaker (Healbane 4-stack 82.2%→72%), so her Plot Armor heals survive multi-buyer anti-heal better."
+   ],
+   "build_changes": [],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Lane bully unchanged; her heals dodge a bit more of the anti-heal tax.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "The Doorman",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Untouched; setup initiator still beaten by tempo dive.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Billy",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Multi-source anti-heal cap drops (Healbane 4-stack 82.2%→72%), easing the anti-heal pressure on his Rising Ram/Lifestrike sustain."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Frontline sustain gets a small lift from weaker anti-heal stacking.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Graves",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Untouched; her ~25-minute scaling window is unchanged.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Apollo",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [
+    "Riposte Pommel Hit now also disarms the target, adding a new trade-winning tool to his lane-bully kit.",
+    "Riposte Pummel now ends any preexisting parry on the target, stripping a defensive answer.",
+    "Riposte T2 duration +0.6s→+0.7s and Itani Lo Sahn T3 bonus damage +50%→+60%."
+   ],
+   "indirect_reasons": [
+    "Healbane's multi-source anti-heal cap drops (4-stack 82.2%→72%), which helps his Locket/heal sustain more than it hurts his own Healbane slot."
+   ],
+   "build_changes": [],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Riposte now disarms and breaks parries — a sharper lane bully, still S.",
+   "verdict": "keep",
+   "rows": [
+    {
+     "label": "Disarm",
+     "old": null,
+     "new": null,
+     "text": "Pommel Hit now disarms",
+     "effect": "good",
+     "ability": "Riposte"
+    },
+    {
+     "label": "Parry break",
+     "old": null,
+     "new": null,
+     "text": "Pummel ends preexisting parry",
+     "effect": "good",
+     "ability": "Riposte"
+    },
+    {
+     "label": "T2 duration",
+     "old": "+0.6s",
+     "new": "+0.7s",
+     "text": null,
+     "effect": "good",
+     "ability": "Riposte"
+    },
+    {
+     "label": "T3 damage",
+     "old": "+50%",
+     "new": "+60%",
+     "text": null,
+     "effect": "good",
+     "ability": "Itani Lo Sahn"
+    }
+   ],
+   "change_kind": "rework",
+   "change_size": "minor"
+  },
+  {
+   "hero": "Rem",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Weaker stacked anti-heal (Healbane 4-stack 82.2%→72%) lets his percent-max-HP heal land closer to full value against multi-buyer anti-heal."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Heal support gets a small lift from weaker anti-heal stacking.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  }
+ ]
+}

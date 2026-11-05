@@ -1,0 +1,1196 @@
+{
+ "heroes": [
+  {
+   "hero": "Infernus",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's multi-source cap drops (4 stacks 82.2%->72%), so his Healbane + Toxic Bullets anti-heal package is worth less when allies also buy it.",
+    "The same change cuts enemy anti-heal stacking against his Spirit Lifesteal and Napalm T2 lifesteal, roughly cancelling the loss.",
+    "Celeste's kit nerfs (Dazzling Trick T3 silence +1.25s->+0.75s, Shining Wonder slow/cooldown) ease a burst matchup he already wins."
+   ],
+   "build_changes": [
+    "Keep Healbane as a single dedicated buy in Dashfernus; do not ask a second ally to stack it."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Healbane stacking nerf trims his anti-heal package but his own lifesteal gains a little.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Seven",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's 4-stack anti-heal cap falls 82.2%->72%, and his Healbane is the team's anti-sustain coverage slot — the payoff drops when allies also buy it.",
+    "Single-source Healbane is unchanged, so his own sustain and clear are untouched; the S-tier farm engine is intact."
+   ],
+   "build_changes": [
+    "One Healbane buyer per team is now correct; stop treating it as a coverage slot."
+   ],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Team anti-heal stacking got worse, but his single Healbane and farm engine are untouched.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Vindicta",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Celeste — one of her listed losing matchups (46%) — loses Dazzling Trick T3 silence duration, Radiant Daggers cast range 30m->25m and Shining Wonder slow/cooldown, so a burst threat that closes on her is weaker.",
+    "Nothing in the patch touches her gun core or the flyer tax (air drag, Weighted Bola), so this is relief, not a fix."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No direct change; Celeste's nerfs are the only thing easing her worst matchup.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Lady Geist",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's stacked anti-heal cap drops 82.2%->72%, and anti-heal stacking is her listed counter — her regen shell gets real relief in coordinated games.",
+    "Celeste, a rival spirit caster she was already out-scaling, loses silence duration, cast range and ult slow/damage."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Weaker stacked anti-heal gives her regen frontline a bit of its engine back.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Abrams",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's 4-stack cap falls 82.2%->72%, softening the anti-heal stacking that taxes his Siphon Life sustain.",
+    "Celeste (a listed losing matchup at 45%) loses Dazzling Trick T3 silence and Shining Wonder slow/cooldown, reducing the spirit burst that out-ranges his engage."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Anti-heal stacking is weaker and Celeste got trimmed — small tailwinds for the brawl.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Wraith",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.35,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Celeste — her worst listed matchup (42%) — loses Dazzling Trick T3 silence duration, Radiant Daggers cast range and Shining Wonder slow/cooldown, so the burst that beats her to the punch is weaker.",
+    "No item or system in this patch touches her fire-rate gun core; she still has no growth path of her own."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Untouched herself; Celeste's nerfs are the only relief in a still-flat slot.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "McGinnis",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane only appears in her niche zoning-utility build (39-47% share), so the 4-stack cap cut 82.2%->72% barely touches her.",
+    "Her listed matchups (beats Lash/Drifter, loses to Wraith) involve no hero changed in this patch."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Nothing landed on her; the Healbane nerf only grazes her niche utility build.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Paradox",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Celeste (43% for Paradox) loses Dazzling Trick T3 silence +1.25s->+0.75s, Radiant Daggers range 30m->25m and Shining Wonder slow/cooldown — one burst caster that out-trades her is weaker.",
+    "Her actual killers — Yamato, Lash, Holliday — are unchanged, so the dive problem that holds her at 46% WR is untouched."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Celeste's nerfs help a little, but the divers that actually beat her didn't move.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Dynamo",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.45,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's 4-stack cap falls 82.2%->72%, a small buff to Rejuvenating Aurora's team heal against coordinated anti-heal buys.",
+    "Mo & Krill — a listed losing matchup (45%) — gets Scorn heal 1.2x->1.3x, Burrow radius +0.5m and Combo health per kill 40->50, deepening the durable-frontline problem that eats Singularity."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Aurora gains slightly from weaker anti-heal stacking; Mo & Krill's buffs cost more.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Kelvin",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's 4-stack anti-heal cap drops 82.2%->72% while single-source is unchanged — the coordinated anti-heal that was his listed counter now caps lower, so dome and heal throughput survive team-wide buys.",
+    "His own Healbane (73-81% buy) is a single source, so he loses almost nothing on the giving side."
+   ],
+   "build_changes": [
+    "Keep Healbane as a single-source buy; the value is now in being the only buyer, not in stacking it."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Stacked anti-heal is weaker, so his dome and heals get real relief in team fights.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Haze",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Celeste — her worst listed matchup (42%) — loses Dazzling Trick T3 silence duration, Radiant Daggers cast range 30m->25m and Shining Wonder slow/cooldown, so the burst that kills her before Fixation stacks is weaker.",
+    "Nothing in the patch touches her gun core or the anti-gun defences (Bullet Resilience, Return Fire) that already cap her."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Untouched; Celeste's nerfs soften her worst matchup but her scaling ceiling is the same.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Holliday",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.4,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Mo & Krill — a listed losing matchup — gets Scorn heal 1.2x->1.3x, Burrow damage radius +0.5m and Combo health per kill 40->50, making the lockdown frontline that punishes her commit-heavy entry harder to burst.",
+    "Her pick targets (Haze, Paradox, Wraith, Mina, Calico) are all unchanged, so the upside half of her game is flat."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Mo & Krill's buffs make the frontline that already locks her down a bit tougher.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Bebop",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's 4-stack cap cut (82.2%→72%) makes enemy sustain comps harder to burst through, and Kelvin — his worst matchup at 42% — is exactly that archetype.",
+    "Celeste's Dazzling Trick silence and Shining Wonder nerfs remove one of his losing matchups, a small offset."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; softer anti-heal helps the sustain heroes that already erase his hook combo.",
+   "verdict": "watch",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Calico",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Victor (A, rising) and Abrams both got fed by Spirit Lifesteal/Infuser/Torment Pulse buffs plus the softer Healbane cap — both are her losing matchups (45%/46%).",
+    "Healbane's lower multi-source cap rewards the stacked-HP frontlines her burst cannot kill, the exact problem flagged in her KB."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "B",
+   "one_liner": "No changes; the sustain frontlines she can't burst got better while she stood still.",
+   "verdict": "watch",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Grey Talon",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Lash (S) keeps his Grapple T3 mobility and is Grey Talon's worst lane at 36% — no relief from the hero who dives past his poke.",
+    "No camp, crate or objective lever moved for a hero with no farm route, so the patch is pure drift against a 47.4% baseline."
+   ],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "No changes; his worst lane (Lash) is untouched and nothing in the patch helps him.",
+   "verdict": "watch",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Mo & Krill",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Scorn heal from heroes 1.2x→1.3x and Combo health per kill 40→50 both extend his grind-down frontline.",
+    "Burrow damage radius +0.5m widens the lockdown hitbox; Sand Blast T2 trades a weaker dash cut (-26%→-28% is a smaller relative reduction) for a stronger slow (-24%→-28%), roughly a wash."
+   ],
+   "indirect_reasons": [
+    "Healbane's 4-stack cap 82.2%→72% lets Scorn sustain survive coordinated anti-heal buys.",
+    "Celeste (46% matchup) and Paige (47%) both took direct nerfs, softening two of his five losing lanes."
+   ],
+   "build_changes": [
+    "Healbane is now a better self-sustain slot than a team anti-heal slot — keep one buyer, stop stacking it."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Scorn and Combo buffs plus a stronger Sand Blast T2 slow make him a slightly better frontline.",
+   "verdict": "keep",
+   "rows": [
+    {
+     "label": "Scorn heal",
+     "old": "1.2x",
+     "new": "1.3x",
+     "text": null,
+     "effect": "good",
+     "ability": "Scorn"
+    },
+    {
+     "label": "Burrow radius",
+     "old": null,
+     "new": null,
+     "text": "Damage radius +0.5m",
+     "effect": "good",
+     "ability": "Burrow"
+    },
+    {
+     "label": "Sand Blast T2",
+     "old": "-24% slow / -26% dash",
+     "new": "-28% both",
+     "text": null,
+     "effect": "good",
+     "ability": "Sand Blast"
+    },
+    {
+     "label": "Combo HP/kill",
+     "old": "40",
+     "new": "50",
+     "text": null,
+     "effect": "good",
+     "ability": "Combo"
+    }
+   ],
+   "change_kind": "buff",
+   "change_size": "minor"
+  },
+  {
+   "hero": "Shiv",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's 4-stack cap 82.2%→72% eases the anti-heal tax on the regen shell his primary build runs.",
+    "Yamato (42%) and Drifter (44%), his two worst matchups, were untouched — the gain is real but small."
+   ],
+   "build_changes": [
+    "Healbane stays core for the heal cut, but its team-stacking value drops — don't double-buy it."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; softer stacked anti-heal gives his regen shell a little room back.",
+   "verdict": "watch",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Ivy",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's multi-source cap cut (82.2%→72% at 4 stacks) is a direct buff to tether healing — the exact item change her heal path was most exposed to.",
+    "Her losing matchups (Vyper, Yamato, Dynamo, Mo & Krill) took no direct buffs, so the relief is uncontested."
+   ],
+   "build_changes": [
+    "The heal/anti-heal support package is marginally more viable again, but the gun core is still the better-funded path."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "No changes; the Healbane stacking nerf is a straight gift to her tether healing.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Warden",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Paige's base bullet 35→32 (~9% lane cut) softens his worst lane at 47%.",
+    "Mo & Krill's Scorn 1.2x→1.3x and Combo 40→50, plus Victor's sustain stack, deepen the durable-frontline losses that already cap him."
+   ],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "No changes; Paige's lane cut helps, but buffed M&K and Victor still tank his cage.",
+   "verdict": "watch",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Yamato",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's 4-stack cap 82.2%→72% trims the team value of her anti-sustain slot in the on-hit spirit core.",
+    "Mo & Krill's Scorn heal 1.2x→1.3x makes her worst tank matchup (42%) harder to burst through."
+   ],
+   "build_changes": [
+    "Healbane is now a single-buyer slot — don't count on allies stacking it to open her burst windows."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; her Healbane slot is worth less and Mo & Krill got harder to kill.",
+   "verdict": "watch",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Lash",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Paige's base bullet 35→32 (~9% lane cut) removes pressure from one of his five losing matchups.",
+    "His spirit stomp core and Grapple T3 mobility are untouched, and Healbane's nerf doesn't touch his damage path."
+   ],
+   "build_changes": [],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "No changes; Paige's lane nerf removes one of the few lanes that beat him.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Viscous",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Mo & Krill's Scorn heal 1.2x→1.3x and Combo health per kill 40→50 sharpen his worst matchup (43%).",
+    "Healbane's lower 4-stack cap helps the sustain frontlines that already out-trade his Cube shell."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; Mo & Krill's buffs deepen the frontline matchup that already beats him.",
+   "verdict": "watch",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Pocket",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Celeste's Dazzling Trick silence (+1.25s→+0.75s) and Shining Wonder nerfs soften his worst matchup at 39%.",
+    "Healbane's 4-stack cap cut helps the sustain heroes that outlast his Affliction window, which cuts both ways."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "No changes; Celeste's nerfs open up the burst matchup that was killing him.",
+   "verdict": "watch",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Mirage",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Mo & Krill's Scorn 1.2x→1.3x and Combo 40→50 deepen his 40% matchup — the silence/combo lock that already beats him.",
+    "Healbane's single-source value is unchanged, so his core slot gains nothing from the item patch."
+   ],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "No changes; Mo & Krill's buffs and a flat item patch leave him at the bottom.",
+   "verdict": "watch",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Vyper",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Untouched; still a gun carry that folds to hard CC.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Sinclair",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Untouched; still a coin-flip kit-steal pick at C.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Mina",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Untouched; still can't kill the tank front line.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Drifter",
+   "in_notes": false,
+   "direction": "down",
+   "magnitude": "minor",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's multi-source anti-heal cap drops (4 stacks 82.2%→72%), trimming the payoff of his anti-heal bruiser build that pairs it with his built-in heal cut."
+   ],
+   "build_changes": [
+    "Anti-heal bruiser build loses some edge; lean on the spirit melee core and treat Healbane as single-source only."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Anti-heal stacking got weaker; his Healbane build loses a little edge.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Venator",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.6,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Untouched; still out-tanks gun carries but loses to gap-closers.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Victor",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Weaker stacked anti-heal (Healbane 4-stack 82.2%→72%) lets his Spirit Lifesteal/regen grind-down shell survive coordinated anti-heal buys."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Sustain shell gets a small lift from weaker anti-heal stacking.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Paige",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Stacked anti-heal is weaker (Healbane 4-stack 82.2%→72%), so her Plot Armor heals survive multi-buyer anti-heal better."
+   ],
+   "build_changes": [],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Lane bully unchanged; her heals dodge a bit more of the anti-heal tax.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "The Doorman",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Untouched; setup initiator still beaten by tempo dive.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Billy",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Multi-source anti-heal cap drops (Healbane 4-stack 82.2%→72%), easing the anti-heal pressure on his Rising Ram/Lifestrike sustain."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Frontline sustain gets a small lift from weaker anti-heal stacking.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Graves",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "none",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Untouched; her ~25-minute scaling window is unchanged.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Apollo",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [
+    "Riposte Pommel Hit now also disarms the target, adding a new trade-winning tool to his lane-bully kit.",
+    "Riposte Pummel now ends any preexisting parry on the target, stripping a defensive answer.",
+    "Riposte T2 duration +0.6s→+0.7s and Itani Lo Sahn T3 bonus damage +50%→+60%."
+   ],
+   "indirect_reasons": [
+    "Healbane's multi-source anti-heal cap drops (4-stack 82.2%→72%), which helps his Locket/heal sustain more than it hurts his own Healbane slot."
+   ],
+   "build_changes": [],
+   "tier_before": "S",
+   "tier_after": "S",
+   "one_liner": "Riposte now disarms and breaks parries — a sharper lane bully, still S.",
+   "verdict": "keep",
+   "rows": [
+    {
+     "label": "Disarm",
+     "old": null,
+     "new": null,
+     "text": "Pommel Hit now disarms",
+     "effect": "good",
+     "ability": "Riposte"
+    },
+    {
+     "label": "Parry break",
+     "old": null,
+     "new": null,
+     "text": "Pummel ends preexisting parry",
+     "effect": "good",
+     "ability": "Riposte"
+    },
+    {
+     "label": "T2 duration",
+     "old": "+0.6s",
+     "new": "+0.7s",
+     "text": null,
+     "effect": "good",
+     "ability": "Riposte"
+    },
+    {
+     "label": "T3 damage",
+     "old": "+50%",
+     "new": "+60%",
+     "text": null,
+     "effect": "good",
+     "ability": "Itani Lo Sahn"
+    }
+   ],
+   "change_kind": "rework",
+   "change_size": "minor"
+  },
+  {
+   "hero": "Rem",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Weaker stacked anti-heal (Healbane 4-stack 82.2%→72%) lets his percent-max-HP heal land closer to full value against multi-buyer anti-heal."
+   ],
+   "build_changes": [],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Heal support gets a small lift from weaker anti-heal stacking.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Silver",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.55,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's lower multi-source cap (4-stack 82.2%→72%) eases the anti-heal tax on her Melee Lifesteal/Restorative Shot sustain.",
+    "Rat King's buffs (bullet 5.7→5.8, ammo 24→26, T1 -25s) sharpen a hero who already beats her 62%, offsetting the Healbane relief."
+   ],
+   "build_changes": [],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Nothing direct; Healbane relief and a stronger Rat King roughly cancel.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Celeste",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "major",
+   "confidence": 0.7,
+   "direct_reasons": [
+    "Dazzling Trick T3 silence +1.25s→+0.75s cuts her lockdown window.",
+    "Radiant Daggers cast range 30m→25m and spirit amp +7%→+6% per stack trim her poke and scaling.",
+    "Shining Wonder slow -32%→-28%, cooldown 160s→170s, bounce 15.5m→15m, T1 -16%→-14%, T2 +90→+80 hit every axis of her ult."
+   ],
+   "indirect_reasons": [
+    "Healbane's lower stacking cap gives her regen shell slight relief, but the direct cuts dominate."
+   ],
+   "build_changes": [
+    "De-emphasize the ult-slow pick setup; the shorter silence and range make her dive window thinner — value Spirit Lifesteal/Torment Pulse sustain over committing on Shining Wonder."
+   ],
+   "tier_before": "C",
+   "tier_after": "D",
+   "one_liner": "Every ability got trimmed at once — silence, range, ult slow and cooldown all down.",
+   "verdict": "bench",
+   "rows": [
+    {
+     "label": "Silence T3",
+     "old": "+1.25s",
+     "new": "+0.75s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Dazzling Trick"
+    },
+    {
+     "label": "Cast range",
+     "old": "30m",
+     "new": "25m",
+     "text": null,
+     "effect": "bad",
+     "ability": "Radiant Daggers"
+    },
+    {
+     "label": "Spirit amp",
+     "old": "+7%",
+     "new": "+6%",
+     "text": null,
+     "effect": "bad",
+     "ability": "Radiant Daggers"
+    },
+    {
+     "label": "Slow",
+     "old": "-32%",
+     "new": "-28%",
+     "text": null,
+     "effect": "bad",
+     "ability": "Shining Wonder"
+    },
+    {
+     "label": "Cooldown",
+     "old": "160s",
+     "new": "170s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Shining Wonder"
+    },
+    {
+     "label": "Bounce range",
+     "old": "15.5m",
+     "new": "15m",
+     "text": null,
+     "effect": "bad",
+     "ability": "Shining Wonder"
+    },
+    {
+     "label": "T1 slow",
+     "old": "-16%",
+     "new": "-14%",
+     "text": null,
+     "effect": "bad",
+     "ability": "Shining Wonder"
+    },
+    {
+     "label": "T2 damage",
+     "old": "+90",
+     "new": "+80",
+     "text": null,
+     "effect": "bad",
+     "ability": "Shining Wonder"
+    }
+   ],
+   "change_kind": "nerf",
+   "change_size": "major"
+  },
+  {
+   "hero": "Rat King",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Rule, Ratannia! T1 now adds -25s cooldown, partly restoring the banner uptime cut on 10-30.",
+    "Bullet damage 5.7→5.8, ammo 24→26 and +3m→+4m move speed are small stat gains.",
+    "Scrap Grenade melee fuse extension 0.4s→0.25s is a minor loss to his grenade-clear combo."
+   ],
+   "indirect_reasons": [
+    "Healbane's lower multi-source cap trims anti-heal pressure on his regen stack."
+   ],
+   "build_changes": [
+    "Superior/Compress Cooldown are less mandatory now that T1 covers -25s on the banner — you can spend a slot elsewhere."
+   ],
+   "tier_before": "A",
+   "tier_after": "A",
+   "one_liner": "Small stat bumps plus a -25s banner cooldown talent restore some ult uptime.",
+   "verdict": "keep",
+   "rows": [
+    {
+     "label": "Bullet damage",
+     "old": "5.7",
+     "new": "5.8",
+     "text": null,
+     "effect": "good",
+     "ability": null
+    },
+    {
+     "label": "Ammo",
+     "old": "24",
+     "new": "26",
+     "text": null,
+     "effect": "good",
+     "ability": null
+    },
+    {
+     "label": "Move speed",
+     "old": "+3m",
+     "new": "+4m",
+     "text": null,
+     "effect": "good",
+     "ability": "Rule, Ratannia!"
+    },
+    {
+     "label": "T1",
+     "old": null,
+     "new": null,
+     "text": "Adds -25s cooldown",
+     "effect": "good",
+     "ability": "Rule, Ratannia!"
+    },
+    {
+     "label": "Fuse extension",
+     "old": "0.4s",
+     "new": "0.25s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Scrap Grenade"
+    }
+   ],
+   "change_kind": "buff",
+   "change_size": "minor"
+  },
+  {
+   "hero": "Baba",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.65,
+   "direct_reasons": [
+    "Spirit Resistance scaling 0.7→0.5 and melee damage per boon -10% cut her bruiser durability and damage.",
+    "Baba's Brew cooldown 27s→28s, burn spirit scaling 0.15→0.13 and cycle 1.5s→1.6s all worsen her core ability.",
+    "Granny Long Legs melee resist 30%→25% and debuff resist 30%→25% thin her frontline shell."
+   ],
+   "indirect_reasons": [
+    "Healbane's lower 4-stack cap is a small relief for her regen wall, but the kit cuts dominate."
+   ],
+   "build_changes": [
+    "The resist-scaling cut makes the regen/bruiser shell weaker — lean further into the cooldown caster line and treat her as a caster, not a frontline."
+   ],
+   "tier_before": "D",
+   "tier_after": "D",
+   "one_liner": "Resist scaling, melee damage and Brew all trimmed — the bruiser shell is thinner.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Spirit resist",
+     "old": "0.7",
+     "new": "0.5",
+     "text": null,
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "Melee damage",
+     "old": null,
+     "new": null,
+     "text": "-10% per boon",
+     "effect": "bad",
+     "ability": null
+    },
+    {
+     "label": "Cooldown",
+     "old": "27s",
+     "new": "28s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Baba's Brew"
+    },
+    {
+     "label": "Burn scaling",
+     "old": "0.15",
+     "new": "0.13",
+     "text": null,
+     "effect": "bad",
+     "ability": "Baba's Brew"
+    },
+    {
+     "label": "Cycle time",
+     "old": "1.5s",
+     "new": "1.6s",
+     "text": null,
+     "effect": "bad",
+     "ability": "Baba's Brew"
+    },
+    {
+     "label": "Melee resist",
+     "old": "30%",
+     "new": "25%",
+     "text": null,
+     "effect": "bad",
+     "ability": "Granny Long Legs"
+    },
+    {
+     "label": "Debuff resist",
+     "old": "30%",
+     "new": "25%",
+     "text": null,
+     "effect": "bad",
+     "ability": "Granny Long Legs"
+    }
+   ],
+   "change_kind": "nerf",
+   "change_size": "moderate"
+  },
+  {
+   "hero": "Solomon",
+   "in_notes": false,
+   "direction": "neutral",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Baba and Celeste — two of his three worst lanes — both ate broad nerfs.",
+    "Rat King, his worst lane, got buffed (bullet 5.7→5.8, T1 -25s), offsetting that relief."
+   ],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Two bad matchups weakened, one strengthened — net roughly flat.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Deadman Danny",
+   "in_notes": true,
+   "direction": "down",
+   "magnitude": "moderate",
+   "confidence": 0.65,
+   "direct_reasons": [
+    "Close The Deal bonus damage to under-half targets +75%→+55% cuts his execute.",
+    "Strix Salvo spirit scaling -8% lowers his mark damage.",
+    "Chimera Mk1 T2 heal 150→125 and heal spirit scaling 2.0→1.7 trim his dive sustain."
+   ],
+   "indirect_reasons": [
+    "Healbane's lower stacking cap is minor relief for a flyer with no real sustain shell."
+   ],
+   "build_changes": [
+    "With the execute and mark scaling down, the spirit mark-burst line loses payoff — value the defensive glue (Reactive Barrier, Grit) more and pick fights only on already-chipped targets."
+   ],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Execute and mark damage both cut — his dive converts fewer kills.",
+   "verdict": "watch",
+   "rows": [
+    {
+     "label": "Execute damage",
+     "old": "+75%",
+     "new": "+55%",
+     "text": null,
+     "effect": "bad",
+     "ability": "Close The Deal"
+    },
+    {
+     "label": "Spirit scaling",
+     "old": null,
+     "new": null,
+     "text": "-8%",
+     "effect": "bad",
+     "ability": "Strix Salvo"
+    },
+    {
+     "label": "T2 heal",
+     "old": "150",
+     "new": "125",
+     "text": null,
+     "effect": "bad",
+     "ability": "Chimera Mk1"
+    },
+    {
+     "label": "T2 heal scaling",
+     "old": "2.0",
+     "new": "1.7",
+     "text": null,
+     "effect": "bad",
+     "ability": "Chimera Mk1"
+    }
+   ],
+   "change_kind": "nerf",
+   "change_size": "moderate"
+  },
+  {
+   "hero": "Violet",
+   "in_notes": false,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.5,
+   "direct_reasons": [],
+   "indirect_reasons": [
+    "Healbane's lower multi-source cap eases the anti-heal tax on her Radiant/Mystic Regeneration shell.",
+    "Baba, a 41% loss for her, was nerfed across her kit.",
+    "Rat King, another 41% loss, got buffed — offsets the relief."
+   ],
+   "build_changes": [],
+   "tier_before": "C",
+   "tier_after": "C",
+   "one_liner": "Healbane relief and a weaker Baba help her regen shell slightly.",
+   "verdict": "keep",
+   "rows": [],
+   "change_kind": "none",
+   "change_size": "none"
+  },
+  {
+   "hero": "Nurse Harrow",
+   "in_notes": true,
+   "direction": "up",
+   "magnitude": "minor",
+   "confidence": 0.6,
+   "direct_reasons": [
+    "Bullet damage +8% lifts the gun-damage charge economy her sustain build runs on.",
+    "Lurking Terrors fear buildup 2s→1.75s and vertical angle 50%→65% widen and speed the fear cone."
+   ],
+   "indirect_reasons": [
+    "Healbane's lower stacking cap slightly relieves anti-heal on her healing-based sustain."
+   ],
+   "build_changes": [
+    "The wider, faster fear cone rewards the mag-dump gun line more than before — keep Titanic Magazine core and lean into the gun-damage charge."
+   ],
+   "tier_before": "B",
+   "tier_after": "B",
+   "one_liner": "Gun damage up and a faster, wider fear cone — small but real gains.",
+   "verdict": "keep",
+   "rows": [
+    {
+     "label": "Bullet damage",
+     "old": null,
+     "new": null,
+     "text": "+8%",
+     "effect": "good",
+     "ability": null
+    },
+    {
+     "label": "Fear buildup",
+     "old": "2s",
+     "new": "1.75s",
+     "text": null,
+     "effect": "good",
+     "ability": "Lurking Terrors"
+    },
+    {
+     "label": "Vertical angle",
+     "old": "50%",
+     "new": "65%",
+     "text": null,
+     "effect": "good",
+     "ability": "Lurking Terrors"
+    }
+   ],
+   "change_kind": "buff",
+   "change_size": "minor"
+  }
+ ]
+}
