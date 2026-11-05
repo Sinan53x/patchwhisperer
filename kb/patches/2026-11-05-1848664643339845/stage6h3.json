@@ -1,0 +1,141 @@
+{
+ "hero_updates": {
+  "Victor": {
+   "notes": "11-04 Minor: no direct change; Healbane's 4-stack cap 82.2%->72% eases anti-heal pressure on his Spirit Lifesteal/regen shell — A held.\nHalloween 2026: Aura of Suffering T3 +15%->+16%; Spirit Lifesteal, Infuser (6->8 spirit, 75% active lifesteal) and Torment Pulse +4% melee resist feed the grind-down core, while Healing Booster lost its Extra Regen link and +3 regen — buy it standalone, later.\n10-20 Shh...: no direct change; harder Haunt camps, longer PvE routes and Buff Container Bullet/Spirit Resist rolls feed his sustain stack — A held."
+  },
+  "Paige": {
+   "countered_by": [
+    "burst assassins (Yamato, Lash, Holliday)",
+    "Rem",
+    "Ivy",
+    "anti-heal (Toxic Bullets 40%, Crippling Headshot 40%, single Healbane — stacking now capped)"
+   ],
+   "notes": "11-04 Minor: no direct change; Healbane's lower 4-stack cap (82.2%->72%) softens the multi-source anti-heal tax on her Plot Armor heals — S held.\n10-30 Halloween + Gameplay Update: base bullet 35->32 (~9% lane cut; growth 0.52->0.61 pays back later) and Bookwyrm T2 trail +2s->+1s; HVR velocity 60->45 weakens her 1.2-min buy — Opening Rounds before HVR is now the safer opener, and comeback gold blunts the lead she converts.\n10-20 Shh...: no direct change; Healing Snacks let her lane pressure stick instead of resetting on a recall, and lane-adjacent crate routes from ~2:30 pay the lane winner immediately — S held."
+  },
+  "Billy": {
+   "countered_by": [
+    "anti-tank bruisers (Shiv — softened by the Radiant Regeneration trim)",
+    "anti-heal (Toxic Bullets 40%, single Healbane — stacking now capped)",
+    "kiting / sustained ranged gun (Seven; Warden's HVR velocity 60->45 and Shadow Weave rework make that lane softer)",
+    "sustain-peel (Ivy)"
+   ],
+   "notes": "11-04 Minor: no direct change; Healbane's 4-stack cap 82.2%->72% eases anti-heal pressure on his Rising Ram/Lifestrike sustain — A held.\n10-30 Halloween + Gameplay Update: Rising Ram T3 +10%->+15% max HP for 16s->20s and Blasted 27->25s; Torment Pulse +4% melee resist plus the Radiant Regeneration/Healbane trims on Shiv help, but tick souls to the two poorest blunt the lane lead he converts and Spirit Shielding's -3% spirit resist taxes his shred build.\n10-20 Shh...: no direct change; harder Haunt camps reward sustained frontline presence, but Mo & Krill still owns the front-line slot and ranged corridor clear beats his all-in."
+  },
+  "Apollo": {
+   "why": "S-tier lane bully whose Riposte now disarms and strips a pre-existing parry, so he wins trades he previously only stalled; still lacks the channel interrupt he lost on 10-30, and his Locket/heal sustain benefits from weaker stacked anti-heal.",
+   "last_changed_patch": "Minor Update - 11-04-2026",
+   "notes": "11-04 Minor: Riposte Pommel Hit now disarms and Pummel ends a pre-existing parry; T2 duration +0.6->+0.7s and Itani Lo Sahn T3 +50%->+60%. Sharpens lane trades but does not restore the channel interrupt — S held.\n10-30 Halloween + Gameplay Update: Riposte Pommel Hit is now an immobilize + parry disable, not a stun — 0.8->1.5s (T2 +0.4->+0.6s) with dash reliability fixes and CC refunds on Flawless Advance/Itani Lo Sahn. He loses the channel interrupt (Seven/Bebop/Harrow ults) and Healing Booster's gutting thins his sustain; S held, trend rising -> stable.\n10-20 Shh...: no direct change; lane pressure converts into lane-adjacent crate routes and Healing Snacks, but the objective-parry change makes the Guardian dive a one-shot decision — S held."
+  },
+  "Rem": {
+   "notes": "11-04 Minor: no direct change; Healbane's 4-stack cap 82.2%->72% lets his percent-max-HP heal land closer to full value against multi-buyer anti-heal — B held.\n10-20 Shh...: no direct change; harder corridor camps raise the value of his percent-max-HP heal on the farm route, but Healing Snacks do part of his job for free and he still loses the heal-slot duel to Ivy — held B/rising.\n09-29 City Never Sleeps: no direct change; harder camps reward his sustain and spread-out vaults (Bell Tower now three) strengthen his map play, while Healing Snacks slightly cheapen dedicated healing - trend up (peercontent)."
+  },
+  "Celeste": {
+   "tier": "D",
+   "why": "Flying spirit burster whose whole kit was trimmed at once — shorter silence, 25m cast range, weaker ult slow/cooldown/bounce — on top of a sustain shell already gutted on 10-30; no lockdown window and no safe angle left.",
+   "last_changed_patch": "Minor Update - 11-04-2026",
+   "notes": "11-04 Minor: C -> D. Dazzling Trick T3 silence +1.25->+0.75s, Radiant Daggers 30m->25m and +7%->+6% spirit amp, Shining Wonder slow -32%->-28%, 160->170s, bounce 15.5->15m, T1 -16%->-14%, T2 +90->+80 — a full-kit trim on an already-C hero.\n10-30 Halloween + Gameplay Update: B -> C. Shining Wonder 140->125 is the note; the real hit is Radiant Regeneration (0.35->0.25 spirit regen scaling, heal-on-cast 65->40, in-combat only) plus Healing Booster losing Extra Regen and +3 flat regen, into buffed Decay/Toxic Bullets/stacking Healbane. Spirit Shielding 18->15%, HVR 60->45% velocity and Metal Skin's +20% gravity compound it; pivot to Spirit Lifesteal + Torment Pulse.\n10-20 Shh...: no direct change; the off-lane/corridor economy gives her no camp or crate income route, and Barrel Mimics tax a low-HP clearer, so the tempo patch keeps her B/falling."
+  },
+  "Rat King": {
+   "trend": "stable",
+   "why": "Heavy-melee frontline who opens Tough Crates and wants forced hub fights; Rule, Ratannia! T1's -25s cooldown restores banner uptime and frees a cooldown slot, but Scrap Grenade's radius cut and +10% Haunt HP still end his one-button camp clear.",
+   "builds": [
+    {
+     "name": "Gun bruiser",
+     "damage": "gun",
+     "core_items": [
+      "Monster Rounds",
+      "High-Velocity Rounds",
+      "Opening Rounds",
+      "Cultist Sacrifice",
+      "Fleetfoot",
+      "Berserker",
+      "Ballistic Enchantment"
+     ],
+     "popularity": "primary",
+     "notes": "Near-universal core — Monster Rounds + HVR at ~3 min into Opening Rounds; Rat Swarm strips bullet resist so the Spreadshot/grenade window does the work. Scrap Grenade is no longer a one-button camp clear (radius 8m->6m, large 14m->10m, fuse +0.1s): pull camps with melee first, then grenade the clump."
+    },
+    {
+     "name": "Vitality frontline",
+     "damage": "hybrid",
+     "core_items": [
+      "Extra Health",
+      "Sprint Boots",
+      "Enduring Speed",
+      "Fortitude",
+      "Compress Cooldown",
+      "Superior Cooldown"
+     ],
+     "popularity": "secondary",
+     "notes": "Extra Health (91%) and Fortitude (90%) anchor the lead-the-charge build; Rule, Ratannia! T1 now covers -25s of the banner cooldown, so Superior/Compress Cooldown are less mandatory — one slot can go to damage or defence."
+    },
+    {
+     "name": "Swarm shred",
+     "damage": "spirit",
+     "core_items": [
+      "Mystic Expansion"
+     ],
+     "popularity": "niche",
+     "notes": "Leans on Rat Swarm T3 shred plus Mystic Expansion AoE, but no dedicated shred item shows in usage — under-built and data-thin."
+    }
+   ],
+   "last_changed_patch": "Minor Update - 11-04-2026",
+   "notes": "11-04 Minor: Rule, Ratannia! T1 now adds -25s cooldown (partly reverts the 10-30 uptime cut and frees a Superior/Compress Cooldown slot); bullet 5.7->5.8, ammo 24->26, +3m->+4m move speed; Scrap Grenade melee fuse extension 0.4s->0.25s is a small loss — A held, trend falling -> stable.\n10-30 Halloween + Gameplay Update: S -> A. Scrap Grenade 70->60 (T2 +70->+60, T3 300->275), radius 8m->6m / large 14m->10m, fuse +0.1s; Rule, Ratannia! knockup halved, 160->180s, 20m->16m, 12s->9s and now goes on cooldown if he is stunned before placing; base bullet -5% and growth -20%. Haunt camps +10% HP finish the one-button clear. Offsets: Heavy-Melee Cauldrons, Healing Snacks 10->14%.\n10-20 Shh...: no direct change; Tough Crates, grouped chasing Haunts, forced Bell Tower/Sunken Plaza hubs and Barrel Mimics all point at heavy-melee camp-clear frontlines, so the systems patch lifts him A -> S on fit, not numbers - confirm against win rate before locking."
+  },
+  "Baba": {
+   "why": "Grounded regen bruiser whose identity was removed twice over — random-order Brew on a 1.6s cycle and a gutted Radiant Regeneration/Healing Booster shell — and 11-04 thins the bruiser body further (spirit-resist scaling 0.7->0.5, melee damage -10% per boon, Granny resists 30%->25%).",
+   "builds": [
+    {
+     "name": "Cooldown caster",
+     "damage": "spirit",
+     "core_items": [
+      "Compress Cooldown",
+      "Spirit Snatch",
+      "Duration Extender",
+      "Superior Cooldown",
+      "Rapid Recharge",
+      "Spirit Resilience"
+     ],
+     "popularity": "primary",
+     "notes": "The regen shell is gone — Radiant Regeneration and Healing Booster were both gutted — so the cooldown/duration line is the build now. Brew order is random each cast on a 1->1.6s cycle: hold the cast until the needed brew cycles in rather than opening fights blind."
+    },
+    {
+     "name": "Spirit bruiser",
+     "damage": "spirit",
+     "core_items": [
+      "Extra Charge",
+      "Extra Regen",
+      "Mystic Regeneration",
+      "Spirit Strike",
+      "Torment Pulse",
+      "Spirit Resilience"
+     ],
+     "popularity": "secondary",
+     "notes": "HP/regen filler to out-sustain Haunt chip and hub fights; the resist-scaling cut (0.7->0.5) and melee damage -10% per boon thin this shell, so treat it as a fallback — Torment Pulse 18->22% melee resist is the only sustain gain and anti-heal stacking (Decay -55%, Healbane) cuts through it."
+    }
+   ],
+   "last_changed_patch": "Minor Update - 11-04-2026",
+   "notes": "11-04 Minor: spirit-resist scaling 0.7->0.5 and melee damage -10% per boon thin the bruiser shell; Brew 27->28s, burn scaling 0.15->0.13, cycle 1.5->1.6s; Granny Long Legs melee/debuff resist 30%->25% — D held, trend falling.\n10-30 Halloween + Gameplay Update: C -> D. Baba's Brew order is random each cast on a 1->1.5s cycle (silence 3->2.75s), spirit-resist scaling 0.1->0.07, Threadsap 22->16s and cleanse now wipes stolen spirit, Granny heavy-melee slow 4->2s; Radiant Regeneration (94% buy) and Healing Booster both gutted into an anti-heal patch. Offsets: Heavy-Melee Cauldrons, Healing Snacks 10->14%.\n10-20 Shh...: no direct change; the new corridors, grouped Haunt camps and forced Bell Tower/Plaza fights suit her melee-regen clear and arrest the post-10-14 fall, but the barrier/resist cuts still bind - trend falling -> stable at C."
+  },
+  "Deadman Danny": {
+   "trend": "falling",
+   "why": "Spirit mark-burster whose execute and mark scaling were both cut — Close The Deal +75%->+55%, Strix Salvo -8% spirit — so his dive converts fewer kills on a 730-HP flyer with no sustain shell to fall back on.",
+   "last_changed_patch": "Minor Update - 11-04-2026",
+   "notes": "11-04 Minor: Close The Deal +75%->+55%, Strix Salvo spirit scaling -8%, Chimera Mk1 T2 heal 150->125 and 2.0->1.7 — dive converts fewer kills; C held, trend stable -> falling.\n10-30 Halloween + Gameplay Update: Chimera Mk1 nerfed across the board — jetpack unusable while cursed, CDR per boon -0.4->-0.25s, T3 refund 50->30%, slows now cut jetpack impulse harder (worse under movement-ability silence), grounding pulls land more reliably. Steam Vents lose invisibility and HVR 60->45% velocity hits his lone weapon staple; the Close The Deal damage fix is the only gain. C held, trend rising -> stable.\n7-day check-in (2026-10-20): tier C -> C, WR 45%, PR 69% over 446352 matches. Corrected: the usage data kills the 'shred/mark gun' identity - Bullet Resist Shredder does not appear at all, and the real build is spirit (Extra/Improved Spirit, Mystic Burst at 79-90%) with HV Rounds as the lone weapon staple. The old beats list was inverted - Celeste (33%) and Graves (32%) are among his worst lanes, not wins. PR 69.1% is a new-hero novelty spike (previously 0.2% on a two-day sample), so read WR 38.5% and ignore pick rate. Held C/rising: the build finally consolidated and WR gained ~3.6 points, but nothing clears 49% head-to-head and the flyer tax is intact; upgrade only on ~45%+ WR, drop to D if the spirit capstone stays a post-30-min luxury."
+  },
+  "Violet": {
+   "notes": "11-04 Minor: no direct change; Healbane's 4-stack cap 82.2%->72% eases the anti-heal tax on her regen shell, and Baba (a 41% loss) was nerfed across her kit — C held, trend falling.\n10-30 Halloween + Gameplay Update: B -> C. Abstract Landscape 165->180s, 6->5s duration, 0.04->0.01 scaling, ends on death, 0.5->0.75s re-apply and T3 ink destructible again; Still Life stun 1.0->0.9s, LOS required at channel end, T1 regen only while drawing (0.25->0.15). Spirit Lifesteal 6->8 spirit / 13->15% is the replacement sustain; anti-heal stacking taxes the rest.\n7-day check-in (2026-10-23): tier B -> C, WR 50%, PR 64% over 539876 matches. Data corrects the day-0 read: B/rising was a tooltip judgment, so C is a correction, not a decline — 46.1% WR at 70.9% PR, and she loses to frontline brawlers rather than punishing melee. Watch whether her WR climbs with reps; the tooltip read also claimed Seven and the gun line as wins, but Seven is 49% over 170 and Living Ink/HVR no longer appear in her item data at all."
+  }
+ },
+ "change_log": [
+  "Victor: notes — Healbane 4-stack cap cut eases anti-heal on his sustain shell (A held)",
+  "Paige: countered_by — anti-heal stacking now capped, softened to single Healbane; notes added (S held)",
+  "Billy: countered_by — anti-heal stacking now capped, softened to single Healbane; notes added (A held)",
+  "Apollo: why updated (Riposte disarm + parry break); last_changed_patch + notes (S held)",
+  "Rem: notes — Healbane cap cut lets percent-max-HP heal land closer to full value (B held)",
+  "Celeste: tier C -> D (full-kit trim: silence, cast range, spirit amp, ult slow/cooldown/bounce, T1/T2); why + notes",
+  "Rat King: trend falling -> stable (T1 -25s banner cooldown restores uptime); why, builds (Vitality frontline cooldown note), notes",
+  "Baba: why + builds (Spirit bruiser shell thinned by resist-scaling/melee cuts); notes (D held)",
+  "Deadman Danny: trend stable -> falling (Close The Deal +75%->+55%, Strix Salvo -8%, Chimera heal cut); why + notes",
+  "Violet: notes — Healbane cap cut relief plus Baba nerf (C held, falling)"
+ ]
+}

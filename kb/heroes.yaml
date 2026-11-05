@@ -154,18 +154,18 @@ Seven:
   - Bebop (Hook CC-lock)
   - tempo/invade meta
   last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: 'Halloween 2026 + Gameplay Update (10-30, direct): Static Charge T3 stun
-    0.9->1.1s; Spirit Lifesteal +2/+2% and Healbane''s multi-source anti-heal stacking
-    are both core, and Haunt bounty/growth +10% is pure profit for the fastest one-cycle
-    clearer — the new comeback levers also drop the ''farm a lead only'' cap on a
-    behind Seven.
+  notes: 'Minor Update - 11-04-2026 (indirect): Healbane''s 4-stack anti-heal cap
+    82.2->72% trims his value as a second/third anti-heal buyer; single-source Healbane
+    and his farm engine are untouched.
+
+    Halloween 2026 + Gameplay Update (10-30, direct): Static Charge T3 stun 0.9->1.1s;
+    Spirit Lifesteal +2/+2% and Healbane''s multi-source anti-heal stacking are both
+    core, and Haunt bounty/growth +10% is pure profit for the fastest one-cycle clearer
+    — the new comeback levers also drop the ''farm a lead only'' cap on a behind Seven.
 
     Shh... This Won''t Hurt a Bit. (10-20, indirect): nine behavior-varied Haunt types
     (grouped/chasing) make the fastest camp clear the biggest income lever in the
-    game; he has no crate or Barrel Mimic route and does not need one.
-
-    Paint the Town (10-16, indirect): fastest Haunt-camp clear plus telegraphed Plaza/Bell
-    Tower hub fights push him B->A; the no-comeback economy still caps a behind Seven.'
+    game; he has no crate or Barrel Mimic route and does not need one.'
   builds:
   - name: Spirit AoE carry
     damage: spirit
@@ -251,16 +251,17 @@ Vindicta:
   - dive/CC comps
   - Yamato (mobile burst assassin)
   last_changed_patch: Minor Update - 08-12-2026
-  notes: 'Halloween 2026 + Gameplay Update (10-30, indirect): High-Velocity Rounds
-    velocity 60->45% removes the max-range guarantee her gun core buys first and air
-    drag 0.35->0.5 taxes every airborne exit; the roofs and hub-fight value are unchanged,
-    the range is not.
+  notes: 'Minor Update - 11-04-2026 (indirect): Celeste''s Dazzling Trick T3 silence,
+    Radiant Daggers cast range 30->25m and Shining Wonder slow/cooldown nerfs soften
+    one of her listed losing matchups (46%); her gun core and flyer tax are unchanged.
+
+    Halloween 2026 + Gameplay Update (10-30, indirect): High-Velocity Rounds velocity
+    60->45% removes the max-range guarantee her gun core buys first and air drag 0.35->0.5
+    taxes every airborne exit; the roofs and hub-fight value are unchanged, the range
+    is not.
 
     City Never Sleeps (09-29, indirect): new roofs/high ground and telegraphed Plaza/Bell
-    Tower hub fights favor her max-range poke; flyer tax unchanged.
-
-    09-16 (indirect): global slows now bite air drag and Silver''s Weighted Bola grounds
-    Flight — anti-flyer tax offsets her tempo gains, so she held A.'
+    Tower hub fights favor her max-range poke; flyer tax unchanged.'
   builds:
   - name: Gun poke
     damage: gun
@@ -352,18 +353,19 @@ Lady Geist:
   - Silver (S) gun tank that out-damages and out-tanks her
   - silence/burst before Soul Exchange
   last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: 'Halloween 2026 + Gameplay Update (10-30, direct): Essence Bomb 1.22->1.35
-    spirit scaling only pays the Soul-Exchange line; Radiant Regeneration becomes
-    in-combat-only at 65->40/1.7->1.4/0.35->0.25 on a 98%-buy slot, and Decay''s incoming-heal
-    penalty deepens -50->-55% on a core slot she fights out of.
+  notes: 'Minor Update - 11-04-2026 (indirect): Healbane''s 4-stack anti-heal cap
+    82.2->72% relieves the anti-heal stacking that is her listed counter, and Celeste
+    loses silence duration/cast range/ult slow; the Radiant Regeneration trim still
+    caps her.
+
+    Halloween 2026 + Gameplay Update (10-30, direct): Essence Bomb 1.22->1.35 spirit
+    scaling only pays the Soul-Exchange line; Radiant Regeneration becomes in-combat-only
+    at 65->40/1.7->1.4/0.35->0.25 on a 98%-buy slot, and Decay''s incoming-heal penalty
+    deepens -50->-55% on a core slot she fights out of.
 
     Shh... This Won''t Hurt a Bit. (10-20, indirect): harder camps plus Barrel Mimic
     fights make farm a sustain check her regen stack passes, and container Bullet/Spirit
-    Resist rolls add free frontline stats; the same dive heroes still eat her.
-
-    10-14: Radiant Regeneration spirit scaling 0.04->0.035 (third cumulative trim)
-    narrows her ~98%-buy regen core; the Spirit Soul-Exchange variant, which stacks
-    the most spirit power, loses most.'
+    Resist rolls add free frontline stats; the same dive heroes still eat her.'
   builds:
   - name: Regen gun-bruiser
     damage: hybrid
@@ -454,19 +456,18 @@ Abrams:
   - Shiv (anti-tank bruiser)
   - Ivy (peel/slow)
   last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: 'Halloween 2026 + Gameplay Update (10-30, direct): base gun damage +5% and
-    Siphon Life T3 +18->+22 DPS are small fight-length gains, but the Shoulder Charge
-    fix removes his free hold on enemies who never hit a wall; Hunter''s Aura is now
-    LOS-gated, so Battle Vest/Bullet Lifesteal (which never turn off) compete for
-    the same slot.
+  notes: 'Minor Update - 11-04-2026 (indirect): Healbane''s 4-stack anti-heal cap
+    82.2->72% softens the anti-heal stacking that taxes Siphon Life, and Celeste''s
+    silence/ult slow nerfs reduce the spirit burst that out-ranges his engage.
+
+    Halloween 2026 + Gameplay Update (10-30, direct): base gun damage +5% and Siphon
+    Life T3 +18->+22 DPS are small fight-length gains, but the Shoulder Charge fix
+    removes his free hold on enemies who never hit a wall; Hunter''s Aura is now LOS-gated,
+    so Battle Vest/Bullet Lifesteal (which never turn off) compete for the same slot.
 
     Shh... This Won''t Hurt a Bit. (10-20, indirect): Barrel Mimics convert breakable-chaining
     into a sustain check his heavy-melee + Siphon core passes, making the uncontestable
-    crate route safer than it is for squishy gun clearers.
-
-    Paint the Town (10-16, indirect): his melee core remains the cheap route into
-    the Haunt/crate farm and the objective-parry change keeps dives on him risky;
-    frontline up, anti-tank Shiv his real counter.'
+    crate route safer than it is for squishy gun clearers.'
   builds:
   - name: Melee brawler (gun)
     damage: gun
@@ -560,19 +561,19 @@ Wraith:
   - Paige
   - Sinclair
   last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: 'Halloween 2026 + Gameplay Update (10-30, direct): Card Trick heal 60->45
-    and Project Mind 46->50s with a slower 0.75->1s initial cast trim the only sustain
-    and the repositioning her survival plan runs on; her fire-rate gun core (Monster
-    Rounds/Quicksilver Reload/Rapid Rounds/Swift Striker/Ricochet) is untouched.
+  notes: 'Minor Update - 11-04-2026 (indirect): Celeste''s Dazzling Trick T3 silence,
+    Radiant Daggers cast range and Shining Wonder slow/cooldown nerfs soften her worst
+    listed matchup (42%); her fire-rate gun core is untouched.
+
+    Halloween 2026 + Gameplay Update (10-30, direct): Card Trick heal 60->45 and Project
+    Mind 46->50s with a slower 0.75->1s initial cast trim the only sustain and the
+    repositioning her survival plan runs on; her fire-rate gun core (Monster Rounds/Quicksilver
+    Reload/Rapid Rounds/Swift Striker/Ricochet) is untouched.
 
     09-16: Card Trick heal 75->60, heal scaling 0.75->0.5, resist shred -8->-7% (T3
     -5->-4%), T3 slow +20->+15%; Mercurial Magnum + Spiritual Overflow gutted and
     Plated Armor now blanks Full Auto spirit damage — on-hit-spirit core weakened,
-    lean pure gun.
-
-    Creator-cited Capacitor/Slowing Hex appear in none of the top-15 item slots; usage
-    says the real core was spirit on-hit (Quicksilver Reload 100%, Mercurial Magnum
-    93%) — Magnum now weakened.'
+    lean pure gun.'
   builds:
   - name: Gun carry (pure gun)
     damage: gun
@@ -935,10 +936,10 @@ Kelvin:
   - late scaler
   tier: B
   trend: rising
-  why: Support/healer whose dome is now an objective-fight tool at Bell Tower/Sunken
-    Plaza and whose Extra Regen/Healing Booster core the Radiant Regeneration trims
-    never touched. Cheap Healing Snacks cap how much dedicated healing he can sell,
-    and anti-heal plus mobile dive still end him.
+  why: Support/healer whose dome and heal throughput get real relief from the Healbane
+    4-stack cap cut (82.2->72%) while his own single-source Healbane loses nothing;
+    his Extra Regen/Healing Booster core is untouched, but cheap Healing Snacks and
+    mobile dive still cap him.
   core_items:
   - Extra Regen
   - Extra Charge
@@ -966,18 +967,18 @@ Kelvin:
   - silence and burst that kill through the dome
   - late-scaling compression (tempo meta)
   last_changed_patch: Minor Update - 09-16-2026
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20, indirect): harder camps and Barrel
-    Mimic fights raise dome/sustain value while cheap Healing Snacks cap the between-fight
+  notes: 'Minor Update - 11-04-2026 (indirect): Healbane''s 4-stack anti-heal cap
+    82.2->72% is a direct reprieve for dome/heal throughput; his own Healbane is single-source,
+    so he loses nothing on the giving side.
+
+    Shh... This Won''t Hurt a Bit. (10-20, indirect): harder camps and Barrel Mimic
+    fights raise dome/sustain value while cheap Healing Snacks cap the between-fight
     healing he used to sell; his dome is worth most at the announced hub contests,
     not in lane.
 
     10-14: Radiant Regeneration spirit scaling 0.04->0.035 trims rival sustain (Baba,
     Lady Geist, Shiv, Celeste) while his Extra Regen/Healing Booster core is untouched
-    - small relative gain.
-
-    City Never Sleeps (09-29, indirect): harder Haunt camps raise the value of his
-    dome/sustain; Healing Snacks (10% max HP) reduce the relative value of dedicated
-    healing.'
+    - small relative gain.'
   builds:
   - name: Spirit heal/support
     damage: spirit
@@ -1058,18 +1059,18 @@ Haze:
   - Celeste burst
   - weak T4 gun items (Ricochet/Capacitor)
   last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: 'Halloween 2026 + Gameplay Update (10-30, direct): Smoke Bomb T3 no longer
-    dispels undispellable debuffs (e.g. Specter Crash), and Return Fire now returns
-    Fixation damage plus shows its 10% bullet resist on the tooltip, handing frontline
-    tanks the anti-Haze slot they were already buying; Bullet Resilience 30->35% adds
-    a second cheap answer.
+  notes: 'Minor Update - 11-04-2026 (indirect): Celeste''s Dazzling Trick T3 silence,
+    Radiant Daggers cast range 30->25m and Shining Wonder slow/cooldown nerfs soften
+    her worst listed matchup (42%); her gun core and anti-gun defences are unchanged.
+
+    Halloween 2026 + Gameplay Update (10-30, direct): Smoke Bomb T3 no longer dispels
+    undispellable debuffs (e.g. Specter Crash), and Return Fire now returns Fixation
+    damage plus shows its 10% bullet resist on the tooltip, handing frontline tanks
+    the anti-Haze slot they were already buying; Bullet Resilience 30->35% adds a
+    second cheap answer.
 
     09-16 (indirect): Plated Armor''s on-hit fix now blanks Tesla Bullets spirit damage,
-    weakening her Ricochet/Tesla late pivot.
-
-    Role reframed per reader: farm-carry is meta-dependent, not her identity — historically
-    a Smoke Bomb roamer/ganker on isolated targets, and T4 weakness gates the late-scaler
-    label.'
+    weakening her Ricochet/Tesla late pivot.'
   builds:
   - name: Gun carry (Fixation)
     damage: gun
@@ -1161,17 +1162,18 @@ Holliday:
   - Warden slowing gun pressure
   - slows now apply to air drag / slows-as-CC up
   last_changed_patch: Minor Update - 09-16-2026
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20, indirect): behavior-varied camps
-    and Barrel Mimics leave farmers stationary at predictable spots — more lasso targets
-    — and the Bell Tower payout is a scheduled map-wide announcement she can pre-place
-    bounce pads around.
+  notes: 'Minor Update - 11-04-2026 (indirect): Mo & Krill''s Scorn heal 1.2x->1.3x,
+    Burrow radius +0.5m and Combo HP/kill 40->50 make a listed losing matchup tougher;
+    her pick targets are unchanged.
+
+    Shh... This Won''t Hurt a Bit. (10-20, indirect): behavior-varied camps and Barrel
+    Mimics leave farmers stationary at predictable spots — more lasso targets — and
+    the Bell Tower payout is a scheduled map-wide announcement she can pre-place bounce
+    pads around.
 
     Paint the Town (10-16, indirect): new districts and Steam-Vent invisibility expand
     her roam routes and Bell Tower hub fights reward Spirit Lasso picks; point-blank
-    lockdown still punishes her commit.
-
-    City Never Sleeps (09-29, indirect): new districts/hiding spots/Steam Vents expand
-    her roam routes and Bell Tower hub fights reward lasso picks.'
+    lockdown still punishes her commit.'
   builds:
   - name: Charge-spirit pick
     damage: spirit
@@ -1230,11 +1232,9 @@ Bebop:
   - burst caster
   tier: B
   trend: falling
-  why: 'Single-target hook initiator whose one job — punishing a body standing in
-    lane — is worth less every patch: souls sit in spread corridors, Steam Vents hand
-    hooked targets a disengage his combo cannot chase, and Paradox owns the roamer
-    slot. His Veil Walker is still stripped and the farm economy gives a hook nothing
-    to punish.'
+  why: Single-target hook initiator whose one job is worth less every patch; the Healbane
+    4-stack cap cut (82.2->72%) makes the sustain comps that already erase his hook
+    combo (Kelvin 42%) harder to burst, and he got nothing back.
   core_items:
   - Headshot Booster
   - Spirit Strike
@@ -1262,16 +1262,17 @@ Bebop:
   - burst-proof tanks (Abrams, Mo & Krill)
   - cleanse/dispel items
   last_changed_patch: null
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20, indirect): Steam Vents give every
-    hooked target a free disengage he cannot chase, and a spread corridor farm offers
-    a single-target hook nothing to punish.
+  notes: 'Minor Update - 11-04-2026 (indirect): Healbane''s 4-stack anti-heal cap
+    82.2->72% helps the sustain archetype that erases his hook combo (Kelvin, his
+    worst matchup at 42%); Celeste''s nerfs remove one losing matchup as a small offset.
+
+    Shh... This Won''t Hurt a Bit. (10-20, indirect): Steam Vents give every hooked
+    target a free disengage he cannot chase, and a spread corridor farm offers a single-target
+    hook nothing to punish.
 
     Paint the Town (10-16, indirect): a single-target hook cannot punish Haunt/crate
     routing, contested Soul Bags only partly extend his fights, and the roamer slot
-    has tilted to Paradox.
-
-    City Never Sleeps: no direct line; the farm/sustain economy plus Paradox''s rise
-    down-rank him in the roamer slot.'
+    has tilted to Paradox.'
   builds:
   - name: Hook combo
     damage: hybrid
@@ -1334,13 +1335,12 @@ Calico:
   role: mobile assassin
   archetypes:
   - mobile assassin
-  tier: A
-  trend: rising
-  why: Melee-spirit assassin whose burst window grew — Leaping Slash T3 +60->+90 and
-    Ava T3 6->8s — on a jungle that pays 10% more per camp she takes by kill rather
-    than clear. The Steam Vent rework removes one invisibility approach and the comeback
-    levers punish a snowball that stalls, so she is a sharper diver with less margin;
-    stacked-HP frontlines still cap her.
+  tier: B
+  trend: falling
+  why: 'Melee-spirit assassin whose burst window is real but whose losing matchups
+    got tougher: the softer Healbane cap rewards the stacked-HP frontlines she cannot
+    burst (Victor, Abrams), and her snowball still has less margin after the Steam
+    Vent rework.'
   core_items:
   - Melee Lifesteal
   - Stalker
@@ -1368,18 +1368,18 @@ Calico:
   - long-range kiting gun carries (Vyper, Warden)
   - burst vs low HP (Yamato)
   last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: 'Halloween 2026 + Gameplay Update (10-30, direct): Leaping Slash T3 +60->+90
-    damage and Ava T3 6->8s sharpen her melee-spirit burst and second pick; the Steam
-    Vent rework (stamina regen instead of invisibility) trims one roam route, and
-    the raised non-hero comeback gold + tick souls punish a snowball that stalls.
+  notes: 'Minor Update - 11-04-2026 (indirect): Healbane''s 4-stack anti-heal cap
+    82.2->72% rewards the sustain frontlines she cannot burst (Victor 45%, Abrams
+    46%), her listed losing matchups; she got no direct compensation.
+
+    Halloween 2026 + Gameplay Update (10-30, direct): Leaping Slash T3 +60->+90 damage
+    and Ava T3 6->8s sharpen her melee-spirit burst and second pick; the Steam Vent
+    rework (stamina regen instead of invisibility) trims one roam route, and the raised
+    non-hero comeback gold + tick souls punish a snowball that stalls.
 
     Shh... This Won''t Hurt a Bit. (10-20, indirect): districts and vent invisibility
     extend her roam; cat form still can''t heavy-melee Tough Crates, and the frontline
-    meta gives her more unburstable bodies.
-
-    Paint the Town (10-16, indirect): tempo snowball plus new district/Steam-Vent
-    routes suit her roam; cat form still cannot heavy-melee Tough Crates, so lean
-    kills/off-map souls.'
+    meta gives her more unburstable bodies.'
   builds:
   - name: Melee spirit assassin
     damage: spirit
@@ -1435,9 +1435,8 @@ Grey Talon:
   - gun carry
   tier: C
   trend: falling
-  why: 'Sub-50% poke carry with no camp or crate route: Steam Vents give divers free
-    invisibility onto an immobile flyer, and Healing Snacks blunt the chip he converts
-    into lane leads. Air-drag and Silver''s bola are unchanged, so C holds.'
+  why: Sub-50% poke carry with no camp or crate route; Lash (36%) is his worst lane
+    and took no nerf, so the patch is pure drift against a 47.4% baseline.
   core_items:
   - High-Velocity Rounds
   - Opening Rounds
@@ -1465,16 +1464,17 @@ Grey Talon:
   - Silver (Weighted Bola anti-air)
   - air-drag slows (09-16)
   last_changed_patch: null
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20, indirect): Steam Vents give roamers
-    a free approach on an immobile flyer, and Healing Snacks blunt the poke he turns
-    into lane leads; no camp or crate route suits him.
+  notes: 'Minor Update 11-04 (indirect): no changes; Lash keeps Grapple T3 and remains
+    his worst lane at 36%, and no camp/crate/objective lever moved for a hero with
+    no farm route.
+
+    Shh... This Won''t Hurt a Bit. (10-20, indirect): Steam Vents give roamers a free
+    approach on an immobile flyer, and Healing Snacks blunt the poke he turns into
+    lane leads; no camp or crate route suits him.
 
     Paint the Town (10-16, indirect): flyer tax unchanged (air-drag slows, Silver''s
     Weighted Bola) and rising Lash (36% for Grey Talon) is his worst lane — stays
-    C.
-
-    Flyer penalty applied per reader correction — 09-16 air-drag slow and Silver''s
-    Weighted Bola both count against him.'
+    C.'
   builds:
   - name: Hybrid owl (gun lane → spirit execute)
     damage: hybrid
@@ -1543,11 +1543,11 @@ Mo & Krill:
   - tank/frontline
   - initiator
   tier: B
-  trend: falling
-  why: Still the default sustained front line — Scorn/Burrow, Torment Pulse's +4%
-    melee resist and an unchanged Combo keep him a lockdown tank — but Spirit per
-    boon 1.1->0.6 and -10% spirit damage on every ability mean he now holds targets
-    without threatening them.
+  trend: stable
+  why: 'Still the default sustained front line, and the 11-04 buffs give it teeth
+    again: Scorn heal 1.3x, Combo 50 HP/kill and a wider Burrow make his grind-down
+    lockdown convert, while the Healbane 4-stack cap cut protects that sustain from
+    coordinated anti-heal.'
   core_items:
   - Mystic Burst
   - Quicksilver Reload
@@ -1573,19 +1573,19 @@ Mo & Krill:
   - anti-heal (his Scorn sustain)
   - anti-tank bruisers (Billy, Shiv)
   - long-range gun carries (Vyper)
-  last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: 'Halloween 2026: spirit per boon 1.1->0.6 and -10% spirit damage on every
-    ability; Combo untouched, bullet per boon +4% — move one slot to gun (Bullet Lifesteal/Battle
+  last_changed_patch: Minor Update - 11-04-2026
+  notes: 'Minor Update 11-04: Scorn heal 1.2x->1.3x, Combo HP/kill 40->50, Burrow
+    radius +0.5m, Sand Blast T2 slow -24%->-28%; Healbane 4-stack cap 82.2%->72% protects
+    Scorn sustain.
+
+    Halloween 2026: spirit per boon 1.1->0.6 and -10% spirit damage on every ability;
+    Combo untouched, bullet per boon +4% — move one slot to gun (Bullet Lifesteal/Battle
     Vest). Torment Pulse +4% melee resist up; Decay''s deeper self-heal penalty and
     Healbane heal-on-kill 275->170 down.
 
     Shh... This Won''t Hurt a Bit. (10-20, indirect): harder Haunt camps and contested
     Buff Containers reward his sustained frontline; objective parries no longer reset,
-    trimming the free Guardian-dive chain.
-
-    Paint the Town: no direct change; the Haunt-camp/hub economy keeps him the default
-    sustained front line, but objective parries no longer reset — the free dive chain
-    is trimmed.'
+    trimming the free Guardian-dive chain.'
   builds:
   - name: Spirit bruiser
     damage: spirit
@@ -1642,11 +1642,10 @@ Shiv:
   - tank/frontline
   - mobile assassin
   tier: B
-  trend: falling
-  why: 'The knife exchange got better (Serrated Knives rage 3.5%->4% current HP, +T3
-    spirit scaling) but his pre-fight health is gone: Radiant Regeneration now heals
-    only in combat at 65->40 and Healbane''s kill-heal was cut, so he starts fights
-    smaller and executes in a shorter window.'
+  trend: stable
+  why: The knife exchange is still good (Serrated Knives 4% current HP) and the Healbane
+    4-stack cap cut eases the anti-heal tax on his regen shell, but Radiant Regeneration
+    is still in-combat-only at 40, so he starts fights smaller than before Halloween.
   core_items:
   - Mystic Regeneration
   - Extra Regen
@@ -1674,18 +1673,17 @@ Shiv:
   - Dynamo (CC)
   - Healbane / anti-heal
   last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: 'Halloween 2026: Serrated Knives rage 3.5%->4% + T3 spirit scaling up, Killing
+  notes: 'Minor Update 11-04 (indirect): Healbane 4-stack cap 82.2%->72% eases the
+    anti-heal tax on his regen shell; Yamato and Drifter, his worst matchups, untouched.
+
+    Halloween 2026: Serrated Knives rage 3.5%->4% + T3 spirit scaling up, Killing
     Blow recast 16->12s, alt-fire per boon -5%; Radiant Regeneration went in-combat-only
     at 65->40 and Healbane kill-heal 275->170, so his pre-fight buffer is gone — Torment
     Pulse +4% melee resist is the offset.
 
     Shh... This Won''t Hurt a Bit. (10-20, indirect): harder camps reward his regen
     stack and the rising frontline feeds current-HP Serrated Knives, but vents hand
-    divers a free approach before he ramps.
-
-    Paint the Town: no direct change; harder Haunt camps reward his regen stack and
-    the rising frontline feeds Serrated Knives, but a 43.4% snapshot WR keeps this
-    soft.'
+    divers a free approach before he ramps.'
   builds:
   - name: Spirit sustain bruiser
     damage: spirit
@@ -1736,11 +1734,11 @@ Ivy:
   archetypes:
   - support/healer
   tier: A
-  trend: falling
-  why: Still the best peel in the game (Stone Form i-frame/stun) and a 53.7% WR support,
-    but every piece of her heal path got worse in one patch — Healbane now stacks
-    across sources to cut tethers, Healing Booster lost its Extra Regen link and Healing
-    Nova went spirit-scaled — so her gun core is the only build worth funding.
+  trend: stable
+  why: Still the best peel in the game (Stone Form i-frame/stun) and a 53.7% WR support;
+    the Healbane 4-stack cap cut (82.2%->72%) gives tether healing room back, but
+    the gun core is still the only build worth funding after the Halloween heal-item
+    trims.
   core_items:
   - Monster Rounds
   - Extended Magazine
@@ -1768,18 +1766,17 @@ Ivy:
   - silence
   - grounding / air-drag slow (hits Air Drop)
   last_changed_patch: Minor Update - 09-16-2026
-  notes: 'Halloween 2026 (indirect, item-driven): Healbane now stacks across sources
-    — the worst system change for tether healing — Healing Booster lost its Extra
-    Regen upgrade and +3 flat regen, and Healing Nova moved to spirit scaling off
-    her gun-first build. Skip the heal package.
+  notes: 'Minor Update 11-04 (indirect): Healbane 4-stack cap 82.2%->72% eases the
+    anti-heal tax on tether healing; gun core remains the funded path.
+
+    Halloween 2026 (indirect, item-driven): Healbane now stacks across sources — the
+    worst system change for tether healing — Healing Booster lost its Extra Regen
+    upgrade and +3 flat regen, and Healing Nova moved to spirit scaling off her gun-first
+    build. Skip the heal package.
 
     Shh... This Won''t Hurt a Bit. (10-20, indirect): Healing Snacks plus spread corridors
     cut the value of a grouped healer; districts pull her team apart, so tether a
-    frontline bruiser sweeping corridors instead of a lane partner.
-
-    City Never Sleeps: no direct line; peercontent floats a small lift off camp-damage
-    sustain, but the Healing Snack addition and trimmed heal items cut both ways for
-    her (low confidence).'
+    frontline bruiser sweeping corridors instead of a lane partner.'
   builds:
   - name: Gun Ivy (stat-check carry-support)
     damage: gun
@@ -1941,9 +1938,9 @@ Yamato:
   tier: B
   trend: falling
   why: Still the camp-clear and objective-path champion, but Flying Slash 26->23m
-    (T3 +8m) and Shadow Transformation pushed to T2 at 160s cut the engage reach and
-    the all-in speed a mobile burst assassin is bought for. She now has to buy the
-    gap back with stamina routes instead of range.
+    and Shadow Transformation at T2/160s cut her engage reach; the Healbane 4-stack
+    cap cut trims the team value of her anti-sustain slot, and Mo & Krill's Scorn
+    buff makes her worst tank matchup harder.
   core_items:
   - Spirit Strike
   - Spirit Snatch
@@ -1972,18 +1969,18 @@ Yamato:
   - Celeste
   - anti-heal (Healbane buyers)
   last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: 'Halloween 2026: Flying Slash 26->23m (T3 +15->+8m) with the mark visible
-    on cast, Shadow Transformation 150->160s and moved to T2, Power Slash +6% spirit
-    scaling. Hunter''s Aura LOS gate and Healbane kill-heal 275->170 trim her late
-    spirit line; Torment Pulse +4% melee resist helps her commit.
+  notes: 'Minor Update 11-04 (indirect): Healbane 4-stack cap 82.2%->72% trims the
+    team value of her anti-sustain slot; Mo & Krill Scorn 1.2x->1.3x sharpens her
+    42% matchup.
+
+    Halloween 2026: Flying Slash 26->23m (T3 +15->+8m) with the mark visible on cast,
+    Shadow Transformation 150->160s and moved to T2, Power Slash +6% spirit scaling.
+    Hunter''s Aura LOS gate and Healbane kill-heal 275->170 trim her late spirit line;
+    Torment Pulse +4% melee resist helps her commit.
 
     Shh... This Won''t Hurt a Bit. (10-20): Flying Strike creates paths against solid
     targets (turrets, Shrines, objectives) for extra mobility/objective access; parry
-    no longer resets on objectives, so her Shrine/Walker dive is one-shot.
-
-    Paint the Town: no direct change; punch AoE is still the fastest clear for the
-    new grouped, behavior-varied Haunt camps and Flying Strike paths open the separated
-    Shrine/objective layout.'
+    no longer resets on objectives, so her Shrine/Walker dive is one-shot.'
   builds:
   - name: on-hit spirit proc
     damage: hybrid
@@ -2048,10 +2045,10 @@ Lash:
   - initiator
   tier: S
   trend: rising
-  why: 'Highest-pick S-tier initiator: his spirit stomp core is untouched, Grapple
-    T3 now adds +4m jump velocity, and Steam Vents refill stamina at +150% instead
-    of granting a stealth approach — the dive-and-re-enter loop he wins on got more
-    fuel. Silver and air-drag slows remain the counter.'
+  why: 'Highest-pick S-tier initiator: spirit stomp core untouched, Grapple T3 +4m
+    jump velocity, and Steam Vents refill stamina at +150% — the dive-and-re-enter
+    loop got more fuel. Paige''s base bullet 35->32 removes pressure from one of his
+    few losing lanes.'
   core_items:
   - Mystic Burst
   - Extra Charge
@@ -2077,17 +2074,17 @@ Lash:
   - 'Zone/anti-dive control: Dynamo, McGinnis, Seven'
   - Flog heal nerf + healing-item trims (Radiant Regeneration, Restorative Locket)
   last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: 'Halloween 2026: Grapple T3 adds +4m jump velocity; Steam Vents converted
-    from an invisibility approach to +150% stamina regen, which feeds his dash-and-re-enter
+  notes: 'Minor Update 11-04 (indirect): Paige base bullet 35->32 (~9% lane cut) softens
+    one of his five losing matchups; spirit stomp core and Grapple T3 untouched.
+
+    Halloween 2026: Grapple T3 adds +4m jump velocity; Steam Vents converted from
+    an invisibility approach to +150% stamina regen, which feeds his dash-and-re-enter
     pattern rather than the set-up gankers who used to ride vents. Spirit stomp core
     untouched.
 
     Shh... This Won''t Hurt a Bit. (10-20, indirect): districts and Steam Vents extend
     his dive routes beyond three lanes, and hub fights at Bell Tower/Sunken Plaza
-    concentrate teams into Ground Strike; objective parries no longer reset.
-
-    Paint the Town: no direct change; new districts/Steam Vents extend his dive routes
-    and the green-lane roof/tree keeps permanent lane high ground — still S.'
+    concentrate teams into Ground Strike; objective parries no longer reset.'
   builds:
   - name: Stomp spirit
     damage: spirit
@@ -2150,10 +2147,10 @@ Viscous:
   - support/healer
   tier: B
   trend: falling
-  why: Splatter T1 +36->+45 damage and +5% alt-fire growth give his lane poke real
-    numbers, and Cube rescue gains from scheduled hub fights, but he is still a B
-    enabler with no post-patch win rate proving the 09-16 cooldown/Cube trims are
-    absorbed.
+  why: Splatter T1 +45 damage and +5% alt-fire growth give his lane poke real numbers,
+    but Mo & Krill's Scorn 1.3x and Combo 50 HP/kill sharpen his worst matchup (43%),
+    and the Healbane cap cut helps the sustain frontlines that already out-trade his
+    Cube shell.
   core_items:
   - High-Velocity Rounds
   - Mystic Burst
@@ -2181,16 +2178,17 @@ Viscous:
   - tempo snowball meta
   - global slows (slow-as-CC)
   last_changed_patch: Minor Update - 09-16-2026
-  notes: 'Halloween 2026: Splatter T1 +36->+45 damage and +5% alt-fire damage growth
-    per boon, Goo Ball melee/Ethereal Shift exploit during cast delay fixed; Express
-    Shot secondary-fire -5% sits in his core. Tier holds B.
+  notes: 'Minor Update 11-04 (indirect): Mo & Krill Scorn 1.2x->1.3x and Combo 40->50
+    sharpen his 43% matchup; Healbane 4-stack cap cut helps sustain frontlines that
+    out-trade Cube.
+
+    Halloween 2026: Splatter T1 +36->+45 damage and +5% alt-fire damage growth per
+    boon, Goo Ball melee/Ethereal Shift exploit during cast delay fixed; Express Shot
+    secondary-fire -5% sits in his core. Tier holds B.
 
     Shh... This Won''t Hurt a Bit. (10-20, indirect): Bell Tower''s spread vaults
     and four corridors suit Goo Ball traversal, and harder camps plus forced hub fights
-    raise Cube rescue value.
-
-    City Never Sleeps: no direct line; harder camps reward Cube sustain and spread-out
-    vaults suit Goo Ball, but this is a low-confidence lift.'
+    raise Cube rescue value.'
   builds:
   - name: Spirit-hybrid Splatter/Punch
     damage: hybrid
@@ -2249,10 +2247,9 @@ Pocket:
   - mobile assassin
   tier: B
   trend: rising
-  why: 'The economy flipped in his favour: 30% non-hero comeback gold, tick souls
-    to the two poorest and up to 50% faster secure when behind fund the slow Affliction
-    ramp the last meta killed. Still folds to anything that out-ranges him (Celeste)
-    or sticks to a low-HP caster (Warden, Drifter, Viscous).'
+  why: The economy still funds his slow Affliction ramp, and Celeste's Dazzling Trick
+    silence (+1.25s->+0.75s) and Shining Wonder nerfs soften his worst matchup at
+    39%; he still folds to anything that out-ranges or sticks to a low-HP caster.
   core_items:
   - Mystic Burst
   - Monster Rounds
@@ -2280,16 +2277,17 @@ Pocket:
   - roots/lockdown (Warden, Viscous slows)
   - burst that out-ranges him (Celeste)
   last_changed_patch: Minor Update - 07-28-2026
-  notes: 'Halloween 2026 (indirect): the comeback levers (non-hero comeback cap 26->30%,
+  notes: 'Minor Update 11-04 (indirect): Celeste silence +1.25s->+0.75s and Shining
+    Wonder nerfs soften his 39% worst matchup; Healbane cap cut helps sustain heroes
+    that outlast Affliction, which cuts both ways.
+
+    Halloween 2026 (indirect): the comeback levers (non-hero comeback cap 26->30%,
     tick souls to the two poorest, deficit-scaled secure speed) reverse the premise
     of his B-falling read — the farm bail-out now arrives before his Affliction spike.
     No core item moved.
 
     Changelog: 09-16 - no direct line; 30-day usage shows no gun build (Monster Rounds
-    92%, Cultist Sacrifice 93%), so the spirit stack stands.
-
-    Old entry''s core (Boundless Spirit, Echo Shard, Fortitude) shows zero current
-    usage — replaced with the spirit stack the data actually shows.'
+    92%, Cultist Sacrifice 93%), so the spirit stack stands.'
   builds:
   - name: Affliction spirit burst
     damage: spirit
@@ -2347,9 +2345,8 @@ Mirage:
   tier: C
   trend: falling
   why: 'Split-push hybrid the patch buried: souls moved off the lanes into corridors
-    and shared objectives, so sidelane pressure converts to less income, and Steam-Vent
-    invisibility hands roamers a free approach on his map-play. Farm corridors instead;
-    Djinn''s Mark picks isolated camp clearers.'
+    and shared objectives, so sidelane pressure converts to less income, and Mo &
+    Krill''s Scorn 1.3x/Combo 50 HP deepens his 40% matchup; farm corridors instead.'
   core_items:
   - Mystic Regeneration
   - Healbane
@@ -2376,16 +2373,17 @@ Mirage:
   - ranged gun carries (Warden)
   - tempo/snowball meta
   last_changed_patch: Minor Update - 07-28-2026
-  notes: 'Shh... This Won''t Hurt a Bit. (10-20, indirect): souls moved off the lanes
-    into corridors and shared objectives, so split-push converts to less income; Steam
+  notes: 'Minor Update 11-04 (indirect): Mo & Krill Scorn 1.2x->1.3x and Combo 40->50
+    deepen his 40% matchup; Healbane single-source value unchanged, so his core slot
+    gains nothing.
+
+    Shh... This Won''t Hurt a Bit. (10-20, indirect): souls moved off the lanes into
+    corridors and shared objectives, so split-push converts to less income; Steam
     Vents give roamers a free approach on his map-play.
 
     Paint the Town: no direct change; contested Soul Bags and earlier hub objectives
     worsen a slow split-pusher, and rising M&K/Lash dive him off his map-play — beaten
-    by the meta, not the notes.
-
-    10-05: trooper-speed fix restores intended wave pathing so his split-push converts
-    on schedule (tiny QoL).'
+    by the meta, not the notes.'
   builds:
   - name: Spirit-amp hybrid
     damage: hybrid
@@ -2728,12 +2726,10 @@ Drifter:
   - mobile assassin
   - tank/frontline
   tier: A
-  trend: rising
-  why: Blind-pickable spirit-melee bruiser whose roaming income got richer — Haunt
-    bounty/growth +10% rewards his heavy-melee crate and Steam Vent routes, and stacking
-    anti-heal (Toxic Bullets 40%, Healbane) composes with his built-in heal cut into
-    a real answer against sustain comps. Still no hard CC or closing mobility, so
-    lane bullies cap him at A.
+  trend: stable
+  why: Blind-pickable spirit-melee bruiser whose roaming income is still rich, but
+    the Healbane 4-stack cap cut (82.2%->72%) trims the anti-heal bruiser composition
+    that paired it with his built-in heal cut; the spirit melee core is untouched.
   core_items:
   - Melee Lifesteal
   - Stalker
@@ -2762,16 +2758,16 @@ Drifter:
   - anti-heal stacking
   - CC/silence
   last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: 'Halloween 2026: base gun damage +3%, Bloodscent T3 +11%->+12% amp, Eternal
-    Night T3 +2.5->2.75s; Haunt bounty/growth +10% raises his crate/vent roam income
-    and multi-source anti-heal now composes with his built-in heal cut.
+  notes: 'Minor Update 11-04 (indirect): Healbane 4-stack cap 82.2%->72% trims the
+    payoff of his anti-heal bruiser build; spirit melee core untouched.
+
+    Halloween 2026: base gun damage +3%, Bloodscent T3 +11%->+12% amp, Eternal Night
+    T3 +2.5->2.75s; Haunt bounty/growth +10% raises his crate/vent roam income and
+    multi-source anti-heal now composes with his built-in heal cut.
 
     10-20 Shh...: no direct change; Steam Vents, new hiding spots and heavy-melee
     Tough Crates extend his stealth-roam and give his melee core uncontestable crate
-    income.
-
-    09-29 City Never Sleeps: no direct change; new districts/Steam Vents and heavy-melee
-    Tough-Crate routes fit his roam.'
+    income.'
   builds:
   - name: Spirit melee bruiser
     damage: spirit
@@ -2947,16 +2943,16 @@ Victor:
   - tank stat-checks (Abrams, Mo & Krill)
   - CC
   last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: 'Halloween 2026: Aura of Suffering T3 +15%->+16%; Spirit Lifesteal, Infuser
-    (6->8 spirit, 75% active lifesteal) and Torment Pulse +4% melee resist feed the
-    grind-down core, while Healing Booster lost its Extra Regen link and +3 regen
-    — buy it standalone, later.
+  notes: '11-04 Minor: no direct change; Healbane''s 4-stack cap 82.2%->72% eases
+    anti-heal pressure on his Spirit Lifesteal/regen shell — A held.
+
+    Halloween 2026: Aura of Suffering T3 +15%->+16%; Spirit Lifesteal, Infuser (6->8
+    spirit, 75% active lifesteal) and Torment Pulse +4% melee resist feed the grind-down
+    core, while Healing Booster lost its Extra Regen link and +3 regen — buy it standalone,
+    later.
 
     10-20 Shh...: no direct change; harder Haunt camps, longer PvE routes and Buff
-    Container Bullet/Spirit Resist rolls feed his sustain stack — A held.
-
-    09-29 City Never Sleeps: no direct change; hard Haunt camps fed his sustain stack,
-    flipping him from fair B-baseline to A on the 56.4% snapshot WR.'
+    Container Bullet/Spirit Resist rolls feed his sustain stack — A held.'
   builds:
   - name: Spirit sustain bruiser
     damage: spirit
@@ -3039,20 +3035,20 @@ Paige:
   - burst assassins (Yamato, Lash, Holliday)
   - Rem
   - Ivy
-  - stacking anti-heal (multi-source Healbane, Toxic Bullets 40%, Crippling Headshot
-    40%)
+  - anti-heal (Toxic Bullets 40%, Crippling Headshot 40%, single Healbane — stacking
+    now capped)
   last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: '10-30 Halloween + Gameplay Update: base bullet 35->32 (~9% lane cut; growth
-    0.52->0.61 pays back later) and Bookwyrm T2 trail +2s->+1s; HVR velocity 60->45
-    weakens her 1.2-min buy — Opening Rounds before HVR is now the safer opener, and
-    comeback gold blunts the lead she converts.
+  notes: '11-04 Minor: no direct change; Healbane''s lower 4-stack cap (82.2%->72%)
+    softens the multi-source anti-heal tax on her Plot Armor heals — S held.
+
+    10-30 Halloween + Gameplay Update: base bullet 35->32 (~9% lane cut; growth 0.52->0.61
+    pays back later) and Bookwyrm T2 trail +2s->+1s; HVR velocity 60->45 weakens her
+    1.2-min buy — Opening Rounds before HVR is now the safer opener, and comeback
+    gold blunts the lead she converts.
 
     10-20 Shh...: no direct change; Healing Snacks let her lane pressure stick instead
     of resetting on a recall, and lane-adjacent crate routes from ~2:30 pay the lane
-    winner immediately — S held.
-
-    City Never Sleeps: no direct change; lane-adjacent crate routes and Healing Snacks
-    reward her lane pressure, and the contested hubs suit her carry-snowball.'
+    winner immediately — S held.'
   builds:
   - name: Tempo support
     damage: hybrid
@@ -3227,23 +3223,22 @@ Billy:
   - Fortitude regen buff
   countered_by:
   - anti-tank bruisers (Shiv — softened by the Radiant Regeneration trim)
-  - stacking anti-heal (multi-source Healbane, Toxic Bullets 40%)
+  - anti-heal (Toxic Bullets 40%, single Healbane — stacking now capped)
   - kiting / sustained ranged gun (Seven; Warden's HVR velocity 60->45 and Shadow
     Weave rework make that lane softer)
   - sustain-peel (Ivy)
   last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: '10-30 Halloween + Gameplay Update: Rising Ram T3 +10%->+15% max HP for 16s->20s
+  notes: '11-04 Minor: no direct change; Healbane''s 4-stack cap 82.2%->72% eases
+    anti-heal pressure on his Rising Ram/Lifestrike sustain — A held.
+
+    10-30 Halloween + Gameplay Update: Rising Ram T3 +10%->+15% max HP for 16s->20s
     and Blasted 27->25s; Torment Pulse +4% melee resist plus the Radiant Regeneration/Healbane
     trims on Shiv help, but tick souls to the two poorest blunt the lane lead he converts
     and Spirit Shielding''s -3% spirit resist taxes his shred build.
 
     10-20 Shh...: no direct change; harder Haunt camps reward sustained frontline
     presence, but Mo & Krill still owns the front-line slot and ranged corridor clear
-    beats his all-in.
-
-    10-16 Paint the Town: no direct change; behavior-varied Haunt camps and contested
-    soul sources reward sustained presence, so his lane-bully all-in fits the economy
-    less.'
+    beats his all-in.'
   builds:
   - name: Melee-range hybrid bruiser
     damage: hybrid
@@ -3393,11 +3388,9 @@ Apollo:
   - tank/frontline
   tier: S
   trend: stable
-  why: S-tier lane bully whose Riposte now lands reliably (dash fixes, CC refunds
-    on Flawless Advance/Itani Lo Sahn) for a 1.5s disable instead of a 0.8s stun —
-    longer lockdown for picks, but no longer an interrupt for channeled ults, and
-    Healing Booster's gutting thins the sustain shell his spirit bruiser build leans
-    on.
+  why: S-tier lane bully whose Riposte now disarms and strips a pre-existing parry,
+    so he wins trades he previously only stalled; still lacks the channel interrupt
+    he lost on 10-30, and his Locket/heal sustain benefits from weaker stacked anti-heal.
   core_items:
   - Extra Regen
   - Mystic Burst
@@ -3428,20 +3421,20 @@ Apollo:
   - Mo & Krill
   - Warden
   - anti-heal vs his Locket/heal sustain
-  last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: '10-30 Halloween + Gameplay Update: Riposte Pommel Hit is now an immobilize
-    + parry disable, not a stun — 0.8->1.5s (T2 +0.4->+0.6s) with dash reliability
-    fixes and CC refunds on Flawless Advance/Itani Lo Sahn. He loses the channel interrupt
-    (Seven/Bebop/Harrow ults) and Healing Booster''s gutting thins his sustain; S
-    held, trend rising -> stable.
+  last_changed_patch: Minor Update - 11-04-2026
+  notes: '11-04 Minor: Riposte Pommel Hit now disarms and Pummel ends a pre-existing
+    parry; T2 duration +0.6->+0.7s and Itani Lo Sahn T3 +50%->+60%. Sharpens lane
+    trades but does not restore the channel interrupt — S held.
+
+    10-30 Halloween + Gameplay Update: Riposte Pommel Hit is now an immobilize + parry
+    disable, not a stun — 0.8->1.5s (T2 +0.4->+0.6s) with dash reliability fixes and
+    CC refunds on Flawless Advance/Itani Lo Sahn. He loses the channel interrupt (Seven/Bebop/Harrow
+    ults) and Healing Booster''s gutting thins his sustain; S held, trend rising ->
+    stable.
 
     10-20 Shh...: no direct change; lane pressure converts into lane-adjacent crate
     routes and Healing Snacks, but the objective-parry change makes the Guardian dive
-    a one-shot decision — S held.
-
-    10-16 Paint the Town: no direct change; the objective-parry cooldown-reset removal
-    trims the T3-bullet-resist Guardian-dive chain, but the crate-and-Haunt economy
-    keeps him S.'
+    a one-shot decision — S held.'
   builds:
   - name: Spirit bruiser
     damage: spirit
@@ -3547,18 +3540,17 @@ Rem:
   - Holliday
   - tempo meta
   last_changed_patch: Minor Update - 09-16-2026
-  notes: '10-20 Shh...: no direct change; harder corridor camps raise the value of
-    his percent-max-HP heal on the farm route, but Healing Snacks do part of his job
-    for free and he still loses the heal-slot duel to Ivy — held B/rising.
+  notes: '11-04 Minor: no direct change; Healbane''s 4-stack cap 82.2%->72% lets his
+    percent-max-HP heal land closer to full value against multi-buyer anti-heal —
+    B held.
 
+    10-20 Shh...: no direct change; harder corridor camps raise the value of his percent-max-HP
+    heal on the farm route, but Healing Snacks do part of his job for free and he
+    still loses the heal-slot duel to Ivy — held B/rising.
 
     09-29 City Never Sleeps: no direct change; harder camps reward his sustain and
     spread-out vaults (Bell Tower now three) strengthen his map play, while Healing
-    Snacks slightly cheapen dedicated healing - trend up (peercontent).
-
-
-    09-16 change is a breakable-spawn/bug fix plus target UI only (heresy 09-17);
-    not the ''big nerf'' the community assumed, so strength impact is minor.'
+    Snacks slightly cheapen dedicated healing - trend up (peercontent).'
   builds:
   - name: Spirit heal support
     damage: spirit
@@ -3719,12 +3711,11 @@ Celeste:
   - burst caster
   - mobile assassin
   - late scaler
-  tier: C
+  tier: D
   trend: falling
-  why: Flying spirit burster whose entire shell — Radiant Regeneration plus Healing
-    Booster — was gutted in the same patch that buffed Decay, Toxic Bullets and stacking
-    Healbane; Shining Wonder 140->125 and the 0.35->0.5 air-drag ratio leave her with
-    no sustain and no safe angle.
+  why: Flying spirit burster whose whole kit was trimmed at once — shorter silence,
+    25m cast range, weaker ult slow/cooldown/bounce — on top of a sustain shell already
+    gutted on 10-30; no lockdown window and no safe angle left.
   core_items:
   - Extra Regen
   - High-Velocity Rounds
@@ -3755,9 +3746,13 @@ Celeste:
   - Scaling/comeback nerfs — late-scaler into a tempo meta
   - Ivy — out-sustains her burst window
   - Lash / Calico — mobile initiators that close and survive
-  last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: '10-30 Halloween + Gameplay Update: B -> C. Shining Wonder 140->125 is the
-    note; the real hit is Radiant Regeneration (0.35->0.25 spirit regen scaling, heal-on-cast
+  last_changed_patch: Minor Update - 11-04-2026
+  notes: '11-04 Minor: C -> D. Dazzling Trick T3 silence +1.25->+0.75s, Radiant Daggers
+    30m->25m and +7%->+6% spirit amp, Shining Wonder slow -32%->-28%, 160->170s, bounce
+    15.5->15m, T1 -16%->-14%, T2 +90->+80 — a full-kit trim on an already-C hero.
+
+    10-30 Halloween + Gameplay Update: B -> C. Shining Wonder 140->125 is the note;
+    the real hit is Radiant Regeneration (0.35->0.25 spirit regen scaling, heal-on-cast
     65->40, in-combat only) plus Healing Booster losing Extra Regen and +3 flat regen,
     into buffed Decay/Toxic Bullets/stacking Healbane. Spirit Shielding 18->15%, HVR
     60->45% velocity and Metal Skin''s +20% gravity compound it; pivot to Spirit Lifesteal
@@ -3765,11 +3760,7 @@ Celeste:
 
     10-20 Shh...: no direct change; the off-lane/corridor economy gives her no camp
     or crate income route, and Barrel Mimics tax a low-HP clearer, so the tempo patch
-    keeps her B/falling.
-
-    10-16 Paint the Town: no direct change; the contested, earlier soul economy punishes
-    her late-scaling line and buffed Deadman Danny (61% vs her) adds a direct threat;
-    tier B held.'
+    keeps her B/falling.'
   builds:
   - name: Spirit sustain-burst carrier
     damage: spirit
@@ -3825,11 +3816,11 @@ Rat King:
   - tank/frontline
   - lane bully
   tier: A
-  trend: falling
-  why: Still a 116-heavy-melee frontline who opens Tough Crates and wants the forced
-    hub fights, but Scrap Grenade's radius (8m->6m, large 14m->10m) and the banner
-    ult's knockup/radius/duration cuts end his one-button camp clear and his teamfight
-    reset, right as Haunt camps gained +10% HP.
+  trend: stable
+  why: Heavy-melee frontline who opens Tough Crates and wants forced hub fights; Rule,
+    Ratannia! T1's -25s cooldown restores banner uptime and frees a cooldown slot,
+    but Scrap Grenade's radius cut and +10% Haunt HP still end his one-button camp
+    clear.
   core_items:
   - Monster Rounds
   - High-Velocity Rounds
@@ -3857,8 +3848,13 @@ Rat King:
   - Spirit burst that bypasses the anti-bullet barrier — Celeste
   - Silence/CC (Silence Wave, Silencer) denying banner and barrier
   - Anti-heal (Healbane, Decay) against his regen stacking
-  last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: '10-30 Halloween + Gameplay Update: S -> A. Scrap Grenade 70->60 (T2 +70->+60,
+  last_changed_patch: Minor Update - 11-04-2026
+  notes: '11-04 Minor: Rule, Ratannia! T1 now adds -25s cooldown (partly reverts the
+    10-30 uptime cut and frees a Superior/Compress Cooldown slot); bullet 5.7->5.8,
+    ammo 24->26, +3m->+4m move speed; Scrap Grenade melee fuse extension 0.4s->0.25s
+    is a small loss — A held, trend falling -> stable.
+
+    10-30 Halloween + Gameplay Update: S -> A. Scrap Grenade 70->60 (T2 +70->+60,
     T3 300->275), radius 8m->6m / large 14m->10m, fuse +0.1s; Rule, Ratannia! knockup
     halved, 160->180s, 20m->16m, 12s->9s and now goes on cooldown if he is stunned
     before placing; base bullet -5% and growth -20%. Haunt camps +10% HP finish the
@@ -3867,11 +3863,7 @@ Rat King:
     10-20 Shh...: no direct change; Tough Crates, grouped chasing Haunts, forced Bell
     Tower/Sunken Plaza hubs and Barrel Mimics all point at heavy-melee camp-clear
     frontlines, so the systems patch lifts him A -> S on fit, not numbers - confirm
-    against win rate before locking.
-
-    10-16 Paint the Town: notes entry only - added to the weekly release-vote schedule,
-    no balance change; the contested-Haunt economy still matches his heavy-melee crate
-    and AoE-clear kit, so tier held A.'
+    against win rate before locking.'
   builds:
   - name: Gun bruiser
     damage: gun
@@ -3899,8 +3891,8 @@ Rat King:
     - Superior Cooldown
     popularity: secondary
     notes: Extra Health (91%) and Fortitude (90%) anchor the lead-the-charge build;
-      Superior/Compress Cooldown (57.9%/57.7% WR) are now mandatory rather than optional
-      to cover the banner ult's 180s cooldown.
+      Rule, Ratannia! T1 now covers -25s of the banner cooldown, so Superior/Compress
+      Cooldown are less mandatory — one slot can go to damage or defence.
   - name: Swarm shred
     damage: spirit
     core_items:
@@ -3939,10 +3931,10 @@ Baba:
   - initiator
   tier: D
   trend: falling
-  why: 'Grounded regen bruiser whose identity was removed twice over: Baba''s Brew
-    is now random-order on a 1.5s cycle so she cannot guarantee the silence or barrier
-    she needs, and both Radiant Regeneration (94% buy) and Healing Booster were gutted
-    into a patch that buffed every anti-heal item.'
+  why: Grounded regen bruiser whose identity was removed twice over — random-order
+    Brew on a 1.6s cycle and a gutted Radiant Regeneration/Healing Booster shell —
+    and 11-04 thins the bruiser body further (spirit-resist scaling 0.7->0.5, melee
+    damage -10% per boon, Granny resists 30%->25%).
   core_items:
   - Extra Charge
   - Extra Regen
@@ -3972,22 +3964,20 @@ Baba:
   - 'Channel interrupts/silence on her ult: Knockdown, Cursed Relic, Silencer'
   - 'Burst/mobile gun pressure she can''t out-poke: Holliday, Wraith; Plated Armor
     and Bullet Resilience vs her gun damage'
-  last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: '10-30 Halloween + Gameplay Update: C -> D. Baba''s Brew order is random
-    each cast on a 1->1.5s cycle (silence 3->2.75s), spirit-resist scaling 0.1->0.07,
-    Threadsap 22->16s and cleanse now wipes stolen spirit, Granny heavy-melee slow
-    4->2s; Radiant Regeneration (94% buy) and Healing Booster both gutted into an
-    anti-heal patch. Offsets: Heavy-Melee Cauldrons, Healing Snacks 10->14%.
+  last_changed_patch: Minor Update - 11-04-2026
+  notes: '11-04 Minor: spirit-resist scaling 0.7->0.5 and melee damage -10% per boon
+    thin the bruiser shell; Brew 27->28s, burn scaling 0.15->0.13, cycle 1.5->1.6s;
+    Granny Long Legs melee/debuff resist 30%->25% — D held, trend falling.
+
+    10-30 Halloween + Gameplay Update: C -> D. Baba''s Brew order is random each cast
+    on a 1->1.5s cycle (silence 3->2.75s), spirit-resist scaling 0.1->0.07, Threadsap
+    22->16s and cleanse now wipes stolen spirit, Granny heavy-melee slow 4->2s; Radiant
+    Regeneration (94% buy) and Healing Booster both gutted into an anti-heal patch.
+    Offsets: Heavy-Melee Cauldrons, Healing Snacks 10->14%.
 
     10-20 Shh...: no direct change; the new corridors, grouped Haunt camps and forced
     Bell Tower/Plaza fights suit her melee-regen clear and arrest the post-10-14 fall,
-    but the barrier/resist cuts still bind - trend falling -> stable at C.
-
-    10-14: major kit cut - Brew barrier scaling 1.2->0.7 and base 100->90 with CD
-    25->27s (later, T2), -7% Base Bullet Resist, spirit-resist scaling 0.12->0.1,
-    Granny Long Legs CD 30->32 with lower light-melee launch and decaying repeat air-melee
-    momentum, Threadsap CD 26->28 with its spirit shred now ending on death; plus
-    Radiant Regeneration 0.04->0.035. Tier B -> C, trend falling.'
+    but the barrier/resist cuts still bind - trend falling -> stable at C.'
   builds:
   - name: Cooldown caster
     damage: spirit
@@ -4001,7 +3991,7 @@ Baba:
     popularity: primary
     notes: 'The regen shell is gone — Radiant Regeneration and Healing Booster were
       both gutted — so the cooldown/duration line is the build now. Brew order is
-      random each cast on a 1->1.5s cycle: hold the cast until the needed brew cycles
+      random each cast on a 1->1.6s cycle: hold the cast until the needed brew cycles
       in rather than opening fights blind.'
   - name: Spirit bruiser
     damage: spirit
@@ -4013,9 +4003,10 @@ Baba:
     - Torment Pulse
     - Spirit Resilience
     popularity: secondary
-    notes: HP/regen filler to out-sustain Haunt chip and hub fights; Torment Pulse
-      18->22% melee resist is the only sustain gain, and anti-heal stacking (Decay
-      -55%, Healbane) now cuts straight through it.
+    notes: HP/regen filler to out-sustain Haunt chip and hub fights; the resist-scaling
+      cut (0.7->0.5) and melee damage -10% per boon thin this shell, so treat it as
+      a fallback — Torment Pulse 18->22% melee resist is the only sustain gain and
+      anti-heal stacking (Decay -55%, Healbane) cuts through it.
   matchups:
     beats:
     - Solomon
@@ -4162,11 +4153,10 @@ Deadman Danny:
   - mobile assassin
   - burst caster
   tier: C
-  trend: stable
-  why: 'Spirit mark-burster whose dive got taxed twice: slows now cut jetpack impulse
-    and Steam Vents lost invisibility, so the free approach and the escape are both
-    gone; the Close The Deal damage fix is the only gain on a 730-HP flyer with the
-    air-drag tax intact.'
+  trend: falling
+  why: Spirit mark-burster whose execute and mark scaling were both cut — Close The
+    Deal +75%->+55%, Strix Salvo -8% spirit — so his dive converts fewer kills on
+    a 730-HP flyer with no sustain shell to fall back on.
   core_items:
   - High-Velocity Rounds
   - Extra Spirit
@@ -4202,13 +4192,17 @@ Deadman Danny:
     bad dive is a lost fight
   - 'Late payoff vs tempo: Boundless Spirit''s ~47-min average buy arrives after the
     game usually ends'
-  last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: '10-30 Halloween + Gameplay Update: Chimera Mk1 nerfed across the board —
-    jetpack unusable while cursed, CDR per boon -0.4->-0.25s, T3 refund 50->30%, slows
-    now cut jetpack impulse harder (worse under movement-ability silence), grounding
-    pulls land more reliably. Steam Vents lose invisibility and HVR 60->45% velocity
-    hits his lone weapon staple; the Close The Deal damage fix is the only gain. C
-    held, trend rising -> stable.
+  last_changed_patch: Minor Update - 11-04-2026
+  notes: '11-04 Minor: Close The Deal +75%->+55%, Strix Salvo spirit scaling -8%,
+    Chimera Mk1 T2 heal 150->125 and 2.0->1.7 — dive converts fewer kills; C held,
+    trend stable -> falling.
+
+    10-30 Halloween + Gameplay Update: Chimera Mk1 nerfed across the board — jetpack
+    unusable while cursed, CDR per boon -0.4->-0.25s, T3 refund 50->30%, slows now
+    cut jetpack impulse harder (worse under movement-ability silence), grounding pulls
+    land more reliably. Steam Vents lose invisibility and HVR 60->45% velocity hits
+    his lone weapon staple; the Close The Deal damage fix is the only gain. C held,
+    trend rising -> stable.
 
     7-day check-in (2026-10-20): tier C -> C, WR 45%, PR 69% over 446352 matches.
     Corrected: the usage data kills the ''shred/mark gun'' identity - Bullet Resist
@@ -4219,11 +4213,7 @@ Deadman Danny:
     sample), so read WR 38.5% and ignore pick rate. Held C/rising: the build finally
     consolidated and WR gained ~3.6 points, but nothing clears 49% head-to-head and
     the flyer tax is intact; upgrade only on ~45%+ WR, drop to D if the spirit capstone
-    stays a post-30-min luxury.
-
-    10-20 Shh...: no direct change; grouped chasing Haunt camps and corridor farm
-    suit his spirit AoE marks and Steam Vents add approach angles, but the flyer tax
-    and Barrel Mimic risk on a 730-HP commit keep him C/rising.'
+    stays a post-30-min luxury.'
   builds:
   - name: Spirit mark burst
     damage: spirit
@@ -4330,20 +4320,22 @@ Violet:
   - Silence Wave / Knockdown / Disarming Hex — interrupt or cancel the Still Life
     gaze
   last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: '10-30 Halloween + Gameplay Update: B -> C. Abstract Landscape 165->180s,
-    6->5s duration, 0.04->0.01 scaling, ends on death, 0.5->0.75s re-apply and T3
-    ink destructible again; Still Life stun 1.0->0.9s, LOS required at channel end,
-    T1 regen only while drawing (0.25->0.15). Spirit Lifesteal 6->8 spirit / 13->15%
-    is the replacement sustain; anti-heal stacking taxes the rest.
+  notes: '11-04 Minor: no direct change; Healbane''s 4-stack cap 82.2%->72% eases
+    the anti-heal tax on her regen shell, and Baba (a 41% loss) was nerfed across
+    her kit — C held, trend falling.
+
+    10-30 Halloween + Gameplay Update: B -> C. Abstract Landscape 165->180s, 6->5s
+    duration, 0.04->0.01 scaling, ends on death, 0.5->0.75s re-apply and T3 ink destructible
+    again; Still Life stun 1.0->0.9s, LOS required at channel end, T1 regen only while
+    drawing (0.25->0.15). Spirit Lifesteal 6->8 spirit / 13->15% is the replacement
+    sustain; anti-heal stacking taxes the rest.
 
     7-day check-in (2026-10-23): tier B -> C, WR 50%, PR 64% over 539876 matches.
     Data corrects the day-0 read: B/rising was a tooltip judgment, so C is a correction,
     not a decline — 46.1% WR at 70.9% PR, and she loses to frontline brawlers rather
     than punishing melee. Watch whether her WR climbs with reps; the tooltip read
     also claimed Seven and the gun line as wins, but Seven is 49% over 170 and Living
-    Ink/HVR no longer appear in her item data at all. 10-20 Shh...: no Violet changes;
-    her position moves on systems (Haunt grouping, Tough Crates, hub fights) and on
-    the dive/frontline meta around her.'
+    Ink/HVR no longer appear in her item data at all.'
   builds:
   - name: Spirit caster (lead)
     damage: spirit
@@ -4411,11 +4403,11 @@ Nurse Harrow:
   - gun carry
   - support/healer
   tier: B
-  trend: falling
-  why: Marksman-healer whose Lurking Terrors is now a 5s lockdown with 2s fear buildup
-    and 50% damage reduction instead of immunity, in a patch where Decay, Toxic Bullets
-    and stacking Healbane all cut her healing; the 0.2->0.24 spirit scaling on Healing
-    Needles is the pivot, not a replacement.
+  trend: stable
+  why: Gun-healer whose faster, wider fear cone makes Lurking Terrors a dependable
+    grouped-fight lockdown, and whose gun-damage charge economy just got an 8% lift;
+    still loses to ranged spirit burst that never enters the cone and to anti-heal
+    that arrives before her sustain comes online.
   core_items:
   - Extra Regen
   - Extended Magazine
@@ -4446,8 +4438,9 @@ Nurse Harrow:
   - Long-range spirit burst and zone control (Baba 43%, Celeste 45%, Wraith 46%) —
     none of it enters the fear cone, and no dash or regen means the fight ends before
     Healing Needles pay
-  - Healbane / Decay / Toxic Bullets — anti-heal is the archetype answer to a healer,
-    and all her sustain is healing-based
+  - Healbane / Decay / Toxic Bullets — anti-heal is still the archetype answer to
+    a healer; the 4-stack cap cut only softens the multi-buyer case, so a single dedicated
+    Healbane buyer still taxes her
   - Silencer / Cursed Relic / Knockdown — Lurking Terrors is a channel and her survivability
     is ability-based; Knockdown stops the channel outright
   - Plated Armor — the needle charge economy runs on gun damage, and Armor Piercing
@@ -4456,13 +4449,19 @@ Nurse Harrow:
     45% shows what an AoE engage does to her
   - Lane bullies at the top (Paige, Apollo at S) — 0 base regen and 730 HP mean she
     loses the attrition lane she is supposed to win
-  last_changed_patch: Halloween 2026 + Gameplay Update
-  notes: '10-30 Halloween + Gameplay Update: Lurking Terrors fear buildup 1.3->2s,
-    duration 7->5s (T3 +3->+2s), T3 immunity -> 50% damage reduction, no fear from
-    >50° above/below the target''s view; base gun damage -10%, Healing Needles 25->22
-    (T2 +20->+16) but spirit scaling 0.2->0.24; Leech Therapy ground leeches 180s
-    -> 120s + 3s/min and cleared on round reset. Anti-heal buffs land on a dedicated
-    healer. B held, trend stable -> falling.
+  last_changed_patch: Minor Update - 11-04-2026
+  notes: 'Minor Update 11-04-2026: bullet damage +8%, Lurking Terrors fear buildup
+    2->1.75s and vertical angle 50%->65%. Healbane 4-stack cap 82.2%->72% (single
+    source unchanged) trims the anti-heal tax on her healing without removing it.
+    B held, trend falling -> stable; the buffs are real but small, and the 7-day item
+    spread still shows no build-level signal worth acting on.
+
+    10-30 Halloween + Gameplay Update: Lurking Terrors fear buildup 1.3->2s, duration
+    7->5s (T3 +3->+2s), T3 immunity -> 50% damage reduction, no fear from >50° above/below
+    the target''s view; base gun damage -10%, Healing Needles 25->22 (T2 +20->+16)
+    but spirit scaling 0.2->0.24; Leech Therapy ground leeches 180s -> 120s + 3s/min
+    and cleared on round reset. Anti-heal buffs land on a dedicated healer. B held,
+    trend stable -> falling.
 
     7-day check-in (2026-10-27): tier B -> B, WR 51%, PR 63% over 607252 matches.
     Data overrides the day-0 read: Swift Striker, High-Velocity Rounds and Active
@@ -4470,10 +4469,7 @@ Nurse Harrow:
     6.7m), and the 7-day spread contains none of the dash assassins the fear-cone
     thesis predicted. Extra Regen is not the trap the previous note called it — 97%
     at 2.1m with a baseline win rate makes it a mandatory lane tax for 0 base regen,
-    indifferent rather than informative. Changelog: released 2026-10-20 in Shh...
-    This Won''t Hurt a Bit., first full-week check (7.3k matches, no creator content);
-    nearly every item WR sits at 50.5-51%, so build-level signals are weak and confidence
-    is capped.'
+    indifferent rather than informative.'
   builds:
   - name: Mag-dump sustain
     damage: gun

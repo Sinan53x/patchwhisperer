@@ -1,0 +1,24 @@
+{
+ "hero_updates": {
+  "Nurse Harrow": {
+   "trend": "stable",
+   "why": "Gun-healer whose faster, wider fear cone makes Lurking Terrors a dependable grouped-fight lockdown, and whose gun-damage charge economy just got an 8% lift; still loses to ranged spirit burst that never enters the cone and to anti-heal that arrives before her sustain comes online.",
+   "countered_by": [
+    "Long-range spirit burst and zone control (Baba 43%, Celeste 45%, Wraith 46%) — none of it enters the fear cone, and no dash or regen means the fight ends before Healing Needles pay",
+    "Healbane / Decay / Toxic Bullets — anti-heal is still the archetype answer to a healer; the 4-stack cap cut only softens the multi-buyer case, so a single dedicated Healbane buyer still taxes her",
+    "Silencer / Cursed Relic / Knockdown — Lurking Terrors is a channel and her survivability is ability-based; Knockdown stops the channel outright",
+    "Plated Armor — the needle charge economy runs on gun damage, and Armor Piercing Rounds is the answer but eats a slot she needs for uptime",
+    "Off-angle dives and hooks — the fear cone only covers the facing arc, and Dynamo's 45% shows what an AoE engage does to her",
+    "Lane bullies at the top (Paige, Apollo at S) — 0 base regen and 730 HP mean she loses the attrition lane she is supposed to win"
+   ],
+   "last_changed_patch": "Minor Update - 11-04-2026",
+   "notes": "Minor Update 11-04-2026: bullet damage +8%, Lurking Terrors fear buildup 2->1.75s and vertical angle 50%->65%. Healbane 4-stack cap 82.2%->72% (single source unchanged) trims the anti-heal tax on her healing without removing it. B held, trend falling -> stable; the buffs are real but small, and the 7-day item spread still shows no build-level signal worth acting on.\n10-30 Halloween + Gameplay Update: Lurking Terrors fear buildup 1.3->2s, duration 7->5s (T3 +3->+2s), T3 immunity -> 50% damage reduction, no fear from >50° above/below the target's view; base gun damage -10%, Healing Needles 25->22 (T2 +20->+16) but spirit scaling 0.2->0.24; Leech Therapy ground leeches 180s -> 120s + 3s/min and cleared on round reset. Anti-heal buffs land on a dedicated healer. B held, trend stable -> falling.\n7-day check-in (2026-10-27): tier B -> B, WR 51%, PR 63% over 607252 matches. Data overrides the day-0 read: Swift Striker, High-Velocity Rounds and Active Reload show no meaningful share (Titanic Magazine is the weapon core at 98% / 6.7m), and the 7-day spread contains none of the dash assassins the fear-cone thesis predicted. Extra Regen is not the trap the previous note called it — 97% at 2.1m with a baseline win rate makes it a mandatory lane tax for 0 base regen, indifferent rather than informative."
+  }
+ },
+ "change_log": [
+  "Nurse Harrow: trend falling -> stable (bullet damage +8%, fear buildup 2->1.75s, vertical angle 50%->65% offset the 10-30 anti-heal pressure)",
+  "Nurse Harrow: why rewritten to present-tense state around the faster/wider fear cone and the gun-damage charge economy",
+  "Nurse Harrow: countered_by anti-heal line updated — Healbane 4-stack cap 82.2%->72% softens multi-buyer stacking but single-source anti-heal still taxes her",
+  "Nurse Harrow: notes prepended with the 11-04-2026 changelog line, oldest line dropped, last_changed_patch set"
+ ]
+}

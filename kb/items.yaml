@@ -371,12 +371,15 @@ Healbane:
   - Yamato
   slot: Vitality
   tier: 2
-  notes: '10-30 rework, the patch''s key system move: multi-source anti-heal now stacks
-    with diminishing returns, so two sources beat one strong healer — anti-heal is
-    a team coverage plan, not a slot. Heal-on-kill 275->170 (+3/boon) taxes frontline
-    buyers'' own sustain. Best-in-class for buyers who want the enemy''s healing gone
-    (Seven); worst for heroes who live on their own heals (Mo & Krill, Shiv, Kelvin,
-    Ivy).'
+  notes: '11-04-2026 capped the 10-30 stacking rework: one source is unchanged, 2
+    sources 54.7% (was 57.8%), 4 sources 72% (was 82.2%). Anti-heal is now a single-buyer
+    slot, not a team coverage plan — a second or third buyer adds little, so coordinated
+    teams should designate one holder. Heal-on-kill 275->170 (+3/boon) still taxes
+    frontline buyers'' own sustain. Best for heroes who want the enemy''s healing
+    gone and don''t live on their own heals (Seven, Infernus, Yamato); worst for heroes
+    whose win condition is their own healing (Kelvin, Ivy, Rem, Mo & Krill, Shiv),
+    who now gain more from the enemy''s anti-heal being capped than they lose on the
+    giving side.'
 Ricochet:
   name: Ricochet
   role: multi-target weapon item
