@@ -7,6 +7,8 @@ GitHub Actions rebuilds the site and deploys it to Cloudflare.
 
 Live site: https://patch-whisperer.plaid-earth.workers.dev
 
+[![The latest patch page](docs/images/site-top.png)](https://patch-whisperer.plaid-earth.workers.dev)
+
 ## What a patch page shows
 
 `pw site build` turns each analyzed patch in `kb/patches/` into a static page:
@@ -25,6 +27,10 @@ Live site: https://patch-whisperer.plaid-earth.workers.dev
 - **Items**: item changes grouped by category.
 - **Map & economy**: system-level changes.
 
+![Measured tier list with movement since the previous patch](docs/images/site-tiers.png)
+
+![Game plan: pace gauge and the hero types a patch favors](docs/images/site-plan.png)
+
 Every hero and item tile opens a detail sheet with the change text, verdict,
 and measured stats. All patches are indexed at `/patches/`.
 
@@ -34,6 +40,8 @@ Ranked-season announcements get their own page (`analysis/season.py`, one LLM
 extraction guided by `prompts/season_extract.md`): a season progress timeline, a
 "Where you land" rank ladder with badge art, "What changed" rule cards rendered
 as pips or before/after bars, and a "Who wins, who loses" summary.
+
+![Where you land: rank ladder for Beta Season 2](docs/images/site-season-ladder.png)
 
 ## How it stays current
 
