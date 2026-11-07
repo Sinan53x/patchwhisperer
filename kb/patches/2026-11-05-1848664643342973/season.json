@@ -1,0 +1,85 @@
+{
+ "gid": "1848664643342973",
+ "title": "Ranked - Beta Season 2",
+ "date": "2026-11-05",
+ "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1848664643342973",
+ "season_name": "Beta Season 2",
+ "starts": "2026-11-05",
+ "ends": "2027-03-11",
+ "headline": "Ranked Beta Season 2 runs four months with a softer rank reset, a global redistribution of the ladder, and tighter rank-loss protection.",
+ "reset": [
+  "Two-step adjustment: everyone's rank is first redistributed across the curve, then a soft reset of about -1 badge is applied on top.",
+  "The soft reset is significantly smaller than last season's; previous-season winrate shifts players an extra 1-2 subranks.",
+  "Redistribution accounts for the influx of new players, so some players will climb despite the reset.",
+  "Returning Ranked players skip calibration; anyone who sat out last season must calibrate.",
+  "Placement ceiling rises to Ascendant I, with up to Ascendant III for strong prior-season performance."
+ ],
+ "rules": [
+  {
+   "label": "Rank loss shields (Phantom, Ascendant, Eternus)",
+   "before": "5 full rank, 2 subrank",
+   "after": "none",
+   "note": "Top three ranks lose all loss protection."
+  },
+  {
+   "label": "Rank loss shields (full rank boundary, all other ranks)",
+   "before": "5 losses",
+   "after": "3 losses",
+   "note": "At 0 points you drop a full badge after 3 losses instead of 5."
+  },
+  {
+   "label": "Rank loss shields (subrank)",
+   "before": "2 losses",
+   "after": "1 loss",
+   "note": "Subrank floors are much thinner."
+  },
+  {
+   "label": "Points per match",
+   "before": "300",
+   "after": "350",
+   "note": "Faster climb per game, partly offset by thinner shields."
+  },
+  {
+   "label": "Points to reach a new badge from final subrank",
+   "before": "2000",
+   "after": "1500",
+   "note": "Points between subranks unchanged at 1000."
+  },
+  {
+   "label": "Hero bans per Ranked match",
+   "before": "3",
+   "after": "4",
+   "note": "One more ban slot per draft."
+  },
+  {
+   "label": "Highest possible placement",
+   "before": "Oracle VI",
+   "after": "Ascendant I",
+   "note": "Up to Ascendant III based on previous-season performance."
+  },
+  {
+   "label": "Ranked hero unlock",
+   "before": "15 wins",
+   "after": "35 points",
+   "note": "2 points per win, 1 per loss, so losses now progress; 35 is below the old 45-point equivalent."
+  },
+  {
+   "label": "Leaderboards",
+   "before": null,
+   "after": "50 Ranked matches in last 30 days",
+   "note": "Per-season leaderboard; ranked by current badge progress."
+  },
+  {
+   "label": "Hero leaderboards",
+   "before": null,
+   "after": "15 Ranked matches on that hero in last 30 days",
+   "note": "Ranks on badge progress plus recent win/loss on that hero."
+  }
+ ],
+ "takeaways": [
+  "Grinders gain: 350 points per game and a 1500 badge threshold make the climb faster, so volume matters more than a hot streak.",
+  "Phantom-plus players lose their safety net entirely, and everyone else has shields cut, so a bad run drops you faster than last season.",
+  "New-to-Ranked players should care about the hero unlock change: losses now count toward unlocking, so you reach a deep hero pool in fewer games.",
+  "Leaderboard chasers must keep playing: 50 matches in 30 days (15 per hero) is a rolling activity requirement, not a season total."
+ ]
+}
