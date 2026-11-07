@@ -40,9 +40,9 @@ _MOVED_RANK = {"up": 0, None: 1, "down": 2}
 _BIG_KIND_LABEL = {"hero": "Hero", "item": "Item", "system": "Map & economy"}
 _SHEET_PREFIX = {"hero": "hero", "item": "item", "system": "sys"}
 _TEMPO = {
-    "toward_tempo": "Games shift toward early tempo",
-    "toward_scaling": "Games shift toward late scaling",
-    "neutral": "No clear shift in game pace",
+    "toward_tempo": ("Games shift toward early tempo", -1),
+    "toward_scaling": ("Games shift toward late scaling", 1),
+    "neutral": ("No clear shift in game pace", 0),
 }
 _DELTA_RE = re.compile(
     r"^(?P<label>.+?)\s+(?P<verb>increased|reduced|decreased|lowered|raised|rises?|drops?)\s+"
@@ -164,20 +164,9 @@ class ArchetypeView(BaseModel):
 
 class TempoView(BaseModel):
     label: str
-    direction: str = "neutral"
-
-
-class ImpactHeroView(BaseModel):
-    name: str
-    slug: str
-    portrait: str | None = None
-    initials: str = ""
+    position: int = 50
     why: str = ""
 
-
-class WatchView(BaseModel):
-    lead: str
-    rest: str = ""
 
 
 class TierHeroView(BaseModel):
@@ -238,10 +227,7 @@ class PatchPageModel(BaseModel):
     small_systems: list[SystemView] = []
     tempo: TempoView | None = None
     archetypes: list[ArchetypeView] = []
-    what_to_watch: list[WatchView] = []
     game_plan: str = ""
-    helped: list[ImpactHeroView] = []
-    hurt: list[ImpactHeroView] = []
     counts_line: str = ""
 
 
@@ -379,11 +365,6 @@ def _board_group(direct: bool, kind: str, direction: str) -> str:
     return "indirect" if direction != "neutral" else "unchanged"
 
 
-def _watch(line: str) -> WatchView:
-    lead, sep, rest = line.partition(" — ")
-    return WatchView(lead=lead, rest=rest if sep else "")
-
-
 def _tier_hero(h: HeroCardView, moved: str | None, was: str | None) -> TierHeroView:
     return TierHeroView(
         slug=h.slug,
@@ -489,8 +470,8 @@ def _band_note(band: TierBand, updated: str) -> str:
             f"{early} Ring: green is strong right now, yellow is average, red is weak."
         )
     return (
-        f"Too few games since the patch so far, so this shows {who} from the two "
-        "weeks before it. It updates every few hours as games are played."
+        f"Too few games since the patch so far, so this shows {who} from "
+        "before it. It updates every few hours as games are played."
     )
 
 
@@ -526,21 +507,6 @@ def _lookup_subject(lookup: dict, subject_slug: str):
     return next(
         (v for k, v in lookup.items() if f"-{subject_slug}-" in f"-{k}-"), None
     )
-
-
-def _impact_heroes(movers: list, heroes: list[HeroCardView]) -> list[ImpactHeroView]:
-    by_name = {h.name: h for h in heroes}
-    return [
-        ImpactHeroView(
-            name=h.name,
-            slug=h.slug,
-            portrait=h.portrait,
-            initials=h.initials,
-            why=m.why,
-        )
-        for m in movers
-        if (h := by_name.get(m.hero))
-    ]
 
 
 def _big_changes(
@@ -583,6 +549,9 @@ def _big_changes(
             )
         )
     return views
+
+
+
 
 
 def _counts_line(
@@ -811,7 +780,7 @@ def build_page_model(
             for s in analysis.systems.systems_changed
         ]
         shift = analysis.systems.tempo_shift
-        tempo = TempoView(label=_TEMPO[shift.direction], direction=shift.direction)
+        label, sign = _TEMPO[shift.direction]
         archetypes = [
             ArchetypeView(
                 name=a.archetype,
@@ -828,6 +797,11 @@ def build_page_model(
             )
             if a.direction != "neutral"
         ]
+        tempo = TempoView(
+            label=label,
+            position=round(50 + sign * 45 * max(shift.confidence, 0.2)),
+            why=shift.why,
+        )
     systems.sort(key=lambda s: _MAGNITUDE_RANK.get(s.magnitude, 4))
     small_systems = [s for s in systems if s.magnitude in ("minor", "none")]
     systems = [s for s in systems if s.magnitude not in ("minor", "none")]
@@ -853,10 +827,7 @@ def build_page_model(
         small_items=small_items,
         systems=systems,
         small_systems=small_systems,
-        what_to_watch=[_watch(w) for w in analysis.synthesis.what_to_watch],
         game_plan=analysis.synthesis.meta_thesis.new,
-        helped=_impact_heroes(analysis.synthesis.winners, heroes),
-        hurt=_impact_heroes(analysis.synthesis.losers, heroes),
         counts_line=_counts_line(
             heroes, item_groups, small_items, systems, small_systems
         ),

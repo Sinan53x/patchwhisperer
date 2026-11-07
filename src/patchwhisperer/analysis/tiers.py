@@ -76,7 +76,7 @@ def _measure(rows: list[dict]) -> dict[int, tuple[str, float, int, float]]:
 def build_band(
     key: str, label: str, post: list[dict], pre: list[dict], names: dict[int, str]
 ) -> TierBand:
-    match_count = sum(r["matches"] for r in post) // 12
+    match_count = _games(post)
     post_patch = match_count >= MIN_POST_PATCH_MATCHES
     before = _measure(pre)
     current = _measure(post) if post_patch else before
@@ -97,20 +97,31 @@ def build_band(
         key=key,
         label=label,
         post_patch=post_patch,
-        matches=match_count if post_patch else sum(r["matches"] for r in pre) // 12,
+        matches=match_count if post_patch else _games(pre),
         heroes=heroes,
     )
 
 
-def build_snapshot(api, patch_unix: int) -> TierSnapshot:
+def _games(rows: list[dict]) -> int:
+    return sum(r["matches"] for r in rows) // 12
+
+
+def build_snapshot(
+    api, patch_unix: int, prev_patch_unix: int | None = None
+) -> TierSnapshot:
+    """Compare against games since the previous patch, so its effects aren't
+    counted as this one's. Falls back to two weeks if those games are too few."""
     names = {h["id"]: h["name"] for h in api.heroes()}
     since = patch_unix + SETTLE_SECONDS
-    pre_since = patch_unix - PRE_PATCH_DAYS * 86400
+    two_weeks = patch_unix - PRE_PATCH_DAYS * 86400
+    pre_since = max(two_weeks, (prev_patch_unix or 0) + SETTLE_SECONDS)
     bands = []
     for key, label, mode, low, high in BANDS:
         common = {"match_mode": mode, "min_average_badge": low, "max_average_badge": high}
         post = api.hero_stats(min_unix=since, **common)
         pre = api.hero_stats(min_unix=pre_since, max_unix=patch_unix, **common)
+        if pre_since > two_weeks and _games(pre) < MIN_POST_PATCH_MATCHES:
+            pre = api.hero_stats(min_unix=two_weeks, max_unix=patch_unix, **common)
         bands.append(build_band(key, label, post, pre, names))
     return TierSnapshot(
         generated_at=int(time.time()), patch_unix=patch_unix, bands=bands
@@ -136,8 +147,10 @@ def refresh_latest(kb: KBStore, api) -> Path:
             candidates.append((patch.date, patch_json.parent, patch))
     if not candidates:
         raise ValueError("no analyzed patch to refresh")
-    _, patch_dir, patch = max(candidates, key=lambda c: (c[0], c[1].name))
-    snapshot = build_snapshot(api, int(patch.date.timestamp()))
+    candidates.sort(key=lambda c: (c[0], c[1].name))
+    _, patch_dir, patch = candidates[-1]
+    prev_unix = int(candidates[-2][0].timestamp()) if len(candidates) > 1 else None
+    snapshot = build_snapshot(api, int(patch.date.timestamp()), prev_unix)
     path = tiers_path(patch_dir)
     path.write_text(snapshot.model_dump_json(indent=1))
     return path

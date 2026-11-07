@@ -5,8 +5,14 @@ from pathlib import Path
 import pytest
 from jinja2 import Environment, PackageLoader
 
-from patchwhisperer.analysis.schemas import BigChange, HeroEntry, Mover
-from patchwhisperer.analysis.tiers import HeroTier, TierBand, TierSnapshot, build_band
+from patchwhisperer.analysis.schemas import ArchetypeEffect, BigChange, HeroEntry
+from patchwhisperer.analysis.tiers import (
+    HeroTier,
+    TierBand,
+    TierSnapshot,
+    build_band,
+    build_snapshot,
+)
 from patchwhisperer.kb.store import slugify
 from patchwhisperer.parse.models import Change, Direction, EntityType, Patch
 from patchwhisperer.site.build import build_site, load_analysis
@@ -215,12 +221,12 @@ class FakeArt:
         return "weapon"
 
 
-def _fixture_page(mutate=None):
+def _fixture_page(mutate=None, tiers=None):
     analysis = load_analysis(PATCH_DIR / "analysis.json")
     patch = Patch.model_validate_json((PATCH_DIR / "patch.json").read_text())
     if mutate:
         mutate(analysis, patch)
-    return build_page_model(analysis, patch, FakeArt())
+    return build_page_model(analysis, patch, FakeArt(), tiers)
 
 
 def test_unresolved_note_entity_is_a_system_not_a_hero():
@@ -419,7 +425,7 @@ def test_sections_render_in_priority_order(built):
     html = patch_html(out)
     order = [
         html.index(f'id="{s}"')
-        for s in ("biggest", "plan", "heroes", "items", "systems")
+        for s in ("biggest", "heroes", "plan", "items", "systems")
     ]
     assert order == sorted(order)
 
@@ -592,7 +598,7 @@ def test_too_few_post_patch_games_falls_back_to_pre_patch_data_and_says_so():
     band = build_band("ranked", "All", post=rows[:1], pre=rows, names={1: "Abrams"})
     assert band.post_patch is False
     assert band.heroes["Abrams"].prev_tier is None
-    assert "two weeks before" in _band_note(band, "Nov 4")
+    assert "from before it" in _band_note(band, "Nov 4")
 
 
 def test_street_brawl_lines_are_kept_apart_from_main_game_changes():
@@ -621,13 +627,108 @@ def test_band_note_flags_an_early_post_patch_sample():
     assert "early sample" not in _band_note(settled, "Nov 5")
 
 
-def test_game_plan_shows_heroes_the_patch_helps_and_hurts():
-    def mutate(analysis, patch):
-        hero = analysis.heroes.heroes[0].hero
-        analysis.synthesis.winners = [Mover(hero=hero, why="stronger"), Mover(hero="Nobody")]
-        analysis.synthesis.losers = []
+def test_pace_card_shows_the_gauge(built):
+    page = _fixture_page()
+    assert page.tempo.position == 23  # 50 - 45 * 0.6 confidence toward tempo
+    html = patch_html(built[0])
+    assert 'class="gauge"' in html and "gauge-mark" in html
+    assert "Early tempo" in html and "Late scaling" in html
 
-    page = _fixture_page(mutate)
-    assert [h.why for h in page.helped] == ["stronger"]
-    assert page.helped[0].slug == slugify(page.helped[0].name)
-    assert page.hurt == []
+
+def test_pace_card_stays_centered_when_a_patch_shifts_nothing():
+    def neutral(analysis, patch):
+        analysis.systems.tempo_shift.direction = "neutral"
+        analysis.systems.archetype_effects = []
+
+    page = _fixture_page(neutral)
+    assert page.tempo.position == 50
+    html = render(page)
+    plan = html.split('id="plan"', 1)[1].split("</section>", 1)[0]
+    assert 'class="gauge"' in plan
+    assert "No hero type clearly favored." in plan
+
+
+def test_pace_card_still_renders_when_archetypes_exist():
+    def neutral_with_archetypes(analysis, patch):
+        analysis.systems.tempo_shift.direction = "neutral"
+        analysis.systems.archetype_effects = [
+            ArchetypeEffect(
+                archetype="split pusher",
+                direction="down",
+                magnitude="minor",
+                why="slower rotations",
+            )
+        ]
+
+    page = _fixture_page(neutral_with_archetypes)
+    assert page.tempo is not None
+    assert page.tempo.position == 50
+    html = render(page)
+    assert 'class="pace"' in html
+    assert 'arche-chip d-down' in html
+
+
+def test_map_and_economy_hides_completely_without_systems():
+    def clear(analysis, patch):
+        analysis.systems.systems_changed = []
+
+    page = _fixture_page(clear)
+    html = render(page)
+    assert 'id="systems"' not in html
+    nav = html.split("<nav", 1)[1].split("</nav>", 1)[0]
+    assert 'href="#systems"' not in nav
+
+
+def test_what_to_watch_is_gone(built):
+    out, _ = built
+    html = patch_html(out)
+    assert "What to watch" not in html
+    assert 'details class="watch"' not in html
+
+
+def _snap(*bands):
+    return TierSnapshot(
+        generated_at=1793400000, patch_unix=1793390000, bands=list(bands)
+    )
+
+
+def _stat(win_rate, delta, matches=900, tier="B"):
+    return HeroTier(
+        tier=tier, win_rate=win_rate, matches=matches, pick_rate=0.1, delta=delta
+    )
+
+
+class _WindowAPI:
+    def __init__(self, pre_matches):
+        self.pre_matches, self.calls = pre_matches, []
+
+    def heroes(self):
+        return [{"id": 1, "name": "Abrams"}]
+
+    def hero_stats(self, *, min_unix, max_unix=None, **_):
+        self.calls.append((min_unix, max_unix))
+        matches = self.pre_matches if max_unix else 0
+        return [{"hero_id": 1, "wins": matches // 2, "matches": matches}]
+
+
+PATCH_UNIX = 2_000_000_000
+TWO_WEEKS_BEFORE = PATCH_UNIX - 14 * 86400
+
+
+def test_comparison_starts_after_the_previous_patch():
+    api = _WindowAPI(pre_matches=120_000)
+    build_snapshot(api, PATCH_UNIX, prev_patch_unix=PATCH_UNIX - 6 * 86400)
+    starts = {low for low, high in api.calls if high}
+    assert starts == {PATCH_UNIX - 6 * 86400 + 3600}
+
+
+def test_comparison_widens_when_the_previous_patch_is_too_recent():
+    api = _WindowAPI(pre_matches=1200)
+    build_snapshot(api, PATCH_UNIX, prev_patch_unix=PATCH_UNIX - 3600)
+    assert any(low == TWO_WEEKS_BEFORE for low, high in api.calls if high)
+
+
+def test_comparison_keeps_two_weeks_after_an_old_patch():
+    api = _WindowAPI(pre_matches=120_000)
+    build_snapshot(api, PATCH_UNIX, prev_patch_unix=PATCH_UNIX - 40 * 86400)
+    assert {low for low, high in api.calls if high} == {TWO_WEEKS_BEFORE}
