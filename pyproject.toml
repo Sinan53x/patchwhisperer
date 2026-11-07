@@ -1,14 +1,13 @@
 [project]
 name = "patchwhisperer"
 version = "0.1.0"
-description = "Creator-level Deadlock patch analysis delivered to Discord"
+description = "Creator-level Deadlock patch analysis published as a static site"
 readme = "README.md"
 authors = [
     { name = "Sinan53x", email = "sinan.turna@yahoo.com" }
 ]
 requires-python = ">=3.12"
 dependencies = [
-    "discord-py>=2.4",
     "httpx>=0.28.1",
     "jinja2>=3.1",
     "openai>=1.0",

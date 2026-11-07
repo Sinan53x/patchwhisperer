@@ -1,6 +1,5 @@
 import asyncio
 import json
-import os
 from collections import Counter
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
@@ -25,7 +24,7 @@ from patchwhisperer.analysis.pipeline import (
     run_analysis,
     run_kb_update,
 )
-from patchwhisperer.analysis.render import render_discord, render_markdown
+from patchwhisperer.analysis.render import render_markdown
 from patchwhisperer.analysis.schemas import DistilledSource, SeedKB
 from patchwhisperer.kb.schema import HeroState, ItemState
 from patchwhisperer.kb.store import KBStore, slugify
@@ -217,7 +216,7 @@ def _demo_dir() -> Path:
 
 @app.command()
 def demo(
-    full: bool = typer.Option(False, "--full", help="Print all thread chunks."),
+    full: bool = typer.Option(False, "--full", help="Print all analysis sections."),
     keep: bool = typer.Option(
         False, "--keep", help="Keep the temporary KB dir and print its path."
     ),
@@ -303,23 +302,21 @@ def demo(
     typer.echo(f"  up: {', '.join(ups)}")
     typer.echo(f"  down: {', '.join(downs)}")
 
-    rendered = render_discord(bundle)
+    md = render_markdown(bundle)
+    sections = md.split("\n\n## ")
     typer.echo("")
-    typer.echo("## Discord TL;DR")
+    typer.echo("## TL;DR")
     typer.echo("")
-    typer.echo(rendered.tldr)
-    for extra in rendered.tldr_extra:
+    typer.echo(sections[0])
+    typer.echo("")
+    typer.echo("## Analysis")
+    typer.echo("")
+    rest = ["## " + s for s in sections[1:]]
+    for s in rest if full else rest[:2]:
+        typer.echo(s)
         typer.echo("")
-        typer.echo(extra)
-    typer.echo("")
-    typer.echo("## Discord thread")
-    typer.echo("")
-    chunks = rendered.thread if full else rendered.thread[:2]
-    for c in chunks:
-        typer.echo(c)
-        typer.echo("")
-    if not full and len(rendered.thread) > 2:
-        typer.echo(f"({len(rendered.thread) - 2} more chunks — rerun with --full)")
+    if not full and len(rest) > 2:
+        typer.echo(f"({len(rest) - 2} more sections; rerun with --full)")
 
     before = kb.load_heroes()
     kb_update = run_kb_update(patch, kb, bundle, llm)
@@ -585,16 +582,8 @@ def enrich(
 
 
 @app.command()
-def bot() -> None:
-    """Start the Discord bot and the patch poller."""
-    from patchwhisperer.bot.discord_bot import run
-
-    run()
-
-
-@app.command()
 def watch() -> None:
-    """Analyze new patches and publish them to the site. Posts nothing to Discord."""
+    """Analyze new patches and publish them to the site."""
     import logging
 
     from patchwhisperer.bot import jobs, poller
@@ -614,74 +603,12 @@ def season(
     gid: str,
     force: bool = typer.Option(False, "--force"),
 ) -> None:
-    """Extract a ranked-season post into kb/patches (no Discord)."""
+    """Extract a ranked-season post into kb/patches."""
     from patchwhisperer.bot import jobs, state
 
     state.init_db()
     result = jobs.season_ingest(gid, force=force)
     typer.echo(result if result else "skipped: already processed (use --force)")
-
-
-def _with_channel(fn):
-    """Run async fn(channel, loop) inside a minimal Discord client."""
-    import discord
-
-    from patchwhisperer.bot import state
-
-    state.init_db()
-    channel_id = int(os.environ.get("DISCORD_CHANNEL_ID", "0"))
-    if not channel_id:
-        typer.echo("DISCORD_CHANNEL_ID not set", err=True)
-        raise typer.Exit(1)
-
-    intents = discord.Intents.default()
-    client = discord.Client(intents=intents)
-    result = {}
-
-    @client.event
-    async def on_ready():
-        channel = client.get_channel(channel_id) or await client.fetch_channel(
-            channel_id
-        )
-        loop = asyncio.get_running_loop()
-        try:
-            result["r"] = await fn(channel, loop)
-        finally:
-            await client.close()
-
-    token = os.environ.get("DISCORD_TOKEN")
-    if not token:
-        typer.echo("DISCORD_TOKEN not set", err=True)
-        raise typer.Exit(1)
-    client.run(token)
-    return result.get("r")
-
-
-@app.command(name="run-job")
-def run_job(
-    gid: str,
-    force: bool = typer.Option(False, "--force"),
-    sources: bool = typer.Option(False, "--sources/--no-sources"),
-) -> None:
-    """Run analyze_and_post once without the gateway (posts to Discord)."""
-    from patchwhisperer.bot import jobs
-
-    fn = (
-        (lambda post: actx.creator_sources_since(KB_ROOT / "sources", post.date.date()))
-        if sources
-        else None
-    )
-    r = _with_channel(
-        lambda channel, loop: asyncio.to_thread(
-            jobs.analyze_and_post,
-            gid,
-            force=force,
-            channel=channel,
-            loop=loop,
-            creator_sources_fn=fn,
-        )
-    )
-    typer.echo(r)
 
 
 roster_app = typer.Typer()
@@ -704,7 +631,7 @@ def _tmp_kb() -> KBStore:
 def roster_sync(
     dry_run: bool = typer.Option(False, "--dry-run"),
 ) -> None:
-    """Evaluate new heroes and run due 7-day check-ins (no Discord)."""
+    """Evaluate new heroes and run due 7-day check-ins."""
     from patchwhisperer.analysis.render import render_hero_card
     from patchwhisperer.analysis.roster import (
         checkin_hero,
@@ -804,19 +731,6 @@ def roster_checkin(
     git_commit_kb(
         Path("."), [kb.heroes_path, kb.items_path], f"kb: {name} 7-day check-in"
     )
-
-
-@roster_app.command("post-sync")
-def roster_post_sync() -> None:
-    """Run roster sync and post cards to Discord."""
-    from patchwhisperer.bot import jobs
-
-    r = _with_channel(
-        lambda channel, loop: asyncio.to_thread(
-            jobs.run_roster_sync, channel=channel, loop=loop
-        )
-    )
-    typer.echo(r)
 
 
 tiers_app = typer.Typer(help="Measured hero tiers from public match data.")

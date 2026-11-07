@@ -25,14 +25,3 @@ def test_seen_posts(tmp_path):
     assert row["attempts"] == 2
     assert state.seen_count(db) == 1
     assert state.seen_recent(10, db)[0]["gid"] == "g1"
-
-
-def test_feedback(tmp_path):
-    db = tmp_path / "s.db"
-    state.init_db(db)
-    state.feedback_add("p1", 42, "text", "nice", db)
-    state.feedback_add("p1", 43, "reaction_up", db=db)
-    rows = state.feedback_list("p1", db)
-    assert len(rows) == 2
-    assert rows[0]["kind"] == "text"
-    assert rows[1]["kind"] == "reaction_up"

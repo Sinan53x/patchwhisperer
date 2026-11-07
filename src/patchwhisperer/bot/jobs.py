@@ -1,4 +1,3 @@
-import asyncio
 import logging
 from dataclasses import dataclass
 from pathlib import Path
@@ -12,7 +11,6 @@ from patchwhisperer.analysis.pipeline import (
     run_analysis,
     run_kb_update,
 )
-from patchwhisperer.analysis.render import render_discord
 from patchwhisperer.analysis.roster import RosterResult, sync_roster
 from patchwhisperer.analysis.season import extract_season
 from patchwhisperer.bot import state
@@ -39,8 +37,6 @@ MAX_ATTEMPTS = 3
 class PostResult:
     patch_id: str
     kind: str  # analyzed | hotfix | hero_release | ranked_season
-    message_id: str | None = None
-    thread_id: str | None = None
     kb_updated: bool = False
 
 
@@ -59,38 +55,11 @@ def _snapshot_for(date_ts: float, api: DeadlockAPI) -> dict:
     }
 
 
-def _await(coro, loop):
-    """Bridge discord.py coroutines from a worker thread."""
-    if asyncio.iscoroutine(coro):
-        if loop is None:
-            raise RuntimeError("discord channel call needs a running loop")
-        return asyncio.run_coroutine_threadsafe(coro, loop).result()
-    return coro
-
-
-def _post_to_channel(bundle, channel, patch_title: str, hotfix: bool, loop=None):
-    rendered = render_discord(bundle)
-    message = _await(channel.send(rendered.tldr), loop)
-    _await(message.add_reaction("👍"), loop)
-    _await(message.add_reaction("👎"), loop)
-    for extra in rendered.tldr_extra:
-        _await(channel.send(extra), loop)
-    thread_id = None
-    if not hotfix:
-        thread = _await(message.create_thread(name=patch_title), loop)
-        for chunk in rendered.thread:
-            _await(thread.send(chunk), loop)
-        thread_id = getattr(thread, "id", None)
-    return getattr(message, "id", None), thread_id
-
-
 def analyze_and_post(
     gid: str,
     *,
     force: bool = False,
     pool: list[str] | None = None,
-    channel=None,
-    loop=None,
     llm=None,
     kb: KBStore | None = None,
     index: EntityIndex | None = None,
@@ -99,11 +68,10 @@ def analyze_and_post(
     repo_root: Path = REPO_ROOT,
     commit_fn=git_commit_kb,
     sync_fn=git_sync,
-    notify_failures: bool = True,
     on_hero_release=None,
     creator_sources_fn=None,
 ) -> PostResult | None:
-    """Fetch, analyze, and post a patch to Discord. Returns None if skipped.
+    """Fetch, analyze, and commit a patch's artifacts to kb. Returns None if skipped.
 
     The automatic (bot/poller) path never injects creator sources; callers may
     opt in via `creator_sources_fn(post) -> str`."""
@@ -172,20 +140,6 @@ def analyze_and_post(
             creator_sources=creator_sources,
         )
 
-        if channel is not None:
-            message_id, thread_id = _post_to_channel(
-                bundle, channel, patch.title, hotfix, loop
-            )
-        else:
-            message_id = thread_id = None
-
-        state.post_record(
-            patch_id,
-            getattr(channel, "id", ""),
-            message_id or "",
-            thread_id,
-            db,
-        )
         state.seen_mark(
             post.gid,
             post.title,
@@ -208,19 +162,10 @@ def analyze_and_post(
                 kb_updated = True
                 paths = changed + [patch_dir]
                 message = kb_commit_message(patch.title, kb_update.change_log)
-            except Exception as e:
+            except Exception:
                 log.exception("kb update failed for %s", patch_id)
                 paths = [patch_dir]
                 message = f"kb: {patch.title} (analysis artifacts only)"
-                if channel is not None:
-                    _await(
-                        channel.send(
-                            f"Patch {post.title}: analysis posted, but the "
-                            f"knowledge-base update failed ({str(e)[:200]}). "
-                            "KB left unchanged."
-                        ),
-                        loop,
-                    )
         else:
             paths = [patch_dir]
             message = f"kb: {patch.title} (analysis artifacts only)"
@@ -231,11 +176,9 @@ def analyze_and_post(
         return PostResult(
             patch_id=patch_id,
             kind="hotfix" if hotfix else "analyzed",
-            message_id=str(message_id) if message_id else None,
-            thread_id=str(thread_id) if thread_id else None,
             kb_updated=kb_updated,
         )
-    except Exception as e:
+    except Exception:
         attempts = state.seen_bump_attempt(
             post.gid, post.title, f"{post.date:%Y-%m-%d}", db
         )
@@ -243,21 +186,6 @@ def analyze_and_post(
         if attempts >= MAX_ATTEMPTS:
             state.seen_mark(
                 post.gid, post.title, f"{post.date:%Y-%m-%d}", "skipped", db
-            )
-            if channel is not None and notify_failures:
-                _await(
-                    channel.send(
-                        f"Patch {post.title}: giving up after {attempts} failed attempts."
-                    ),
-                    loop,
-                )
-        elif channel is not None and notify_failures:
-            _await(
-                channel.send(
-                    f"Patch {post.title}: analysis failed ({str(e)[:200]}). "
-                    f"Will retry on next poll (attempt {attempts}/{MAX_ATTEMPTS})."
-                ),
-                loop,
             )
         raise
 
@@ -272,7 +200,7 @@ def _process_season(
     repo_root: Path,
     commit_fn,
 ) -> PostResult | None:
-    """Extract a ranked-season post into kb. No Discord, no KB update."""
+    """Extract a ranked-season post into kb. No KB update."""
     patch_id = f"{post.date:%Y-%m-%d}-{post.gid}"
     pdir = kb.patch_dir(patch_id)
     if not force and (pdir / "season.json").exists():
@@ -330,9 +258,6 @@ def season_ingest(
 
 def run_roster_sync(
     *,
-    channel=None,
-    loop=None,
-    db=None,
     llm=None,
     kb: KBStore | None = None,
     index: EntityIndex | None = None,
@@ -342,21 +267,11 @@ def run_roster_sync(
     sync_fn=git_sync,
     release_post=None,
 ) -> RosterResult:
-    """Sync new heroes into the KB and post day-0 cards / check-in cards."""
+    """Sync new heroes into the KB (day-0 read) and run due 7-day check-ins."""
     llm = llm or LLMClient()
     index = index or EntityIndex.load()
     api = api or DeadlockAPI()
     kb = kb or KBStore(KB_ROOT)
-
-    def post_fn(text: str, patch_id: str) -> None:
-        if channel is None:
-            return
-        message = _await(channel.send(text), loop)
-        _await(message.add_reaction("👍"), loop)
-        _await(message.add_reaction("👎"), loop)
-        state.post_record(
-            patch_id, getattr(channel, "id", ""), getattr(message, "id", "") or "", None, db
-        )
 
     return sync_roster(
         kb=kb,
@@ -365,7 +280,6 @@ def run_roster_sync(
         llm=llm,
         sources_dir=KB_ROOT / "sources",
         release_post=release_post,
-        post_fn=post_fn if channel is not None else None,
         commit_fn=commit_fn,
         sync_fn=sync_fn,
         repo_root=repo_root,

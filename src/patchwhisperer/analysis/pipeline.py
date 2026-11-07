@@ -446,7 +446,7 @@ def run_analysis(
         )
 
     # stage 3 owns the per-hero verdict; keep the pool copy identical so
-    # Discord and the site can never disagree
+    # the pool section and hero entries can never disagree
     if pool_verdicts and heroes:
         by_hero = {h.hero: h for h in heroes.heroes}
         rewritten = False

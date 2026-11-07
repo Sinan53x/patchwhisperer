@@ -1,10 +1,7 @@
-from pydantic import BaseModel
-
-from patchwhisperer import config
 from patchwhisperer.analysis.schemas import AnalysisBundle, NewHeroCard
 from patchwhisperer.kb.schema import HeroState
 
-DISCORD_LIMIT = 1900
+CARD_LIMIT = 1900
 
 
 def render_markdown(bundle: AnalysisBundle) -> str:
@@ -84,80 +81,6 @@ def render_markdown(bundle: AnalysisBundle) -> str:
     return "\n\n".join(parts)
 
 
-class DiscordPost(BaseModel):
-    tldr: str
-    tldr_extra: list[str] = []
-    thread: list[str]
-
-
-def _pack(text: str, limit: int = DISCORD_LIMIT) -> list[str]:
-    """Split text into chunks <= limit, trying paragraph, then line, then word
-    boundaries; hard-cut only a single token longer than limit."""
-    if len(text) <= limit:
-        return [text]
-    for sep in ("\n\n", "\n", " "):
-        if sep in text:
-            chunks, cur = [], ""
-            for piece in text.split(sep):
-                cand = f"{cur}{sep}{piece}" if cur else piece
-                if len(cand) <= limit:
-                    cur = cand
-                    continue
-                if cur:
-                    chunks.append(cur)
-                if len(piece) > limit:
-                    sub = _pack(piece, limit)
-                    chunks.extend(sub[:-1])
-                    cur = sub[-1]
-                else:
-                    cur = piece
-            if cur:
-                chunks.append(cur)
-            return chunks
-    return [text[i : i + limit] for i in range(0, len(text), limit)]
-
-
-def _split_section(text: str, limit: int = DISCORD_LIMIT) -> list[str]:
-    return _pack(text, limit)
-
-
-def render_discord(bundle: AnalysisBundle) -> DiscordPost:
-    s = bundle.synthesis
-    tldr_lines = [
-        f"**[{s.patch_size.upper()}]** {s.headline}",
-        s.size_why,
-        "",
-        f"**Meta:** {s.meta_thesis.new}",
-    ]
-    if bundle.pool:
-        for v in bundle.pool.verdicts:
-            tldr_lines.append(f"{v.hero} — {v.verdict.upper()} — {v.one_liner}")
-    if config.SITE_URL:
-        tldr_lines.append(
-            f"{config.SITE_URL.rstrip('/')}/patches/{bundle.patch_id}/"
-        )
-    tldr = "\n".join(tldr_lines)
-
-    full = render_markdown(bundle)
-    sections = full.split("\n\n## ")
-    # first chunk is the TL;DR block (already sent as tldr); thread = the rest
-    rest = ["## " + sec for sec in sections[1:]]
-    thread: list[str] = []
-    cur = ""
-    for sec in rest:
-        if cur and len(cur) + len(sec) + 2 > DISCORD_LIMIT:
-            thread.extend(_split_section(cur))
-            cur = sec
-        else:
-            cur = f"{cur}\n\n{sec}" if cur else sec
-    if cur:
-        thread.extend(_split_section(cur))
-    tldr_chunks = _pack(tldr)
-    return DiscordPost(
-        tldr=tldr_chunks[0], tldr_extra=tldr_chunks[1:], thread=thread
-    )
-
-
 def render_hero_card(name: str, card: NewHeroCard, state: HeroState) -> str:
     def build(watch_n: int, threat_n: int) -> str:
         lines = [
@@ -196,9 +119,9 @@ def render_hero_card(name: str, card: NewHeroCard, state: HeroState) -> str:
         (0, 1),
     ):
         text = build(watch_n, threat_n)
-        if len(text) <= DISCORD_LIMIT:
+        if len(text) <= CARD_LIMIT:
             return text
-    return text[: DISCORD_LIMIT - 1] + "…"
+    return text[: CARD_LIMIT - 1] + "…"
 
 
 def render_checkin_card(
@@ -225,6 +148,6 @@ def render_checkin_card(
     if after.matchups.loses_to:
         lines.append(f"loses to: {', '.join(after.matchups.loses_to[:3])}")
     text = "\n".join(lines)
-    if len(text) > DISCORD_LIMIT:
-        text = text[: DISCORD_LIMIT - 1] + "…"
+    if len(text) > CARD_LIMIT:
+        text = text[: CARD_LIMIT - 1] + "…"
     return text

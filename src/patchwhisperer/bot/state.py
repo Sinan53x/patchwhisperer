@@ -20,28 +20,6 @@ CREATE TABLE IF NOT EXISTS pools(
     heroes TEXT,
     updated_at TEXT
 );
-CREATE TABLE IF NOT EXISTS posts(
-    patch_id TEXT PRIMARY KEY,
-    channel_id TEXT,
-    message_id TEXT,
-    thread_id TEXT,
-    created_at TEXT
-);
-CREATE TABLE IF NOT EXISTS feedback(
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    patch_id TEXT,
-    user_id TEXT,
-    kind TEXT,
-    text TEXT,
-    created_at TEXT
-);
-CREATE TABLE IF NOT EXISTS eval_scores(
-    patch_id TEXT,
-    metric TEXT,
-    value REAL,
-    details TEXT,
-    created_at TEXT
-);
 """
 
 
@@ -135,77 +113,3 @@ def pool_all(db=None) -> list[str]:
                 if h not in out:
                     out.append(h)
         return out
-
-
-# -- posts ----------------------------------------------------------------
-
-
-def post_record(
-    patch_id: str,
-    channel_id: int | str,
-    message_id: int | str,
-    thread_id: int | str | None,
-    db=None,
-) -> None:
-    with _conn(db) as c:
-        c.execute(
-            "INSERT OR REPLACE INTO posts(patch_id,channel_id,message_id,thread_id,created_at) VALUES(?,?,?,?,?)",
-            (
-                patch_id,
-                str(channel_id),
-                str(message_id),
-                str(thread_id) if thread_id else None,
-                _now(),
-            ),
-        )
-
-
-def post_get(patch_id: str, db=None) -> dict | None:
-    with _conn(db) as c:
-        row = c.execute("SELECT * FROM posts WHERE patch_id=?", (patch_id,)).fetchone()
-        return dict(row) if row else None
-
-
-def post_latest(db=None) -> dict | None:
-    with _conn(db) as c:
-        row = c.execute(
-            "SELECT * FROM posts ORDER BY created_at DESC LIMIT 1"
-        ).fetchone()
-        return dict(row) if row else None
-
-
-# -- feedback -------------------------------------------------------------
-
-
-def feedback_add(
-    patch_id: str, user_id: int | str, kind: str, text: str = "", db=None
-) -> None:
-    with _conn(db) as c:
-        c.execute(
-            "INSERT INTO feedback(patch_id,user_id,kind,text,created_at) VALUES(?,?,?,?,?)",
-            (patch_id, str(user_id), kind, text, _now()),
-        )
-
-
-def feedback_list(patch_id: str | None = None, db=None) -> list[dict]:
-    with _conn(db) as c:
-        if patch_id:
-            rows = c.execute(
-                "SELECT * FROM feedback WHERE patch_id=? ORDER BY id", (patch_id,)
-            )
-        else:
-            rows = c.execute("SELECT * FROM feedback ORDER BY id")
-        return [dict(r) for r in rows]
-
-
-# -- eval_scores ----------------------------------------------------------
-
-
-def eval_add(
-    patch_id: str, metric: str, value: float, details: str = "", db=None
-) -> None:
-    with _conn(db) as c:
-        c.execute(
-            "INSERT INTO eval_scores(patch_id,metric,value,details,created_at) VALUES(?,?,?,?,?)",
-            (patch_id, metric, value, details, _now()),
-        )

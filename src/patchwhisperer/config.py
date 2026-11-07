@@ -14,9 +14,6 @@ PRICE_OUTPUT_PER_M = 1.20
 
 DEFAULT_POOL = os.getenv("DEFAULT_POOL", "")
 
-# public site base URL; when set the Discord TL;DR links to the patch page
-SITE_URL = os.getenv("SITE_URL", "")
-
 # per-stage output token budgets
 # reasoning models spend a variable, often large share of max_tokens on hidden
 # reasoning before emitting JSON, so budgets include generous headroom for it

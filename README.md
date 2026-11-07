@@ -54,7 +54,7 @@ as pips or before/after bars, and a "Who wins, who loses" summary.
   `analyze_and_post`), which also refreshes measured matchups
   (`analysis/matchups.py`), then commits `kb/` and pushes. Analysis artifacts
   are committed before the stage-6 KB update, so a KB failure cannot keep a
-  patch off the site. `pw watch` posts nothing to Discord.
+  patch off the site.
 - `ranked_season` posts are extracted into `season.json` and committed.
 - `hero_release` posts trigger roster sync: a day-0 evaluation writes a
   provisional KB entry, and a check-in seven days later re-evaluates with real
@@ -114,11 +114,9 @@ All via `.env` (see `.env.example`):
 | `LLM_BASE_URL` | `https://api.commandcode.ai/provider/v1` | OpenAI-compatible endpoint |
 | `LLM_MODEL` | `deepseek/deepseek-v4-flash` | Model for all stages |
 | `DEFAULT_POOL` | empty | Pool for `pw analyze` when `--pool` isn't given |
-| `SITE_URL` | empty | Site base URL, used to link pages |
 | `POLL_INTERVAL_S` | `300` | Steam News poll interval for `pw watch` |
 | `HEALTHCHECK_URL` | - | Pinged after each poll iteration |
-| `STATE_DB` | `./state.db` | SQLite seen/posts/feedback DB |
-| `DISCORD_TOKEN`, `DISCORD_GUILD_ID`, `DISCORD_CHANNEL_ID` | - | Only needed by `pw bot` / `pw run-job` |
+| `STATE_DB` | `./state.db` | SQLite seen/pool state DB |
 | `DISCORD_WEBHOOK_URL` | - | Only needed by `pw site notify` |
 
 ## Development
@@ -134,7 +132,7 @@ uv run pw demo                           # replay a recorded pipeline run, offli
 ```
 src/patchwhisperer/
   analysis/    pipeline stages, prompts/, tiers, matchups, season extract, renderers
-  bot/         poller, job orchestration, sqlite state, legacy Discord bot
+  bot/         poller, job orchestration, sqlite state
   kb/          KB store (yaml/md) + git sync/commit helpers
   parse/       BBCode patch parser, entity index, models
   site/        static site build, page models, templates, notify webhook
@@ -152,7 +150,7 @@ pw fetch [--count N]           # list recent patch posts
 pw parse <gid|latest>          # parse a patch into structured changes
 pw analyze <gid|latest>        # run the pipeline yourself (needs LLM credentials)
 pw season <gid> [--force]      # extract a ranked-season post into kb/patches
-pw watch                       # poll Steam News, analyze, commit kb/ (no Discord)
+pw watch                       # poll Steam News, analyze, commit kb/
 pw site build --out site-dist  # build the static site
 pw site notify <added-file>    # post Discord links for new pages
 pw tiers refresh               # rewrite tiers.json from current match data
@@ -165,10 +163,7 @@ pw snapshot                    # top-10 heroes by win rate (last 14 days)
 pw enrich [--all|--hero H]     # refresh builds/matchups from usage + counter data
 pw roster sync [--dry-run]     # evaluate new heroes + due check-ins
 pw roster checkin <hero>       # run the 7-day check-in for one hero
-pw bot                         # run the Discord bot + poller (legacy)
-pw run-job <gid>               # one analyze_and_post run with Discord posting
 ```
 
-PatchWhisperer started as a Discord bot; that history lives on the
-`discord-bot` branch. The bot code still ships (`pw bot`), but the live product
-is the website.
+PatchWhisperer started as a Discord bot; that code lives on the `discord-bot`
+branch. The live product is the website.

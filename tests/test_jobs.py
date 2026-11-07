@@ -12,43 +12,6 @@ from patchwhisperer.kb.store import KBStore
 from patchwhisperer.sources.steam_news import SteamPost
 
 
-class FakeMessage:
-    def __init__(self, mid=100):
-        self.id = mid
-        self.reactions = []
-        self.thread = None
-
-    def add_reaction(self, emoji):
-        self.reactions.append(emoji)
-
-    def create_thread(self, name):
-        self.thread = FakeThread(name)
-        return self.thread
-
-
-class FakeThread:
-    def __init__(self, name, tid=200):
-        self.id = tid
-        self.name = name
-        self.sent = []
-
-    def send(self, content):
-        self.sent.append(content)
-
-
-class FakeChannel:
-    def __init__(self, cid=50):
-        self.id = cid
-        self.sent = []
-        self.messages = []
-
-    def send(self, content):
-        self.sent.append(content)
-        m = FakeMessage()
-        self.messages.append(m)
-        return m
-
-
 @pytest.fixture
 def kb(tmp_path):
     root = tmp_path / "kb"
@@ -92,13 +55,11 @@ def env(tmp_path, kb, entity_index, monkeypatch):
 
 
 def test_analyze_and_post(env, tmp_path):
-    channel = FakeChannel()
     commit = MagicMock(return_value="abc123")
     sync = MagicMock(return_value=True)
     result = analyze_and_post(
         env["post"].gid,
         pool=["Wraith"],
-        channel=channel,
         llm=env["llm"],
         kb=env["kb"],
         index=env["index"],
@@ -109,17 +70,8 @@ def test_analyze_and_post(env, tmp_path):
         sync_fn=sync,
     )
     assert result.kind == "analyzed"
-    # TL;DR sent first, then reactions, then thread
-    assert channel.sent[0].startswith("**[SIGNIFICANT]**")
-    msg = channel.messages[0]
-    assert msg.reactions == ["👍", "👎"]
-    assert msg.thread is not None
-    assert len(msg.thread.sent) >= 1
-    # db rows
     seen = state.seen_get(env["post"].gid, env["db"])
     assert seen["kind"] == "analyzed"
-    rec = state.post_get(result.patch_id, env["db"])
-    assert rec["thread_id"] == "200"
     # git commit invoked twice: early patch-dir publish, then KB files + dir
     assert result.kb_updated is True
     assert commit.call_count == 2
@@ -131,8 +83,7 @@ def test_analyze_and_post(env, tmp_path):
     sync.assert_called_once_with(tmp_path)
 
 
-def test_hotfix_no_thread(env, tmp_path, entity_index):
-    channel = FakeChannel()
+def test_hotfix(env, tmp_path, entity_index):
     commit = MagicMock()
     sync = MagicMock(return_value=True)
     small_post = SteamPost(
@@ -147,7 +98,6 @@ def test_hotfix_no_thread(env, tmp_path, entity_index):
     result = analyze_and_post(
         "hf1",
         pool=[],
-        channel=channel,
         llm=env["llm"],
         kb=env["kb"],
         index=env["index"],
@@ -158,7 +108,6 @@ def test_hotfix_no_thread(env, tmp_path, entity_index):
         sync_fn=sync,
     )
     assert result.kind == "hotfix"
-    assert channel.messages[0].thread is None
     assert commit.call_count == 2
     assert commit.call_args[0][1] == [env["kb"].patch_dir(result.patch_id)]
     assert commit.call_args[0][2].endswith("(analysis artifacts only)")
@@ -166,13 +115,11 @@ def test_hotfix_no_thread(env, tmp_path, entity_index):
 
 
 def test_default_llm_constructed(env, tmp_path, monkeypatch):
-    channel = FakeChannel()
     constructed = []
     monkeypatch.setattr(jobs, "LLMClient", lambda: constructed.append(1) or env["llm"])
     analyze_and_post(
         env["post"].gid,
         pool=[],
-        channel=channel,
         llm=None,
         kb=env["kb"],
         index=env["index"],
@@ -180,17 +127,15 @@ def test_default_llm_constructed(env, tmp_path, monkeypatch):
         db=env["db"],
         repo_root=tmp_path,
         commit_fn=MagicMock(),
-            sync_fn=MagicMock(),
+        sync_fn=MagicMock(),
     )
     assert len(constructed) == 1
 
 
 def test_latest_dedupes_on_resolved_gid(env, tmp_path, monkeypatch):
     monkeypatch.setattr(jobs, "fetch_patch_posts", lambda count: [env["post"]])
-    channel = FakeChannel()
     kwargs = {
         "pool": [],
-        "channel": channel,
         "llm": env["llm"],
         "kb": env["kb"],
         "index": env["index"],
@@ -204,8 +149,7 @@ def test_latest_dedupes_on_resolved_gid(env, tmp_path, monkeypatch):
     assert analyze_and_post("latest", **kwargs) is None
 
 
-def test_kb_update_failure_still_posts(env, tmp_path, monkeypatch):
-    channel = FakeChannel()
+def test_kb_update_failure_still_commits(env, tmp_path, monkeypatch):
     commit = MagicMock()
     sync = MagicMock(return_value=True)
 
@@ -216,7 +160,6 @@ def test_kb_update_failure_still_posts(env, tmp_path, monkeypatch):
     result = analyze_and_post(
         env["post"].gid,
         pool=["Wraith"],
-        channel=channel,
         llm=env["llm"],
         kb=env["kb"],
         index=env["index"],
@@ -228,11 +171,6 @@ def test_kb_update_failure_still_posts(env, tmp_path, monkeypatch):
     )
     assert result.kind == "analyzed"
     assert result.kb_updated is False
-    msg = channel.messages[0]
-    assert msg.reactions == ["👍", "👎"]
-    assert msg.thread is not None
-    assert len(msg.thread.sent) >= 1
-    assert "knowledge-base update failed (output truncated)" in channel.sent[-1]
     seen = state.seen_get(env["post"].gid, env["db"])
     assert seen["kind"] == "analyzed"
     assert seen["attempts"] == 0
@@ -242,8 +180,6 @@ def test_kb_update_failure_still_posts(env, tmp_path, monkeypatch):
 
 
 def test_failure_attempts_and_skip(env, tmp_path, monkeypatch):
-    channel = FakeChannel()
-
     def boom(*a, **kw):
         raise RuntimeError("llm exploded")
 
@@ -253,7 +189,6 @@ def test_failure_attempts_and_skip(env, tmp_path, monkeypatch):
             analyze_and_post(
                 env["post"].gid,
                 pool=[],
-                channel=channel,
                 llm=env["llm"],
                 kb=env["kb"],
                 index=env["index"],
@@ -261,55 +196,19 @@ def test_failure_attempts_and_skip(env, tmp_path, monkeypatch):
                 db=env["db"],
                 repo_root=tmp_path,
                 commit_fn=MagicMock(),
-            sync_fn=MagicMock(),
+                sync_fn=MagicMock(),
             )
     row = state.seen_get(env["post"].gid, env["db"])
     assert row["attempts"] == 3
     assert row["kind"] == "skipped"
-    assert "Will retry on next poll (attempt 1/3)" in channel.sent[0]
-    assert "giving up" in channel.sent[-1]
-
-
-def test_tldr_extra_sent_as_followups(env, tmp_path, monkeypatch):
-    from patchwhisperer.analysis.render import DiscordPost
-
-    channel = FakeChannel()
-    monkeypatch.setattr(
-        jobs,
-        "render_discord",
-        lambda bundle: DiscordPost(
-            tldr="first", tldr_extra=["second", "third"], thread=["t1"]
-        ),
-    )
-    result = analyze_and_post(
-        env["post"].gid,
-        pool=[],
-        channel=channel,
-        llm=env["llm"],
-        kb=env["kb"],
-        index=env["index"],
-        api=env["api"],
-        db=env["db"],
-        repo_root=tmp_path,
-        commit_fn=MagicMock(),
-        sync_fn=MagicMock(),
-    )
-    assert result.kind == "analyzed"
-    assert channel.sent[:3] == ["first", "second", "third"]
-    first = channel.messages[0]
-    assert first.reactions == ["👍", "👎"]
-    assert first.thread is not None and first.thread.sent == ["t1"]
-    assert channel.messages[1].thread is None
 
 
 def test_commit_failure_still_returns(env, tmp_path):
-    channel = FakeChannel()
     commit = MagicMock(side_effect=RuntimeError("git exploded"))
     sync = MagicMock(return_value=True)
     result = analyze_and_post(
         env["post"].gid,
         pool=[],
-        channel=channel,
         llm=env["llm"],
         kb=env["kb"],
         index=env["index"],
@@ -325,38 +224,10 @@ def test_commit_failure_still_returns(env, tmp_path):
     assert state.seen_get(env["post"].gid, env["db"])["kind"] == "analyzed"
 
 
-def test_failure_notify_failures_false(env, tmp_path, monkeypatch):
-    channel = FakeChannel()
-
-    def boom(*a, **kw):
-        raise RuntimeError("llm exploded")
-
-    monkeypatch.setattr(jobs, "run_analysis", boom)
-    with pytest.raises(RuntimeError):
-        analyze_and_post(
-            env["post"].gid,
-            pool=[],
-            channel=channel,
-            llm=env["llm"],
-            kb=env["kb"],
-            index=env["index"],
-            api=env["api"],
-            db=env["db"],
-            repo_root=tmp_path,
-            commit_fn=MagicMock(),
-            sync_fn=MagicMock(),
-            notify_failures=False,
-        )
-    assert channel.sent == []
-    assert state.seen_get(env["post"].gid, env["db"])["attempts"] == 1
-
-
 def test_creator_sources_fn_lands_in_stage1(env, tmp_path):
-    channel = FakeChannel()
     analyze_and_post(
         env["post"].gid,
         pool=[],
-        channel=channel,
         llm=env["llm"],
         kb=env["kb"],
         index=env["index"],
@@ -491,11 +362,9 @@ def test_season_ingest_rejects_non_season(env, tmp_path, monkeypatch):
 
 
 def test_no_creator_sources_fn_prompt_shows_none(env, tmp_path):
-    channel = FakeChannel()
     analyze_and_post(
         env["post"].gid,
         pool=[],
-        channel=channel,
         llm=env["llm"],
         kb=env["kb"],
         index=env["index"],
