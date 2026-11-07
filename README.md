@@ -15,8 +15,9 @@ Live site: https://patch-whisperer.plaid-earth.workers.dev
 - **Tier list**: hero tiers measured from match data, not model opinion
   (`analysis/tiers.py`). Two bands: All ranks and High rank (Ascendant and
   Eternus games). Post-patch games are compared against games since the previous
-  patch, so the last patch's effects are not credited to this one. Until enough
-  games accumulate, the board shows the AI estimate from the notes instead.
+  patch, so the last patch's effects are not credited to this one. Until 3,000
+  post-patch games exist, the board shows pre-patch data and says so. With no
+  match data at all, it falls back to an AI estimate from the notes.
 - **Your pool**: a hero picker stored in the browser (localStorage). Highlights
   how your heroes fared without any account or login.
 - **Game plan**: a pace gauge (early tempo vs. late scaling) and a "Who it
