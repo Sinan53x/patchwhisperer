@@ -1,12 +1,17 @@
 """Pure page-model construction: analysis + patch + art -> template-ready views."""
 
 import re
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime
 from functools import partial
 
 from pydantic import BaseModel
 
-from patchwhisperer.analysis.schemas import AnalysisBundle, ChangeRow
+from patchwhisperer.analysis.schemas import (
+    AnalysisBundle,
+    ChangeRow,
+    SeasonBundle,
+    SeasonRule,
+)
 from patchwhisperer.analysis.tiers import HeroTier, TierBand, TierSnapshot
 from patchwhisperer.kb.store import slugify
 from patchwhisperer.parse.models import Change, Direction, EntityType, Patch
@@ -236,7 +241,69 @@ class ArchiveEntry(BaseModel):
     title: str
     date_display: str
     headline: str
-    patch_size: str
+    label: str
+
+
+class SeasonPageModel(BaseModel):
+    patch_id: str
+    title: str
+    season_name: str
+    date_display: str
+    starts_display: str
+    ends_line: str
+    url: str
+    headline: str
+    reset: list[str] = []
+    rules: list[SeasonRule] = []
+    takeaways: list[str] = []
+
+
+def fmt_date(iso: str) -> str:
+    """'2026-11-05' -> 'Nov 5, 2026'; passes through anything unparseable."""
+    try:
+        d = date.fromisoformat(iso.strip())
+    except ValueError:
+        return iso
+    return f"{d:%b} {d.day}, {d:%Y}"
+
+
+def _parse_date(iso: str | None) -> date | None:
+    if not iso:
+        return None
+    try:
+        return date.fromisoformat(iso.strip())
+    except ValueError:
+        return None
+
+
+def _season_ends_line(ends: date | None, today: date) -> str:
+    if ends is None:
+        return "no end date announced"
+    disp = f"{ends:%b} {ends.day}, {ends:%Y}"
+    if ends <= today:
+        return f"ended {disp}"
+    days = (ends - today).days
+    if days >= 14:
+        return f"ends {disp} · {days // 7} weeks left"
+    return f"ends {disp} · {days} days left"
+
+
+def build_season_model(
+    bundle: SeasonBundle, patch_id: str, today: date
+) -> SeasonPageModel:
+    return SeasonPageModel(
+        patch_id=patch_id,
+        title=bundle.title,
+        season_name=bundle.season_name or bundle.title,
+        date_display=fmt_date(bundle.date or bundle.starts),
+        starts_display=fmt_date(bundle.starts or bundle.date),
+        ends_line=_season_ends_line(_parse_date(bundle.ends), today),
+        url=bundle.url,
+        headline=bundle.headline,
+        reset=bundle.reset,
+        rules=bundle.rules,
+        takeaways=bundle.takeaways,
+    )
 
 
 def _initials(name: str) -> str:
@@ -457,7 +524,7 @@ def _measured_rows(heroes: list[HeroCardView], band: TierBand) -> list[TierRowVi
 EARLY_SAMPLE_MATCHES = 30_000
 
 
-def _band_note(band: TierBand, updated: str) -> str:
+def _band_note(band: TierBand, updated: str, reset_on: str | None = None) -> str:
     who = "ranked games" if band.key == "ranked" else "Ascendant and Eternus games"
     if band.post_patch:
         early = (
@@ -465,9 +532,14 @@ def _band_note(band: TierBand, updated: str) -> str:
             if band.matches < EARLY_SAMPLE_MATCHES
             else ""
         )
+        reset = (
+            f" Ranks were reset on {reset_on}."
+            if reset_on and band.key == "high"
+            else ""
+        )
         return (
             f"Measured from {band.matches:,} {who} since the patch, updated {updated}."
-            f"{early} Ring: green is strong right now, yellow is average, red is weak."
+            f"{early}{reset} Ring: green is strong right now, yellow is average, red is weak."
         )
     return (
         f"Too few games since the patch so far, so this shows {who} from "
@@ -476,7 +548,9 @@ def _band_note(band: TierBand, updated: str) -> str:
 
 
 def _tier_boards(
-    heroes: list[HeroCardView], tiers: TierSnapshot | None
+    heroes: list[HeroCardView],
+    tiers: TierSnapshot | None,
+    reset_on: str | None = None,
 ) -> list[TierBoardView]:
     if tiers is None:
         return [
@@ -494,7 +568,7 @@ def _tier_boards(
         TierBoardView(
             key=band.key,
             label=band.label,
-            note=_band_note(band, updated),
+            note=_band_note(band, updated, reset_on),
             rows=_measured_rows(heroes, band),
         )
         for band in tiers.bands
@@ -599,6 +673,7 @@ def build_page_model(
     patch: Patch,
     art,
     tiers: TierSnapshot | None = None,
+    reset_on: str | None = None,
 ) -> PatchPageModel:
     heroes: list[HeroCardView] = []
     non_hero_systems: list[SystemView] = _mode_only_systems(patch)
@@ -821,7 +896,7 @@ def build_page_model(
         biggest_changes=_big_changes(
             analysis, heroes, item_groups, small_items, systems, small_systems
         ),
-        tier_boards=_tier_boards(heroes, tiers),
+        tier_boards=_tier_boards(heroes, tiers, reset_on),
         picker=picker,
         item_groups=item_groups,
         small_items=small_items,

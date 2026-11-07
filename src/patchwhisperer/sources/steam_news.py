@@ -14,12 +14,14 @@ _DATE_TITLE_RE = re.compile(r"\b\d{2}-\d{2}-\d{4}\b")
 _UPDATE_TITLE_RE = re.compile(r"update|hotfix", re.IGNORECASE)
 _HERO_RELEASE_RE = re.compile(r"available (?:to play )?now", re.IGNORECASE)
 _MAJOR_RE = re.compile(r"\bnew heroes\b|\bmajor update\b", re.IGNORECASE)
+_RANKED_SEASON_RE = re.compile(r"\branked\b|\bseason\b", re.IGNORECASE)
 
 
 class PostKind(str, Enum):
     balance = "balance"
     major = "major"
     hero_release = "hero_release"
+    ranked_season = "ranked_season"
     other = "other"
 
 
@@ -44,6 +46,8 @@ def classify_post(post: SteamPost) -> PostKind:
         or _UPDATE_TITLE_RE.search(post.title)
     ):
         return PostKind.balance
+    if _RANKED_SEASON_RE.search(post.title):
+        return PostKind.ranked_season
     if _HERO_RELEASE_RE.search(post.contents):
         return PostKind.hero_release
     if update_page_slug(post.contents) or _MAJOR_RE.search(post.contents):

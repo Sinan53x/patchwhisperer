@@ -513,6 +513,21 @@ a.big-card:hover { background: var(--surface-2); text-decoration: none; }
 .picker-hero.selected { color: var(--text); }
 .picker-hero.selected .portrait { --ring: var(--accent); opacity: 1; filter: none; }
 
+/* season page */
+
+.season-banner {
+  display: block;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--line);
+  color: var(--text);
+  font-size: 13.5px;
+}
+a.season-banner:hover { background: var(--surface-2); text-decoration: none; }
+.rule-note { display: block; margin-top: 3px; font-size: 12.5px; font-variant-numeric: normal; }
+
 /* archive */
 
 .archive-page .lede { padding-bottom: 12px; }

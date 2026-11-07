@@ -295,6 +295,28 @@ class NewHeroEvaluation(BaseModel):
     card: NewHeroCard
 
 
+class SeasonRule(BaseModel):
+    label: str = Field(min_length=1)
+    before: str | None = None
+    after: str = ""
+    note: str = ""
+
+
+class SeasonBundle(BaseModel):
+    # gid/title/date/url are post metadata filled by the pipeline, not the model
+    gid: str = ""
+    title: str = ""
+    date: str = ""
+    url: str = ""
+    season_name: str = ""
+    starts: str = ""
+    ends: str | None = None
+    headline: str = ""
+    reset: list[str] = []
+    rules: list[SeasonRule] = []
+    takeaways: list[str] = []
+
+
 class AnalysisBundle(BaseModel):
     patch_id: str
     patch_title: str

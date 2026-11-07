@@ -126,6 +126,9 @@
 </nav>
 
 <main class="wrap">
+{%- if banner %}
+<a class="season-banner" href="{{ banner.href }}">{{ banner.text }}</a>
+{%- endif %}
 <header class="lede">
   <p class="eyebrow">{{ page.title }} · {{ page.date_display }}</p>
   <h1>{{ page.headline }}</h1>

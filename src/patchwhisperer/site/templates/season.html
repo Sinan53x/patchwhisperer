@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.season_name }} · PatchWhisperer</title>
+<meta name="description" content="{{ page.title }} ranked season overview · {{ page.date_display }}">
+<meta property="og:title" content="{{ page.season_name }}">
+<meta property="og:description" content="{{ page.title }} ranked season overview · {{ page.date_display }}">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="{{ rel }}style.css?v={{ css_v }}">
+</head>
+<body>
+<nav class="topbar" aria-label="Sections">
+  <span class="wordmark">PatchWhisperer</span>
+  <span class="topnav">
+    <a href="{{ rel }}">Latest patch</a>
+    <a href="{{ rel }}patches/">All patches</a>
+  </span>
+</nav>
+
+<main class="wrap">
+<header class="lede">
+  <p class="eyebrow"><span class="tier-chip">Ranked season</span> started {{ page.starts_display }}</p>
+  <h1>{{ page.season_name }}</h1>
+  <p class="muted meta">{{ page.headline }}{%- if page.headline %} ·{% endif %} {{ page.ends_line }} · <a href="{{ page.url }}" rel="noopener">Official post</a></p>
+</header>
+
+{%- if page.rules %}
+<section class="board" id="rules" aria-label="What changed">
+  <div class="section-head"><h2>What changed</h2></div>
+  <div class="rows">
+    {%- for r in page.rules %}
+    <div class="row">
+      <span class="row-label">{{ r.label }}</span>
+      <span class="row-value">
+        {%- if r.before %}<s class="old">{{ r.before }}</s> <span class="arrow" aria-hidden="true">→</span> {% endif %}<b>{{ r.after }}</b>
+        {%- if r.note %}<span class="rule-note muted">{{ r.note }}</span>{% endif %}
+      </span>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+{%- endif %}
+
+{%- if page.reset %}
+<section class="board" id="reset" aria-label="Rank reset">
+  <div class="section-head"><h2>Rank reset</h2></div>
+  <ul class="reasons">{% for l in page.reset %}<li>{{ l }}</li>{% endfor %}</ul>
+</section>
+{%- endif %}
+
+{%- if page.takeaways %}
+<section class="board" id="takeaways" aria-label="What it means for you">
+  <div class="section-head"><h2>What it means for you</h2></div>
+  <ul class="reasons">{% for l in page.takeaways %}<li>{{ l }}</li>{% endfor %}</ul>
+</section>
+{%- endif %}
+</main>
+
+<footer class="footer muted">
+  <p>Unofficial fan project, not affiliated with or endorsed by Valve. Deadlock and its art belong to Valve. Analysis is AI-generated and can be wrong; check the <a href="{{ page.url }}" rel="noopener">official post</a>.</p>
+</footer>
+</body>
+</html>

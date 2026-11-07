@@ -59,7 +59,8 @@ _NUM_TOKEN = re.compile(r"[+-]?\d+(?:\.\d+)?[a-zA-Z%]*")
 
 
 def _has_number(token: str, haystack: str) -> bool:
-    return bool(re.search(rf"(?<![\d.]){re.escape(token)}(?![\d.])", haystack))
+    # a trailing "." is fine (sentence end); a decimal tail like ".5" is not
+    return bool(re.search(rf"(?<![\d.]){re.escape(token)}(?!\d|\.\d)", haystack))
 
 
 def guard_rows(

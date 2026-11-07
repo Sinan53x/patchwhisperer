@@ -609,6 +609,19 @@ def watch() -> None:
     asyncio.run(poller.poll_loop(job, roster_job=jobs.run_roster_sync))
 
 
+@app.command()
+def season(
+    gid: str,
+    force: bool = typer.Option(False, "--force"),
+) -> None:
+    """Extract a ranked-season post into kb/patches (no Discord)."""
+    from patchwhisperer.bot import jobs, state
+
+    state.init_db()
+    result = jobs.season_ingest(gid, force=force)
+    typer.echo(result if result else "skipped: already processed (use --force)")
+
+
 def _with_channel(fn):
     """Run async fn(channel, loop) inside a minimal Discord client."""
     import discord

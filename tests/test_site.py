@@ -1,5 +1,6 @@
 import hashlib
 import json
+from datetime import date
 from pathlib import Path
 
 import pytest
@@ -98,10 +99,11 @@ def all_html(out):
 
 def test_build_skips_dirs_missing_either_file(built):
     out, n = built
-    assert n == 1
+    assert n == 2
     assert (out / "index.html").exists()
     assert (out / "patches" / "index.html").exists()
     assert (out / "patches" / "2026-01-01-111" / "index.html").exists()
+    assert (out / "patches" / "2026-01-03-333" / "index.html").exists()
     assert not (out / "patches" / "2026-01-02-222").exists()
     assert not (out / "patches" / "empty-dir").exists()
 
@@ -464,6 +466,61 @@ def test_archive_lists_patch(built):
     html = (out / "patches" / "index.html").read_text()
     assert 'href="2026-01-01-111/"' in html
     assert "Fixture Update" in html
+
+
+def season_html(out):
+    return (out / "patches" / "2026-01-03-333" / "index.html").read_text()
+
+
+def test_season_page_renders_rules(built):
+    out, _ = built
+    html = season_html(out)
+    assert "Ranked season" in html
+    assert "Beta Season 9" in html
+    assert "started Jan 3, 2026" in html
+    assert "ends May 1, 2027" in html
+    assert '<s class="old">5 losses</s>' in html
+    assert "<b>3 losses</b>" in html
+    assert "Phantom, Ascendant and Eternus have no shields at all." in html
+    # brand-new rule renders a bold after with no struck before
+    assert "<b>50 matches</b>" in html
+    assert "Rank reset" in html
+    assert "one badge lower" in html
+    assert "What it means for you" in html
+    assert 'href="https://example.com/season"' in html
+
+
+def test_archive_lists_season_with_label(built):
+    out, _ = built
+    html = (out / "patches" / "index.html").read_text()
+    assert 'href="2026-01-03-333/"' in html
+    assert "Ranked season" in html
+    assert "Ranked - Beta Season 9" in html
+
+
+def test_root_index_stays_balance_patch_with_banner(tmp_path):
+    out = tmp_path / "dist"
+    build_site(
+        kb=KB,
+        out=out,
+        api=FakeAPI(),
+        cache_dir=tmp_path / "cache",
+        fetch=ok_fetch,
+        today=date(2026, 1, 10),
+    )
+    index = (out / "index.html").read_text()
+    assert "Fixture Update" in index
+    assert "Comeback gold moves to the jungle." in index
+    assert 'href="patches/2026-01-03-333/"' in index
+    assert "Ranked Beta Season 9 started Jan 3" in index
+
+
+def test_no_banner_when_season_is_not_recent(built):
+    out, _ = built
+    index = (out / "index.html").read_text()
+    assert "season-banner" not in index
+    # the banner is also absent from individual patch pages
+    assert "season-banner" not in patch_html(out)
 
 
 def test_items_render_with_direction_badges(built):

@@ -1,3 +1,4 @@
+import json
 import shutil
 from unittest.mock import MagicMock
 
@@ -369,6 +370,124 @@ def test_creator_sources_fn_lands_in_stage1(env, tmp_path):
     patch_id = f"{env['post'].date:%Y-%m-%d}-{env['post'].gid}"
     prompt = (env["kb"].patch_dir(patch_id) / "stage1.prompt.md").read_text()
     assert "marker claim xyz" in prompt
+
+
+SEASON_CONTENTS = (
+    "[p]The points for a game has been increased from 300 to 350.[/p]"
+    "[p]On average, players can expect to see their rank decrease by "
+    "around 1 badge.[/p]"
+)
+
+SEASON_BUNDLE = {
+    "season_name": "Beta Season 2",
+    "starts": "2026-11-05",
+    "ends": "2027-03-11",
+    "headline": "Ranks soft reset for the new season.",
+    "reset": ["Ranks soft reset by about 1 badge on average."],
+    "rules": [
+        {
+            "label": "Points per match",
+            "before": "300",
+            "after": "350",
+            "note": "",
+        },
+        {
+            "label": "Imagined rule",
+            "before": "999",
+            "after": "888",
+            "note": "",
+        },
+    ],
+    "takeaways": ["Most players start about one badge lower."],
+}
+
+
+def _season_post(env) -> SteamPost:
+    return SteamPost(
+        gid="s1",
+        title="Ranked - Beta Season 2",
+        date=env["post"].date,
+        url="https://example.com/season",
+        author="valve",
+        contents=SEASON_CONTENTS,
+    )
+
+
+def _season_llm() -> FakeLLMClient:
+    return FakeLLMClient({stage_marker("season_extract"): SEASON_BUNDLE})
+
+
+def test_ranked_season(env, tmp_path, monkeypatch):
+    post = _season_post(env)
+    monkeypatch.setattr(jobs, "fetch_post", lambda gid: post)
+    commit = MagicMock()
+    sync = MagicMock(return_value=True)
+    kwargs = {
+        "llm": _season_llm(),
+        "kb": env["kb"],
+        "index": env["index"],
+        "api": env["api"],
+        "db": env["db"],
+        "repo_root": tmp_path,
+        "commit_fn": commit,
+        "sync_fn": sync,
+    }
+    result = analyze_and_post("s1", **kwargs)
+    assert result.kind == "ranked_season"
+    patch_id = result.patch_id
+    data = json.loads(
+        (env["kb"].patch_dir(patch_id) / "season.json").read_text()
+    )
+    assert data["gid"] == "s1"
+    assert data["title"] == "Ranked - Beta Season 2"
+    assert data["url"] == "https://example.com/season"
+    assert data["season_name"] == "Beta Season 2"
+    assert data["ends"] == "2027-03-11"
+    # the rule whose numbers are not in the post was dropped
+    assert [r["label"] for r in data["rules"]] == ["Points per match"]
+    assert state.seen_get("s1", env["db"])["kind"] == "ranked_season"
+    commit.assert_called_once_with(
+        tmp_path,
+        [env["kb"].patch_dir(patch_id)],
+        "kb: Ranked - Beta Season 2 (ranked season)",
+    )
+    sync.assert_called_once_with(tmp_path)
+    # second run short-circuits on the seen row
+    assert analyze_and_post("s1", **kwargs) is None
+
+
+def test_season_json_present_skips(env, tmp_path, monkeypatch):
+    post = _season_post(env)
+    monkeypatch.setattr(jobs, "fetch_post", lambda gid: post)
+    patch_id = f"{post.date:%Y-%m-%d}-{post.gid}"
+    (env["kb"].patch_dir(patch_id) / "season.json").write_text("{}")
+    result = analyze_and_post(
+        "s1",
+        llm=_season_llm(),
+        kb=env["kb"],
+        index=env["index"],
+        api=env["api"],
+        db=env["db"],
+        repo_root=tmp_path,
+        commit_fn=MagicMock(),
+        sync_fn=MagicMock(),
+    )
+    assert result is None
+    assert state.seen_get("s1", env["db"])["kind"] == "ranked_season"
+
+
+def test_season_ingest_rejects_non_season(env, tmp_path, monkeypatch):
+    monkeypatch.setattr(jobs, "fetch_post", lambda gid: env["post"])
+    with pytest.raises(RuntimeError, match="not a ranked season"):
+        jobs.season_ingest(
+            env["post"].gid,
+            llm=env["llm"],
+            kb=env["kb"],
+            db=env["db"],
+            repo_root=tmp_path,
+            commit_fn=MagicMock(),
+            sync_fn=MagicMock(),
+        )
 
 
 def test_no_creator_sources_fn_prompt_shows_none(env, tmp_path):

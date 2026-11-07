@@ -14,6 +14,7 @@ from patchwhisperer.analysis.pipeline import (
 )
 from patchwhisperer.analysis.render import render_discord
 from patchwhisperer.analysis.roster import RosterResult, sync_roster
+from patchwhisperer.analysis.season import extract_season
 from patchwhisperer.bot import state
 from patchwhisperer.kb.git import git_commit_kb, git_sync, kb_commit_message
 from patchwhisperer.kb.store import KBStore
@@ -22,6 +23,7 @@ from patchwhisperer.parse.patch_parser import parse_patch
 from patchwhisperer.sources.deadlock_api import DeadlockAPI
 from patchwhisperer.sources.steam_news import (
     PostKind,
+    SteamPost,
     fetch_patch_posts,
     fetch_post,
 )
@@ -36,7 +38,7 @@ MAX_ATTEMPTS = 3
 @dataclass
 class PostResult:
     patch_id: str
-    kind: str  # analyzed | hotfix | hero_release
+    kind: str  # analyzed | hotfix | hero_release | ranked_season
     message_id: str | None = None
     thread_id: str | None = None
     kb_updated: bool = False
@@ -112,22 +114,32 @@ def analyze_and_post(
     existing = state.seen_get(post.gid, db)
     if (
         existing
-        and existing["kind"] in ("analyzed", "hotfix", "hero_release")
+        and existing["kind"]
+        in ("analyzed", "hotfix", "hero_release", "ranked_season")
         and not force
     ):
         return None
 
-    creator_sources = creator_sources_fn(post) if creator_sources_fn else ""
-
     llm = llm or LLMClient()
-    index = index or EntityIndex.load()
-    patch = parse_patch(post, index)
-    patch_id = patch_id_of(patch)
-    hotfix = patch.is_hotfix()
 
     try:
         sync_fn(repo_root)
         kb = kb or KBStore(KB_ROOT)
+        if post.kind == PostKind.ranked_season:
+            return _process_season(
+                post,
+                force=force,
+                llm=llm,
+                kb=kb,
+                db=db,
+                repo_root=repo_root,
+                commit_fn=commit_fn,
+            )
+        index = index or EntityIndex.load()
+        patch = parse_patch(post, index)
+        patch_id = patch_id_of(patch)
+        hotfix = patch.is_hotfix()
+        creator_sources = creator_sources_fn(post) if creator_sources_fn else ""
         if not force and (kb.patch_dir(patch_id) / "analysis.json").exists():
             # a second machine already processed this post; kb is git-synced
             state.seen_mark(
@@ -248,6 +260,72 @@ def analyze_and_post(
                 loop,
             )
         raise
+
+
+def _process_season(
+    post: SteamPost,
+    *,
+    force: bool,
+    llm,
+    kb: KBStore,
+    db,
+    repo_root: Path,
+    commit_fn,
+) -> PostResult | None:
+    """Extract a ranked-season post into kb. No Discord, no KB update."""
+    patch_id = f"{post.date:%Y-%m-%d}-{post.gid}"
+    pdir = kb.patch_dir(patch_id)
+    if not force and (pdir / "season.json").exists():
+        # a second machine already processed this post; kb is git-synced
+        state.seen_mark(
+            post.gid, post.title, f"{post.date:%Y-%m-%d}", "ranked_season", db
+        )
+        return None
+    extract_season(post, kb, llm)
+    state.seen_mark(
+        post.gid, post.title, f"{post.date:%Y-%m-%d}", "ranked_season", db
+    )
+    try:
+        commit_fn(repo_root, [pdir], f"kb: {post.title} (ranked season)")
+    except Exception:
+        log.exception("season commit failed for %s", patch_id)
+    return PostResult(patch_id=patch_id, kind="ranked_season")
+
+
+def season_ingest(
+    gid: str,
+    *,
+    force: bool = False,
+    llm=None,
+    kb: KBStore | None = None,
+    db=None,
+    repo_root: Path = REPO_ROOT,
+    commit_fn=git_commit_kb,
+    sync_fn=git_sync,
+) -> PostResult | None:
+    """Backfill entry point: extract a ranked-season post by gid."""
+    post = fetch_post(gid)
+    if post is None:
+        raise RuntimeError(f"post {gid} not found")
+    if post.kind != PostKind.ranked_season:
+        raise RuntimeError(
+            f"post {gid} is a {post.kind.value} post, not a ranked season"
+        )
+    existing = state.seen_get(post.gid, db)
+    if existing and existing["kind"] == "ranked_season" and not force:
+        return None
+    llm = llm or LLMClient()
+    sync_fn(repo_root)
+    kb = kb or KBStore(KB_ROOT)
+    return _process_season(
+        post,
+        force=force,
+        llm=llm,
+        kb=kb,
+        db=db,
+        repo_root=repo_root,
+        commit_fn=commit_fn,
+    )
 
 
 def run_roster_sync(
