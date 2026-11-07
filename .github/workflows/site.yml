@@ -25,6 +25,8 @@ jobs:
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: astral-sh/setup-uv@v5
         with:
           enable-cache: true
@@ -39,3 +41,14 @@ jobs:
           --assets site-dist
           --name patch-whisperer
           --compatibility-date 2026-10-01
+      - name: Announce new pages on Discord
+        if: github.event_name == 'push' && env.CLOUDFLARE_API_TOKEN != ''
+        continue-on-error: true
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            git diff --name-only --diff-filter=A "$BEFORE" "$GITHUB_SHA" -- kb/patches > added.txt
+            uv run pw site notify added.txt
+          fi

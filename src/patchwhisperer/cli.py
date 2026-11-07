@@ -858,6 +858,24 @@ def site_build(
     typer.echo(f"built {n} patch page(s) -> {out}")
 
 
+@site_app.command("notify")
+def site_notify(
+    added: Annotated[Path, typer.Argument(help="File of paths added since the last deploy")],
+    kb: Annotated[Path, typer.Option("--kb")] = KB_ROOT,
+) -> None:
+    """Post a Discord link for each new page (needs DISCORD_WEBHOOK_URL)."""
+    import os
+
+    from patchwhisperer.site.notify import notify
+
+    webhook = os.getenv("DISCORD_WEBHOOK_URL", "")
+    if not webhook:
+        typer.echo("DISCORD_WEBHOOK_URL not set; skipping")
+        return
+    sent = notify(webhook, kb, added.read_text().split())
+    typer.echo(f"announced {len(sent)} page(s): {', '.join(sent) or '-'}")
+
+
 def main() -> None:
     import logging
 
