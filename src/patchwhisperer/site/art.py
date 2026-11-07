@@ -112,3 +112,27 @@ class SiteArt:
 
     def item_category(self, name: str) -> str:
         return (self._items.get(name) or {}).get("item_slot_type") or "other"
+
+    def rank_badges(self) -> list[dict]:
+        """[{tier, name, color, icon}] for the ranked tiers, low to high."""
+        try:
+            ranks = self._api.ranks()
+        except (httpx.HTTPError, OSError, AttributeError):
+            return []
+        out = []
+        for r in sorted(ranks, key=lambda r: r.get("tier", 0)):
+            if not r.get("tier"):
+                continue  # tier 0 is unranked
+            images = r.get("images") or {}
+            out.append(
+                {
+                    "tier": r["tier"],
+                    "name": r.get("name", ""),
+                    "color": r.get("color") or "#7c7c7c",
+                    "icon": self._place(
+                        images.get("small_webp") or images.get("large"),
+                        f"rank-{r.get('name', r['tier'])}",
+                    ),
+                }
+            )
+        return out

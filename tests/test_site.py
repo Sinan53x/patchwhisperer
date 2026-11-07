@@ -478,16 +478,48 @@ def test_season_page_renders_rules(built):
     assert "Ranked season" in html
     assert "Beta Season 9" in html
     assert "started Jan 3, 2026" in html
-    assert "ends May 1, 2027" in html
-    assert '<s class="old">5 losses</s>' in html
+    assert "May 1, 2027" in html
+    assert "<s>5 losses</s>" in html
     assert "<b>3 losses</b>" in html
-    assert "Phantom, Ascendant and Eternus have no shields at all." in html
-    # brand-new rule renders a bold after with no struck before
-    assert "<b>50 matches</b>" in html
-    assert "Rank reset" in html
-    assert "one badge lower" in html
-    assert "What it means for you" in html
+    assert "Phantom and up have no shields at all." in html
+    # brand-new rule: tagged New, no struck before
+    assert '<span class="new-tag">New</span><b>50 matches</b>' in html
+    assert 'id="who"' in html and "Players who grind" in html
     assert 'href="https://example.com/season"' in html
+
+
+def test_season_rules_get_visual_indicators(built):
+    html = season_html(built[0])
+    # shields 5 -> 3: three kept pips and two lost ones
+    assert html.count("pip p-keep") == 3 + 3  # shields + bans
+    assert html.count("pip p-lost") == 2
+    assert html.count("pip p-gained") == 1  # bans 3 -> 4
+    # points 300 -> 350 are too big for pips, so they get bars
+    assert 'class="bar-new" style="width: 100%"' in html
+    assert 'class="bar-old" style="width: 86%"' in html
+    assert "rule e-harsher" in html and "rule e-easier" in html
+    assert "1 easier" in html and "1 harsher" in html and "2 neutral" in html
+
+
+def test_season_ladder_marks_caps_and_shieldless_ranks(tmp_path):
+    class RankAPI(FakeAPI):
+        def ranks(self):
+            names = ["Oracle", "Phantom", "Ascendant", "Eternus"]
+            return [{"tier": 0, "name": "Obscurus"}] + [
+                {"tier": i + 1, "name": n, "color": "#123456",
+                 "images": {"small_webp": f"https://img/{n}.webp"}}
+                for i, n in enumerate(names)
+            ]
+
+    out = tmp_path / "dist"
+    build_site(kb=KB, out=out, api=RankAPI(), cache_dir=tmp_path / "cache", fetch=ok_fetch)
+    html = season_html(out)
+    assert "Obscurus" not in html
+    assert html.count('role="listitem"') == 4
+    assert html.count("rung no-shield") == 2
+    assert '<span class="pin pin-new">New max</span>' in html
+    assert '<span class="pin pin-old">Old max</span>' in html
+    assert "Soft reset about -1 badge" in html
 
 
 def test_archive_lists_season_with_label(built):

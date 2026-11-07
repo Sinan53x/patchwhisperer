@@ -4,56 +4,132 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ page.season_name }} · PatchWhisperer</title>
-<meta name="description" content="{{ page.title }} ranked season overview · {{ page.date_display }}">
-<meta property="og:title" content="{{ page.season_name }}">
-<meta property="og:description" content="{{ page.title }} ranked season overview · {{ page.date_display }}">
+<meta name="description" content="{{ page.headline }}">
+<meta property="og:title" content="Ranked {{ page.season_name }}">
+<meta property="og:description" content="{{ page.headline }}">
 <meta property="og:type" content="article">
 <link rel="stylesheet" href="{{ rel }}style.css?v={{ css_v }}">
 </head>
-<body>
+<body class="season-page">
+{%- set icons = {
+  "climbing": '<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>',
+  "protection": '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>',
+  "draft": '<circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/>',
+  "unlocks": '<rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 017.7-1.5"/>',
+  "leaderboards": '<path d="M8 21V11H3v10zM15 21V4h-6v17zM21 21v-7h-6v7z"/>',
+  "other": '<circle cx="12" cy="12" r="3"/>',
+} %}
 <nav class="topbar" aria-label="Sections">
   <span class="wordmark">PatchWhisperer</span>
   <span class="topnav">
+    <a href="#ladder">Rank reset</a>
+    <a href="#rules">What changed</a>
+    <a href="#who">Who wins</a>
     <a href="{{ rel }}">Latest patch</a>
-    <a href="{{ rel }}patches/">All patches</a>
+    <a href="{{ rel }}patches/">All</a>
   </span>
 </nav>
 
 <main class="wrap">
-<header class="lede">
-  <p class="eyebrow"><span class="tier-chip">Ranked season</span> started {{ page.starts_display }}</p>
+<header class="lede season-lede">
+  <p class="eyebrow"><span class="season-chip">Ranked season</span> started {{ page.starts_display }} · <a href="{{ page.url }}" rel="noopener">Official post</a></p>
   <h1>{{ page.season_name }}</h1>
-  <p class="muted meta">{{ page.headline }}{%- if page.headline %} ·{% endif %} {{ page.ends_line }} · <a href="{{ page.url }}" rel="noopener">Official post</a></p>
+  {%- if page.headline %}<p class="season-headline">{{ page.headline }}</p>{% endif %}
+
+  {%- if page.ends_display %}
+  <div class="timeline" aria-label="Season progress: {{ page.left_line }}">
+    <div class="tl-track"><div class="tl-fill" style="width: {{ page.elapsed_pct }}%"></div><span class="tl-now" style="left: {{ page.elapsed_pct }}%"></span></div>
+    <div class="tl-labels">
+      <span><b>{{ page.starts_display }}</b><small>Start</small></span>
+      <span class="tl-left">{{ page.left_line }}</span>
+      <span class="tl-end"><b>{{ page.ends_display }}</b><small>End</small></span>
+    </div>
+  </div>
+  {%- endif %}
+
+  {%- set total = page.tally.values() | sum %}
+  {%- if total %}
+  <div class="tally" aria-label="{{ page.tally.easier }} easier, {{ page.tally.harsher }} harsher, {{ page.tally.neutral }} neutral changes">
+    <div class="tally-bar">
+      {%- for e in ("easier", "neutral", "harsher") %}{% if page.tally[e] %}<span class="t-{{ e }}" style="flex: {{ page.tally[e] }}"></span>{% endif %}{% endfor %}
+    </div>
+    <p class="tally-legend">
+      {%- for e, word in (("easier", "easier"), ("harsher", "harsher"), ("neutral", "neutral")) %}{% if page.tally[e] %}<span class="t-key t-{{ e }}"><i></i>{{ page.tally[e] }} {{ word }}</span>{% endif %}{% endfor %}
+      <span class="muted">· {{ total }} rule changes</span>
+    </p>
+  </div>
+  {%- endif %}
 </header>
+
+{%- if page.rungs or page.reset_steps %}
+<section class="board" id="ladder" aria-label="Rank reset">
+  <div class="section-head"><h2>Where you land</h2>{% if page.soft_reset %}<span class="reset-pill">Soft reset {{ page.soft_reset }}</span>{% endif %}</div>
+
+  {%- if page.rungs %}
+  <div class="ladder" role="list" style="grid-template-columns: repeat({{ page.rungs | length }}, minmax(0, 1fr))">
+    {%- for r in page.rungs %}
+    <div class="rung{% if r.no_shield %} no-shield{% endif %}{% if r.in_stretch %} in-stretch{% endif %}" role="listitem" style="--rank: {{ r.color }}" title="{{ r.name }}">
+      {%- if r.icon %}<img src="{{ rel }}{{ r.icon }}" alt="" loading="lazy" width="40" height="40">{% else %}<span class="rung-dot"></span>{% endif %}
+      <span class="rung-name">{{ r.name }}</span>
+      {%- if r.cap_after %}<span class="pin pin-new">New max</span>{% elif r.cap_before %}<span class="pin pin-old">Old max</span>{% endif %}
+    </div>
+    {%- endfor %}
+  </div>
+  <ul class="ladder-key">
+    {%- if page.no_shield_ranks %}<li><i class="k-shield"></i>No loss shields: {{ page.no_shield_ranks | join(", ") }}</li>{% endif %}
+    {%- if page.cap_after %}<li><i class="k-stretch"></i>New placement cap: {{ page.cap_after }}{% if page.cap_stretch %}, up to {{ page.cap_stretch }}{% endif %}</li>{% endif %}
+    {%- if page.cap_before %}<li><i class="k-old"></i>Old cap: {{ page.cap_before }}</li>{% endif %}
+  </ul>
+  {%- endif %}
+
+  {%- if page.reset_steps %}
+  <ol class="steps">
+    {%- for s in page.reset_steps %}
+    <li class="step"><span class="step-num">{{ loop.index }}</span><div><h3>{{ s.title }}</h3>{% if s.detail %}<p class="muted">{{ s.detail }}</p>{% endif %}</div></li>
+    {%- endfor %}
+  </ol>
+  {%- endif %}
+</section>
+{%- endif %}
 
 {%- if page.rules %}
 <section class="board" id="rules" aria-label="What changed">
   <div class="section-head"><h2>What changed</h2></div>
-  <div class="rows">
+  <div class="rule-grid">
     {%- for r in page.rules %}
-    <div class="row">
-      <span class="row-label">{{ r.label }}</span>
-      <span class="row-value">
-        {%- if r.before %}<s class="old">{{ r.before }}</s> <span class="arrow" aria-hidden="true">→</span> {% endif %}<b>{{ r.after }}</b>
-        {%- if r.note %}<span class="rule-note muted">{{ r.note }}</span>{% endif %}
-      </span>
-    </div>
+    <article class="rule e-{{ r.effect }}">
+      <div class="rule-head">
+        <span class="rule-cat"><svg viewBox="0 0 24 24" aria-hidden="true">{{ icons[r.category] | safe }}</svg>{{ r.category_label }}</span>
+        {%- if r.effect_label %}<span class="effect">{% if r.effect == "easier" %}▲ {% elif r.effect == "harsher" %}▼ {% endif %}{{ r.effect_label }}</span>{% endif %}
+      </div>
+      <h3>{{ r.label }}</h3>
+      {%- if r.viz == "pips" %}
+      <div class="pips" aria-hidden="true">{% for p in r.pips %}<span class="pip p-{{ p }}"></span>{% endfor %}</div>
+      {%- elif r.viz == "bars" %}
+      <div class="bars" aria-hidden="true">
+        <div class="bar-row"><span class="bar-key">Before</span><span class="bar"><span class="bar-old" style="width: {{ r.bar_before }}%"></span></span></div>
+        <div class="bar-row"><span class="bar-key">Now</span><span class="bar"><span class="bar-new" style="width: {{ r.bar_after }}%"></span></span></div>
+      </div>
+      {%- endif %}
+      <p class="rule-values">{% if r.before %}<s>{{ r.before }}</s><span class="arrow" aria-label="to">→</span>{% else %}<span class="new-tag">New</span>{% endif %}<b>{{ r.after }}</b></p>
+      {%- if r.note %}<p class="rule-note muted">{{ r.note }}</p>{% endif %}
+    </article>
     {%- endfor %}
   </div>
 </section>
 {%- endif %}
 
-{%- if page.reset %}
-<section class="board" id="reset" aria-label="Rank reset">
-  <div class="section-head"><h2>Rank reset</h2></div>
-  <ul class="reasons">{% for l in page.reset %}<li>{{ l }}</li>{% endfor %}</ul>
-</section>
-{%- endif %}
-
-{%- if page.takeaways %}
-<section class="board" id="takeaways" aria-label="What it means for you">
-  <div class="section-head"><h2>What it means for you</h2></div>
-  <ul class="reasons">{% for l in page.takeaways %}<li>{{ l }}</li>{% endfor %}</ul>
+{%- if page.winners or page.losers %}
+<section class="board" id="who" aria-label="Who wins, who loses">
+  <div class="section-head"><h2>Who wins, who loses</h2></div>
+  <div class="who-grid">
+    {%- for side, items, word in (("win", page.winners, "Wins"), ("lose", page.losers, "Loses")) %}{% if items %}
+    <div class="who who-{{ side }}">
+      <p class="who-head">{% if side == "win" %}▲{% else %}▼{% endif %} {{ word }}</p>
+      <ul>{% for v in items %}<li><b>{{ v.who }}</b>{% if v.why %}<span class="muted">{{ v.why }}</span>{% endif %}</li>{% endfor %}</ul>
+    </div>
+    {%- endif %}{% endfor %}
+  </div>
 </section>
 {%- endif %}
 </main>

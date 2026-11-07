@@ -9,8 +9,10 @@ from pydantic import BaseModel
 from patchwhisperer.analysis.schemas import (
     AnalysisBundle,
     ChangeRow,
+    ResetStep,
     SeasonBundle,
     SeasonRule,
+    SeasonVerdict,
 )
 from patchwhisperer.analysis.tiers import HeroTier, TierBand, TierSnapshot
 from patchwhisperer.kb.store import slugify
@@ -244,18 +246,133 @@ class ArchiveEntry(BaseModel):
     label: str
 
 
+class RungView(BaseModel):
+    name: str
+    color: str
+    icon: str | None = None
+    no_shield: bool = False
+    cap_before: bool = False
+    cap_after: bool = False
+    in_stretch: bool = False
+
+
+class RuleView(BaseModel):
+    label: str
+    category: str
+    category_label: str
+    before: str | None = None
+    after: str
+    effect: str
+    effect_label: str
+    note: str = ""
+    viz: str = "text"  # pips | bars | text
+    pips: list[str] = []  # keep | lost | gained
+    bar_before: int = 0  # percent widths
+    bar_after: int = 0
+
+
 class SeasonPageModel(BaseModel):
     patch_id: str
     title: str
     season_name: str
     date_display: str
     starts_display: str
+    ends_display: str
     ends_line: str
+    left_line: str
+    elapsed_pct: int
     url: str
     headline: str
-    reset: list[str] = []
-    rules: list[SeasonRule] = []
-    takeaways: list[str] = []
+    reset_steps: list[ResetStep] = []
+    soft_reset: str = ""
+    cap_before: str | None = None
+    cap_after: str | None = None
+    cap_stretch: str | None = None
+    no_shield_ranks: list[str] = []
+    rungs: list[RungView] = []
+    rules: list[RuleView] = []
+    tally: dict[str, int] = {}
+    winners: list[SeasonVerdict] = []
+    losers: list[SeasonVerdict] = []
+
+
+_CATEGORY_LABEL = {
+    "climbing": "Climbing",
+    "protection": "Loss protection",
+    "draft": "Draft",
+    "unlocks": "Placement & unlocks",
+    "leaderboards": "Leaderboards",
+    "other": "Other",
+}
+_AMOUNT_RE = re.compile(r"^\s*(\d+)\s*(.*)$")
+_PIP_MAX = 10
+
+
+def _amount(value: str | None, unit_hint: str = "") -> tuple[int, str] | None:
+    if value is None:
+        return None
+    if value.strip().lower() == "none":
+        return 0, unit_hint
+    m = _AMOUNT_RE.match(value)
+    return (int(m.group(1)), m.group(2).strip().lower()) if m else None
+
+
+def _rule_view(rule: SeasonRule) -> RuleView:
+    view = RuleView(
+        label=rule.label,
+        category=rule.category,
+        category_label=_CATEGORY_LABEL[rule.category],
+        before=rule.before,
+        after=rule.after,
+        effect=rule.effect,
+        effect_label=rule.effect_label,
+        note=rule.note,
+    )
+    before = _amount(rule.before)
+    after = _amount(rule.after, before[1] if before else "")
+    if not (before and after) or before[1][:3] != after[1][:3]:
+        return view
+    b, a = before[0], after[0]
+    if max(a, b) <= _PIP_MAX:
+        lo = min(a, b)
+        view.viz = "pips"
+        view.pips = [
+            "keep" if i < lo else ("gained" if a > b else "lost")
+            for i in range(max(a, b))
+        ]
+    elif a and b:
+        top = max(a, b)
+        view.viz = "bars"
+        view.bar_before = round(100 * b / top)
+        view.bar_after = round(100 * a / top)
+    return view
+
+
+def _rank_name(value: str | None) -> str:
+    return (value or "").split(" ")[0].lower()
+
+
+def _rungs(ranks: list[dict], bundle: SeasonBundle) -> list[RungView]:
+    ladder = bundle.ladder
+    no_shield = {n.lower() for n in ladder.no_shield_ranks}
+    before = _rank_name(ladder.placement_cap_before)
+    after = _rank_name(ladder.placement_cap_after)
+    stretch = _rank_name(ladder.placement_cap_stretch)
+    names = [r["name"].lower() for r in ranks]
+    lo = names.index(after) if after in names else -1
+    hi = names.index(stretch) if stretch in names else lo
+    return [
+        RungView(
+            name=r["name"],
+            color=r["color"],
+            icon=r.get("icon"),
+            no_shield=n in no_shield,
+            cap_before=n == before,
+            cap_after=n == after,
+            in_stretch=lo >= 0 and lo <= i <= hi,
+        )
+        for i, (r, n) in enumerate(zip(ranks, names, strict=True))
+    ]
 
 
 def fmt_date(iso: str) -> str:
@@ -276,33 +393,54 @@ def _parse_date(iso: str | None) -> date | None:
         return None
 
 
-def _season_ends_line(ends: date | None, today: date) -> str:
+def _season_left(starts: date | None, ends: date | None, today: date) -> tuple[str, int]:
+    """('17 weeks left', percent of the season elapsed)."""
     if ends is None:
-        return "no end date announced"
-    disp = f"{ends:%b} {ends.day}, {ends:%Y}"
+        return "no end date announced", 0
     if ends <= today:
-        return f"ended {disp}"
+        return "season over", 100
     days = (ends - today).days
-    if days >= 14:
-        return f"ends {disp} · {days // 7} weeks left"
-    return f"ends {disp} · {days} days left"
+    left = f"{days // 7} weeks left" if days >= 14 else f"{days} days left"
+    if starts is None or ends <= starts:
+        return left, 0
+    total = (ends - starts).days
+    return left, max(0, min(100, round(100 * (today - starts).days / total)))
 
 
 def build_season_model(
-    bundle: SeasonBundle, patch_id: str, today: date
+    bundle: SeasonBundle, patch_id: str, today: date, ranks: list[dict] | None = None
 ) -> SeasonPageModel:
+    starts = _parse_date(bundle.starts or bundle.date)
+    ends = _parse_date(bundle.ends)
+    left, elapsed = _season_left(starts, ends, today)
+    rules = [_rule_view(r) for r in bundle.rules]
     return SeasonPageModel(
         patch_id=patch_id,
         title=bundle.title,
         season_name=bundle.season_name or bundle.title,
         date_display=fmt_date(bundle.date or bundle.starts),
         starts_display=fmt_date(bundle.starts or bundle.date),
-        ends_line=_season_ends_line(_parse_date(bundle.ends), today),
+        ends_display=fmt_date(bundle.ends) if bundle.ends else "",
+        ends_line=(
+            f"ended {fmt_date(bundle.ends)}"
+            if ends and ends <= today
+            else f"ends {fmt_date(bundle.ends)} · {left}" if ends else left
+        ),
+        left_line=left,
+        elapsed_pct=elapsed,
         url=bundle.url,
         headline=bundle.headline,
-        reset=bundle.reset,
-        rules=bundle.rules,
-        takeaways=bundle.takeaways,
+        reset_steps=bundle.reset_steps,
+        soft_reset=bundle.ladder.soft_reset,
+        cap_before=bundle.ladder.placement_cap_before,
+        cap_after=bundle.ladder.placement_cap_after,
+        cap_stretch=bundle.ladder.placement_cap_stretch,
+        no_shield_ranks=bundle.ladder.no_shield_ranks,
+        rungs=_rungs(ranks or [], bundle),
+        rules=rules,
+        tally={e: sum(r.effect == e for r in rules) for e in ("easier", "harsher", "neutral")},
+        winners=bundle.winners,
+        losers=bundle.losers,
     )
 
 

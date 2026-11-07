@@ -183,17 +183,17 @@ def build_site(
         d for d in (_season_start(b) for _, b in seasons) if d
     )
 
-    if entries:
-        assets_dir = out / "assets"
-        assets_dir.mkdir(exist_ok=True)
-        art_kwargs = {"fetch": fetch} if fetch else {}
-        art = SiteArt(
-            api or DeadlockAPI(),
-            assets_dir,
-            cache_dir=cache_dir,
-            **art_kwargs,
-        )
+    assets_dir = out / "assets"
+    assets_dir.mkdir(exist_ok=True)
+    art_kwargs = {"fetch": fetch} if fetch else {}
+    art = SiteArt(
+        api or DeadlockAPI(),
+        assets_dir,
+        cache_dir=cache_dir,
+        **art_kwargs,
+    )
 
+    if entries:
         dated = sorted(
             entries, key=lambda e: (e[2].date, e[0].name), reverse=True
         )
@@ -234,8 +234,9 @@ def build_site(
             )
         )
 
+    ranks = art.rank_badges() if seasons else []
     for season_dir, bundle in seasons:
-        page = build_season_model(bundle, season_dir.name, today)
+        page = build_season_model(bundle, season_dir.name, today, ranks)
         dest = out / "patches" / season_dir.name
         dest.mkdir(parents=True, exist_ok=True)
         (dest / "index.html").write_text(

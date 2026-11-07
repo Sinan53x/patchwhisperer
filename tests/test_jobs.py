@@ -383,7 +383,7 @@ SEASON_BUNDLE = {
     "starts": "2026-11-05",
     "ends": "2027-03-11",
     "headline": "Ranks soft reset for the new season.",
-    "reset": ["Ranks soft reset by about 1 badge on average."],
+    "reset_steps": [{"title": "Soft reset", "detail": "About 1 badge."}],
     "rules": [
         {
             "label": "Points per match",
@@ -398,7 +398,7 @@ SEASON_BUNDLE = {
             "note": "",
         },
     ],
-    "takeaways": ["Most players start about one badge lower."],
+    "winners": [{"who": "Grinders", "why": "More points per game."}],
 }
 
 

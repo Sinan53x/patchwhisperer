@@ -7,38 +7,22 @@
  "starts": "2026-01-03",
  "ends": "2027-05-01",
  "headline": "A new ranked season with a softer reset.",
- "reset": [
-  "Ranks soft reset by about 1 badge on average.",
-  "Last season's winrate adjusts placement by 1-2 subranks."
+ "reset_steps": [
+  {"title": "Apply the soft reset", "detail": "Ranks drop about 1 badge on average."}
  ],
+ "ladder": {
+  "soft_reset": "about -1 badge",
+  "placement_cap_before": "Oracle VI",
+  "placement_cap_after": "Ascendant I",
+  "placement_cap_stretch": null,
+  "no_shield_ranks": ["Phantom", "Ascendant"]
+ },
  "rules": [
-  {
-   "label": "Rank loss shields (full rank)",
-   "before": "5 losses",
-   "after": "3 losses",
-   "note": "Phantom, Ascendant and Eternus have no shields at all."
-  },
-  {
-   "label": "Points per match",
-   "before": "300",
-   "after": "350",
-   "note": ""
-  },
-  {
-   "label": "Hero bans",
-   "before": "3",
-   "after": "4",
-   "note": ""
-  },
-  {
-   "label": "Per-season leaderboard",
-   "before": null,
-   "after": "50 matches",
-   "note": "Must play within the last 30 days."
-  }
+  {"label": "Loss shields at a full rank", "category": "protection", "before": "5 losses", "after": "3 losses", "effect": "harsher", "effect_label": "Less forgiving", "note": "Phantom and up have no shields at all."},
+  {"label": "Points per match", "category": "climbing", "before": "300", "after": "350", "effect": "easier", "effect_label": "Faster climb", "note": ""},
+  {"label": "Hero bans", "category": "draft", "before": "3", "after": "4", "effect": "neutral", "effect_label": "One more ban", "note": ""},
+  {"label": "Per-season leaderboard", "category": "leaderboards", "before": null, "after": "50 matches", "effect": "neutral", "effect_label": "", "note": "Must play within the last 30 days."}
  ],
- "takeaways": [
-  "Most players start about one badge lower.",
-  "Leaderboard hopefuls need 50 ranked matches a month."
- ]
+ "winners": [{"who": "Players who grind", "why": "More points per game."}],
+ "losers": [{"who": "Phantom and up", "why": "No shields left."}]
 }

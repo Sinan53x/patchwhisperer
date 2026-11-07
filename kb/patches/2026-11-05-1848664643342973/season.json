@@ -6,80 +6,141 @@
  "season_name": "Beta Season 2",
  "starts": "2026-11-05",
  "ends": "2027-03-11",
- "headline": "Ranked Beta Season 2 runs four months with a softer rank reset, a global redistribution of the ladder, and tighter rank-loss protection.",
- "reset": [
-  "Two-step adjustment: everyone's rank is first redistributed across the curve, then a soft reset of about -1 badge is applied on top.",
-  "The soft reset is significantly smaller than last season's; previous-season winrate shifts players an extra 1-2 subranks.",
-  "Redistribution accounts for the influx of new players, so some players will climb despite the reset.",
-  "Returning Ranked players skip calibration; anyone who sat out last season must calibrate.",
-  "Placement ceiling rises to Ascendant I, with up to Ascendant III for strong prior-season performance."
+ "headline": "Ranked Beta Season 2 resets ranks, cuts loss shields, and adds a fourth ban.",
+ "reset_steps": [
+  {
+   "title": "Redistribute the curve",
+   "detail": "The whole rank curve is reshaped first to absorb the influx of new players, so some ranks rise before any reset."
+  },
+  {
+   "title": "Apply the soft reset",
+   "detail": "The redistributed number then drops about 1 badge on average, nudged 1-2 subranks by last season's winrate."
+  },
+  {
+   "title": "Skip calibration",
+   "detail": "Existing Ranked players keep their standing and climb directly; only players who sat out Season 1 recalibrate."
+  }
  ],
+ "ladder": {
+  "soft_reset": "about -1 badge",
+  "placement_cap_before": "Oracle VI",
+  "placement_cap_after": "Ascendant I",
+  "placement_cap_stretch": "Ascendant III",
+  "no_shield_ranks": [
+   "Phantom",
+   "Ascendant",
+   "Eternus"
+  ]
+ },
  "rules": [
   {
-   "label": "Rank loss shields (Phantom, Ascendant, Eternus)",
-   "before": "5 full rank, 2 subrank",
+   "label": "Shields at Phantom and up",
+   "category": "protection",
+   "before": "5 losses",
    "after": "none",
-   "note": "Top three ranks lose all loss protection."
+   "effect": "harsher",
+   "effect_label": "No safety net",
+   "note": "Full ranks and subranks both lose all protection."
   },
   {
-   "label": "Rank loss shields (full rank boundary, all other ranks)",
+   "label": "Shields at a full rank",
+   "category": "protection",
    "before": "5 losses",
    "after": "3 losses",
-   "note": "At 0 points you drop a full badge after 3 losses instead of 5."
+   "effect": "harsher",
+   "effect_label": "Less forgiving",
+   "note": "Mystic I at 0 points falls to Sentinel after 3 losses."
   },
   {
-   "label": "Rank loss shields (subrank)",
+   "label": "Shields between subranks",
+   "category": "protection",
    "before": "2 losses",
    "after": "1 loss",
-   "note": "Subrank floors are much thinner."
+   "effect": "harsher",
+   "effect_label": "Thinner cushion",
+   "note": "Mystic III to Mystic II now survives only one loss."
   },
   {
    "label": "Points per match",
+   "category": "climbing",
    "before": "300",
    "after": "350",
-   "note": "Faster climb per game, partly offset by thinner shields."
+   "effect": "easier",
+   "effect_label": "Faster climb",
+   "note": "Every game moves the bar further."
   },
   {
-   "label": "Points to reach a new badge from final subrank",
+   "label": "Points to reach a new badge",
+   "category": "climbing",
    "before": "2000",
    "after": "1500",
-   "note": "Points between subranks unchanged at 1000."
+   "effect": "easier",
+   "effect_label": "Cheaper promotions",
+   "note": "Subrank gaps stay at 1000."
   },
   {
-   "label": "Hero bans per Ranked match",
+   "label": "Hero bans per match",
+   "category": "draft",
    "before": "3",
    "after": "4",
-   "note": "One more ban slot per draft."
+   "effect": "neutral",
+   "effect_label": "One more ban",
+   "note": "Draft gets a fourth slot to target top heroes."
   },
   {
-   "label": "Highest possible placement",
+   "label": "Highest initial placement",
+   "category": "unlocks",
    "before": "Oracle VI",
    "after": "Ascendant I",
-   "note": "Up to Ascendant III based on previous-season performance."
+   "effect": "easier",
+   "effect_label": "Higher start",
+   "note": "Up to Ascendant III for strong previous-season performance."
   },
   {
-   "label": "Ranked hero unlock",
+   "label": "Hero unlock requirement",
+   "category": "unlocks",
    "before": "15 wins",
    "after": "35 points",
-   "note": "2 points per win, 1 per loss, so losses now progress; 35 is below the old 45-point equivalent."
+   "effect": "easier",
+   "effect_label": "Losses count",
+   "note": "2 per win, 1 per loss; the old system equalled about 45 points."
   },
   {
-   "label": "Leaderboards",
+   "label": "Season-scoped leaderboards",
+   "category": "leaderboards",
    "before": null,
-   "after": "50 Ranked matches in last 30 days",
-   "note": "Per-season leaderboard; ranked by current badge progress."
-  },
-  {
-   "label": "Hero leaderboards",
-   "before": null,
-   "after": "15 Ranked matches on that hero in last 30 days",
-   "note": "Ranks on badge progress plus recent win/loss on that hero."
+   "after": "50 matches",
+   "effect": "neutral",
+   "effect_label": "Activity required",
+   "note": "Hero boards need 15 matches with that hero in 30 days."
   }
  ],
- "takeaways": [
-  "Grinders gain: 350 points per game and a 1500 badge threshold make the climb faster, so volume matters more than a hot streak.",
-  "Phantom-plus players lose their safety net entirely, and everyone else has shields cut, so a bad run drops you faster than last season.",
-  "New-to-Ranked players should care about the hero unlock change: losses now count toward unlocking, so you reach a deep hero pool in fewer games.",
-  "Leaderboard chasers must keep playing: 50 matches in 30 days (15 per hero) is a rolling activity requirement, not a season total."
+ "winners": [
+  {
+   "who": "High-volume grinders",
+   "why": "350 points per game plus 1500-point promotions reward volume over a lucky streak."
+  },
+  {
+   "who": "Lower-curve ranked players",
+   "why": "Global redistribution runs before the soft reset, so part of the ladder moves up not down."
+  },
+  {
+   "who": "Players unlocking heroes",
+   "why": "35 points versus an equivalent 45 means losses now count toward unlocking."
+  }
+ ],
+ "losers": [
+  {
+   "who": "Phantom and above",
+   "why": "Their full loss protection is deleted outright, so a bad streak now costs real ranks."
+  },
+  {
+   "who": "Streaky climbers",
+   "why": "Shields of 3 and 1 leave far less room to absorb a losing run at a floor."
+  },
+  {
+   "who": "One-trick players",
+   "why": "A fourth ban gives opponents more room to remove their hero from the draft."
+  }
  ]
 }

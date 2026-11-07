@@ -295,11 +295,36 @@ class NewHeroEvaluation(BaseModel):
     card: NewHeroCard
 
 
+RuleCategory = Literal["climbing", "protection", "draft", "unlocks", "leaderboards", "other"]
+RuleEffect = Literal["easier", "harsher", "neutral"]
+
+
 class SeasonRule(BaseModel):
     label: str = Field(min_length=1)
+    category: RuleCategory = "other"
     before: str | None = None
     after: str = ""
+    effect: RuleEffect = "neutral"
+    effect_label: str = ""
     note: str = ""
+
+
+class ResetStep(BaseModel):
+    title: str = Field(min_length=1)
+    detail: str = ""
+
+
+class SeasonLadder(BaseModel):
+    soft_reset: str = ""
+    placement_cap_before: str | None = None
+    placement_cap_after: str | None = None
+    placement_cap_stretch: str | None = None
+    no_shield_ranks: list[str] = []
+
+
+class SeasonVerdict(BaseModel):
+    who: str = Field(min_length=1)
+    why: str = ""
 
 
 class SeasonBundle(BaseModel):
@@ -312,9 +337,11 @@ class SeasonBundle(BaseModel):
     starts: str = ""
     ends: str | None = None
     headline: str = ""
-    reset: list[str] = []
+    reset_steps: list[ResetStep] = []
+    ladder: SeasonLadder = Field(default_factory=SeasonLadder)
     rules: list[SeasonRule] = []
-    takeaways: list[str] = []
+    winners: list[SeasonVerdict] = []
+    losers: list[SeasonVerdict] = []
 
 
 class AnalysisBundle(BaseModel):

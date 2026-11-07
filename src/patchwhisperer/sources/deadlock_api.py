@@ -40,6 +40,9 @@ class DeadlockAPI:
     def heroes(self) -> list[dict]:
         return self._get("/v1/assets/heroes", only_active="true")
 
+    def ranks(self) -> list[dict]:
+        return self._get("/v1/assets/ranks")
+
     def all_heroes(self) -> list[dict]:
         return self._get("/v1/assets/heroes")
 
