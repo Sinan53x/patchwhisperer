@@ -12,6 +12,8 @@
   --bench: #f25c54;
   --link: #dcb878;
   --radius: 14px;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
   --font: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color-scheme: dark;
 }
@@ -24,6 +26,7 @@ body {
   color: var(--text);
   font: 15px/1.5 var(--font);
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
 }
 a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -89,10 +92,18 @@ button { font: inherit; color: inherit; }
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: background-color 150ms ease, transform 160ms var(--ease-out);
 }
-.btn:hover { background: var(--surface-2); }
+.btn:active { transform: scale(0.97); }
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover { background: var(--surface-2); }
+}
 .btn-primary { background: var(--text); color: var(--ground); border-color: var(--text); }
-.btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+}
 
 .segmented { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--surface-2); }
 .segmented button {
@@ -105,8 +116,11 @@ button { font: inherit; color: inherit; }
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
-  transition: background 0.15s, color 0.15s;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: background-color 150ms ease, color 150ms ease, transform 160ms var(--ease-out);
 }
+.segmented button:active { transform: scale(0.97); }
 .segmented button[aria-pressed="true"] { background: var(--text); color: var(--ground); }
 
 /* pool */
@@ -138,7 +152,7 @@ button { font: inherit; color: inherit; }
   background: var(--surface-2);
   box-shadow: 0 0 0 2.5px var(--ring);
   overflow: hidden;
-  transition: transform 0.15s ease;
+  transition: transform 200ms var(--ease-out);
 }
 .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
 .v-keep { --ring: var(--keep); }
@@ -175,7 +189,11 @@ button { font: inherit; color: inherit; }
   box-shadow: inset 0 0 0 1px var(--line), inset 3px 0 0 var(--edge, var(--line-strong));
   color: var(--text);
 }
-a.big-card:hover { background: var(--surface-2); text-decoration: none; }
+a.big-card { transition: background-color 150ms ease, transform 160ms var(--ease-out); }
+a.big-card:active { transform: scale(0.985); }
+@media (hover: hover) and (pointer: fine) {
+  a.big-card:hover { background: var(--surface-2); text-decoration: none; }
+}
 .big-card.fx-up { --edge: var(--keep); }
 .big-card.fx-down { --edge: var(--bench); }
 .big-card.fx-neutral { --edge: var(--watch); }
@@ -236,8 +254,17 @@ a.big-card:hover { background: var(--surface-2); text-decoration: none; }
 .small-changes { margin-top: 16px; border-radius: var(--radius); box-shadow: inset 0 0 0 1px var(--line); }
 .small-changes summary { display: flex; align-items: center; gap: 8px; padding: 12px 16px; font-size: 14px; font-weight: 600; cursor: pointer; list-style: none; }
 .small-changes summary::-webkit-details-marker { display: none; }
-.small-changes summary::after { content: "+"; color: var(--muted); font-weight: 400; font-size: 18px; line-height: 1; }
-.small-changes[open] summary::after { content: "–"; }
+.small-changes summary::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-left: 8px;
+  border-right: 1.5px solid var(--muted);
+  border-bottom: 1.5px solid var(--muted);
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform 200ms var(--ease-out);
+}
+.small-changes[open] summary::after { transform: rotate(-135deg) translateY(-2px); }
 .small-changes .tile-grid, .small-changes .system-grid { padding: 4px 16px 16px; }
 
 /* boards */
@@ -264,7 +291,9 @@ a.big-card:hover { background: var(--surface-2); text-decoration: none; }
 .tile-grid.items { grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); gap: 14px 4px; }
 .tile { display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--text); text-align: center; }
 .tile:hover { text-decoration: none; }
-.tile:hover .portrait, .tile:hover .item-icon { transform: translateY(-2px); }
+@media (hover: hover) and (pointer: fine) {
+  .tile:hover .portrait, .tile:hover .item-icon { transform: translateY(-2px); }
+}
 .tile-art { position: relative; display: inline-flex; }
 .tile-name { font-size: 12.5px; line-height: 1.25; }
 .g-indirect .portrait, .g-unchanged .portrait { width: 52px; height: 52px; }
@@ -308,7 +337,7 @@ a.big-card:hover { background: var(--surface-2); text-decoration: none; }
   border-radius: 12px;
   background: var(--surface-2);
   overflow: hidden;
-  transition: transform 0.15s ease;
+  transition: transform 200ms var(--ease-out);
 }
 .item-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .tile-art .dir-badge.d-rework { color: var(--accent); }
@@ -377,9 +406,12 @@ a.big-card:hover { background: var(--surface-2); text-decoration: none; }
   background: var(--surface);
   box-shadow: inset 0 0 0 1px var(--line);
   color: var(--text);
-  transition: background 0.15s;
+  transition: background-color 150ms ease, transform 160ms var(--ease-out);
 }
-.system-tile:hover { background: var(--surface-2); text-decoration: none; }
+.system-tile:active { transform: scale(0.985); }
+@media (hover: hover) and (pointer: fine) {
+  .system-tile:hover { background: var(--surface-2); text-decoration: none; }
+}
 .system-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
 .system-name { font-size: 14px; font-weight: 600; line-height: 1.3; }
 .system-head .badge { flex: none; line-height: 1.7; }
@@ -396,8 +428,17 @@ a.big-card:hover { background: var(--surface-2); text-decoration: none; }
   background: var(--surface);
   border: 0;
   box-shadow: 0 0 0 1px var(--line-strong), 0 24px 70px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateY(8px) scale(0.98);
+  transition: opacity 150ms ease, transform 150ms var(--ease-out), overlay 150ms allow-discrete, display 150ms allow-discrete;
 }
-.sheet::backdrop, .picker::backdrop { background: rgba(5, 5, 7, 0.7); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); }
+.sheet::backdrop, .picker::backdrop {
+  background: rgba(5, 5, 7, 0.7);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  opacity: 0;
+  transition: opacity 150ms ease, overlay 150ms allow-discrete, display 150ms allow-discrete;
+}
 .sheet {
   width: min(660px, calc(100vw - 32px));
   max-height: min(84dvh, 860px);
@@ -405,8 +446,18 @@ a.big-card:hover { background: var(--surface-2); text-decoration: none; }
   border-radius: 18px;
   overflow: hidden;
 }
-.sheet[open] { display: flex; flex-direction: column; animation: sheet-in 0.2s cubic-bezier(0.2, 0.8, 0.2, 1); }
-@keyframes sheet-in { from { opacity: 0; transform: translateY(10px) scale(0.985); } to { opacity: 1; transform: none; } }
+.sheet[open] { display: flex; flex-direction: column; }
+.sheet[open], .picker[open] {
+  opacity: 1;
+  transform: none;
+  transition-duration: 220ms;
+  @starting-style { opacity: 0; transform: translateY(8px) scale(0.98); }
+}
+.sheet[open]::backdrop, .picker[open]::backdrop {
+  opacity: 1;
+  transition-duration: 220ms;
+  @starting-style { opacity: 0; }
+}
 .sheet-bar { display: flex; align-items: center; gap: 4px; flex: none; padding: 10px 12px; border-bottom: 1px solid var(--line); }
 .sheet-pos { margin-left: 8px; font-size: 12px; font-variant-numeric: tabular-nums; }
 .sheet-close { margin-left: auto; }
@@ -422,8 +473,14 @@ a.big-card:hover { background: var(--surface-2); text-decoration: none; }
   font-size: 22px;
   line-height: 1;
   cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: background-color 150ms ease, transform 160ms var(--ease-out);
 }
-.icon-btn:hover:not(:disabled) { background: var(--surface-2); }
+.icon-btn:not(:disabled):active { transform: scale(0.97); }
+@media (hover: hover) and (pointer: fine) {
+  .icon-btn:hover:not(:disabled) { background: var(--surface-2); }
+}
 .icon-btn:disabled { color: var(--line-strong); cursor: default; }
 .sheet:focus, .sheet-body:focus { outline: none; }
 .icon-btn:focus-visible { outline: 1.5px solid var(--line-strong); outline-offset: 1px; }
@@ -508,7 +565,11 @@ a.big-card:hover { background: var(--surface-2); text-decoration: none; }
   line-height: 1.25;
   color: var(--muted);
   cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: transform 160ms var(--ease-out);
 }
+.picker-hero:active { transform: scale(0.97); }
 .picker-hero .portrait { width: 52px; height: 52px; opacity: 0.55; filter: saturate(0.5); transition: opacity 0.15s, filter 0.15s; }
 .picker-hero.selected { color: var(--text); }
 .picker-hero.selected .portrait { --ring: var(--accent); opacity: 1; filter: none; }
@@ -525,7 +586,13 @@ a.big-card:hover { background: var(--surface-2); text-decoration: none; }
   color: var(--text);
   font-size: 13.5px;
 }
-a.season-banner:hover { background: var(--surface-2); text-decoration: none; }
+a.season-banner { transition: background-color 150ms ease, transform 160ms var(--ease-out); }
+a.season-banner:active { transform: scale(0.985); }
+.nudge { display: inline-block; transition: transform 200ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) {
+  a.season-banner:hover { background: var(--surface-2); text-decoration: none; }
+  a.season-banner:hover .nudge { transform: translateX(3px); }
+}
 
 .season-chip {
   display: inline-block; margin-right: 6px; padding: 2px 9px; border-radius: 999px;
@@ -649,7 +716,9 @@ a.season-banner:hover { background: var(--surface-2); text-decoration: none; }
 .archive li { border-top: 1px solid var(--line); }
 .archive a { display: flex; flex-direction: column; gap: 2px; padding: 16px 0; color: var(--text); }
 .archive a:hover { text-decoration: none; }
-.archive a:hover .archive-title { color: var(--accent); }
+@media (hover: hover) and (pointer: fine) {
+  .archive a:hover .archive-title { color: var(--accent); }
+}
 .archive-date { font-size: 13px; }
 .archive-title { font-size: 16px; font-weight: 600; }
 .archive-head { font-size: 14px; }
@@ -666,7 +735,12 @@ a.season-banner:hover { background: var(--surface-2); text-decoration: none; }
   .tile-grid { grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); }
   .board { padding: 26px 0; }
   .wordmark { font-size: 14px; }
-  .topnav { gap: 12px; }
+  .topnav {
+    gap: 12px;
+    padding-right: 24px;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 24px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 24px), transparent);
+  }
   .sheet {
     width: 100vw;
     max-width: 100vw;
@@ -674,13 +748,24 @@ a.season-banner:hover { background: var(--surface-2); text-decoration: none; }
     margin: auto 0 0;
     border-radius: 18px 18px 0 0;
   }
-  .sheet[open] { animation-name: sheet-up; animation-duration: 0.26s; }
-  @keyframes sheet-up { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+  .sheet, .picker {
+    transform: translateY(100%);
+    transition: opacity 200ms ease, transform 200ms var(--ease-drawer), overlay 200ms allow-discrete, display 200ms allow-discrete;
+  }
+  .sheet[open], .picker[open] {
+    transform: none;
+    transition-duration: 320ms;
+    @starting-style { opacity: 0; transform: translateY(100%); }
+  }
+  .sheet::backdrop, .picker::backdrop { transition-duration: 200ms; }
+  .sheet[open]::backdrop, .picker[open]::backdrop { transition-duration: 320ms; }
   .picker { width: 100vw; max-width: 100vw; margin: auto 0 0; border-radius: 18px 18px 0 0; }
   .legend-sep { width: 100%; margin-left: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
+  *, *::before, *::after, ::backdrop { transition-property: opacity, background-color, color !important; }
+  .sheet, .picker, .sheet[open], .picker[open] { transform: none !important; }
+  @starting-style { .sheet[open], .picker[open] { transform: none; } }
 }

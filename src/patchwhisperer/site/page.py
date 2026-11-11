@@ -782,7 +782,7 @@ def _counts_line(
             parts.append(f"{n} {label.lower()}")
     n_items = len(small_items) + sum(len(g.items) for g in item_groups)
     if n_items:
-        parts.append(f"{n_items} items")
+        parts.append(f"{n_items} item{'s' if n_items != 1 else ''}")
     n_systems = len(systems) + len(small_systems)
     if n_systems:
         parts.append(f"{n_systems} map & economy")

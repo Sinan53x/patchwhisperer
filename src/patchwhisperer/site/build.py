@@ -131,7 +131,7 @@ def _season_banner(
         "href": f"patches/{newest[0].name}/",
         "text": (
             f"Ranked {newest[1].season_name or newest[1].title} started "
-            f"{started:%b} {started.day} · see what changed →"
+            f"{started:%b} {started.day} · see what changed"
         ),
     }
 

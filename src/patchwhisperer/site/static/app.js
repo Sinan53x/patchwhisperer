@@ -335,7 +335,7 @@
   sheet.addEventListener("close", function () {
     current = null;
     ownEntry = false;
-    body.innerHTML = "";
+    setTimeout(function () { if (!sheet.open) body.innerHTML = ""; }, 250);
     if (SHEET_ID.test(location.hash.slice(1))) {
       history.replaceState(null, "", location.pathname + location.search);
     }

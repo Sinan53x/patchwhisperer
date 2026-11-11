@@ -127,7 +127,7 @@
 
 <main class="wrap">
 {%- if banner %}
-<a class="season-banner" href="{{ banner.href }}">{{ banner.text }}</a>
+<a class="season-banner" href="{{ banner.href }}">{{ banner.text }} <span class="nudge" aria-hidden="true">→</span></a>
 {%- endif %}
 <header class="lede">
   <p class="eyebrow">{{ page.title }} · {{ page.date_display }}</p>
